@@ -1,0 +1,47 @@
+name: Add a model or representation system
+about: Propose a wearable, biosignal, sensor-language, time-series or control model
+labels: [model, curation]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Model / paper name
+    validations:
+      required: true
+  - type: input
+    id: publication
+    attributes:
+      label: Version-of-record or eligible major-lab report URL
+      description: Pure arXiv links belong in the watchlist unless the eligible publication cannot expose another canonical page.
+    validations:
+      required: true
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and year
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Canonical code / weights URL
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence-backed record
+      description: State signal modalities, participants/data scale, supervision, tasks, validation settings, open resources, main contribution, limitations and claim boundary. Mark unknown fields unknown.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Eligibility checks
+      options:
+        - label: I searched accepted records and the watchlist for duplicates.
+          required: true
+        - label: This is an eligible journal, top/domain-leading archival conference, or major-lab official report.
+          required: true
+        - label: I used a primary/canonical source and did not infer unsupported metadata.
+          required: true
+        - label: I have not described predictive performance as causal or clinically effective.
+          required: true

@@ -1,0 +1,1605 @@
+- id: measure-cosinorage-2024
+  title: Circadian Rhythm Analysis Using Wearable-Based Accelerometry as a Digital Biomarker of Aging and Healthspan
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: aging-and-circadian-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - wrist
+  clinical_domains:
+  - aging
+  - mortality
+  - circadian-health
+  populations:
+  - midlife-adults
+  - older-adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Introduces CosinorAge from seven-day wrist accelerometry and evaluates mortality, incident disease
+    and functional outcomes across UK and US cohorts.
+  why_it_matters: Provides an interpretable example of converting rest–activity rhythm intensity, phase and timing
+    into an externally evaluated digital aging measure.
+  limitations: The measurement window was limited, cohorts differed in device placement, and UK Biobank is healthier
+    and less diverse than the general population.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-024-01111-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - aging-and-circadian-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-024-01111-x
+- id: measure-longitudinal-activity-rhythm-aging-2026
+  title: Longitudinal Digital Phenotyping of Activity Rhythms and Biological Aging Using Commercial Wearables
+  year: 2026
+  venue: Nature Communications
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: aging-and-circadian-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - activity-summary
+  - accelerometer-derived-activity
+  body_locations:
+  - wrist
+  clinical_domains:
+  - aging
+  - circadian-health
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Links multi-year commercial wearable activity rhythms with longitudinal clinical biomarker-derived
+    biological aging trajectories in All of Us participants.
+  why_it_matters: Extends one-week cross-sectional digital aging work toward repeated, person-level trajectories
+    using consumer devices and linked clinical biomarkers.
+  limitations: The analysis remains observational, the linked sample is a subset of the cohort, and device-derived
+    rhythm features may depend on wear patterns and proprietary preprocessing.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41467-026-76147-6
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - aging-and-circadian-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41467-026-76147-6
+- id: measure-inflammaging-activity-rhythm-2026
+  title: 'From Wrist Data to Lifespan: Elucidating Inflammation-Driven Biological Aging via Activity Rhythms Captured
+    by Wearable Devices'
+  year: 2026
+  venue: npj Aging
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: aging-and-circadian-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - wrist
+  clinical_domains:
+  - aging
+  - inflammation
+  - mortality
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Evaluates wearable-derived activity rhythms in relation to inflammatory biological aging and lifespan-related
+    outcomes.
+  why_it_matters: Connects behavioral rhythm features with a plausible biological pathway and broadens wearable
+    aging measurement beyond chronological-age prediction alone.
+  limitations: Pathway analyses and longitudinal associations are vulnerable to residual confounding and do not
+    prove that rhythm modification reverses biological aging.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41514-026-00349-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - aging-and-circadian-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41514-026-00349-x
+- id: measure-frailty-fall-concern-2026
+  title: Daily Activity Patterns from Wearable Accelerometry Predict Physical Frailty and Concern about Falling
+  year: 2026
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: frailty-and-mobility-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - chest
+  clinical_domains:
+  - frailty
+  - falls
+  - mobility
+  populations:
+  - older-adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Uses free-living chest accelerometry and multi-task sequence modeling to jointly estimate frailty
+    and concern about falling.
+  why_it_matters: Illustrates how daily temporal organization and complexity may augment questionnaire-based geriatric
+    assessment.
+  limitations: The cohort is modest, measurements span only 48 hours, and reported discrimination requires external
+    and prospective validation before screening use.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-026-02863-4
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - frailty-and-mobility-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-026-02863-4
+- id: measure-falls-frailty-mobility-2019
+  title: Digital Assessment of Falls Risk, Frailty, and Mobility Impairment Using Wearable Sensors
+  year: 2019
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: frailty-and-mobility-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - gyroscope
+  body_locations:
+  - body-worn
+  clinical_domains:
+  - frailty
+  - falls
+  - mobility
+  populations:
+  - older-adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Evaluates sensor-derived mobility features for classifying falls risk, frailty and mobility impairment.
+  why_it_matters: Provides an early integrated digital-measure framework across related geriatric outcomes rather
+    than a single laboratory gait variable.
+  limitations: Performance depends on cohort composition and test protocol, and classification evidence is not equivalent
+    to prospective fall prevention or clinical utility.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-019-0204-z
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - frailty-and-mobility-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-019-0204-z
+- id: measure-physical-activity-incident-disease-2022
+  title: Wearable Accelerometer-Derived Physical Activity and Incident Disease
+  year: 2022
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: activity-and-population-risk-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - wrist
+  clinical_domains:
+  - physical-activity
+  - multimorbidity
+  - population-health
+  populations:
+  - midlife-adults
+  - older-adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Tests accelerometer-derived moderate-to-vigorous physical activity against 697 incident disease
+    outcomes in 96,244 UK Biobank participants.
+  why_it_matters: Demonstrates the breadth of phenome-wide association possible with standardized wearable activity
+    measures and linked longitudinal health records.
+  limitations: One-week exposure measurement, selection into UK Biobank, multiple testing and residual confounding
+    limit causal interpretation and individual risk use.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-022-00676-9
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - activity-and-population-risk-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-022-00676-9
+- id: measure-daily-steps-mortality-2020
+  title: Association of Daily Step Count and Step Intensity With Mortality Among US Adults
+  year: 2020
+  venue: JAMA
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: activity-and-population-risk-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - waist
+  clinical_domains:
+  - physical-activity
+  - mortality
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Relates accelerometer-measured daily steps and cadence to all-cause, cardiovascular and cancer mortality
+    in a nationally representative US cohort.
+  why_it_matters: Anchors widely used step-count measures to long-term outcomes and separates total volume from
+    intensity.
+  limitations: The exposure was measured once for up to seven days and the observational design cannot identify
+    an intervention target or eliminate reverse causation.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://jamanetwork.com/journals/jama/fullarticle/2763292
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - activity-and-population-risk-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+- id: measure-steps-cancer-cvd-2022
+  title: Prospective Associations of Daily Step Counts and Intensity With Cancer and Cardiovascular Disease Incidence
+    and Mortality and All-Cause Mortality
+  year: 2022
+  venue: JAMA Internal Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: activity-and-population-risk-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - wrist
+  clinical_domains:
+  - physical-activity
+  - cardiovascular
+  - cancer
+  - mortality
+  populations:
+  - midlife-adults
+  - older-adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Assesses daily step volume and peak cadence against cancer, cardiovascular disease and mortality
+    outcomes in 78,500 UK Biobank participants.
+  why_it_matters: Provides dose-response evidence for an intuitive wearable measure across several public-health
+    endpoints.
+  limitations: The cohort is predominantly White, step exposure is based on a limited wear period, and observed
+    associations do not prove benefits of prescribed step targets.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2796058
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - activity-and-population-risk-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1001/jamainternmed.2022.4000
+- id: measure-sleep-accelerometer-mortality-2024
+  title: Self-Supervised Learning of Accelerometer Data Provides New Insights for Sleep and Its Association with
+    Mortality
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: sleep-and-circadian-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - wrist
+  clinical_domains:
+  - sleep
+  - mortality
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Develops accelerometer-based sleep classification and applies derived sleep duration and efficiency
+    measures to mortality analyses in UK Biobank.
+  why_it_matters: Links representation learning, digital sleep measurement and population outcomes in a single reproducible
+    pipeline.
+  limitations: Agreement with polysomnography is only fair to moderate and mortality analyses remain observational
+    with a single baseline wear period.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-024-01065-0
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - sleep-and-circadian-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-024-01065-0
+- id: measure-sleep-staging-heart-rate-2020
+  title: Deep Learning for Automated Sleep Staging Using Instantaneous Heart Rate
+  year: 2020
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: sleep-and-circadian-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  body_locations:
+  - wrist
+  - chest
+  clinical_domains:
+  - sleep
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Develops automated sleep staging from instantaneous heart rate, targeting wearable-compatible cardiac
+    sensing rather than full polysomnography.
+  why_it_matters: Shows how a lower-burden physiological signal can support longitudinal sleep-stage estimation
+    outside specialist laboratories.
+  limitations: Heart-rate-based staging cannot recover all information in polysomnography and performance may shift
+    across arrhythmias, medications, age and devices.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-020-0291-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - sleep-and-circadian-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-020-0291-x
+- id: measure-apple-heart-study-2019
+  title: Large-Scale Assessment of a Smartwatch to Identify Atrial Fibrillation
+  year: 2019
+  venue: New England Journal of Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: cardiac-rhythm-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  - ecg
+  body_locations:
+  - wrist
+  clinical_domains:
+  - atrial-fibrillation
+  - cardiovascular
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: prospective-observational
+  causal_status: not-causal
+  contribution: Evaluates smartwatch irregular-pulse notifications followed by telemedicine and ambulatory ECG confirmation
+    in 419,297 participants.
+  why_it_matters: Provides population-scale prospective evidence on notification yield and positive predictive value
+    in real-world smartwatch use.
+  limitations: Enrollment was self-selected, only notified participants received confirmatory monitoring, and the
+    design did not estimate population sensitivity or outcome benefit.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nejm.org/doi/full/10.1056/NEJMoa1901183
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cardiac-rhythm-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1056/NEJMoa1901183
+- id: measure-fitbit-heart-study-2022
+  title: 'Detection of Atrial Fibrillation in a Large Population Using Wearable Devices: The Fitbit Heart Study'
+  year: 2022
+  venue: Circulation
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: cardiac-rhythm-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  - ecg
+  body_locations:
+  - wrist
+  clinical_domains:
+  - atrial-fibrillation
+  - cardiovascular
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: prospective-observational
+  causal_status: not-causal
+  contribution: Prospectively evaluates a wearable photoplethysmography irregular-rhythm algorithm with confirmatory
+    ECG patch monitoring at population scale.
+  why_it_matters: Complements smartwatch notification studies by testing a different commercial ecosystem and continuous
+    pulse-tachogram pipeline.
+  limitations: The study is enriched by digital recruitment and confirmation occurs after notification, so sensitivity
+    and clinical outcome effects are not established.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.121.057480
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cardiac-rhythm-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1161/CIRCULATIONAHA.121.057480
+- id: measure-wrist-af-holter-2025
+  title: Ambulatory Atrial Fibrillation Detection and Quantification by Wristworn AI Device Compared to Standard
+    Holter Monitoring
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: cardiac-rhythm-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  - ecg
+  body_locations:
+  - wrist
+  clinical_domains:
+  - atrial-fibrillation
+  - cardiovascular
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: prospective-observational
+  causal_status: not-causal
+  contribution: Compares wrist photoplethysmography and single-lead ECG algorithms with 24-hour Holter monitoring
+    and extends observation for AF burden.
+  why_it_matters: Evaluates both event detection and burden quantification, which is more clinically informative
+    than a binary alert alone.
+  limitations: The sample is limited, device-specific and enriched for evaluated patients; broader screening utility
+    and effect on management require additional trials.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-025-01555-9
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cardiac-rhythm-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-025-01555-9
+- id: measure-passive-af-smartwatch-2018
+  title: Passive Detection of Atrial Fibrillation Using a Commercially Available Smartwatch
+  year: 2018
+  venue: JAMA Cardiology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: cardiac-rhythm-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  body_locations:
+  - wrist
+  clinical_domains:
+  - atrial-fibrillation
+  - cardiovascular
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Trains and externally tests a deep neural network on commercial smartwatch photoplethysmography
+    for passive atrial-fibrillation detection.
+  why_it_matters: Established an early proof of concept for longitudinal rhythm inference from commodity wearable
+    pulse data.
+  limitations: Performance fell in ambulatory self-reported analysis, the external criterion-standard cohort was
+    small, and prospective screening utility was not demonstrated.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://jamanetwork.com/journals/jamacardiology/fullarticle/2675364
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cardiac-rhythm-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+- id: measure-deepbeat-2020
+  title: Multi-task Deep Learning for Cardiac Rhythm Detection in Wearable Devices
+  year: 2020
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: cardiac-rhythm-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  body_locations:
+  - wrist
+  clinical_domains:
+  - atrial-fibrillation
+  - signal-quality
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Jointly models photoplethysmography signal quality and atrial-fibrillation detection with transfer
+    learning and a prospective replication cohort.
+  why_it_matters: Treats signal quality as part of the clinical measurement problem rather than assuming all wearable
+    pulse windows are usable.
+  limitations: Evaluation remains device- and cohort-dependent, and algorithmic accuracy does not establish improved
+    diagnosis, treatment or outcomes.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-020-00320-4
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cardiac-rhythm-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-020-00320-4
+- id: measure-wearable-ecg-age-af-2026
+  title: Wearable Device Derived Electrocardiographic Age and Its Association with Atrial Fibrillation
+  year: 2026
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: cardiac-risk-and-aging-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  body_locations:
+  - wrist
+  clinical_domains:
+  - atrial-fibrillation
+  - cardiovascular
+  - aging
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Derives an AI electrocardiographic age measure from wearable-device ECG and evaluates its association
+    with atrial fibrillation.
+  why_it_matters: Extends ECG-age concepts from clinical 12-lead recordings to lower-burden wearable measurements.
+  limitations: Association with AF does not establish incremental clinical utility, causal interpretation or transportability
+    to other wearable ECG hardware.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-026-02344-8
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cardiac-risk-and-aging-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-026-02344-8
+- id: measure-covid-presymptomatic-2020
+  title: Pre-symptomatic Detection of COVID-19 from Smartwatch Data
+  year: 2020
+  venue: Nature Biomedical Engineering
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: infection-and-recovery-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  - steps
+  - sleep
+  body_locations:
+  - wrist
+  clinical_domains:
+  - infectious-disease
+  - covid-19
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Uses individualized deviations in heart rate, steps and sleep to identify physiological changes
+    around COVID-19 and other illnesses.
+  why_it_matters: Demonstrates the value of personal baselines for detecting acute deviations before or near symptom
+    onset.
+  limitations: The number of confirmed cases was small, analyses were largely retrospective, and alert specificity
+    across other stressors and infections remains challenging.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41551-020-00640-6
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - infection-and-recovery-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41551-020-00640-6
+- id: measure-covid-sensor-symptoms-2021
+  title: Wearable Sensor Data and Self-Reported Symptoms for COVID-19 Detection
+  year: 2021
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: infection-and-recovery-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  - steps
+  - sleep
+  body_locations:
+  - wrist
+  clinical_domains:
+  - infectious-disease
+  - covid-19
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Combines longitudinal wearable data with symptoms to distinguish symptomatic COVID-19 positive and
+    negative participants.
+  why_it_matters: Shows complementary information from passive sensing and self-report in a large remotely recruited
+    study.
+  limitations: The number of test-positive symptomatic participants used for modeling was limited and the result
+    does not replace diagnostic testing.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41591-020-1123-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - infection-and-recovery-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41591-020-1123-x
+- id: measure-covid-passive-explainable-2021
+  title: Passive Detection of COVID-19 with Wearable Sensors and Explainable Machine Learning Algorithms
+  year: 2021
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: infection-and-recovery-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  - steps
+  - sleep
+  body_locations:
+  - wrist
+  clinical_domains:
+  - infectious-disease
+  - covid-19
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Builds an explainable wearable-based COVID-19 detection model that can operate with missing symptoms
+    and heterogeneous available sensor streams.
+  why_it_matters: Addresses deployment realities such as incomplete self-report and variable consumer devices.
+  limitations: Predictive performance declines when restricted to pre-test passive data, and prospective alert utility
+    and false-positive burden require evaluation.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-021-00533-1
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - infection-and-recovery-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-021-00533-1
+- id: measure-covid-physiological-signs-2020
+  title: Assessment of Physiological Signs Associated with COVID-19 Measured Using Wearable Devices
+  year: 2020
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: infection-and-recovery-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  - heart-rate-variability
+  - respiration
+  body_locations:
+  - wrist
+  clinical_domains:
+  - infectious-disease
+  - covid-19
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Characterizes changes in respiration rate, heart rate and heart-rate variability around COVID-19
+    using consumer wearable measurements.
+  why_it_matters: Provides interpretable physiological features for infection monitoring and motivates personalized
+    baselines.
+  limitations: Device-derived metrics may be proprietary, infection labels and symptom timing can be noisy, and
+    associations are not a standalone diagnostic test.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-020-00363-7
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - infection-and-recovery-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-020-00363-7
+- id: measure-long-covid-trajectories-2024
+  title: Long-term Changes in Wearable Sensor Data in People with and without Long Covid
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: infection-and-recovery-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  - steps
+  - sleep
+  body_locations:
+  - wrist
+  clinical_domains:
+  - long-covid
+  - infectious-disease
+  - recovery
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Compares step count, resting heart rate and sleep trajectories for up to one year after infection
+    in participants with and without Long COVID.
+  why_it_matters: Illustrates person-specific recovery curves and persistent deviations that episodic clinic visits
+    can miss.
+  limitations: Long COVID was self-reported, groups differed at baseline, and trajectories cannot by themselves
+    identify mechanisms or treatment effects.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-024-01238-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - infection-and-recovery-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-024-01238-x
+- id: measure-persistent-post-covid-2025
+  title: Wearable Data Reveals Distinct Characteristics of Individuals with Persistent Symptoms after a SARS-CoV-2
+    Infection
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: infection-and-recovery-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  - steps
+  - sleep
+  body_locations:
+  - wrist
+  clinical_domains:
+  - long-covid
+  - fatigue
+  - respiratory
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Identifies pre- and post-infection behavioral and physiological characteristics associated with
+    persistent fatigue and dyspnea.
+  why_it_matters: Shows why pre-event wearable baselines matter when interpreting post-viral trajectories and potential
+    risk markers.
+  limitations: The persistent-symptom subgroup was small and pre-existing differences limit claims that infection
+    caused the observed digital phenotype.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-025-01456-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - infection-and-recovery-measures
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-025-01456-x
+- id: measure-pregnancy-biometrics-2024
+  title: Biometrics of Complete Human Pregnancy Recorded by Wearable Devices
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: pregnancy-and-reproductive-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  - heart-rate-variability
+  - temperature
+  - sleep
+  - activity-summary
+  body_locations:
+  - wrist
+  - finger
+  clinical_domains:
+  - pregnancy
+  - maternal-health
+  populations:
+  - pregnant-people
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Characterizes longitudinal wearable physiological and behavioral trajectories across complete pregnancies.
+  why_it_matters: Provides dense within-person reference trajectories for a state that changes faster than routine
+    prenatal visit schedules.
+  limitations: Consumer-device measures, cohort selection and limited adverse-outcome counts constrain clinical
+    thresholds and individual prediction.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-024-01183-9
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - pregnancy-and-reproductive-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-024-01183-9
+- id: measure-pd-virtual-exam-2022
+  title: Virtual Exam for Parkinson’s Disease Enables Frequent and Reliable Remote Measurements of Motor Function
+  year: 2022
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: neurological-and-motor-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - gyroscope
+  - ppg
+  - eda
+  body_locations:
+  - wrist
+  clinical_domains:
+  - parkinson-disease
+  - motor-function
+  populations:
+  - people-with-parkinson-disease
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: prospective-observational
+  causal_status: not-causal
+  contribution: Validates smartwatch-based unsupervised motor tasks for tremor, bradykinesia and gait over long-term
+    remote follow-up.
+  why_it_matters: Demonstrates reliability, medication sensitivity and sustained engagement for repeated digital
+    motor outcomes.
+  limitations: The code is proprietary, active tasks require adherence, and validity was established in early-stage
+    Parkinson disease using a specific watch.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-022-00607-8
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - neurological-and-motor-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-022-00607-8
+- id: measure-pd-sensor-data-value-2018
+  title: 'Wearable Sensors for Parkinson’s Disease: Which Data Are Worth Collecting for Training Symptom Detection
+    Models'
+  year: 2018
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: neurological-and-motor-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - gyroscope
+  body_locations:
+  - hand
+  - arm
+  - thigh
+  clinical_domains:
+  - parkinson-disease
+  - tremor
+  - bradykinesia
+  populations:
+  - people-with-parkinson-disease
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Examines how sensor number, placement, participant diversity and repeated assessments affect tremor
+    and bradykinesia detection.
+  why_it_matters: Directly informs efficient study design and shows that more sensors or repeated sessions from
+    the same people do not necessarily improve generalization.
+  limitations: The cohort was small and clinic-task data may not represent free-living symptoms or longer-term progression.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-018-0071-z
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - neurological-and-motor-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-018-0071-z
+- id: measure-pd-smartwatch-nonmotor-2024
+  title: Digital Outcome Measures from Smartwatch Data Relate to Non-motor Features of Parkinson’s Disease
+  year: 2024
+  venue: npj Parkinson's Disease
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: neurological-and-motor-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - ppg
+  - activity-summary
+  - sleep
+  body_locations:
+  - wrist
+  clinical_domains:
+  - parkinson-disease
+  - non-motor-symptoms
+  populations:
+  - people-with-parkinson-disease
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Relates passive smartwatch-derived outcomes to non-motor features of Parkinson disease.
+  why_it_matters: Broadens wearable Parkinson measurement beyond tremor and bradykinesia toward daily-life and non-motor
+    burden.
+  limitations: Associations require replication and do not establish that the measures are sensitive to treatment
+    or disease modification.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41531-024-00719-w
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - neurological-and-motor-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41531-024-00719-w
+- id: measure-pd-progression-2026
+  title: Wearable-Sensor Based Walking and Non-Walking Measures as Progression Markers in Early to Mid-stage Parkinson’s
+    Disease
+  year: 2026
+  venue: npj Parkinson's Disease
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: neurological-and-motor-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - activity-summary
+  body_locations:
+  - wrist
+  clinical_domains:
+  - parkinson-disease
+  - progression
+  - mobility
+  populations:
+  - people-with-parkinson-disease
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: prospective-observational
+  causal_status: not-causal
+  contribution: Evaluates reliability, longitudinal sensitivity and disease specificity of walking, non-walking
+    and composite measures over up to two years.
+  why_it_matters: Moves beyond cross-sectional classification toward candidate progression endpoints for clinical
+    trials.
+  limitations: The findings remain exploratory for regulatory qualification and require replication across devices,
+    cohorts and intervention studies.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41531-026-01358-z
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - neurological-and-motor-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41531-026-01358-z
+- id: measure-pd-activity-incident-2023
+  title: Association of Accelerometer-Measured Physical Activity Intensity, Sedentary Time, and Exercise Time with
+    Incident Parkinson’s Disease
+  year: 2023
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: neurological-and-motor-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - wrist
+  clinical_domains:
+  - parkinson-disease
+  - physical-activity
+  populations:
+  - midlife-adults
+  - older-adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Relates accelerometer-derived activity intensity, sedentary time and exercise timing to incident
+    Parkinson disease in UK Biobank.
+  why_it_matters: Uses objective free-living movement measures to examine timing and composition of activity in
+    relation to future neurological diagnosis.
+  limitations: Prodromal disease and reverse causation are plausible, and observational associations do not prove
+    preventive effects of exercise prescriptions.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-023-00969-7
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - neurological-and-motor-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-023-00969-7
+- id: measure-pd-weekend-warrior-2024
+  title: Association of Physical Activity Pattern and Risk of Parkinson’s Disease
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: neurological-and-motor-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations:
+  - wrist
+  clinical_domains:
+  - parkinson-disease
+  - physical-activity
+  populations:
+  - midlife-adults
+  - older-adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Compares concentrated weekend-warrior and regularly distributed accelerometer-derived activity patterns
+    with incident Parkinson disease.
+  why_it_matters: Adds temporal distribution of activity to total-volume digital epidemiology.
+  limitations: Activity pattern is observational, incident cases are relatively few, and undiagnosed prodromal disease
+    could influence behavior.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-024-01135-3
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - neurological-and-motor-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-024-01135-3
+- id: measure-stress-phenotypes-2018
+  title: Large-Scale Wearable Data Reveal Digital Phenotypes for Daily-Life Stress Detection
+  year: 2018
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: mental-health-and-stress-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eda
+  - heart-rate
+  - accelerometer
+  - temperature
+  body_locations:
+  - wrist
+  clinical_domains:
+  - stress
+  - mental-health
+  populations:
+  - adults
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Analyzes five days of free-living wearable physiology, context and self-report from 1,002 participants
+    to characterize daily-life stress phenotypes.
+  why_it_matters: Demonstrates why ambulatory stress models require personalization and population-scale heterogeneity
+    rather than laboratory signals alone.
+  limitations: Stress labels are self-reported, the study is cross-sectional, and physiological response may reflect
+    many non-stress processes.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-018-0074-9
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - mental-health-and-stress-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-018-0074-9
+- id: measure-circadian-disruption-mental-health-2024
+  title: The Real-World Association between Digital Markers of Circadian Disruption and Mental Health Risks
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: mental-health-and-stress-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart-rate
+  - sleep
+  - activity-summary
+  body_locations:
+  - wrist
+  clinical_domains:
+  - mental-health
+  - circadian-health
+  - depression
+  populations:
+  - medical-interns
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Derives wearable-based circadian misalignment measures and relates them bidirectionally to mood
+    in medical interns undergoing shift-work transition.
+  why_it_matters: Shows how multiple internal rhythms and sleep timing can be combined into interpretable longitudinal
+    mental-health markers.
+  limitations: The cohort is occupation-specific and observational; bidirectional associations and time-varying
+    confounding limit causal interpretation.
+  evidence_boundary: The reported relationship is observational or predictive. It does not establish that changing
+    the wearable-derived measure will causally change the clinical outcome.
+  primary_url: https://www.nature.com/articles/s41746-024-01348-6
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - mental-health-and-stress-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-024-01348-6
+- id: measure-mood-episode-prediction-2024
+  title: Accurately Predicting Mood Episodes in Mood Disorder Patients Using Wearable Sleep and Circadian Rhythm
+    Features
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: mental-health-and-stress-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - sleep
+  - activity-summary
+  body_locations:
+  - wrist
+  clinical_domains:
+  - mood-disorders
+  - depression
+  - mania
+  populations:
+  - people-with-mood-disorders
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Uses personalized sleep-wake and circadian features to predict next-day depressive, manic and hypomanic
+    episodes.
+  why_it_matters: Illustrates individualized longitudinal prediction from low-burden wearable-compatible variables.
+  limitations: The cohort is modest, episode labels and missingness may be informative, and prospective decision
+    support or intervention benefit was not tested.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-024-01333-z
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - mental-health-and-stress-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-024-01333-z
+- id: measure-prediabetes-glycemic-control-2021
+  title: Predicting Changes in Glycemic Control among Adults with Prediabetes from Activity Patterns Collected by
+    Wearable Devices
+  year: 2021
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: metabolic-and-glucose-measures
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - activity-summary
+  body_locations:
+  - wrist
+  - waist
+  clinical_domains:
+  - prediabetes
+  - glycemic-control
+  - metabolic
+  populations:
+  - adults-with-prediabetes
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: observational validation study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Evaluates whether wrist- and waist-wearable activity patterns improve prediction of changes in HbA1c
+    among adults with prediabetes.
+  why_it_matters: Connects free-living behavior to a clinically familiar metabolic outcome and explicitly compares
+    wearable placement.
+  limitations: The analysis predicts change within a trial cohort but does not establish that model-guided behavior
+    change improves glycemic control.
+  evidence_boundary: This supports analytical or clinical validation in the studied cohort and device setting; it
+    does not establish universal cross-device validity or downstream clinical benefit.
+  primary_url: https://www.nature.com/articles/s41746-021-00541-1
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - measure
+  - metabolic-and-glucose-measures
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-021-00541-1
+- id: measure-brain-health-review-2026
+  title: 'Digital Biomarkers for Brain Health: Passive and Continuous Assessment from Wearable Sensors'
+  year: 2026
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: digital-measure-frameworks
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - ppg
+  - eda
+  - sleep
+  - temperature
+  body_locations:
+  - wrist
+  - body-worn
+  clinical_domains:
+  - brain-health
+  - mental-health
+  - neurology
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: peer-reviewed review
+  evidence_stage: systematic-review
+  causal_status: not-causal
+  contribution: Synthesizes passive wearable measures for cognitive, affective and broader brain-health assessment.
+  why_it_matters: Provides a domain map connecting sensing modalities, candidate phenotypes and validation needs
+    for brain-health applications.
+  limitations: As a review, it summarizes heterogeneous evidence and does not itself validate a specific measure
+    or establish clinical utility.
+  evidence_boundary: This is a synthesis resource. Each proposed digital biomarker requires independent analytical,
+    clinical and prospective validation before use.
+  primary_url: https://www.nature.com/articles/s41746-026-02340-y
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - digital-measure-frameworks
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-026-02340-y
+- id: measure-swas-perspective-2026
+  title: Sensor-Wide Association Studies in Digital Medicine
+  year: 2026
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: measure
+  family: digital-measure-frameworks
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - wearable-sensor-features
+  body_locations:
+  - body-worn
+  clinical_domains:
+  - digital-phenotyping
+  - population-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: peer-reviewed perspective
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Proposes Sensor-Wide Association Studies for prespecified, multiplicity-controlled scans of sensor-derived
+    features against clinical phenotypes.
+  why_it_matters: Offers a transparent discovery framework for high-dimensional wearable feature libraries analogous
+    to genome-wide association studies.
+  limitations: The perspective defines a research design rather than proving that discovered sensor associations
+    are causal, portable or clinically useful.
+  evidence_boundary: This is a methodological perspective; association discovery must be followed by replication,
+    causal analysis and validation of intended use.
+  primary_url: https://www.nature.com/articles/s41746-026-02821-0
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - digital-measure-frameworks
+  - measure
+  source_note: Primary journal or conference page and abstract-level study metadata checked; effect estimates are
+    summarized only where the primary source states them.
+  doi: 10.1038/s41746-026-02821-0

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "predicate", "target_id", "provenance"],
+  "properties": {
+    "source_id": {"type": "string"},
+    "predicate": {"type": "string"},
+    "target_id": {"type": "string"},
+    "provenance": {"type": "string"}
+  }
+}

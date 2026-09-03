@@ -1,0 +1,43 @@
+lifecycle:
+- sensing
+- representation
+- measurement
+- prediction
+- causal-inference
+- policy-learning
+- intervention-design
+- clinical-evaluation
+- closed-loop-deployment
+- governance
+record_types:
+- model
+- dataset
+- method
+- measure
+- intervention
+- infrastructure
+scope_rings:
+- wearable-core
+- body-sensed-adjacent
+- implantable-closed-loop
+- mobile-health-enabler
+- cross-domain-enabler
+- infrastructure
+model_families:
+- motion-imu-foundation-models
+- ppg-optical-foundation-models
+- ecg-cardiac-foundation-models
+- eeg-neural-foundation-models
+- emg-neuromotor-models
+- sleep-psg-foundation-models
+- cgm-metabolic-foundation-models
+- respiratory-acoustic-foundation-models
+- multimodal-physiological-models
+- sensor-language-agents
+- general-time-series-enablers
+claim_layers:
+- association
+- prediction
+- causal-effect
+- policy-value
+- clinical-utility

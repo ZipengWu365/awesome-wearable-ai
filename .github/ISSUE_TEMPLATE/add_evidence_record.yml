@@ -1,0 +1,53 @@
+name: Add a method, measure, intervention, tool or standard
+about: Propose a non-model evidence-atlas record
+labels: [curation]
+body:
+  - type: dropdown
+    id: record_type
+    attributes:
+      label: Record type
+      options:
+        - causal / counterfactual / adaptive-policy method
+        - digital measure / computational phenotype
+        - intervention / randomized evaluation / closed-loop system
+        - software / platform / standard / regulatory guidance
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Resource title
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Version-of-record or official source URL
+    validations:
+      required: true
+  - type: input
+    id: venue
+    attributes:
+      label: Venue/source and year
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence summary
+      description: Give the design, population, signal/decision variables, estimand or outcome, contribution, limitations, causal status, and whether results were positive, null, negative or mixed.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Scientific boundary checks
+      options:
+        - label: I searched accepted records and the watchlist for duplicates.
+          required: true
+        - label: A scientific paper meets the venue policy, or this is a canonical official resource.
+          required: true
+        - label: A protocol is labelled as a protocol and not as effectiveness evidence.
+          required: true
+        - label: Predictive, causal, policy and clinical-utility claims are kept separate.
+          required: true

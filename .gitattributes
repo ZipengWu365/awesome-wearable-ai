@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.json linguist-generated=true
+generated/** linguist-generated=true
+site/registry.json linguist-generated=true

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Wearable AI watchlist record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "year", "proposed_family", "status", "reason", "primary_url", "review_action", "verified_on"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+    "title": {"type": "string", "minLength": 4},
+    "year": {"type": "integer", "minimum": 1990, "maximum": 2026},
+    "proposed_family": {"type": "string"},
+    "status": {"enum": ["preprint-only", "workshop-only", "venue-unresolved", "borderline-venue", "duplicate-candidate", "metadata-conflict", "awaiting-primary-source"]},
+    "reason": {"type": "string", "minLength": 20},
+    "primary_url": {"type": "string", "format": "uri"},
+    "review_action": {"type": "string", "minLength": 12},
+    "verified_on": {"type": "string", "format": "date"},
+    "tags": {"type": "array", "items": {"type": "string"}}
+  }
+}

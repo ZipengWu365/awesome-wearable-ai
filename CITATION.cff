@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: Awesome Wearable AI
+message: "Please cite this registry when using its taxonomy or machine-readable curation, and cite the original resources for scientific claims."
+type: dataset
+authors:
+  - family-names: Wu
+    given-names: Zipeng
+repository-code: https://github.com/ZipengWu365/awesome-wearable-ai
+url: https://github.com/ZipengWu365/awesome-wearable-ai
+license: MIT
+version: 0.3.0
+date-released: 2026-09-02
+keywords:
+  - wearable AI
+  - foundation models
+  - digital biomarkers
+  - causal inference
+  - adaptive interventions
+  - closed-loop health

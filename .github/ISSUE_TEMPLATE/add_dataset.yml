@@ -1,0 +1,34 @@
+name: Add a dataset, cohort or benchmark
+about: Propose canonical wearable or body-sensed research infrastructure
+labels: [dataset, curation]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Dataset / cohort / benchmark name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official or canonical source URL
+    validations:
+      required: true
+  - type: textarea
+    id: metadata
+    attributes:
+      label: Evidence-backed metadata
+      description: Participants, modality, device, placement, sampling rate, duration, raw/derived availability, labels, EHR/genomic/outcome linkage, access, license and known population limitations.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched accepted records and the watchlist for duplicate or parent/subset records.
+          required: true
+        - label: I used official documentation or the canonical dataset publication.
+          required: true
+        - label: I did not infer unknown fields or imply that dataset availability validates a model claim.
+          required: true

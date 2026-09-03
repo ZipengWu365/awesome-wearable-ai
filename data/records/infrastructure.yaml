@@ -1,0 +1,1761 @@
+- id: infra-ggir
+  title: GGIR
+  year: 2014
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: wearable-signal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - accelerometer
+  body_locations: []
+  clinical_domains:
+  - physical-activity
+  - sleep
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Open-source R package for processing multi-day raw accelerometer data, including calibration, non-wear
+    handling and sleep/activity summaries.
+  why_it_matters: Widely used in population-scale wrist-accelerometry studies and provides reproducible end-to-end
+    processing.
+  limitations: Output validity depends on device metadata, calibration quality, parameter choices and phenotype
+    definitions.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/wadpac/GGIR
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reproducibility
+  - software
+  - wearable-signal-processing
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/wadpac/GGIR
+  code_url: https://github.com/wadpac/GGIR
+- id: infra-actipy
+  title: actipy
+  year: 2021
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: wearable-signal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - accelerometer
+  body_locations: []
+  clinical_domains:
+  - physical-activity
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Python toolkit for reading, calibrating, resampling and summarizing raw wearable accelerometry.
+  why_it_matters: Supports transparent preprocessing and cross-device workflows for large accelerometer datasets.
+  limitations: Harmonized preprocessing cannot remove all hardware, placement and protocol differences.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/OxWearables/actipy
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reproducibility
+  - software
+  - wearable-signal-processing
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/OxWearables/actipy
+  code_url: https://github.com/OxWearables/actipy
+- id: infra-biobank-accelerometer-analysis
+  title: biobankAccelerometerAnalysis
+  year: 2019
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: wearable-signal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - accelerometer
+  body_locations: []
+  clinical_domains:
+  - population-health
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Reference pipeline developed for large-scale processing of UK Biobank raw accelerometry.
+  why_it_matters: Provides a concrete, inspectable implementation behind influential population accelerometry analyses.
+  limitations: The pipeline is tailored to specific acquisition and phenotype conventions and should not be assumed
+    optimal for every cohort.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/activityMonitoring/biobankAccelerometerAnalysis
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reproducibility
+  - software
+  - wearable-signal-processing
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/activityMonitoring/biobankAccelerometerAnalysis
+  code_url: https://github.com/activityMonitoring/biobankAccelerometerAnalysis
+- id: infra-mne-python
+  title: MNE-Python
+  year: 2013
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: biosignal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - eeg
+  - meg
+  - ecog
+  body_locations: []
+  clinical_domains:
+  - neuroscience
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Open-source ecosystem for EEG, MEG, ECoG and related neurophysiological signal analysis.
+  why_it_matters: Provides mature file I/O, preprocessing, source analysis, visualization and machine-learning interfaces.
+  limitations: Correct use requires domain-specific choices about filtering, referencing, artifact rejection and
+    statistical inference.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://mne.tools/stable/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - biosignal-processing
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://mne.tools/stable/
+  code_url: https://github.com/mne-tools/mne-python
+- id: infra-moabb
+  title: MOABB
+  year: 2018
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: benchmarking-and-evaluation
+  inclusion_basis: official_tool
+  modalities:
+  - eeg
+  body_locations: []
+  clinical_domains:
+  - brain-computer-interface
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Benchmarking framework that standardizes datasets, paradigms, pipelines and statistical comparisons
+    for brain-computer interfaces.
+  why_it_matters: Reduces evaluation fragmentation and supports reproducible cross-dataset EEG comparisons.
+  limitations: Benchmark conclusions remain conditional on included datasets, paradigms and preprocessing choices.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://moabb.neurotechx.com/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - benchmarking-and-evaluation
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://moabb.neurotechx.com/
+  code_url: https://github.com/NeuroTechX/moabb
+- id: infra-wfdb-python
+  title: WFDB Python
+  year: 2019
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: biosignal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - ecg
+  - ppg
+  - respiration
+  - waveforms
+  body_locations: []
+  clinical_domains:
+  - cardiology
+  - critical-care
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Official WaveForm DataBase software ecosystem for reading, writing, processing and evaluating physiological
+    waveforms and annotations.
+  why_it_matters: Provides a canonical interface to many PhysioNet waveform resources.
+  limitations: File compatibility does not guarantee standardized labels, signal quality or clinically valid evaluation.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://wfdb.io/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - biosignal-processing
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://wfdb.io/
+  code_url: https://github.com/MIT-LCP/wfdb-python
+- id: infra-neurokit2
+  title: NeuroKit2
+  year: 2021
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: biosignal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - ecg
+  - ppg
+  - eda
+  - respiration
+  - emg
+  body_locations: []
+  clinical_domains:
+  - psychophysiology
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Python toolbox for processing ECG, PPG, EDA, respiration, EMG and related psychophysiological signals.
+  why_it_matters: Offers a unified API for multimodal physiological feature extraction and simulation.
+  limitations: Default algorithms and derived features require task-specific validation, especially under motion
+    and free-living noise.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/neuropsychology/NeuroKit
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - biosignal-processing
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/neuropsychology/NeuroKit
+  code_url: https://github.com/neuropsychology/NeuroKit
+- id: infra-biosppy
+  title: BioSPPy
+  year: 2015
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: biosignal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - ecg
+  - eda
+  - eeg
+  - emg
+  - respiration
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - physiology
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Python toolbox for common ECG, EDA, EEG, EMG, respiration and BVP processing workflows.
+  why_it_matters: Provides reusable baseline signal-processing components across wearable modalities.
+  limitations: Algorithms may require adaptation and validation for modern devices, sampling rates and free-living
+    artifacts.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/scientisst/BioSPPy
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - biosignal-processing
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/scientisst/BioSPPy
+  code_url: https://github.com/scientisst/BioSPPy
+- id: infra-heartpy
+  title: HeartPy
+  year: 2019
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: biosignal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - ppg
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiology
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Python heart-rate analysis toolkit designed for noisy PPG and ECG-like signals.
+  why_it_matters: Useful for transparent baseline processing and quality-aware beat analysis.
+  limitations: Performance varies with motion, morphology and sampling conditions and should be externally validated.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/paulvangentcom/heartrate_analysis_python
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - biosignal-processing
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/paulvangentcom/heartrate_analysis_python
+  code_url: https://github.com/paulvangentcom/heartrate_analysis_python
+- id: infra-pyppg
+  title: pyPPG
+  year: 2023
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: biosignal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Open-source Python toolbox for standardized PPG fiducial-point detection and biomarker extraction.
+  why_it_matters: Supports reproducible optical-pulse morphology analysis across studies.
+  limitations: Fiducial accuracy and biomarker validity depend on signal quality, site and population.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://pyppg.readthedocs.io/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - biosignal-processing
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://pyppg.readthedocs.io/
+  code_url: https://github.com/godamartonaron/GODA_pyPPG
+- id: infra-torchecg
+  title: TorchECG
+  year: 2022
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: biosignal-processing
+  inclusion_basis: official_tool
+  modalities:
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiology
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: PyTorch-based toolkit containing ECG datasets, models, preprocessing and evaluation utilities.
+  why_it_matters: Lowers engineering overhead for reproducible ECG deep-learning experiments.
+  limitations: Included implementations do not make benchmark splits or clinical claims automatically valid.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/DeepPSP/torch_ecg
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - biosignal-processing
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/DeepPSP/torch_ecg
+  code_url: https://github.com/DeepPSP/torch_ecg
+- id: infra-yasa
+  title: YASA
+  year: 2021
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: sleep-analysis
+  inclusion_basis: official_tool
+  modalities:
+  - eeg
+  - eog
+  - emg
+  - sleep
+  body_locations: []
+  clinical_domains:
+  - sleep
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Python package for sleep staging, spectral analysis, spindle detection and other polysomnography
+    analyses.
+  why_it_matters: Provides accessible and reproducible sleep-analysis baselines.
+  limitations: Automated sleep outputs require validation for the population, montage and acquisition setting.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/raphaelvallat/yasa
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reproducibility
+  - sleep-analysis
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/raphaelvallat/yasa
+  code_url: https://github.com/raphaelvallat/yasa
+- id: infra-pyactigraphy
+  title: pyActigraphy
+  year: 2020
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: sleep-analysis
+  inclusion_basis: official_tool
+  modalities:
+  - actigraphy
+  - accelerometer
+  body_locations: []
+  clinical_domains:
+  - sleep
+  - circadian-health
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Python package for actigraphy I/O, rest-activity rhythm analysis and sleep-wake algorithms.
+  why_it_matters: Supports transparent circadian and actigraphy research across device formats.
+  limitations: Algorithm outputs are device- and parameter-dependent and are not interchangeable with polysomnographic
+    sleep stages.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/ghammad/pyActigraphy
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reproducibility
+  - sleep-analysis
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/ghammad/pyActigraphy
+  code_url: https://github.com/ghammad/pyActigraphy
+- id: infra-tsfresh
+  title: tsfresh
+  year: 2018
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: time-series-feature-engineering
+  inclusion_basis: official_tool
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - machine-learning
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Automated extraction and relevance filtering of large collections of time-series features.
+  why_it_matters: Provides a strong non-neural baseline and interpretable feature construction for wearable signals.
+  limitations: Large feature spaces can overfit without participant-level splits, correction and external validation.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/blue-yonder/tsfresh
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reproducibility
+  - software
+  - time-series-feature-engineering
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/blue-yonder/tsfresh
+  code_url: https://github.com/blue-yonder/tsfresh
+- id: infra-aeon
+  title: aeon
+  year: 2023
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: time-series-tooling
+  inclusion_basis: official_tool
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - machine-learning
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Machine-learning toolkit for time-series classification, regression, clustering, anomaly detection
+    and forecasting.
+  why_it_matters: Offers standardized estimators and evaluation interfaces relevant to wearable benchmarks.
+  limitations: Generic time-series defaults do not resolve wearable-specific leakage, label and device-shift issues.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/aeon-toolkit/aeon
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reproducibility
+  - software
+  - time-series-tooling
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/aeon-toolkit/aeon
+  code_url: https://github.com/aeon-toolkit/aeon
+- id: infra-sktime
+  title: sktime
+  year: 2019
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: time-series-tooling
+  inclusion_basis: official_tool
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - machine-learning
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Unified Python framework for time-series learning and composable pipelines.
+  why_it_matters: Supports consistent baselines and model comparison across forecasting and classification tasks.
+  limitations: Wearable applications still require participant-safe splitting and domain-specific validation.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/sktime/sktime
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reproducibility
+  - software
+  - time-series-tooling
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/sktime/sktime
+  code_url: https://github.com/sktime/sktime
+- id: infra-pyedflib
+  title: pyEDFlib
+  year: 2015
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: biosignal-io
+  inclusion_basis: official_tool
+  modalities:
+  - eeg
+  - psg
+  - biosignals
+  body_locations: []
+  clinical_domains:
+  - sleep
+  - neuroscience
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Python library for reading and writing EDF/EDF+ and BDF physiological recording formats.
+  why_it_matters: Provides dependable low-level access to common EEG and polysomnography files.
+  limitations: Format I/O does not standardize channel semantics, montage or annotations.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/holgern/pyedflib
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - biosignal-io
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/holgern/pyedflib
+  code_url: https://github.com/holgern/pyedflib
+- id: infra-physionet
+  title: PhysioNet
+  year: 2000
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: data-platforms
+  inclusion_basis: official_tool
+  modalities:
+  - physiological-signals
+  body_locations: []
+  clinical_domains:
+  - digital-health
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Canonical repository and community platform for physiological and clinical data, software and challenges.
+  why_it_matters: Anchors a large fraction of open ECG, PPG, ICU waveform and sleep research.
+  limitations: Access, licensing, de-identification, labels and benchmark protocols vary by collection.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://physionet.org/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - data-platforms
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://physionet.org/
+- id: infra-nsrr
+  title: National Sleep Research Resource
+  year: 2014
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: data-platforms
+  inclusion_basis: official_tool
+  modalities:
+  - psg
+  - actigraphy
+  - sleep
+  body_locations: []
+  clinical_domains:
+  - sleep
+  - cardiometabolic
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Repository providing harmonized access to multiple sleep cohorts, polysomnography and associated
+    phenotypes.
+  why_it_matters: Enables multi-cohort sleep and cardiometabolic research with documented access pathways.
+  limitations: Cross-cohort harmonization remains incomplete and access restrictions differ across datasets.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://sleepdata.org/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - data-platforms
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://sleepdata.org/
+- id: infra-radar-base
+  title: RADAR-base
+  year: 2019
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: mobile-health-platforms
+  inclusion_basis: official_tool
+  modalities:
+  - wearable-sensors
+  - smartphone
+  body_locations: []
+  clinical_domains:
+  - remote-monitoring
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Open-source platform for remote collection, streaming and management of active and passive mobile
+    and wearable data.
+  why_it_matters: Supports longitudinal multimodal studies and reproducible digital-phenotyping infrastructure.
+  limitations: Deployment requires substantial engineering, privacy governance, device integration and operational
+    monitoring.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://radar-base.org/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - mobile-health-platforms
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://radar-base.org/
+  code_url: https://github.com/RADAR-base
+- id: infra-beiwe
+  title: Beiwe
+  year: 2016
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: mobile-health-platforms
+  inclusion_basis: official_tool
+  modalities:
+  - smartphone-sensors
+  body_locations: []
+  clinical_domains:
+  - mental-health
+  - digital-phenotyping
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Research platform for collecting smartphone sensor, survey and communication metadata in longitudinal
+    studies.
+  why_it_matters: Provides an established infrastructure for digital phenotyping and ecological assessment.
+  limitations: Smartphone-derived proxies are sensitive to operating-system restrictions, adherence and missing-not-at-random
+    data.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://www.hsph.harvard.edu/onnela-lab/beiwe-research-platform/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - mobile-health-platforms
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://www.hsph.harvard.edu/onnela-lab/beiwe-research-platform/
+  code_url: https://github.com/onnela-lab/beiwe-backend
+- id: infra-aware
+  title: AWARE Framework
+  year: 2015
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: mobile-health-platforms
+  inclusion_basis: official_tool
+  modalities:
+  - smartphone-sensors
+  - wearable-sensors
+  body_locations: []
+  clinical_domains:
+  - context-recognition
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Open-source mobile context-instrumentation framework for collecting smartphone and connected-sensor
+    data.
+  why_it_matters: Supports customizable passive sensing studies across mobile and wearable contexts.
+  limitations: Background collection is affected by platform permissions, battery constraints and device fragmentation.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://awareframework.com/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - mobile-health-platforms
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://awareframework.com/
+  code_url: https://github.com/awareframework
+- id: infra-mindlamp
+  title: mindLAMP
+  year: 2020
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: mobile-health-platforms
+  inclusion_basis: official_tool
+  modalities:
+  - smartphone-sensors
+  - wearable-integrations
+  body_locations: []
+  clinical_domains:
+  - mental-health
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Open-source digital-mental-health platform for surveys, cognitive tasks, passive sensing and intervention
+    content.
+  why_it_matters: Connects longitudinal measurement with configurable digital-health delivery.
+  limitations: Clinical effectiveness depends on the specific protocol and evaluation, not platform availability.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://github.com/BIDMCDigitalPsychiatry/LAMP-platform
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - mobile-health-platforms
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://github.com/BIDMCDigitalPsychiatry/LAMP-platform
+  code_url: https://github.com/BIDMCDigitalPsychiatry/LAMP-platform
+- id: infra-researchkit
+  title: ResearchKit
+  year: 2015
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: mobile-health-platforms
+  inclusion_basis: official_tool
+  modalities:
+  - smartphone
+  - apple-health
+  body_locations: []
+  clinical_domains:
+  - digital-health
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Apple open-source framework for consent, surveys, active tasks and research data collection on iOS.
+  why_it_matters: Enables scalable participant-facing health studies with standardized modules.
+  limitations: iOS access and participant self-selection can limit representativeness; individual apps require validation.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://developer.apple.com/researchkit/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - mobile-health-platforms
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://developer.apple.com/researchkit/
+  code_url: https://github.com/ResearchKit/ResearchKit
+- id: infra-carekit
+  title: CareKit
+  year: 2016
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: mobile-health-platforms
+  inclusion_basis: official_tool
+  modalities:
+  - smartphone
+  - apple-health
+  body_locations: []
+  clinical_domains:
+  - care-management
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Open-source framework for building care-plan, symptom and outcome-tracking applications.
+  why_it_matters: Supports the delivery layer connecting sensed data, self-management and care workflows.
+  limitations: A software framework does not determine intervention efficacy, medical-device status or clinical
+    governance.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://www.carekit-apple.com/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - mobile-health-platforms
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://www.carekit-apple.com/
+  code_url: https://github.com/carekit-apple/CareKit
+- id: infra-healthkit
+  title: Apple HealthKit
+  year: 2014
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: commercial-platform-apis
+  inclusion_basis: official_tool
+  modalities:
+  - consumer-health-data
+  body_locations: []
+  clinical_domains:
+  - digital-health
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Official API ecosystem for accessing user-authorized health and fitness data on Apple platforms.
+  why_it_matters: Provides a major interoperability layer for consumer wearable studies and applications.
+  limitations: Available fields, sampling, provenance and permissions vary; API data are not equivalent to raw sensor
+    waveforms.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://developer.apple.com/health-fitness/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - commercial-platform-apis
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://developer.apple.com/health-fitness/
+- id: infra-health-connect
+  title: Android Health Connect
+  year: 2022
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: commercial-platform-apis
+  inclusion_basis: official_tool
+  modalities:
+  - consumer-health-data
+  body_locations: []
+  clinical_domains:
+  - digital-health
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Android platform for user-controlled exchange of health and fitness records between applications.
+  why_it_matters: Provides a common interface for multi-application and multi-device health data.
+  limitations: Data availability and granularity depend on contributing apps and device vendors.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://developer.android.com/health-and-fitness/guides/health-connect
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - commercial-platform-apis
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://developer.android.com/health-and-fitness/guides/health-connect
+- id: infra-fitbit-web-api
+  title: Fitbit Web API
+  year: 2015
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: commercial-platform-apis
+  inclusion_basis: official_tool
+  modalities:
+  - activity
+  - heart-rate
+  - sleep
+  body_locations: []
+  clinical_domains:
+  - consumer-wearables
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Official interface for authorized Fitbit activity, heart-rate, sleep and related data.
+  why_it_matters: Enables longitudinal consumer wearable research without direct device firmware access.
+  limitations: API-derived summaries, intraday access limits and algorithm changes require version-aware interpretation.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://dev.fitbit.com/build/reference/web-api/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - commercial-platform-apis
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://dev.fitbit.com/build/reference/web-api/
+- id: infra-samsung-health-data-sdk
+  title: Samsung Health Data SDK
+  year: 2024
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: commercial-platform-apis
+  inclusion_basis: official_tool
+  modalities:
+  - consumer-health-data
+  body_locations: []
+  clinical_domains:
+  - consumer-wearables
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Official Samsung interface for authorized access to supported health and wearable-derived records.
+  why_it_matters: Supports integration with a large Android smartwatch ecosystem.
+  limitations: Availability, geographic access, permissions and data resolution can change with platform policy.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://developer.samsung.com/health/data/overview.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - commercial-platform-apis
+  - infrastructure
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://developer.samsung.com/health/data/overview.html
+- id: infra-open-mhealth
+  title: Open mHealth
+  year: 2014
+  venue: Canonical project documentation
+  venue_type: tool
+  venue_tier: official_tool
+  record_type: infrastructure
+  family: interoperability
+  inclusion_basis: official_tool
+  modalities:
+  - mobile-health-data
+  - wearable-data
+  body_locations: []
+  clinical_domains:
+  - interoperability
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: sensing
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Open schemas and tooling for representing common mobile and wearable health observations.
+  why_it_matters: Provides reusable semantic structures for integrating heterogeneous device data.
+  limitations: Schema adoption does not ensure semantic equivalence when source algorithms and sampling differ.
+  evidence_boundary: Tool inclusion documents available research infrastructure; it does not validate downstream
+    scientific, causal or clinical claims.
+  primary_url: https://www.openmhealth.org/
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - interoperability
+  - reproducibility
+  - software
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+  project_url: https://www.openmhealth.org/
+  code_url: https://github.com/openmhealth
+- id: infra-hl7-fhir
+  title: HL7 FHIR
+  year: 2014
+  venue: HL7 International
+  venue_type: standard
+  venue_tier: official_standard
+  record_type: infrastructure
+  family: interoperability
+  inclusion_basis: official_standard
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - governance
+  - interoperability
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Defines a widely adopted standard for exchanging electronic health information through modular resources
+    and APIs.
+  why_it_matters: Wearable observations often need to enter clinical systems through interoperable data models.
+  limitations: FHIR does not by itself harmonize sensor algorithms, sampling protocols or phenotype validity.
+  evidence_boundary: This resource defines a standard, governance or reporting framework. Conformance does not by
+    itself demonstrate safety, effectiveness or clinical utility.
+  primary_url: https://hl7.org/fhir/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - governance
+  - infrastructure
+  - interoperability
+  - standards
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+- id: infra-omop-cdm
+  title: OMOP Common Data Model
+  year: 2009
+  venue: OHDSI
+  venue_type: standard
+  venue_tier: official_standard
+  record_type: infrastructure
+  family: interoperability
+  inclusion_basis: official_standard
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - governance
+  - interoperability
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Provides a standardized relational model and vocabularies for observational health data.
+  why_it_matters: Supports linking wearable features to longitudinal clinical events and reproducible cohort definitions.
+  limitations: Wearable waveform and dense time-series representation often requires extensions or linked stores.
+  evidence_boundary: This resource defines a standard, governance or reporting framework. Conformance does not by
+    itself demonstrate safety, effectiveness or clinical utility.
+  primary_url: https://ohdsi.github.io/CommonDataModel/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - governance
+  - infrastructure
+  - interoperability
+  - standards
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+- id: infra-fda-dht-remote-data
+  title: Digital Health Technologies for Remote Data Acquisition in Clinical Investigations
+  year: 2023
+  venue: US Food and Drug Administration
+  venue_type: guidance
+  venue_tier: official_guidance
+  record_type: infrastructure
+  family: regulatory-guidance
+  inclusion_basis: official_guidance
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - governance
+  - interoperability
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: FDA guidance covering selection, verification, validation, usability, data management and risk considerations
+    for remote digital-health data acquisition.
+  why_it_matters: Directly informs the design of wearable endpoints and decentralized clinical investigations.
+  limitations: The guidance is jurisdiction-specific and does not replace product- or protocol-specific regulatory
+    advice.
+  evidence_boundary: This resource defines a standard, governance or reporting framework. Conformance does not by
+    itself demonstrate safety, effectiveness or clinical utility.
+  primary_url: https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - governance
+  - infrastructure
+  - regulatory-guidance
+  - standards
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+- id: infra-fda-gmlp
+  title: 'Good Machine Learning Practice for Medical Device Development: Guiding Principles'
+  year: 2021
+  venue: US Food and Drug Administration
+  venue_type: guidance
+  venue_tier: official_guidance
+  record_type: infrastructure
+  family: regulatory-guidance
+  inclusion_basis: official_guidance
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - governance
+  - interoperability
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Defines lifecycle principles for data quality, human factors, performance, monitoring and multidisciplinary
+    medical-device ML development.
+  why_it_matters: Provides governance constraints for adaptive wearable algorithms intended for clinical use.
+  limitations: High-level principles require product-specific implementation and do not constitute device authorization.
+  evidence_boundary: This resource defines a standard, governance or reporting framework. Conformance does not by
+    itself demonstrate safety, effectiveness or clinical utility.
+  primary_url: https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - governance
+  - infrastructure
+  - regulatory-guidance
+  - standards
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+- id: infra-nice-esf
+  title: NICE Evidence Standards Framework for Digital Health Technologies
+  year: 2022
+  venue: National Institute for Health and Care Excellence
+  venue_type: guidance
+  venue_tier: official_guidance
+  record_type: infrastructure
+  family: regulatory-guidance
+  inclusion_basis: official_guidance
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - governance
+  - interoperability
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Stratifies evidence expectations for digital health technologies according to function and risk.
+  why_it_matters: Helps distinguish wellness sensing, decision support and higher-risk intervention claims.
+  limitations: Evidence expectations are tied to the UK context and require interpretation for a specific technology.
+  evidence_boundary: This resource defines a standard, governance or reporting framework. Conformance does not by
+    itself demonstrate safety, effectiveness or clinical utility.
+  primary_url: https://www.nice.org.uk/corporate/ecd7
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - governance
+  - infrastructure
+  - regulatory-guidance
+  - standards
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+- id: infra-who-ai-health-ethics
+  title: Ethics and Governance of Artificial Intelligence for Health
+  year: 2021
+  venue: World Health Organization
+  venue_type: guidance
+  venue_tier: official_guidance
+  record_type: infrastructure
+  family: ethics-and-governance
+  inclusion_basis: official_guidance
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - governance
+  - interoperability
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Sets out ethical principles and governance considerations for AI used in health.
+  why_it_matters: Provides a public-interest framework for privacy, autonomy, accountability, inclusiveness and
+    sustainability in wearable AI.
+  limitations: The document is normative guidance rather than a technical validation or regulatory approval pathway.
+  evidence_boundary: This resource defines a standard, governance or reporting framework. Conformance does not by
+    itself demonstrate safety, effectiveness or clinical utility.
+  primary_url: https://www.who.int/publications/i/item/9789240029200
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - ethics-and-governance
+  - governance
+  - infrastructure
+  - standards
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+- id: infra-imdrf-samd-clinical-evaluation
+  title: 'Software as a Medical Device: Clinical Evaluation'
+  year: 2017
+  venue: International Medical Device Regulators Forum
+  venue_type: guidance
+  venue_tier: official_guidance
+  record_type: infrastructure
+  family: regulatory-guidance
+  inclusion_basis: official_guidance
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - governance
+  - interoperability
+  populations:
+  - researchers-and-developers
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: official technical resource, standard, guidance, or software infrastructure
+  evidence_stage: official-resource
+  causal_status: not-applicable
+  contribution: Defines clinical association, analytical validation and clinical validation concepts for software
+    as a medical device.
+  why_it_matters: Maps directly onto the evidence chain required for wearable-derived clinical measures and algorithms.
+  limitations: National implementation and product classification remain regulator- and context-specific.
+  evidence_boundary: This resource defines a standard, governance or reporting framework. Conformance does not by
+    itself demonstrate safety, effectiveness or clinical utility.
+  primary_url: https://www.imdrf.org/documents/software-medical-device-samd-clinical-evaluation
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: official_resource_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - governance
+  - infrastructure
+  - regulatory-guidance
+  - standards
+  source_note: Canonical project, standards-body, regulator, or official documentation page checked.
+- id: infra-v3-digital-biomarkers-2020
+  title: 'The V3 Framework: Validation, Verification, and Evaluation of Biometric Monitoring Technologies'
+  year: 2020
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: infrastructure
+  family: digital-measure-evaluation
+  inclusion_basis: peer_reviewed_publication
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - digital-biomarkers
+  - validation
+  populations:
+  - general-population
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-applicable
+  contribution: Organizes biometric monitoring evaluation into verification, analytical validation and clinical
+    validation.
+  why_it_matters: Provides a foundational evidence architecture for wearable sensors and digital biomarkers.
+  limitations: The framework must be operationalized with fit-for-purpose acceptance criteria for each context of
+    use.
+  evidence_boundary: Following the framework structures evidence generation but does not guarantee a device or measure
+    is valid.
+  primary_url: https://www.nature.com/articles/s41746-020-0260-4
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - analytical-validation
+  - clinical-validation
+  - digital-measure-evaluation
+  - infrastructure
+  - verification
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: infra-consort-ai-2020
+  title: 'Reporting Guidelines for Clinical Trial Reports for Interventions Involving Artificial Intelligence: The
+    CONSORT-AI Extension'
+  year: 2020
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: infrastructure
+  family: reporting-guidelines
+  inclusion_basis: peer_reviewed_publication
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - clinical-trials
+  - ai-reporting
+  populations:
+  - general-population
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-applicable
+  contribution: Extends CONSORT reporting requirements for randomized evaluations of AI interventions.
+  why_it_matters: Improves transparency about inputs, outputs, human interaction, errors and AI-specific trial conduct.
+  limitations: Reporting completeness does not correct design bias or guarantee generalizability.
+  evidence_boundary: A reporting guideline does not establish intervention effectiveness.
+  primary_url: https://www.nature.com/articles/s41591-020-1034-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - consort-ai
+  - infrastructure
+  - reporting-guidelines
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: infra-spirit-ai-2020
+  title: 'Guidelines for Clinical Trial Protocols for Interventions Involving Artificial Intelligence: The SPIRIT-AI
+    Extension'
+  year: 2020
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: infrastructure
+  family: reporting-guidelines
+  inclusion_basis: peer_reviewed_publication
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - clinical-trials
+  - ai-reporting
+  populations:
+  - general-population
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-applicable
+  contribution: Extends SPIRIT for protocols evaluating interventions that include an AI component.
+  why_it_matters: Makes planned AI inputs, outputs, human-AI interactions and error handling explicit before a trial
+    is run.
+  limitations: Protocol reporting cannot compensate for an inappropriate comparator, endpoint or deployment context.
+  evidence_boundary: This is protocol-reporting guidance, not effectiveness evidence.
+  primary_url: https://www.nature.com/articles/s41591-020-1037-7
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reporting-guidelines
+  - spirit-ai
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: infra-decide-ai-2022
+  title: 'DECIDE-AI: New Reporting Guidelines to Bridge the Development-to-Implementation Gap in Clinical Artificial
+    Intelligence'
+  year: 2022
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: infrastructure
+  family: reporting-guidelines
+  inclusion_basis: peer_reviewed_publication
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - clinical-deployment
+  - ai-reporting
+  populations:
+  - general-population
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-applicable
+  contribution: Provides reporting guidance for early-stage, live clinical evaluation of AI decision-support systems.
+  why_it_matters: Targets the poorly documented transition from retrospective model evaluation to real clinical
+    workflow use.
+  limitations: The guideline focuses on reporting and early evaluation, not definitive comparative effectiveness.
+  evidence_boundary: Conforming reports remain subject to design, bias and clinical-utility assessment.
+  primary_url: https://www.nature.com/articles/s41591-022-01772-9
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - decide-ai
+  - infrastructure
+  - reporting-guidelines
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: infra-stard-ai-2025
+  title: STARD-AI Reporting Guidelines for Diagnostic Accuracy Studies Using Artificial Intelligence
+  year: 2025
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: infrastructure
+  family: reporting-guidelines
+  inclusion_basis: peer_reviewed_publication
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - diagnostic-accuracy
+  - ai-reporting
+  populations:
+  - general-population
+  wearable_scope: infrastructure
+  lifecycle_stage: governance
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-applicable
+  contribution: Extends diagnostic-accuracy reporting guidance for studies that evaluate AI-based index tests.
+  why_it_matters: Relevant to wearable algorithms positioned as detection, screening or diagnostic tools.
+  limitations: Reporting guidance does not define an adequate clinical threshold or guarantee transportability.
+  evidence_boundary: Diagnostic accuracy is distinct from treatment benefit and population screening utility.
+  primary_url: https://www.nature.com/articles/s41591-025-03953-8
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - infrastructure
+  - reporting-guidelines
+  - stard-ai
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.

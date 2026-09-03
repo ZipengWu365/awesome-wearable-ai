@@ -1,0 +1,86 @@
+modalities:
+  motion:
+  - accelerometer
+  - gyroscope
+  - imu
+  - magnetometer
+  - barometer
+  - gait-pressure
+  cardiovascular:
+  - ecg
+  - ppg
+  - heart-rate
+  - heart-rate-variability
+  - blood-pressure
+  - pcg
+  neural:
+  - eeg
+  - meg
+  - ieeg
+  - emg
+  - eog
+  - neural-streaming
+  respiratory:
+  - respiration
+  - respiratory-audio
+  - cough-audio
+  - spirometry
+  metabolic:
+  - cgm
+  - glucose
+  - insulin
+  - skin-interstitial-fluid
+  autonomic:
+  - eda
+  - gsr
+  - skin-temperature
+  biochemical:
+  - sweat
+  - lactate
+  - cortisol
+  - biomarkers
+  context:
+  - gps
+  - ambient-light
+  - proximity
+  - smartphone
+  - self-report
+  - text
+  - image
+  - video
+  derived:
+  - sleep
+  - steps
+  - activity-summary
+  - digital-phenotype
+  - ehr
+model_families:
+- motion-imu-foundation-models
+- ppg-optical-foundation-models
+- ecg-cardiac-foundation-models
+- eeg-neural-foundation-models
+- emg-neuromotor-models
+- sleep-psg-foundation-models
+- cgm-metabolic-foundation-models
+- respiratory-acoustic-foundation-models
+- multimodal-physiological-models
+- sensor-language-agents
+- general-time-series-enablers
+counterfactual_layers:
+  predictive-counterfactual: Changes to model inputs that alter predictions; does not identify treatment effects.
+  causal-counterfactual: Potential outcomes under alternative interventions; requires identification assumptions
+    or randomization.
+  policy-counterfactual: Outcomes under alternative sequential decision policies; requires overlap and reliable
+    policy evaluation.
+  generative-counterfactual: Simulated trajectories or digital twins; requires calibration and interventional validation.
+evidence_stages:
+- methodological
+- retrospective
+- external-validation
+- prospective-observational
+- protocol
+- micro-randomized-trial
+- randomized-controlled-trial
+- systematic-review
+- clinical-deployment
+- official-resource

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome Wearable AI Evidence Atlas</title>
+  <meta name="description" content="Search 396 quality-screened wearable AI records and 45 watchlist candidates.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Awesome Wearable AI · v0.3.0</p>
+    <h1>Wearable AI Evidence Atlas</h1>
+    <p>Models, datasets, digital measures, causal methods, adaptive interventions, closed-loop systems, and deployment infrastructure.</p>
+    <div class="stats"><span>396 accepted</span><span>45 watchlist</span><span>2169 relations</span></div>
+  </header>
+  <main>
+    <section class="controls" aria-label="Search and filters">
+      <input id="query" type="search" placeholder="Search title, contribution, modality, domain, venue…" aria-label="Search records">
+      <select id="type"><option value="">All record types</option></select>
+      <select id="family"><option value="">All families</option></select>
+      <select id="tier"><option value="">All evidence sources</option></select>
+      <label><input id="watchlist" type="checkbox"> Include watchlist</label>
+    </section>
+    <p id="count" class="count"></p>
+    <section id="results" class="grid" aria-live="polite"></section>
+  </main>
+  <footer>Counts are coverage indicators. Inclusion does not establish clinical utility, causal effect, or regulatory approval.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

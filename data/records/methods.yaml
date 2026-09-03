@@ -1,0 +1,2743 @@
+- id: method-gradient-v-learning-2020
+  title: Gradient Regularized V-Learning for Dynamic Treatment Regimes
+  year: 2020
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: adaptive-treatment-and-policy-learning
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: policy-learning
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Uses gradient regularization and value learning to estimate non-Markovian dynamic treatment regimes.
+  why_it_matters: Provides a formal route from repeated sensing to sequential treatment or intervention policies
+    rather than one-time risk prediction.
+  limitations: Estimated policies can be unstable under limited overlap, misspecified rewards, delayed outcomes,
+    nonstationarity, safety constraints and distribution shift.
+  evidence_boundary: Policy-learning performance in retrospective or simulated data does not establish prospective
+    clinical benefit or safe deployment.
+  primary_url: https://proceedings.neurips.cc/paper/2020/hash/17b3c7061788dbe82de5abe9f6fe22b3-Abstract.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-treatment-and-policy-learning
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-ai-clinician-2018
+  title: The Artificial Intelligence Clinician Learns Optimal Treatment Strategies for Sepsis in Intensive Care
+  year: 2018
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: adaptive-treatment-and-policy-learning
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: policy-learning
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Demonstrates retrospective reinforcement-learning policy estimation for sequential sepsis treatment
+    and illustrates both the promise and controversy of observational policy learning.
+  why_it_matters: Provides a formal route from repeated sensing to sequential treatment or intervention policies
+    rather than one-time risk prediction.
+  limitations: Estimated policies can be unstable under limited overlap, misspecified rewards, delayed outcomes,
+    nonstationarity, safety constraints and distribution shift.
+  evidence_boundary: Policy-learning performance in retrospective or simulated data does not establish prospective
+    clinical benefit or safe deployment.
+  primary_url: https://doi.org/10.1038/s41591-018-0213-5
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-treatment-and-policy-learning
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41591-018-0213-5
+- id: method-v-learning-2015
+  title: V-Learning for Dynamic Treatment Effects
+  year: 2015
+  venue: Journal of the American Statistical Association
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: adaptive-treatment-and-policy-learning
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: policy-learning
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Estimates optimal dynamic treatment regimes through value-function learning without fully modelling
+    outcome dynamics.
+  why_it_matters: Provides a formal route from repeated sensing to sequential treatment or intervention policies
+    rather than one-time risk prediction.
+  limitations: Estimated policies can be unstable under limited overlap, misspecified rewards, delayed outcomes,
+    nonstationarity, safety constraints and distribution shift.
+  evidence_boundary: Policy-learning performance in retrospective or simulated data does not establish prospective
+    clinical benefit or safe deployment.
+  primary_url: https://doi.org/10.1080/01621459.2014.937488
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-treatment-and-policy-learning
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1080/01621459.2014.937488
+- id: method-smart-design-2005
+  title: An Experimental Design for the Development of Adaptive Treatment Strategies
+  year: 2005
+  venue: Statistics in Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: adaptive-treatment-and-policy-learning
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: intervention-design
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: randomized-causal-effect
+  contribution: Introduces sequential multiple-assignment randomization for constructing adaptive treatment strategies
+    across treatment stages.
+  why_it_matters: Provides a formal route from repeated sensing to sequential treatment or intervention policies
+    rather than one-time risk prediction.
+  limitations: Estimated policies can be unstable under limited overlap, misspecified rewards, delayed outcomes,
+    nonstationarity, safety constraints and distribution shift.
+  evidence_boundary: Policy-learning performance in retrospective or simulated data does not establish prospective
+    clinical benefit or safe deployment.
+  primary_url: https://doi.org/10.1002/sim.2022
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-treatment-and-policy-learning
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1002/sim.2022
+- id: method-q-learning-dtr-2005
+  title: 'Q-Learning for Dynamic Treatment Regimes: An Application to Depression'
+  year: 2005
+  venue: Statistics in Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: adaptive-treatment-and-policy-learning
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: policy-learning
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Adapts Q-learning to estimate stage-specific decision rules for multistage treatment regimes.
+  why_it_matters: Provides a formal route from repeated sensing to sequential treatment or intervention policies
+    rather than one-time risk prediction.
+  limitations: Estimated policies can be unstable under limited overlap, misspecified rewards, delayed outcomes,
+    nonstationarity, safety constraints and distribution shift.
+  evidence_boundary: Policy-learning performance in retrospective or simulated data does not establish prospective
+    clinical benefit or safe deployment.
+  primary_url: https://doi.org/10.1002/sim.2320
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-treatment-and-policy-learning
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1002/sim.2320
+- id: method-dynotears-2020
+  title: 'DYNOTEARS: Structure Learning from Time-Series Data'
+  year: 2020
+  venue: AISTATS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-discovery-and-invariance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Extends continuous DAG optimization to contemporaneous and lagged dependencies in multivariate time
+    series.
+  why_it_matters: Supports hypothesis generation about temporal direction, invariance and latent structure in dense
+    sensor streams when randomized interventions are unavailable.
+  limitations: Causal discovery is sensitive to unmeasured confounding, measurement error, aggregation, sampling
+    frequency, nonstationarity and violations of structural assumptions.
+  evidence_boundary: Recovered graphs or directions are hypotheses under assumptions; they are not automatically
+    intervention-valid causal effects.
+  primary_url: https://proceedings.mlr.press/v108/pamfil20a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-discovery-and-invariance
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/quantumblacklabs/causalnex
+- id: method-ivae-2020
+  title: 'Variational Autoencoders and Nonlinear ICA: A Unifying Framework'
+  year: 2020
+  venue: AISTATS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-discovery-and-invariance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Provides identifiability conditions for nonlinear latent components using auxiliary variables, relevant
+    to disentangling latent physiological states.
+  why_it_matters: Supports hypothesis generation about temporal direction, invariance and latent structure in dense
+    sensor streams when randomized interventions are unavailable.
+  limitations: Causal discovery is sensitive to unmeasured confounding, measurement error, aggregation, sampling
+    frequency, nonstationarity and violations of structural assumptions.
+  evidence_boundary: Recovered graphs or directions are hypotheses under assumptions; they are not automatically
+    intervention-valid causal effects.
+  primary_url: https://proceedings.mlr.press/v108/khemakhem20a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-discovery-and-invariance
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-dag-gnn-2019
+  title: 'DAG-GNN: DAG Structure Learning with Graph Neural Networks'
+  year: 2019
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-discovery-and-invariance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Uses graph neural variational autoencoding with an acyclicity constraint for nonlinear structural
+    discovery.
+  why_it_matters: Supports hypothesis generation about temporal direction, invariance and latent structure in dense
+    sensor streams when randomized interventions are unavailable.
+  limitations: Causal discovery is sensitive to unmeasured confounding, measurement error, aggregation, sampling
+    frequency, nonstationarity and violations of structural assumptions.
+  evidence_boundary: Recovered graphs or directions are hypotheses under assumptions; they are not automatically
+    intervention-valid causal effects.
+  primary_url: https://proceedings.mlr.press/v97/yu19a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-discovery-and-invariance
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/fishmoon1234/DAG-GNN
+- id: method-pcmci-2019
+  title: Detecting and Quantifying Causal Associations in Large Nonlinear Time Series Datasets
+  year: 2019
+  venue: Science Advances
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-discovery-and-invariance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - multivariate-time-series
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Develops PCMCI for conditional-independence-based discovery of lagged causal associations in high-dimensional
+    nonlinear time series.
+  why_it_matters: Supports hypothesis generation about temporal direction, invariance and latent structure in dense
+    sensor streams when randomized interventions are unavailable.
+  limitations: Causal discovery is sensitive to unmeasured confounding, measurement error, aggregation, sampling
+    frequency, nonstationarity and violations of structural assumptions.
+  evidence_boundary: Recovered graphs or directions are hypotheses under assumptions; they are not automatically
+    intervention-valid causal effects.
+  primary_url: https://doi.org/10.1126/sciadv.aau4996
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-discovery-and-invariance
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1126/sciadv.aau4996
+- id: method-gran-dag-2019
+  title: Gradient-Based Neural DAG Learning
+  year: 2019
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-discovery-and-invariance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Learns nonlinear causal graphs through gradient-based optimization of neural structural equations.
+  why_it_matters: Supports hypothesis generation about temporal direction, invariance and latent structure in dense
+    sensor streams when randomized interventions are unavailable.
+  limitations: Causal discovery is sensitive to unmeasured confounding, measurement error, aggregation, sampling
+    frequency, nonstationarity and violations of structural assumptions.
+  evidence_boundary: Recovered graphs or directions are hypotheses under assumptions; they are not automatically
+    intervention-valid causal effects.
+  primary_url: https://proceedings.neurips.cc/paper/2019/hash/9ca8c9b0996bbf05ae7753d34667a6fd-Abstract.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-discovery-and-invariance
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/kurowasan/GraN-DAG
+- id: method-notears-2018
+  title: 'DAGs with NO TEARS: Continuous Optimization for Structure Learning'
+  year: 2018
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-discovery-and-invariance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Reformulates directed acyclic graph learning as continuous optimization with a differentiable acyclicity
+    constraint.
+  why_it_matters: Supports hypothesis generation about temporal direction, invariance and latent structure in dense
+    sensor streams when randomized interventions are unavailable.
+  limitations: Causal discovery is sensitive to unmeasured confounding, measurement error, aggregation, sampling
+    frequency, nonstationarity and violations of structural assumptions.
+  evidence_boundary: Recovered graphs or directions are hypotheses under assumptions; they are not automatically
+    intervention-valid causal effects.
+  primary_url: https://proceedings.neurips.cc/paper/2018/hash/e347c51419ffb23ca3fd5050202f9c3d-Abstract.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-discovery-and-invariance
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/xunzheng/notears
+- id: method-invariant-causal-prediction-2016
+  title: 'Causal Inference Using Invariant Prediction: Identification and Confidence Intervals'
+  year: 2016
+  venue: 'Journal of the Royal Statistical Society: Series B'
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-discovery-and-invariance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Uses stability of conditional relationships across environments to identify plausible causal predictors
+    and construct confidence sets.
+  why_it_matters: Supports hypothesis generation about temporal direction, invariance and latent structure in dense
+    sensor streams when randomized interventions are unavailable.
+  limitations: Causal discovery is sensitive to unmeasured confounding, measurement error, aggregation, sampling
+    frequency, nonstationarity and violations of structural assumptions.
+  evidence_boundary: Recovered graphs or directions are hypotheses under assumptions; they are not automatically
+    intervention-valid causal effects.
+  primary_url: https://doi.org/10.1111/rssb.12167
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-discovery-and-invariance
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1111/rssb.12167
+- id: method-add-malts-2024
+  title: Interpretable Causal Inference for Analyzing Wearable, Sensor, and Distributional Data
+  year: 2024
+  venue: AISTATS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - wearable-distributions
+  - cgm
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Introduces ADD MALTS for interpretable matching and treatment-effect estimation when wearable outcomes
+    are represented as distributions rather than scalar summaries.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://proceedings.mlr.press/v238/katta24a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/almost-matching-exactly/addmalts
+- id: method-causal-counterfactual-prediction-2020
+  title: Causal Inference and Counterfactual Prediction in Machine Learning for Actionable Healthcare
+  year: 2020
+  venue: Nature Machine Intelligence
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Clarifies why accurate health prediction is insufficient for choosing actions and organizes causal
+    and counterfactual requirements for actionable machine learning.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://doi.org/10.1038/s42256-020-0197-y
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s42256-020-0197-y
+- id: method-dragonnet-2019
+  title: Adapting Neural Networks for the Estimation of Treatment Effects
+  year: 2019
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Introduces Dragonnet and targeted regularization to align representation learning with treatment-effect
+    estimation.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://proceedings.neurips.cc/paper/2019/hash/8fb5f8be2aa9d6c64a04e3ab9f63feee-Abstract.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-generalized-random-forests-2019
+  title: Generalized Random Forests
+  year: 2019
+  venue: Annals of Statistics
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Generalizes forest-based local moment estimation to treatment effects, instrumental variables and
+    other heterogeneous estimands.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://doi.org/10.1214/18-AOS1709
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1214/18-AOS1709
+  code_url: https://github.com/grf-labs/grf
+- id: method-causal-forests-2018
+  title: Estimation and Inference of Heterogeneous Treatment Effects Using Random Forests
+  year: 2018
+  venue: Journal of the American Statistical Association
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Provides forest-based estimation and asymptotic inference for conditional average treatment effects.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://doi.org/10.1080/01621459.2017.1319839
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1080/01621459.2017.1319839
+  code_url: https://github.com/grf-labs/grf
+- id: method-ganite-2018
+  title: 'GANITE: Estimation of Individualized Treatment Effects Using Generative Adversarial Nets'
+  year: 2018
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Uses adversarial learning to impute counterfactual outcomes and estimate individualized treatment
+    effects.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://arxiv.org/abs/1802.04998
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/jsyoon0823/GANITE
+- id: method-cevae-2017
+  title: Causal Effect Inference with Deep Latent-Variable Models
+  year: 2017
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Uses latent-variable generative modelling to estimate treatment effects when proxies contain information
+    about unobserved confounding.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://proceedings.neurips.cc/paper/2017/hash/94b5bde6de888ddf9cde6748ad2523d1-Abstract.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-deepiv-2017
+  title: 'Deep IV: A Flexible Approach for Counterfactual Prediction'
+  year: 2017
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Combines flexible neural models with instrumental-variable identification for nonlinear counterfactual
+    prediction.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://proceedings.mlr.press/v70/hartford17a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/jhartford/DeepIV
+- id: method-cfr-2017
+  title: 'Estimating Individual Treatment Effect: Generalization Bounds and Algorithms'
+  year: 2017
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Introduces counterfactual regression with balanced representations and generalization bounds for
+    individual treatment-effect estimation.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://proceedings.mlr.press/v70/shalit17a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/clinicalml/cfrnet
+- id: method-causal-trees-2016
+  title: Recursive Partitioning for Heterogeneous Causal Effects
+  year: 2016
+  venue: Proceedings of the National Academy of Sciences
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Develops honest tree-based estimation for interpretable treatment-effect heterogeneity and subgroup
+    discovery.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://doi.org/10.1073/pnas.1510489113
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1073/pnas.1510489113
+- id: method-target-trial-immortal-time-2016
+  title: Specifying a Target Trial Prevents Immortal Time Bias and Other Self-Inflicted Injuries in Observational
+    Analyses
+  year: 2016
+  venue: Journal of Clinical Epidemiology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Shows how explicit target-trial specification prevents common time-zero and treatment-assignment
+    biases in longitudinal observational research.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://doi.org/10.1016/j.jclinepi.2015.12.016
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1016/j.jclinepi.2015.12.016
+- id: method-target-trial-big-data-2016
+  title: Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available
+  year: 2016
+  venue: American Journal of Epidemiology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Formalizes target-trial emulation so observational analyses specify eligibility, treatment strategies,
+    assignment, follow-up, outcomes and estimands before analysis.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://doi.org/10.1093/aje/kwv254
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1093/aje/kwv254
+- id: method-msm-2000
+  title: Marginal Structural Models and Causal Inference in Epidemiology
+  year: 2000
+  venue: Epidemiology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: causal-identification-foundations
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Introduces marginal structural models and inverse-probability weighting for longitudinal exposures
+    with time-varying confounding.
+  why_it_matters: Provides identification or estimation machinery needed before wearable associations can be interpreted
+    as effects of actions or exposures.
+  limitations: Validity depends on the stated causal graph, treatment definition, consistency, positivity, interference
+    and confounding assumptions; flexible prediction alone does not remove these requirements.
+  evidence_boundary: This record supports causal methodology. It does not prove that any particular wearable-derived
+    exposure or intervention has a causal effect without a design-specific analysis.
+  primary_url: https://doi.org/10.1097/00001648-200009000-00011
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - causal-identification-foundations
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1097/00001648-200009000-00011
+- id: method-probabilistic-recourse-2020
+  title: 'Algorithmic Recourse under Imperfect Causal Knowledge: A Probabilistic Approach'
+  year: 2020
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: counterfactual-explanations-and-recourse
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: predictive-counterfactual
+  contribution: Models uncertainty over causal structure when estimating whether recommended interventions will
+    achieve algorithmic recourse.
+  why_it_matters: Makes model decisions inspectable and helps distinguish an actionable change from a merely correlational
+    perturbation of sensor features.
+  limitations: Feasible feature changes may be biologically impossible, unsafe or non-causal; generated recourse
+    can fail under model updates and population shift.
+  evidence_boundary: These are predictive or algorithmic counterfactuals unless a causal intervention model is explicitly
+    identified and validated.
+  primary_url: https://proceedings.neurips.cc/paper/2020/hash/2b64c2f19d868305aa8bbc2d72902cc5-Abstract.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - counterfactual-explanations-and-recourse
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-dice-2020
+  title: Explaining Machine Learning Classifiers through Diverse Counterfactual Explanations
+  year: 2020
+  venue: FAccT
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: counterfactual-explanations-and-recourse
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: predictive-counterfactual
+  contribution: Introduces DiCE to generate diverse counterfactual examples that expose alternative feature configurations
+    changing a classifier prediction.
+  why_it_matters: Makes model decisions inspectable and helps distinguish an actionable change from a merely correlational
+    perturbation of sensor features.
+  limitations: Feasible feature changes may be biologically impossible, unsafe or non-causal; generated recourse
+    can fail under model updates and population shift.
+  evidence_boundary: These are predictive or algorithmic counterfactuals unless a causal intervention model is explicitly
+    identified and validated.
+  primary_url: https://doi.org/10.1145/3351095.3372850
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - counterfactual-explanations-and-recourse
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1145/3351095.3372850
+  code_url: https://github.com/interpretml/DiCE
+- id: method-face-2020
+  title: 'FACE: Feasible and Actionable Counterfactual Explanations'
+  year: 2020
+  venue: AISTATS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: counterfactual-explanations-and-recourse
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: predictive-counterfactual
+  contribution: Constrains counterfactual paths to data-supported, comparatively feasible regions rather than unconstrained
+    feature perturbations.
+  why_it_matters: Makes model decisions inspectable and helps distinguish an actionable change from a merely correlational
+    perturbation of sensor features.
+  limitations: Feasible feature changes may be biologically impossible, unsafe or non-causal; generated recourse
+    can fail under model updates and population shift.
+  evidence_boundary: These are predictive or algorithmic counterfactuals unless a causal intervention model is explicitly
+    identified and validated.
+  primary_url: https://proceedings.mlr.press/v108/poyiadzi20a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - counterfactual-explanations-and-recourse
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-mace-2020
+  title: Model-Agnostic Counterfactual Explanations for Consequential Decisions
+  year: 2020
+  venue: AISTATS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: counterfactual-explanations-and-recourse
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: predictive-counterfactual
+  contribution: Formulates exact model-agnostic counterfactual search for consequential decisions using satisfiability-based
+    optimization.
+  why_it_matters: Makes model decisions inspectable and helps distinguish an actionable change from a merely correlational
+    perturbation of sensor features.
+  limitations: Feasible feature changes may be biologically impossible, unsafe or non-causal; generated recourse
+    can fail under model updates and population shift.
+  evidence_boundary: These are predictive or algorithmic counterfactuals unless a causal intervention model is explicitly
+    identified and validated.
+  primary_url: https://proceedings.mlr.press/v108/karimi20a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - counterfactual-explanations-and-recourse
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/amirhk/mace
+- id: method-causal-digital-twins-2026
+  title: 'From Prediction to Intervention: Causal Digital Twins for Personalized Clinical Decision Support'
+  year: 2026
+  venue: Journal of Translational Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  - cgm
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  - clinical-decision-support
+  populations:
+  - clinical-populations
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological and conceptual framework
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Formalizes a causal-digital-twin framework combining structural causal models, potential outcomes
+    and reinforcement learning for individualized counterfactual reasoning and sequential decisions.
+  why_it_matters: Directly addresses the gap between trajectory prediction and intervention reasoning that arises
+    when wearable or CGM digital twins are used to recommend actions.
+  limitations: The article proposes a methodological framework rather than reporting prospective validation of a
+    deployed personalized treatment policy; identifiability, calibration, safety and transportability remain application-specific.
+  evidence_boundary: This record supports a causal design framework. It does not show that a fitted digital twin
+    can recover valid individual treatment effects or improve clinical outcomes without design-specific empirical
+    validation.
+  primary_url: https://link.springer.com/article/10.1186/s12967-026-07895-8
+  doi: 10.1186/s12967-026-07895-8
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - causal-digital-twin
+  - counterfactual
+  - reinforcement-learning
+  - longitudinal-counterfactual-models
+  - method
+  source_note: Primary journal page and abstract-level framework details checked; no claim of prospective clinical
+    effectiveness is made.
+- id: method-causal-transformer-ltmle-2024
+  title: Longitudinal Targeted Minimum Loss-Based Estimation with Temporal-Difference Heterogeneous Transformer
+  year: 2024
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Combines a heterogeneous temporal transformer with longitudinal targeted learning to estimate dynamic-policy
+    counterfactual means with confidence intervals.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.mlr.press/v235/shirakawa24a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-time-varying-gp-treatment-2023
+  title: A Multi-Task Gaussian Process Model for Inferring Time-Varying Treatment Effects in Panel Data
+  year: 2023
+  venue: AISTATS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Uses structured Gaussian processes to infer dynamic counterfactual trajectories and uncertainty
+    in treated and control panels.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.mlr.press/v206/chen23d.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-causal-transformer-2022
+  title: Causal Transformer for Estimating Counterfactual Outcomes
+  year: 2022
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Uses separate transformer streams and adversarial balancing to estimate counterfactual outcomes
+    under time-varying treatments.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.mlr.press/v162/melnychuk22a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/Valentyn1997/CausalTransformer
+- id: method-te-cde-2022
+  title: Continuous-Time Modeling of Counterfactual Outcomes Using Neural Controlled Differential Equations
+  year: 2022
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Models irregularly sampled treatment and covariate histories in continuous time with treatment-effect
+    neural controlled differential equations.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.mlr.press/v162/seedat22b.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/microsoft/TE-CDE
+- id: method-cf-ode-2022
+  title: Predicting the Impact of Treatments over Time with Uncertainty-Aware Neural Differential Equations
+  year: 2022
+  venue: AISTATS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Combines neural differential equations with uncertainty estimation to flag poorly supported longitudinal
+    counterfactual predictions.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.mlr.press/v151/de-brouwer22a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/edebrouwer/cf-ode
+- id: method-synctwin-2021
+  title: 'SyncTwin: Treatment Effect Estimation with Longitudinal Outcomes'
+  year: 2021
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Constructs interpretable synthetic twins from pre-treatment longitudinal trajectories to estimate
+    post-treatment counterfactual outcomes.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.neurips.cc/paper/2021/hash/19485224d128528da1602ca47383f078-Abstract.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-crn-2020
+  title: Estimating Counterfactual Treatment Outcomes over Time Through Adversarially Balanced Representations
+  year: 2020
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Introduces Counterfactual Recurrent Networks with treatment-invariant temporal representations for
+    multi-step treatment-response estimation.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://openreview.net/forum?id=BJg866NFvB
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/ioanabica/Counterfactual-Recurrent-Network
+- id: method-scigan-2020
+  title: Estimating the Effects of Continuous-Valued Interventions Using Generative Adversarial Networks
+  year: 2020
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Introduces SCIGAN for individualized dose-response estimation under continuous interventions.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.neurips.cc/paper/2020/hash/11b9842e0a271ff252c1903e7132cd68-Abstract.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/ioanabica/SCIGAN
+- id: method-time-series-deconfounder-2020
+  title: 'Time Series Deconfounder: Estimating Treatment Effects over Time in the Presence of Hidden Confounders'
+  year: 2020
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Uses multi-treatment temporal factor modelling to construct substitute confounders before longitudinal
+    treatment-effect estimation.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.mlr.press/v119/bica20a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/ioanabica/Time-Series-Deconfounder
+- id: method-rmsn-2018
+  title: Forecasting Treatment Responses Over Time Using Recurrent Marginal Structural Networks
+  year: 2018
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: longitudinal-counterfactual-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-clinical-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: causal-inference
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Builds recurrent marginal structural networks for forecasting responses to planned treatment sequences
+    under time-dependent confounding.
+  why_it_matters: Targets time-varying treatments and outcomes, which is closer to continuous wearable monitoring
+    and adaptive health decisions than static treatment-effect estimation.
+  limitations: Most evaluations use simulated or semi-synthetic counterfactuals; hidden confounding, treatment-policy
+    shift, irregular sampling and weak overlap can invalidate estimates.
+  evidence_boundary: Counterfactual forecasts are conditional on identification and model assumptions and should
+    not be presented as verified patient trajectories or clinical utility.
+  primary_url: https://proceedings.neurips.cc/paper/2018/hash/56e6a93212e4482d99c84a639d254b67-Abstract.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - longitudinal-counterfactual-models
+  - method
+  - methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/sjblim/rmsn_nips_2018
+- id: method-jitai-annual-review-2026
+  title: 'Just-in-Time Adaptive Interventions: Where Are We Now and What Is Next?'
+  year: 2026
+  venue: Annual Review of Psychology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: micro-randomized-trial-methods
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: mobile-health-enabler
+  lifecycle_stage: intervention-design
+  study_design: peer-reviewed methodological study
+  evidence_stage: systematic-review
+  causal_status: randomized-causal-effect
+  contribution: Synthesizes the scientific rationale, current evidence and unresolved engagement, burden and social-context
+    challenges in JITAI development.
+  why_it_matters: Provides experimental designs and estimators for learning when, where and for whom wearable-triggered
+    intervention components have proximal effects.
+  limitations: Proximal effects may not translate into sustained clinical outcomes; burden, availability, habituation,
+    interference and missing sensor data require explicit handling.
+  evidence_boundary: Micro-randomized evidence identifies randomized component effects at specified decision points,
+    not the effectiveness of an untested full intervention package.
+  primary_url: https://doi.org/10.1146/annurev-psych-121024-044244
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - micro-randomized-trial-methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1146/annurev-psych-121024-044244
+- id: method-mrt-practical-2022
+  title: 'The Micro-Randomized Trial for Developing Digital Interventions: Experimental Design and Data Analysis
+    Considerations'
+  year: 2022
+  venue: Psychological Methods
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: micro-randomized-trial-methods
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: mobile-health-enabler
+  lifecycle_stage: intervention-design
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: randomized-causal-effect
+  contribution: Consolidates practical design, availability, outcome-window and analysis considerations for modern
+    micro-randomized trials.
+  why_it_matters: Provides experimental designs and estimators for learning when, where and for whom wearable-triggered
+    intervention components have proximal effects.
+  limitations: Proximal effects may not translate into sustained clinical outcomes; burden, availability, habituation,
+    interference and missing sensor data require explicit handling.
+  evidence_boundary: Micro-randomized evidence identifies randomized component effects at specified decision points,
+    not the effectiveness of an untested full intervention package.
+  primary_url: https://doi.org/10.1037/met0000283
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - micro-randomized-trial-methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1037/met0000283
+- id: method-heartsteps-mrt-2019
+  title: 'Efficacy of Contextually Tailored Suggestions for Physical Activity: A Micro-Randomized Optimization Trial
+    of HeartSteps'
+  year: 2019
+  venue: Annals of Behavioral Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: micro-randomized-trial-methods
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - steps
+  - context
+  - smartphone
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: intervention-design
+  study_design: peer-reviewed methodological study
+  evidence_stage: micro-randomized-trial
+  causal_status: randomized-causal-effect
+  contribution: Applies repeated randomization to estimate the short-term effect of contextually tailored walking
+    and anti-sedentary suggestions.
+  why_it_matters: Provides experimental designs and estimators for learning when, where and for whom wearable-triggered
+    intervention components have proximal effects.
+  limitations: Proximal effects may not translate into sustained clinical outcomes; burden, availability, habituation,
+    interference and missing sensor data require explicit handling.
+  evidence_boundary: Micro-randomized evidence identifies randomized component effects at specified decision points,
+    not the effectiveness of an untested full intervention package.
+  primary_url: https://doi.org/10.1093/abm/kay067
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - micro-randomized-trial-methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1093/abm/kay067
+- id: method-mrt-moderation-2018
+  title: Assessing Time-Varying Causal Effect Moderation in Mobile Health
+  year: 2018
+  venue: Journal of the American Statistical Association
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: micro-randomized-trial-methods
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: mobile-health-enabler
+  lifecycle_stage: intervention-design
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: randomized-causal-effect
+  contribution: Provides weighted and centered estimation for time-varying proximal causal effects and moderators
+    in micro-randomized trials.
+  why_it_matters: Provides experimental designs and estimators for learning when, where and for whom wearable-triggered
+    intervention components have proximal effects.
+  limitations: Proximal effects may not translate into sustained clinical outcomes; burden, availability, habituation,
+    interference and missing sensor data require explicit handling.
+  evidence_boundary: Micro-randomized evidence identifies randomized component effects at specified decision points,
+    not the effectiveness of an untested full intervention package.
+  primary_url: https://doi.org/10.1080/01621459.2017.1305274
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - micro-randomized-trial-methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1080/01621459.2017.1305274
+- id: method-mrt-sample-size-2018
+  title: Sample Size Calculations for Micro-Randomized Trials in mHealth
+  year: 2018
+  venue: Statistics in Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: micro-randomized-trial-methods
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: mobile-health-enabler
+  lifecycle_stage: intervention-design
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: randomized-causal-effect
+  contribution: Provides power and sample-size calculations for proximal treatment effects under repeated randomization.
+  why_it_matters: Provides experimental designs and estimators for learning when, where and for whom wearable-triggered
+    intervention components have proximal effects.
+  limitations: Proximal effects may not translate into sustained clinical outcomes; burden, availability, habituation,
+    interference and missing sensor data require explicit handling.
+  evidence_boundary: Micro-randomized evidence identifies randomized component effects at specified decision points,
+    not the effectiveness of an untested full intervention package.
+  primary_url: https://doi.org/10.1002/sim.7571
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - micro-randomized-trial-methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1002/sim.7571
+- id: method-mrt-statistics-medicine-2016
+  title: Micro-Randomized Trials in mHealth
+  year: 2016
+  venue: Statistics in Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: micro-randomized-trial-methods
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: mobile-health-enabler
+  lifecycle_stage: intervention-design
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: randomized-causal-effect
+  contribution: Develops statistical principles for repeated-randomization mobile-health trials with time-varying
+    availability and proximal outcomes.
+  why_it_matters: Provides experimental designs and estimators for learning when, where and for whom wearable-triggered
+    intervention components have proximal effects.
+  limitations: Proximal effects may not translate into sustained clinical outcomes; burden, availability, habituation,
+    interference and missing sensor data require explicit handling.
+  evidence_boundary: Micro-randomized evidence identifies randomized component effects at specified decision points,
+    not the effectiveness of an untested full intervention package.
+  primary_url: https://doi.org/10.1002/sim.7022
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - micro-randomized-trial-methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1002/sim.7022
+- id: method-mrt-health-psychology-2015
+  title: 'Microrandomized Trials: An Experimental Design for Developing Just-in-Time Adaptive Interventions'
+  year: 2015
+  venue: Health Psychology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: micro-randomized-trial-methods
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: mobile-health-enabler
+  lifecycle_stage: intervention-design
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: randomized-causal-effect
+  contribution: Defines the micro-randomized trial as repeated randomization at intervention decision points for
+    estimating proximal component effects.
+  why_it_matters: Provides experimental designs and estimators for learning when, where and for whom wearable-triggered
+    intervention components have proximal effects.
+  limitations: Proximal effects may not translate into sustained clinical outcomes; burden, availability, habituation,
+    interference and missing sensor data require explicit handling.
+  evidence_boundary: Micro-randomized evidence identifies randomized component effects at specified decision points,
+    not the effectiveness of an untested full intervention package.
+  primary_url: https://doi.org/10.1037/hea0000305
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - micro-randomized-trial-methods
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1037/hea0000305
+- id: method-step-imputation-chil-2024
+  title: Temporally Multi-Scale Sparse Self-Attention for Physical Activity Data Imputation
+  year: 2024
+  venue: CHIL
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: method
+  family: missingness-calibration-and-sensor-bias
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - steps
+  - wearable-summary
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Develops multi-scale sparse attention for imputing large-scale hourly step-count series with realistic
+    wearable missingness.
+  why_it_matters: Addresses non-wear, irregular observation, device error and missingness mechanisms that otherwise
+    contaminate wearable phenotypes and downstream causal analyses.
+  limitations: Imputation or calibration can conceal non-random missingness and device-specific failure; uncertainty
+    and sensitivity analyses remain necessary.
+  evidence_boundary: Improved reconstruction or calibration does not establish that downstream biological or treatment-effect
+    conclusions are unbiased.
+  primary_url: https://proceedings.mlr.press/v248/wei24a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - missingness-calibration-and-sensor-bias
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-optical-hr-inaccuracy-2020
+  title: Investigating Sources of Inaccuracy in Wearable Optical Heart Rate Sensors
+  year: 2020
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: missingness-calibration-and-sensor-bias
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  - heart-rate
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: measurement
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Evaluates device, activity and participant-related error sources in consumer optical heart-rate
+    sensors.
+  why_it_matters: Addresses non-wear, irregular observation, device error and missingness mechanisms that otherwise
+    contaminate wearable phenotypes and downstream causal analyses.
+  limitations: Imputation or calibration can conceal non-random missingness and device-specific failure; uncertainty
+    and sensitivity analyses remain necessary.
+  evidence_boundary: Improved reconstruction or calibration does not establish that downstream biological or treatment-effect
+    conclusions are unbiased.
+  primary_url: https://doi.org/10.1038/s41746-020-0226-6
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - missingness-calibration-and-sensor-bias
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41746-020-0226-6
+- id: method-brits-2018
+  title: 'BRITS: Bidirectional Recurrent Imputation for Time Series'
+  year: 2018
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: missingness-calibration-and-sensor-bias
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Treats missing values as trainable variables in a bidirectional recurrent imputation model.
+  why_it_matters: Addresses non-wear, irregular observation, device error and missingness mechanisms that otherwise
+    contaminate wearable phenotypes and downstream causal analyses.
+  limitations: Imputation or calibration can conceal non-random missingness and device-specific failure; uncertainty
+    and sensitivity analyses remain necessary.
+  evidence_boundary: Improved reconstruction or calibration does not establish that downstream biological or treatment-effect
+    conclusions are unbiased.
+  primary_url: https://proceedings.neurips.cc/paper/2018/hash/734e6bfcd358e25ac1db0a4241b95651-Abstract.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - missingness-calibration-and-sensor-bias
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/caow13/BRITS
+- id: method-grud-2018
+  title: Recurrent Neural Networks for Multivariate Time Series with Missing Values
+  year: 2018
+  venue: Scientific Reports
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: missingness-calibration-and-sensor-bias
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Introduces GRU-D, incorporating masks and time gaps to model informative missingness in multivariate
+    clinical time series.
+  why_it_matters: Addresses non-wear, irregular observation, device error and missingness mechanisms that otherwise
+    contaminate wearable phenotypes and downstream causal analyses.
+  limitations: Imputation or calibration can conceal non-random missingness and device-specific failure; uncertainty
+    and sensitivity analyses remain necessary.
+  evidence_boundary: Improved reconstruction or calibration does not establish that downstream biological or treatment-effect
+    conclusions are unbiased.
+  primary_url: https://doi.org/10.1038/s41598-018-24271-9
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - missingness-calibration-and-sensor-bias
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41598-018-24271-9
+  code_url: https://github.com/zhiyongc/GRU-D
+- id: method-accelerometer-autocalibration-2014
+  title: Autocalibration of Accelerometer Data for Free-Living Physical Activity Assessment Using Local Gravity
+    and Temperature
+  year: 2014
+  venue: Journal of Applied Physiology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: missingness-calibration-and-sensor-bias
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - temperature
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: sensing
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Uses local gravity and temperature information to reduce device calibration error in free-living
+    accelerometry.
+  why_it_matters: Addresses non-wear, irregular observation, device error and missingness mechanisms that otherwise
+    contaminate wearable phenotypes and downstream causal analyses.
+  limitations: Imputation or calibration can conceal non-random missingness and device-specific failure; uncertainty
+    and sensitivity analyses remain necessary.
+  evidence_boundary: Improved reconstruction or calibration does not establish that downstream biological or treatment-effect
+    conclusions are unbiased.
+  primary_url: https://doi.org/10.1152/japplphysiol.00421.2014
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - missingness-calibration-and-sensor-bias
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1152/japplphysiol.00421.2014
+- id: method-mice-2011
+  title: 'Multiple Imputation Using Chained Equations: Issues and Guidance for Practice'
+  year: 2011
+  venue: Statistics in Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: missingness-calibration-and-sensor-bias
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - missing-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: measurement
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Provides practical guidance for chained-equation multiple imputation under complex missing-data
+    patterns.
+  why_it_matters: Addresses non-wear, irregular observation, device error and missingness mechanisms that otherwise
+    contaminate wearable phenotypes and downstream causal analyses.
+  limitations: Imputation or calibration can conceal non-random missingness and device-specific failure; uncertainty
+    and sensitivity analyses remain necessary.
+  evidence_boundary: Improved reconstruction or calibration does not establish that downstream biological or treatment-effect
+    conclusions are unbiased.
+  primary_url: https://doi.org/10.1002/sim.4067
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - missingness-calibration-and-sensor-bias
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1002/sim.4067
+- id: method-healthcare-rl-guidelines-2019
+  title: Guidelines for Reinforcement Learning in Healthcare
+  year: 2019
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: off-policy-evaluation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: policy-learning
+  study_design: peer-reviewed methodological study
+  evidence_stage: systematic-review
+  causal_status: policy-counterfactual
+  contribution: Specifies design, evaluation and reporting hazards for reinforcement learning in clinical settings,
+    including confounding, reward design and unsafe recommendations.
+  why_it_matters: Allows proposed adaptive policies to be screened using logged data before expensive or unsafe
+    online deployment.
+  limitations: Reliable evaluation requires known or estimable behavior policies, adequate support, correct nuisance
+    models and careful uncertainty analysis.
+  evidence_boundary: Off-policy value is an estimate under assumptions and does not replace prospective randomized
+    evaluation for high-stakes health systems.
+  primary_url: https://doi.org/10.1038/s41591-018-0310-5
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - off-policy-evaluation
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41591-018-0310-5
+- id: method-data-efficient-ope-2016
+  title: Data-Efficient Off-Policy Policy Evaluation for Reinforcement Learning
+  year: 2016
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: off-policy-evaluation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: policy-learning
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Develops high-confidence and data-efficient estimators for evaluating policies from logged trajectories.
+  why_it_matters: Allows proposed adaptive policies to be screened using logged data before expensive or unsafe
+    online deployment.
+  limitations: Reliable evaluation requires known or estimable behavior policies, adequate support, correct nuisance
+    models and careful uncertainty analysis.
+  evidence_boundary: Off-policy value is an estimate under assumptions and does not replace prospective randomized
+    evaluation for high-stakes health systems.
+  primary_url: https://proceedings.mlr.press/v48/thomasa16.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - off-policy-evaluation
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-dr-off-policy-rl-2016
+  title: Doubly Robust Off-Policy Value Evaluation for Reinforcement Learning
+  year: 2016
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: off-policy-evaluation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: policy-learning
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Extends doubly robust estimation to sequential reinforcement-learning trajectories using model and
+    importance-weighting components.
+  why_it_matters: Allows proposed adaptive policies to be screened using logged data before expensive or unsafe
+    online deployment.
+  limitations: Reliable evaluation requires known or estimable behavior policies, adequate support, correct nuisance
+    models and careful uncertainty analysis.
+  evidence_boundary: Off-policy value is an estimate under assumptions and does not replace prospective randomized
+    evaluation for high-stakes health systems.
+  primary_url: https://proceedings.mlr.press/v48/jiang16.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - off-policy-evaluation
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-dr-policy-evaluation-2011
+  title: Doubly Robust Policy Evaluation and Learning
+  year: 2011
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: method
+  family: off-policy-evaluation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: policy-learning
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: policy-counterfactual
+  contribution: Combines outcome modelling and propensity weighting for doubly robust evaluation and learning of
+    contextual decision policies.
+  why_it_matters: Allows proposed adaptive policies to be screened using logged data before expensive or unsafe
+    online deployment.
+  limitations: Reliable evaluation requires known or estimable behavior policies, adequate support, correct nuisance
+    models and careful uncertainty analysis.
+  evidence_boundary: Off-policy value is an estimate under assumptions and does not replace prospective randomized
+    evaluation for high-stakes health systems.
+  primary_url: https://proceedings.mlr.press/v15/dudik11a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - off-policy-evaluation
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+- id: method-pulse-ox-racial-bias-2020
+  title: Racial Bias in Pulse Oximetry Measurement
+  year: 2020
+  venue: New England Journal of Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: privacy-fairness-and-transportability
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - spo2
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: measurement
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Documents differential occult hypoxemia associated with pulse-oximetry measurement across racial
+    groups.
+  why_it_matters: Supports privacy, fairness or transportability requirements for population-scale wearable AI and
+    multi-institutional learning.
+  limitations: Formal privacy or fairness guarantees cover specific threat models and metrics; they do not guarantee
+    equitable clinical benefit across all populations.
+  evidence_boundary: Governance-oriented methodology must be evaluated in the intended population and deployment
+    context before clinical claims are made.
+  primary_url: https://doi.org/10.1056/NEJMc2029240
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - privacy-fairness-and-transportability
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1056/NEJMc2029240
+- id: method-secure-federated-medical-2020
+  title: Secure, Privacy-Preserving and Federated Machine Learning in Medical Imaging
+  year: 2020
+  venue: Nature Machine Intelligence
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: privacy-fairness-and-transportability
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: governance
+  study_design: peer-reviewed methodological study
+  evidence_stage: systematic-review
+  causal_status: not-causal
+  contribution: Synthesizes threat models and technical approaches for privacy-preserving distributed medical machine
+    learning.
+  why_it_matters: Supports privacy, fairness or transportability requirements for population-scale wearable AI and
+    multi-institutional learning.
+  limitations: Formal privacy or fairness guarantees cover specific threat models and metrics; they do not guarantee
+    equitable clinical benefit across all populations.
+  evidence_boundary: Governance-oriented methodology must be evaluated in the intended population and deployment
+    context before clinical claims are made.
+  primary_url: https://doi.org/10.1038/s42256-020-0186-1
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - privacy-fairness-and-transportability
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s42256-020-0186-1
+- id: method-federated-digital-health-2020
+  title: The Future of Digital Health with Federated Learning
+  year: 2020
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: privacy-fairness-and-transportability
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - longitudinal-data
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: governance
+  study_design: peer-reviewed methodological study
+  evidence_stage: systematic-review
+  causal_status: not-causal
+  contribution: Reviews federated learning opportunities and unresolved privacy, governance, heterogeneity and deployment
+    problems in digital health.
+  why_it_matters: Supports privacy, fairness or transportability requirements for population-scale wearable AI and
+    multi-institutional learning.
+  limitations: Formal privacy or fairness guarantees cover specific threat models and metrics; they do not guarantee
+    equitable clinical benefit across all populations.
+  evidence_boundary: Governance-oriented methodology must be evaluated in the intended population and deployment
+    context before clinical claims are made.
+  primary_url: https://doi.org/10.1038/s41746-020-00323-1
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - privacy-fairness-and-transportability
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41746-020-00323-1
+- id: method-health-algorithm-bias-2019
+  title: Dissecting Racial Bias in an Algorithm Used to Manage the Health of Populations
+  year: 2019
+  venue: Science
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: privacy-fairness-and-transportability
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ehr
+  - risk-score
+  body_locations: []
+  clinical_domains:
+  - causal-inference
+  - personalized-health
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: governance
+  study_design: peer-reviewed methodological study
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Shows how a cost-based proxy produced substantial racial bias in population-health risk stratification.
+  why_it_matters: Supports privacy, fairness or transportability requirements for population-scale wearable AI and
+    multi-institutional learning.
+  limitations: Formal privacy or fairness guarantees cover specific threat models and metrics; they do not guarantee
+    equitable clinical benefit across all populations.
+  evidence_boundary: Governance-oriented methodology must be evaluated in the intended population and deployment
+    context before clinical claims are made.
+  primary_url: https://doi.org/10.1126/science.aax2342
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - method
+  - methods
+  - privacy-fairness-and-transportability
+  - wearable-evidence
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1126/science.aax2342

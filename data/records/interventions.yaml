@@ -1,0 +1,2055 @@
+- id: intervention-long-covid-pace-me-2026
+  title: 'A Digital Platform with Activity Tracking for Energy Management Support in Long COVID: A Randomised Controlled
+    Trial'
+  year: 2026
+  venue: Nature Communications
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: jitai-behavioral-interventions
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - activity-tracker
+  - smartphone
+  body_locations: []
+  clinical_domains:
+  - long-covid
+  - fatigue
+  - energy-management
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Evaluates wearable activity tracking with threshold-triggered energy-management messages for adults
+    with long COVID.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41467-025-64831-y
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - jitai-behavioral-interventions
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The intervention was not more effective than control for post-exertional malaise or the primary
+    endpoint.
+  negative_or_null_result: true
+  intervention_channel:
+  - jitai-behavioral-interventions
+- id: intervention-home-tdcs-mindfulness-2026
+  title: A Randomized Trial of a Digitally Delivered, Home-Based Neuromodulation and Mindfulness Intervention for
+    Pain Management in Older Adults with Knee Osteoarthritis
+  year: 2026
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: closed-loop-and-home-neuromodulation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - tdcs
+  - smartphone
+  - self-report
+  body_locations: []
+  clinical_domains:
+  - osteoarthritis
+  - pain
+  - neuromodulation
+  populations:
+  - trial-participants
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Tests remotely supervised home transcranial direct-current stimulation and mindfulness in a double-blind
+    factorial trial.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-026-02577-7
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - closed-loop
+  - closed-loop-and-home-neuromodulation
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The combined intervention was not superior to active stimulation alone and benefits were not sustained
+    at three months.
+  negative_or_null_result: true
+  intervention_channel:
+  - closed-loop-and-home-neuromodulation
+- id: intervention-wrist-wearables-umbrella-2026
+  title: An Umbrella Review of Systematic Reviews of the Impact of Wrist-Worn Wearables on Health Outcomes
+  year: 2026
+  venue: Physiological Reviews
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: wearable-feedback-evidence-synthesis
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - steps
+  - wearable-feedback
+  body_locations: []
+  clinical_domains:
+  - physical-activity
+  - cardiometabolic
+  - mental-health
+  - pain
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: systematic review and meta-analysis
+  evidence_stage: systematic-review
+  causal_status: randomized-causal-effect
+  contribution: Synthesizes 39 systematic reviews covering 98 primary studies of wrist-worn wearable feedback across
+    physical activity, cardiometabolic, quality-of-life, mental-health and pain outcomes.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Conclusions inherit heterogeneity and risk of bias from included studies; devices, co-interventions,
+    comparators and outcome definitions vary substantially.
+  evidence_boundary: Evidence synthesis estimates average effects over included studies and does not establish effectiveness
+    for every device, population or intervention design.
+  primary_url: https://doi.org/10.1152/physrev.00049.2024
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - wearable-feedback-evidence-synthesis
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1152/physrev.00049.2024
+  outcome_status: Physical-activity benefits were more consistent; evidence for many other outcomes was limited
+    or inconsistent and most reviews were rated low confidence.
+  negative_or_null_result: true
+  intervention_channel:
+  - wearable-feedback-evidence-synthesis
+- id: intervention-colorectal-digital-lifestyle-2025
+  title: A Randomized Controlled Trial of a Digital Lifestyle Intervention Involving Postoperative Patients with
+    Colorectal Cancer
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: remote-monitoring-and-clinical-escalation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - smartphone
+  - activity-summary
+  - self-report
+  body_locations: []
+  clinical_domains:
+  - oncology
+  - rehabilitation
+  - quality-of-life
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Tests mobile lifestyle-management applications after curative colorectal-cancer surgery.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-025-01716-w
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - remote-monitoring-and-clinical-escalation
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The primary quality-of-life outcome showed no significant between-group benefit; one intervention
+    arm had a secondary skeletal-muscle-area difference.
+  negative_or_null_result: true
+  intervention_channel:
+  - remote-monitoring-and-clinical-escalation
+- id: intervention-reverie-vr-sports-2025
+  title: 'An Adaptive AI-Based Virtual Reality Sports System for Adolescents with Excess Body Weight: A Randomized
+    Controlled Trial'
+  year: 2025
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: adaptive-rehabilitation-and-exercise
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - virtual-reality
+  - motion-sensing
+  - biomechanics
+  body_locations: []
+  clinical_domains:
+  - obesity
+  - physical-activity
+  populations:
+  - adolescents-with-excess-body-weight
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: clinical-evaluation
+  study_design: five-arm randomized controlled trial
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Randomized five-arm evaluation of an adaptive VR sports system whose coaching agents were trained
+    with deep reinforcement learning.
+  why_it_matters: Connects adaptive AI policy learning to an embodied exercise intervention with a clinical body-composition
+    endpoint.
+  limitations: The eight-week trial involved adolescents with excess body weight in a structured VR setting; longer-term
+    adherence, safety and transportability require study.
+  evidence_boundary: The reported effect is tied to the randomized intervention, comparator, population, follow-up
+    and endpoint; it should not be generalized to other devices or care pathways without new evidence.
+  primary_url: https://www.nature.com/articles/s41591-025-03724-5
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-rehabilitation-and-exercise
+  - intervention
+  - reinforcement-learning
+  - virtual-reality
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41591-025-03724-5
+  outcome_status: The adaptive VR sports arms reduced fat mass relative to control and were reported as comparable
+    to physical sports over eight weeks.
+  negative_or_null_result: false
+  intervention_channel:
+  - adaptive-vr-coaching
+  - exercise
+- id: intervention-closed-loop-vns-sci-2025
+  title: Closed-Loop Vagus Nerve Stimulation Aids Recovery from Spinal Cord Injury
+  year: 2025
+  venue: Nature
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: responsive-neurostimulation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - force-sensors
+  - motion-sensors
+  - vagus-nerve-stimulation
+  body_locations: []
+  clinical_domains:
+  - spinal-cord-injury
+  - neurorehabilitation
+  populations:
+  - people-with-chronic-incomplete-cervical-spinal-cord-injury
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: closed-loop-deployment
+  study_design: double-blind sham-controlled randomized early-feasibility study
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Double-blind sham-controlled randomized study paired successful sensor-measured rehabilitation movements
+    with implanted vagus nerve stimulation.
+  why_it_matters: Provides direct evidence for a sensor-triggered implanted closed-loop rehabilitation system.
+  limitations: Early-feasibility study with 19 participants and an intensive specialized rehabilitation protocol;
+    larger confirmatory trials are needed.
+  evidence_boundary: The reported effect is tied to the randomized intervention, comparator, population, follow-up
+    and endpoint; it should not be generalized to other devices or care pathways without new evidence.
+  primary_url: https://www.nature.com/articles/s41586-025-09028-5
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - intervention
+  - responsive-neurostimulation
+  - spinal-cord-injury
+  - vagus-nerve-stimulation
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41586-025-09028-5
+  outcome_status: Closed-loop stimulation paired with rehabilitation improved upper-limb strength and activities-of-daily-living
+    measures relative to sham rehabilitation in the reported study.
+  negative_or_null_result: false
+  intervention_channel:
+  - closed-loop-neurostimulation
+  - rehabilitation
+- id: intervention-perioperative-cancer-rpm-2025
+  title: 'Comparative Effectiveness of Remote Perioperative Telemonitoring in Cancer Surgery: A Randomized Trial'
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: remote-monitoring-and-clinical-escalation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - steps
+  - symptom-report
+  body_locations: []
+  clinical_domains:
+  - oncology
+  - perioperative-care
+  - remote-monitoring
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Compares wrist-accelerometer and symptom monitoring with nurse-triggered escalation against surgeon-only
+    perioperative care.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-025-01961-z
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - remote-monitoring-and-clinical-escalation
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The trial found a statistically greater early functional recovery rate, but the difference did
+    not reach its prespecified clinically meaningful threshold.
+  negative_or_null_result: true
+  intervention_channel:
+  - remote-monitoring-and-clinical-escalation
+- id: intervention-wearables-blood-pressure-review-2025
+  title: 'Effects of Physical Activity-Promoting Wearable Devices on Blood Pressure in Adults: A Systematic Review
+    and Meta-Analysis'
+  year: 2025
+  venue: Hypertension Research
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: wearable-feedback-evidence-synthesis
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - steps
+  - smartwatch
+  body_locations: []
+  clinical_domains:
+  - hypertension
+  - metabolic
+  - physical-activity
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: systematic review and meta-analysis
+  evidence_stage: systematic-review
+  causal_status: randomized-causal-effect
+  contribution: Synthesizes randomized trials of pedometers, activity trackers and smartwatches intended to improve
+    blood pressure and related metabolic outcomes.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Conclusions inherit heterogeneity and risk of bias from included studies; devices, co-interventions,
+    comparators and outcome definitions vary substantially.
+  evidence_boundary: Evidence synthesis estimates average effects over included studies and does not establish effectiveness
+    for every device, population or intervention design.
+  primary_url: https://www.nature.com/articles/s41440-025-02260-6
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - wearable-feedback-evidence-synthesis
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The pooled evidence did not establish statistically significant improvements in blood pressure,
+    weight, fasting glucose or HbA1c.
+  negative_or_null_result: true
+  intervention_channel:
+  - wearable-feedback-evidence-synthesis
+- id: intervention-wearable-visual-assistance-2025
+  title: Human-Centred Design and Fabrication of a Wearable Multimodal Visual Assistance System
+  year: 2025
+  venue: Nature Machine Intelligence
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: assistive-wearable-systems
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - vision
+  - audio
+  - haptics
+  - smart-insole
+  body_locations:
+  - head-worn
+  - foot
+  clinical_domains:
+  - visual-impairment
+  - assistive-technology
+  populations:
+  - people-with-visual-impairment
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: human-centred system evaluation with participant studies
+  evidence_stage: prospective-observational
+  causal_status: not-causal
+  contribution: Integrates computer vision, audio, haptics, smart insoles and user training in a wearable visual-assistance
+    system tested with participants with visual impairment.
+  why_it_matters: Broadens wearable AI from passive health prediction to multimodal sensory substitution and assistive
+    action.
+  limitations: The study emphasizes technical performance and usability; comparative clinical-effectiveness evidence
+    and long-term adoption remain limited.
+  evidence_boundary: Participant experiments support system feasibility and usability but do not establish population-level
+    clinical benefit.
+  primary_url: https://www.nature.com/articles/s42256-025-01018-6
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - accessibility
+  - assistive-wearable-systems
+  - intervention
+  - multimodal
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s42256-025-01018-6
+  outcome_status: The study reported improvements in navigation-related tasks and favourable usability assessments
+    in evaluated settings.
+  negative_or_null_result: false
+  intervention_channel:
+  - audio-feedback
+  - haptic-feedback
+  - wearable-assistance
+- id: intervention-aid-digital-twin-coadaptation-2025
+  title: 'Human-Machine Co-Adaptation to Automated Insulin Delivery: A Randomised Clinical Trial Using Digital Twin
+    Technology'
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: automated-insulin-delivery
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - insulin-pump
+  - digital-twin
+  body_locations: []
+  clinical_domains:
+  - type-1-diabetes
+  - glycemic-control
+  - human-machine-interaction
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Tests interactive human-machine adaptation around automated insulin delivery using digital-twin-supported
+    experimentation.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-025-01679-y
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - automated-insulin-delivery
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The digital twin is validated within the trial context and should not be generalized to unrestricted
+    individual counterfactual simulation.
+  negative_or_null_result: false
+  intervention_channel:
+  - automated-insulin-delivery
+- id: intervention-mybpmylife-2025
+  title: 'Physical Activity and Diet Just-in-Time Adaptive Intervention to Reduce Blood Pressure: A Randomized Controlled
+    Trial'
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: jitai-behavioral-interventions
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - steps
+  - smartwatch
+  - self-report
+  body_locations: []
+  clinical_domains:
+  - hypertension
+  - physical-activity
+  - diet
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Tests smartwatch- and app-supported adaptive physical-activity and lower-sodium-food suggestions
+    in 602 adults with hypertension.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-025-01844-3
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - jitai-behavioral-interventions
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The primary systolic-blood-pressure outcome was null; secondary analyses showed a modest between-group
+    step-count difference.
+  negative_or_null_result: true
+  intervention_channel:
+  - jitai-behavioral-interventions
+- id: intervention-digital-depression-anxiety-2025
+  title: Randomized Controlled Study of a Digital Data-Driven Intervention for Depressive and Generalized Anxiety
+    Symptoms
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: jitai-behavioral-interventions
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - smartphone
+  - self-report
+  - digital-phenotype
+  body_locations: []
+  clinical_domains:
+  - depression
+  - anxiety
+  - mental-health
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Tests a personalized data-driven digital intervention for depressive and generalized-anxiety symptoms.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-025-01511-7
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - jitai-behavioral-interventions
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The result is intervention-specific; longer follow-up and independent replication are needed before
+    clinical replacement claims.
+  negative_or_null_result: false
+  intervention_channel:
+  - jitai-behavioral-interventions
+- id: intervention-vr-chronic-pain-2025
+  title: Telehealth Virtual Reality Intervention Reduces Chronic Pain in a Randomized Crossover Study
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: digital-rehabilitation-and-pain
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - virtual-reality
+  - self-report
+  body_locations: []
+  clinical_domains:
+  - chronic-pain
+  - telehealth
+  populations:
+  - trial-participants
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Evaluates a remotely delivered virtual-reality intervention for chronic pain using a randomized
+    crossover design.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-025-01553-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - digital-rehabilitation-and-pain
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The study supports short-term analgesic effects in the tested setting; durability, blinding and
+    generalization require further study.
+  negative_or_null_result: false
+  intervention_channel:
+  - digital-rehabilitation-and-pain
+- id: intervention-telemedicine-wearables-chronic-pain-2025
+  title: 'Utilization of Telemedicine in Conjunction with Wearable Devices for Patients with Chronic Musculoskeletal
+    Pain: A Randomized Controlled Clinical Trial'
+  year: 2025
+  venue: Scientific Reports
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: digital-rehabilitation-and-pain
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - wearable-monitoring
+  - telemedicine
+  body_locations: []
+  clinical_domains:
+  - chronic-pain
+  - remote-care
+  populations:
+  - people-with-chronic-musculoskeletal-pain
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized controlled clinical trial
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Randomized trial compared six months of home telemedicine plus wearable monitoring and usual care
+    with usual care alone for chronic musculoskeletal pain.
+  why_it_matters: Adds longer-duration evidence for a wearable-enabled remote-care pathway rather than a short engagement
+    study.
+  limitations: Seventy-one participants, a bundled intervention and multiple outcomes limit attribution to the wearable
+    component and broad generalization.
+  evidence_boundary: The reported effect is tied to the randomized intervention, comparator, population, follow-up
+    and endpoint; it should not be generalized to other devices or care pathways without new evidence.
+  primary_url: https://www.nature.com/articles/s41598-024-85056-x
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - chronic-pain
+  - digital-rehabilitation-and-pain
+  - intervention
+  - mixed-result
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41598-024-85056-x
+  outcome_status: No between-group pain difference was reported at one or three months; the telemedicine-plus-wearable
+    group showed better outcomes at six months.
+  negative_or_null_result: true
+  intervention_channel:
+  - telemedicine
+  - wearable-monitoring
+- id: intervention-knee-oa-mindset-2024
+  title: A Randomized Clinical Trial Testing Digital Mindset Intervention for Knee Osteoarthritis Pain and Activity
+    Improvement
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: digital-rehabilitation-and-pain
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - self-report
+  - smartphone
+  body_locations: []
+  clinical_domains:
+  - osteoarthritis
+  - pain
+  - physical-activity
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Tests brief self-guided digital mindset and education interventions in adults with knee osteoarthritis.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-024-01281-8
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - digital-rehabilitation-and-pain
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: Mindset and self-reported physical activity improved relative to no intervention, while pain reduction
+    was not significant.
+  negative_or_null_result: true
+  intervention_channel:
+  - digital-rehabilitation-and-pain
+- id: intervention-intandem-stroke-2024
+  title: 'Efficacy and Safety of Using Auditory-Motor Entrainment to Improve Walking after Stroke: A Multi-Site
+    Randomized Controlled Trial of InTandem'
+  year: 2024
+  venue: Nature Communications
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: adaptive-rehabilitation-and-exercise
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - gait-sensing
+  - auditory-feedback
+  body_locations:
+  - body-worn
+  clinical_domains:
+  - stroke
+  - gait-rehabilitation
+  populations:
+  - people-with-chronic-stroke
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: multi-site two-arm randomized controlled trial
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Multi-site randomized trial evaluated an autonomous closed-loop music system that adapts auditory
+    stimulation to an individual's gait pattern.
+  why_it_matters: Shows adaptive sensing and feedback improving a functional rehabilitation endpoint outside a laboratory-only
+    demonstration.
+  limitations: The study evaluated chronic post-stroke walking over five weeks; generalization to other impairments
+    and long-term maintenance requires evidence.
+  evidence_boundary: The reported effect is tied to the randomized intervention, comparator, population, follow-up
+    and endpoint; it should not be generalized to other devices or care pathways without new evidence.
+  primary_url: https://www.nature.com/articles/s41467-024-44791-5
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-rehabilitation-and-exercise
+  - closed-loop-rehabilitation
+  - intervention
+  - stroke
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41467-024-44791-5
+  outcome_status: The intervention produced a larger improvement in walking speed and more clinical responders than
+    active-control walking, with similar reported safety.
+  negative_or_null_result: false
+  intervention_channel:
+  - adaptive-auditory-cueing
+  - gait-training
+- id: intervention-wearable-robot-cerebral-palsy-2024
+  title: 'Overground Gait Training With a Wearable Robot in Children With Cerebral Palsy: A Randomized Clinical
+    Trial'
+  year: 2024
+  venue: JAMA Network Open
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: wearable-robotics-and-assistance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - robotic-actuation
+  - gait-sensing
+  body_locations:
+  - lower-limb
+  clinical_domains:
+  - cerebral-palsy
+  - gait-rehabilitation
+  populations:
+  - children-with-cerebral-palsy
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized clinical trial
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Randomized clinical trial compared torque-assisted overground robot gait training with matched conventional
+    physical therapy in children with cerebral palsy.
+  why_it_matters: Provides comparative clinical evidence for power-as-needed wearable robotic assistance.
+  limitations: Eligibility and device size restricted the studied population; optimal dosing and durability remain
+    uncertain.
+  evidence_boundary: The reported effect is tied to the randomized intervention, comparator, population, follow-up
+    and endpoint; it should not be generalized to other devices or care pathways without new evidence.
+  primary_url: https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2821278
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cerebral-palsy
+  - intervention
+  - robotic-rehabilitation
+  - wearable-robotics-and-assistance
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1001/jamanetworkopen.2024.22625
+  outcome_status: Wearable-robot training improved gross motor function, balance and gait outcomes relative to matched
+    conventional therapy in the reported trial.
+  negative_or_null_result: false
+  intervention_channel:
+  - wearable-robot
+  - gait-training
+- id: intervention-soft-robotic-apparel-parkinson-2024
+  title: Soft Robotic Apparel to Avert Freezing of Gait in Parkinson's Disease
+  year: 2024
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: wearable-robotics-and-assistance
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - motion-sensors
+  - robotic-actuation
+  body_locations:
+  - hip
+  - lower-body
+  clinical_domains:
+  - parkinsons-disease
+  - gait
+  populations:
+  - single-participant
+  wearable_scope: wearable-core
+  lifecycle_stage: closed-loop-deployment
+  study_design: N-of-1 repeated-measures proof-of-concept study
+  evidence_stage: clinical-deployment
+  causal_status: mechanistic-closed-loop
+  contribution: Sensor-driven soft robotic garment delivered hip-flexion assistance and was evaluated through repeated
+    assisted and unassisted walking in one person with Parkinson's disease.
+  why_it_matters: Illustrates a genuine sensing–decision–actuation wearable loop targeting an acute motor impairment.
+  limitations: N-of-1 proof of concept; efficacy, safety, usability and durability across patients are unknown.
+  evidence_boundary: Repeated within-person effects are compelling mechanistic evidence for this participant but
+    cannot establish population-level effectiveness.
+  primary_url: https://www.nature.com/articles/s41591-023-02731-8
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - intervention
+  - parkinsons-disease
+  - wearable-robot
+  - wearable-robotics-and-assistance
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41591-023-02731-8
+  outcome_status: Assistance eliminated freezing during the reported indoor tests for the single participant and
+    improved walking distance and gait measures.
+  negative_or_null_result: false
+  intervention_channel:
+  - soft-robotic-assistance
+- id: intervention-cardiac-rehab-jitai-2023
+  title: A Randomized Trial of a Mobile Health Intervention to Augment Cardiac Rehabilitation
+  year: 2023
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: jitai-behavioral-interventions
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - steps
+  - smartwatch
+  - smartphone
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - rehabilitation
+  - physical-activity
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Tests smartwatch-linked just-in-time text messaging as an adjunct to centre-based cardiac rehabilitation.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-023-00921-9
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - jitai-behavioral-interventions
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: The intervention did not improve the six-month primary outcome; limited device-specific secondary
+    differences appeared earlier.
+  negative_or_null_result: true
+  intervention_channel:
+  - jitai-behavioral-interventions
+- id: intervention-low-back-digital-care-2023
+  title: Randomized-Controlled Trial Assessing a Digital Care Program versus Conventional Physiotherapy for Chronic
+    Low Back Pain
+  year: 2023
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: digital-rehabilitation-and-pain
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - motion-sensor
+  - smartphone
+  - exercise
+  body_locations: []
+  clinical_domains:
+  - low-back-pain
+  - rehabilitation
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Compares a sensor-supported digital exercise program with evidence-based in-person physiotherapy
+    for chronic low back pain.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41746-023-00870-3
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - digital-rehabilitation-and-pain
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: Both groups improved and the primary disability outcome did not differ between interventions.
+  negative_or_null_result: true
+  intervention_channel:
+  - digital-rehabilitation-and-pain
+- id: intervention-brain-spine-interface-2023
+  title: Walking Naturally after Spinal Cord Injury Using a Brain-Spine Interface
+  year: 2023
+  venue: Nature
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: adaptive-neurorehabilitation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecog
+  - motion
+  - spinal-stimulation
+  body_locations: []
+  clinical_domains:
+  - spinal-cord-injury
+  - gait
+  - rehabilitation
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: clinical-deployment
+  causal_status: mechanistic-closed-loop
+  contribution: Links cortical decoding to spinal stimulation in a closed-loop brain-spine interface supporting
+    walking after spinal-cord injury.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://www.nature.com/articles/s41586-023-06094-5
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - adaptive-neurorehabilitation
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: Evidence comes from a highly specialized implanted system and a very small number of participants;
+    scalability and durability remain unresolved.
+  negative_or_null_result: false
+  intervention_channel:
+  - adaptive-neurorehabilitation
+- id: intervention-copd-wearables-review-2023
+  title: 'Wearable Technology Interventions in Patients with Chronic Obstructive Pulmonary Disease: A Systematic
+    Review and Meta-Analysis'
+  year: 2023
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: wearable-feedback-evidence-synthesis
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - steps
+  - activity-tracker
+  body_locations: []
+  clinical_domains:
+  - respiratory
+  - rehabilitation
+  - physical-activity
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: systematic review and meta-analysis
+  evidence_stage: systematic-review
+  causal_status: randomized-causal-effect
+  contribution: Evaluates wearable-supported activity and rehabilitation interventions in chronic obstructive pulmonary
+    disease.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Conclusions inherit heterogeneity and risk of bias from included studies; devices, co-interventions,
+    comparators and outcome definitions vary substantially.
+  evidence_boundary: Evidence synthesis estimates average effects over included studies and does not establish effectiveness
+    for every device, population or intervention design.
+  primary_url: https://www.nature.com/articles/s41746-023-00962-0
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - wearable-feedback-evidence-synthesis
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  outcome_status: Meta-analysis reported increased step count, but study heterogeneity, attrition and per-protocol
+    analyses limit certainty for broader clinical outcomes.
+  negative_or_null_result: false
+  intervention_channel:
+  - wearable-feedback-evidence-synthesis
+- id: intervention-trackers-umbrella-2022
+  title: 'Effectiveness of Wearable Activity Trackers to Increase Physical Activity and Improve Health: A Systematic
+    Review of Systematic Reviews and Meta-Analyses'
+  year: 2022
+  venue: The Lancet Digital Health
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: wearable-feedback-evidence-synthesis
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - steps
+  - activity-tracker
+  body_locations: []
+  clinical_domains:
+  - physical-activity
+  - weight-management
+  - fitness
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: systematic review and meta-analysis
+  evidence_stage: systematic-review
+  causal_status: randomized-causal-effect
+  contribution: Synthesizes systematic reviews and meta-analyses of activity-tracker interventions across clinical
+    and non-clinical populations.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Conclusions inherit heterogeneity and risk of bias from included studies; devices, co-interventions,
+    comparators and outcome definitions vary substantially.
+  evidence_boundary: Evidence synthesis estimates average effects over included studies and does not establish effectiveness
+    for every device, population or intervention design.
+  primary_url: https://doi.org/10.1016/S2589-7500(22)00111-X
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - wearable-feedback-evidence-synthesis
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1016/S2589-7500(22)00111-X
+  outcome_status: Average physical activity, body composition and fitness improved, while several physiological
+    and psychosocial outcomes were smaller or non-significant.
+  negative_or_null_result: false
+  intervention_channel:
+  - wearable-feedback-evidence-synthesis
+- id: intervention-bionic-pancreas-2022
+  title: Multicenter, Randomized Trial of a Bionic Pancreas in Type 1 Diabetes
+  year: 2022
+  venue: New England Journal of Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: automated-insulin-delivery
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - insulin-pump
+  body_locations: []
+  clinical_domains:
+  - type-1-diabetes
+  - glycemic-control
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Tests an insulin-only bionic-pancreas system across age groups and multiple centres.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1056/NEJMoa2205225
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - automated-insulin-delivery
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1056/NEJMoa2205225
+  outcome_status: Results concern a defined device ecosystem and clinical support model; long-term comparative effectiveness
+    requires continuing surveillance.
+  negative_or_null_result: false
+  intervention_channel:
+  - automated-insulin-delivery
+- id: intervention-open-source-aid-2022
+  title: Open-Source Automated Insulin Delivery in Type 1 Diabetes
+  year: 2022
+  venue: New England Journal of Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: automated-insulin-delivery
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - insulin-pump
+  body_locations: []
+  clinical_domains:
+  - type-1-diabetes
+  - glycemic-control
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Evaluates an open-source automated insulin-delivery system in a randomized controlled trial.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1056/NEJMoa2203913
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - automated-insulin-delivery
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1056/NEJMoa2203913
+  outcome_status: Open-source implementation does not eliminate device, cybersecurity, training or regulatory responsibilities.
+  negative_or_null_result: false
+  intervention_channel:
+  - automated-insulin-delivery
+- id: intervention-ebrave-af-2022
+  title: 'Smartphone-Based Screening for Atrial Fibrillation: A Pragmatic Randomized Clinical Trial'
+  year: 2022
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: digital-screening-and-clinical-escalation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - smartphone-ppg
+  - confirmatory-ecg
+  body_locations: []
+  clinical_domains:
+  - atrial-fibrillation
+  - screening
+  populations:
+  - older-adults
+  wearable_scope: mobile-health-enabler
+  lifecycle_stage: clinical-evaluation
+  study_design: pragmatic randomized clinical trial
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Pragmatic siteless randomized trial comparing smartphone pulse-wave screening plus confirmatory
+    ECG with usual care in 5,551 adults.
+  why_it_matters: Demonstrates that a digital sensing-to-confirmation pathway can change detection of treatment-relevant
+    atrial fibrillation at population scale.
+  limitations: The sensing modality was smartphone photoplethysmography rather than a continuously worn device,
+    and improved detection was not evidence of improved downstream clinical outcomes.
+  evidence_boundary: Randomization supports an effect on AF detection under this screening pathway; it does not
+    establish stroke reduction, net benefit or effectiveness of all wearable AF-screening strategies.
+  primary_url: https://www.nature.com/articles/s41591-022-01979-w
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - atrial-fibrillation
+  - digital-screening-and-clinical-escalation
+  - intervention
+  - screening
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41591-022-01979-w
+  outcome_status: Digital screening more than doubled detection of treatment-relevant atrial fibrillation in both
+    trial phases.
+  negative_or_null_result: false
+  intervention_channel:
+  - digital-screening
+  - clinical-confirmation
+- id: intervention-adaptive-dbs-parkinson-2021
+  title: Adaptive Deep Brain Stimulation in Advanced Parkinson Disease
+  year: 2021
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: responsive-neurostimulation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - neural-streaming
+  - deep-brain-stimulation
+  body_locations: []
+  clinical_domains:
+  - parkinson-disease
+  - neuromodulation
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Evaluates adaptive deep-brain stimulation driven by neural biomarkers in people with advanced Parkinson
+    disease.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1038/s41591-021-01302-3
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - responsive-neurostimulation
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41591-021-01302-3
+  outcome_status: Small specialized cohorts and invasive sensing constrain generalization; biomarker drift and long-term
+    programming remain important.
+  negative_or_null_result: false
+  intervention_channel:
+  - responsive-neurostimulation
+- id: intervention-closed-loop-depression-2021
+  title: Closed-Loop Neuromodulation in an Individual with Treatment-Resistant Depression
+  year: 2021
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: responsive-neurostimulation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ieeg
+  - neural-stimulation
+  body_locations: []
+  clinical_domains:
+  - depression
+  - neuromodulation
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: clinical-deployment
+  causal_status: mechanistic-closed-loop
+  contribution: Demonstrates individualized biomarker-triggered intracranial stimulation for treatment-resistant
+    depression in a single participant.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1038/s41591-021-01480-w
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - responsive-neurostimulation
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41591-021-01480-w
+  outcome_status: This is an intensive single-participant demonstration and provides no population-level effectiveness
+    estimate.
+  negative_or_null_result: false
+  intervention_channel:
+  - responsive-neurostimulation
+- id: intervention-wearable-hand-hygiene-feedback-2021
+  title: 'Effect of Wearing a Novel Electronic Wearable Device on Hand Hygiene Compliance Among Health Care Workers:
+    A Stepped-Wedge Cluster Randomized Clinical Trial'
+  year: 2021
+  venue: JAMA Network Open
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: workplace-behavior-feedback
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - wearable-proximity-and-use-sensing
+  - real-time-feedback
+  body_locations:
+  - wrist-or-badge
+  clinical_domains:
+  - infection-control
+  - workplace-behavior
+  populations:
+  - healthcare-workers
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: stepped-wedge cluster randomized clinical trial
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Stepped-wedge cluster randomized trial tested real-time wearable feedback on hand-rub duration and
+    volume among healthcare workers.
+  why_it_matters: Provides a useful negative example showing that sensor feedback can improve action quality without
+    improving the intended behavioural frequency.
+  limitations: Single geriatric hospital, volunteer wearers and strong time/Hawthorne effects complicate transportability.
+  evidence_boundary: The reported effect is tied to the randomized intervention, comparator, population, follow-up
+    and endpoint; it should not be generalized to other devices or care pathways without new evidence.
+  primary_url: https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2776020
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - hand-hygiene
+  - intervention
+  - negative-result
+  - workplace-behavior-feedback
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1001/jamanetworkopen.2020.34771
+  outcome_status: The device did not improve compliance with hand-hygiene moments, although hand-rub volume and
+    duration improved.
+  negative_or_null_result: true
+  intervention_channel:
+  - real-time-wearable-feedback
+- id: intervention-ai-coaching-cancer-survivors-2021
+  title: Randomized Trial of Two Artificial Intelligence Coaching Interventions to Increase Physical Activity in
+    Cancer Survivors
+  year: 2021
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: ai-coaching-and-adaptive-messaging
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - steps
+  - fitbit
+  - voice-assistant
+  - text-messaging
+  body_locations:
+  - wrist
+  clinical_domains:
+  - physical-activity
+  - cancer-survivorship
+  populations:
+  - cancer-survivors
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: three-arm randomized controlled pilot trial
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Three-arm pilot randomized trial comparing voice-assisted AI coaching, autonomous text coaching
+    and health information, with Fitbit-derived steps as the primary outcome.
+  why_it_matters: Provides direct randomized evidence for an AI coaching system informed by wearable activity data.
+  limitations: Single-center pilot with 42 participants, four weeks of intervention and a selected cancer-survivor
+    population; durability and generalizability remain uncertain.
+  evidence_boundary: The reported effect is tied to the randomized intervention, comparator, population, follow-up
+    and endpoint; it should not be generalized to other devices or care pathways without new evidence.
+  primary_url: https://www.nature.com/articles/s41746-021-00539-9
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - ai-coaching
+  - ai-coaching-and-adaptive-messaging
+  - intervention
+  - physical-activity
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1038/s41746-021-00539-9
+  outcome_status: Voice-assisted coaching increased steps relative to control over four weeks; the autonomous text
+    arm did not show the same clear advantage.
+  negative_or_null_result: false
+  intervention_channel:
+  - voice-coaching
+  - text-messaging
+  - wearable-feedback
+- id: intervention-rns-nine-year-2020
+  title: Nine-Year Prospective Efficacy and Safety of Brain-Responsive Neurostimulation for Focal Epilepsy
+  year: 2020
+  venue: Neurology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: responsive-neurostimulation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ieeg
+  - neural-stimulation
+  body_locations: []
+  clinical_domains:
+  - epilepsy
+  - neuromodulation
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: clinical-deployment
+  causal_status: mechanistic-closed-loop
+  contribution: Reports long-term prospective effectiveness and safety of responsive neurostimulation for focal
+    epilepsy.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1212/WNL.0000000000010154
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - responsive-neurostimulation
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1212/WNL.0000000000010154
+  outcome_status: Long-term observational follow-up is vulnerable to attrition, changing management and survivor
+    effects despite its deployment relevance.
+  negative_or_null_result: false
+  intervention_channel:
+  - responsive-neurostimulation
+- id: intervention-control-iq-2019
+  title: Six-Month Randomized, Multicenter Trial of Closed-Loop Control in Type 1 Diabetes
+  year: 2019
+  venue: New England Journal of Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: automated-insulin-delivery
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - insulin-pump
+  body_locations: []
+  clinical_domains:
+  - type-1-diabetes
+  - glycemic-control
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Evaluates a closed-loop insulin-delivery system over six months across multiple clinical centres.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1056/NEJMoa1907863
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - automated-insulin-delivery
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1056/NEJMoa1907863
+  outcome_status: Clinical benefit and adverse-event profiles remain system-, training- and population-specific.
+  negative_or_null_result: false
+  intervention_channel:
+  - automated-insulin-delivery
+- id: intervention-pregnancy-closed-loop-2016
+  title: Closed-Loop Insulin Delivery during Pregnancy in Women with Type 1 Diabetes
+  year: 2016
+  venue: New England Journal of Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: automated-insulin-delivery
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - insulin-pump
+  body_locations: []
+  clinical_domains:
+  - type-1-diabetes
+  - pregnancy
+  - glycemic-control
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Evaluates closed-loop insulin delivery during pregnancy, a high-risk context with rapidly changing
+    physiology.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1056/NEJMoa1602494
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - automated-insulin-delivery
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1056/NEJMoa1602494
+  outcome_status: Small specialized samples and intensive support limit generalization beyond the tested pregnancy
+    setting.
+  negative_or_null_result: false
+  intervention_channel:
+  - automated-insulin-delivery
+- id: intervention-idea-weight-loss-2016
+  title: 'Effect of Wearable Technology Combined With a Lifestyle Intervention on Long-term Weight Loss: The IDEA
+    Randomized Clinical Trial'
+  year: 2016
+  venue: JAMA
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: wearable-feedback-randomized-trials
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - activity-tracker
+  - steps
+  body_locations: []
+  clinical_domains:
+  - obesity
+  - weight-management
+  - physical-activity
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Tests adding a wearable activity monitor to a standard behavioral weight-loss intervention over
+    24 months.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1001/jama.2016.12858
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - wearable-feedback-randomized-trials
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1001/jama.2016.12858
+  outcome_status: Adding the wearable component did not improve weight loss and the technology-enhanced arm lost
+    less weight than the standard intervention arm.
+  negative_or_null_result: true
+  intervention_channel:
+  - wearable-feedback-randomized-trials
+- id: intervention-trippa-2016
+  title: 'Effectiveness of Activity Trackers with and without Incentives to Increase Physical Activity (TRIPPA):
+    A Randomised Controlled Trial'
+  year: 2016
+  venue: Lancet Diabetes & Endocrinology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: wearable-feedback-randomized-trials
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - activity-tracker
+  - accelerometer
+  body_locations: []
+  clinical_domains:
+  - physical-activity
+  - behavioral-economics
+  populations:
+  - trial-participants
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Tests activity trackers with cash or charitable incentives for increasing moderate-to-vigorous physical
+    activity.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1016/S2213-8587(16)30284-4
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - wearable-feedback-randomized-trials
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1016/S2213-8587(16)30284-4
+  outcome_status: Incentives changed some activity outcomes during the intervention, but sustained effects and clinical
+    implications were limited.
+  negative_or_null_result: true
+  intervention_channel:
+  - wearable-feedback-randomized-trials
+- id: intervention-home-artificial-beta-cell-2015
+  title: Home Use of an Artificial Beta Cell in Type 1 Diabetes
+  year: 2015
+  venue: New England Journal of Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: automated-insulin-delivery
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - insulin-pump
+  body_locations: []
+  clinical_domains:
+  - type-1-diabetes
+  - glycemic-control
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Tests extended home use of closed-loop insulin delivery compared with sensor-augmented pump therapy.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1056/NEJMoa1509351
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - automated-insulin-delivery
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1056/NEJMoa1509351
+  outcome_status: Benefits apply to the evaluated algorithm, hardware and monitored population; failures, training
+    and real-world adherence remain relevant.
+  negative_or_null_result: false
+  intervention_channel:
+  - automated-insulin-delivery
+- id: intervention-achess-2014
+  title: 'A Smartphone Application to Support Recovery from Alcoholism: A Randomized Clinical Trial'
+  year: 2014
+  venue: JAMA Psychiatry
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: jitai-behavioral-interventions
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - smartphone
+  - gps
+  - self-report
+  body_locations: []
+  clinical_domains:
+  - alcohol-use-disorder
+  - relapse-prevention
+  populations:
+  - trial-participants
+  wearable_scope: mobile-health-enabler
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: Evaluates the A-CHESS smartphone recovery-support system after residential treatment for alcohol-use
+    disorder.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1001/jamapsychiatry.2013.4642
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - jitai-behavioral-interventions
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1001/jamapsychiatry.2013.4642
+  outcome_status: The package reduced risky drinking days in the studied population, but the contribution of individual
+    adaptive components was not isolated.
+  negative_or_null_result: false
+  intervention_channel:
+  - jitai-behavioral-interventions
+- id: intervention-bionic-pancreas-outpatient-2014
+  title: Outpatient Glycemic Control with a Bionic Pancreas in Type 1 Diabetes
+  year: 2014
+  venue: New England Journal of Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: automated-insulin-delivery
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - insulin
+  - glucagon
+  body_locations: []
+  clinical_domains:
+  - type-1-diabetes
+  - glycemic-control
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Evaluates bihormonal closed-loop insulin and glucagon delivery in outpatient adults and adolescents
+    with type 1 diabetes.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1056/NEJMoa1314474
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - automated-insulin-delivery
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1056/NEJMoa1314474
+  outcome_status: Short-duration crossover evidence supports glycemic control in the tested system; device complexity
+    and long-term safety require separate evaluation.
+  negative_or_null_result: false
+  intervention_channel:
+  - automated-insulin-delivery
+- id: intervention-sleep-auditory-closed-loop-2013
+  title: Auditory Closed-Loop Stimulation of the Sleep Slow Oscillation Enhances Memory
+  year: 2013
+  venue: Neuron
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: closed-loop-sleep-interventions
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - audio-stimulation
+  body_locations: []
+  clinical_domains:
+  - sleep
+  - memory
+  populations:
+  - trial-participants
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Times auditory stimulation to detected sleep slow oscillations to test whether phase-locked closed-loop
+    stimulation changes memory consolidation.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1016/j.neuron.2013.03.006
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - closed-loop
+  - closed-loop-sleep-interventions
+  - intervention
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1016/j.neuron.2013.03.006
+  outcome_status: Laboratory efficacy does not establish unattended wearable effectiveness, long-term benefit or
+    safety across sleep disorders.
+  negative_or_null_result: false
+  intervention_channel:
+  - closed-loop-sleep-interventions
+- id: intervention-rns-pivotal-2011
+  title: Responsive Cortical Stimulation for the Treatment of Medically Intractable Partial Epilepsy
+  year: 2011
+  venue: Neurology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: responsive-neurostimulation
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ieeg
+  - neural-stimulation
+  body_locations: []
+  clinical_domains:
+  - epilepsy
+  - neuromodulation
+  populations:
+  - trial-participants
+  wearable_scope: implantable-closed-loop
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized or prospective interventional evaluation
+  evidence_stage: randomized-controlled-trial
+  causal_status: mechanistic-closed-loop
+  contribution: Evaluates a brain-responsive neurostimulation system that detects electrophysiological activity
+    and delivers stimulation for focal epilepsy.
+  why_it_matters: Provides direct evidence about whether sensing-linked feedback, adaptive messaging, automated
+    control or closed-loop stimulation changes behaviour, physiology or clinical outcomes.
+  limitations: Effects are specific to the tested population, intervention package, comparator, device, adherence
+    pattern and follow-up window; transportability and long-term safety require separate evidence.
+  evidence_boundary: Randomization supports the specified trial estimand, but it does not validate every algorithmic
+    component, subgroup policy or future deployment configuration.
+  primary_url: https://doi.org/10.1212/WNL.0b013e3182302056
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-health
+  - intervention
+  - responsive-neurostimulation
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1212/WNL.0b013e3182302056
+  outcome_status: Invasive implantation, specialist selection and device programming limit direct analogy to consumer
+    wearables.
+  negative_or_null_result: false
+  intervention_channel:
+  - responsive-neurostimulation

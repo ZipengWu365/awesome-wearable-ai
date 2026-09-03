@@ -1,0 +1,4750 @@
+- id: model-gluformer-2026
+  title: A Foundation Model for Continuous Glucose Monitoring Data
+  short_name: GluFormer
+  year: 2026
+  venue: Nature
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: cgm-metabolic-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - glucose
+  body_locations: []
+  clinical_domains:
+  - diabetes
+  - metabolic
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Learns general representations from longitudinal continuous glucose monitoring data for multiple
+    downstream metabolic tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41586-025-09925-9
+  code_url: https://github.com/Guylu/GluFormer
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cgm
+  - cgm-metabolic-foundation-models
+  - diabetes
+  - foundation-model
+  - glucose
+  - metabolic
+  evidence_depth: metadata_verified
+- id: model-glucofm-2026
+  title: 'GlucoFM: A Foundation Model for Continuous Glucose Monitoring'
+  short_name: GlucoFM
+  year: 2026
+  venue: Google Research
+  venue_type: technical_report
+  venue_tier: big_tech_report
+  record_type: model
+  family: cgm-metabolic-foundation-models
+  inclusion_basis: big_tech_official_report
+  modalities:
+  - cgm
+  - glucose
+  body_locations: []
+  clinical_domains:
+  - diabetes
+  - metabolic
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Develops a glucose-focused foundation-model line for continuous glucose monitoring and downstream
+    metabolic modelling.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://research.google/blog/glucofm-a-foundation-model-for-continuous-glucose-monitoring/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cgm
+  - cgm-metabolic-foundation-models
+  - diabetes
+  - foundation-model
+  - glucose
+  - metabolic
+  evidence_depth: metadata_verified
+- id: model-cardiac-sensing-fm-2026
+  title: Cardiac Health Assessment across Scenarios and Devices Using a Multimodal Foundation Model Pretrained on
+    Data from 1.7 Million Individuals
+  short_name: Cardiac-Sensing-FM
+  year: 2026
+  venue: Nature Machine Intelligence
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Pretrains a multimodal cardiac sensing model across ECG and PPG data collected from approximately
+    1.7 million individuals and multiple device scenarios.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s42256-026-01180-5
+  code_url: https://github.com/guxiao0822/Cardiac-Sensing-FM
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  - ppg
+  evidence_depth: metadata_verified
+- id: model-ecgfounder-2025
+  title: An Electrocardiogram Foundation Model Built on over 10 Million Recordings with External Evaluation across
+    Multiple Domains
+  short_name: ECGFounder
+  year: 2025
+  venue: NEJM AI
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Develops an ECG foundation model on more than ten million recordings and reports external evaluation
+    across multiple clinical domains.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1056/AIoa2401033
+  code_url: https://github.com/PKUDigitalHealth/ECGFounder
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  evidence_depth: metadata_verified
+- id: model-d-beta-2025
+  title: Boosting Masked ECG-Text Auto-Encoders as Discriminative Learners
+  short_name: D-BETA
+  year: 2025
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - text
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Strengthens masked ECG-text autoencoding for discriminative downstream cardiac tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=mM65b81LdM
+  code_url: https://github.com/manhph2211/D-BETA
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  - text
+  evidence_depth: metadata_verified
+- id: model-ecg-fm-open-2025
+  title: 'ECG-FM: An Open Electrocardiogram Foundation Model'
+  short_name: ECG-FM
+  year: 2025
+  venue: JAMIA Open
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Provides an open ECG foundation model with reusable representations and public implementation for
+    downstream cardiac analysis.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://academic.oup.com/jamiaopen/article/8/5/ooaf122/8287827
+  code_url: https://github.com/bowang-lab/ECG-FM
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  evidence_depth: metadata_verified
+- id: model-melp-2025
+  title: 'From Token to Rhythm: A Multi-Scale Approach for ECG-Language Pretraining'
+  short_name: MELP
+  year: 2025
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - text
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - report-language
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Introduces multi-scale ECG-language pretraining that links waveform rhythms with textual cardiac
+    semantics.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=fUjkoGUre0
+  code_url: https://github.com/HKU-MedAI/MELP
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  - report-language
+  - text
+  evidence_depth: metadata_verified
+- id: model-h-tuning-2025
+  title: 'H-Tuning: Toward Low-Cost and Efficient ECG-Based Cardiovascular Disease Detection with Pre-Trained Models'
+  short_name: H-Tuning
+  year: 2025
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Introduces efficient tuning strategies for adapting pretrained models to ECG cardiovascular detection.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=RLu1QIPiVr
+  code_url: https://github.com/KAZABANA/H-Tuning
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  evidence_depth: metadata_verified
+- id: model-heartlang-2025
+  title: 'Reading Your Heart: Learning ECG Words and Sentences via Pre-training ECG Language Model'
+  short_name: HeartLang
+  year: 2025
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Tokenizes ECG morphology into word- and sentence-like structures for transferable cardiac representation
+    learning.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2502.10707
+  code_url: https://github.com/PKUDigitalHealth/HeartLang
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-biometric-contrastive-ecg-2024
+  title: Biometric Contrastive Learning for Data-Efficient Deep Learning from Electrocardiographic Images
+  short_name: BCL-ECG
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg-image
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Uses biometric identity as self-supervision for data-efficient representation learning from electrocardiographic
+    images.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://pubmed.ncbi.nlm.nih.gov/38269618/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg-cardiac-foundation-models
+  - ecg-image
+  - foundation-model
+  evidence_depth: metadata_verified
+- id: model-esi-2024
+  title: 'ECG Semantic Integrator: A Foundation ECG Model Pretrained with LLM-Enhanced Cardiological Text'
+  short_name: ESI
+  year: 2024
+  venue: Transactions on Machine Learning Research
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - text
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - semantic-alignment
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains ECG representations using cardiological text enhanced by language-model knowledge.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=Y5aXoH5nqB
+  code_url: https://github.com/comp-well-org/ESI
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  - semantic-alignment
+  - text
+  evidence_depth: metadata_verified
+- id: model-ecg-diagnosis-explanation-2024
+  title: 'Foundation Model of ECG Diagnosis: Diagnostics and Explanations of Any Form and Rhythm on ECG'
+  short_name: ECGFM-KED
+  year: 2024
+  venue: Cell Reports Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - text
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - explanation
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Combines ECG foundation modelling with diagnostic and explanatory outputs over diverse ECG forms
+    and rhythms.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1016/j.xcrm.2024.101866
+  code_url: https://github.com/control-spiderman/ECGFM-KED
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - explanation
+  - foundation-model
+  - text
+  evidence_depth: metadata_verified
+- id: model-digital-stethoscope-fm-2024
+  title: Foundation Models for Cardiovascular Disease Detection via Biosignals from Digital Stethoscopes
+  short_name: Digital Stethoscope FM
+  year: 2024
+  venue: npj Cardiovascular Health
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - pcg
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains on digital-stethoscope biosignals for transferable cardiovascular disease detection.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s44325-024-00027-5
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  - pcg
+  evidence_depth: metadata_verified
+- id: model-frozen-lm-ecg-2024
+  title: Frozen Language Model Helps ECG Zero-Shot Learning
+  short_name: Frozen-LM ECG
+  year: 2024
+  venue: MIDL
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - text
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - zero-shot
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Uses a frozen language model to provide semantic structure for zero-shot ECG learning.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.mlr.press/v227/li24a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  - text
+  - zero-shot
+  evidence_depth: metadata_verified
+- id: model-merl-ecg-2024
+  title: Zero-Shot ECG Classification with Multimodal Learning and Test-Time Clinical Knowledge Enhancement
+  short_name: MERL
+  year: 2024
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - text
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - zero-shot
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Combines multimodal ECG-language learning with test-time clinical knowledge for zero-shot cardiac
+    classification.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2403.06659
+  code_url: https://github.com/cheliu-computation/MERL-ICML2024
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  - text
+  - zero-shot
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-heartbeit-2023
+  title: A Foundational Vision Transformer Improves Diagnostic Performance for Electrocardiograms
+  short_name: HeartBEiT
+  year: 2023
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg-image
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Adapts masked-image pretraining to ECG images and improves diagnostic transfer across cardiac tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41746-023-00840-9
+  code_url: https://github.com/akhilvaid/HeartBEiT
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg-cardiac-foundation-models
+  - ecg-image
+  - foundation-model
+  evidence_depth: metadata_verified
+- id: model-clocs-2021
+  title: 'CLOCS: Contrastive Learning of Cardiac Signals across Space, Time, and Patients'
+  short_name: CLOCS
+  year: 2021
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: ecg-cardiac-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Uses spatial, temporal and patient-level contrastive views to pretrain cardiac-signal representations.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.mlr.press/v139/kiyasseh21a.html
+  code_url: https://github.com/danikiyasseh/CLOCS
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - ecg-cardiac-foundation-models
+  - foundation-model
+  evidence_depth: metadata_verified
+- id: model-cbramod-2025
+  title: A Criss-Cross Brain Foundation Model for EEG Decoding
+  short_name: CBraMod
+  year: 2025
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  body_locations: []
+  clinical_domains:
+  - neurology
+  - brain-computer-interface
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Introduces criss-cross spatiotemporal modelling for general EEG representation and decoding.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=NPNUHgHF2w
+  code_url: https://github.com/wjq-learning/CBraMod
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - brain-computer-interface
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  evidence_depth: metadata_verified
+- id: model-brainomni-2025
+  title: 'BrainOmni: A Brain Foundation Model for Unified EEG and MEG Signals'
+  short_name: BrainOmni
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - meg
+  body_locations: []
+  clinical_domains:
+  - neurology
+  - brain-computer-interface
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Builds a unified brain-signal foundation model across EEG and MEG acquisition settings.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2505.18185
+  code_url: https://github.com/OpenTSLab/BrainOmni
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - brain-computer-interface
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - meg
+  - neurology
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-eeg-language-2025
+  title: EEG-Language Pretraining for Highly Label-Efficient Clinical Phenotyping
+  short_name: ELM
+  year: 2025
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - text
+  body_locations: []
+  clinical_domains:
+  - neurology
+  - clinical-phenotyping
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Aligns EEG and clinical language representations to improve label-efficient clinical phenotyping.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=yaI2ZYFmeD
+  code_url: https://github.com/SamGijsen/ELM
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - clinical-phenotyping
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  - text
+  evidence_depth: metadata_verified
+- id: model-luna-eeg-2025
+  title: 'LUNA: Efficient and Topology-Agnostic Foundation Model for EEG Signal Analysis'
+  short_name: LUNA
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  body_locations: []
+  clinical_domains:
+  - neurology
+  - brain-computer-interface
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Proposes an efficient topology-agnostic EEG foundation model intended to tolerate heterogeneous
+    electrode layouts.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/66969a9e6bd7a26dfeccea7227178ca7-Abstract-Conference.html
+  code_url: https://github.com/pulp-bio/biofoundation
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - brain-computer-interface
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  evidence_depth: metadata_verified
+  doi: 10.52202/085713-2377
+  source_note: Official NeurIPS proceedings page and abstract-level metadata checked; full risk-of-bias or independent
+    replication assessment is not implied.
+- id: model-neuript-2025
+  title: 'NeurIPT: Foundation Model for Neural Interfaces'
+  short_name: NeurIPT
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - neural-signals
+  body_locations: []
+  clinical_domains:
+  - neural-interface
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Develops a transferable foundation model targeted at neural-interface signal decoding.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/dd9c5ce8803e1898d438e636fbae0236-Abstract-Conference.html
+  code_url: https://github.com/ZzzitaoFang/NeurIPT
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neural-interface
+  - neural-signals
+  evidence_depth: metadata_verified
+  doi: 10.52202/085713-5043
+  source_note: Official NeurIPS proceedings page and abstract-level metadata checked; full risk-of-bias or independent
+    replication assessment is not implied.
+- id: model-neurolm-2025
+  title: 'NeuroLM: A Universal Multi-task Foundation Model for Bridging the Gap between Language and EEG Signals'
+  short_name: NeuroLM
+  year: 2025
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - text
+  body_locations: []
+  clinical_domains:
+  - neurology
+  - sensor-language
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Builds a universal multi-task model that connects EEG representations with language modelling.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=Io9yFt7XH7
+  code_url: https://github.com/935963004/NeuroLM
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  - sensor-language
+  - text
+  evidence_depth: metadata_verified
+- id: model-eeg-distiller-2025
+  title: Pre-Training Graph Contrastive Masked Autoencoders Are Strong Distillers for EEG
+  short_name: EEG DisGCMAE
+  year: 2025
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  body_locations: []
+  clinical_domains:
+  - neurology
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Uses graph contrastive masked pretraining to distil compact EEG representations.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=YKfJFTiRz8
+  code_url: https://github.com/weixinxu666/EEG_DisGCMAE
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  evidence_depth: metadata_verified
+- id: model-reve-2025
+  title: 'REVE: A Foundation Model for EEG - Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects'
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  body_locations:
+  - scalp
+  clinical_domains:
+  - neurology
+  - sleep
+  - brain-computer-interface
+  populations:
+  - eeg-study-participants
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: large-scale self-supervised pretraining with multi-dataset downstream evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Pretrains a topology-flexible EEG foundation model on more than 60,000 hours from 92 datasets and
+    approximately 25,000 subjects, then evaluates transfer across ten EEG tasks.
+  why_it_matters: Directly addresses electrode-layout, dataset and protocol heterogeneity, a central obstacle to
+    reusable EEG representations.
+  limitations: Reported transfer is limited to the evaluated EEG corpora and tasks; clinical utility, demographic
+    robustness and prospective deployment were not established by the conference study.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/20a917f77773ac0fa8bea2bdd6606b66-Abstract-Conference.html
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cross-dataset
+  - eeg-neural-foundation-models
+  - foundation-model
+  - model
+  - topology-agnostic
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/Dynamical-Systems-Lab/REVE
+  short_name: REVE
+- id: model-belt2-2024
+  title: 'BELT-2: Bootstrapping EEG-to-Language Representation Alignment for Multi-Task Brain Decoding'
+  short_name: BELT-2
+  year: 2024
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - text
+  body_locations: []
+  clinical_domains:
+  - brain-decoding
+  - sensor-language
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Aligns EEG and language representations with byte-pair-level modelling for multi-task brain decoding.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=gp5dPMBzMH
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - brain-decoding
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - sensor-language
+  - text
+  evidence_depth: metadata_verified
+- id: model-labram-2024
+  title: Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI
+  short_name: LaBraM
+  year: 2024
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  body_locations: []
+  clinical_domains:
+  - brain-computer-interface
+  - neurology
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains a large brain model on heterogeneous EEG data for broad BCI transfer.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=QzTpTRVtrP
+  code_url: https://github.com/935963004/LaBraM
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - brain-computer-interface
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  evidence_depth: metadata_verified
+- id: model-neurogpt-2024
+  title: 'Neuro-GPT: Towards a Foundation Model for EEG'
+  short_name: Neuro-GPT
+  year: 2024
+  venue: ISBI
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  body_locations: []
+  clinical_domains:
+  - neurology
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Explores generative pretraining for transferable EEG representation learning.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2311.03764
+  code_url: https://github.com/wenhui0206/NeuroGPT
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-brant-2023
+  title: 'Brant: Foundation Model for Intracranial Neural Signal'
+  short_name: Brant
+  year: 2023
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ieeg
+  body_locations: []
+  clinical_domains:
+  - neural-interface
+  - neurology
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains a foundation model for heterogeneous intracranial neural recordings.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2023/hash/535915d26859036410b0533804cee788-Abstract-Conference.html
+  code_url: https://zju-brainnet.github.io/Brant.github.io/
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - eeg-neural-foundation-models
+  - foundation-model
+  - ieeg
+  - neural-interface
+  - neurology
+  evidence_depth: metadata_verified
+- id: model-geometry-aware-eeg-2023
+  title: Learning Topology-Agnostic EEG Representations with Geometry-Aware Modeling
+  short_name: MMM
+  year: 2023
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  body_locations: []
+  clinical_domains:
+  - neurology
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Learns geometry-aware EEG representations designed to transfer across electrode topologies.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=hiOUySN0ub
+  code_url: https://seqml.github.io/MMM/
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  evidence_depth: metadata_verified
+- id: model-bendr-2021
+  title: 'BENDR: Using Transformers and a Contrastive Self-Supervised Learning Task to Learn from Massive Amounts
+    of EEG Data'
+  short_name: BENDR
+  year: 2021
+  venue: Frontiers in Human Neuroscience
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: eeg-neural-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  body_locations: []
+  clinical_domains:
+  - neurology
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Applies transformer-based contrastive self-supervision to large EEG collections for downstream transfer.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.3389/fnhum.2021.653659
+  code_url: https://github.com/SPOClab-ca/BENDR
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - eeg-neural-foundation-models
+  - foundation-model
+  - neurology
+  evidence_depth: metadata_verified
+- id: model-wearable-optomyography-2026
+  title: Wearable Optomyography Enables Continuous Neuroprosthetic Control
+  short_name: Wearable Optomyography Control
+  year: 2026
+  venue: Scientific Reports
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: emg-neuromotor-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - optomyography
+  body_locations:
+  - forearm
+  clinical_domains:
+  - neuroprosthetics
+  - human-machine-interface
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed model, representation-learning or wearable-system evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Evaluates a wearable optical muscle-sensing interface for continuous decoding and neuroprosthetic
+    control rather than discrete gesture classification alone.
+  why_it_matters: Broadens neuromotor sensing beyond surface EMG and highlights continuous control as a distinct
+    evaluation problem for wearable interfaces.
+  limitations: The evidence concerns technical decoding and control performance; participant diversity, long-duration
+    stability and clinical benefit require further validation.
+  evidence_boundary: This record supports a representation, recognition, sensing or control-system claim under the
+    reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability
+    or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41598-025-32646-y
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - continuous-control
+  - emg-neuromotor-models
+  - model
+  - neuroprosthetics
+  - optomyography
+  source_note: Primary journal or conference page and abstract-level metadata checked; detailed performance claims
+    require consulting the original article.
+  doi: 10.1038/s41598-025-32646-y
+- id: model-generic-neuromotor-interface-2025
+  title: A Generic Noninvasive Neuromotor Interface for Human-Computer Interaction
+  short_name: Generic Neuromotor Interface
+  year: 2025
+  venue: Nature
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: emg-neuromotor-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - emg
+  body_locations: []
+  clinical_domains:
+  - neuromuscular
+  - human-computer-interaction
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Develops a general noninvasive EMG interface trained across users and tasks for broad human-computer
+    interaction.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41586-025-09255-w
+  code_url: https://github.com/facebookresearch/generic-neuromotor-interface
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - emg
+  - emg-neuromotor-models
+  - foundation-model
+  - human-computer-interaction
+  - neuromotor-interface
+  - neuromuscular
+  evidence_depth: metadata_verified
+- id: model-hybrid-emg-eeg-rehab-2025
+  title: A Hybrid EMG–EEG Interface for Robust Intention Detection and Fatigue-Adaptive Control of an Elbow Rehabilitation
+    Robot
+  short_name: Hybrid EMG–EEG Rehab Interface
+  year: 2025
+  venue: Scientific Reports
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: emg-neuromotor-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - emg
+  - eeg
+  body_locations:
+  - upper-limb
+  - scalp
+  clinical_domains:
+  - rehabilitation
+  - neuromuscular
+  - human-robot-interaction
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed model, representation-learning or wearable-system evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Combines peripheral EMG and central EEG to detect movement intention and adapt control when muscle
+    fatigue degrades EMG-only recognition.
+  why_it_matters: Illustrates multimodal wearable control that explicitly models a failure mode—fatigue—rather than
+    assuming stationary sensor quality.
+  limitations: The study is a technical evaluation with limited tasks and populations; it does not establish rehabilitation
+    effectiveness, long-term safety or home deployment robustness.
+  evidence_boundary: This record supports a representation, recognition, sensing or control-system claim under the
+    reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability
+    or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41598-025-24831-w
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - adaptive-control
+  - eeg
+  - emg
+  - emg-neuromotor-models
+  - model
+  - rehabilitation-robot
+  source_note: Primary journal or conference page and abstract-level metadata checked; detailed performance claims
+    require consulting the original article.
+  doi: 10.1038/s41598-025-24831-w
+- id: model-timesfm3-2026
+  title: 'TimesFM-3: A Zero-Shot Foundation Model for Multivariate Forecasting'
+  short_name: TimesFM-3
+  year: 2026
+  venue: Google Research
+  venue_type: technical_report
+  venue_tier: big_tech_report
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: big_tech_official_report
+  modalities:
+  - multivariate-time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Introduces a 330M-parameter multivariate zero-shot forecasting model pretrained on more than one
+    trillion real and synthetic time points.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/
+  code_url: https://github.com/google-research/timesfm
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - multivariate-time-series
+  evidence_depth: metadata_verified
+- id: model-chattime-2025
+  title: 'ChatTime: A Unified Multimodal Time Series Foundation Model Bridging Numerical and Textual Data'
+  short_name: ChatTime
+  year: 2025
+  venue: AAAI
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  - text
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - sensor-language
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Links numerical time series with textual context in a general foundation-model framework.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2412.11376
+  code_url: https://github.com/ForestsKing/ChatTime
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - sensor-language
+  - text
+  - time-series
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-mira-medical-ts-2025
+  title: 'MIRA: Medical Time Series Foundation Model for Real-World Health Data'
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - medical-time-series
+  body_locations: []
+  clinical_domains:
+  - clinical-forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Develops a continuous-time medical time-series foundation model pretrained on a heterogeneous corpus
+    reported to contain more than 454 billion time points.
+  why_it_matters: Its treatment of irregular intervals, heterogeneous sampling and missingness is relevant to longitudinal
+    wearable-health streams even though the paper is not wearable-specific.
+  limitations: The primary focus is medical forecasting rather than raw wearable sensing; transfer to free-living
+    consumer devices requires direct evaluation.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/8e12ba543adc673da5b89c9311fcf72c-Abstract-Conference.html
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - irregular-time-series
+  - model
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/microsoft/MIRA
+  short_name: MIRA
+- id: model-sempo-2025
+  title: 'SEMPO: Lightweight Foundation Models for Time Series Forecasting'
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Develops a lightweight spectral and prompt-mixture foundation model for zero- and few-shot time-series
+    forecasting.
+  why_it_matters: Its focus on model and data efficiency is relevant to wearable and edge settings where foundation-model
+    cost is a limiting factor.
+  limitations: The reported benchmarks are general forecasting datasets; wearable physiological validity must be
+    demonstrated separately.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/ecfb69ce6be017deb5a926c2718f6bc1-Abstract-Conference.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - lightweight
+  - model
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/mala-lab/SEMPO
+  short_name: SEMPO
+- id: model-time-moe-2025
+  title: 'Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts'
+  short_name: Time-MoE
+  year: 2025
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Scales time-series pretraining with a mixture-of-experts architecture and large token corpora.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=e1wDDFmlVu
+  code_url: https://github.com/Time-MoE/Time-MoE
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-timepfn-2025
+  title: 'TimePFN: Effective Multivariate Time Series Forecasting with Synthetic Data'
+  short_name: TimePFN
+  year: 2025
+  venue: AAAI
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - synthetic-data
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Uses prior-data-fitted-network training on synthetic processes for zero-shot multivariate forecasting.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2502.16294
+  code_url: https://github.com/egetaga/TimePFN
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - synthetic-data
+  - time-series
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-timer-xl-2025
+  title: 'Timer-XL: Long-Context Transformers for Unified Time Series Forecasting'
+  short_name: Timer-XL
+  year: 2025
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Extends autoregressive time-series modelling to long-context and multivariate forecasting settings.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=KMCJXjlDDr
+  code_url: https://github.com/thuml/Large-Time-Series-Model
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-timesfm-2024
+  title: A Decoder-Only Foundation Model for Time-Series Forecasting
+  short_name: TimesFM
+  year: 2024
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Introduces decoder-only large-scale pretraining for zero-shot time-series forecasting.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.mlr.press/v235/das24m.html
+  code_url: https://github.com/google-research/timesfm
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-chronos-2024
+  title: 'Chronos: Learning the Language of Time Series'
+  short_name: Chronos
+  year: 2024
+  venue: Transactions on Machine Learning Research
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Tokenizes numerical time series and trains language-model-style probabilistic forecasters.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=gerNCVqqtR
+  code_url: https://github.com/amazon-science/chronos-forecasting
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-gtt-2024
+  title: 'General Time Transformer: An Encoder-Decoder Foundation Model for Most Time Series Analysis Tasks'
+  short_name: GTT
+  year: 2024
+  venue: CIKM
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - classification
+  - imputation
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Builds an encoder-decoder foundation model intended to span several time-series analysis tasks.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1145/3627673.3679931
+  code_url: https://github.com/cfeng783/GTT
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - classification
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - imputation
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-moment-2024
+  title: 'MOMENT: A Family of Open Time-Series Foundation Models'
+  short_name: MOMENT
+  year: 2024
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - classification
+  - imputation
+  - anomaly-detection
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Provides open pretrained time-series models and a multi-task evaluation framework relevant to sensor
+    transfer.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.mlr.press/v235/goswami24a.html
+  code_url: https://github.com/moment-timeseries-foundation-model/moment
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - anomaly-detection
+  - classification
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - imputation
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-test-2024
+  title: 'TEST: Text Prototype Aligned Embedding to Activate LLM Ability for Time Series'
+  short_name: TEST
+  year: 2024
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  - text
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - classification
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Aligns time-series embeddings with textual prototypes to reuse frozen language-model representations.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=Tuh4nZVb0g
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - classification
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - text
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-time-ffm-2024
+  title: 'Time-FFM: Towards LM-Empowered Federated Foundation Model for Time Series Forecasting'
+  short_name: Time-FFM
+  year: 2024
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - federated-learning
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Studies federated foundation-model learning for time-series forecasting across distributed data
+    holders.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2405.14252
+  code_url: https://github.com/yuppielqx/Time-FFM
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - federated-learning
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - time-series
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-time-llm-2024
+  title: 'Time-LLM: Time Series Forecasting by Reprogramming Large Language Models'
+  short_name: Time-LLM
+  year: 2024
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  - text
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Reprograms frozen large language models for time-series forecasting through prototype and prompt
+    alignment.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=Unb5CVPtae
+  code_url: https://github.com/KimMeen/Time-LLM
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - text
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-timer-2024
+  title: 'Timer: Generative Pre-Trained Transformers Are Large Time Series Models'
+  short_name: Timer
+  year: 2024
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - imputation
+  - anomaly-detection
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Applies generative autoregressive pretraining to unified time-series modelling.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.mlr.press/v235/liu24cb.html
+  code_url: https://github.com/thuml/Large-Time-Series-Model
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - anomaly-detection
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - imputation
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-ttm-2024
+  title: 'Tiny Time Mixers: Fast Pre-Trained Models for Enhanced Zero/Few-Shot Forecasting of Multivariate Time
+    Series'
+  short_name: TinyTimeMixer
+  year: 2024
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - edge-ai
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Provides compact pretrained forecasting models that are practical for constrained and edge-adjacent
+    deployment.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2401.03955
+  code_url: https://github.com/ibm-granite/granite-tsfm
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - edge-ai
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - time-series
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-moirai-2024
+  title: Unified Training of Universal Time Series Forecasting Transformers
+  short_name: Moirai
+  year: 2024
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains a universal forecasting transformer over diverse time-series domains.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.mlr.press/v235/woo24a.html
+  code_url: https://github.com/SalesforceAIResearch/uni2ts
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-units-2024
+  title: 'UniTS: Building a Unified Time Series Model'
+  short_name: UniTS
+  year: 2024
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - classification
+  - imputation
+  - anomaly-detection
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Unifies forecasting, classification, imputation and anomaly detection in one time-series model.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2403.00131
+  code_url: https://github.com/mims-harvard/UniTS
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - anomaly-detection
+  - classification
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - imputation
+  - time-series
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-patchtst-2023
+  title: 'A Time Series Is Worth 64 Words: Long-Term Forecasting with Transformers'
+  short_name: PatchTST
+  year: 2023
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - representation-learning
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Introduces channel-independent patch tokenization that became a common backbone for time-series
+    and sensor modelling.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=Jbdc0vTOcol
+  code_url: https://github.com/yuqinie98/PatchTST
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - representation-learning
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-one-fits-all-2023
+  title: 'One Fits All: Power General Time Series Analysis by Pretrained Language Model'
+  short_name: GPT4TS
+  year: 2023
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  - text
+  body_locations: []
+  clinical_domains:
+  - forecasting
+  - classification
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Adapts pretrained language models to multiple time-series tasks through a shared representation
+    interface.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2023/hash/86c17de05579cde52025f9984e6e2ebb-Abstract-Conference.html
+  code_url: https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - classification
+  - forecasting
+  - foundation-model
+  - general-time-series-enablers
+  - text
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-ts2vec-2022
+  title: 'TS2Vec: Towards Universal Representation of Time Series'
+  short_name: TS2Vec
+  year: 2022
+  venue: AAAI
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - representation-learning
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Learns hierarchical contrastive time-series representations that are widely used as a transferable
+    baseline for sensor data.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://ojs.aaai.org/index.php/AAAI/article/view/20881
+  code_url: https://github.com/yuezhihan/ts2vec
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - general-time-series-enablers
+  - representation-learning
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-tnc-2021
+  title: Unsupervised Representation Learning for Time Series with Temporal Neighborhood Coding
+  short_name: TNC
+  year: 2021
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: general-time-series-enablers
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - time-series
+  body_locations: []
+  clinical_domains:
+  - representation-learning
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Defines temporal neighborhoods for unsupervised representation learning and is frequently applicable
+    to wearable time series.
+  why_it_matters: Provides a general time-series backbone or adaptation strategy that can be evaluated on wearable
+    and physiological data without assuming modality-specific pretraining.
+  limitations: The model was not developed specifically for wearable physiology; inclusion records transfer potential
+    and benchmark relevance, not demonstrated wearable superiority.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=8qDwejCuCN
+  code_url: https://github.com/sanatonek/TNC_representation_learning
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - general-time-series-enablers
+  - representation-learning
+  - time-series
+  evidence_depth: metadata_verified
+- id: model-senflow-2026
+  title: High-Performance Self-Supervised Learning by Joint Training of Flow Matching
+  year: 2026
+  venue: AISTATS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - wearable-sensors
+  body_locations: []
+  clinical_domains:
+  - human-activity-recognition
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Introduces a flow-matching sensor foundation model that jointly learns representations and conditional
+    generation on wearable sensor datasets.
+  why_it_matters: Connects efficient generative modeling with reusable wearable representations and reports substantially
+    faster training and inference than the diffusion comparator.
+  limitations: Evidence is based on five downstream datasets and does not establish population-scale health transfer
+    or clinical effectiveness.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.mlr.press/v300/ukita26a.html
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - flow-matching
+  - generative-model
+  - model
+  - motion-imu-foundation-models
+  - self-supervised-learning
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  code_url: https://github.com/Okita-Laboratory/SenFlow
+  short_name: SenFlow
+- id: model-behavioral-fm-2025
+  title: 'Beyond Sensor Data: Foundation Models of Behavioral Data from Wearables Improve Health Predictions'
+  short_name: Behavioral Wearable FM
+  year: 2025
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - activity-summary
+  - sleep
+  - heart-rate
+  body_locations: []
+  clinical_domains:
+  - disease-risk
+  - behavior
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Shows that foundation models over derived longitudinal wearable behaviors can improve health prediction
+    beyond raw-sensor-only framing.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=DtVVltU1ak
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - activity-summary
+  - behavior
+  - disease-risk
+  - foundation-model
+  - heart-rate
+  - motion-imu-foundation-models
+  - sleep
+  evidence_depth: metadata_verified
+- id: model-mopformer-2025
+  title: 'MoPFormer: Motion-Primitive Transformer for Wearable-Sensor Activity Recognition'
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - gyroscope
+  - imu
+  body_locations:
+  - multi-position
+  clinical_domains:
+  - human-activity-recognition
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Tokenizes IMU streams into discrete motion primitives and pretrains a masked-motion transformer
+    evaluated on six HAR benchmarks and cross-dataset transfer.
+  why_it_matters: Provides an interpretable discrete vocabulary for motion and explicitly evaluates cross-dataset
+    generalization.
+  limitations: Evaluation remains concentrated on activity-recognition benchmarks; robustness to long-duration free-living
+    health prediction and unseen devices is not established.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/37ecb317d11004f77defbca54ef3b928-Abstract-Conference.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cross-dataset
+  - masked-modeling
+  - model
+  - motion-imu-foundation-models
+  - motion-tokenization
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  short_name: MoPFormer
+- id: model-relcon-2025
+  title: 'RelCon: Relative Contrastive Learning for a Motion Foundation Model for Wearable Data'
+  short_name: RelCon
+  year: 2025
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - imu
+  body_locations: []
+  clinical_domains:
+  - human-activity
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Learns relative motion representations for transfer across wearable activity-recognition settings.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=k2uUeLCrQq
+  code_url: https://github.com/maxxu05/relcon
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - accelerometer
+  - foundation-model
+  - human-activity
+  - imu
+  - motion-imu-foundation-models
+  evidence_depth: metadata_verified
+- id: model-full-body-haptic-network-2025
+  title: Wearable Interactive Full-Body Motion Tracking and Haptic Feedback Network Systems with Deep Learning
+  short_name: Full-Body Motion–Haptic Network
+  year: 2025
+  venue: Nature Communications
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - motion-sensors
+  - haptics
+  body_locations:
+  - full-body
+  clinical_domains:
+  - human-machine-interaction
+  - rehabilitation
+  - extended-reality
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed model, representation-learning or wearable-system evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Integrates distributed wearable motion tracking, deep-learning-based interpretation and haptic feedback
+    into an interactive full-body network.
+  why_it_matters: Represents the broader sensor–inference–feedback loop that Wearable AI must cover beyond passive
+    recognition and health-risk prediction.
+  limitations: System demonstrations do not establish effectiveness for a clinical indication, and robustness, comfort,
+    calibration and long-term use remain deployment-specific.
+  evidence_boundary: This record supports a representation, recognition, sensing or control-system claim under the
+    reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability
+    or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41467-025-63644-3
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - closed-loop-interface
+  - full-body
+  - haptic-feedback
+  - model
+  - motion-imu-foundation-models
+  - motion-tracking
+  source_note: Primary journal or conference page and abstract-level metadata checked; detailed performance claims
+    require consulting the original article.
+  doi: 10.1038/s41467-025-63644-3
+- id: model-crosshar-2024
+  title: 'CrossHAR: Generalizing Cross-Dataset Human Activity Recognition via Hierarchical Self-Supervised Pretraining'
+  short_name: CrossHAR
+  year: 2024
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - accelerometer
+  body_locations:
+  - wearable-multiple
+  clinical_domains:
+  - human-activity
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed model, representation-learning or wearable-system evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Develops hierarchical self-supervised pretraining for cross-dataset activity recognition under heterogeneous
+    sensor and label conditions.
+  why_it_matters: Provides a directly relevant benchmark point for evaluating whether wearable representations transfer
+    beyond a single curated dataset.
+  limitations: Transfer remains constrained by overlap in activities, devices, placements and population characteristics,
+    and does not imply universal zero-shot recognition.
+  evidence_boundary: This record supports a representation, recognition, sensing or control-system claim under the
+    reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability
+    or regulatory readiness.
+  primary_url: https://dl.acm.org/doi/10.1145/3659597
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - cross-dataset
+  - har
+  - imu
+  - model
+  - motion-imu-foundation-models
+  - self-supervised
+  source_note: Bibliographic and venue metadata checked against the ACM DOI page and a curated IMU-generalization
+    survey; full experimental audit remains pending.
+  doi: 10.1145/3659597
+- id: model-goat-har-2024
+  title: 'GOAT: A Generalized Cross-Dataset Activity Recognition Framework with Natural Language Supervision'
+  short_name: GOAT
+  year: 2024
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - accelerometer
+  body_locations:
+  - wearable-multiple
+  clinical_domains:
+  - human-activity
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed model, representation-learning or wearable-system evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Uses natural-language supervision to align heterogeneous activity label spaces and improve cross-dataset
+    wearable activity recognition.
+  why_it_matters: Addresses semantic incompatibility across HAR datasets, a major obstacle to reusable sensor models
+    and foundation-model evaluation.
+  limitations: Generalization is bounded by the selected datasets, label descriptions, sensor placements and activity
+    ontologies; language supervision does not remove domain shift.
+  evidence_boundary: This record supports a representation, recognition, sensing or control-system claim under the
+    reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability
+    or regulatory readiness.
+  primary_url: https://dl.acm.org/doi/10.1145/3699736
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - cross-dataset
+  - har
+  - imu
+  - model
+  - motion-imu-foundation-models
+  - natural-language-supervision
+  source_note: Bibliographic and venue metadata checked against the ACM DOI page and a curated IMU-generalization
+    survey; full experimental audit remains pending.
+  doi: 10.1145/3699736
+- id: model-ssl-wearables-700k-days-2024
+  title: Self-Supervised Learning for Human Activity Recognition Using 700,000 Person-Days of Wearable Data
+  short_name: SSL-Wearables
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations: []
+  clinical_domains:
+  - human-activity
+  - population-health
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Pretrains accelerometer representations using approximately 700,000 person-days and evaluates label-efficient
+    activity recognition.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41746-024-01062-3
+  code_url: https://github.com/OxWearables/ssl-wearables
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - accelerometer
+  - foundation-model
+  - human-activity
+  - motion-imu-foundation-models
+  - population-health
+  evidence_depth: metadata_verified
+- id: model-selfpab-2024
+  title: 'SelfPAB: Large-Scale Pre-Training on Accelerometer Data for Human Activity Recognition'
+  short_name: SelfPAB
+  year: 2024
+  venue: Applied Intelligence
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  body_locations: []
+  clinical_domains:
+  - human-activity
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Uses large-scale accelerometer pretraining to improve downstream human activity recognition.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1007/s10489-024-05322-3
+  code_url: https://github.com/ntnu-ai-lab/SelfPAB
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - accelerometer
+  - foundation-model
+  - human-activity
+  - motion-imu-foundation-models
+  evidence_depth: metadata_verified
+- id: model-unimts-2024
+  title: 'UniMTS: Unified Pre-training for Motion Time Series'
+  year: 2024
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - accelerometer
+  - gyroscope
+  body_locations:
+  - multi-position
+  clinical_domains:
+  - human-activity-recognition
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Develops unified pretraining for heterogeneous motion time series and evaluates transfer across
+    motion-sensing tasks and configurations.
+  why_it_matters: Targets sensor-, position- and task-level heterogeneity that limits reusable IMU models.
+  limitations: The conference evaluation does not establish generality to all wearable devices, very long free-living
+    recordings or clinical outcomes.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2024/hash/c290d4373c495b2cad0625d6288260f0-Abstract-Conference.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cross-device
+  - model
+  - motion-imu-foundation-models
+  - motion-time-series
+  - unified-pretraining
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  short_name: UniMTS
+- id: model-apple-wafm-2024
+  title: Wearable Accelerometer Foundation Models for Health via Knowledge Distillation
+  short_name: Apple WAFM
+  year: 2024
+  venue: Apple Machine Learning Research
+  venue_type: technical_report
+  venue_tier: big_tech_report
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: big_tech_official_report
+  modalities:
+  - accelerometer
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - health-prediction
+  - human-activity
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Distils representations from paired accelerometry and photoplethysmography at large participant
+    scale for health and activity tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://machinelearning.apple.com/research/wearable-accelerometer-foundation-models
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - accelerometer
+  - foundation-model
+  - health-prediction
+  - human-activity
+  - motion-imu-foundation-models
+  - ppg
+  evidence_depth: metadata_verified
+- id: model-collossl-2022
+  title: 'ColloSSL: Collaborative Self-Supervised Learning for Human Activity Recognition'
+  short_name: ColloSSL
+  year: 2022
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: motion-imu-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - accelerometer
+  body_locations:
+  - wearable-multiple
+  clinical_domains:
+  - human-activity
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed model, representation-learning or wearable-system evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Uses synchronized signals from multiple wearable devices as natural supervision for self-supervised
+    activity representation learning.
+  why_it_matters: Shows how cross-device co-occurrence can supply supervision without manual labels and motivates
+    multi-device pretraining strategies.
+  limitations: The method assumes access to collaborative or synchronized devices during pretraining and its transfer
+    depends on sensor configuration and task similarity.
+  evidence_boundary: This record supports a representation, recognition, sensing or control-system claim under the
+    reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability
+    or regulatory readiness.
+  primary_url: https://dl.acm.org/doi/10.1145/3517246
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: review_reference_checked
+  evidence_depth: venue_verified
+  verified_on: '2026-09-02'
+  tags:
+  - cross-device
+  - har
+  - imu
+  - model
+  - motion-imu-foundation-models
+  - self-supervised
+  source_note: Bibliographic and venue metadata checked against the ACM DOI page and a curated IMU-generalization
+    survey; full experimental audit remains pending.
+  doi: 10.1145/3517246
+- id: model-insulin-resistance-wearables-2026
+  title: Insulin Resistance Prediction from Wearables and Routine Blood Biomarkers
+  short_name: IR-Prediction
+  year: 2026
+  venue: Nature
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - wearable-summary
+  - blood-biomarkers
+  body_locations: []
+  clinical_domains:
+  - metabolic
+  - diabetes
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Combines consumer-wearable measurements with routine blood biomarkers to predict insulin resistance
+    at population scale.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41586-026-10179-2
+  code_url: https://github.com/Google-Health/consumer-health-research/tree/main/insulin_resistance_prediction
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - blood-biomarkers
+  - diabetes
+  - foundation-model
+  - metabolic
+  - multimodal-physiological-models
+  - wearable-summary
+  evidence_depth: metadata_verified
+- id: model-physiojepa-2026
+  title: 'PhysioJEPA: Joint Embedding Representations of Physiological Signals for Real Time Risk Estimation in
+    the Intensive Care Unit'
+  year: 2026
+  venue: CHIL
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - ppg
+  - arterial-blood-pressure
+  body_locations:
+  - clinical-monitoring
+  clinical_domains:
+  - critical-care
+  populations:
+  - icu-patients
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: retrospective
+  causal_status: not-causal
+  contribution: Pretrains a joint-embedding predictive architecture on ECG, photoplethysmography and arterial blood
+    pressure waveforms for short-horizon ICU risk estimation.
+  why_it_matters: Provides a recent multi-waveform JEPA design relevant to continuous physiological monitoring and
+    representation reuse.
+  limitations: Data originate from bedside ICU monitors rather than consumer wearables, and the study does not establish
+    prospective clinical utility.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.mlr.press/v297/fox26a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - jepa
+  - model
+  - multimodal-physiological-models
+  - multimodal-waveforms
+  - risk-prediction
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  short_name: PhysioJEPA
+- id: model-normwear-2026
+  title: Toward Foundation Models for Multivariate Wearable Sensing of Physiological Signals
+  short_name: NormWear
+  year: 2026
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - ppg
+  - eeg
+  - eda
+  - imu
+  - emg
+  body_locations: []
+  clinical_domains:
+  - general-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Builds a multivariate physiological foundation-model framework spanning heterogeneous biosignal
+    modalities and datasets.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1145/3803808
+  code_url: https://github.com/Mobile-Sensing-and-UbiComp-Laboratory/NormWear
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - eda
+  - eeg
+  - emg
+  - foundation-model
+  - general-health
+  - imu
+  - multimodal-physiological-models
+  - ppg
+  evidence_depth: metadata_verified
+- id: model-sensorfm-2026
+  title: Towards a General Intelligence and Interface for Wearable Health Data
+  short_name: SensorFM
+  year: 2026
+  venue: Google Research
+  venue_type: technical_report
+  venue_tier: big_tech_report
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: big_tech_official_report
+  modalities:
+  - ppg
+  - accelerometer
+  - eda
+  - skin-temperature
+  - barometer
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - metabolic
+  - sleep
+  - mental-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains a large sensor foundation model on more than one trillion minutes from five million consented
+    participants and evaluates transfer across 35 health tasks, label-efficient adaptation, infilling and agent
+    grounding.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - accelerometer
+  - barometer
+  - cardiovascular
+  - eda
+  - foundation-model
+  - mental-health
+  - metabolic
+  - multimodal-physiological-models
+  - ppg
+  - skin-temperature
+  - sleep
+  evidence_depth: metadata_verified
+- id: model-personalized-physio-adaptation-2025
+  title: Efficient Personalized Adaptation for Physiological Signal Foundation Models
+  short_name: Personalized Physiological FM Adaptation
+  year: 2025
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - physiological-signals
+  body_locations: []
+  clinical_domains:
+  - personalization
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Studies parameter-efficient personalized adaptation of physiological foundation models, including
+    generated adaptation parameters.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=55ysNwbOTI
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - multimodal-physiological-models
+  - personalization
+  - physiological-signals
+  evidence_depth: metadata_verified
+- id: model-physiowave-2025
+  title: 'PhysioWave: A Multi-Scale Wavelet-Transformer for Physiological Signal Representation'
+  short_name: PhysioWave
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - emg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - neuromuscular
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Combines multi-scale wavelet representations with transformers for transferable physiological-signal
+    representation learning.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2506.10351
+  code_url: https://github.com/ForeverBlue816/PhysioWave
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - emg
+  - foundation-model
+  - multimodal-physiological-models
+  - neuromuscular
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-qoq-med-2025
+  title: 'QoQ-Med: Building Multimodal Clinical Foundation Models with Domain-Aware GRPO Training'
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - medical-images
+  - medical-time-series
+  - text
+  body_locations: []
+  clinical_domains:
+  - clinical-reasoning
+  populations:
+  - general-population
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: prediction
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Builds an open multimodal clinical foundation model that jointly reasons over medical images, time-series
+    signals and text reports.
+  why_it_matters: Provides a cross-domain architecture for integrating waveform-like signals with clinical context
+    and language.
+  limitations: The model is a broad clinical assistant rather than a wearable-native model; reported diagnostic
+    benchmark performance does not establish prospective utility.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/359ffa88712bd688963a0ca641d8330b-Abstract-Conference.html
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - clinical-foundation-model
+  - model
+  - multimodal
+  - multimodal-physiological-models
+  - reinforcement-learning
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  short_name: QoQ-Med
+- id: model-large-scale-wearable-biosignals-2024
+  title: Large-Scale Training of Foundation Models for Wearable Biosignals
+  short_name: Wearable Biosignal FM
+  year: 2024
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Evaluates large-scale pretraining for wearable ECG and PPG representations across downstream tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=pC3WJHf51j
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - ecg
+  - foundation-model
+  - multimodal-physiological-models
+  - ppg
+  evidence_depth: metadata_verified
+- id: model-scaling-wearable-foundation-models-2024
+  title: Scaling Wearable Foundation Models
+  short_name: LSM
+  year: 2024
+  venue: Google Research
+  venue_type: technical_report
+  venue_tier: big_tech_report
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: big_tech_official_report
+  modalities:
+  - heart-rate
+  - heart-rate-variability
+  - accelerometer
+  - eda
+  - skin-temperature
+  - barometer
+  body_locations: []
+  clinical_domains:
+  - general-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Studies data and model scaling for multimodal wearable foundation models using tens of millions
+    of hours from more than 165,000 participants.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://research.google/pubs/scaling-wearable-foundation-models/
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - accelerometer
+  - barometer
+  - eda
+  - foundation-model
+  - general-health
+  - heart-rate
+  - heart-rate-variability
+  - multimodal-physiological-models
+  - skin-temperature
+  evidence_depth: metadata_verified
+- id: model-biot-2023
+  title: 'BIOT: Biosignal Transformer for Cross-Data Learning in the Wild'
+  short_name: BIOT
+  year: 2023
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: multimodal-physiological-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - ecg
+  - emg
+  - eog
+  body_locations: []
+  clinical_domains:
+  - general-health
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Introduces a transformer for cross-dataset learning over heterogeneous biosignals collected in real-world
+    settings.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2023/hash/9e1aeb8f0d1c35c6259361c1c17f81f0-Abstract-Conference.html
+  code_url: https://github.com/ycq091044/BIOT
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - eeg
+  - emg
+  - eog
+  - foundation-model
+  - general-health
+  - multimodal-physiological-models
+  evidence_depth: metadata_verified
+- id: model-papagei-2025
+  title: 'PaPaGei: Open Foundation Models for Optical Physiological Signals'
+  short_name: PaPaGei
+  year: 2025
+  venue: ICLR
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: ppg-optical-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - respiratory
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Provides open PPG foundation models pretrained on tens of thousands of hours and evaluated across
+    diverse optical-physiology tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://openreview.net/forum?id=q4cQHRjeW8
+  code_url: https://github.com/Nokia-Bell-Labs/papagei-foundation-model
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - foundation-model
+  - ppg
+  - ppg-optical-foundation-models
+  - respiratory
+  evidence_depth: metadata_verified
+- id: model-pulse-ppg-2025
+  title: 'Pulse-PPG: An Open-Source Field-Trained PPG Foundation Model for Wearable Applications across Lab and
+    Field Settings'
+  short_name: Pulse-PPG
+  year: 2025
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ppg-optical-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  - field-sensing
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains PPG representations using field data and evaluates transfer across laboratory and free-living
+    conditions.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2502.01108
+  code_url: https://github.com/maxxu05/pulseppg
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - field-sensing
+  - foundation-model
+  - ppg
+  - ppg-optical-foundation-models
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-siamquality-2024
+  title: 'SiamQuality: A ConvNet-Based Foundation Model for Photoplethysmography Signals'
+  short_name: SiamQuality
+  year: 2024
+  venue: Physiological Measurement
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: ppg-optical-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  body_locations: []
+  clinical_domains:
+  - signal-quality
+  - cardiovascular
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains a Siamese convolutional model for transferable PPG signal-quality and representation tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1088/1361-6579/ad6747
+  code_url: https://github.com/chengding0713/SiamQuality
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cardiovascular
+  - foundation-model
+  - ppg
+  - ppg-optical-foundation-models
+  - signal-quality
+  evidence_depth: metadata_verified
+- id: model-hear-2024
+  title: Health Acoustic Representations
+  short_name: HeAR
+  year: 2024
+  venue: Google Research
+  venue_type: technical_report
+  venue_tier: big_tech_report
+  record_type: model
+  family: respiratory-acoustic-foundation-models
+  inclusion_basis: big_tech_official_report
+  modalities:
+  - cough-audio
+  - respiratory-audio
+  - health-audio
+  body_locations: []
+  clinical_domains:
+  - respiratory
+  - infectious-disease
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Pretrains a general health-acoustic representation model on hundreds of millions of short audio
+    clips and evaluates transfer across multiple health-audio tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://research.google/blog/health-acoustic-representations/
+  code_url: https://github.com/google-health/health_acoustic_representations
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cough-audio
+  - foundation-model
+  - health-audio
+  - infectious-disease
+  - respiratory
+  - respiratory-acoustic-foundation-models
+  - respiratory-audio
+  evidence_depth: metadata_verified
+- id: model-opera-2024
+  title: 'Towards Open Respiratory Acoustic Foundation Models: Pretraining and Benchmarking'
+  short_name: OPERA
+  year: 2024
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: respiratory-acoustic-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - respiratory-audio
+  - cough-audio
+  body_locations: []
+  clinical_domains:
+  - respiratory
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Builds and benchmarks open respiratory acoustic representations across multiple respiratory-sound
+    tasks.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2406.16148
+  code_url: https://github.com/evelyn0414/OPERA
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cough-audio
+  - foundation-model
+  - respiratory
+  - respiratory-acoustic-foundation-models
+  - respiratory-audio
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-personal-health-insights-agent-2026
+  title: Transforming Wearable Data into Personal Health Insights Using Large Language Model Agents
+  short_name: Personal Health Insights Agent
+  year: 2026
+  venue: Nature Communications
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - activity-summary
+  - sleep
+  - heart-rate
+  - text
+  body_locations: []
+  clinical_domains:
+  - personal-health
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Evaluates an LLM-agent workflow that converts longitudinal wearable summaries and activity events
+    into personal health analyses.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41467-025-67922-y
+  code_url: https://github.com/yahskapar/personal-health-insights-agent
+  open_code: true
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - activity-summary
+  - foundation-model
+  - heart-rate
+  - personal-health
+  - sensor-language-agents
+  - sleep
+  - text
+  evidence_depth: metadata_verified
+- id: model-holollm-2025
+  title: 'HoloLLM: Multisensory Foundation Model for Language-Grounded Human Sensing and Reasoning'
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - lidar
+  - infrared
+  - mmwave-radar
+  - wifi
+  - text
+  body_locations: []
+  clinical_domains:
+  - human-sensing
+  - smart-home
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Aligns LiDAR, infrared, mmWave radar and Wi-Fi sensing with language for human-sensing recognition
+    and reasoning benchmarks.
+  why_it_matters: Expands wearable AI toward privacy-preserving ambient and multisensory human understanding and
+    language-grounded reasoning.
+  limitations: The sensing setup is primarily ambient rather than body-worn, and benchmark gains do not establish
+    health validity or real-world clinical benefit.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/6a5020522b551fb076dcf613ac5e7bed-Abstract-Conference.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - ambient-sensing
+  - model
+  - multisensory
+  - sensor-language
+  - sensor-language-agents
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  short_name: HoloLLM
+- id: model-imuzero-2025
+  title: 'IMUZero: Zero-Shot Human Activity Recognition by Language-Based Cross-Modality Fusion'
+  year: 2025
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - text
+  body_locations: []
+  clinical_domains:
+  - human-activity-recognition
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Uses language-based cross-modal alignment to recognize activity classes without task-specific examples
+    for every target label.
+  why_it_matters: Extends wearable recognition beyond closed label sets and links IMU signals to semantic descriptions.
+  limitations: Zero-shot activity recognition depends on label semantics and benchmark construction; it is not evidence
+    of zero-shot disease diagnosis or causal reasoning.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://doi.org/10.1145/3770669
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cross-modal
+  - model
+  - open-vocabulary
+  - sensor-language-agents
+  - zero-shot
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1145/3770669
+  short_name: IMUZero
+- id: model-lanhar-2025
+  title: Large Language Model-guided Semantic Alignment for Human Activity Recognition
+  year: 2025
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - text
+  body_locations: []
+  clinical_domains:
+  - human-activity-recognition
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Uses LLM-derived semantic structure to align sensor representations and activity concepts across
+    datasets.
+  why_it_matters: Shows how language supervision can support heterogeneous label spaces and cross-dataset wearable
+    recognition.
+  limitations: Semantic alignment performance does not demonstrate clinically valid interpretation, intervention
+    selection or unrestricted open-world reasoning.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://doi.org/10.1145/3770652
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cross-dataset
+  - llm
+  - model
+  - semantic-alignment
+  - sensor-language-agents
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1145/3770652
+  short_name: LanHAR
+- id: model-llm4har-2025
+  title: 'LLM4HAR: Generalizable On-device Human Activity Recognition with Pretrained LLMs'
+  year: 2025
+  venue: KDD
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  body_locations: []
+  clinical_domains:
+  - human-activity-recognition
+  - edge-ai
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Adapts pretrained language-model components for generalizable and resource-aware on-device activity
+    recognition.
+  why_it_matters: Connects cross-dataset HAR with edge deployment constraints rather than assuming cloud-scale inference.
+  limitations: On-device feasibility and HAR accuracy do not establish battery performance across hardware, clinical
+    reliability or safety-critical deployment.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://doi.org/10.1145/3711896.3737226
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - edge-ai
+  - generalization
+  - model
+  - on-device
+  - sensor-language-agents
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1145/3711896.3737226
+  short_name: LLM4HAR
+- id: model-onehar-2025
+  title: 'One Model to Fit Them All: Universal IMU-based Human Activity Recognition with LLM-assisted Cross-dataset
+    Representation'
+  year: 2025
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - text
+  body_locations: []
+  clinical_domains:
+  - human-activity-recognition
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Constructs an LLM-assisted representation intended to support a single IMU activity-recognition
+    model across heterogeneous datasets.
+  why_it_matters: Directly addresses incompatible activity taxonomies and acquisition settings across wearable HAR
+    datasets.
+  limitations: Universality is bounded by the included datasets, sensor channels and label ontology; disease and
+    intervention generalization were not evaluated.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://doi.org/10.1145/3749509
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - cross-dataset
+  - llm-assisted
+  - model
+  - sensor-language-agents
+  - universal-har
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  doi: 10.1145/3749509
+  short_name: oneHAR
+- id: model-sensorlm-2025
+  title: 'SensorLM: Learning the Language of Wearable Sensors'
+  short_name: SensorLM
+  year: 2025
+  venue: NeurIPS
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - wearable-sensors
+  - text
+  body_locations: []
+  clinical_domains:
+  - human-activity
+  - sensor-language
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Aligns wearable sensor sequences with language to support semantically grounded reasoning and transfer
+    over human sensing data.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/42cd98f0e7520d4a63c34891ac1c972f-Abstract-Conference.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - human-activity
+  - imu
+  - sensor-language
+  - sensor-language-agents
+  - text
+  - wearable-sensors
+  evidence_depth: metadata_verified
+  doi: 10.52202/085713-1559
+  source_note: Official NeurIPS proceedings page and abstract-level metadata checked; full risk-of-bias or independent
+    replication assessment is not implied.
+- id: model-sing-wearables-2025
+  title: 'SING: Spatial Context in Large Language Model for Next-Gen Wearables'
+  year: 2025
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - audio
+  - spatial-acoustics
+  - text
+  body_locations:
+  - head-worn
+  clinical_domains:
+  - accessibility
+  - augmented-reality
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed methodological study
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Fuses microstructure-assisted direction-of-arrival sensing and speech embeddings with an LLM for
+    spatially aware wearable speech interaction.
+  why_it_matters: Demonstrates a concrete path from physical wearable sensing to on-device language interfaces for
+    accessibility and augmented-reality use cases.
+  limitations: The training data include synthetic spatial speech and the evaluated tasks are interaction-oriented
+    rather than health-outcome or clinical-deployment studies.
+  evidence_boundary: This is representation-learning or predictive evidence. It does not establish that a sensor-derived
+    prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
+  primary_url: https://proceedings.mlr.press/v267/mishra25a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: evidence_card
+  verified_on: '2026-09-02'
+  tags:
+  - model
+  - on-device
+  - sensor-language-agents
+  - spatial-audio
+  - wearable-llm
+  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied.
+  short_name: SING
+- id: model-ph-llm-2025
+  title: Towards a Personal Health Large Language Model
+  short_name: PH-LLM
+  year: 2025
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - activity-summary
+  - sleep
+  - heart-rate
+  - text
+  body_locations: []
+  clinical_domains:
+  - personal-health
+  - sleep
+  - fitness
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Studies LLM adaptation and evaluation for personalized reasoning over longitudinal wearable health
+    data and expert-authored tasks.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41591-025-03615-9
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - activity-summary
+  - fitness
+  - foundation-model
+  - heart-rate
+  - personal-health
+  - sensor-language-agents
+  - sleep
+  - text
+  evidence_depth: metadata_verified
+- id: model-health-llm-2024
+  title: 'Health-LLM: Large Language Models for Health Prediction via Wearable Sensor Data'
+  short_name: Health-LLM
+  year: 2024
+  venue: CHIL
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - activity-summary
+  - sleep
+  - heart-rate
+  - text
+  body_locations: []
+  clinical_domains:
+  - health-prediction
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Evaluates language-model prompting and adaptation for health prediction from structured wearable
+    sensor summaries.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://arxiv.org/abs/2401.06866
+  code_url: https://github.com/mitmedialab/Health-LLM
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: review_reference_checked
+  verified_on: '2026-09-02'
+  tags:
+  - activity-summary
+  - foundation-model
+  - health-prediction
+  - heart-rate
+  - sensor-language-agents
+  - sleep
+  - text
+  evidence_depth: venue_verified
+  source_note: The work is attributed to the listed eligible venue, but this release still links to the author preprint;
+    official version-of-record URL and full primary-source audit remain pending.
+- id: model-eeg-eye-llm-2024
+  title: Integrating Large Language Models, EEG, and Eye Tracking for Word-Level Neural State Classification in
+    Reading Comprehension
+  short_name: EEG-Eye-LLM
+  year: 2024
+  venue: IEEE Transactions on Neural Systems and Rehabilitation Engineering
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - eye-tracking
+  - text
+  body_locations: []
+  clinical_domains:
+  - cognition
+  - reading
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Integrates EEG, eye tracking and language-model representations for word-level neural-state classification.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1109/TNSRE.2024.3443620
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cognition
+  - eeg
+  - eye-tracking
+  - foundation-model
+  - reading
+  - sensor-language-agents
+  - text
+  evidence_depth: metadata_verified
+- id: model-sensor2text-2024
+  title: 'Sensor2Text: Enabling Natural Language Interactions for Daily Activity Tracking Using Wearable Sensors'
+  short_name: Sensor2Text
+  year: 2024
+  venue: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - text
+  body_locations: []
+  clinical_domains:
+  - human-activity
+  - human-computer-interaction
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Translates wearable sensor observations into language-oriented representations for interactive daily-activity
+    tracking.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1145/3699747
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - human-activity
+  - human-computer-interaction
+  - imu
+  - sensor-language-agents
+  - text
+  evidence_depth: metadata_verified
+- id: model-eeg-language-alignment-2023
+  title: Can Brain Signals Reveal Inner Alignment with Human Languages?
+  short_name: EEG Language Alignment
+  year: 2023
+  venue: Findings of EMNLP
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - text
+  body_locations: []
+  clinical_domains:
+  - cognition
+  - sensor-language
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Studies alignment between EEG-derived representations and human-language models.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://aclanthology.org/2023.findings-emnlp.120/
+  code_url: https://github.com/Jielin-Qiu/EEG_Language_Alignment
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cognition
+  - eeg
+  - foundation-model
+  - sensor-language
+  - sensor-language-agents
+  - text
+  evidence_depth: metadata_verified
+- id: model-imugpt2-2023
+  title: 'IMUGPT 2.0: Language-Based Cross-Modality Transfer for Sensor-Based Human Activity Recognition'
+  short_name: IMUGPT 2.0
+  year: 2023
+  venue: ISWC
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - imu
+  - text
+  body_locations: []
+  clinical_domains:
+  - human-activity
+  - synthetic-data
+  populations:
+  - general-population
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Uses language and cross-modality generation to expand IMU activity-recognition training data.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://doi.org/10.1145/3678545
+  code_url: https://github.com/ZikangLeng/IMUGPT
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - human-activity
+  - imu
+  - sensor-language-agents
+  - synthetic-data
+  - text
+  evidence_depth: metadata_verified
+- id: model-eeg-to-text-2022
+  title: Open Vocabulary Electroencephalography-to-Text Decoding and Zero-Shot Sentiment Classification
+  short_name: EEG-to-Text
+  year: 2022
+  venue: AAAI
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: sensor-language-agents
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - text
+  body_locations: []
+  clinical_domains:
+  - cognition
+  - sentiment
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Decodes open-vocabulary text from EEG and studies zero-shot sentiment classification.
+  why_it_matters: Connects sensor-derived evidence with natural-language reasoning, reporting, retrieval or interaction,
+    a key interface layer for longitudinal wearable systems.
+  limitations: Language outputs can be fluent while clinically wrong; grounding, calibration, privacy, hallucination
+    control and prospective utility require independent evaluation.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://ojs.aaai.org/index.php/AAAI/article/view/20272
+  code_url: https://github.com/MikeWangWZHL/EEG-To-Text
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - cognition
+  - eeg
+  - foundation-model
+  - sensor-language-agents
+  - sentiment
+  - text
+  evidence_depth: metadata_verified
+- id: model-sleepfm-clinical-2026
+  title: A Multimodal Sleep Foundation Model for Disease Prediction
+  short_name: SleepFM
+  year: 2026
+  venue: Nature Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sleep-psg-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - ecg
+  - eog
+  - emg
+  - respiration
+  body_locations: []
+  clinical_domains:
+  - sleep
+  - disease-risk
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Pretrains across multimodal sleep-study signals and evaluates transfer to disease prediction, moving
+    beyond sleep staging alone.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41591-025-04133-4
+  code_url: https://github.com/zou-group/sleepfm-clinical
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - disease-risk
+  - ecg
+  - eeg
+  - emg
+  - eog
+  - foundation-model
+  - respiration
+  - sleep
+  - sleep-psg-foundation-models
+  evidence_depth: metadata_verified
+- id: model-sleepgpt-2026
+  title: A Unified Time-Frequency Foundation Model for Sleep Decoding
+  short_name: SleepGPT
+  year: 2026
+  venue: Nature Communications
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: model
+  family: sleep-psg-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - eog
+  - emg
+  body_locations: []
+  clinical_domains:
+  - sleep
+  - neurology
+  populations:
+  - general-population
+  wearable_scope: body-sensed-adjacent
+  lifecycle_stage: representation
+  study_design: foundation-model or representation-learning evaluation
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Unifies time- and frequency-domain pretraining for transferable sleep decoding across polysomnographic
+    signals.
+  why_it_matters: Expands reusable learning beyond one narrowly supervised endpoint and provides a reference point
+    for cross-task, cross-dataset or label-efficient wearable modelling.
+  limitations: Publication quality and pretraining scale do not establish cross-device, cross-cohort or clinical
+    generalization; calibration, subgroup performance and deployment shift remain task-specific.
+  evidence_boundary: This is representation or predictive-model evidence. It does not by itself establish a causal
+    treatment effect, clinical benefit, safety, or regulatory readiness.
+  primary_url: https://www.nature.com/articles/s41467-025-67970-4
+  code_url: https://github.com/LordXX505/SleepGPT
+  open_code: true
+  open_weights: true
+  open_data: false
+  verification_status: primary_source_checked
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - emg
+  - eog
+  - foundation-model
+  - neurology
+  - sleep
+  - sleep-psg-foundation-models
+  evidence_depth: metadata_verified
+- id: model-watchsleepnet-2025
+  title: 'WatchSleepNet: A Novel Model and Pretraining Approach for Advancing Sleep Staging with Smartwatches'
+  short_name: WatchSleepNet
+  year: 2025
+  venue: CHIL
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: model
+  family: sleep-psg-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ppg
+  - accelerometer
+  - heart-rate
+  body_locations:
+  - wrist
+  clinical_domains:
+  - sleep
+  - sleep-staging
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed model, representation-learning or wearable-system evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Introduces an open smartwatch-oriented sleep-staging pipeline with a staged pretraining design and
+    evaluates it on consumer-wearable signals.
+  why_it_matters: Connects sleep representation learning to deployable wrist sensing, where signal availability
+    and noise differ substantially from full polysomnography.
+  limitations: Sleep-stage labels and performance remain dataset-, device- and population-dependent; comparison
+    with clinical polysomnography does not establish diagnostic equivalence.
+  evidence_boundary: This record supports a representation, recognition, sensing or control-system claim under the
+    reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability
+    or regulatory readiness.
+  primary_url: https://proceedings.mlr.press/v287/wang25a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - model
+  - pretraining
+  - sleep
+  - sleep-psg-foundation-models
+  - sleep-staging
+  - smartwatch
+  source_note: Primary journal or conference page and abstract-level metadata checked; detailed performance claims
+    require consulting the original article.
+- id: model-sleepfm-icml-2024
+  title: 'SleepFM: Multi-modal Representation Learning for Sleep Across Brain Activity, ECG and Respiratory Signals'
+  short_name: SleepFM (ICML 2024)
+  year: 2024
+  venue: ICML
+  venue_type: conference
+  venue_tier: top_conference
+  record_type: model
+  family: sleep-psg-foundation-models
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - eeg
+  - ecg
+  - respiration
+  - eog
+  - emg
+  body_locations:
+  - polysomnography
+  clinical_domains:
+  - sleep
+  - sleep-disordered-breathing
+  populations:
+  - clinical-and-general-populations
+  wearable_scope: wearable-core
+  lifecycle_stage: representation
+  study_design: peer-reviewed model, representation-learning or wearable-system evaluation
+  evidence_stage: external-validation
+  causal_status: not-causal
+  contribution: Pretrains a multimodal sleep representation model on more than 100,000 hours of polysomnography
+    from over 14,000 participants and evaluates transfer to sleep-related tasks.
+  why_it_matters: Establishes a large-scale, cross-modal reference for learning from brain, cardiac and respiratory
+    sleep signals rather than treating each channel in isolation.
+  limitations: The source data are laboratory or clinical polysomnography rather than everyday smartwatch sensing,
+    and reported downstream gains do not establish prospective diagnostic utility.
+  evidence_boundary: This record supports a representation, recognition, sensing or control-system claim under the
+    reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability
+    or regulatory readiness.
+  primary_url: https://proceedings.mlr.press/v235/thapa24a.html
+  open_code: false
+  open_weights: false
+  open_data: false
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - model
+  - multimodal
+  - polysomnography
+  - sleep
+  - sleep-psg-foundation-models
+  source_note: Primary journal or conference page and abstract-level metadata checked; detailed performance claims
+    require consulting the original article.

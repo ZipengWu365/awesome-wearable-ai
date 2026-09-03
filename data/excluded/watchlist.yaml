@@ -1,0 +1,640 @@
+- id: watch-jitai-diffusion-twins-2026
+  title: 'A Diffusion-Model Subpopulation Digital Twin for Mobile Health Deployment: A Case Study on the HeartSteps
+    Intervention'
+  year: 2026
+  proposed_family: longitudinal-counterfactual-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2607.21403
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - digital-twin
+  - jitai
+  - diffusion
+- id: watch-pulseox-fm-2026
+  title: A Foundation Model of Wearable Pulse Oximetry Reveals Physiological Signatures of Health and Cardiometabolic
+    Risk
+  year: 2026
+  proposed_family: ppg-optical-foundation-models
+  status: preprint-only
+  reason: A technically relevant manuscript was located, but no eligible peer-reviewed version of record or qualifying
+    major-organization technical report was verified for this release.
+  primary_url: https://doi.org/10.64898/2026.07.01.26356992
+  review_action: Monitor publication status; promote only after verifying an eligible version of record and auditing
+    metadata, limitations and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - pulse-oximetry
+  - cardiometabolic
+- id: watch-bcg-fm-2026
+  title: 'BCG-FM: A Foundation Model for Ambient Cardiac Health Sensing'
+  year: 2026
+  proposed_family: multimodal-physiological-models
+  status: preprint-only
+  reason: A technically relevant manuscript was located, but no eligible peer-reviewed version of record or qualifying
+    major-organization technical report was verified for this release.
+  primary_url: https://arxiv.org/abs/2606.07692
+  review_action: Monitor publication status; promote only after verifying an eligible version of record and auditing
+    metadata, limitations and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - ballistocardiography
+  - ambient-sensing
+- id: watch-biosignal-fingerprinting-2026
+  title: 'Biosignal Fingerprinting: A Cross-Modal PPG-ECG Foundation Model'
+  year: 2026
+  proposed_family: multimodal-physiological-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2605.09579
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - ppg
+  - cross-modal
+- id: watch-cardiofm-2026
+  title: 'CardioFM: A Multimodal Foundation Model for Joint ECG and PPG Representation Learning'
+  year: 2026
+  proposed_family: multimodal-physiological-models
+  status: preprint-only
+  reason: A technically relevant manuscript was located, but no eligible peer-reviewed version of record or qualifying
+    major-organization technical report was verified for this release.
+  primary_url: https://doi.org/10.21203/rs.3.rs-9652631/v1
+  review_action: Monitor publication status; promote only after verifying an eligible version of record and auditing
+    metadata, limitations and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - ecg
+  - ppg
+- id: watch-femwear-2026
+  title: 'FemWear: A Specialized Wearable Foundation Model for Women’s Health'
+  year: 2026
+  proposed_family: multimodal-physiological-models
+  status: preprint-only
+  reason: A technically relevant manuscript was located, but no eligible peer-reviewed version of record or qualifying
+    major-organization technical report was verified for this release.
+  primary_url: https://arxiv.org/abs/2608.08244
+  review_action: Monitor publication status; promote only after verifying an eligible version of record and auditing
+    metadata, limitations and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - womens-health
+  - wearable
+- id: watch-signalmc-med-2026
+  title: 'SignalMC-MED: A Multimodal Benchmark for Evaluating Biosignal Foundation Models on Single-Lead ECG and
+    PPG'
+  year: 2026
+  proposed_family: benchmarking-and-evaluation
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2603.09940
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - benchmark
+  - ecg
+  - ppg
+- id: watch-human-symbiotic-health-intelligence-2025
+  title: 'Artificial Intelligence-Driven Intelligent Wearable Systems: A Full-Stack Integration from Material Design
+    to Personalized Interaction'
+  year: 2025
+  proposed_family: frontier-frameworks
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2511.13565
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - digital-twin
+  - closed-loop
+  - review
+- id: watch-benchecg-xecg-2025
+  title: 'BenchECG and xECG: A Benchmark and Baseline for ECG Foundation Models'
+  year: 2025
+  proposed_family: ecg-cardiac-foundation-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2509.10151
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - benchmark
+- id: watch-biogap-ultra-2025
+  title: 'BioGAP-Ultra: A Modular Edge-AI Platform for Wearable Multimodal Biosignal Acquisition and Processing'
+  year: 2025
+  proposed_family: wearable-hardware-and-edge
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2508.13728
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - edge-ai
+  - hardware
+  - multimodal
+- id: watch-clef-ecg-2025
+  title: 'CLEF: Clinically-Guided Contrastive Learning for Electrocardiogram Foundation Models'
+  year: 2025
+  proposed_family: ecg-cardiac-foundation-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2512.02180
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - foundation-model
+- id: watch-cmab-llm-pa-2025
+  title: 'Investigating the Relationship Between Physical Activity and Tailored Behavior Change Messaging: Connecting
+    Contextual Bandit with Large Language Models'
+  year: 2025
+  proposed_family: jitai-behavioral-interventions
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2506.07275
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - contextual-bandit
+  - llm
+  - physical-activity
+- id: watch-openecg-2025
+  title: 'OpenECG: Benchmarking ECG Foundation Models with Public 1.2 Million Records'
+  year: 2025
+  proposed_family: ecg-cardiac-foundation-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2503.00711
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - benchmark
+- id: watch-ppg-distill-2025
+  title: 'PPG-Distill: Efficient Photoplethysmography Signals Analysis via Foundation Model Distillation'
+  year: 2025
+  proposed_family: ppg-optical-foundation-models
+  status: preprint-only
+  reason: A technically relevant manuscript was located, but no eligible peer-reviewed version of record or qualifying
+    major-organization technical report was verified for this release.
+  primary_url: https://arxiv.org/abs/2509.19215
+  review_action: Monitor publication status; promote only after verifying an eligible version of record and auditing
+    metadata, limitations and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ppg
+  - distillation
+  - edge-ai
+- id: watch-protoecgnet-2025
+  title: 'ProtoECGNet: Case-Based Interpretable Deep Learning for Multi-Label ECG Classification with Contrastive
+    Learning'
+  year: 2025
+  proposed_family: ecg-cardiac-foundation-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2504.08713
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - interpretability
+- id: watch-physioomni-2025
+  title: 'Towards Robust Multimodal Physiological Foundation Models: Handling Arbitrary Missing Modalities'
+  year: 2025
+  proposed_family: multimodal-physiological-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2504.19596
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - missing-modality
+  - multimodal
+- id: watch-wearable-echo-fm-2025
+  title: 'Wearable-Echo-FM: An ECG-Echo Foundation Model for Single-Lead Electrocardiography'
+  year: 2025
+  proposed_family: ecg-cardiac-foundation-models
+  status: preprint-only
+  reason: A technically relevant manuscript was located, but no eligible peer-reviewed version of record or qualifying
+    major-organization technical report was verified for this release.
+  primary_url: https://www.medrxiv.org/content/10.1101/2025.06.10.25329163v2
+  review_action: Monitor publication status; promote only after verifying an eligible version of record and auditing
+    metadata, limitations and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - foundation-model
+  - single-lead-ecg
+  - echocardiography
+- id: watch-anyecg-2024
+  title: 'AnyECG: Foundational Models for Multitask Cardiac Analysis in Real-World Settings'
+  year: 2024
+  proposed_family: ecg-cardiac-foundation-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2411.17711
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - multitask
+- id: watch-vital-sign-tsfm-2024
+  title: Are Time Series Foundation Models Ready for Vital Sign Forecasting in Healthcare?
+  year: 2024
+  proposed_family: multimodal-physiological-models
+  status: workshop-only
+  reason: The located PMLR version is associated with ML4H rather than a whitelisted full conference or SCI/SCIE
+    journal.
+  primary_url: https://proceedings.mlr.press/v259/gu25a.html
+  review_action: Check for a later eligible version and independently audit the benchmark design.
+  verified_on: '2026-09-02'
+  tags:
+  - vital-signs
+  - forecasting
+- id: watch-zero-shot-trajectory-llm-2024
+  title: Are You Being Tracked? Discover the Power of Zero-Shot Trajectory Tracing with LLMs!
+  year: 2024
+  proposed_family: sensor-language-agents
+  status: borderline-venue
+  reason: The located conference is outside the current curated core whitelist and the relevance is adjacent to
+    wearable health.
+  primary_url: https://arxiv.org/abs/2403.06201
+  review_action: Review scope and venue eligibility before any promotion.
+  verified_on: '2026-09-02'
+  tags:
+  - imu
+  - trajectory
+- id: watch-beyond-lora-tsfm-2024
+  title: 'Beyond LoRA: Exploring Efficient Fine-Tuning Techniques for Time Series Foundational Models'
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2409.11302
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - parameter-efficient-finetuning
+- id: watch-brainwave-2024
+  title: 'BrainWave: A Brain Signal Foundation Model for Clinical Applications'
+  year: 2024
+  proposed_family: eeg-neural-foundation-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2402.10251
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - foundation-model
+- id: watch-conversational-health-agents-2024
+  title: 'Conversational Health Agents: A Personalized LLM-Powered Agent Framework'
+  year: 2024
+  proposed_family: sensor-language-agents
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2310.02374
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - health-agent
+  - llm
+- id: watch-ecg-chat-2024
+  title: 'ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis'
+  year: 2024
+  proposed_family: sensor-language-agents
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2408.08849
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - language-model
+- id: watch-eegformer-2024
+  title: 'EEGFormer: Towards Transferable and Interpretable Large-Scale EEG Foundation Model'
+  year: 2024
+  proposed_family: eeg-neural-foundation-models
+  status: workshop-only
+  reason: The verified version is associated with a spring symposium rather than an eligible archival top or domain-leading
+    full conference.
+  primary_url: https://arxiv.org/abs/2401.10278
+  review_action: Verify a later eligible journal or archival conference version before promotion.
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - foundation-model
+- id: watch-cet-mae-2024
+  title: Enhancing EEG-to-Text Decoding through Transferable Representations from Pre-trained Contrastive EEG-Text
+    Masked Autoencoder
+  year: 2024
+  proposed_family: sensor-language-agents
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2402.17433
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - eeg
+  - text-decoding
+- id: watch-hybrid-ssl-ecg-fm-2024
+  title: 'Foundation Models for ECG: Leveraging Hybrid Self-Supervised Learning for Advanced Cardiac Diagnostics'
+  year: 2024
+  proposed_family: ecg-cardiac-foundation-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2407.07110
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - self-supervised-learning
+- id: watch-gen-p-tuning-2024
+  title: 'Generalized Prompt Tuning: Adapting Frozen Univariate Time Series Foundation Models for Multivariate Healthcare
+    Time Series'
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2411.12824
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - prompt-tuning
+  - healthcare-time-series
+- id: watch-hargpt-2024
+  title: 'HARGPT: Are LLMs Zero-Shot Human Activity Recognizers?'
+  year: 2024
+  proposed_family: sensor-language-agents
+  status: workshop-only
+  reason: The verified version is associated with an IEEE foundation-model systems workshop rather than an eligible
+    full conference.
+  primary_url: https://arxiv.org/abs/2403.02727
+  review_action: Locate a later eligible version or retain as workshop evidence.
+  verified_on: '2026-09-02'
+  tags:
+  - imu
+  - zero-shot
+- id: watch-lora-ood-modality-2024
+  title: Low-Rank Adaptation of Time Series Foundational Models for Out-of-Domain Modality Forecasting
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: borderline-venue
+  reason: The located ICMI publication is outside the current core venue whitelist and was not promoted automatically.
+  primary_url: https://arxiv.org/abs/2405.10216
+  review_action: Review venue policy and wearable relevance, or locate an eligible journal extension.
+  verified_on: '2026-09-02'
+  tags:
+  - lora
+  - domain-adaptation
+- id: watch-mamba4cast-2024
+  title: 'Mamba4Cast: Efficient Zero-Shot Time Series Forecasting with State Space Models'
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2410.09385
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - state-space-model
+- id: watch-meit-2024
+  title: 'MEIT: Multi-Modal Electrocardiogram Instruction Tuning on Large Language Models for Report Generation'
+  year: 2024
+  proposed_family: sensor-language-agents
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2403.04945
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - instruction-tuning
+- id: watch-moirai-moe-2024
+  title: 'Moirai-MoE: Empowering Time Series Foundation Models with Sparse Mixture of Experts'
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: workshop-only
+  reason: The located version is workshop-only; workshop papers are excluded from headline counts under the current
+    policy.
+  primary_url: https://arxiv.org/abs/2410.10469
+  review_action: Check for a later full conference or SCI/SCIE journal version.
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - mixture-of-experts
+- id: watch-physiollm-2024
+  title: 'PhysioLLM: Supporting Personalized Health Insights with Wearables and Large Language Models'
+  year: 2024
+  proposed_family: sensor-language-agents
+  status: awaiting-primary-source
+  reason: A conference attribution was found in curated metadata, but the canonical archival proceedings record
+    was not verified in this release.
+  primary_url: https://arxiv.org/abs/2406.19283
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - wearables
+  - health-insights
+- id: watch-formed-2024
+  title: Repurposing Foundation Model for Generalizable Medical Time Series Classification
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2410.03794
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - medical-time-series
+  - classification
+- id: watch-ecg-jepa-2024
+  title: Self-Supervised Pre-Training with Joint-Embedding Predictive Architecture Boosts ECG Classification Performance
+  year: 2024
+  proposed_family: ecg-cardiac-foundation-models
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2410.13867
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg
+  - jepa
+- id: watch-pulse-ecg-images-2024
+  title: Teach Multimodal LLMs to Comprehend Electrocardiographic Images
+  year: 2024
+  proposed_family: sensor-language-agents
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2410.19008
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - ecg-image
+  - multimodal-llm
+- id: watch-timedit-2024
+  title: 'TimeDiT: General-Purpose Diffusion Transformers for Time Series Foundation Models'
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2409.02322
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - time-series
+  - diffusion
+- id: watch-timeraf-2024
+  title: 'TimeRAF: Retrieval-Augmented Foundation Model for Zero-Shot Time Series Forecasting'
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2412.20810
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - retrieval
+- id: watch-tsmamba-2024
+  title: 'TSMamba: A Mamba-Based Time Series Foundation Model'
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2411.02941
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - time-series
+  - state-space-model
+- id: watch-vitime-2024
+  title: 'ViTime: A Visual Intelligence-Based Foundation Model for Time Series Forecasting'
+  year: 2024
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2407.07311
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - vision
+- id: watch-lag-llama-2023
+  title: 'Lag-Llama: Towards Foundation Models for Probabilistic Time Series Forecasting'
+  year: 2023
+  proposed_family: general-time-series-enablers
+  status: venue-unresolved
+  reason: A canonical eligible version-of-record was not verified during this release audit, despite broad use of
+    the preprint and code.
+  primary_url: https://arxiv.org/abs/2310.08278
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - probabilistic-forecasting
+- id: watch-timegpt1-2023
+  title: TimeGPT-1
+  year: 2023
+  proposed_family: general-time-series-enablers
+  status: preprint-only
+  reason: Only a preprint or non-archival manuscript was verified; the core registry requires an eligible peer-reviewed
+    venue or major-lab official report.
+  primary_url: https://arxiv.org/abs/2310.03589
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - forecasting
+  - commercial-model
+- id: watch-robust-actor-critic-mhealth-2018
+  title: Robust Actor-Critic Contextual Bandit for Mobile Health Interventions
+  year: 2018
+  proposed_family: adaptive-treatment-and-policy-learning
+  status: venue-unresolved
+  reason: The methodological preprint was located, but an eligible archival version and exact relation to a deployed
+    wearable intervention were not verified.
+  primary_url: https://arxiv.org/abs/1802.09714
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - contextual-bandit
+  - mhealth
+- id: watch-actor-critic-personalized-mhealth-2017
+  title: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions
+  year: 2017
+  proposed_family: adaptive-treatment-and-policy-learning
+  status: venue-unresolved
+  reason: The preprint is influential, but the eligible version-of-record was not verified during this release pass.
+  primary_url: https://arxiv.org/abs/1706.09090
+  review_action: Locate and verify an eligible version-of-record or an official major-lab technical-report page,
+    then audit metadata and evidence boundaries.
+  verified_on: '2026-09-02'
+  tags:
+  - contextual-bandit
+  - jitai

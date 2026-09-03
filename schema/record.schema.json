@@ -1,0 +1,320 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Wearable AI accepted record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "year",
+    "venue",
+    "venue_type",
+    "venue_tier",
+    "record_type",
+    "family",
+    "inclusion_basis",
+    "modalities",
+    "body_locations",
+    "clinical_domains",
+    "populations",
+    "wearable_scope",
+    "lifecycle_stage",
+    "study_design",
+    "evidence_stage",
+    "causal_status",
+    "contribution",
+    "why_it_matters",
+    "limitations",
+    "evidence_boundary",
+    "primary_url",
+    "open_code",
+    "open_weights",
+    "open_data",
+    "verification_status",
+    "evidence_depth",
+    "verified_on",
+    "tags"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 4
+    },
+    "short_name": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1970,
+      "maximum": 2026
+    },
+    "venue": {
+      "type": "string",
+      "minLength": 2
+    },
+    "venue_type": {
+      "enum": [
+        "journal",
+        "conference",
+        "technical_report",
+        "dataset",
+        "tool",
+        "standard",
+        "guidance",
+        "cohort",
+        "benchmark"
+      ]
+    },
+    "venue_tier": {
+      "enum": [
+        "top_conference",
+        "domain_leading_conference",
+        "sci_journal",
+        "big_tech_report",
+        "official_dataset",
+        "official_tool",
+        "official_standard",
+        "official_guidance"
+      ]
+    },
+    "record_type": {
+      "enum": [
+        "model",
+        "dataset",
+        "method",
+        "intervention",
+        "measure",
+        "infrastructure"
+      ]
+    },
+    "family": {
+      "type": "string",
+      "minLength": 3
+    },
+    "inclusion_basis": {
+      "enum": [
+        "peer_reviewed_publication",
+        "big_tech_official_report",
+        "official_dataset",
+        "official_tool",
+        "official_standard",
+        "official_guidance"
+      ]
+    },
+    "doi": {
+      "type": "string"
+    },
+    "modalities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "body_locations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "clinical_domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "populations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "wearable_scope": {
+      "enum": [
+        "wearable-core",
+        "body-sensed-adjacent",
+        "implantable-closed-loop",
+        "mobile-health-enabler",
+        "cross-domain-enabler",
+        "infrastructure"
+      ]
+    },
+    "lifecycle_stage": {
+      "enum": [
+        "sensing",
+        "representation",
+        "measurement",
+        "prediction",
+        "causal-inference",
+        "policy-learning",
+        "intervention-design",
+        "clinical-evaluation",
+        "closed-loop-deployment",
+        "governance"
+      ]
+    },
+    "study_design": {
+      "type": "string",
+      "minLength": 3
+    },
+    "evidence_stage": {
+      "enum": [
+        "methodological",
+        "retrospective",
+        "external-validation",
+        "prospective-observational",
+        "protocol",
+        "micro-randomized-trial",
+        "randomized-controlled-trial",
+        "systematic-review",
+        "clinical-deployment",
+        "official-resource"
+      ]
+    },
+    "causal_status": {
+      "enum": [
+        "not-causal",
+        "predictive-counterfactual",
+        "causal-identification",
+        "policy-counterfactual",
+        "randomized-causal-effect",
+        "mechanistic-closed-loop",
+        "not-applicable"
+      ]
+    },
+    "contribution": {
+      "type": "string",
+      "minLength": 24
+    },
+    "why_it_matters": {
+      "type": "string",
+      "minLength": 24
+    },
+    "limitations": {
+      "type": "string",
+      "minLength": 24
+    },
+    "evidence_boundary": {
+      "type": "string",
+      "minLength": 24
+    },
+    "primary_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "project_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "code_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "data_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "open_code": {
+      "type": "boolean"
+    },
+    "open_weights": {
+      "type": "boolean"
+    },
+    "open_data": {
+      "type": "boolean"
+    },
+    "verification_status": {
+      "enum": [
+        "primary_source_checked",
+        "official_resource_checked",
+        "review_reference_checked",
+        "curated_secondary_metadata_checked"
+      ]
+    },
+    "verified_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "related_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "source_note": {
+      "type": "string"
+    },
+    "scale": {
+      "type": "string"
+    },
+    "device": {
+      "type": "string"
+    },
+    "sampling_rate": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "access": {
+      "type": "string"
+    },
+    "raw_signal_available": {
+      "type": "boolean"
+    },
+    "health_linkage": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "model_size": {
+      "type": "string"
+    },
+    "pretraining_scale": {
+      "type": "string"
+    },
+    "intervention_channel": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "outcome_status": {
+      "type": "string"
+    },
+    "estimand": {
+      "type": "string"
+    },
+    "regulatory_scope": {
+      "type": "string"
+    },
+    "evidence_depth": {
+      "enum": [
+        "venue_verified",
+        "metadata_verified",
+        "evidence_card"
+      ]
+    },
+    "negative_or_null_result": {
+      "type": "boolean"
+    }
+  }
+}

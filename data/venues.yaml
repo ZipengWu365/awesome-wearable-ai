@@ -1,0 +1,508 @@
+- name: CHIL
+  tier: domain_leading_conference
+  rationale: Leading machine learning for health conference.
+- name: Findings of EMNLP
+  tier: domain_leading_conference
+  rationale: Peer-reviewed ACL-family proceedings; used selectively for sensor-language work.
+- name: IEEE BHI
+  tier: domain_leading_conference
+  rationale: Domain-leading biomedical and health informatics conference; used selectively.
+- name: IEEE BigData
+  tier: domain_leading_conference
+  rationale: Large peer-reviewed data-mining conference; used selectively.
+- name: ISBI
+  tier: domain_leading_conference
+  rationale: Leading biomedical imaging and signal analysis conference.
+- name: ISWC
+  tier: domain_leading_conference
+  rationale: Flagship wearable-computing conference.
+- name: IUI
+  tier: domain_leading_conference
+  rationale: Leading intelligent user interfaces conference.
+- name: MICCAI
+  tier: domain_leading_conference
+  rationale: Leading medical image computing and computer-assisted intervention conference.
+- name: MIDL
+  tier: domain_leading_conference
+  rationale: Leading deep-learning-in-medical-imaging conference; used for physiological multimodal work where relevant.
+- name: UbiComp
+  tier: domain_leading_conference
+  rationale: Flagship ubiquitous-computing conference.
+- name: ACM Computing Surveys
+  tier: sci_journal
+  rationale: Leading computing review journal.
+- name: ACM Transactions on Computing for Healthcare
+  tier: sci_journal
+  rationale: Peer-reviewed computing-for-healthcare journal.
+- name: ACM Transactions on Knowledge Discovery from Data
+  tier: sci_journal
+  rationale: Leading knowledge-discovery journal.
+- name: Addiction
+  tier: sci_journal
+  rationale: Leading addiction journal.
+- name: Addictive Behaviors
+  tier: sci_journal
+  rationale: Established addiction and behavior-change journal.
+- name: Advances in Methods and Practices in Psychological Science
+  tier: sci_journal
+  rationale: Peer-reviewed psychological methods journal.
+- name: American Journal of Epidemiology
+  tier: sci_journal
+  rationale: Leading epidemiology journal.
+- name: American Journal of Preventive Medicine
+  tier: sci_journal
+  rationale: Leading prevention and digital-intervention journal.
+- name: American Journal of Public Health
+  tier: sci_journal
+  rationale: Leading public-health journal.
+- name: American Psychologist
+  tier: sci_journal
+  rationale: Flagship psychology journal.
+- name: Annals of Behavioral Medicine
+  tier: sci_journal
+  rationale: Leading behavioral-medicine journal.
+- name: Annals of Neurology
+  tier: sci_journal
+  rationale: Leading clinical neuroscience journal.
+- name: Annals of Statistics
+  tier: sci_journal
+  rationale: Leading statistics journal.
+- name: Annual Review of Clinical Psychology
+  tier: sci_journal
+  rationale: Selective invited clinical-psychology review journal.
+- name: Annual Review of Psychology
+  tier: sci_journal
+  rationale: Selective invited review journal.
+- name: Applied Intelligence
+  tier: sci_journal
+  rationale: Indexed peer-reviewed AI journal.
+- name: 'Applied Psychology: Health and Well-Being'
+  tier: sci_journal
+  rationale: Indexed health-psychology journal.
+- name: Artificial Intelligence in Medicine
+  tier: sci_journal
+  rationale: Established clinical AI journal.
+- name: Behavior Modification
+  tier: sci_journal
+  rationale: Peer-reviewed behavioral-intervention journal.
+- name: Behavior Research Methods
+  tier: sci_journal
+  rationale: Established methods journal.
+- name: Biometrics
+  tier: sci_journal
+  rationale: Leading biostatistics journal.
+- name: Biostatistics
+  tier: sci_journal
+  rationale: Leading biostatistics journal.
+- name: BMC Public Health
+  tier: sci_journal
+  rationale: Indexed public-health journal.
+- name: BMJ
+  tier: sci_journal
+  rationale: Leading clinical medicine journal.
+- name: BMJ Open
+  tier: sci_journal
+  rationale: Large peer-reviewed medical journal.
+- name: Brain
+  tier: sci_journal
+  rationale: Leading neurology and neuroscience journal.
+- name: Brain Stimulation
+  tier: sci_journal
+  rationale: Leading neuromodulation journal.
+- name: British Journal of Sports Medicine
+  tier: sci_journal
+  rationale: Leading sports and physical activity medicine journal.
+- name: Cell Reports Medicine
+  tier: sci_journal
+  rationale: Selective translational medicine journal.
+- name: Circulation
+  tier: sci_journal
+  rationale: Leading cardiovascular journal.
+- name: 'Circulation: Arrhythmia and Electrophysiology'
+  tier: sci_journal
+  rationale: Leading arrhythmia journal.
+- name: Clinical Epidemiology
+  tier: sci_journal
+  rationale: Indexed clinical epidemiology journal.
+- name: Clinical Pharmacology & Therapeutics
+  tier: sci_journal
+  rationale: Leading clinical pharmacology and translational journal.
+- name: Clinical Trials
+  tier: sci_journal
+  rationale: Established clinical-trial methodology journal.
+- name: Contemporary Clinical Trials
+  tier: sci_journal
+  rationale: Established clinical-trial design journal.
+- name: Current Directions in Psychological Science
+  tier: sci_journal
+  rationale: Selective psychological-science review journal.
+- name: Current HIV/AIDS Reports
+  tier: sci_journal
+  rationale: Indexed clinical review journal.
+- name: Data Mining and Knowledge Discovery
+  tier: sci_journal
+  rationale: Leading data-mining journal.
+- name: Diabetes Care
+  tier: sci_journal
+  rationale: Leading diabetes clinical journal.
+- name: Diabetes Technology & Therapeutics
+  tier: sci_journal
+  rationale: Established diabetes-device journal.
+- name: Epidemiology
+  tier: sci_journal
+  rationale: Leading causal and epidemiologic methods journal.
+- name: Epilepsia
+  tier: sci_journal
+  rationale: Leading epilepsy journal.
+- name: European Heart Journal
+  tier: sci_journal
+  rationale: Leading cardiovascular journal.
+- name: European Heart Journal - Digital Health
+  tier: sci_journal
+  rationale: Peer-reviewed digital cardiology journal.
+- name: Frontiers in Digital Health
+  tier: sci_journal
+  rationale: Indexed peer-reviewed digital-health journal.
+- name: Frontiers in Human Neuroscience
+  tier: sci_journal
+  rationale: Indexed peer-reviewed neuroscience journal.
+- name: Gait & Posture
+  tier: sci_journal
+  rationale: Established gait and mobility journal.
+- name: Health Data Science
+  tier: sci_journal
+  rationale: Peer-reviewed health data science journal.
+- name: Health Psychology
+  tier: sci_journal
+  rationale: Leading health-psychology journal.
+- name: Heart Rhythm
+  tier: sci_journal
+  rationale: Leading electrophysiology journal.
+- name: Hypertension Research
+  tier: sci_journal
+  rationale: Peer-reviewed hypertension journal indexed in major citation databases.
+- name: IEEE Journal of Biomedical and Health Informatics
+  tier: sci_journal
+  rationale: Leading biomedical informatics engineering journal.
+- name: IEEE Transactions on Affective Computing
+  tier: sci_journal
+  rationale: Established affective-computing journal.
+- name: IEEE Transactions on Biomedical Engineering
+  tier: sci_journal
+  rationale: Leading biomedical engineering journal.
+- name: IEEE Transactions on Knowledge and Data Engineering
+  tier: sci_journal
+  rationale: Leading data mining and knowledge systems journal.
+- name: IEEE Transactions on Neural Networks and Learning Systems
+  tier: sci_journal
+  rationale: Leading machine-learning systems journal.
+- name: IEEE Transactions on Neural Systems and Rehabilitation Engineering
+  tier: sci_journal
+  rationale: Leading neural engineering and rehabilitation journal.
+- name: IEEE Transactions on Pattern Analysis and Machine Intelligence
+  tier: sci_journal
+  rationale: Leading machine learning and pattern recognition journal.
+- name: Implementation Science
+  tier: sci_journal
+  rationale: Leading implementation-science journal.
+- name: INFORMS Journal on Computing
+  tier: sci_journal
+  rationale: Leading computational methods journal.
+- name: International Journal of Behavioral Nutrition and Physical Activity
+  tier: sci_journal
+  rationale: Leading physical-activity and behavioral-nutrition journal.
+- name: International Journal of Medical Informatics
+  tier: sci_journal
+  rationale: Established medical-informatics journal.
+- name: JAMA
+  tier: sci_journal
+  rationale: Leading clinical medicine journal.
+- name: JAMA Cardiology
+  tier: sci_journal
+  rationale: Leading peer-reviewed cardiovascular medicine journal.
+- name: JAMA Internal Medicine
+  tier: sci_journal
+  rationale: Leading peer-reviewed internal medicine journal.
+- name: JAMA Network Open
+  tier: sci_journal
+  rationale: Large peer-reviewed medical journal.
+- name: JAMA Neurology
+  tier: sci_journal
+  rationale: Leading clinical neurology journal.
+- name: JAMA Psychiatry
+  tier: sci_journal
+  rationale: Leading psychiatry journal.
+- name: JAMIA Open
+  tier: sci_journal
+  rationale: Peer-reviewed biomedical informatics journal.
+- name: JMIR mHealth and uHealth
+  tier: sci_journal
+  rationale: Established mobile-health journal.
+- name: JMIR Research Protocols
+  tier: sci_journal
+  rationale: Peer-reviewed protocol journal; protocol status is explicitly labelled.
+- name: Journal of Affective Disorders
+  tier: sci_journal
+  rationale: Established affective-disorders journal.
+- name: Journal of Applied Physiology
+  tier: sci_journal
+  rationale: Established physiology journal indexed in major citation databases.
+- name: Journal of Biomedical Informatics
+  tier: sci_journal
+  rationale: Leading biomedical-informatics journal.
+- name: Journal of Causal Inference
+  tier: sci_journal
+  rationale: Specialist causal-inference journal.
+- name: Journal of Clinical Epidemiology
+  tier: sci_journal
+  rationale: Leading methodology and evidence journal.
+- name: Journal of Computational and Graphical Statistics
+  tier: sci_journal
+  rationale: Leading computational statistics journal.
+- name: Journal of Diabetes Science and Technology
+  tier: sci_journal
+  rationale: Established diabetes-technology journal.
+- name: Journal of Epidemiology and Community Health
+  tier: sci_journal
+  rationale: Leading public-health and epidemiology journal.
+- name: Journal of Machine Learning Research
+  tier: sci_journal
+  rationale: Leading machine-learning journal.
+- name: Journal of Medical Internet Research
+  tier: sci_journal
+  rationale: Leading digital-health journal.
+- name: Journal of Neural Engineering
+  tier: sci_journal
+  rationale: Established neural engineering journal.
+- name: Journal of Neurology, Neurosurgery & Psychiatry
+  tier: sci_journal
+  rationale: Leading clinical neurology journal.
+- name: Journal of Parkinson’s Disease
+  tier: sci_journal
+  rationale: Established Parkinson disease journal.
+- name: Journal of Sleep Research
+  tier: sci_journal
+  rationale: Established sleep research journal.
+- name: Journal of the American Medical Informatics Association
+  tier: sci_journal
+  rationale: Leading biomedical informatics journal.
+- name: Journal of the American Statistical Association
+  tier: sci_journal
+  rationale: Leading statistics journal.
+- name: 'Journal of the Royal Statistical Society: Series B'
+  tier: sci_journal
+  rationale: Leading statistical methodology journal.
+- name: Journal of Translational Medicine
+  tier: sci_journal
+  rationale: Peer-reviewed translational medicine journal indexed in major citation databases; used here for a methodological
+    causal-digital-twin framework.
+- name: Lancet Diabetes & Endocrinology
+  tier: sci_journal
+  rationale: Leading diabetes and endocrinology journal.
+- name: Lancet Healthy Longevity
+  tier: sci_journal
+  rationale: Leading healthy-longevity journal.
+- name: Machine Learning
+  tier: sci_journal
+  rationale: Established machine-learning journal.
+- name: Mayo Clinic Proceedings
+  tier: sci_journal
+  rationale: Leading clinical journal.
+- name: Medicine & Science in Sports & Exercise
+  tier: sci_journal
+  rationale: Leading exercise-science journal.
+- name: Movement Disorders
+  tier: sci_journal
+  rationale: Leading movement-disorders journal.
+- name: Nature
+  tier: sci_journal
+  rationale: High-impact multidisciplinary peer-reviewed journal.
+- name: Nature Biomedical Engineering
+  tier: sci_journal
+  rationale: Selective biomedical engineering journal.
+- name: Nature Biotechnology
+  tier: sci_journal
+  rationale: Leading biotechnology journal.
+- name: Nature Communications
+  tier: sci_journal
+  rationale: Selective multidisciplinary peer-reviewed journal.
+- name: Nature Machine Intelligence
+  tier: sci_journal
+  rationale: Selective machine-intelligence journal.
+- name: Nature Medicine
+  tier: sci_journal
+  rationale: High-impact clinical and translational medicine journal.
+- name: Nature Neuroscience
+  tier: sci_journal
+  rationale: Leading neuroscience journal.
+- name: NEJM AI
+  tier: sci_journal
+  rationale: Peer-reviewed clinical AI journal from NEJM Group.
+- name: NEJM Evidence
+  tier: sci_journal
+  rationale: Peer-reviewed clinical evidence journal.
+- name: Neurology
+  tier: sci_journal
+  rationale: Leading clinical neurology journal.
+- name: Neuron
+  tier: sci_journal
+  rationale: Leading neuroscience journal.
+- name: New England Journal of Medicine
+  tier: sci_journal
+  rationale: Leading clinical medicine journal.
+- name: npj Aging
+  tier: sci_journal
+  rationale: Peer-reviewed journal focused on biological and healthy aging.
+- name: npj Cardiovascular Health
+  tier: sci_journal
+  rationale: Peer-reviewed Nature Portfolio cardiovascular journal.
+- name: npj Digital Medicine
+  tier: sci_journal
+  rationale: Established digital-health journal.
+- name: npj Digital Public Health
+  tier: sci_journal
+  rationale: Peer-reviewed digital public-health journal.
+- name: npj Parkinson's Disease
+  tier: sci_journal
+  rationale: Peer-reviewed Nature Portfolio Parkinson disease journal.
+- name: Parkinsonism & Related Disorders
+  tier: sci_journal
+  rationale: Established movement-disorders journal.
+- name: Patterns
+  tier: sci_journal
+  rationale: Peer-reviewed data-science journal.
+- name: Physiological Measurement
+  tier: sci_journal
+  rationale: Established physiological sensing journal.
+- name: Physiological Reviews
+  tier: sci_journal
+  rationale: Leading peer-reviewed physiology review journal.
+- name: PLOS Digital Health
+  tier: sci_journal
+  rationale: Peer-reviewed digital-health journal.
+- name: PLOS ONE
+  tier: sci_journal
+  rationale: Indexed multidisciplinary journal; inclusion requires strong relevance.
+- name: Preventive Medicine
+  tier: sci_journal
+  rationale: Established prevention journal.
+- name: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies
+  tier: sci_journal
+  rationale: Flagship peer-reviewed ubiquitous and wearable computing journal.
+- name: Proceedings of the National Academy of Sciences
+  tier: sci_journal
+  rationale: Selective multidisciplinary journal.
+- name: Psychiatry
+  tier: sci_journal
+  rationale: Indexed psychiatry journal.
+- name: Psychological Methods
+  tier: sci_journal
+  rationale: Leading quantitative-methods journal.
+- name: Psychology of Addictive Behaviors
+  tier: sci_journal
+  rationale: Established addiction psychology journal.
+- name: Science
+  tier: sci_journal
+  rationale: High-impact multidisciplinary peer-reviewed journal.
+- name: Science Advances
+  tier: sci_journal
+  rationale: Selective multidisciplinary journal.
+- name: Science Translational Medicine
+  tier: sci_journal
+  rationale: Leading translational medicine journal.
+- name: Scientific Data
+  tier: sci_journal
+  rationale: Peer-reviewed data-descriptor journal.
+- name: Scientific Reports
+  tier: sci_journal
+  rationale: Peer-reviewed multidisciplinary journal indexed in major citation databases.
+- name: Sensors
+  tier: sci_journal
+  rationale: Indexed sensors journal; entries require additional relevance screening.
+- name: Sleep
+  tier: sci_journal
+  rationale: Established sleep-medicine journal.
+- name: Sleep Medicine
+  tier: sci_journal
+  rationale: Established sleep medicine journal.
+- name: Statistical Methods in Medical Research
+  tier: sci_journal
+  rationale: Established medical-statistics journal.
+- name: Statistical Science
+  tier: sci_journal
+  rationale: Leading review and methodology journal.
+- name: Statistics in Medicine
+  tier: sci_journal
+  rationale: Leading biostatistics journal.
+- name: The Econometrics Journal
+  tier: sci_journal
+  rationale: Peer-reviewed econometrics methodology journal.
+- name: The Lancet
+  tier: sci_journal
+  rationale: Leading clinical medicine journal.
+- name: The Lancet Digital Health
+  tier: sci_journal
+  rationale: Leading digital-health journal.
+- name: The Lancet Neurology
+  tier: sci_journal
+  rationale: Leading neurology journal.
+- name: Transactions on Machine Learning Research
+  tier: sci_journal
+  rationale: Selective open-review machine-learning journal.
+- name: Trials
+  tier: sci_journal
+  rationale: Peer-reviewed clinical-trial methods journal.
+- name: AAAI
+  tier: top_conference
+  rationale: Top general AI conference.
+- name: ACL
+  tier: top_conference
+  rationale: Top computational linguistics conference.
+- name: AISTATS
+  tier: top_conference
+  rationale: Top statistics and machine-learning conference.
+- name: CHI
+  tier: top_conference
+  rationale: Top human-computer interaction conference.
+- name: CIKM
+  tier: top_conference
+  rationale: Top knowledge-management and data-mining conference.
+- name: COLT
+  tier: top_conference
+  rationale: Top learning-theory conference.
+- name: ECML PKDD
+  tier: top_conference
+  rationale: Leading European machine-learning and data-mining conference.
+- name: EMNLP
+  tier: top_conference
+  rationale: Top empirical NLP conference.
+- name: FAccT
+  tier: top_conference
+  rationale: Flagship conference on fairness, accountability and transparency.
+- name: ICDM
+  tier: top_conference
+  rationale: Leading data-mining conference.
+- name: ICLR
+  tier: top_conference
+  rationale: Top representation-learning conference.
+- name: ICML
+  tier: top_conference
+  rationale: Top machine-learning conference.
+- name: IJCAI
+  tier: top_conference
+  rationale: Top general artificial-intelligence conference.
+- name: IPSN
+  tier: top_conference
+  rationale: Top information-processing in sensor networks conference.
+- name: KDD
+  tier: top_conference
+  rationale: Top data-mining conference.
+- name: MobiSys
+  tier: top_conference
+  rationale: Top mobile systems conference.
+- name: NeurIPS
+  tier: top_conference
+  rationale: Top machine-learning conference.
+- name: SenSys
+  tier: top_conference
+  rationale: Top networked sensing systems conference.
