@@ -222,13 +222,34 @@
       "format": "uri"
     },
     "open_code": {
-      "type": "boolean"
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": "unknown"
+        }
+      ]
     },
     "open_weights": {
-      "type": "boolean"
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": "unknown"
+        }
+      ]
     },
     "open_data": {
-      "type": "boolean"
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": "unknown"
+        }
+      ]
     },
     "verification_status": {
       "enum": [
@@ -315,6 +336,10 @@
     },
     "negative_or_null_result": {
       "type": "boolean"
+    },
+    "weights_url": {
+      "type": "string",
+      "format": "uri"
     }
   }
 }

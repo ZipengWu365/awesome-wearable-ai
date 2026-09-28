@@ -1,0 +1,487 @@
+- id: method-dt-health-scoping
+  title: 'Digital twins for health: a scoping review'
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities: []
+  body_locations: []
+  clinical_domains:
+  - framework
+  populations: []
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: prediction
+  study_design: review_or_framework
+  evidence_stage: methodological
+  causal_status: not-applicable
+  contribution: Scoping review of health digital-twin applications and infrastructure.
+  why_it_matters: Landscape and limitations, rather than a new wearable validation cohort.
+  limitations: Only wearable-relevant concepts are mapped; the entire healthcare DT literature is not relabeled
+    wearable evidence.
+  evidence_boundary: Only wearable-relevant concepts are mapped; the entire healthcare DT literature is not relabeled
+    wearable evidence.
+  primary_url: https://www.nature.com/articles/s41746-024-01073-0
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - framework
+  - conceptual_framework
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1038/s41746-024-01073-0
+- id: method-dt-lhmf
+  title: Establishing the longitudinal hemodynamic mapping framework for wearable-driven coronary digital twins
+  year: 2024
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart_rate
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: numerical_verification
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Longitudinal coronary CFD with reusable hemodynamic units and clustering.
+  why_it_matters: Compared with explicit numerical simulations; long-horizon reconstruction.
+  limitations: Numerical agreement and long-duration simulation do not establish prospective disease prediction
+    or treatment benefit.
+  evidence_boundary: Numerical agreement and long-duration simulation do not establish prospective disease prediction
+    or treatment benefit.
+  primary_url: https://www.nature.com/articles/s41746-024-01216-3
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - cardiovascular
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1038/s41746-024-01216-3
+- id: method-dt-wpinn
+  title: Cardiovascular digital twins using a Windkessel physics informed neural network
+  year: 2026
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - bioimpedance
+  body_locations: []
+  clinical_domains:
+  - cardiovascular
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: measurement_comparison, numerical_verification
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Windkessel physics-informed neural network for cardiovascular parameter estimation.
+  why_it_matters: Human blood-pressure reconstruction/prediction was evaluated using separate ring and wrist bioimpedance
+    protocols; recovery of cardiovascular model parameters was additionally tested on synthetic data. The synthetic
+    parameter-recovery experiment is not direct human ground-truth validation of those internal parameters.
+  limitations: Parameter fitting needs its own identifiability checks; ring and wrist evidence are retained separately.
+  evidence_boundary: Parameter fitting needs its own identifiability checks; ring and wrist evidence are retained
+    separately.
+  primary_url: https://www.nature.com/articles/s41746-026-02610-9
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - cardiovascular
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1038/s41746-026-02610-9
+- id: method-dt-bone-stress
+  title: Integrating personalized shape prediction, biomechanical modeling, and wearables for bone stress prediction
+    in runners
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - accelerometer
+  - gyroscope
+  - magnetometer
+  body_locations: []
+  clinical_domains:
+  - musculoskeletal
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: measurement_comparison, numerical_verification
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Personalized foot shape and finite-element modeling with a domain-adapted LSTM surrogate.
+  why_it_matters: Model and surrogate agreement under the reported running protocol.
+  limitations: Predicted stress is not directly measured internal stress or prospectively validated fracture prevention.
+  evidence_boundary: Predicted stress is not directly measured internal stress or prospectively validated fracture
+    prevention.
+  primary_url: https://www.nature.com/articles/s41746-025-01677-0
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - musculoskeletal
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1038/s41746-025-01677-0
+- id: method-dt-bladder-electrodes
+  title: Digital twin driven electrode optimization for wearable bladder monitoring via bioimpedance
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - bioimpedance
+  body_locations: []
+  clinical_domains:
+  - bladder_sensor_design
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: numerical_verification
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Radiology-derived conductivity model for electrode placement and bladder-volume simulation.
+  why_it_matters: In-silico electrode sensitivity and volume-estimation evaluation.
+  limitations: The evaluated action is sensor design; no reduction in heart-failure admission or mortality is demonstrated.
+  evidence_boundary: The evaluated action is sensor design; no reduction in heart-failure admission or mortality
+    is demonstrated.
+  primary_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11782588/
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - bladder_sensor_design
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1038/s41746-025-01441-4
+- id: method-dt-uva-replay-validation
+  title: 'Validation of the UVA Simulation Replay Methodology Using Clinical Data: Reproducing a Randomized Clinical
+    Trial'
+  year: 2024
+  venue: Diabetes Technology & Therapeutics
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  body_locations: []
+  clinical_domains:
+  - metabolic
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: trial_data_replay
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Replay simulators fitted to randomized crossover trial data.
+  why_it_matters: Several glycemic metrics met equivalence; time below range failed equivalence.
+  limitations: Reusing randomized data validates particular simulated outcomes; this paper is not a new randomized
+    deployment of the replay tool.
+  evidence_boundary: Reusing randomized data validates particular simulated outcomes; this paper is not a new randomized
+    deployment of the replay tool.
+  primary_url: https://journals.sagepub.com/doi/10.1089/dia.2023.0595
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - metabolic
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1089/dia.2023.0595
+- id: method-dt-exercise-dss
+  title: Design and In Silico Evaluation of an Exercise Decision Support System Using Digital Twin Models
+  year: 2024
+  venue: Journal of Diabetes Science and Technology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  - heart_rate
+  body_locations: []
+  clinical_domains:
+  - metabolic
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: numerical_verification
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Glucoregulatory exercise digital twins for testing exercise decision support.
+  why_it_matters: Primary time-below-range outcome did not improve over guidelines; secondary time-in-range improved
+    in simulation.
+  limitations: Observed source data do not turn simulated policy outcomes into prospective intervention evidence.
+  evidence_boundary: Observed source data do not turn simulated policy outcomes into prospective intervention evidence.
+  primary_url: https://journals.sagepub.com/doi/10.1177/19322968231223217
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - metabolic
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1177/19322968231223217
+- id: intervention-dt-studia
+  title: 'A digital twin-enhanced decision support system improves time-in-range in type 1 diabetes: a randomized
+    clinical trial'
+  year: 2025
+  venue: Scientific Reports
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: intervention
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  body_locations: []
+  clinical_domains:
+  - metabolic
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: clinical-evaluation
+  study_design: randomized_intervention
+  evidence_stage: randomized-controlled-trial
+  causal_status: randomized-causal-effect
+  contribution: STUDIA digital-twin-enhanced bolus decision support.
+  why_it_matters: Trial reported improved time in range for the tested support system.
+  limitations: Small short-term system-level trial; no isolated twin-component effect or long-term disease benefit
+    established.
+  evidence_boundary: Small short-term system-level trial; no isolated twin-component effect or long-term disease
+    benefit established.
+  primary_url: https://www.nature.com/articles/s41598-025-23165-x
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - metabolic
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1038/s41598-025-23165-x
+  outcome_status: Trial reported improved time in range for the tested support system. Small short-term system-level
+    trial; no isolated twin-component effect or long-term disease benefit established.
+  negative_or_null_result: false
+- id: method-dt-replaybg-web
+  title: 'ReplayBG-Web: A Novel Web Interface to Ease the Creation and Use of Digital Twins for Type 1 Diabetes'
+  year: 2026
+  venue: Journal of Diabetes Science and Technology
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - cgm
+  body_locations: []
+  clinical_domains:
+  - metabolic
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: software_interface
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: Web interface for personal ReplayBG model creation and what-if replay.
+  why_it_matters: Software/interface contribution; no clinical outcome validation inferred.
+  limitations: Usability or access improvements do not validate the safety of therapy recommendations.
+  evidence_boundary: Usability or access improvements do not validate the safety of therapy recommendations.
+  primary_url: https://journals.sagepub.com/doi/10.1177/19322968261481540
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - metabolic
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1177/19322968261481540
+- id: method-dt-synthetic-sharing
+  title: Medical data sharing and synthetic clinical data generation – maximizing biomedical resource utilization
+    and minimizing participant re-identification risks
+  year: 2025
+  venue: npj Digital Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - heart_rate
+  - steps
+  body_locations: []
+  clinical_domains:
+  - synthetic_data
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: synthetic_privacy_utility
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: DataSifter and synthetic-data generation for wearable-linked clinical data sharing.
+  why_it_matters: Privacy–utility and re-identification-risk evaluations.
+  limitations: Synthetic-twin terminology does not establish personal counterfactual dynamics or guaranteed anonymity.
+  evidence_boundary: Synthetic-twin terminology does not establish personal counterfactual dynamics or guaranteed
+    anonymity.
+  primary_url: https://www.nature.com/articles/s41746-025-01935-1
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - synthetic_data
+  - synthetic_data_analogue
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1038/s41746-025-01935-1
+- id: method-dt-lung
+  title: Digital Twin of the Lung from Wearable Biosignals for Real-Time Respiratory Monitoring
+  year: 2026
+  venue: MICCAI
+  venue_type: conference
+  venue_tier: domain_leading_conference
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - ecg
+  body_locations: []
+  clinical_domains:
+  - respiratory
+  populations: []
+  wearable_scope: cross-domain-enabler
+  lifecycle_stage: prediction
+  study_design: measurement_comparison
+  evidence_stage: methodological
+  causal_status: not-causal
+  contribution: ECG-derived respiration drives a CT-based lung-motion representation.
+  why_it_matters: Respiratory-rate evaluation; direct quantitative dynamic mesh validation remains limited.
+  limitations: Wearable-oriented title does not establish a wrist-worn prospective deployment or validated personalized
+    lung mechanics.
+  evidence_boundary: Wearable-oriented title does not establish a wrist-worn prospective deployment or validated
+    personalized lung mechanics.
+  primary_url: https://papers.miccai.org/miccai-2026/0280-Paper5574.html
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - respiratory
+  - reported_twin
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+- id: method-motr
+  title: Model-Twin Randomization (MoTR) for Estimating the Recurring Individual Treatment Effect
+  year: 2025
+  venue: Statistics in Medicine
+  venue_type: journal
+  venue_tier: sci_journal
+  record_type: method
+  family: digital-twins
+  inclusion_basis: peer_reviewed_publication
+  modalities:
+  - steps
+  - sleep_summary
+  body_locations: []
+  clinical_domains:
+  - behavioral
+  populations: []
+  wearable_scope: wearable-core
+  lifecycle_stage: prediction
+  study_design: retrospective_prediction
+  evidence_stage: methodological
+  causal_status: causal-identification
+  contribution: Model Twin Randomization for within-person longitudinal effects.
+  why_it_matters: Simulations and the authors’ longitudinal Fitbit step/sleep histories. This is a cross-link to
+    the preserved v1.1 annotation, not a fresh full-text review.
+  limitations: Model Twin Randomization is a causal-method connection, not evidence of a continuously synchronized
+    digital-twin system.
+  evidence_boundary: Model Twin Randomization is a causal-method connection, not evidence of a continuously synchronized
+    digital-twin system.
+  primary_url: https://onlinelibrary.wiley.com/doi/10.1002/sim.70290
+  open_code: unknown
+  open_weights: unknown
+  open_data: unknown
+  verification_status: primary_source_checked
+  evidence_depth: metadata_verified
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - behavioral
+  - method_enabler
+  source_note: Publication identity checked on the publisher/proceedings page on 2026-09-28. The imported thematic
+    appraisal retains its own scope and provenance; this is not independent replication or a new full-text appraisal.
+  doi: 10.1002/sim.70290

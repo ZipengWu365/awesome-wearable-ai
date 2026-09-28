@@ -1,0 +1,1199 @@
+[
+  {
+    "id": "s-uci-har",
+    "url": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+    "title": "UCI HAR (windowed edition)",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-hapt",
+    "url": "https://archive.ics.uci.edu/dataset/341/smartphone+based+recognition+of+human+activities+and+postural+transitions",
+    "title": "HAPT",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-pamap2",
+    "url": "https://archive.ics.uci.edu/dataset/231/pamap2+physical+activity+monitoring",
+    "title": "PAMAP2",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-opportunity",
+    "url": "https://archive.ics.uci.edu/dataset/226/opportunity+activity+recognition",
+    "title": "OPPORTUNITY",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-wisdm-watch",
+    "url": "https://archive.ics.uci.edu/dataset/507/wisdm+smartphone+and+smartwatch+activity+and+biometrics+dataset",
+    "title": "WISDM Smartphone and Smartwatch",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-wesad",
+    "url": "https://archive.ics.uci.edu/dataset/465/wesad+wearable+stress+and+affect+detection",
+    "title": "WESAD",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-ppg-dalia",
+    "url": "https://archive.ics.uci.edu/dataset/495/ppg+dalia",
+    "title": "PPG-DaLiA",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-mhealth",
+    "url": "https://archive.ics.uci.edu/dataset/319/mhealth+dataset",
+    "title": "MHEALTH",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-hhar",
+    "url": "https://archive.ics.uci.edu/dataset/344/heterogeneity+activity+recognition",
+    "title": "HHAR",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-daphnet",
+    "url": "https://archive.ics.uci.edu/dataset/245/daphnet+freezing+of+gait",
+    "title": "Daphnet Freezing of Gait",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-realdisp",
+    "url": "https://archive.ics.uci.edu/dataset/305/realdisp+activity+recognition+dataset",
+    "title": "REALDISP",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-harth",
+    "url": "https://archive.ics.uci.edu/dataset/779/harth",
+    "title": "HARTH",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-har70",
+    "url": "https://archive.ics.uci.edu/dataset/780/har70",
+    "title": "HAR70+",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-capture24",
+    "url": "https://www.nature.com/articles/s41597-024-03960-3",
+    "title": "CAPTURE-24",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-ukb-accelerometry",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0169649",
+    "title": "UK Biobank accelerometry (2017 analysis)",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-nhanes-0304",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/PAXRAW_C.htm",
+    "title": "NHANES 2003–2004 minute counts",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-nhanes-0506",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PAXRAW_D.htm",
+    "title": "NHANES 2005–2006 minute counts",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-nhanes-1112",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAX80_G.htm",
+    "title": "NHANES 2011–2012 raw accelerometry",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-nhanes-1314",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAX80_H.htm",
+    "title": "NHANES 2013–2014 raw accelerometry",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-nhanes-mims-1112",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXMIN_G.htm",
+    "title": "NHANES 2011–2012 MIMS summaries",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-allofus-fitbit-v8",
+    "url": "https://www.nature.com/articles/s41591-026-04352-3",
+    "title": "All of Us Fitbit (CDR v8)",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-allofus-api",
+    "url": "https://support.researchallofus.org/hc/en-us/articles/20281023493908-Resources-for-Using-Fitbit-Data",
+    "title": "All of Us Fitbit data types",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-sleep-edf-expanded",
+    "url": "https://physionet.org/content/sleep-edfx/1.0.0/",
+    "title": "Sleep-EDF Expanded",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-ptb-xl",
+    "url": "https://physionet.org/content/ptb-xl/1.0.3/",
+    "title": "PTB-XL",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-wrist-ppg-exercise",
+    "url": "https://physionet.org/content/wrist/1.0.0/",
+    "title": "Wrist PPG During Exercise",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-bidmc-ppg",
+    "url": "https://physionet.org/content/bidmc/1.0.0/",
+    "title": "BIDMC PPG and Respiration",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-motion-sense",
+    "url": "https://github.com/mmalekzadeh/motion-sense",
+    "title": "MotionSense",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-realworld",
+    "url": "https://www.uni-mannheim.de/dws/research/projects/activity-recognition/dataset/dataset-realworld/",
+    "title": "RealWorld HAR",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-gait-pd",
+    "url": "https://physionet.org/content/gaitpdb/1.0.0/",
+    "title": "Gait in Parkinson’s Disease",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-mit-bih",
+    "url": "https://physionet.org/content/mitdb/1.0.0/",
+    "title": "MIT-BIH Arrhythmia",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-apnea-ecg",
+    "url": "https://physionet.org/content/apnea-ecg/1.0.0/",
+    "title": "Apnea-ECG",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-deepconvlstm",
+    "url": "https://github.com/STRCWearlab/DeepConvLSTM",
+    "title": "DeepConvLSTM — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-harnet",
+    "url": "https://github.com/OxWearables/ssl-wearables",
+    "title": "HARNet / ssl-wearables — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-relcon",
+    "url": "https://github.com/maxxu05/relcon",
+    "title": "RelCon — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-normwear",
+    "url": "https://github.com/Mobile-Sensing-and-UbiComp-Laboratory/NormWear",
+    "title": "NormWear — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-papagei",
+    "url": "https://github.com/Nokia-Bell-Labs/papagei-foundation-model",
+    "title": "PaPaGei — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-selfpab",
+    "url": "https://github.com/ntnu-ai-lab/SelfPAB",
+    "title": "SelfPAB — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-monoselfpab",
+    "url": "https://github.com/ntnu-ai-lab/SelfPAB",
+    "title": "MonoSelfPAB — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-lta2v",
+    "url": "https://github.com/ntnu-ai-lab/SelfPAB",
+    "title": "LTA2V — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-limubert",
+    "url": "https://github.com/dapowan/LIMU-BERT-Public",
+    "title": "LIMU-BERT — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-crossl",
+    "url": "https://github.com/Nokia-Bell-Labs/CroSSL",
+    "title": "CroSSL — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-imu2clip",
+    "url": "https://github.com/facebookresearch/imu2clip",
+    "title": "IMU2CLIP — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-sensorlm",
+    "url": "https://arxiv.org/abs/2506.09108",
+    "title": "SensorLM — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-unimts",
+    "url": "https://github.com/xiyuanzh/UniMTS",
+    "title": "UniMTS — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-sensorllm",
+    "url": "https://github.com/cruiseresearchgroup/SensorLLM",
+    "title": "SensorLLM — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-labram",
+    "url": "https://github.com/935963004/LaBraM",
+    "title": "LaBraM — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-eegpt",
+    "url": "https://github.com/BINE022/EEGPT",
+    "title": "EEGPT — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-cbramod",
+    "url": "https://github.com/wjq-learning/CBraMod",
+    "title": "CBraMod — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-biot",
+    "url": "https://github.com/ycq091044/BIOT",
+    "title": "BIOT — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-eegnet",
+    "url": "https://github.com/vlawhern/arl-eegmodels",
+    "title": "EEGNet — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-bendr",
+    "url": "https://github.com/SPOClab-ca/BENDR",
+    "title": "BENDR — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-utime",
+    "url": "https://github.com/perslev/U-Time",
+    "title": "U-Time — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-usleep",
+    "url": "https://github.com/perslev/U-Time",
+    "title": "U-Sleep — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-deepsleepnet",
+    "url": "https://github.com/akaraspt/deepsleepnet",
+    "title": "DeepSleepNet — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-tinysleepnet",
+    "url": "https://github.com/akaraspt/tinysleepnet",
+    "title": "TinySleepNet — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-seqsleepnet",
+    "url": "https://github.com/pquochuy/SeqSleepNet",
+    "title": "SeqSleepNet — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-attnsleep",
+    "url": "https://github.com/emadeldeen24/AttnSleep",
+    "title": "AttnSleep — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-sleeptransformer",
+    "url": "https://github.com/pquochuy/SleepTransformer",
+    "title": "SleepTransformer — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-sleepfm",
+    "url": "https://github.com/zou-group/sleepfm-clinical",
+    "title": "SleepFM — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-gluformer",
+    "url": "https://github.com/Guylu/GluFormer",
+    "title": "GluFormer — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-glucofm",
+    "url": "https://arxiv.org/abs/2605.30865",
+    "title": "GlucoFM — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-model-deepsleepnetlite",
+    "url": "https://github.com/biomedical-signal-processing/deepsleepnet-lite",
+    "title": "DeepSleepNet-Lite — author source",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-ggir",
+    "url": "https://github.com/wadpac/GGIR",
+    "title": "GGIR — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-actipy",
+    "url": "https://github.com/OxWearables/actipy",
+    "title": "actipy — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-biobank-acc",
+    "url": "https://github.com/OxWearables/biobankAccelerometerAnalysis",
+    "title": "biobankAccelerometerAnalysis — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-stepcount",
+    "url": "https://github.com/OxWearables/stepcount",
+    "title": "stepcount — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-asleep",
+    "url": "https://github.com/OxWearables/asleep",
+    "title": "asleep — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-neurokit",
+    "url": "https://github.com/neuropsychology/NeuroKit",
+    "title": "NeuroKit2 — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-biosppy",
+    "url": "https://github.com/PIA-Group/BioSPPy",
+    "title": "BioSPPy — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-heartpy",
+    "url": "https://github.com/paulvangentcom/heartrate_analysis_python",
+    "title": "HeartPy — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-mne",
+    "url": "https://github.com/mne-tools/mne-python",
+    "title": "MNE-Python — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-wfdb",
+    "url": "https://github.com/MIT-LCP/wfdb-python",
+    "title": "WFDB-Python — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-yasa",
+    "url": "https://github.com/raphaelvallat/yasa",
+    "title": "YASA — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-braindecode",
+    "url": "https://github.com/braindecode/braindecode",
+    "title": "Braindecode — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-pyactigraphy",
+    "url": "https://github.com/ghammad/pyActigraphy",
+    "title": "pyActigraphy — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-openmovement",
+    "url": "https://github.com/openmovementproject/openmovement",
+    "title": "OpenMovement — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-tsfel",
+    "url": "https://github.com/fraunhoferportugal/tsfel",
+    "title": "TSFEL — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-tsfresh",
+    "url": "https://github.com/blue-yonder/tsfresh",
+    "title": "tsfresh — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-pyedflib",
+    "url": "https://github.com/holgern/pyedflib",
+    "title": "pyEDFlib — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-pyhrv",
+    "url": "https://github.com/PGomes92/pyhrv",
+    "title": "pyHRV — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-sleepecg",
+    "url": "https://github.com/cbrnr/sleepecg",
+    "title": "SleepECG — official repository",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-tool-capture24",
+    "url": "https://github.com/OxWearables/capture24",
+    "title": "CAPTURE-24 author benchmark code",
+    "kind": "primary_resource",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-paper-capture24",
+    "url": "https://www.nature.com/articles/s41597-024-03960-3",
+    "title": "CAPTURE-24: A large dataset of wrist-worn activity tracker data collected in the wild for human activity recognition",
+    "kind": "primary_paper",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-paper-ukb",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0169649",
+    "title": "Large Scale Population Assessment of Physical Activity Using Wrist Worn Accelerometers: The UK Biobank Study",
+    "kind": "primary_paper",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-paper-allofus",
+    "url": "https://www.nature.com/articles/s41591-026-04352-3",
+    "title": "The All of Us Research Program’s wearables dataset",
+    "kind": "primary_paper",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-paper-v3",
+    "url": "https://www.nature.com/articles/s41746-020-0260-4",
+    "title": "Verification, analytical validation, and clinical validation (V3): the foundation of determining fit-for-purpose for Biometric Monitoring Technologies (BioMeTs)",
+    "kind": "primary_paper",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-paper-digital-health",
+    "url": "https://www.nature.com/articles/s41746-024-01023-w",
+    "title": "Walk, talk, think, see and feel: harnessing the power of digital biomarkers in healthcare",
+    "kind": "primary_paper",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-paper-har-fm-survey",
+    "url": "https://github.com/zhaxidele/Foundation-Models-Defining-A-New-Era-In-Human-Activity-Recognition",
+    "title": "Foundation Models Defining a New Era in Human Activity Recognition: A Survey and Outlook",
+    "kind": "primary_paper",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "s-paper-generalizable-har",
+    "url": "https://arxiv.org/abs/2508.12213",
+    "title": "Towards Generalizable Human Activity Recognition: A Survey",
+    "kind": "primary_paper",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Relevant metadata sections checked; not a full methodological or clinical appraisal."
+  },
+  {
+    "id": "causal-src-daza-nof1",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29621835/",
+    "title": "Causal Analysis of Self-tracked Time Series Data Using a Counterfactual Framework for N-of-1 Trials",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-motr",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/sim.70290",
+    "title": "Model-Twin Randomization (MoTR) for Estimating the Recurring Individual Treatment Effect",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher HTML abstract, bibliographic metadata and data-availability statement checked. Code is author-linked; it was not executed."
+  },
+  {
+    "id": "causal-src-cai-nonstationary",
+    "url": "https://academic.oup.com/biostatistics/article/27/1/kxag014/8740156",
+    "title": "Causal estimands and identification of time-varying effects in nonstationary time series from N-of-1 mobile device data",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-crn",
+    "url": "https://www.turing.ac.uk/news/publications/estimating-counterfactual-treatment-outcomes-over-time-through-adversarially",
+    "title": "Estimating Counterfactual Treatment Outcomes over Time Through Adversarially Balanced Representations",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Author-institution publication record confirms ICLR 2020; primary abstract checked. Wearable applicability is curatorial transfer, not reported wrist validation."
+  },
+  {
+    "id": "causal-src-causal-transformer",
+    "url": "https://proceedings.mlr.press/v162/melnychuk22a.html",
+    "title": "Causal Transformer for Estimating Counterfactual Outcomes",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-causal-recourse",
+    "url": "https://machinelearning.uni-saarland.de/isabel-valera/",
+    "title": "Algorithmic Recourse: from Counterfactual Explanations to Interventions",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Author university publication list verifies FAccT 2021 and DOI; original arXiv abstract checked for the explanation-versus-action distinction."
+  },
+  {
+    "id": "causal-src-recourse-abstract",
+    "url": "https://arxiv.org/abs/2002.06278",
+    "title": "Algorithmic Recourse: original abstract",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; no independent replication or full risk-of-bias appraisal."
+  },
+  {
+    "id": "causal-src-confetti",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38792",
+    "title": "Counterfactual eXplainable AI (XAI) Method for Deep Learning-Based Multivariate Time Series Classification",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-walking-fingerprinting",
+    "url": "https://academic.oup.com/jrsssc/article/73/5/1221/7723356",
+    "title": "Walking fingerprinting",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary HTML methods and dataset sections checked: analyses use wrist streams from IU and ZJU. Source-linked code not executed."
+  },
+  {
+    "id": "causal-src-wearable-reidentification",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30646312/",
+    "title": "Feasibility of Reidentifying Individuals in Large National Physical Activity Data Sets From Which Protected Health Information Has Been Removed With Use of Machine Learning",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-steps-chronic-disease",
+    "url": "https://www.nature.com/articles/s41591-022-02012-w",
+    "title": "Association of step counts over time with the risk of chronic disease in the All of Us Research Program",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-pd-prodromal",
+    "url": "https://www.nature.com/articles/s41591-023-02440-2",
+    "title": "Wearable movement-tracking data identify Parkinson’s disease years before clinical diagnosis",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher-indexed abstract and author/DOI metadata checked; direct publisher navigation intermittently failed. No full-text appraisal claimed."
+  },
+  {
+    "id": "causal-src-mrt-design",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26651463/",
+    "title": "Microrandomized trials: An experimental design for developing just-in-time adaptive interventions",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-heartsteps-mrt",
+    "url": "https://academic.oup.com/abm/article/53/6/573/5091257",
+    "title": "Efficacy of Contextually Tailored Suggestions for Physical Activity: A Micro-randomized Optimization Trial of HeartSteps",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-action-centered",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29225449/",
+    "title": "Action Centered Contextual Bandits",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-intelligentpooling",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34621105/",
+    "title": "IntelligentPooling: Practical Thompson Sampling for mHealth",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-jitai-review-2026",
+    "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-psych-121024-044244",
+    "title": "Just-in-Time Adaptive Interventions: Where Are We Now and What Is Next?",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-pearl",
+    "url": "https://preprints.jmir.org/preprint/91156/accepted",
+    "title": "A Personalized Exercise Assistant using Reinforcement Learning (PEARL): Results from a Large-Scale Mobile Health Randomized-Controlled Trial",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher-indexed accepted abstract and acceptance status checked; direct page rendering restricted. No manuscript redistributed and no full-text appraisal claimed."
+  },
+  {
+    "id": "causal-src-mybpmylife",
+    "url": "https://www.nature.com/articles/s41746-025-01844-3",
+    "title": "Physical activity and diet just-in-time adaptive intervention to reduce blood pressure: a randomized controlled trial",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary HTML abstract, intervention, measurement and outcome sections checked; BP cuff and Fitbit roles kept distinct."
+  },
+  {
+    "id": "causal-src-control-iq-rct",
+    "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa1907863",
+    "title": "Six-Month Randomized, Multicenter Trial of Closed-Loop Control in Type 1 Diabetes",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary abstract and bibliographic metadata checked; bounded classification, not replication or a complete methods appraisal."
+  },
+  {
+    "id": "causal-src-digital-twin-aid",
+    "url": "https://www.nature.com/articles/s41746-025-01679-y",
+    "title": "Human-machine co-adaptation to automated insulin delivery: a randomised clinical trial using digital twin technology",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher-indexed HTML abstract and methods/outcomes sections checked; direct navigation intermittently failed."
+  },
+  {
+    "id": "causal-src-watch-walking-nhanes",
+    "url": "https://arxiv.org/abs/2506.17160",
+    "title": "Walking Fingerprinting Using Wrist Accelerometry During Activities of Daily Living in NHANES",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Original arXiv abstract checked; publication and clinical-effect claims remain bounded. No full-method appraisal."
+  },
+  {
+    "id": "causal-src-watch-evomorph",
+    "url": "https://arxiv.org/abs/2601.10356",
+    "title": "EvoMorph: Counterfactual Explanations for Continuous Time-Series Extrinsic Regression Applied to Photoplethysmography",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Original arXiv abstract checked; publication and clinical-effect claims remain bounded. No full-method appraisal."
+  },
+  {
+    "id": "causal-src-watch-metaplate",
+    "url": "https://arxiv.org/abs/2606.10120",
+    "title": "MetaPlate: Counterfactual-Guided RAG-LLM Tool for Personalized Food Recommendation and Hyperglycemia Prevention",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Original arXiv abstract checked; publication and clinical-effect claims remain bounded. No full-method appraisal."
+  },
+  {
+    "id": "dt-src-body-roadmap",
+    "url": "https://www.nature.com/articles/s44287-024-00025-w",
+    "title": "A roadmap for the development of human body digital twins",
+    "kind": "primary_review",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, key points and bibliographic metadata; full review not available in the retrieved preview."
+  },
+  {
+    "id": "dt-src-health-scoping",
+    "url": "https://www.nature.com/articles/s41746-024-01073-0",
+    "title": "Digital twins for health: a scoping review",
+    "kind": "primary_review",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, application sections, limitations and conclusion. Author list checked against the primary publisher page during the final metadata pass."
+  },
+  {
+    "id": "dt-src-wearables-review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11200512/",
+    "title": "Digital Twins for Healthcare Using Wearables",
+    "kind": "primary_review",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary PMC article: bibliographic metadata, review scope and no-new-data statement."
+  },
+  {
+    "id": "dt-src-nmsk-framework",
+    "url": "https://doi.org/10.1123/jab.2023-0114",
+    "title": "A Digital Twin Framework for Precision Neuromusculoskeletal Health Care: Extension Upon Industrial Standards",
+    "kind": "primary_review",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher full-text framework, functional entities and conclusion. Full author list is provided by the separately linked PubMed record."
+  },
+  {
+    "id": "dt-src-lhmf",
+    "url": "https://www.nature.com/articles/s41746-024-01216-3",
+    "title": "Establishing the longitudinal hemodynamic mapping framework for wearable-driven coronary digital twins",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, wearable-driven boundary conditions, discussion, data/code availability."
+  },
+  {
+    "id": "dt-src-wpinn",
+    "url": "https://www.nature.com/articles/s41746-026-02610-9",
+    "title": "Cardiovascular digital twins using a Windkessel physics informed neural network",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, ring/wrist study descriptions and data/code availability; human data are restricted."
+  },
+  {
+    "id": "dt-src-gait-lab",
+    "url": "https://www.cambridge.org/core/journals/wearable-technologies/article/wearable-gait-lab-powered-by-sensordriven-digital-twins-for-quantitative-biomechanical-analysis-poststroke/05C0872598A6602725105FA6EFE3C2EE",
+    "title": "A wearable gait lab powered by sensor-driven digital twins for quantitative biomechanical analysis post-stroke",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, experimental protocol and results. Author list checked against the primary publisher page during the final metadata pass."
+  },
+  {
+    "id": "dt-src-bone-stress",
+    "url": "https://www.nature.com/articles/s41746-025-01677-0",
+    "title": "Integrating personalized shape prediction, biomechanical modeling, and wearables for bone stress prediction in runners",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, model workflow, cohort description, discussion and metadata."
+  },
+  {
+    "id": "dt-src-bladder-electrodes",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11782588/",
+    "title": "Digital twin driven electrode optimization for wearable bladder monitoring via bioimpedance",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Primary PMC abstract, simulation methods and results; target clinical benefits are aspirations."
+  },
+  {
+    "id": "dt-src-replaybg",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37368794/",
+    "title": "ReplayBG: A Digital Twin-Based Methodology to Identify a Personalized Model From Type 1 Diabetes Data and Simulate Glucose Concentrations to Assess Alternative Therapies",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "PubMed indexed abstract and metadata; author documentation confirms calibration/replay workflow."
+  },
+  {
+    "id": "dt-src-uva-replay-validation",
+    "url": "https://journals.sagepub.com/doi/10.1089/dia.2023.0595",
+    "title": "Validation of the UVA Simulation Replay Methodology Using Clinical Data: Reproducing a Randomized Clinical Trial",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher structured abstract and metadata; full text restricted."
+  },
+  {
+    "id": "dt-src-exercise-dss",
+    "url": "https://journals.sagepub.com/doi/10.1177/19322968231223217",
+    "title": "Design and In Silico Evaluation of an Exercise Decision Support System Using Digital Twin Models",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, protocol, in-silico outcomes; categorized by publisher as Meeting Report."
+  },
+  {
+    "id": "dt-src-studia",
+    "url": "https://www.nature.com/articles/s41598-025-23165-x",
+    "title": "A digital twin-enhanced decision support system improves time-in-range in type 1 diabetes: a randomized clinical trial",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, trial design and discussion. Author list checked against the primary publisher page during the final metadata pass."
+  },
+  {
+    "id": "dt-src-replaybg-web",
+    "url": "https://journals.sagepub.com/doi/10.1177/19322968261481540",
+    "title": "ReplayBG-Web: A Novel Web Interface to Ease the Creation and Use of Digital Twins for Type 1 Diabetes",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher online-first page dated 27 August 2026, abstract and metadata."
+  },
+  {
+    "id": "dt-src-nurse-pdt",
+    "url": "https://www.nature.com/articles/s44401-026-00118-8",
+    "title": "Human-in-the-loop AI predictive digital twin to extend virtual precision diabetes care between visits",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, participant/device methods, group fine-tuning, weekly updates, outcomes and limitations; abstract/results p-value framing differs."
+  },
+  {
+    "id": "dt-src-synthetic-sharing",
+    "url": "https://www.nature.com/articles/s41746-025-01935-1",
+    "title": "Medical data sharing and synthetic clinical data generation – maximizing biomedical resource utilization and minimizing participant re-identification risks",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher abstract, Apple Watch cohort and synthesis/privacy evaluation sections."
+  },
+  {
+    "id": "dt-src-hydration",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2666518226000185",
+    "title": "Multi-modal human digital twin for hydration",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Publisher indexed abstract, sensor-use methods, modeling and limitations; full author metadata not captured."
+  },
+  {
+    "id": "dt-src-lung",
+    "url": "https://papers.miccai.org/miccai-2026/0280-Paper5574.html",
+    "title": "Digital Twin of the Lung from Wearable Biosignals for Real-Time Respiratory Monitoring",
+    "kind": "primary_research",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "Official MICCAI open-access abstract, BibTeX and open review/meta-review statements. Full paper not reviewed."
+  },
+  {
+    "id": "dt-src-jitai-twins",
+    "url": "https://arxiv.org/abs/2607.21403",
+    "title": "A Diffusion-Model Subpopulation Digital Twin for Mobile Health Deployment: A Case Study on the HeartSteps Intervention",
+    "kind": "preprint",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "arXiv abstract, authors and submission metadata; formal publication not verified. No claim of full-paper review."
+  },
+  {
+    "id": "dt-src-nmsk-pubmed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37567581/",
+    "title": "A Digital Twin Framework for Precision Neuromusculoskeletal Health Care: Extension Upon Industrial Standards",
+    "kind": "primary_review",
+    "accessed_on": "2026-09-28",
+    "verification_method": "web_read",
+    "note": "PubMed bibliographic record and abstract; used to complete the author list of the publisher-verified framework paper. No new study claimed."
+  }
+]

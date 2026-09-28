@@ -1,0 +1,69 @@
+[
+  {
+    "id": "watch-walking-nhanes",
+    "title": "Walking Fingerprinting Using Wrist Accelerometry During Activities of Daily Living in NHANES",
+    "url": "https://arxiv.org/abs/2506.17160",
+    "arxiv_id": "2506.17160",
+    "year": 2025,
+    "status": "preprint_watchlist",
+    "reason": "Highly relevant direct wrist/identity preprint; final publication was not verified in this pass.",
+    "evidence_boundary": "Top-1% candidate retrieval is not rank-1 identity accuracy. This work is not causal-intervention evidence.",
+    "source_ids": [
+      "causal-src-watch-walking-nhanes"
+    ],
+    "reviewed_on": "2026-09-28",
+    "record_id": "candidate-local-watch-walking-nhanes",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "id": "watch-evomorph",
+    "title": "EvoMorph: Counterfactual Explanations for Continuous Time-Series Extrinsic Regression Applied to Photoplethysmography",
+    "url": "https://arxiv.org/abs/2601.10356",
+    "arxiv_id": "2601.10356",
+    "year": 2026,
+    "status": "preprint_watchlist",
+    "reason": "Direct PPG counterfactual-explanation candidate; kept separate pending publication-status and full-method review.",
+    "evidence_boundary": "Morphologically plausible PPG edits alter model inputs; they do not establish feasible actions on a person or a treatment effect.",
+    "source_ids": [
+      "causal-src-watch-evomorph"
+    ],
+    "reviewed_on": "2026-09-28",
+    "record_id": "candidate-local-watch-evomorph",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "id": "watch-metaplate",
+    "title": "MetaPlate: Counterfactual-Guided RAG-LLM Tool for Personalized Food Recommendation and Hyperglycemia Prevention",
+    "url": "https://arxiv.org/abs/2606.10120",
+    "arxiv_id": "2606.10120",
+    "year": 2026,
+    "status": "preprint_watchlist",
+    "reason": "Wearable/CGM and food-recommendation preprint; not promoted to validated intervention evidence.",
+    "evidence_boundary": "Model what-if predictions and expert ratings are distinct from demonstrated glycemic improvement under assigned dietary interventions.",
+    "source_ids": [
+      "causal-src-watch-metaplate"
+    ],
+    "reviewed_on": "2026-09-28",
+    "record_id": "candidate-local-watch-metaplate",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "id": "dt-watch-jitai-twins",
+    "title": "A Diffusion-Model Subpopulation Digital Twin for Mobile Health Deployment: A Case Study on the HeartSteps Intervention",
+    "year": 2026,
+    "arxiv_id": "2607.21403",
+    "url": "https://arxiv.org/abs/2607.21403",
+    "publication_status": "preprint",
+    "application": "behavioral",
+    "entity": "subpopulation",
+    "source_ids": [
+      "dt-src-jitai-twins"
+    ],
+    "reviewed_on": "2026-09-28",
+    "reason": "Formal archival publication not verified in this pass; excluded from accepted resource and paper counts.",
+    "summary": "Conditional diffusion-based subpopulation simulator for HeartSteps deployment and policy exploration.",
+    "claim_boundary": "Subpopulation simulation is not an individual twin, and temporal consistency alone does not establish causal identification or clinical policy benefit.",
+    "record_id": "watch-jitai-diffusion-twins-2026",
+    "imported_from": "local-v1.2.0"
+  }
+]

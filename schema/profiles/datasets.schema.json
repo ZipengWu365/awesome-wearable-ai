@@ -1,0 +1,761 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Wearable AI datasets",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+      },
+      "scope_tier": {
+        "enum": [
+          "core",
+          "adjacent"
+        ]
+      },
+      "curation_level": {
+        "enum": [
+          "metadata_checked",
+          "evidence_appraised"
+        ]
+      },
+      "source_ids": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "field_sources": {
+        "type": "object",
+        "propertyNames": {
+          "enum": [
+            "id",
+            "scope_tier",
+            "curation_level",
+            "source_ids",
+            "field_sources",
+            "related_ids",
+            "added_on",
+            "last_verified",
+            "dataset_name",
+            "canonical_name",
+            "url",
+            "paper",
+            "year",
+            "domain",
+            "population",
+            "n_participants",
+            "age_range",
+            "country",
+            "device",
+            "device_type",
+            "body_location",
+            "sensor_modalities",
+            "accelerometer",
+            "gyroscope",
+            "ppg",
+            "ecg",
+            "eda",
+            "temperature",
+            "spo2",
+            "gps",
+            "sampling_frequency_hz",
+            "recording_duration",
+            "free_living_or_lab",
+            "longitudinal",
+            "raw_data_available",
+            "raw_accelerometer_available",
+            "labels_available",
+            "label_types",
+            "activity_labels",
+            "sleep_labels",
+            "health_outcomes",
+            "clinical_outcomes",
+            "ehr_linkage",
+            "genomics",
+            "mortality",
+            "disease_labels",
+            "task_types",
+            "access_type",
+            "license",
+            "controlled_access",
+            "data_size",
+            "status",
+            "notes",
+            "release_id",
+            "sample_scope",
+            "signal_level",
+            "acquisition_frequency_hz",
+            "total_hours",
+            "annotated_hours"
+          ]
+        },
+        "additionalProperties": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "related_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "added_on": {
+        "type": "string",
+        "format": "date"
+      },
+      "last_verified": {
+        "type": "string",
+        "format": "date"
+      },
+      "dataset_name": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "canonical_name": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "url": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "paper": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "year": {
+        "anyOf": [
+          {
+            "type": "integer",
+            "minimum": 0
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "domain": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "population": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "n_participants": {
+        "anyOf": [
+          {
+            "type": "integer",
+            "minimum": 0
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "age_range": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "country": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "device": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "device_type": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "body_location": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "sensor_modalities": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "accelerometer": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "gyroscope": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "ppg": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "ecg": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "eda": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "temperature": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "spo2": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "gps": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "sampling_frequency_hz": {
+        "anyOf": [
+          {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "recording_duration": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "free_living_or_lab": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "longitudinal": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "raw_data_available": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "raw_accelerometer_available": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "labels_available": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "label_types": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "activity_labels": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "sleep_labels": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "health_outcomes": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "clinical_outcomes": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "ehr_linkage": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "genomics": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "mortality": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "disease_labels": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "task_types": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "access_type": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "license": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "controlled_access": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "data_size": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "status": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "notes": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "release_id": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "sample_scope": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "signal_level": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "acquisition_frequency_hz": {
+        "anyOf": [
+          {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "total_hours": {
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "annotated_hours": {
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "scope_tier",
+      "curation_level",
+      "source_ids",
+      "field_sources",
+      "related_ids",
+      "added_on",
+      "last_verified",
+      "dataset_name",
+      "canonical_name",
+      "url",
+      "paper",
+      "year",
+      "domain",
+      "population",
+      "n_participants",
+      "age_range",
+      "country",
+      "device",
+      "device_type",
+      "body_location",
+      "sensor_modalities",
+      "accelerometer",
+      "gyroscope",
+      "ppg",
+      "ecg",
+      "eda",
+      "temperature",
+      "spo2",
+      "gps",
+      "sampling_frequency_hz",
+      "recording_duration",
+      "free_living_or_lab",
+      "longitudinal",
+      "raw_data_available",
+      "raw_accelerometer_available",
+      "labels_available",
+      "label_types",
+      "activity_labels",
+      "sleep_labels",
+      "health_outcomes",
+      "clinical_outcomes",
+      "ehr_linkage",
+      "genomics",
+      "mortality",
+      "disease_labels",
+      "task_types",
+      "access_type",
+      "license",
+      "controlled_access",
+      "data_size",
+      "status",
+      "notes",
+      "release_id",
+      "sample_scope",
+      "signal_level",
+      "acquisition_frequency_hz",
+      "total_hours",
+      "annotated_hours"
+    ],
+    "additionalProperties": false
+  }
+}

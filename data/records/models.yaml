@@ -2991,20 +2991,22 @@
     prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
   primary_url: https://proceedings.neurips.cc/paper_files/paper/2024/hash/c290d4373c495b2cad0625d6288260f0-Abstract-Conference.html
   open_code: false
-  open_weights: false
+  open_weights: true
   open_data: false
   verification_status: primary_source_checked
   evidence_depth: evidence_card
-  verified_on: '2026-09-02'
+  verified_on: '2026-09-28'
   tags:
   - cross-device
   - model
   - motion-imu-foundation-models
   - motion-time-series
   - unified-pretraining
-  source_note: Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
-    reference list; full risk-of-bias assessment is not implied.
+  source_note: 'Venue and bibliographic metadata checked against a primary publication page or a peer-reviewed review
+    reference list; full risk-of-bias assessment is not implied. Official model card checked on 2026-09-28: released
+    weights at https://huggingface.co/xiyuanz/UniMTS. NeurIPS 2024 publication retained.'
   short_name: UniMTS
+  weights_url: https://huggingface.co/xiyuanz/UniMTS
 - id: model-apple-wafm-2024
   title: Wearable Accelerometer Foundation Models for Health via Knowledge Distillation
   short_name: Apple WAFM

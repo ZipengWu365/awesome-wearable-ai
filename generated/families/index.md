@@ -28,6 +28,7 @@
 | [digital-measure-frameworks](digital-measure-frameworks.md) | 2 |
 | [digital-rehabilitation-and-pain](digital-rehabilitation-and-pain.md) | 4 |
 | [digital-screening-and-clinical-escalation](digital-screening-and-clinical-escalation.md) | 1 |
+| [digital-twins](digital-twins.md) | 12 |
 | [ecg-cardiac-foundation-models](ecg-cardiac-foundation-models.md) | 15 |
 | [eeg-neural-foundation-models](eeg-neural-foundation-models.md) | 14 |
 | [eeg-sleep-datasets](eeg-sleep-datasets.md) | 17 |

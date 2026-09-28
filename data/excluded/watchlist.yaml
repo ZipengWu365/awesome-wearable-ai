@@ -638,3 +638,108 @@
   tags:
   - contextual-bandit
   - jitai
+- id: watch-local-dt-body-roadmap
+  title: A roadmap for the development of human body digital twins
+  year: 2024
+  proposed_family: digital-twins
+  status: venue-unresolved
+  reason: Imported source-linked profile; venue is not yet in the repository eligibility whitelist.
+  primary_url: https://www.nature.com/articles/s44287-024-00025-w
+  review_action: Confirm primary publication and venue eligibility before promotion; retain the imported appraisal
+    scope.
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - imported-profile
+- id: watch-local-dt-wearables-review
+  title: Digital Twins for Healthcare Using Wearables
+  year: 2024
+  proposed_family: digital-twins
+  status: venue-unresolved
+  reason: Imported source-linked profile; venue is not yet in the repository eligibility whitelist.
+  primary_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11200512/
+  review_action: Confirm primary publication and venue eligibility before promotion; retain the imported appraisal
+    scope.
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - imported-profile
+- id: watch-local-dt-nmsk-framework
+  title: 'A Digital Twin Framework for Precision Neuromusculoskeletal Health Care: Extension Upon Industrial Standards'
+  year: 2023
+  proposed_family: digital-twins
+  status: venue-unresolved
+  reason: Imported source-linked profile; venue is not yet in the repository eligibility whitelist.
+  primary_url: https://doi.org/10.1123/jab.2023-0114
+  review_action: Confirm primary publication and venue eligibility before promotion; retain the imported appraisal
+    scope.
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - imported-profile
+- id: watch-local-dt-gait-lab
+  title: A wearable gait lab powered by sensor-driven digital twins for quantitative biomechanical analysis post-stroke
+  year: 2024
+  proposed_family: digital-twins
+  status: venue-unresolved
+  reason: Imported source-linked profile; venue is not yet in the repository eligibility whitelist.
+  primary_url: https://www.cambridge.org/core/journals/wearable-technologies/article/wearable-gait-lab-powered-by-sensordriven-digital-twins-for-quantitative-biomechanical-analysis-poststroke/05C0872598A6602725105FA6EFE3C2EE
+  review_action: Confirm primary publication and venue eligibility before promotion; retain the imported appraisal
+    scope.
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - imported-profile
+- id: watch-local-dt-replaybg
+  title: 'ReplayBG: A Digital Twin-Based Methodology to Identify a Personalized Model From Type 1 Diabetes Data
+    and Simulate Glucose Concentrations to Assess Alternative Therapies'
+  year: 2023
+  proposed_family: digital-twins
+  status: awaiting-primary-source
+  reason: Imported source-linked profile; primary publication could not be independently retrieved during this merge.
+  primary_url: https://pubmed.ncbi.nlm.nih.gov/37368794/
+  review_action: Confirm primary publication and venue eligibility before promotion; retain the imported appraisal
+    scope.
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - imported-profile
+- id: watch-local-dt-nurse-pdt
+  title: Human-in-the-loop AI predictive digital twin to extend virtual precision diabetes care between visits
+  year: 2026
+  proposed_family: digital-twins
+  status: venue-unresolved
+  reason: Imported source-linked profile; venue is not yet in the repository eligibility whitelist.
+  primary_url: https://www.nature.com/articles/s44401-026-00118-8
+  review_action: Confirm primary publication and venue eligibility before promotion; retain the imported appraisal
+    scope.
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - imported-profile
+- id: watch-local-dt-hydration
+  title: Multi-modal human digital twin for hydration
+  year: 2026
+  proposed_family: digital-twins
+  status: venue-unresolved
+  reason: Imported source-linked profile; venue is not yet in the repository eligibility whitelist.
+  primary_url: https://www.sciencedirect.com/science/article/pii/S2666518226000185
+  review_action: Confirm primary publication and venue eligibility before promotion; retain the imported appraisal
+    scope.
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - imported-profile
+- id: watch-local-walking-fingerprinting
+  title: Walking fingerprinting
+  year: 2024
+  proposed_family: digital-twins
+  status: venue-unresolved
+  reason: Imported source-linked profile; venue is not yet in the repository eligibility whitelist.
+  primary_url: https://academic.oup.com/jrsssc/article/73/5/1221/7723356
+  review_action: Confirm primary publication and venue eligibility before promotion; retain the imported appraisal
+    scope.
+  verified_on: '2026-09-28'
+  tags:
+  - digital-twin
+  - imported-profile

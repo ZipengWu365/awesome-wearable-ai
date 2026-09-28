@@ -19,6 +19,7 @@ RECORD_FILES = (
     "interventions.yaml",
     "measures.yaml",
     "infrastructure.yaml",
+    "digital_twins.yaml",
 )
 
 

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "url": {
+        "type": "string",
+        "pattern": "^https?://[^\\s]+$"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "kind": {
+        "type": "string",
+        "minLength": 1
+      },
+      "accessed_on": {
+        "type": "string",
+        "format": "date"
+      },
+      "verification_method": {
+        "enum": [
+          "web_read",
+          "api_metadata_read",
+          "maintainer_read"
+        ]
+      },
+      "note": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "id",
+      "url",
+      "title",
+      "kind",
+      "accessed_on",
+      "verification_method",
+      "note"
+    ],
+    "additionalProperties": false
+  }
+}

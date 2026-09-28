@@ -1,0 +1,946 @@
+[
+  {
+    "record_id": "watch-local-dt-body-roadmap",
+    "theme_role": "conceptual_framework",
+    "application": "framework",
+    "entity": "conceptual",
+    "layers": [
+      "function_variables",
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "wearable_context_proposed",
+    "personalization": "proposed",
+    "update_mode": "proposed",
+    "simulation_kind": "framework_only",
+    "execution": "proposed",
+    "evaluation": [
+      "review_or_framework"
+    ],
+    "causal_status": "not_applicable",
+    "model_mechanism": "Human-body twin development roadmap.",
+    "state_variables": [
+      "Multimodal physiological state"
+    ],
+    "action_space": [
+      "Proposed health decision support"
+    ],
+    "data_linkage": "Discusses wearable data integration; no new paired longitudinal cohort appraised.",
+    "time_scope": "Application-dependent development roadmap.",
+    "validation_scope": "Conceptual synthesis; no new intervention outcome evaluated here.",
+    "claim_boundary": "A roadmap does not establish a working whole-body twin or clinical effectiveness.",
+    "source_ids": [
+      "dt-src-body-roadmap"
+    ],
+    "review_scope": "abstract_metadata",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-body-roadmap",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-health-scoping",
+    "theme_role": "conceptual_framework",
+    "application": "framework",
+    "entity": "conceptual",
+    "layers": [
+      "function_variables",
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state",
+      "disease_risk"
+    ],
+    "wearable_relation": "methodological_reference",
+    "personalization": "proposed",
+    "update_mode": "proposed",
+    "simulation_kind": "framework_only",
+    "execution": "proposed",
+    "evaluation": [
+      "review_or_framework"
+    ],
+    "causal_status": "not_applicable",
+    "model_mechanism": "Scoping review of health digital-twin applications and infrastructure.",
+    "state_variables": [
+      "Health and patient state"
+    ],
+    "action_space": [
+      "Planning and care applications discussed"
+    ],
+    "data_linkage": "Broad healthcare review; includes non-wearable hospital and imaging applications.",
+    "time_scope": "No single implementation cadence.",
+    "validation_scope": "Landscape and limitations, rather than a new wearable validation cohort.",
+    "claim_boundary": "Only wearable-relevant concepts are mapped; the entire healthcare DT literature is not relabeled wearable evidence.",
+    "source_ids": [
+      "dt-src-health-scoping"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-health-scoping",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "watch-local-dt-wearables-review",
+    "theme_role": "conceptual_framework",
+    "application": "framework",
+    "entity": "conceptual",
+    "layers": [
+      "function_variables",
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state",
+      "disease_risk"
+    ],
+    "wearable_relation": "wearable_context_proposed",
+    "personalization": "proposed",
+    "update_mode": "proposed",
+    "simulation_kind": "framework_only",
+    "execution": "proposed",
+    "evaluation": [
+      "review_or_framework"
+    ],
+    "causal_status": "not_applicable",
+    "model_mechanism": "Review and proposal for wearable-enabled healthcare twins.",
+    "state_variables": [
+      "Wearable physiological measurements"
+    ],
+    "action_space": [
+      "Proposed personalized healthcare feedback"
+    ],
+    "data_linkage": "Literature review and proposed integration, not newly collected patient data.",
+    "time_scope": "Continuous monitoring is discussed, not a tested common update interval.",
+    "validation_scope": "Review/conceptual evidence.",
+    "claim_boundary": "Conceptual wearable integration does not establish an implemented autonomous twin.",
+    "source_ids": [
+      "dt-src-wearables-review"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-wearables-review",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "watch-local-dt-nmsk-framework",
+    "theme_role": "conceptual_framework",
+    "application": "musculoskeletal",
+    "entity": "conceptual",
+    "layers": [
+      "function_variables",
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "functional_status"
+    ],
+    "wearable_relation": "methodological_reference",
+    "personalization": "proposed",
+    "update_mode": "proposed",
+    "simulation_kind": "framework_only",
+    "execution": "proposed",
+    "evaluation": [
+      "review_or_framework"
+    ],
+    "causal_status": "not_applicable",
+    "model_mechanism": "Functional architecture extending industrial digital-twin concepts to neuromusculoskeletal care.",
+    "state_variables": [
+      "Anatomy",
+      "Joint mechanics",
+      "Tissue-level measures"
+    ],
+    "action_space": [
+      "Rehabilitation planning",
+      "Assistive device control"
+    ],
+    "data_linkage": "Conceptual architecture with illustrative applications; not a new wearable outcome trial.",
+    "time_scope": "Cadence depends on monitoring versus active-control use.",
+    "validation_scope": "Framework and application examples.",
+    "claim_boundary": "This is a proposed adaptation, not a healthcare standard or proof of intervention effectiveness.",
+    "source_ids": [
+      "dt-src-nmsk-framework"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-nmsk-framework",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-lhmf",
+    "theme_role": "reported_twin",
+    "application": "cardiovascular",
+    "entity": "individual_organ",
+    "layers": [
+      "function_variables",
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "wearable_driven_mixed_sources",
+    "personalization": "anatomy_plus_external_streams",
+    "update_mode": "stream_driven_offline",
+    "simulation_kind": "factual_state_reconstruction",
+    "execution": "none",
+    "evaluation": [
+      "numerical_verification"
+    ],
+    "causal_status": "not_identified",
+    "model_mechanism": "Longitudinal coronary CFD with reusable hemodynamic units and clustering.",
+    "state_variables": [
+      "Coronary flow",
+      "Wall shear stress"
+    ],
+    "action_space": [
+      "No evaluated treatment action"
+    ],
+    "data_linkage": "Patient-specific angiographic geometry is combined with public continuous physiological streams; same-person pairing is not established here.",
+    "time_scope": "Longitudinal reconstruction over six weeks; not demonstrated live clinical control.",
+    "validation_scope": "Compared with explicit numerical simulations; long-horizon reconstruction.",
+    "claim_boundary": "Numerical agreement and long-duration simulation do not establish prospective disease prediction or treatment benefit.",
+    "source_ids": [
+      "dt-src-lhmf"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-lhmf",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-wpinn",
+    "theme_role": "reported_twin",
+    "application": "cardiovascular",
+    "entity": "individual_organ",
+    "layers": [
+      "function_variables",
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "wrist_and_other_wearable",
+    "personalization": "person_specific",
+    "update_mode": "offline_calibration_replay",
+    "simulation_kind": "factual_state_reconstruction",
+    "execution": "none",
+    "evaluation": [
+      "measurement_comparison",
+      "numerical_verification"
+    ],
+    "causal_status": "not_identified",
+    "model_mechanism": "Windkessel physics-informed neural network for cardiovascular parameter estimation.",
+    "state_variables": [
+      "Blood pressure",
+      "Resistance",
+      "Compliance"
+    ],
+    "action_space": [
+      "No tested therapeutic policy"
+    ],
+    "data_linkage": "Distinct ring and wrist bioimpedance protocols; wrist protocol includes 23 hypertensive participants.",
+    "time_scope": "Protocol-based signal fitting; chronic autonomous deployment not established.",
+    "validation_scope": "Human blood-pressure reconstruction/prediction was evaluated using separate ring and wrist bioimpedance protocols; recovery of cardiovascular model parameters was additionally tested on synthetic data. The synthetic parameter-recovery experiment is not direct human ground-truth validation of those internal parameters.",
+    "claim_boundary": "Parameter fitting needs its own identifiability checks; ring and wrist evidence are retained separately.",
+    "source_ids": [
+      "dt-src-wpinn"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-wpinn",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "watch-local-dt-gait-lab",
+    "theme_role": "reported_twin",
+    "application": "musculoskeletal",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "functional_status",
+      "activity_behavior"
+    ],
+    "wearable_relation": "multi_location_wearable",
+    "personalization": "person_specific",
+    "update_mode": "stream_driven_offline",
+    "simulation_kind": "factual_state_reconstruction",
+    "execution": "none",
+    "evaluation": [
+      "measurement_comparison",
+      "pilot_human_study"
+    ],
+    "causal_status": "not_identified",
+    "model_mechanism": "IMU/EMG-driven neuromusculoskeletal model for a wearable gait laboratory.",
+    "state_variables": [
+      "Joint angles",
+      "Ground reaction forces",
+      "Ankle torque"
+    ],
+    "action_space": [
+      "No randomized rehabilitation intervention"
+    ],
+    "data_linkage": "Five IMUs and EMG with laboratory references; four post-stroke and nine healthy participants.",
+    "time_scope": "Gait-cycle and walking-trial estimates.",
+    "validation_scope": "Agreement with laboratory biomechanical references.",
+    "claim_boundary": "Biomechanical agreement does not establish recovery benefit, and multi-location sensing is not wrist-only.",
+    "source_ids": [
+      "dt-src-gait-lab"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-gait-lab",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-bone-stress",
+    "theme_role": "reported_twin",
+    "application": "musculoskeletal",
+    "entity": "individual_organ",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "functional_status",
+      "activity_behavior"
+    ],
+    "wearable_relation": "other_wearable",
+    "personalization": "person_specific",
+    "update_mode": "stream_driven_offline",
+    "simulation_kind": "factual_state_reconstruction",
+    "execution": "none",
+    "evaluation": [
+      "measurement_comparison",
+      "numerical_verification"
+    ],
+    "causal_status": "not_identified",
+    "model_mechanism": "Personalized foot shape and finite-element modeling with a domain-adapted LSTM surrogate.",
+    "state_variables": [
+      "Foot bone stress",
+      "Running kinematics"
+    ],
+    "action_space": [
+      "No tested injury-prevention intervention"
+    ],
+    "data_linkage": "Wearable inertial signals and personalized biomechanical modeling; 50-participant study.",
+    "time_scope": "Running-related dynamic stress estimates.",
+    "validation_scope": "Model and surrogate agreement under the reported running protocol.",
+    "claim_boundary": "Predicted stress is not directly measured internal stress or prospectively validated fracture prevention.",
+    "source_ids": [
+      "dt-src-bone-stress"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-bone-stress",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-bladder-electrodes",
+    "theme_role": "reported_twin",
+    "application": "bladder_sensor_design",
+    "entity": "individual_organ",
+    "layers": [
+      "function_variables",
+      "reasoning"
+    ],
+    "functions": [
+      "measurement_quality",
+      "physiological_state"
+    ],
+    "wearable_relation": "wearable_context_proposed",
+    "personalization": "person_specific",
+    "update_mode": "offline_calibration_replay",
+    "simulation_kind": "mechanistic_what_if",
+    "execution": "simulation_only",
+    "evaluation": [
+      "numerical_verification"
+    ],
+    "causal_status": "assumption_dependent_simulation",
+    "model_mechanism": "Radiology-derived conductivity model for electrode placement and bladder-volume simulation.",
+    "state_variables": [
+      "Bladder volume",
+      "Bioimpedance voltage"
+    ],
+    "action_space": [
+      "Electrode placement",
+      "Excitation configuration"
+    ],
+    "data_linkage": "Anatomical conductivity simulations for a proposed body-worn monitoring design.",
+    "time_scope": "Offline design optimization across simulated filling states.",
+    "validation_scope": "In-silico electrode sensitivity and volume-estimation evaluation.",
+    "claim_boundary": "The evaluated action is sensor design; no reduction in heart-failure admission or mortality is demonstrated.",
+    "source_ids": [
+      "dt-src-bladder-electrodes"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-bladder-electrodes",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "watch-local-dt-replaybg",
+    "theme_role": "reported_twin",
+    "application": "metabolic",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables",
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "other_wearable",
+    "personalization": "person_specific",
+    "update_mode": "offline_calibration_replay",
+    "simulation_kind": "mechanistic_what_if",
+    "execution": "simulation_only",
+    "evaluation": [
+      "retrospective_prediction",
+      "numerical_verification"
+    ],
+    "causal_status": "assumption_dependent_simulation",
+    "model_mechanism": "Personalized physiological glucose model identified from observed diabetes data, then replayed.",
+    "state_variables": [
+      "Glucose trajectories"
+    ],
+    "action_space": [
+      "Insulin input",
+      "Carbohydrate input"
+    ],
+    "data_linkage": "CGM, insulin and meal histories identify a personal replay model.",
+    "time_scope": "Calibration followed by alternative-therapy replay.",
+    "validation_scope": "Methodological simulation/reconstruction evaluation.",
+    "claim_boundary": "Alternative trajectories remain model-dependent and do not by themselves identify a causal treatment effect.",
+    "source_ids": [
+      "dt-src-replaybg"
+    ],
+    "review_scope": "abstract_metadata",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-replaybg",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-uva-replay-validation",
+    "theme_role": "reported_twin",
+    "application": "metabolic",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables",
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "other_wearable",
+    "personalization": "person_specific",
+    "update_mode": "offline_calibration_replay",
+    "simulation_kind": "mechanistic_what_if",
+    "execution": "simulation_only",
+    "evaluation": [
+      "trial_data_replay"
+    ],
+    "causal_status": "assumption_dependent_simulation",
+    "model_mechanism": "Replay simulators fitted to randomized crossover trial data.",
+    "state_variables": [
+      "Time in range",
+      "Time below range",
+      "Glucose risk indices"
+    ],
+    "action_space": [
+      "Hybrid versus fully closed-loop insulin modality"
+    ],
+    "data_linkage": "64 subject/modality pairs from a prior crossover trial.",
+    "time_scope": "Retrospective trial replay.",
+    "validation_scope": "Several glycemic metrics met equivalence; time below range failed equivalence.",
+    "claim_boundary": "Reusing randomized data validates particular simulated outcomes; this paper is not a new randomized deployment of the replay tool.",
+    "source_ids": [
+      "dt-src-uva-replay-validation"
+    ],
+    "review_scope": "abstract_metadata",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-uva-replay-validation",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-exercise-dss",
+    "theme_role": "reported_twin",
+    "application": "metabolic",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables",
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state",
+      "activity_behavior"
+    ],
+    "wearable_relation": "wrist_and_other_wearable",
+    "personalization": "person_specific",
+    "update_mode": "offline_calibration_replay",
+    "simulation_kind": "mechanistic_what_if",
+    "execution": "simulation_only",
+    "evaluation": [
+      "numerical_verification"
+    ],
+    "causal_status": "assumption_dependent_simulation",
+    "model_mechanism": "Glucoregulatory exercise digital twins for testing exercise decision support.",
+    "state_variables": [
+      "Glucose",
+      "Time below range",
+      "Time in range"
+    ],
+    "action_space": [
+      "Exercise-related carbohydrate and insulin strategies"
+    ],
+    "data_linkage": "Clinical histories from 247 participants, including wrist heart rate, drive simulated comparisons.",
+    "time_scope": "Exercise-session simulation.",
+    "validation_scope": "Primary time-below-range outcome did not improve over guidelines; secondary time-in-range improved in simulation.",
+    "claim_boundary": "Observed source data do not turn simulated policy outcomes into prospective intervention evidence.",
+    "source_ids": [
+      "dt-src-exercise-dss"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-exercise-dss",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "intervention-dt-studia",
+    "theme_role": "reported_twin",
+    "application": "metabolic",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables",
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "other_wearable",
+    "personalization": "person_specific",
+    "update_mode": "offline_calibration_replay",
+    "simulation_kind": "mechanistic_what_if",
+    "execution": "patient_decision_support",
+    "evaluation": [
+      "randomized_intervention"
+    ],
+    "causal_status": "randomized_bundle_only",
+    "model_mechanism": "STUDIA digital-twin-enhanced bolus decision support.",
+    "state_variables": [
+      "Glucose time in range",
+      "Hypoglycemia"
+    ],
+    "action_space": [
+      "Bolus decision support"
+    ],
+    "data_linkage": "28-person, four-week open-label randomized study with CGM.",
+    "time_scope": "Four-week intervention; model refresh cadence not appraised.",
+    "validation_scope": "Trial reported improved time in range for the tested support system.",
+    "claim_boundary": "Small short-term system-level trial; no isolated twin-component effect or long-term disease benefit established.",
+    "source_ids": [
+      "dt-src-studia"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-studia",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-replaybg-web",
+    "theme_role": "reported_twin",
+    "application": "metabolic",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables",
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "other_wearable",
+    "personalization": "person_specific",
+    "update_mode": "offline_calibration_replay",
+    "simulation_kind": "mechanistic_what_if",
+    "execution": "simulation_only",
+    "evaluation": [
+      "software_interface"
+    ],
+    "causal_status": "assumption_dependent_simulation",
+    "model_mechanism": "Web interface for personal ReplayBG model creation and what-if replay.",
+    "state_variables": [
+      "Glucose trajectories"
+    ],
+    "action_space": [
+      "Meal and insulin input scenarios"
+    ],
+    "data_linkage": "User-supplied standardized diabetes histories; interface resource.",
+    "time_scope": "Offline calibration and interactive scenario exploration.",
+    "validation_scope": "Software/interface contribution; no clinical outcome validation inferred.",
+    "claim_boundary": "Usability or access improvements do not validate the safety of therapy recommendations.",
+    "source_ids": [
+      "dt-src-replaybg-web"
+    ],
+    "review_scope": "abstract_metadata",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-replaybg-web",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "watch-local-dt-nurse-pdt",
+    "theme_role": "reported_twin",
+    "application": "metabolic",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables",
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state",
+      "activity_behavior"
+    ],
+    "wearable_relation": "direct_wrist",
+    "personalization": "group_conditioned",
+    "update_mode": "periodic_retraining",
+    "simulation_kind": "predictive_input_scenarios",
+    "execution": "human_reviewed_advice",
+    "evaluation": [
+      "pilot_human_study",
+      "randomized_intervention"
+    ],
+    "causal_status": "randomized_bundle_only",
+    "model_mechanism": "Diet-condition-group-fine-tuned ANN plus particle swarm optimization and nurse review.",
+    "state_variables": [
+      "Next-day glucose",
+      "Weight",
+      "Activity"
+    ],
+    "action_space": [
+      "Daily dietary and activity SMS recommendations"
+    ],
+    "data_linkage": "Fitbit Inspire 2 steps, food logs, scale and glucose measures; 19-person ancillary randomized subset.",
+    "time_scope": "Daily feedback and weekly retraining after baseline observation.",
+    "validation_scope": "Exploratory trial: weight-loss signals, no significant glucose change; between-group significance needs careful reading.",
+    "claim_boundary": "Methods specify group-conditioned fine-tuning, not a separately fitted model per person; lack of glucose significance is not equivalence or safety proof.",
+    "source_ids": [
+      "dt-src-nurse-pdt"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-nurse-pdt",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-synthetic-sharing",
+    "theme_role": "synthetic_data_analogue",
+    "application": "synthetic_data",
+    "entity": "synthetic_cohort",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "measurement_quality"
+    ],
+    "wearable_relation": "direct_wrist",
+    "personalization": "synthetic_matching",
+    "update_mode": "not_applicable",
+    "simulation_kind": "synthetic_data_generation",
+    "execution": "not_applicable",
+    "evaluation": [
+      "synthetic_privacy_utility"
+    ],
+    "causal_status": "not_applicable",
+    "model_mechanism": "DataSifter and synthetic-data generation for wearable-linked clinical data sharing.",
+    "state_variables": [
+      "Synthetic wearable and clinical records"
+    ],
+    "action_space": [
+      "Data-sharing/synthesis choices"
+    ],
+    "data_linkage": "Apple Watch and clinical data from 3,029 participants; synthetic records are not maintained individual dynamical models.",
+    "time_scope": "Offline dataset synthesis.",
+    "validation_scope": "Privacy–utility and re-identification-risk evaluations.",
+    "claim_boundary": "Synthetic-twin terminology does not establish personal counterfactual dynamics or guaranteed anonymity.",
+    "source_ids": [
+      "dt-src-synthetic-sharing"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-synthetic-sharing",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "watch-local-dt-hydration",
+    "theme_role": "reported_twin",
+    "application": "hydration",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables",
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state",
+      "context_receptivity"
+    ],
+    "wearable_relation": "direct_wrist",
+    "personalization": "person_specific",
+    "update_mode": "stream_driven_offline",
+    "simulation_kind": "predictive_input_scenarios",
+    "execution": "simulation_only",
+    "evaluation": [
+      "pilot_human_study",
+      "retrospective_prediction"
+    ],
+    "causal_status": "not_identified",
+    "model_mechanism": "Person-specific XGBoost prediction of urine specific gravity with hypothetical input scenarios.",
+    "state_variables": [
+      "Urine specific gravity"
+    ],
+    "action_space": [
+      "Hypothetical beverage scenarios"
+    ],
+    "data_linkage": "Three participants over 20 non-consecutive days; Garmin HR-derived measures and Chill+ GSR with intake and urine data.",
+    "time_scope": "Three-hour windows shifted by 15 minutes for estimated trajectories.",
+    "validation_scope": "Small multimodal feasibility study and illustrative what-if analyses.",
+    "claim_boundary": "Input edits in an observational predictor do not establish beverage treatment effects; cumulative physiology is not modeled.",
+    "source_ids": [
+      "dt-src-hydration"
+    ],
+    "review_scope": "primary_sections",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-hydration",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-dt-lung",
+    "theme_role": "reported_twin",
+    "application": "respiratory",
+    "entity": "individual_organ",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "clinical_signal_transfer",
+    "personalization": "anatomy_plus_external_streams",
+    "update_mode": "stream_driven_offline",
+    "simulation_kind": "factual_state_reconstruction",
+    "execution": "none",
+    "evaluation": [
+      "measurement_comparison"
+    ],
+    "causal_status": "not_identified",
+    "model_mechanism": "ECG-derived respiration drives a CT-based lung-motion representation.",
+    "state_variables": [
+      "Respiratory rate",
+      "Lung motion representation"
+    ],
+    "action_space": [
+      "No tested treatment action"
+    ],
+    "data_linkage": "BIDMC and CapnoBase clinical signals; synchronized same-person ECG and 4D-CT validation is not established.",
+    "time_scope": "Authors target real-time operation; publication-page appraisal emphasizes proof-of-concept scope.",
+    "validation_scope": "Respiratory-rate evaluation; direct quantitative dynamic mesh validation remains limited.",
+    "claim_boundary": "Wearable-oriented title does not establish a wrist-worn prospective deployment or validated personalized lung mechanics.",
+    "source_ids": [
+      "dt-src-lung"
+    ],
+    "review_scope": "abstract_and_open_reviews",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-dt-lung",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "intervention-aid-digital-twin-coadaptation-2025",
+    "theme_role": "reported_twin",
+    "application": "metabolic",
+    "entity": "individual_person",
+    "layers": [
+      "function_variables",
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "wearable_relation": "other_wearable",
+    "personalization": "person_specific",
+    "update_mode": "not_appraised",
+    "simulation_kind": "mechanistic_what_if",
+    "execution": "human_adjustment_with_device_control",
+    "evaluation": [
+      "randomized_intervention"
+    ],
+    "causal_status": "randomized_bundle_only",
+    "model_mechanism": "Personalized diabetes simulations support human–machine co-adaptation.",
+    "state_variables": [
+      "CGM glucose state and therapy parameters described by the prior co-adaptation card"
+    ],
+    "action_space": [
+      "Digital-twin replay, suggested parameter updates and user what-if exploration versus information-feedback periods."
+    ],
+    "data_linkage": "CGM and automated insulin delivery study already catalogued in v1.1.",
+    "time_scope": "Six-month study in the preserved v1.1 card; state-refresh and recalibration cadence not independently appraised in this pass.",
+    "validation_scope": "72 completed the six-month randomized-sequence study. Replay model and clinical package evaluated together. This is a cross-link to the preserved v1.1 annotation, not a fresh full-text review.",
+    "claim_boundary": "System trial evidence is retained; isolated simulator benefit and transfer to wrist-only sensing are not established.",
+    "source_ids": [
+      "causal-src-digital-twin-aid"
+    ],
+    "review_scope": "prior_version_annotation",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-digital-twin-aid",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-motr",
+    "theme_role": "method_enabler",
+    "application": "behavioral",
+    "entity": "individual_person",
+    "layers": [
+      "reasoning"
+    ],
+    "functions": [
+      "activity_behavior",
+      "sleep_circadian"
+    ],
+    "wearable_relation": "direct_wrist",
+    "personalization": "person_specific",
+    "update_mode": "offline_calibration_replay",
+    "simulation_kind": "model_based_effect_estimation",
+    "execution": "none",
+    "evaluation": [
+      "retrospective_prediction"
+    ],
+    "causal_status": "assumption_dependent_simulation",
+    "model_mechanism": "Model Twin Randomization for within-person longitudinal effects.",
+    "state_variables": [
+      "daily physical activity",
+      "sleep duration",
+      "past activity and sleep"
+    ],
+    "action_space": [
+      "Specified within-person physical-activity exposure contrasts; model-generated randomization."
+    ],
+    "data_linkage": "Prior v1.1 source profile links Fitbit activity and sleep.",
+    "time_scope": "See original study; no new timing appraisal.",
+    "validation_scope": "Simulations and the authors’ longitudinal Fitbit step/sleep histories. This is a cross-link to the preserved v1.1 annotation, not a fresh full-text review.",
+    "claim_boundary": "Model Twin Randomization is a causal-method connection, not evidence of a continuously synchronized digital-twin system.",
+    "source_ids": [
+      "causal-src-motr"
+    ],
+    "review_scope": "prior_version_annotation",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-motr",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "watch-local-walking-fingerprinting",
+    "theme_role": "method_enabler",
+    "application": "behavioral",
+    "entity": "not_applicable",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "identity"
+    ],
+    "wearable_relation": "direct_wrist",
+    "personalization": "not_applicable",
+    "update_mode": "not_applicable",
+    "simulation_kind": "not_evaluated",
+    "execution": "not_applicable",
+    "evaluation": [
+      "measurement_comparison"
+    ],
+    "causal_status": "not_applicable",
+    "model_mechanism": "Walking-based identification as a possible identity-binding prerequisite.",
+    "state_variables": [
+      "person identifier",
+      "walking acceleration"
+    ],
+    "action_space": [
+      "Not applicable: no action is assigned in this resource."
+    ],
+    "data_linkage": "Existing wrist fingerprinting record; conceptual connection only.",
+    "time_scope": "See original study; no new timing appraisal.",
+    "validation_scope": "IU and ZJU wrist accelerometry; within- and between-session identification tasks. This is a cross-link to the preserved v1.1 annotation, not a fresh full-text review.",
+    "claim_boundary": "Identity discrimination alone does not establish latent physiological state, a causal simulator or treatment benefit.",
+    "source_ids": [
+      "causal-src-walking-fingerprinting"
+    ],
+    "review_scope": "prior_version_annotation",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-walking-fingerprinting",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-heartsteps-mrt-2019",
+    "theme_role": "method_enabler",
+    "application": "behavioral",
+    "entity": "not_applicable",
+    "layers": [
+      "interventions"
+    ],
+    "functions": [
+      "activity_behavior",
+      "context_receptivity"
+    ],
+    "wearable_relation": "direct_wrist",
+    "personalization": "not_applicable",
+    "update_mode": "not_applicable",
+    "simulation_kind": "not_evaluated",
+    "execution": "not_applicable",
+    "evaluation": [
+      "randomized_intervention"
+    ],
+    "causal_status": "not_appraised",
+    "model_mechanism": "Micro-randomized intervention evidence as a simulator-validation connection.",
+    "state_variables": [
+      "context and availability",
+      "suggestion assignment",
+      "30-minute steps"
+    ],
+    "action_space": [
+      "Walking suggestion, anti-sedentary suggestion or no suggestion, randomized at repeated times."
+    ],
+    "data_linkage": "Original HeartSteps record is retained; the new subpopulation simulator is separately watchlisted.",
+    "time_scope": "See original study; no new timing appraisal.",
+    "validation_scope": "Six-week MRT; 44 adults enrolled. Pooled suggestion comparison p=.06; type/time-specific effects differ. This is a cross-link to the preserved v1.1 annotation, not a fresh full-text review.",
+    "claim_boundary": "The original intervention trial must not be counted as validation of a later digital twin.",
+    "source_ids": [
+      "causal-src-heartsteps-mrt"
+    ],
+    "review_scope": "prior_version_annotation",
+    "reviewed_on": "2026-09-28",
+    "classification_origin": "curator_assessment",
+    "local_record_id": "paper-heartsteps-mrt",
+    "imported_from": "local-v1.2.0"
+  }
+]

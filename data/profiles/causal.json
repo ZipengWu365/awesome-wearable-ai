@@ -1,0 +1,2287 @@
+[
+  {
+    "record_id": "candidate-local-paper-daza-nof1",
+    "short_name": "N-of-1 counterfactual framework",
+    "layers": [
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state",
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "causal_effect",
+      "longitudinal_effect"
+    ],
+    "claim_kind": "causal_method",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "method_transfer",
+    "intervention_kind": "none",
+    "study_design": "method_simulation",
+    "question": "How can a repeatedly observed person support a period-specific causal contrast?",
+    "action_space": "Explicitly specified periods under exposure/treatment versus reference.",
+    "estimand": "Average period treatment effect (APTE).",
+    "identification_assumptions": "Consistency of the specified exposure contrast; sufficient measured history for sequential exchangeability; overlap/positivity; appropriate handling of timing, carryover, missingness and model specification. These are applicability conditions, not verified guarantees.",
+    "validation_scope": "Methodological framework for self-tracked time series and N-of-1 trials.",
+    "evidence_boundary": "This framework does not convert arbitrary observational sensor histories into randomized trials.",
+    "ai_component": "Statistical causal framework; neural AI is not required.",
+    "variables": [
+      {
+        "name": "exposure period",
+        "role": "exposure",
+        "timing": "study-specific",
+        "actionability": "observed_exposure",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "response during period",
+        "role": "outcome",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "not_appraised",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-daza-nof1"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-daza-nof1",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-motr",
+    "short_name": "MoTR",
+    "layers": [
+      "reasoning",
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior",
+      "sleep_circadian"
+    ],
+    "reasoning_tasks": [
+      "causal_effect",
+      "longitudinal_effect"
+    ],
+    "claim_kind": "causal_method",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "observational_causal",
+    "question": "What recurring within-person activity–sleep effect is compatible with a fitted longitudinal model?",
+    "action_space": "Specified within-person physical-activity exposure contrasts; model-generated randomization.",
+    "estimand": "Recurring individual treatment effect under serial interference, averaged over repeated occasions.",
+    "identification_assumptions": "Consistency of the specified exposure contrast; sufficient measured history for sequential exchangeability; overlap/positivity; appropriate handling of timing, carryover, missingness and model specification. These are applicability conditions, not verified guarantees.",
+    "validation_scope": "Simulations and the authors’ longitudinal Fitbit step/sleep histories.",
+    "evidence_boundary": "Model-twin randomization is computational. Observational identification and fitted-model assumptions remain; no real randomized sleep intervention is established.",
+    "ai_component": "Model-twin simulation / g-formula estimation.",
+    "variables": [
+      {
+        "name": "daily physical activity",
+        "role": "exposure",
+        "timing": "before subsequent sleep",
+        "actionability": "observed_exposure",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "sleep duration",
+        "role": "outcome",
+        "timing": "subsequent sleep",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "past activity and sleep",
+        "role": "confounder",
+        "timing": "pre-exposure history",
+        "actionability": "not_an_action",
+        "note": "Candidate adjustment history; causal sufficiency is an assumption."
+      }
+    ],
+    "result_direction": "not_appraised",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-motr"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-motr",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-cai-nonstationary",
+    "short_name": "Nonstationary N-of-1 estimands",
+    "layers": [
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state",
+      "context_receptivity"
+    ],
+    "reasoning_tasks": [
+      "causal_effect",
+      "longitudinal_effect"
+    ],
+    "claim_kind": "causal_method",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "mobile_adjacent",
+    "intervention_kind": "none",
+    "study_design": "observational_causal",
+    "question": "Nonstationary N-of-1 estimands",
+    "action_space": "Time-indexed mobile communication exposure contrasts.",
+    "estimand": "Short- and longer-term time-varying causal effects under the specified nonstationary model.",
+    "identification_assumptions": "Consistency of the specified exposure contrast; sufficient measured history for sequential exchangeability; overlap/positivity; appropriate handling of timing, carryover, missingness and model specification. These are applicability conditions, not verified guarantees.",
+    "validation_scope": "State-space / g-formula framework with mobile communication and mood data.",
+    "evidence_boundary": "The empirical application is mobile-device/mood data, not wrist-sensor validation. A wearable application needs its own measurement and identification analysis.",
+    "ai_component": "State-space modeling with longitudinal causal identification.",
+    "variables": [
+      {
+        "name": "communication history",
+        "role": "exposure",
+        "timing": "time-indexed",
+        "actionability": "observed_exposure",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "mood",
+        "role": "outcome",
+        "timing": "following exposure",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "not_appraised",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-cai-nonstationary"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-cai-nonstationary",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-crn-2020",
+    "short_name": "Counterfactual Recurrent Network",
+    "layers": [
+      "reasoning"
+    ],
+    "functions": [
+      "disease_risk",
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "longitudinal_effect"
+    ],
+    "claim_kind": "causal_method",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "method_transfer",
+    "intervention_kind": "none",
+    "study_design": "method_simulation",
+    "question": "Counterfactual Recurrent Network",
+    "action_space": "Candidate sequences of clinical treatments.",
+    "estimand": "Counterfactual longitudinal outcomes under specified treatment sequences.",
+    "identification_assumptions": "Consistency of the specified exposure contrast; sufficient measured history for sequential exchangeability; overlap/positivity; appropriate handling of timing, carryover, missingness and model specification. These are applicability conditions, not verified guarantees.",
+    "validation_scope": "Longitudinal treatment-outcome modeling, including simulated treatment trajectories.",
+    "evidence_boundary": "Balancing representations does not eliminate unmeasured confounding. This is adjacent methodology with no wrist-deployment claim.",
+    "ai_component": "Adversarially balanced recurrent representations.",
+    "variables": [],
+    "result_direction": "not_appraised",
+    "review_scope": "institutional_publication_record",
+    "source_ids": [
+      "causal-src-crn"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-crn",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-causal-transformer-2022",
+    "short_name": "Causal Transformer",
+    "layers": [
+      "reasoning"
+    ],
+    "functions": [
+      "disease_risk",
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "longitudinal_effect"
+    ],
+    "claim_kind": "causal_method",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "method_transfer",
+    "intervention_kind": "none",
+    "study_design": "method_simulation",
+    "question": "Causal Transformer",
+    "action_space": "Specified future treatment sequences.",
+    "estimand": "Counterfactual outcome trajectories conditional on patient history.",
+    "identification_assumptions": "Consistency of the specified exposure contrast; sufficient measured history for sequential exchangeability; overlap/positivity; appropriate handling of timing, carryover, missingness and model specification. These are applicability conditions, not verified guarantees.",
+    "validation_scope": "Synthetic and clinical longitudinal evaluation in the source paper.",
+    "evidence_boundary": "Clinical time-series methodology; wearable transfer remains unvalidated here. Outcome prediction quality alone does not test all identification assumptions.",
+    "ai_component": "Attention-based longitudinal treatment representations.",
+    "variables": [],
+    "result_direction": "not_appraised",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-causal-transformer"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-causal-transformer",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-causal-recourse",
+    "short_name": "Causal recourse / actionable changes",
+    "layers": [
+      "reasoning"
+    ],
+    "functions": [
+      "physiological_state",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "causal_recourse"
+    ],
+    "claim_kind": "causal_method",
+    "counterfactual_semantics": "structural_intervention",
+    "wearable_relation": "method_transfer",
+    "intervention_kind": "none",
+    "study_design": "method_simulation",
+    "question": "Which feasible actions can change an outcome through a specified causal mechanism?",
+    "action_space": "Feasible interventions on actionable variables in a specified structural causal model.",
+    "estimand": "Consequences of candidate structural interventions for achieving a target decision.",
+    "identification_assumptions": "The structural causal model, intervention semantics, feasibility constraints and treatment of exogenous variables must be justified for the application.",
+    "validation_scope": "General algorithmic-recourse framework; no wearable clinical evaluation claimed.",
+    "evidence_boundary": "A changed model input is not automatically an actionable recommendation. A learned disease score is not a clinical outcome.",
+    "ai_component": "Structural causal recourse optimization.",
+    "variables": [],
+    "result_direction": "not_appraised",
+    "review_scope": "institutional_publication_record",
+    "source_ids": [
+      "causal-src-causal-recourse",
+      "causal-src-recourse-abstract"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-causal-recourse",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-confetti",
+    "short_name": "CONFETTI",
+    "layers": [
+      "reasoning"
+    ],
+    "functions": [
+      "activity_behavior",
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "model_counterfactual"
+    ],
+    "claim_kind": "model_explanation",
+    "counterfactual_semantics": "model_input_edit",
+    "wearable_relation": "method_transfer",
+    "intervention_kind": "none",
+    "study_design": "method_simulation",
+    "question": "Which subsequence changes alter a time-series classifier output?",
+    "action_space": "Candidate time-series input edits, not assigned real-world treatment.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Multivariate time-series classification benchmarks.",
+    "evidence_boundary": "Confidence, proximity and sparsity of an explanation do not identify a causal health effect.",
+    "ai_component": "Counterfactual subsequence search with multiple objectives.",
+    "variables": [
+      {
+        "name": "edited input subsequence",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "classifier output",
+        "role": "outcome",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "simulation_only",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-confetti"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-confetti",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "watch-local-walking-fingerprinting",
+    "short_name": "Walking fingerprinting",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "identity",
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "prediction_association"
+    ],
+    "claim_kind": "prediction_association",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "observational_prediction",
+    "question": "Can wrist walking dynamics identify a person across segments or sessions?",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "IU and ZJU wrist accelerometry; within- and between-session identification tasks.",
+    "evidence_boundary": "Identity discrimination provides no causal mechanism, disease biomarker validity or treatment-response evidence. Cross-session performance must be reported separately.",
+    "ai_component": "Lagged acceleration distribution features and classifiers.",
+    "variables": [
+      {
+        "name": "person identifier",
+        "role": "identity",
+        "timing": "enrolment/test",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "walking acceleration",
+        "role": "measurement",
+        "timing": "session",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "not_appraised",
+    "review_scope": "primary_html_sections",
+    "source_ids": [
+      "causal-src-walking-fingerprinting"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-walking-fingerprinting",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-wearable-reidentification",
+    "short_name": "NHANES re-identification risk",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "identity",
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "prediction_association"
+    ],
+    "claim_kind": "prediction_association",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "none",
+    "study_design": "observational_prediction",
+    "question": "NHANES re-identification risk",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Aggregated activity and demographic records in NHANES 2003–2004 and 2005–2006.",
+    "evidence_boundary": "These are earlier NHANES hip/waist activity-count editions, not 2011–2014 raw wrist data. Record matching is a privacy result, not a causal health claim.",
+    "ai_component": "Random forest and support vector machines.",
+    "variables": [
+      {
+        "name": "individual record identifier",
+        "role": "identity",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "aggregated activity pattern",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "not_appraised",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-wearable-reidentification"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-wearable-reidentification",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-steps-chronic-disease",
+    "short_name": "All of Us steps and chronic disease",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "prediction_association"
+    ],
+    "claim_kind": "prediction_association",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "observational_prediction",
+    "question": "All of Us steps and chronic disease",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Longitudinal Fitbit summaries linked to EHR outcomes in an observational cohort.",
+    "evidence_boundary": "Observed step-count associations do not establish the effect of prescribing those steps. The linked v8 resource is a related cohort release, not the paper’s frozen analytic sample.",
+    "ai_component": "Association / risk modeling.",
+    "variables": [
+      {
+        "name": "step count",
+        "role": "exposure",
+        "timing": "before incident outcome",
+        "actionability": "observed_exposure",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "incident disease",
+        "role": "outcome",
+        "timing": "follow-up",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "not_appraised",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-steps-chronic-disease"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-steps-chronic-disease",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-pd-prodromal",
+    "short_name": "Prodromal Parkinson’s prediction",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "disease_risk",
+      "functional_status"
+    ],
+    "reasoning_tasks": [
+      "prediction_association"
+    ],
+    "claim_kind": "prediction_association",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "observational_prediction",
+    "question": "Does wrist accelerometry predict a later recorded Parkinson’s diagnosis?",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "UK Biobank accelerometry and subsequent clinical diagnosis labels.",
+    "evidence_boundary": "Prospective-label prediction is distinct from changing Parkinson’s risk through an intervention. Early disease may already influence movement.",
+    "ai_component": "Predictive machine-learning models.",
+    "variables": [
+      {
+        "name": "wrist movement features",
+        "role": "measurement",
+        "timing": "baseline",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "future recorded diagnosis",
+        "role": "outcome",
+        "timing": "follow-up",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "not_appraised",
+    "review_scope": "publisher_indexed_abstract",
+    "source_ids": [
+      "causal-src-pd-prodromal"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-pd-prodromal",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-mrt-health-psychology-2015",
+    "short_name": "Micro-randomized trial design",
+    "layers": [
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "activity_behavior",
+      "context_receptivity"
+    ],
+    "reasoning_tasks": [
+      "causal_effect",
+      "policy_evaluation"
+    ],
+    "claim_kind": "design_framework",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "mobile_adjacent",
+    "intervention_kind": "design_framework",
+    "study_design": "review_framework",
+    "question": "When, for whom and under which context does an intervention component have a proximal effect?",
+    "action_space": "Repeated randomization among eligible intervention options, including no action.",
+    "estimand": "Proximal effects of randomized components and their time-varying moderation.",
+    "identification_assumptions": "Interpret the randomized assignment contrast under its trial protocol. Availability, missing outcomes, adherence, contamination and time effects can alter identification or generalization; assignment effects do not identify every mediator or individual counterfactual.",
+    "validation_scope": "Experimental-design framework.",
+    "evidence_boundary": "A trial design is not itself a successful intervention. Long-term clinical benefit requires an appropriate endpoint and design.",
+    "ai_component": "No learned policy required.",
+    "variables": [
+      {
+        "name": "decision-time availability",
+        "role": "availability",
+        "timing": "before randomization",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "randomized prompt",
+        "role": "action",
+        "timing": "decision time",
+        "actionability": "candidate_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "next-window activity",
+        "role": "outcome",
+        "timing": "after randomization",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-mrt-design"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-mrt-design",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-heartsteps-mrt-2019",
+    "short_name": "HeartSteps MRT",
+    "layers": [
+      "reasoning",
+      "function_variables",
+      "interventions"
+    ],
+    "functions": [
+      "activity_behavior",
+      "context_receptivity"
+    ],
+    "reasoning_tasks": [
+      "causal_effect",
+      "policy_evaluation"
+    ],
+    "claim_kind": "proximal_trial_effect",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "contextual_rule",
+    "study_design": "micro_randomized_trial",
+    "question": "What is the proximal effect of sending an activity suggestion at an eligible decision time?",
+    "action_space": "Walking suggestion, anti-sedentary suggestion or no suggestion, randomized at repeated times.",
+    "estimand": "Effect of randomized suggestions on the following 30-minute step count.",
+    "identification_assumptions": "Interpret the randomized assignment contrast under its trial protocol. Availability, missing outcomes, adherence, contamination and time effects can alter identification or generalization; assignment effects do not identify every mediator or individual counterfactual.",
+    "validation_scope": "Six-week MRT; 44 adults enrolled. Pooled suggestion comparison p=.06; type/time-specific effects differ.",
+    "evidence_boundary": "The reported proximal outcome is not a disease-prevention endpoint. Do not relabel the original contextual-suggestion MRT as a deployed RL policy.",
+    "ai_component": "Contextually tailored suggestions; repeated randomization.",
+    "variables": [
+      {
+        "name": "context and availability",
+        "role": "context",
+        "timing": "before decision",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "suggestion assignment",
+        "role": "action",
+        "timing": "decision time",
+        "actionability": "implemented_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "30-minute steps",
+        "role": "outcome",
+        "timing": "after decision",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "mixed",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-heartsteps-mrt"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-heartsteps-mrt",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-action-centered",
+    "short_name": "Action-centered bandits",
+    "layers": [
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "activity_behavior",
+      "context_receptivity"
+    ],
+    "reasoning_tasks": [
+      "policy_evaluation"
+    ],
+    "claim_kind": "policy_method",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "mobile_adjacent",
+    "intervention_kind": "learned_policy",
+    "study_design": "method_simulation",
+    "question": "Action-centered bandits",
+    "action_space": "Context-dependent action versus baseline/no-action decisions.",
+    "estimand": "Contextual reward / action-effect component under the specified bandit model.",
+    "identification_assumptions": "Known randomized exploration, action support and appropriate reward/effect-model assumptions are needed for the intended evaluation.",
+    "validation_scope": "Theory and mHealth-motivated algorithm evaluation.",
+    "evidence_boundary": "Regret or simulated reward is not a randomized clinical outcome. Source indexing does not establish deployed wearable health benefit.",
+    "ai_component": "Action-centered contextual bandit.",
+    "variables": [],
+    "result_direction": "simulation_only",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-action-centered"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-action-centered",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-intelligentpooling",
+    "short_name": "IntelligentPooling",
+    "layers": [
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "activity_behavior",
+      "context_receptivity"
+    ],
+    "reasoning_tasks": [
+      "policy_evaluation"
+    ],
+    "claim_kind": "policy_method",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "learned_policy",
+    "study_design": "pilot_deployment",
+    "question": "IntelligentPooling",
+    "action_space": "Personalized delivery decisions for activity suggestions.",
+    "estimand": "Policy reward with personalized learning across users and time.",
+    "identification_assumptions": "Recorded exploration probabilities, supported actions and appropriate reward-model / evaluation conditions; pilot deployment does not identify arbitrary off-policy effects.",
+    "validation_scope": "Simulations and a small live mHealth deployment.",
+    "evidence_boundary": "Simulation regret reductions and pilot feasibility must remain separate from randomized distal clinical efficacy.",
+    "ai_component": "Hierarchical / pooled Thompson sampling.",
+    "variables": [],
+    "result_direction": "not_appraised",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-intelligentpooling"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-intelligentpooling",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "method-jitai-annual-review-2026",
+    "short_name": "JITAI design and research landscape",
+    "layers": [
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "activity_behavior",
+      "context_receptivity"
+    ],
+    "reasoning_tasks": [
+      "policy_evaluation"
+    ],
+    "claim_kind": "design_framework",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mobile_adjacent",
+    "intervention_kind": "design_framework",
+    "study_design": "review_framework",
+    "question": "JITAI design and research landscape",
+    "action_space": "Timing, content and intensity of adaptive support; context and receptivity inform decisions.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Author review of JITAI concepts and research directions.",
+    "evidence_boundary": "A conceptual review does not provide a pooled clinical efficacy estimate. Adaptive tailoring does not imply reinforcement learning.",
+    "ai_component": "Covers experimental design and personalization, not one fixed algorithm.",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-jitai-review-2026"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-jitai-review-2026",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-paper-pearl",
+    "short_name": "PEARL (accepted / in press)",
+    "layers": [
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "activity_behavior",
+      "context_receptivity"
+    ],
+    "reasoning_tasks": [
+      "policy_evaluation"
+    ],
+    "claim_kind": "proximal_trial_effect",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "learned_policy",
+    "study_design": "randomized_trial",
+    "question": "Does an RL exercise-nudge policy increase tracked steps versus the trial’s comparison policies?",
+    "action_space": "Four trial arms: no nudges, random, fixed and RL-based exercise nudges.",
+    "estimand": "Between-arm difference in daily steps at the prespecified follow-up.",
+    "identification_assumptions": "Interpret the randomized assignment contrast under its trial protocol. Availability, missing outcomes, adherence, contamination and time effects can alter identification or generalization; assignment effects do not identify every mediator or individual counterfactual.",
+    "validation_scope": "13,463 randomized; 7,711 in primary analysis. Accepted abstract reports RL vs control +210 steps/day at two months (p=.01).",
+    "evidence_boundary": "Substantial exclusion/attrition and the analyzed population matter. This is a behavioral endpoint, not evidence that the policy prevents disease; superiority to every active arm is not established here.",
+    "ai_component": "Reinforcement-learning nudge policy.",
+    "variables": [],
+    "result_direction": "positive_primary",
+    "review_scope": "publisher_indexed_abstract",
+    "source_ids": [
+      "causal-src-pearl"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-pearl",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "intervention-mybpmylife-2025",
+    "short_name": "myBPmyLife: null primary BP result",
+    "layers": [
+      "reasoning",
+      "function_variables",
+      "interventions"
+    ],
+    "functions": [
+      "activity_behavior",
+      "physiological_state",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "causal_effect",
+      "policy_evaluation"
+    ],
+    "claim_kind": "clinical_trial_effect",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "contextual_rule",
+    "study_design": "randomized_trial",
+    "question": "Does the adaptive activity/diet intervention improve blood pressure beyond the control condition?",
+    "action_space": "Contextual activity and lower-sodium suggestions plus adaptive goals versus control.",
+    "estimand": "Between-arm change in systolic blood pressure at six months.",
+    "identification_assumptions": "Interpret the randomized assignment contrast under its trial protocol. Availability, missing outcomes, adherence, contamination and time effects can alter identification or generalization; assignment effects do not identify every mediator or individual counterfactual.",
+    "validation_scope": "No primary SBP benefit: between-arm difference +0.5 mmHg (95% CI −2.4 to 3.3; p=.76). Behavior outcomes differed.",
+    "evidence_boundary": "An improved step count cannot be substituted for the null primary BP endpoint. BP was measured by a separate cuff. The indexed intervention is not verified as an RL policy.",
+    "ai_component": "Context-based suggestions and adaptive goals; learned-policy component not established.",
+    "variables": [
+      {
+        "name": "notification/goal support",
+        "role": "action",
+        "timing": "trial period",
+        "actionability": "implemented_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "daily steps",
+        "role": "outcome",
+        "timing": "proximal follow-up",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "cuff-measured systolic BP",
+        "role": "outcome",
+        "timing": "six months",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "daily steps on a hypothesized BP pathway",
+        "role": "mediator",
+        "timing": "after assignment",
+        "actionability": "not_an_action",
+        "note": "Candidate mediator only; no mediation effect is asserted."
+      }
+    ],
+    "result_direction": "null_primary",
+    "review_scope": "primary_html_sections",
+    "source_ids": [
+      "causal-src-mybpmylife"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-mybpmylife",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "intervention-control-iq-2019",
+    "short_name": "Control-IQ randomized trial",
+    "layers": [
+      "reasoning",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "causal_effect",
+      "policy_evaluation"
+    ],
+    "claim_kind": "clinical_trial_effect",
+    "counterfactual_semantics": "potential_outcomes",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "closed_loop",
+    "study_design": "randomized_trial",
+    "question": "Control-IQ randomized trial",
+    "action_space": "CGM-informed automated insulin delivery versus sensor-augmented pump therapy.",
+    "estimand": "Between-arm difference in percentage of CGM time within 70–180 mg/dL over six months.",
+    "identification_assumptions": "Interpret the randomized assignment contrast under its trial protocol. Availability, missing outcomes, adherence, contamination and time effects can alter identification or generalization; assignment effects do not identify every mediator or individual counterfactual.",
+    "validation_scope": "168 randomized participants; target-range time difference 11 percentage points (95% CI 9 to 14).",
+    "evidence_boundary": "CGM and insulin-pump results are not wrist-only evidence. The tested controller is not equated with reinforcement learning; efficacy does not imply absence of device risks.",
+    "ai_component": "Automated feedback controller; neural/RL policy not required.",
+    "variables": [
+      {
+        "name": "CGM glucose",
+        "role": "measurement",
+        "timing": "feedback cycle",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "automated insulin delivery",
+        "role": "action",
+        "timing": "feedback cycle",
+        "actionability": "implemented_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      },
+      {
+        "name": "time in glucose range",
+        "role": "outcome",
+        "timing": "six-month follow-up",
+        "actionability": "not_an_action",
+        "note": "Role is specific to this question; it is not an intrinsic property of the variable."
+      }
+    ],
+    "result_direction": "positive_primary",
+    "review_scope": "primary_abstract_metadata",
+    "source_ids": [
+      "causal-src-control-iq-rct"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-control-iq-rct",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "intervention-aid-digital-twin-coadaptation-2025",
+    "short_name": "Digital-twin assisted AID co-adaptation",
+    "layers": [
+      "reasoning",
+      "function_variables",
+      "interventions"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "policy_evaluation"
+    ],
+    "claim_kind": "clinical_trial_effect",
+    "counterfactual_semantics": "mechanistic_replay",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "decision_support",
+    "study_design": "randomized_sequence_trial",
+    "question": "Does a digital-twin co-adaptation package improve outcomes when added to automated insulin delivery?",
+    "action_space": "Digital-twin replay, suggested parameter updates and user what-if exploration versus information-feedback periods.",
+    "estimand": "Protocol-defined CGM time-in-range contrast for the co-adaptation package versus AID-alone baseline.",
+    "identification_assumptions": "Interpret the randomized assignment contrast under its trial protocol. Availability, missing outcomes, adherence, contamination and time effects can alter identification or generalization; assignment effects do not identify every mediator or individual counterfactual. The randomized sequence and persistent effects require care: this is not a simple independent parallel-arm contrast.",
+    "validation_scope": "72 completed the six-month randomized-sequence study. Replay model and clinical package evaluated together.",
+    "evidence_boundary": "Supports the tested co-adaptation package under its trial design. It does not validate every simulated individual what-if trajectory or transfer to other diseases/devices.",
+    "ai_component": "Mechanistic replay and parameter optimization with human implementation; embedded AID provides feedback control.",
+    "variables": [],
+    "result_direction": "positive_primary",
+    "review_scope": "publisher_indexed_abstract",
+    "source_ids": [
+      "causal-src-digital-twin-aid"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-digital-twin-aid",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "dataset-wisdm",
+    "short_name": "WISDM Smartphone and Smartwatch",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "identity",
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "WISDM Smartphone and Smartwatch",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "WISDM supports separate activity and identity tasks. Its scripted protocol does not establish long-term identity stability.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-wisdm-watch"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "wisdm-watch",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "dataset-capture24",
+    "short_name": "CAPTURE-24",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "CAPTURE-24",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Activity labels support behavior measurement. They are not randomized intervention assignments.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-capture24"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "capture24",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "dataset-wesad",
+    "short_name": "WESAD",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state",
+      "context_receptivity"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "WESAD",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Stress/affect labels do not show when a stress intervention is beneficial or welcome.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-wesad"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "wesad",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "dataset-ppg-dalia",
+    "short_name": "PPG-DaLiA",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state",
+      "measurement_quality"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "PPG-DaLiA",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Heart-rate estimation with motion artifacts is a measurement task, not a treatment-effect study.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-ppg-dalia"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "ppg-dalia",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "dataset-uk-biobank-accelerometer",
+    "short_name": "UK Biobank accelerometry (2017 analysis)",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior",
+      "sleep_circadian",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "UK Biobank accelerometry (2017 analysis)",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Cohort linkage supports prediction and observational research; action histories and identification requirements depend on the causal question.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-ukb-accelerometry"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "ukb-accelerometry",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-nhanes-0304",
+    "short_name": "NHANES 2003–2004 minute counts",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "identity",
+      "activity_behavior",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "NHANES 2003–2004 minute counts",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Historical hip/waist count-data release; do not relabel it as raw wrist accelerometry.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-nhanes-0304"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "nhanes-0304",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-nhanes-0506",
+    "short_name": "NHANES 2005–2006 minute counts",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "identity",
+      "activity_behavior",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "NHANES 2005–2006 minute counts",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Historical hip/waist count-data release; no randomized intervention history is implied.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-nhanes-0506"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "nhanes-0506",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "dataset-nhanes-2011-2012-wrist",
+    "short_name": "NHANES 2011–2012 raw accelerometry",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior",
+      "sleep_circadian",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "NHANES 2011–2012 raw accelerometry",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "A raw wrist cohort resource does not itself supply identified counterfactual outcomes.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-nhanes-1112"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "nhanes-1112",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "dataset-nhanes-2013-2014-wrist",
+    "short_name": "NHANES 2013–2014 raw accelerometry",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior",
+      "sleep_circadian",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "NHANES 2013–2014 raw accelerometry",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Data release and participant overlap must be preserved; future causal use needs a specified estimand.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-nhanes-1314"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "nhanes-1314",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "dataset-all-of-us-fitbit",
+    "short_name": "All of Us Fitbit (CDR v8)",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior",
+      "sleep_circadian",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "All of Us Fitbit (CDR v8)",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Longitudinal wearable/EHR linkage is distinct from randomized action logs; published analytic cohorts may use older releases.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-allofus-fitbit-v8"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "allofus-fitbit-v8",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-papagei-2025",
+    "short_name": "PaPaGei: Open Foundation Models for Optical Physiological Signals",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "PaPaGei: Open Foundation Models for Optical Physiological Signals",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Physiological representations support downstream tasks; representation transfer does not by itself establish intervention effects.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-papagei"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-papagei",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-papagei-2025",
+    "short_name": "PaPaGei",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "PaPaGei",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Model and paper are two records of a related work, not independent evidence.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-papagei"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "model-papagei",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-ssl-wearables-700k-days-2024",
+    "short_name": "Self-supervised learning for human activity recognition using 700,000 person-days of wearable data",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Self-supervised learning for human activity recognition using 700,000 person-days of wearable data",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "HAR representation performance supports behavior estimation; it is not an intervention result.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-harnet"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-harnet",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-ssl-wearables-700k-days-2024",
+    "short_name": "HARNet / ssl-wearables",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "direct_wrist",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "HARNet / ssl-wearables",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "A pretrained activity representation is not a causal digital twin.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-harnet"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "model-harnet",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-sensorlm-2025",
+    "short_name": "SensorLM: Learning the Language of Wearable Sensors",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior",
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "SensorLM: Learning the Language of Wearable Sensors",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Sensor-language alignment does not independently establish causal health recommendations.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-sensorlm"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-sensorlm",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-sensorlm-2025",
+    "short_name": "SensorLM",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior",
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "SensorLM",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Sensor-language capability and therapeutic effectiveness must be evaluated separately.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-sensorlm"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "model-sensorlm",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-sleepfm-clinical-2026",
+    "short_name": "A multimodal sleep foundation model for disease prediction",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "sleep_circadian",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "A multimodal sleep foundation model for disease prediction",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Polysomnography-based disease prediction is not wrist-only validation or a sleep-intervention effect.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-sleepfm"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-sleepfm",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-sleepfm-clinical-2026",
+    "short_name": "SleepFM",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "sleep_circadian",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "SleepFM",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "Predictive model indexing does not imply a validated personal counterfactual simulator.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-sleepfm"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "model-sleepfm",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-gluformer-2026",
+    "short_name": "A foundation model for continuous glucose monitoring data",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "A foundation model for continuous glucose monitoring data",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "CGM representation/prediction is distinct from prescribing food or insulin with identified causal benefits.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-gluformer"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "paper-gluformer",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "model-gluformer-2026",
+    "short_name": "GluFormer",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state",
+      "disease_risk"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "other_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "GluFormer",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Scope mapped from the existing source-linked catalogue; no new comprehensive source re-appraisal.",
+    "evidence_boundary": "A glucose model may motivate scenarios; a causal effect still requires justified action semantics and identification.",
+    "ai_component": "unknown",
+    "variables": [],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-model-gluformer"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "model-gluformer",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-hr",
+    "short_name": "Heart rate",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Heart rate",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Heart rate",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-heartpy"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-hr",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-rmssd",
+    "short_name": "RMSSD",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "RMSSD",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "RMSSD",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-pyhrv"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-rmssd",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-sdnn",
+    "short_name": "SDNN",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "SDNN",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "SDNN",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-pyhrv"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-sdnn",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-pnn50",
+    "short_name": "pNN50",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "physiological_state"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "pNN50",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "pNN50",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-pyhrv"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-pnn50",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-eda-tonic",
+    "short_name": "Tonic skin conductance",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Tonic skin conductance",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Tonic skin conductance",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-neurokit"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-eda-tonic",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-eda-phasic",
+    "short_name": "Skin conductance response frequency",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Skin conductance response frequency",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Skin conductance response frequency",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-neurokit"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-eda-phasic",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-rsp-rate",
+    "short_name": "Respiratory rate",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Respiratory rate",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Respiratory rate",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-neurokit"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-rsp-rate",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-steps",
+    "short_name": "Step count",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Step count",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Step count",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-stepcount"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-steps",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-enmo",
+    "short_name": "ENMO",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "ENMO",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "ENMO",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-ggir"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-enmo",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-sleep-duration",
+    "short_name": "Actigraphy-derived sleep duration",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "sleep_circadian"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Actigraphy-derived sleep duration",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Actigraphy-derived sleep duration",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-asleep"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-sleep-duration",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-is",
+    "short_name": "Interdaily stability",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "sleep_circadian"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Interdaily stability",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Interdaily stability",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-pyactigraphy"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-is",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-iv",
+    "short_name": "Intradaily variability",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "sleep_circadian"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Intradaily variability",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Intradaily variability",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-pyactigraphy"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-iv",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-ra",
+    "short_name": "Relative amplitude",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "sleep_circadian"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Relative amplitude",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Relative amplitude",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-tool-pyactigraphy"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-ra",
+    "imported_from": "local-v1.2.0"
+  },
+  {
+    "record_id": "candidate-local-measure-gait-stride",
+    "short_name": "Stride time",
+    "layers": [
+      "function_variables"
+    ],
+    "functions": [
+      "activity_behavior"
+    ],
+    "reasoning_tasks": [
+      "not_applicable"
+    ],
+    "claim_kind": "resource_support",
+    "counterfactual_semantics": "not_applicable",
+    "wearable_relation": "mixed_wearable",
+    "intervention_kind": "none",
+    "study_design": "resource",
+    "question": "Stride time",
+    "action_space": "Not applicable: no action is assigned in this resource.",
+    "estimand": "Not applicable: this is not a treatment-effect claim.",
+    "identification_assumptions": "Not applicable to the indexed claim.",
+    "validation_scope": "Original digital-measure record retained without changing definitions or validation fields.",
+    "evidence_boundary": "A computed feature can be a covariate or outcome in a specified study. Its modifiability, causal role and clinical benefit cannot be inferred from its name.",
+    "ai_component": "unknown",
+    "variables": [
+      {
+        "name": "Stride time",
+        "role": "measurement",
+        "timing": "study-specific",
+        "actionability": "not_an_action",
+        "note": "Assign exposure, mediator or outcome only for a specified study question."
+      }
+    ],
+    "result_direction": "not_applicable",
+    "review_scope": "existing_registry_metadata",
+    "source_ids": [
+      "s-gait-pd"
+    ],
+    "reviewed_on": "2026-09-28",
+    "annotation_note": "Curator-proposed thematic mapping. Variable roles and applicability conditions are question-specific interpretations, not a claim that all author assumptions have been independently verified.",
+    "local_record_id": "measure-gait-stride",
+    "imported_from": "local-v1.2.0"
+  }
+]

@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "record_id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "layers": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "reasoning",
+            "function_variables",
+            "interventions"
+          ]
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "functions": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "identity",
+            "activity_behavior",
+            "physiological_state",
+            "sleep_circadian",
+            "disease_risk",
+            "functional_status",
+            "context_receptivity",
+            "measurement_quality"
+          ]
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "reasoning_tasks": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "not_applicable",
+            "prediction_association",
+            "model_counterfactual",
+            "causal_structure",
+            "causal_effect",
+            "longitudinal_effect",
+            "policy_evaluation",
+            "causal_recourse"
+          ]
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "variables": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "enum": [
+                "identity",
+                "measurement",
+                "context",
+                "exposure",
+                "action",
+                "confounder",
+                "mediator",
+                "outcome",
+                "effect_modifier",
+                "availability"
+              ]
+            },
+            "timing": {
+              "type": "string",
+              "minLength": 1
+            },
+            "actionability": {
+              "enum": [
+                "not_an_action",
+                "observed_exposure",
+                "candidate_action",
+                "implemented_action",
+                "unknown"
+              ]
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "role",
+            "timing",
+            "actionability",
+            "note"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 0,
+        "uniqueItems": true
+      },
+      "source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "reviewed_on": {
+        "type": "string",
+        "format": "date"
+      },
+      "claim_kind": {
+        "enum": [
+          "resource_support",
+          "prediction_association",
+          "model_explanation",
+          "causal_method",
+          "policy_method",
+          "proximal_trial_effect",
+          "clinical_trial_effect",
+          "design_framework"
+        ]
+      },
+      "counterfactual_semantics": {
+        "enum": [
+          "not_applicable",
+          "model_input_edit",
+          "potential_outcomes",
+          "structural_intervention",
+          "mechanistic_replay",
+          "unknown"
+        ]
+      },
+      "wearable_relation": {
+        "enum": [
+          "direct_wrist",
+          "other_wearable",
+          "mixed_wearable",
+          "mobile_adjacent",
+          "method_transfer",
+          "unknown"
+        ]
+      },
+      "intervention_kind": {
+        "enum": [
+          "none",
+          "design_framework",
+          "fixed_feedback",
+          "contextual_rule",
+          "learned_policy",
+          "generative_assistance",
+          "closed_loop",
+          "decision_support"
+        ]
+      },
+      "study_design": {
+        "enum": [
+          "resource",
+          "observational_prediction",
+          "observational_causal",
+          "method_simulation",
+          "micro_randomized_trial",
+          "randomized_trial",
+          "randomized_sequence_trial",
+          "pilot_deployment",
+          "review_framework",
+          "unknown"
+        ]
+      },
+      "review_scope": {
+        "enum": [
+          "primary_html_sections",
+          "primary_abstract_metadata",
+          "publisher_indexed_abstract",
+          "institutional_publication_record",
+          "existing_registry_metadata"
+        ]
+      },
+      "result_direction": {
+        "enum": [
+          "not_applicable",
+          "not_appraised",
+          "mixed",
+          "null_primary",
+          "positive_primary",
+          "simulation_only"
+        ]
+      },
+      "short_name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "question": {
+        "type": "string",
+        "minLength": 1
+      },
+      "action_space": {
+        "type": "string",
+        "minLength": 1
+      },
+      "estimand": {
+        "type": "string",
+        "minLength": 1
+      },
+      "identification_assumptions": {
+        "type": "string",
+        "minLength": 1
+      },
+      "validation_scope": {
+        "type": "string",
+        "minLength": 1
+      },
+      "evidence_boundary": {
+        "type": "string",
+        "minLength": 1
+      },
+      "ai_component": {
+        "type": "string",
+        "minLength": 1
+      },
+      "annotation_note": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "record_id",
+      "layers",
+      "functions",
+      "reasoning_tasks",
+      "variables",
+      "source_ids",
+      "reviewed_on",
+      "claim_kind",
+      "counterfactual_semantics",
+      "wearable_relation",
+      "intervention_kind",
+      "study_design",
+      "review_scope",
+      "result_direction",
+      "short_name",
+      "question",
+      "action_space",
+      "estimand",
+      "identification_assumptions",
+      "validation_scope",
+      "evidence_boundary",
+      "ai_component",
+      "annotation_note"
+    ],
+    "additionalProperties": false
+  },
+  "minItems": 0,
+  "uniqueItems": true
+}

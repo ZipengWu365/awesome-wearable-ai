@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — local catalogue integration
+
+- Preserve all 396 accepted IDs; add 12 publication-checked twin-related records and 8 watchlist candidates.
+- Add source-linked resource and thematic profiles with a separate pending-import queue.
+- Correct UniMTS weight availability while preserving NeurIPS metadata and original author attribution.
+- Add query sharing, result exports, source details, sensor/twin/release filters and portable build checks.
+
+
 ## 0.3.0 — 2026-09-02
 
 - rebuilt the repository as a machine-readable evidence atlas rather than a small hand-written list

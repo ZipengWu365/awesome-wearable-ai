@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "theme": "Wearable digital twins",
+  "relationship": "Cross-layer theme: functions and state → simulation and reasoning → decision delivery. The existing causal theme stays intact.",
+  "interpretation": "Repository classification, not a universal definition, evidence ranking or endorsement. Profile rows are not additional studies.",
+  "vocabularies": {
+    "theme_role": [
+      "reported_twin",
+      "conceptual_framework",
+      "method_enabler",
+      "synthetic_data_analogue"
+    ],
+    "application": [
+      "framework",
+      "cardiovascular",
+      "musculoskeletal",
+      "metabolic",
+      "hydration",
+      "bladder_sensor_design",
+      "respiratory",
+      "synthetic_data",
+      "behavioral"
+    ],
+    "entity": [
+      "individual_organ",
+      "individual_person",
+      "subpopulation",
+      "synthetic_cohort",
+      "conceptual",
+      "not_applicable"
+    ],
+    "wearable_relation": [
+      "direct_wrist",
+      "wrist_and_other_wearable",
+      "multi_location_wearable",
+      "other_wearable",
+      "wearable_driven_mixed_sources",
+      "clinical_signal_transfer",
+      "methodological_reference",
+      "wearable_context_proposed"
+    ],
+    "personalization": [
+      "person_specific",
+      "group_conditioned",
+      "anatomy_plus_external_streams",
+      "synthetic_matching",
+      "proposed",
+      "not_applicable",
+      "not_reported"
+    ],
+    "update_mode": [
+      "stream_driven_offline",
+      "online_state_update",
+      "periodic_retraining",
+      "offline_calibration_replay",
+      "not_appraised",
+      "not_applicable",
+      "proposed"
+    ],
+    "simulation_kind": [
+      "factual_state_reconstruction",
+      "mechanistic_what_if",
+      "predictive_input_scenarios",
+      "synthetic_data_generation",
+      "population_policy_simulation",
+      "model_based_effect_estimation",
+      "not_evaluated",
+      "framework_only"
+    ],
+    "execution": [
+      "none",
+      "simulation_only",
+      "human_reviewed_advice",
+      "patient_decision_support",
+      "automated_device_control",
+      "human_adjustment_with_device_control",
+      "proposed",
+      "not_applicable"
+    ],
+    "evaluation": [
+      "numerical_verification",
+      "measurement_comparison",
+      "retrospective_prediction",
+      "trial_data_replay",
+      "randomized_intervention",
+      "pilot_human_study",
+      "software_interface",
+      "review_or_framework",
+      "synthetic_privacy_utility"
+    ],
+    "causal_status": [
+      "not_identified",
+      "assumption_dependent_simulation",
+      "randomized_bundle_only",
+      "not_applicable",
+      "not_appraised"
+    ],
+    "review_scope": [
+      "primary_sections",
+      "abstract_metadata",
+      "abstract_and_open_reviews",
+      "prior_version_annotation"
+    ]
+  },
+  "axis_definitions": {
+    "theme_role": "Author-described twin, conceptual framework, method enabler or synthetic-data analogue. No automatic equivalence.",
+    "application": "Scientific application; independent of study design and causal claims.",
+    "entity": "What is represented: an organ, person, subpopulation, synthetic cohort or concept.",
+    "wearable_relation": "Actual sensing relationship. A wearable-oriented title does not prove wrist acquisition.",
+    "personalization": "Person-specific fitting, group conditioning and external-stream/anatomy pairing are separate.",
+    "update_mode": "Distinguishes state refresh, parameter retraining, offline streaming and offline calibration. Cadence is in time_scope.",
+    "simulation_kind": "Factual reconstruction, input editing, mechanistic replay, effect estimation and synthetic data have different semantics.",
+    "execution": "Where decisions stop: simulation, human advice, patient support or actuation. This is not evidence of safety.",
+    "evaluation": "Multiple non-ordinal evaluation designs may apply. Trial-data replay is distinct from prospective randomization.",
+    "causal_status": "Curated limit of causal interpretation; mechanistic structure alone does not prove causal identification.",
+    "review_scope": "Sections actually checked in this pass, or explicitly preserved earlier annotations."
+  }
+}

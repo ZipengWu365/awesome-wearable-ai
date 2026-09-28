@@ -2,8 +2,8 @@
 
 > Generated from the accepted registry. Counts describe coverage, not scientific importance.
 
-- Accepted records: **396**
-- Watchlist records: **45**
+- Accepted records: **408**
+- Watchlist records: **53**
 
 ## Record Type
 
@@ -11,9 +11,9 @@
 |---|---:|
 | dataset | 116 |
 | model | 102 |
-| method | 61 |
+| method | 72 |
 | infrastructure | 42 |
-| intervention | 40 |
+| intervention | 41 |
 | measure | 35 |
 
 ## Family
@@ -31,6 +31,7 @@
 | causal-identification-foundations | 13 |
 | motion-imu-foundation-models | 12 |
 | affect-stress-datasets | 12 |
+| digital-twins | 12 |
 | longitudinal-counterfactual-models | 11 |
 | multimodal-physiological-models | 10 |
 | causal-discovery-and-invariance | 7 |
@@ -98,8 +99,8 @@
 
 | Value | Count |
 |---|---:|
-| accelerometer | 86 |
-| ecg | 69 |
+| accelerometer | 87 |
+| ecg | 71 |
 | eeg | 55 |
 | longitudinal-data | 51 |
 | ppg | 38 |
@@ -109,20 +110,20 @@
 | time-series | 23 |
 | heart-rate | 23 |
 | imu | 21 |
+| cgm | 20 |
+| gyroscope | 20 |
+| steps | 20 |
 | sleep | 19 |
-| gyroscope | 19 |
 | eda | 19 |
-| steps | 18 |
-| cgm | 16 |
 | eog | 14 |
 | activity-summary | 13 |
 | smartphone | 12 |
 | spo2 | 10 |
 | skin-temperature | 9 |
 | actigraphy | 7 |
+| magnetometer | 7 |
 | self-report | 7 |
 | audio | 6 |
-| magnetometer | 6 |
 | video | 6 |
 | insulin-pump | 6 |
 | ieeg | 5 |
@@ -140,6 +141,7 @@
 | neural-stimulation | 3 |
 | smartphone-sensors | 3 |
 | consumer-health-data | 3 |
+| heart_rate | 3 |
 | glucose | 2 |
 | ecg-image | 2 |
 | meg | 2 |
@@ -163,6 +165,7 @@
 | ecog | 2 |
 | psg | 2 |
 | apple-health | 2 |
+| bioimpedance | 2 |
 | pcg | 1 |
 | neural-signals | 1 |
 | optomyography | 1 |
@@ -251,6 +254,7 @@
 | activity | 1 |
 | mobile-health-data | 1 |
 | wearable-data | 1 |
+| sleep_summary | 1 |
 
 ## Clinical Domain
 
@@ -258,26 +262,26 @@
 |---|---:|
 | causal-inference | 61 |
 | personalized-health | 61 |
-| cardiovascular | 48 |
+| cardiovascular | 50 |
 | human-activity | 39 |
 | sleep | 30 |
 | physical-activity | 25 |
 | forecasting | 19 |
 | neurology | 15 |
+| metabolic | 12 |
 | population-health | 10 |
 | atrial-fibrillation | 10 |
 | diabetes | 9 |
 | brain-computer-interface | 9 |
 | emotion | 9 |
-| metabolic | 8 |
 | neuromuscular | 8 |
 | mental-health | 8 |
+| respiratory | 8 |
 | aging | 8 |
 | glycemic-control | 8 |
 | interoperability | 8 |
 | rehabilitation | 7 |
 | human-activity-recognition | 7 |
-| respiratory | 7 |
 | type-1-diabetes | 7 |
 | parkinson-disease | 7 |
 | governance | 7 |
@@ -437,15 +441,20 @@
 | validation | 1 |
 | clinical-deployment | 1 |
 | diagnostic-accuracy | 1 |
+| framework | 1 |
+| musculoskeletal | 1 |
+| bladder_sensor_design | 1 |
+| synthetic_data | 1 |
+| behavioral | 1 |
 
 ## Evidence Stage
 
 | Value | Count |
 |---|---:|
 | official-resource | 153 |
-| methodological | 130 |
+| methodological | 141 |
 | external-validation | 61 |
-| randomized-controlled-trial | 31 |
+| randomized-controlled-trial | 32 |
 | systematic-review | 9 |
 | prospective-observational | 6 |
 | clinical-deployment | 4 |
@@ -456,10 +465,10 @@
 
 | Value | Count |
 |---|---:|
-| not-applicable | 158 |
-| not-causal | 149 |
-| randomized-causal-effect | 33 |
-| causal-identification | 23 |
+| not-applicable | 159 |
+| not-causal | 158 |
+| randomized-causal-effect | 34 |
+| causal-identification | 24 |
 | policy-counterfactual | 15 |
 | mechanistic-closed-loop | 14 |
 | predictive-counterfactual | 4 |
@@ -468,7 +477,7 @@
 
 | Value | Count |
 |---|---:|
-| primary_source_checked | 167 |
+| primary_source_checked | 179 |
 | official_resource_checked | 153 |
 | review_reference_checked | 76 |
 

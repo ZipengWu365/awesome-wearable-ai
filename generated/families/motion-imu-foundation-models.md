@@ -100,7 +100,7 @@ Accepted records: **12**
 - **Why it matters:** Targets sensor-, position- and task-level heterogeneity that limits reusable IMU models.
 - **Limitations:** The conference evaluation does not establish generality to all wearable devices, very long free-living recordings or clinical outcomes.
 - **Evidence boundary:** This is representation-learning or predictive evidence. It does not establish that a sensor-derived prediction is a causal treatment effect, clinically useful decision rule, or safe deployed intervention.
-- **Verification:** `primary_source_checked` on 2026-09-02
+- **Verification:** `primary_source_checked` on 2026-09-28
 
 ## [Wearable Accelerometer Foundation Models for Health via Knowledge Distillation](https://machinelearning.apple.com/research/wearable-accelerometer-foundation-models)
 
