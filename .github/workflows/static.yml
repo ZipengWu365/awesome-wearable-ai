@@ -36,9 +36,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Publish only the website. Research data, docs, schemas and scripts
-          # remain part of the repository but are not exposed as Pages assets.
-          path: './site'
+          # Upload entire repository
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
