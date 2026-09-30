@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f2">
+  <meta name="description" content="An evidence-aware, machine-readable atlas of wearable and body-sensed intelligence.">
+  <link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Awesome Wearable AI — Evidence Atlas">
+  <meta property="og:description" content="Explore 396 curated records connecting wearable signals, models, evidence and real-world impact.">
+  <meta property="og:url" content="https://zipengwu365.github.io/awesome-wearable-ai/">
+  <meta property="og:image" content="https://zipengwu365.github.io/awesome-wearable-ai/assets/images/hero-wearable-researcher-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Awesome Wearable AI — Evidence Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-scene="0">
+  <a class="skip-link" href="#story">Skip to the story</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Awesome Wearable AI home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Awesome Wearable AI</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#story">Story</a>
+      <a href="#explore">Atlas</a>
+      <a href="#taxonomy">Taxonomy</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#resources">Resources</a>
+      <a href="#community">Community</a>
+      <a class="nav-github" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <button class="menu-button" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+  </header>
+
+  <div class="story-progress" aria-hidden="true"><span></span></div>
+
+  <main id="top">
+    <section class="scrolly" id="story" aria-label="The wearable AI story">
+      <div class="visual-stage" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="hero-art"></div>
+        <canvas class="people-field" aria-hidden="true"></canvas>
+        <p class="people-field-key" aria-hidden="true"><span></span><b id="people-field-label">People become structured evidence</b></p>
+        <div class="hero-sidecopy">
+          <p class="eyebrow">FROM SIGNALS TO INTELLIGENCE</p>
+          <h2>Research that stays connected to real life.</h2>
+          <ul>
+            <li><i>↗</i><span>From sensing to real-world impact</span></li>
+            <li><i>◎</i><span>Open, collaborative and machine-readable</span></li>
+            <li><i>♡</i><span>Evidence boundaries made visible</span></li>
+          </ul>
+        </div>
+        <div class="sensor-pills">
+          <span class="sensor-pill pill-eeg"><i>⌁</i><b>EEG</b><small>Brain activity</small></span>
+          <span class="sensor-pill pill-ecg"><i>♥</i><b>ECG</b><small>Heart activity</small></span>
+          <span class="sensor-pill pill-ppg"><i>∿</i><b>PPG</b><small>Blood oxygen</small></span>
+          <span class="sensor-pill pill-cgm"><i>◒</i><b>CGM</b><small>Glucose levels</small></span>
+          <span class="sensor-pill pill-imu"><i>↗</i><b>IMU</b><small>Motion & posture</small></span>
+          <span class="sensor-pill pill-sleep"><i>☾</i><b>Sleep</b><small>Sleep patterns</small></span>
+        </div>
+
+        <svg class="world" viewBox="0 0 1200 800" role="img" aria-label="A person wearing sensors surrounded by signals that grow into a research atlas">
+          <defs>
+            <linearGradient id="shirtGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#83d9d0"/>
+              <stop offset="1" stop-color="#4caeb8"/>
+            </linearGradient>
+            <linearGradient id="trouserGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f39a78"/>
+              <stop offset="1" stop-color="#e87660"/>
+            </linearGradient>
+            <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+              <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#20375a" flood-opacity=".12"/>
+            </filter>
+            <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+              <feGaussianBlur stdDeviation="9" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <g class="landscape">
+            <circle class="sun" cx="1035" cy="154" r="74"/>
+            <path class="cloud cloud-a" d="M85 193c16-31 57-36 79-11 27-22 76-5 76 31H85c-14 0-15-14 0-20Z"/>
+            <path class="cloud cloud-b" d="M924 285c11-25 45-29 63-9 23-18 62-3 62 25H918c-10 0-8-11 6-16Z"/>
+            <path class="hill hill-back" d="M0 639c131-121 244-108 349-26 116-127 262-103 369 16 123-131 314-95 482 1v170H0Z"/>
+            <path class="hill hill-front" d="M0 710c155-98 291-93 438 5 185-107 407-78 762 22v63H0Z"/>
+            <g class="plant plant-a"><path d="M108 699c-8-47 5-99 38-137M128 645c-32-19-40-51-35-79M133 625c35-18 52-48 51-79"/><circle cx="94" cy="559" r="20"/><circle cx="186" cy="541" r="23"/></g>
+            <g class="plant plant-b"><path d="M1076 706c8-44-4-93-35-129M1058 660c28-18 37-47 31-74M1057 638c-31-15-48-42-47-70"/><circle cx="1091" cy="581" r="18"/><circle cx="1008" cy="562" r="21"/></g>
+          </g>
+
+          <g class="signal-lines">
+            <path class="flow flow-ecg" d="M415 382h58l10-22 16 55 17-91 20 67 13-32 13 23h71"/>
+            <path class="flow flow-eeg" d="M552 247c15-18 27 17 42-2s27 17 43-2 27 17 43-2"/>
+            <path class="flow flow-imu" d="M409 504c-52 2-81 38-92 77"/>
+            <path class="flow flow-cgm" d="M666 504c64 2 100 35 126 78"/>
+          </g>
+
+          <g class="person" filter="url(#softShadow)">
+            <ellipse class="person-shadow" cx="582" cy="716" rx="142" ry="24"/>
+            <path class="leg leg-left" d="M516 535c-4 69-10 137-18 175h68l22-175Z"/>
+            <path class="leg leg-right" d="M584 535l17 175h72c-12-48-22-112-23-175Z"/>
+            <path class="shoe" d="M493 697h77c5 4 7 16 1 22H477c-2-13 5-20 16-22Z"/>
+            <path class="shoe" d="M599 697h77c13 4 20 11 19 22h-98c-5-8-4-16 2-22Z"/>
+            <path class="torso" d="M490 327c33-35 147-34 178 0l-17 221c-39 24-119 23-160 0Z"/>
+            <path class="arm arm-left" d="M504 345c-30 28-45 82-56 132-4 18 24 26 33 8l49-111Z"/>
+            <path class="arm arm-right" d="M652 345c33 29 49 78 60 129 5 21-26 27-34 8l-50-108Z"/>
+            <rect class="watch" x="686" y="442" width="31" height="42" rx="11" transform="rotate(-13 686 442)"/>
+            <rect class="watch-face" x="691" y="449" width="21" height="25" rx="7" transform="rotate(-13 691 449)"/>
+            <circle class="neck" cx="579" cy="309" r="26"/>
+            <circle class="head" cx="579" cy="242" r="77"/>
+            <path class="hair" d="M506 235c-5-75 102-109 148-49 12 16 14 37 8 59-10-6-20-18-24-34-25 13-69 18-104 7-3 19-12 32-28 40Z"/>
+            <path class="ear" d="M509 244c-21-6-25 34-3 38"/>
+            <path class="ear" d="M649 244c20-5 23 33 3 38"/>
+            <path class="brow" d="M543 245c9-5 18-5 27 0M598 245c9-5 18-5 26 0"/>
+            <circle class="eye" cx="557" cy="260" r="4"/>
+            <circle class="eye" cx="610" cy="260" r="4"/>
+            <path class="smile" d="M562 286c12 10 27 10 40 0"/>
+            <path class="earbud" d="M649 245c13-5 18 4 13 16"/>
+            <circle class="chest-sensor" cx="580" cy="392" r="18"/>
+            <path class="chest-wave" d="M568 392h7l4-7 5 15 5-8h7"/>
+          </g>
+
+          <g class="signal-labels">
+            <g class="signal-chip chip-eeg" transform="translate(370 218)"><circle r="29"/><text x="43" y="-2">EEG</text><text class="chip-sub" x="43" y="18">neural signals</text></g>
+            <g class="signal-chip chip-ppg" transform="translate(783 295)"><circle r="29"/><text x="43" y="-2">PPG</text><text class="chip-sub" x="43" y="18">optical pulse</text></g>
+            <g class="signal-chip chip-ecg" transform="translate(345 413)"><circle r="29"/><text x="43" y="-2">ECG</text><text class="chip-sub" x="43" y="18">cardiac rhythm</text></g>
+            <g class="signal-chip chip-imu" transform="translate(312 579)"><circle r="29"/><text x="43" y="-2">IMU</text><text class="chip-sub" x="43" y="18">motion</text></g>
+            <g class="signal-chip chip-cgm" transform="translate(810 587)"><circle r="29"/><text x="43" y="-2">CGM</text><text class="chip-sub" x="43" y="18">metabolic state</text></g>
+            <g class="signal-chip chip-sleep" transform="translate(840 431)"><circle r="29"/><text x="43" y="-2">SLEEP</text><text class="chip-sub" x="43" y="18">recovery</text></g>
+          </g>
+
+          <g class="representation-field">
+            <text class="world-kicker" x="600" y="142" text-anchor="middle">SIGNALS BECOME STRUCTURE</text>
+            <g class="raw-wave" transform="translate(205 285)">
+              <text x="0" y="-35">raw signal</text>
+              <path d="M0 0h58l11-25 17 62 19-98 22 72 15-32 18 21h73"/>
+            </g>
+            <path class="transform-arrow" d="M472 292h208"/>
+            <g class="latent-dots">
+              <circle cx="780" cy="245" r="10"/><circle cx="825" cy="270" r="8"/><circle cx="865" cy="224" r="13"/><circle cx="911" cy="274" r="7"/>
+              <circle cx="770" cy="328" r="7"/><circle cx="818" cy="345" r="13"/><circle cx="872" cy="319" r="9"/><circle cx="924" cy="342" r="11"/>
+              <circle cx="789" cy="409" r="12"/><circle cx="847" cy="397" r="8"/><circle cx="897" cy="418" r="13"/>
+            </g>
+            <text class="representation-label" x="851" y="474" text-anchor="middle">machine-readable representation</text>
+          </g>
+
+          <g class="lifecycle-field">
+            <text class="world-kicker" x="600" y="142" text-anchor="middle">THE WEARABLE AI LIFECYCLE</text>
+            <path class="lifecycle-track" d="M105 411H1095"/>
+            <g class="life-node" transform="translate(120 411)"><circle r="30"/><text y="72">Sense</text><text class="life-no" y="5">01</text></g>
+            <g class="life-node" transform="translate(240 411)"><circle r="30"/><text y="72">Harmonise</text><text class="life-no" y="5">02</text></g>
+            <g class="life-node" transform="translate(360 411)"><circle r="30"/><text y="72">Represent</text><text class="life-no" y="5">03</text></g>
+            <g class="life-node" transform="translate(480 411)"><circle r="30"/><text y="72">Measure</text><text class="life-no" y="5">04</text></g>
+            <g class="life-node" transform="translate(600 411)"><circle r="30"/><text y="72">Predict</text><text class="life-no" y="5">05</text></g>
+            <g class="life-node" transform="translate(720 411)"><circle r="30"/><text y="72">Cause</text><text class="life-no" y="5">06</text></g>
+            <g class="life-node" transform="translate(840 411)"><circle r="30"/><text y="72">Intervene</text><text class="life-no" y="5">07</text></g>
+            <g class="life-node" transform="translate(960 411)"><circle r="30"/><text y="72">Deploy</text><text class="life-no" y="5">08</text></g>
+            <g class="life-node" transform="translate(1080 411)"><circle r="30"/><text y="72">Govern</text><text class="life-no" y="5">09</text></g>
+            <path class="loop-arrow" d="M1080 354c-61-176-899-178-960 0"/>
+          </g>
+
+          <g class="ecosystem-field">
+            <text class="world-kicker" x="600" y="98" text-anchor="middle">ONE CONNECTED RESEARCH ECOSYSTEM</text>
+            <g class="eco-lines">
+              <path d="M600 385 335 233M600 385 605 175M600 385 871 230M600 385 334 558M600 385 598 626M600 385 879 554"/>
+              <path d="M335 233 605 175 871 230M334 558 598 626 879 554"/>
+            </g>
+            <g class="eco-core" transform="translate(600 385)"><circle r="94"/><text y="-9">AWESOME</text><text y="20">WEARABLE AI</text><text class="eco-core-sub" y="48">396 accepted records</text></g>
+            <g class="eco-node eco-model" transform="translate(335 233)"><circle r="68"/><text y="-3">Models</text><text class="eco-count" y="24">102</text></g>
+            <g class="eco-node eco-data" transform="translate(605 175)"><circle r="68"/><text y="-3">Datasets</text><text class="eco-count" y="24">116</text></g>
+            <g class="eco-node eco-method" transform="translate(871 230)"><circle r="68"/><text y="-3">Methods</text><text class="eco-count" y="24">61</text></g>
+            <g class="eco-node eco-measure" transform="translate(334 558)"><circle r="68"/><text y="-3">Measures</text><text class="eco-count" y="24">35</text></g>
+            <g class="eco-node eco-infra" transform="translate(598 626)"><circle r="68"/><text y="-3">Infrastructure</text><text class="eco-count" y="24">42</text></g>
+            <g class="eco-node eco-intervention" transform="translate(879 554)"><circle r="68"/><text y="-3">Interventions</text><text class="eco-count" y="24">40</text></g>
+          </g>
+
+          <g class="evidence-field">
+            <text class="world-kicker" x="600" y="116" text-anchor="middle">FOUR QUESTIONS · FOUR EVIDENCE BOUNDARIES</text>
+            <path class="evidence-spine" d="M190 403H1010"/>
+            <g class="evidence-node ev-predict" transform="translate(210 403)"><circle r="72"/><path d="M-39 19c21-8 29-52 52-38 16 10 25-23 45-31"/><text y="112">Predictive</text><text class="ev-question" y="138">What may happen?</text></g>
+            <g class="evidence-node ev-causal" transform="translate(470 403)"><circle r="72"/><circle class="mini" cx="-27" cy="-16" r="11"/><circle class="mini" cx="28" cy="-31" r="11"/><circle class="mini" cx="22" cy="28" r="11"/><path d="M-16-19 17-28M-19-7 13 20M28-20 23 17"/><text y="112">Causal</text><text class="ev-question" y="138">What causes it?</text></g>
+            <g class="evidence-node ev-policy" transform="translate(730 403)"><circle r="72"/><path d="M-38-18h27l21-25M-11-18l28 28 28-20M17 10l27 25"/><text y="112">Policy</text><text class="ev-question" y="138">What should we do?</text></g>
+            <g class="evidence-node ev-twin" transform="translate(990 403)"><circle r="72"/><path d="M-18 34c-4-35 0-59 18-74 18 15 22 39 18 74M-13-4h26M0-25V15"/><text y="112">Digital twin</text><text class="ev-question" y="138">What if we simulate?</text></g>
+          </g>
+        </svg>
+
+        <div class="stage-note" data-note="signal">Each pulse has its own physics, timescale, and uncertainty.</div>
+        <div class="stage-note" data-note="relations"><strong>2,169</strong> explicit or machine-derived relations connect the atlas.</div>
+      </div>
+
+      <div class="story-steps">
+        <article class="step hero-step" data-scene="0">
+          <div class="story-copy hero-copy">
+            <p class="eyebrow">AN OPEN, EVIDENCE-AWARE RESEARCH ATLAS</p>
+            <h1>Wearable AI<br>for a healthier,<br><em>more human future.</em></h1>
+            <p class="dek">A curated atlas of datasets, models, measures, causal methods and real-world interventions—from sensing to impact.</p>
+            <div class="hero-stats" aria-label="Atlas summary">
+              <span><strong>396</strong> accepted records</span>
+              <span><strong>102</strong> model records</span>
+              <span><strong>116</strong> datasets</span>
+              <span><strong>2,169</strong> relations</span>
+              <span><strong>6</strong> categories</span>
+            </div>
+            <div class="hero-actions">
+              <a class="primary-button" href="#explore">Explore the atlas <span>→</span></a>
+              <a class="scroll-cue" href="#signals"><span>Follow the story</span><i aria-hidden="true">↓</i></a>
+            </div>
+            <p class="hand-note">Small signals. Big possibilities.</p>
+          </div>
+        </article>
+
+        <article class="step" id="signals" data-scene="1">
+          <div class="story-copy left-copy">
+            <p class="eyebrow">01 · SENSE</p>
+            <h2>Intelligence begins with <em>small signals.</em></h2>
+            <p>A wrist pulse. A change in gait. A night of sleep. Wearables turn continuous life into measurements—but every modality sees only part of the person.</p>
+            <p class="margin-note">Motion, ECG, EEG, PPG, EMG, glucose and sleep each require different assumptions.</p>
+          </div>
+        </article>
+
+        <article class="step" data-scene="2">
+          <div class="story-copy right-copy">
+            <p class="eyebrow">02 · REPRESENT</p>
+            <h2>Signals become <em>machine-readable structure.</em></h2>
+            <p>Models organise noisy streams into representations, patterns and predictions. The transformation is powerful; it is not the same as clinical truth.</p>
+            <ul class="micro-list" aria-label="Signal transformation stages">
+              <li>calibrate</li><li>encode</li><li>learn</li><li>interpret</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="step" data-scene="3">
+          <div class="story-copy left-copy compact-copy">
+            <p class="eyebrow">03 · THE LIFECYCLE</p>
+            <h2>One model is only <em>one moment</em> in a longer loop.</h2>
+            <p>Real-world impact depends on the chain around it: quality, measurement, prediction, causal reasoning, intervention, and learning from what happens next.</p>
+          </div>
+        </article>
+
+        <article class="step" data-scene="4">
+          <div class="story-copy right-copy compact-copy">
+            <p class="eyebrow">04 · THE ATLAS</p>
+            <h2>A field this connected needs <em>a map.</em></h2>
+            <p>Six resource types form the atlas. The categories describe what a record is; the lifecycle describes where it helps. They are related, but not interchangeable.</p>
+          </div>
+        </article>
+
+        <article class="step evidence-step" id="evidence" data-scene="5">
+          <div class="story-copy left-copy compact-copy">
+            <p class="eyebrow">05 · EVIDENCE BOUNDARIES</p>
+            <h2>Prediction is not the end of the story.</h2>
+            <p>A model prediction does not establish a causal effect. A causal estimate does not automatically define a safe policy. A simulation is not a clinical outcome.</p>
+            <p class="margin-note">The atlas keeps these claim layers visible—especially when the distinctions are inconvenient.</p>
+          </div>
+        </article>
+
+        <article class="step quiet-step" data-scene="6">
+          <div class="quiet-copy">
+            <p class="eyebrow">A PAUSE FOR PROVENANCE</p>
+            <blockquote>Evidence is not a badge. It is a boundary around what a record can legitimately support.</blockquote>
+            <p>The registry separates evidence cards, verified metadata, and venue-screened records. It tracks whether a source was checked against a primary paper, official resource, or review reference. Coverage is curated—not claimed to be exhaustive.</p>
+            <div class="depth-bars" aria-label="Evidence depth counts">
+              <div><span>Evidence card</span><i style="--size:42%"></i><strong>95</strong></div>
+              <div><span>Metadata verified</span><i style="--size:100%"></i><strong>225</strong></div>
+              <div><span>Venue verified</span><i style="--size:34%"></i><strong>76</strong></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="atlas-overview" id="taxonomy">
+      <div class="overview-heading">
+        <p class="eyebrow">A RESEARCH ATLAS, NOT JUST A PAPER LIST</p>
+        <h2>Different pieces.<br><em>One connected field.</em></h2>
+        <p>The atlas separates the lifecycle of wearable intelligence from the kinds of resources used to study it. That distinction keeps the map useful—and the claims honest.</p>
+      </div>
+
+      <div class="overview-grid">
+        <article class="overview-card lifecycle-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">FROM SIGNALS TO REAL-WORLD IMPACT</p><h3>The Wearable AI Lifecycle</h3></div>
+            <span class="hand-note">Humans in the loop.</span>
+          </div>
+          <p class="card-intro">A continuous path from acquisition to safe, useful action. Each stage adds a different source of uncertainty.</p>
+          <div class="lifecycle-row">
+            <div><i>∿</i><b>Sense</b><span>Acquire real-world signals</span></div>
+            <em>→</em>
+            <div><i>≋</i><b>Harmonise</b><span>Quality, calibration, devices</span></div>
+            <em>→</em>
+            <div><i>▦</i><b>Represent</b><span>Learn reusable structure</span></div>
+            <em>→</em>
+            <div><i>▥</i><b>Measure</b><span>Derive digital phenotypes</span></div>
+            <em>→</em>
+            <div><i>↗</i><b>Predict</b><span>Monitor and forecast</span></div>
+            <em>→</em>
+            <div><i>⌘</i><b>Cause</b><span>Identify causal effects</span></div>
+            <em>→</em>
+            <div><i>◇</i><b>Intervene</b><span>Learn adaptive policies</span></div>
+            <em>→</em>
+            <div><i>⟳</i><b>Deploy</b><span>Evaluate and close the loop</span></div>
+            <em>→</em>
+            <div><i>⚖</i><b>Govern</b><span>Safety, fairness and drift</span></div>
+          </div>
+        </article>
+
+        <article class="overview-card ecosystem-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">SIX INTERCONNECTED RECORD TYPES</p><h3>The Atlas Ecosystem</h3></div>
+            <a href="#explore">Open atlas <span>→</span></a>
+          </div>
+          <div class="ecosystem-layout">
+            <div class="ecosystem-wheel" aria-label="Record type counts">
+              <div class="wheel-core"><span class="brand-mark"><i></i><i></i><i></i></span><b>Awesome<br>Wearable AI</b></div>
+              <div class="wheel-node wn-dataset"><b>116</b><span>Datasets</span></div>
+              <div class="wheel-node wn-model"><b>102</b><span>Models</span></div>
+              <div class="wheel-node wn-method"><b>61</b><span>Methods</span></div>
+              <div class="wheel-node wn-intervention"><b>40</b><span>Interventions</span></div>
+              <div class="wheel-node wn-infra"><b>42</b><span>Infrastructure</span></div>
+              <div class="wheel-node wn-measure"><b>35</b><span>Measures</span></div>
+            </div>
+            <aside class="connected-note">
+              <h4>All connected</h4>
+              <p>Models, data, methods, measures, interventions, tools and standards answer different questions across one lifecycle.</p>
+              <dl>
+                <div><dt>Accepted</dt><dd>396</dd></div>
+                <div><dt>Relations</dt><dd>2,169</dd></div>
+                <div><dt>Watchlist</dt><dd>45</dd></div>
+                <div><dt>Version</dt><dd>0.3.0</dd></div>
+              </dl>
+            </aside>
+          </div>
+        </article>
+
+        <article class="overview-card boundaries-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">EVIDENCE BOUNDARIES</p><h3>Not Just Prediction</h3></div>
+            <span class="status-chip">Four non-equivalent questions</span>
+          </div>
+          <p class="card-intro">Association, prediction, causal effect, policy value and clinical utility are separate claim layers.</p>
+          <div class="boundary-row">
+            <div><i class="predict-icon">⌁</i><b>Predictive</b><span>What may happen?</span><small>Model-behaviour validation</small></div>
+            <div><i class="causal-icon">⌘</i><b>Causal</b><span>What would happen under another action?</span><small>Identification or randomisation</small></div>
+            <div><i class="policy-icon">⑂</i><b>Policy</b><span>What should we do?</span><small>Online trial or reliable OPE</small></div>
+            <div><i class="twin-icon">◎</i><b>Digital twin</b><span>Can we simulate a future?</span><small>Calibration and interventional validity</small></div>
+          </div>
+          <div class="intervention-note"><strong>40</strong><span>accepted intervention records</span><strong>14</strong><span>negative, null or materially mixed outcomes kept visible</span></div>
+        </article>
+
+        <article class="overview-card curation-card" id="resources">
+          <div class="card-heading">
+            <div><p class="eyebrow">CURATION YOU CAN INSPECT</p><h3>Depth, provenance & limits</h3></div>
+            <span class="status-chip">Counts generated at build time</span>
+          </div>
+          <div class="curation-columns">
+            <div class="curation-group">
+              <h4>Evidence depth</h4>
+              <div class="metric-row"><span>Evidence cards</span><i style="--fill:42%"></i><b>95</b></div>
+              <div class="metric-row"><span>Metadata verified</span><i style="--fill:100%"></i><b>225</b></div>
+              <div class="metric-row"><span>Venue verified</span><i style="--fill:34%"></i><b>76</b></div>
+            </div>
+            <div class="curation-group">
+              <h4>Source verification</h4>
+              <div class="metric-row"><span>Official resource</span><i style="--fill:92%"></i><b>153</b></div>
+              <div class="metric-row"><span>Primary source</span><i style="--fill:100%"></i><b>167</b></div>
+              <div class="metric-row"><span>Review reference</span><i style="--fill:46%"></i><b>76</b></div>
+            </div>
+            <aside class="scope-note"><b>Coverage boundary</b><p>This is a quality-screened scoping registry, not a PRISMA-exhaustive review. Scientific entries follow an explicit SCI/SCIE and archival-venue policy; canonical datasets, tools, standards and guidance use official-resource criteria. Pure preprints and unresolved venues stay in a transparent watchlist. Counts use one primary record type and are not mutually exclusive scientific concepts; <code>verified_on</code> records a metadata check, not a guarantee that no newer version exists.</p></aside>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="landscape-section">
+      <div class="landscape-heading">
+        <div><p class="eyebrow">THE SENSOR & MODEL LANDSCAPE</p><h2>“Sensor model” is not<br><em>one category.</em></h2></div>
+        <p>Signal physics, timescale, annotation and clinical use differ. The registry keeps eleven model families distinct.</p>
+      </div>
+      <div class="family-grid" aria-label="Eleven model families and counts">
+        <span><i>↗</i><b>12</b> Motion / IMU</span>
+        <span><i>♥</i><b>3</b> PPG / optical</span>
+        <span><i>∿</i><b>15</b> ECG / cardiac</span>
+        <span><i>⌁</i><b>14</b> EEG / neural</span>
+        <span><i>◇</i><b>3</b> EMG / neuromotor</span>
+        <span><i>☾</i><b>4</b> Sleep / PSG</span>
+        <span><i>◒</i><b>2</b> CGM / metabolic</span>
+        <span><i>≈</i><b>2</b> Respiratory / acoustic</span>
+        <span><i>✣</i><b>10</b> Multimodal physiology</span>
+        <span><i>✦</i><b>15</b> Sensor-language agents</span>
+        <span><i>▦</i><b>22</b> Time-series enablers</span>
+      </div>
+      <p class="landscape-note"><strong>Count boundary:</strong> the atlas contains 102 model records, including 84 explicitly tagged as foundation-model work. The remaining records include self-supervised representations, sensor-language systems, cross-dataset models and wearable control interfaces—so “102 models” does not mean “102 foundation models.”</p>
+    </section>
+
+    <section class="frontier-section" aria-labelledby="frontier-title">
+      <div class="frontier-heading">
+        <p class="eyebrow">BEYOND HAR & FOUNDATION MODELS</p>
+        <h2 id="frontier-title">What is established.<br><em>What is still emerging.</em></h2>
+        <p>The project maps research maturity as well as resources. Inclusion is not an endorsement of clinical readiness.</p>
+      </div>
+      <div class="frontier-grid">
+        <article><span>01 · ADAPT</span><h3>Adaptive health systems</h3><p>JITAIs, closed-loop therapeutics and remote monitoring linked to a defined response pathway.</p><small>Burden · latency · fail-safe behaviour · human override</small></article>
+        <article><span>02 · REASON</span><h3>Causal & counterfactual AI</h3><p>Time-varying effects, heterogeneous treatment response and policy evaluation beyond risk prediction.</p><small>Identification · positivity · uncertainty · external validity</small></article>
+        <article><span>03 · SIMULATE</span><h3>World models & digital twins</h3><p>Longitudinal latent states and patient-specific simulators—with calibration and intervention validity still unresolved.</p><small>Established → emerging → exploratory → speculative</small></article>
+        <article><span>04 · DEPLOY</span><h3>Wearable-native systems</h3><p>Multimodal agents, on-device sensing, synthetic data and cross-device or cross-population generalisation.</p><small>Privacy · battery · drift · transfer · safety</small></article>
+      </div>
+      <div class="gap-panel">
+        <div><p class="eyebrow">KNOWN UNDER-COVERED AREAS</p><h3>The map also shows where evidence is thin.</h3></div>
+        <ul>
+          <li>Sweat, biochemical and microneedle sensing</li>
+          <li>Textile, epidermal and implantable models</li>
+          <li>Maternal, paediatric and low-resource populations</li>
+          <li>Fairness across skin tone, disability, age and geography</li>
+          <li>Prospective sensor-language agent evaluation</li>
+          <li>Post-market monitoring and algorithm-version drift</li>
+        </ul>
+        <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/docs/FRONTIER_MAP.md" target="_blank" rel="noreferrer">Read the frontier map <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="question-section">
+      <div class="question-heading"><p class="eyebrow">START WITH A RESEARCH QUESTION</p><h2>Find the right path<br><em>through the atlas.</em></h2></div>
+      <div class="question-grid">
+        <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/docs/MODEL_LANDSCAPE.md" target="_blank" rel="noreferrer"><span>01</span><b>Which sensor model should I start from?</b><i>Model landscape ↗</i></a>
+        <a href="#explore"><span>02</span><b>Which dataset supports external validation?</b><i>Search datasets ↓</i></a>
+        <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/docs/EVIDENCE_GUIDE.md" target="_blank" rel="noreferrer"><span>03</span><b>What can an association legitimately support?</b><i>Evidence guide ↗</i></a>
+        <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/docs/COUNTERFACTUAL_AND_INTERVENTION_MAP.md" target="_blank" rel="noreferrer"><span>04</span><b>How should intervention questions be framed?</b><i>Counterfactual map ↗</i></a>
+        <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/docs/SEARCH_STRATEGY.md" target="_blank" rel="noreferrer"><span>05</span><b>How was the literature found and screened?</b><i>Search strategy ↗</i></a>
+      </div>
+    </section>
+
+    <section class="explore-section" id="explore">
+      <div class="section-heading">
+        <p class="eyebrow">NOW THE ATLAS IS YOURS</p>
+        <h2>Explore the evidence,<br><em>not just the headlines.</em></h2>
+        <p>Search, regroup and inspect all 396 accepted records from the project’s machine-readable registry.</p>
+        <p class="metadata-axis">Indexed by modality · body location · population · clinical domain · study design · evidence stage · causal status · openness · venue tier · scope ring</p>
+      </div>
+
+      <div class="atlas-shell">
+        <div class="atlas-toolbar" aria-label="Atlas controls">
+          <label class="search-control">
+            <span>Search records</span>
+            <input id="search" type="search" placeholder="Try ‘sleep’, ‘ECG’ or ‘causal’…" autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+          <label>
+            <span>Record type</span>
+            <select id="type-filter"><option value="all">All types</option></select>
+          </label>
+          <label class="modality-control">
+            <span>Modality</span>
+            <select id="modality-filter"><option value="all">All modalities</option></select>
+          </label>
+          <label>
+            <span>Evidence depth</span>
+            <select id="evidence-filter"><option value="all">All evidence</option></select>
+          </label>
+          <label class="year-control">
+            <span>Year</span>
+            <select id="year-filter"><option value="all">All years</option></select>
+          </label>
+          <label class="group-control">
+            <span>Group nodes by</span>
+            <select id="group-filter">
+              <option value="record_type">Record type</option>
+              <option value="evidence_depth">Evidence depth</option>
+              <option value="year">Publication year</option>
+            </select>
+          </label>
+          <div class="view-switcher" role="group" aria-label="View mode">
+            <button class="is-active" data-view="map" type="button">Map</button>
+            <button data-view="list" type="button">List</button>
+          </div>
+        </div>
+
+        <div class="atlas-status">
+          <p><strong id="result-count">396</strong> records in view</p>
+          <div class="legend" aria-label="Record type legend"></div>
+        </div>
+
+        <div class="atlas-viewport map-view" id="atlas-viewport">
+          <svg id="node-map" viewBox="0 0 1100 620" role="group" aria-label="Interactive map of research records"></svg>
+          <div class="record-list" id="record-list" aria-live="polite"></div>
+          <p class="map-hint">Each dot is a real record. Select one to inspect its claim boundary.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-section" aria-labelledby="impact-title">
+      <div class="impact-intro">
+        <p class="eyebrow">FROM KNOWLEDGE TO CARE</p>
+        <h2 id="impact-title">From better understanding<br>to <em>better lives.</em></h2>
+        <p>Wearable AI already connects research to health, recovery, performance and everyday support. The atlas keeps the route from evidence to impact visible.</p>
+      </div>
+      <div class="impact-track">
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v2.png" style="--panel:0" alt="Young woman checking health information on a smartwatch"></div><p class="eyebrow">MONITOR</p><h3>Health monitoring</h3><p>Earlier signals, healthier lives.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v2.png" style="--panel:1" alt="Person sleeping peacefully while wearing a sensor ring"></div><p class="eyebrow">RECOVER</p><h3>Sleep & recovery</h3><p>Better rest, brighter days.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v2.png" style="--panel:2" alt="Runner wearing an upper-arm and wrist sensor"></div><p class="eyebrow">ADAPT</p><h3>Sports & performance</h3><p>Understand, improve, go further.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v2.png" style="--panel:3" alt="Older adult using a smartwatch for ongoing health monitoring"></div><p class="eyebrow">SUPPORT</p><h3>Chronic disease</h3><p>Long-term care, real-world impact.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v2.png" style="--panel:4" alt="Two friends sharing a supportive moment"></div><p class="eyebrow">CONNECT</p><h3>Mental wellbeing</h3><p>More awareness, more support.</p></article>
+      </div>
+    </section>
+
+    <section class="closing-section" id="community">
+      <div class="closing-art" aria-hidden="true"></div>
+      <div class="closing-copy">
+        <p class="eyebrow">OPEN SOURCE · COMMUNITY DRIVEN</p>
+        <h2>People. Data.<br><em>A healthier tomorrow.</em></h2>
+        <p>Propose a record, improve an evidence card, inspect the JSON Schemas, or reuse the generated JSON and CSV in your own research.</p>
+        <div class="closing-actions">
+          <a class="primary-button" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">Explore on GitHub <span>↗</span></a>
+          <a class="text-button" href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer">Read the contribution guide</a>
+        </div>
+        <div class="machine-readable"><span>YAML source of truth</span><span>JSON Schemas</span><span>Generated JSON / CSV</span><span>CI validation & audit</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+    <p>Counts are coverage indicators. Inclusion does not establish clinical utility, causal effect, safety, or regulatory approval.</p>
+    <p class="footer-meta"><a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/CITATION.cff" target="_blank" rel="noreferrer">Citation</a> · <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT license</a> · Atlas data v0.3.0</p>
+  </footer>
+
+  <aside class="detail-shelf" id="detail-shelf" aria-hidden="true" aria-labelledby="detail-title">
+    <button class="shelf-close" type="button" aria-label="Close details">×</button>
+    <div class="shelf-content"></div>
+  </aside>
+  <div class="shelf-backdrop" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

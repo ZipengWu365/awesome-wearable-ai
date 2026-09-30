@@ -36,8 +36,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Keep the generated research portal in site/ untouched; publish the
+          # editorial website from its isolated deployment directory.
+          path: './website'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
