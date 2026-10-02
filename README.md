@@ -4,6 +4,8 @@
 
 **An evidence-aware, machine-readable atlas of wearable and body-sensed intelligence—from sensing and representation learning to causal reasoning, adaptive interventions and closed-loop health systems.**
 
+[![Explore the Interactive Web Atlas](https://img.shields.io/badge/EXPLORE-INTERACTIVE_WEB_ATLAS-2f7f91?style=for-the-badge)](https://zipengwu365.github.io/awesome-wearable-ai/)
+
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Registry CI](https://github.com/ZipengWu365/awesome-wearable-ai/actions/workflows/validate.yml/badge.svg)](https://github.com/ZipengWu365/awesome-wearable-ai/actions/workflows/validate.yml)
 [![Accepted](https://img.shields.io/badge/accepted-396-1f6feb)](generated/statistics.json)
