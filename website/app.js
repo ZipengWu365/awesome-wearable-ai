@@ -119,7 +119,7 @@
         return clusterSvg(person, latent[(person.id - 36) % latent.length], 18, 20);
       }
       if (scene === 3) {
-        const lifecycle = [[120,411],[240,411],[360,411],[480,411],[600,411],[720,411],[840,411],[960,411],[1080,411]];
+        const lifecycle = [[95,411],[207,411],[319,411],[431,411],[543,411],[657,411],[769,411],[881,411],[993,411],[1105,411]];
         return ringSvg(person, lifecycle[person.id % lifecycle.length], 43, 60);
       }
       if (scene === 4) {
@@ -127,7 +127,7 @@
         return ringSvg(person, ecosystem[person.id % ecosystem.length], 82, 111);
       }
       if (scene === 5) {
-        const evidence = [[210,403],[470,403],[730,403],[990,403]];
+        const evidence = [[135,403],[365,403],[600,403],[835,403],[1065,403]];
         return ringSvg(person, evidence[person.id % evidence.length], 88, 116);
       }
       return {
@@ -142,9 +142,9 @@
       if (peopleLabel) {
         const sceneLabels = {
           2: 'People move from raw signals into learned representations',
-          3: 'Records gather around nine lifecycle stages',
+          3: 'Records gather around ten lifecycle stages',
           4: 'Colours regroup the same records by resource type',
-          5: 'Records separate around four evidence questions'
+          5: 'Records separate around five claim layers'
         };
         peopleLabel.textContent = sceneLabels[scene] || 'People become structured evidence';
       }
@@ -269,7 +269,7 @@
     infrastructure: 'Infrastructure', intervention: 'Interventions',
     evidence_card: 'Evidence card', metadata_verified: 'Metadata verified', venue_verified: 'Venue verified'
   };
-  const state = { records: [], filtered: [], view: 'map', selected: null };
+  const state = { records: [], relations: [], filtered: [], view: 'map', selected: null };
   const els = {
     search: document.querySelector('#search'),
     type: document.querySelector('#type-filter'),
@@ -302,6 +302,172 @@
   const randomFrom = (value, offset = 0) => {
     const number = hash(`${value}-${offset}`);
     return (number % 10000) / 10000;
+  };
+
+  const revealMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const revealTargets = [...document.querySelectorAll('[data-viz-reveal]')];
+  if (revealMotion.matches || !('IntersectionObserver' in window)) {
+    revealTargets.forEach(target => target.classList.add('is-visible'));
+  } else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: .14 });
+    revealTargets.forEach(target => revealObserver.observe(target));
+  }
+
+  const STREAM_TYPES = [
+    { key: 'dataset', label: 'Datasets', color: '#4d9ee9' },
+    { key: 'model', label: 'Models', color: '#8b72df' },
+    { key: 'method', label: 'Methods', color: '#eb795f' },
+    { key: 'measure', label: 'Measures', color: '#e980aa' },
+    { key: 'intervention', label: 'Interventions', color: '#5db88a' },
+    { key: 'infrastructure', label: 'Infrastructure', color: '#e6b542' }
+  ];
+  const RESEARCH_WINDOWS = [
+    { label: '1980–2009', min: 1980, max: 2009 },
+    { label: '2010–2016', min: 2010, max: 2016 },
+    { label: '2017–2020', min: 2017, max: 2020 },
+    { label: '2021–2023', min: 2021, max: 2023 },
+    { label: '2024–2026', min: 2024, max: 2026 }
+  ];
+
+  const renderEvolutionStream = (records) => {
+    const svg = document.querySelector('#evolution-stream');
+    const tooltip = document.querySelector('#stream-tooltip');
+    if (!svg || !tooltip) return;
+    svg.replaceChildren();
+
+    const chart = { left: 80, right: 30, top: 74, bottom: 94, width: 1200, height: 500, max: 140 };
+    const plotWidth = chart.width - chart.left - chart.right;
+    const plotHeight = chart.height - chart.top - chart.bottom;
+    const xFor = index => chart.left + plotWidth * index / (RESEARCH_WINDOWS.length - 1);
+    const yFor = value => chart.top + plotHeight - value / chart.max * plotHeight;
+    const windows = RESEARCH_WINDOWS.map(window => {
+      const subset = records.filter(record => {
+        const year = Number(record.year);
+        return year >= window.min && year <= window.max;
+      });
+      const counts = Object.fromEntries(STREAM_TYPES.map(type => [type.key, subset.filter(record => record.record_type === type.key).length]));
+      return { ...window, total: subset.length, counts };
+    });
+
+    for (let tick = 0; tick <= chart.max; tick += 20) {
+      const y = yFor(tick);
+      svg.append(createSvg('line', { class: 'stream-grid', x1: chart.left, x2: chart.width - chart.right, y1: y, y2: y }));
+      const label = createSvg('text', { class: 'stream-y-label', x: chart.left - 15, y: y + 3, 'text-anchor': 'end' });
+      label.textContent = tick;
+      svg.append(label);
+    }
+    svg.append(createSvg('line', { class: 'stream-axis', x1: chart.left, x2: chart.width - chart.right, y1: yFor(0), y2: yFor(0) }));
+    const yTitle = createSvg('text', { class: 'stream-y-label', x: 18, y: 255, transform: 'rotate(-90 18 255)', 'text-anchor': 'middle' });
+    yTitle.textContent = 'NUMBER OF RECORDS';
+    svg.append(yTitle);
+
+    const cumulative = windows.map(() => 0);
+    const curve = (points, command = 'M') => {
+      let value = `${command}${points[0].x.toFixed(1)},${points[0].y.toFixed(1)}`;
+      for (let index = 1; index < points.length; index += 1) {
+        const previous = points[index - 1];
+        const current = points[index];
+        const distance = current.x - previous.x;
+        value += ` C${(previous.x + distance * .46).toFixed(1)},${previous.y.toFixed(1)} ${(current.x - distance * .46).toFixed(1)},${current.y.toFixed(1)} ${current.x.toFixed(1)},${current.y.toFixed(1)}`;
+      }
+      return value;
+    };
+
+    STREAM_TYPES.forEach((type, typeIndex) => {
+      const bottoms = windows.map((window, index) => ({ x: xFor(index), y: yFor(cumulative[index]) }));
+      const tops = windows.map((window, index) => {
+        cumulative[index] += window.counts[type.key];
+        return { x: xFor(index), y: yFor(cumulative[index]) };
+      });
+      const path = createSvg('path', {
+        class: 'stream-layer',
+        d: `${curve(tops)} ${curve([...bottoms].reverse(), 'L')} Z`,
+        fill: type.color,
+        'data-type': type.key,
+        style: `transition-delay:${typeIndex * 80}ms`
+      });
+      const title = createSvg('title');
+      title.textContent = `${type.label}: ${windows.map(window => window.counts[type.key]).join(', ')}`;
+      path.append(title);
+      svg.append(path);
+    });
+
+    const hideTooltip = () => { tooltip.hidden = true; };
+    const showTooltip = (windowIndex, clientX, clientY) => {
+      const windowData = windows[windowIndex];
+      tooltip.replaceChildren();
+      const heading = document.createElement('b');
+      heading.textContent = `${windowData.label} · ${windowData.total} records`;
+      tooltip.append(heading);
+      STREAM_TYPES.forEach(type => {
+        const row = document.createElement('span');
+        const label = document.createElement('em');
+        label.style.fontStyle = 'normal';
+        const dot = document.createElement('i');
+        dot.style.setProperty('--tip', type.color);
+        label.append(dot, document.createTextNode(type.label));
+        const count = document.createElement('strong');
+        count.textContent = windowData.counts[type.key];
+        row.append(label, count);
+        tooltip.append(row);
+      });
+      tooltip.hidden = false;
+      const bounds = tooltip.parentElement.getBoundingClientRect();
+      const left = Math.min(bounds.width - 205, Math.max(8, clientX - bounds.left + 12));
+      const top = Math.min(bounds.height - 225, Math.max(8, clientY - bounds.top - 34));
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+    };
+
+    windows.forEach((window, index) => {
+      const x = xFor(index);
+      const total = createSvg('text', { class: 'stream-total', x, y: Math.max(45, yFor(window.total) - 13), 'text-anchor': 'middle' });
+      total.textContent = window.total;
+      svg.append(total);
+      const label = createSvg('text', { class: 'stream-label', x, y: 431, 'text-anchor': 'middle' });
+      label.textContent = window.label;
+      svg.append(label);
+      const subLabel = createSvg('text', { class: 'stream-sub-label', x, y: 452, 'text-anchor': 'middle' });
+      subLabel.textContent = `TOTAL ${window.total}`;
+      svg.append(subLabel);
+      const halfWidth = index === 0 || index === windows.length - 1 ? plotWidth / 8 : plotWidth / 7.5;
+      const hit = createSvg('rect', { class: 'stream-hit', x: x - halfWidth, y: chart.top - 34, width: halfWidth * 2, height: plotHeight + 72, tabindex: '0', role: 'button', 'aria-label': `${window.label}, ${window.total} records` });
+      const guide = createSvg('line', { class: 'stream-guide', x1: x, x2: x, y1: chart.top - 15, y2: yFor(0) });
+      hit.addEventListener('pointermove', event => showTooltip(index, event.clientX, event.clientY));
+      hit.addEventListener('pointerleave', hideTooltip);
+      hit.addEventListener('focus', () => {
+        const bounds = tooltip.parentElement.getBoundingClientRect();
+        showTooltip(index, bounds.left + x / 1200 * bounds.width, bounds.top + 210);
+      });
+      hit.addEventListener('blur', hideTooltip);
+      svg.append(hit, guide);
+    });
+  };
+
+  const updateEvidenceProfile = (records) => {
+    const bars = [...document.querySelectorAll('.evidence-bar[data-stage]')];
+    if (!bars.length) return;
+    const counts = records.reduce((result, record) => {
+      if (record.evidence_stage) result[record.evidence_stage] = (result[record.evidence_stage] || 0) + 1;
+      return result;
+    }, {});
+    const maximum = Math.max(1, ...Object.values(counts));
+    bars.forEach(bar => {
+      const count = counts[bar.dataset.stage] || 0;
+      bar.querySelector('b').textContent = count;
+      bar.querySelector('i').style.setProperty('--bar', `${Math.max(count ? 1.5 : 0, count / maximum * 100)}%`);
+    });
+  };
+
+  const renderResearchVisuals = records => {
+    renderEvolutionStream(records);
+    updateEvidenceProfile(records);
   };
   const matchesModality = (record, groupKey) => {
     if (groupKey === 'all') return true;
@@ -358,20 +524,50 @@
     return '2025+';
   };
 
-  const mapPosition = (record, index, groups, grouping) => {
-    const groupIndex = Math.max(0, groups.findIndex(group => group.key === groupKey(record, grouping)));
+  const mapLayout = groups => {
     const columns = groups.length <= 3 ? groups.length : 3;
     const rows = Math.ceil(groups.length / columns);
-    const col = groupIndex % columns;
-    const row = Math.floor(groupIndex / columns);
-    const cellWidth = 1100 / columns;
-    const cellHeight = 520 / rows;
-    const centreX = cellWidth * (col + .5);
-    const centreY = 65 + cellHeight * (row + .5);
-    const angle = randomFrom(record.id, index) * Math.PI * 2;
-    const radiusX = (28 + Math.sqrt(randomFrom(record.id, index + 4)) * Math.min(135, cellWidth * .34));
-    const radiusY = (20 + Math.sqrt(randomFrom(record.id, index + 9)) * Math.min(100, cellHeight * .34));
-    return { x: centreX + Math.cos(angle) * radiusX, y: centreY + Math.sin(angle) * radiusY };
+    const marginX = 18;
+    const marginY = 18;
+    const gapX = 20;
+    const gapY = 18;
+    const usableHeight = 548;
+    const cellWidth = (1100 - marginX * 2 - gapX * (columns - 1)) / columns;
+    const cellHeight = (usableHeight - marginY * 2 - gapY * (rows - 1)) / rows;
+    return {
+      columns,
+      rows,
+      cells: groups.map((group, index) => {
+        const col = index % columns;
+        const row = Math.floor(index / columns);
+        const x = marginX + col * (cellWidth + gapX);
+        const y = marginY + row * (cellHeight + gapY);
+        const plotTop = y + 52;
+        const plotHeight = cellHeight - 62;
+        return {
+          ...group, x, y, width: cellWidth, height: cellHeight,
+          centreX: x + cellWidth / 2,
+          centreY: plotTop + plotHeight / 2,
+          radiusX: cellWidth * .42,
+          radiusY: plotHeight * .42
+        };
+      })
+    };
+  };
+
+  const mapPosition = (record, index, groups, grouping, layout) => {
+    const groupIndex = Math.max(0, groups.findIndex(group => group.key === groupKey(record, grouping)));
+    const cell = layout.cells[groupIndex];
+    const family = record.family || 'unclassified';
+    const familyAngle = randomFrom(family, groupIndex + 31) * Math.PI * 2;
+    const familyX = Math.cos(familyAngle) * cell.radiusX * .34;
+    const familyY = Math.sin(familyAngle) * cell.radiusY * .3;
+    const angle = randomFrom(record.id, index + 13) * Math.PI * 2;
+    const spread = .16 + Math.sqrt(randomFrom(record.id, index + 29)) * .48;
+    return {
+      x: cell.centreX + familyX + Math.cos(angle) * cell.radiusX * spread,
+      y: cell.centreY + familyY + Math.sin(angle) * cell.radiusY * spread
+    };
   };
 
   const renderMap = () => {
@@ -382,27 +578,96 @@
     filter.append(shadow); defs.append(filter); els.map.append(defs);
 
     const groups = groupsFor(state.filtered, els.group.value);
+    const layout = mapLayout(groups);
+    const clusterLayer = createSvg('g', { class: 'map-cluster-layer' });
+    const linkLayer = createSvg('g', { class: 'map-link-layer', 'aria-hidden': 'true' });
+    const nodeLayer = createSvg('g', { class: 'map-node-layer' });
+    const labelLayer = createSvg('g', { class: 'map-label-layer', 'aria-hidden': 'true' });
+    const palette = ['#69adf3', '#69cca3', '#b093ef', '#ef95af', '#ebc45f', '#ef9278'];
     groups.forEach((group, index) => {
-      const columns = groups.length <= 3 ? groups.length : 3;
-      const rows = Math.ceil(groups.length / columns);
-      const col = index % columns;
-      const row = Math.floor(index / columns);
+      const cell = layout.cells[index];
+      const frame = createSvg('rect', {
+        class: 'map-cluster-frame', x: cell.x, y: cell.y,
+        width: cell.width, height: cell.height, rx: 18,
+        style: `--cluster:${palette[index % palette.length]};--delay:${index * 170}ms`
+      });
+      const halo = createSvg('ellipse', {
+        class: 'map-cluster-halo', cx: cell.centreX, cy: cell.centreY,
+        rx: cell.radiusX, ry: cell.radiusY,
+        style: `--cluster:${palette[index % palette.length]};--delay:${index * 170}ms`
+      });
+      const labelPlate = createSvg('rect', {
+        class: 'map-label-plate', x: cell.centreX - 96, y: cell.y + 10,
+        width: 192, height: 31, rx: 15
+      });
       const label = createSvg('text', {
         class: 'map-label',
-        x: 1100 / columns * (col + .5),
-        y: 48 + 520 / rows * row
+        x: cell.centreX,
+        y: cell.y + 30
       });
       const count = state.filtered.filter(record => groupKey(record, els.group.value) === group.key).length;
       label.textContent = `${group.label} · ${count}`;
-      els.map.append(label);
+      clusterLayer.append(frame, halo);
+      labelLayer.append(labelPlate, label);
     });
 
-    state.filtered.forEach((record, index) => {
-      const point = mapPosition(record, index, groups, els.group.value);
+    const positions = new Map();
+    state.filtered.forEach((record, index) => positions.set(record.id, mapPosition(record, index, groups, els.group.value, layout)));
+
+    const familyBuckets = new Map();
+    state.filtered.forEach(record => {
+      const family = record.family || 'unclassified';
+      const bucketKey = `${groupKey(record, els.group.value)}::${family}`;
+      if (!familyBuckets.has(bucketKey)) familyBuckets.set(bucketKey, []);
+      familyBuckets.get(bucketKey).push(record);
+    });
+    let semanticLinkCount = 0;
+    familyBuckets.forEach(records => {
+      const ordered = [...records].sort((a, b) => positions.get(a.id).x - positions.get(b.id).x);
+      for (let index = 1; index < ordered.length && semanticLinkCount < 180; index += 1) {
+        if ((index + hash(ordered[index].family || 'unclassified')) % 2 !== 0) continue;
+        const source = positions.get(ordered[index - 1].id);
+        const target = positions.get(ordered[index].id);
+        const line = createSvg('line', {
+          class: 'map-link family-link', x1: source.x, y1: source.y, x2: target.x, y2: target.y,
+          'data-family': ordered[index].family || 'unclassified'
+        });
+        linkLayer.append(line);
+        semanticLinkCount += 1;
+      }
+    });
+
+    const visibleIds = new Set(state.filtered.map(record => record.id));
+    state.relations
+      .filter(relation => visibleIds.has(relation.source_id) && visibleIds.has(relation.target_id))
+      .forEach(relation => {
+        const source = positions.get(relation.source_id);
+        const target = positions.get(relation.target_id);
+        const line = createSvg('line', {
+          class: 'map-link explicit-link', x1: source.x, y1: source.y, x2: target.x, y2: target.y
+        });
+        const title = createSvg('title'); title.textContent = titleCase(relation.predicate);
+        line.append(title); linkLayer.append(line);
+      });
+
+    const clearFamilyFocus = () => {
+      els.map.classList.remove('is-tracing');
+      els.map.querySelectorAll('.is-related, .is-focus').forEach(item => item.classList.remove('is-related', 'is-focus'));
+    };
+    const traceFamily = (family, focusNode) => {
+      els.map.classList.add('is-tracing');
+      els.map.querySelectorAll('.map-node').forEach(item => item.classList.toggle('is-related', item.dataset.family === family));
+      els.map.querySelectorAll('.family-link').forEach(item => item.classList.toggle('is-related', item.dataset.family === family));
+      focusNode.classList.add('is-focus');
+    };
+
+    state.filtered.forEach(record => {
+      const point = positions.get(record.id);
       const node = createSvg('g', {
         class: 'map-node', tabindex: '0', role: 'button',
         'aria-label': `${record.title}, ${record.year}, ${record.record_type}`,
-        transform: `translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})`
+        transform: `translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})`,
+        'data-family': record.family || 'unclassified'
       });
       const dot = createSvg('circle', {
         r: record.evidence_depth === 'evidence_card' ? 7 : 5,
@@ -415,8 +680,13 @@
       node.addEventListener('keydown', event => {
         if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openShelf(record); }
       });
-      els.map.append(node);
+      node.addEventListener('pointerenter', () => traceFamily(record.family || 'unclassified', node));
+      node.addEventListener('pointerleave', clearFamilyFocus);
+      node.addEventListener('focus', () => traceFamily(record.family || 'unclassified', node));
+      node.addEventListener('blur', clearFamilyFocus);
+      nodeLayer.append(node);
     });
+    els.map.append(clusterLayer, linkLayer, nodeLayer, labelLayer);
   };
 
   const truncate = (value = '', length = 155) => value.length > length ? `${value.slice(0, length).trim()}…` : value;
@@ -525,6 +795,19 @@
     renderList();
   };
 
+  document.querySelectorAll('.family-node[data-family]').forEach(button => {
+    button.addEventListener('click', () => {
+      if (!state.records.length) return;
+      els.type.value = 'model';
+      els.modality.value = 'all';
+      els.evidence.value = 'all';
+      els.year.value = 'all';
+      els.search.value = button.dataset.family;
+      applyFilters();
+      document.querySelector('#explore')?.scrollIntoView({ behavior: revealMotion.matches ? 'auto' : 'smooth' });
+    });
+  });
+
   document.querySelectorAll('[data-view]').forEach(button => {
     button.addEventListener('click', () => {
       state.view = button.dataset.view;
@@ -552,6 +835,8 @@
     })
     .then(data => {
       state.records = data.records || [];
+      state.relations = data.relations || [];
+      renderResearchVisuals(state.records);
       TYPE_ORDER.forEach(type => appendOption(els.type, type, `${LABELS[type]} (${state.records.filter(record => record.record_type === type).length})`));
       Object.entries(MODALITY_GROUPS).forEach(([key, group]) => {
         const count = state.records.filter(record => matchesModality(record, key)).length;
