@@ -1,0 +1,51 @@
+{
+  "status": "editorial display taxonomy for a design handoff",
+  "data_cutoff": "2026-09-02",
+  "complete_registry": "../../generated/registry.json",
+  "accepted_record_count": 396,
+  "watchlist_record_count": 45,
+  "web_milestone_count": 16,
+  "language": "en",
+  "time_direction": "upward",
+  "line_semantics": "Classification and calendar structure only, not model inheritance or causal relationships.",
+  "supporting_resources": ["Datasets and cohorts", "Benchmarks and evaluation", "Tools, standards and governance"],
+  "orthogonal_facets": ["Signal and sensor", "Task and population", "Architecture", "Evidence"],
+  "roles": [
+    {
+      "id": "representation",
+      "label": "Representation",
+      "question": "How do we learn from body signals?",
+      "routes": [
+        {"id": "single_signal", "label": "Signal models", "web_records": [{"id": "model-bendr-2021", "label": "BENDR"}, {"id": "model-gluformer-2026", "label": "GluFormer"}]},
+        {"id": "cross_modal_language", "label": "Multimodal", "web_records": [{"id": "model-biot-2023", "label": "BIOT"}, {"id": "model-sensorfm-2026", "label": "SensorFM"}]}
+      ]
+    },
+    {
+      "id": "assessment",
+      "label": "Assessment",
+      "question": "What can we measure or predict?",
+      "routes": [
+        {"id": "digital_phenotypes", "label": "Phenotypes", "web_records": [{"id": "measure-apple-heart-study-2019", "label": "Apple Heart Study"}, {"id": "measure-longitudinal-activity-rhythm-aging-2026", "label": "Rhythm aging"}]},
+        {"id": "health_prediction", "label": "Prediction", "web_records": [{"id": "measure-covid-presymptomatic-2020", "label": "COVID detection"}, {"id": "model-insulin-resistance-wearables-2026", "label": "IR estimation"}]}
+      ]
+    },
+    {
+      "id": "decision",
+      "label": "Decision methods",
+      "question": "How do we estimate effects and design action?",
+      "routes": [
+        {"id": "causal_inference", "label": "Causal", "web_records": [{"id": "method-mrt-moderation-2018", "label": "Effect moderation"}, {"id": "method-add-malts-2024", "label": "ADD MALTS"}]},
+        {"id": "adaptive_policy", "label": "Adaptive design", "web_records": [{"id": "method-mrt-health-psychology-2015", "label": "MRT framework"}, {"id": "method-jitai-annual-review-2026", "label": "JITAI review"}]}
+      ]
+    },
+    {
+      "id": "intervention",
+      "label": "Intervention",
+      "question": "How do we deliver and test adaptive care?",
+      "routes": [
+        {"id": "behavioral_intervention", "label": "Behavior", "web_records": [{"id": "intervention-idea-weight-loss-2016", "label": "IDEA trial"}, {"id": "intervention-mybpmylife-2025", "label": "myBPmyLife"}]},
+        {"id": "physiological_control", "label": "Control", "web_records": [{"id": "intervention-home-artificial-beta-cell-2015", "label": "Home beta cell"}, {"id": "intervention-intandem-stroke-2024", "label": "InTandem"}]}
+      ]
+    }
+  ]
+}

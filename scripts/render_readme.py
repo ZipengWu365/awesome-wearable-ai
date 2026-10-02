@@ -84,6 +84,8 @@ def main() -> int:
         "",
         "</div>",
         "",
+        "Research overview: [16-milestone interactive map](site/research-map.html) · [designer handoff and editable assets](assets/research-map/README.md). These are selected examples; the [complete registry](generated/registry.json) and [search interface](site/index.html) cover all repository records.",
+        "",
         "> **Scope and evidence rule.** Scientific entries must appear in the explicit venue whitelist: SCI/SCIE journals, explicitly whitelisted top journals, top conferences, or domain-leading archival conferences. Official technical reports from major research organizations are allowed. Canonical datasets, standards and research tools use separate official-resource criteria. Pure preprints, workshop-only papers, unresolved publication claims and borderline venues remain in a visible watchlist and are excluded from headline counts.",
         "",
         "## What changed in v0.3.0",

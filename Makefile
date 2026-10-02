@@ -1,4 +1,4 @@
-.PHONY: validate export coverage families readme site build test audit clean
+.PHONY: validate export coverage families readme site research-map build test audit clean
 
 validate:
 	python scripts/validate_registry.py
@@ -12,7 +12,9 @@ readme:
 	python scripts/render_readme.py
 site:
 	python scripts/build_site.py
-build: validate export coverage families readme site
+research-map:
+	python scripts/render_research_map.py
+build: validate export coverage families readme site research-map
 test: build
 	python -m unittest discover -s tests -v
 	python scripts/internal_link_check.py

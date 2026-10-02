@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="An interactive, one-page map of wearable AI research: representation learning, health assessment, decision methods and adaptive intervention.">
+<title>Wearable AI — Research Map</title>
+<style>
+  :root { color-scheme:light; --ink:#26344b; --muted:#6c788b; --line:#e9edf4; --surface:#fff; --page:#f5f7fb; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--page); color:var(--ink); font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+  .atlas { max-width:1700px; height:100dvh; min-height:620px; margin:auto; padding:0 28px; display:grid; grid-template-rows:84px minmax(0,1fr) 77px 30px; }
+  header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .brand { display:flex; align-items:baseline; gap:16px; }
+  h1 { margin:0; font-size:27px; font-weight:650; letter-spacing:-1.1px; }
+  h1 span { color:#6672e8; }
+  .subtitle { font-size:13px; color:var(--muted); }
+  .links { display:flex; align-items:center; gap:18px; font-size:12px; }
+  .edition { color:var(--muted); }
+  a { color:inherit; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .repo { padding:8px 12px; background:#fff; border:1px solid #e0e5ef; border-radius:7px; font-weight:550; }
+  .canvas { position:relative; min-height:0; background:var(--surface); border:1px solid #e3e8f2; border-radius:16px; box-shadow:0 6px 25px #26344b05; overflow:hidden; }
+  #graph { height:100%; width:100%; position:relative; }
+  #paths { position:absolute; inset:0; width:100%; height:100%; }
+  .node { position:absolute; min-height:29px; text-align:left; border:1px solid transparent; background:var(--soft); color:var(--ink); border-radius:6px; font:500 13px/1.2 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; padding:5px 6px; cursor:pointer; transition:background .15s,border-color .15s,box-shadow .15s; white-space:normal; }
+  .node:hover { border-color:var(--series); box-shadow:0 2px 7px #26344b0c; }
+  .node[aria-pressed="true"] { border-color:var(--series); background:var(--selected); box-shadow:0 0 0 2px var(--soft); }
+  .node:focus-visible, a:focus-visible, select:focus-visible { outline:2px solid #6672e8; outline-offset:3px; }
+  .mobile-filter { display:none; }
+  .inspector { align-self:center; display:flex; align-items:center; gap:18px; min-width:0; padding:0 12px; }
+  .selection-dot { flex:0 0 9px; height:9px; border-radius:50%; background:#6672e8; }
+  .selected-info { min-width:0; flex:1; }
+  .selected-heading { display:flex; align-items:baseline; gap:10px; margin:0 0 5px; }
+  .selected-name { font-size:14px; font-weight:600; }
+  .selected-meta { font-size:11px; color:var(--muted); }
+  .selected-caption { margin:0; color:#566379; font-size:12px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+  .paper-link { flex:0 0 auto; font-size:12px; font-weight:550; border-bottom:1px solid #cbd2df; padding:6px 0; }
+  footer { display:flex; justify-content:space-between; align-items:flex-start; gap:14px; font-size:10px; color:#7a8595; padding:0 12px; }
+  @media(min-height:920px) { .atlas { max-height:960px; } }
+  @media(max-width:900px) {
+    .atlas { padding:0 14px; grid-template-rows:83px minmax(0,1fr) 84px 36px; min-height:610px; }
+    .brand { display:block; }
+    h1 { font-size:25px; }
+    .subtitle { display:block; margin-top:5px; font-size:12px; }
+    .edition { display:none; }
+    .canvas { padding-top:40px; }
+    .mobile-filter { display:block; position:absolute; z-index:2; top:11px; left:15px; font-size:12px; }
+    .mobile-filter select { font:inherit; color:var(--ink); background:#fff; border:1px solid #dde4ef; border-radius:5px; padding:5px 9px; }
+    .selected-heading { display:block; margin-bottom:4px; }
+    .selected-meta { display:block; margin-top:3px; }
+    .inspector { gap:10px; padding:0 4px; }
+    footer { padding:0 4px; font-size:9px; }
+    .node { font-size:14px; padding:6px 9px; }
+  }
+  @media(prefers-reduced-motion:reduce) { .node { transition:none; } }
+</style>
+</head>
+<body>
+<main class="atlas">
+  <header>
+    <div class="brand"><h1>Wearable <span>AI</span></h1><span class="subtitle">A research map, from signals to action.</span></div>
+    <div class="links"><span class="edition">2015–2026 · Selected milestones</span><a class="repo" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noopener">GitHub ↗</a></div>
+  </header>
+  <section class="canvas" aria-label="Wearable AI research timeline">
+    <label class="mobile-filter">Track <select id="mobile-track" aria-label="Research track"><option value="0">Representation</option><option value="1">Assessment</option><option value="2">Decision methods</option><option value="3">Intervention</option></select></label>
+    <div id="graph"><svg id="paths" role="img" aria-labelledby="graph-title graph-desc"><title id="graph-title">Wearable AI research tree</title><desc id="graph-desc">Sixteen selected works in four research tracks. Years increase upward from 2015 to 2026. Branches represent research categories, not model inheritance. Select a work for its contribution and paper link.</desc></svg><div id="nodes"></div></div>
+  </section>
+  <aside class="inspector" aria-live="polite" aria-label="Selected work">
+    <span class="selection-dot" id="selection-dot"></span>
+    <div class="selected-info"><p class="selected-heading"><span class="selected-name" id="selected-name">Select a milestone</span><span class="selected-meta" id="selected-meta">Name · Year · Source</span></p><p class="selected-caption" id="selected-caption">Explore the contribution without crowding the map.</p></div>
+    <a class="paper-link" id="paper-link" target="_blank" rel="noopener" hidden>Read paper ↗</a>
+  </aside>
+  <footer><span>Paths group research topics, not model ancestry.</span><span>Registry years · Data cutoff: 2026-09-02</span></footer>
+</main>
+<script id="research-data" type="application/json">__RESEARCH_DATA__</script>
+<script>
+(() => {
+  const data=JSON.parse(document.getElementById('research-data').textContent);
+  const roles=[
+    {name:'Representation',tag:'Learning from body signals',color:'#3979df',soft:'#eef4ff',selected:'#e3edff',routes:[['single_signal','Signal models'],['cross_modal_language','Multimodal']]},
+    {name:'Assessment',tag:'Measuring and predicting health',color:'#17968b',soft:'#eaf7f4',selected:'#d8f0eb',routes:[['digital_phenotypes','Phenotypes'],['health_prediction','Prediction']]},
+    {name:'Decision methods',tag:'Estimating effects and designing action',color:'#9565c9',soft:'#f4effb',selected:'#ece2f8',routes:[['causal_inference','Causal'],['adaptive_policy','Adaptive design']]},
+    {name:'Intervention',tag:'Delivering and testing adaptive care',color:'#d4824d',soft:'#fff3e9',selected:'#ffe8d7',routes:[['behavioral_intervention','Behavior'],['physiological_control','Control']]}
+  ];
+  const graph=document.getElementById('graph'), svg=document.getElementById('paths'), nodes=document.getElementById('nodes');
+  const mobileTrack=document.getElementById('mobile-track');
+  let selected=null;
+  const ns='http://www.w3.org/2000/svg';
+  function add(tag,attrs,text){const el=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;svg.append(el);return el;}
+  function text(x,y,value,size=12,fill='#6c788b',weight=400,anchor='middle'){return add('text',{x,y,fill,'font-size':size,'font-weight':weight,'font-family':'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif','text-anchor':anchor},value);}
+  function curve(a,b,c,d,color,width=2,opacity=1){return add('path',{d:`M${a[0]},${a[1]} C${b[0]},${b[1]} ${c[0]},${c[1]} ${d[0]},${d[1]}`,fill:'none',stroke:color,'stroke-width':width,opacity,'stroke-linecap':'round'});}
+  function choose(n,role){
+    selected=n.id;
+    for(const b of nodes.querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset.id===selected));
+    document.getElementById('selected-name').textContent=n.name;
+    document.getElementById('selected-meta').textContent=`${n.year} · ${n.venue}`;
+    document.getElementById('selected-caption').textContent=n.caption;
+    document.getElementById('selected-caption').title=n.caption;
+    document.getElementById('selection-dot').style.background=role.color;
+    const link=document.getElementById('paper-link');link.href=n.url;link.hidden=false;
+  }
+  function render(){
+    const w=graph.clientWidth,h=graph.clientHeight,narrow=w<850;
+    svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+    while(svg.children.length>2)svg.lastChild.remove();nodes.replaceChildren();
+    const active=narrow?[Number(mobileTrack.value)]:[0,1,2,3];
+    const left=narrow?49:61,right=narrow?20:24, groupW=(w-left-right)/active.length;
+    const top=narrow?99:90,bottom=h-112;
+    const yy=year=>top+(2026-year)/11*(bottom-top);
+    const rootY=h-39,rootX=(left+w-right)/2;
+    for(const year of [2015,2018,2021,2024,2026]){
+      const y=yy(year);add('line',{x1:left-3,y1:y,x2:w-right,y2:y,stroke:'#edf0f6','stroke-width':1});text(left-13,y+4,year,11,'#8290a3',400,'end');
+    }
+    text(left-13,top-22,'Year ↑',10,'#8290a3',400,'end');
+    active.forEach((roleIndex,slot)=>{
+      const role=roles[roleIndex],start=left+slot*groupW,center=start+groupW/2;
+      const heading=text(center,25,role.name,narrow?17:15,role.color,600);
+      text(center,46,narrow?role.tag:'',11,'#7b889b');
+      add('circle',{cx:center-heading.getComputedTextLength()/2-10,cy:21,r:narrow?0:3,fill:role.color});
+      curve([rootX,rootY],[rootX,rootY-20],[center,rootY-16],[center,h-75],role.color,2,.65);
+      role.routes.forEach(([key,title],j)=>{
+        const laneW=groupW/2,x=start+j*laneW+8;
+        const width=laneW-(narrow?31:23);
+        text(x+width/2+9,narrow?62:54,title,12,'#68758a',500);
+        const works=data.filter(n=>n.branch===key),first=Math.min(...works.map(n=>n.year));
+        curve([center,h-75],[center,h-89],[x,h-80],[x,bottom+18],role.color,2,.65);
+        add('line',{x1:x,y1:bottom+18,x2:x,y2:yy(first),stroke:role.color,'stroke-width':1.5,opacity:.15});
+        add('line',{x1:x,y1:yy(first),x2:x,y2:top-14,stroke:role.color,'stroke-width':1.8,opacity:.5});
+        works.forEach(n=>{
+          const y=yy(n.year);
+          add('line',{x1:x,y1:y,x2:x+10,y2:y,stroke:role.color,'stroke-width':1.5});
+          add('circle',{cx:x,cy:y,r:3.5,fill:role.color});
+          const b=document.createElement('button');b.type='button';b.className='node';b.dataset.id=n.id;b.textContent=n.name;
+          b.setAttribute('aria-label',`${n.name}, ${n.year}. ${n.caption}`);b.setAttribute('aria-pressed',String(n.id===selected));
+          b.style.cssText=`left:${x+9}px;top:${y-14.5}px;width:${width}px;--series:${role.color};--soft:${role.soft};--selected:${role.selected}`;
+          b.onclick=()=>choose(n,role);nodes.append(b);b.style.top=`${y-b.offsetHeight/2}px`;
+        });
+      });
+    });
+    add('rect',{x:rootX-62,y:rootY-14,width:124,height:28,rx:7,fill:'#344460'});text(rootX,rootY+4,'Wearable AI',12,'#fff',600);
+    text(rootX,h-9,'Data · Evaluation · Infrastructure',11,'#8993a4');
+  }
+  mobileTrack.addEventListener('change',()=>{
+    const role=roles[Number(mobileTrack.value)];
+    const n=data.filter(n=>role.routes.some(([key])=>key===n.branch)).sort((a,b)=>b.year-a.year)[0];
+    choose(n,role);render();
+  });
+  new ResizeObserver(render).observe(graph);
+  render();
+  const first=data.find(n=>n.id==='model-sensorfm-2026');choose(first,roles[0]);
+})();
+</script>
+</body>
+</html>

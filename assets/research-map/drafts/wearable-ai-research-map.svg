@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1410" viewBox="0 0 1920 1410" role="img">
+<title>Wearable AI: research map</title>
+<desc>A bottom-up classification tree: wearable AI branches into representation learning, health assessment, reasoning and decision, and adaptive intervention; each has two technical routes. Selected works are examples, not model ancestry.</desc>
+<rect width="1920" height="1410" fill="#ffffff"/>
+<text x="960.0" y="55" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="38" fill="#172c3b">WEARABLE AI / RESEARCH MAP</text>
+<text x="960.0" y="100" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#536775">Research roles → technical routes → representative work</text>
+<text x="960.0" y="139" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="20" fill="#536775">Curated from v0.3.0 · source cutoff 2026-09-02</text>
+<path d="M 960.0 1060 C 960.0 1020, 285 1030, 285 997" fill="none" stroke="#2874b4" stroke-width="4"/>
+<rect x="77" y="842" width="416" height="155" rx="14" fill="#ecf2f8" stroke="#e5eaf0" stroke-width="1"/>
+<text x="285" y="871" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="27" fill="#172c3b">Representation learning</text>
+<text x="285" y="908" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#536775">信号表示与学习</text>
+<text x="285" y="949" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">How do we learn from body signals?</text>
+<path d="M 285 842 C 285 800, 175 810, 175 751" fill="none" stroke="#2874b4" stroke-width="3"/>
+<rect x="75" y="594" width="200" height="157" rx="10" fill="#f4f8fb" stroke="#e5eaf0" stroke-width="1"/>
+<text x="175" y="622" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">Signal</text>
+<text x="175" y="652" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">pretraining</text>
+<text x="175" y="690" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">IMU / ECG / PPG</text>
+<text x="175" y="715" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">EEG / CGM</text>
+<path d="M 175 594 C 175 563, 175 555, 175 527" fill="none" stroke="#2874b4" stroke-width="2"/>
+<rect x="75" y="285" width="200" height="242" rx="9" fill="#ffffff" stroke="#e5eaf0" stroke-width="1"/>
+<a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.653659/full" target="_blank">
+<text x="175" y="310" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2021</text>
+<text x="175" y="341" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">BENDR</text>
+</a>
+<a href="https://www.nature.com/articles/s41586-025-09925-9" target="_blank">
+<text x="175" y="428" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2026</text>
+<text x="175" y="459" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">GluFormer</text>
+</a>
+<line x1="93" y1="401" x2="257" y2="401" stroke="#e5eaf0" stroke-width="1"/>
+<path d="M 285 842 C 285 800, 395 810, 395 751" fill="none" stroke="#2874b4" stroke-width="3"/>
+<rect x="295" y="594" width="200" height="157" rx="10" fill="#f4f8fb" stroke="#e5eaf0" stroke-width="1"/>
+<text x="395" y="622" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">Multimodal</text>
+<text x="395" y="652" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">alignment</text>
+<text x="395" y="690" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Biosignals + language</text>
+<text x="395" y="715" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Shared representations</text>
+<path d="M 395 594 C 395 563, 395 555, 395 527" fill="none" stroke="#2874b4" stroke-width="2"/>
+<rect x="295" y="285" width="200" height="242" rx="9" fill="#ffffff" stroke="#e5eaf0" stroke-width="1"/>
+<a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/f6b30f3e2dd9cb53bbf2024402d02295-Abstract.html" target="_blank">
+<text x="395" y="310" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2023</text>
+<text x="395" y="341" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">BIOT</text>
+</a>
+<a href="https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/" target="_blank">
+<text x="395" y="428" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2026</text>
+<text x="395" y="459" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">SensorFM</text>
+</a>
+<line x1="313" y1="401" x2="477" y2="401" stroke="#e5eaf0" stroke-width="1"/>
+<path d="M 960.0 1060 C 960.0 1020, 735 1030, 735 997" fill="none" stroke="#26877a" stroke-width="4"/>
+<rect x="527" y="842" width="416" height="155" rx="14" fill="#ebf4f3" stroke="#e5eaf0" stroke-width="1"/>
+<text x="735" y="871" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="27" fill="#172c3b">Health assessment</text>
+<text x="735" y="908" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#536775">健康测量与预测</text>
+<text x="735" y="949" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">What can we measure or predict?</text>
+<path d="M 735 842 C 735 800, 625 810, 625 751" fill="none" stroke="#26877a" stroke-width="3"/>
+<rect x="525" y="594" width="200" height="157" rx="10" fill="#f4f9f8" stroke="#e5eaf0" stroke-width="1"/>
+<text x="625" y="622" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">Digital</text>
+<text x="625" y="652" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">phenotypes</text>
+<text x="625" y="690" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Measurement validity</text>
+<text x="625" y="715" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Interpretable indicators</text>
+<path d="M 625 594 C 625 563, 625 555, 625 527" fill="none" stroke="#26877a" stroke-width="2"/>
+<rect x="525" y="285" width="200" height="242" rx="9" fill="#ffffff" stroke="#e5eaf0" stroke-width="1"/>
+<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1901183" target="_blank">
+<text x="625" y="310" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2019</text>
+<text x="625" y="341" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">Apple Heart Study</text>
+</a>
+<a href="https://www.nature.com/articles/s41467-026-76147-6" target="_blank">
+<text x="625" y="428" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2026</text>
+<text x="625" y="459" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">Longitudinal</text>
+<text x="625" y="485" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">rhythm aging</text>
+</a>
+<line x1="543" y1="401" x2="707" y2="401" stroke="#e5eaf0" stroke-width="1"/>
+<path d="M 735 842 C 735 800, 845 810, 845 751" fill="none" stroke="#26877a" stroke-width="3"/>
+<rect x="745" y="594" width="200" height="157" rx="10" fill="#f4f9f8" stroke="#e5eaf0" stroke-width="1"/>
+<text x="845" y="622" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">Health prediction</text>
+<text x="845" y="690" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Screening / estimation</text>
+<text x="845" y="715" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Risk / monitoring</text>
+<path d="M 845 594 C 845 563, 845 555, 845 527" fill="none" stroke="#26877a" stroke-width="2"/>
+<rect x="745" y="285" width="200" height="242" rx="9" fill="#ffffff" stroke="#e5eaf0" stroke-width="1"/>
+<a href="https://www.nature.com/articles/s41551-020-00640-6" target="_blank">
+<text x="845" y="310" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2020</text>
+<text x="845" y="341" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">COVID early</text>
+<text x="845" y="367" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">detection</text>
+</a>
+<a href="https://www.nature.com/articles/s41586-026-10179-2" target="_blank">
+<text x="845" y="428" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2026</text>
+<text x="845" y="459" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">WEAR-ME / IR</text>
+<text x="845" y="485" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">prediction</text>
+</a>
+<line x1="763" y1="401" x2="927" y2="401" stroke="#e5eaf0" stroke-width="1"/>
+<path d="M 960.0 1060 C 960.0 1020, 1185 1030, 1185 997" fill="none" stroke="#8062ad" stroke-width="4"/>
+<rect x="977" y="842" width="416" height="155" rx="14" fill="#f4f1f8" stroke="#e5eaf0" stroke-width="1"/>
+<text x="1185" y="871" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="27" fill="#172c3b">Reasoning &amp; decision</text>
+<text x="1185" y="908" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#536775">因果推理与策略</text>
+<text x="1185" y="949" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">How do we estimate effects and act?</text>
+<path d="M 1185 842 C 1185 800, 1075 810, 1075 751" fill="none" stroke="#8062ad" stroke-width="3"/>
+<rect x="975" y="594" width="200" height="157" rx="10" fill="#f9f7fb" stroke="#e5eaf0" stroke-width="1"/>
+<text x="1075" y="622" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">Causal</text>
+<text x="1075" y="652" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">estimation</text>
+<text x="1075" y="690" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Treatment effects</text>
+<text x="1075" y="715" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Effect heterogeneity</text>
+<path d="M 1075 594 C 1075 563, 1075 555, 1075 527" fill="none" stroke="#8062ad" stroke-width="2"/>
+<rect x="975" y="285" width="200" height="242" rx="9" fill="#ffffff" stroke="#e5eaf0" stroke-width="1"/>
+<a href="https://doi.org/10.1080/01621459.2017.1305274" target="_blank">
+<text x="1075" y="310" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2018</text>
+<text x="1075" y="341" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">Mobile-health</text>
+<text x="1075" y="367" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">effect moderation</text>
+</a>
+<a href="https://proceedings.mlr.press/v238/katta24a.html" target="_blank">
+<text x="1075" y="428" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2024</text>
+<text x="1075" y="459" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">ADD MALTS</text>
+</a>
+<line x1="993" y1="401" x2="1157" y2="401" stroke="#e5eaf0" stroke-width="1"/>
+<path d="M 1185 842 C 1185 800, 1295 810, 1295 751" fill="none" stroke="#8062ad" stroke-width="3"/>
+<rect x="1195" y="594" width="200" height="157" rx="10" fill="#f9f7fb" stroke="#e5eaf0" stroke-width="1"/>
+<text x="1295" y="622" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">Adaptive design</text>
+<text x="1295" y="690" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Micro-randomized trials</text>
+<text x="1295" y="715" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Intervention optimization</text>
+<path d="M 1295 594 C 1295 563, 1295 555, 1295 527" fill="none" stroke="#8062ad" stroke-width="2"/>
+<rect x="1195" y="285" width="200" height="242" rx="9" fill="#ffffff" stroke="#e5eaf0" stroke-width="1"/>
+<a href="https://doi.org/10.1037/hea0000305" target="_blank">
+<text x="1295" y="310" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2015</text>
+<text x="1295" y="341" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">Micro-randomized</text>
+<text x="1295" y="367" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">trials</text>
+</a>
+<a href="https://doi.org/10.1146/annurev-psych-121024-044244" target="_blank">
+<text x="1295" y="428" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2026</text>
+<text x="1295" y="459" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">JITAI design</text>
+<text x="1295" y="485" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">synthesis</text>
+</a>
+<line x1="1213" y1="401" x2="1377" y2="401" stroke="#e5eaf0" stroke-width="1"/>
+<path d="M 960.0 1060 C 960.0 1020, 1635 1030, 1635 997" fill="none" stroke="#b37326" stroke-width="4"/>
+<rect x="1427" y="842" width="416" height="155" rx="14" fill="#f8f2eb" stroke="#e5eaf0" stroke-width="1"/>
+<text x="1635" y="871" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="27" fill="#172c3b">Adaptive intervention</text>
+<text x="1635" y="908" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#536775">自适应干预与闭环</text>
+<text x="1635" y="949" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">How do we deliver and evaluate action?</text>
+<path d="M 1635 842 C 1635 800, 1525 810, 1525 751" fill="none" stroke="#b37326" stroke-width="3"/>
+<rect x="1425" y="594" width="200" height="157" rx="10" fill="#fbf8f4" stroke="#e5eaf0" stroke-width="1"/>
+<text x="1525" y="622" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">Behavioral</text>
+<text x="1525" y="652" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">adaptation</text>
+<text x="1525" y="690" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Feedback / JITAIs</text>
+<text x="1525" y="715" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Digital coaching</text>
+<path d="M 1525 594 C 1525 563, 1525 555, 1525 527" fill="none" stroke="#b37326" stroke-width="2"/>
+<rect x="1425" y="285" width="200" height="242" rx="9" fill="#ffffff" stroke="#e5eaf0" stroke-width="1"/>
+<a href="https://doi.org/10.1001/jama.2016.12858" target="_blank">
+<text x="1525" y="310" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2016</text>
+<text x="1525" y="341" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">IDEA trial</text>
+</a>
+<a href="https://www.nature.com/articles/s41746-025-01844-3" target="_blank">
+<text x="1525" y="428" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2025</text>
+<text x="1525" y="459" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">myBPmyLife</text>
+</a>
+<line x1="1443" y1="401" x2="1607" y2="401" stroke="#e5eaf0" stroke-width="1"/>
+<path d="M 1635 842 C 1635 800, 1745 810, 1745 751" fill="none" stroke="#b37326" stroke-width="3"/>
+<rect x="1645" y="594" width="200" height="157" rx="10" fill="#fbf8f4" stroke="#e5eaf0" stroke-width="1"/>
+<text x="1745" y="622" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">Physiological</text>
+<text x="1745" y="652" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="24" fill="#172c3b">control</text>
+<text x="1745" y="690" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Insulin / neurointerfaces</text>
+<text x="1745" y="715" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="17" fill="#536775">Assistive control</text>
+<path d="M 1745 594 C 1745 563, 1745 555, 1745 527" fill="none" stroke="#b37326" stroke-width="2"/>
+<rect x="1645" y="285" width="200" height="242" rx="9" fill="#ffffff" stroke="#e5eaf0" stroke-width="1"/>
+<a href="https://doi.org/10.1056/NEJMoa1509351" target="_blank">
+<text x="1745" y="310" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2015</text>
+<text x="1745" y="341" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">Home artificial</text>
+<text x="1745" y="367" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">beta cell</text>
+</a>
+<a href="https://www.nature.com/articles/s41467-024-44791-5" target="_blank">
+<text x="1745" y="428" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="18" fill="#536775">2024</text>
+<text x="1745" y="459" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="22" fill="#172c3b">InTandem</text>
+</a>
+<line x1="1663" y1="401" x2="1827" y2="401" stroke="#e5eaf0" stroke-width="1"/>
+<rect x="790.0" y="1060" width="340" height="83" rx="13" fill="#172c3b" stroke="#172c3b" stroke-width="1"/>
+<text x="960.0" y="1091" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="31" fill="#ffffff">WEARABLE AI</text>
+<text x="960.0" y="1124" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="20" fill="#ffffff">Body-sensed intelligence</text>
+<rect x="77" y="1180" width="1766" height="112" rx="12" fill="#f5f7fa" stroke="#e5eaf0" stroke-width="1"/>
+<text x="960.0" y="1208" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="23" fill="#172c3b">SUPPORTING RESOURCES</text>
+<text x="960.0" y="1247" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="23" fill="#536775">Datasets &amp; cohorts     ·     Benchmarks &amp; evaluation     ·     Tools, standards &amp; governance</text>
+<text x="960.0" y="1330" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="21" fill="#536775">Independent facets: signal / sensor · task / population · architecture · evidence</text>
+<text x="960.0" y="1370" text-anchor="middle" dominant-baseline="central" font-family="Arial, Arial Unicode MS, sans-serif" font-size="20" fill="#536775">Branches are editorial categories, not mandatory pipeline steps or inheritance claims.</text>
+</svg>

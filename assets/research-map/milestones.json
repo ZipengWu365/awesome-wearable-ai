@@ -1,0 +1,686 @@
+{
+  "source_cutoff": "2026-09-02",
+  "selection_principle": "Named, source-checked examples covering research roles and distinct technical routes; not ranked or exhaustive.",
+  "line_semantics": "Research classification only; no paper-to-paper inheritance is asserted.",
+  "known_source_issues": {
+    "model-eeg-to-text-2022": "Primary URL points to an unrelated video-deblurring paper; not re-linked.",
+    "method-v-learning-2015": "Title and DOI mismatch: DOI resolves to Zhao et al. dynamic-treatment-regime methods, not mHealth V-learning; link withheld."
+  },
+  "display_ids": [
+    "model-bendr-2021",
+    "model-heartbeit-2023",
+    "model-biot-2023",
+    "model-ssl-wearables-700k-days-2024",
+    "model-sleepfm-icml-2024",
+    "model-papagei-2025",
+    "model-sensorlm-2025",
+    "model-gluformer-2026",
+    "model-sensorfm-2026",
+    "measure-apple-heart-study-2019",
+    "measure-covid-presymptomatic-2020",
+    "measure-prediabetes-glycemic-control-2021",
+    "measure-pd-virtual-exam-2022",
+    "measure-cosinorage-2024",
+    "measure-mood-episode-prediction-2024",
+    "model-insulin-resistance-wearables-2026",
+    "measure-longitudinal-activity-rhythm-aging-2026",
+    "method-mrt-health-psychology-2015",
+    "intervention-home-artificial-beta-cell-2015",
+    "intervention-idea-weight-loss-2016",
+    "method-mrt-moderation-2018",
+    "method-heartsteps-mrt-2019",
+    "intervention-ai-coaching-cancer-survivors-2021",
+    "intervention-open-source-aid-2022",
+    "intervention-brain-spine-interface-2023",
+    "method-add-malts-2024",
+    "intervention-intandem-stroke-2024",
+    "intervention-mybpmylife-2025",
+    "method-jitai-annual-review-2026"
+  ],
+  "additional_xmind_examples": [
+    "model-clocs-2021",
+    "model-sleepfm-clinical-2026",
+    "model-scaling-wearable-foundation-models-2024"
+  ],
+  "milestones": [
+    {
+      "id": "model-clocs-2021",
+      "branch": "single_signal",
+      "label": "CLOCS",
+      "caption": "Contrastive cardiac representations across patients",
+      "source_checked": {
+        "url": "https://proceedings.mlr.press/v139/kiyasseh21a.html",
+        "finding": "ICML 2021; contrastive cardiac-signal views across space, time and patients.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2021. Signal-specific ECG representation milestone, not proof of deployment.",
+      "year": 2021,
+      "title": "CLOCS: Contrastive Learning of Cardiac Signals across Space, Time, and Patients",
+      "registry_url": "https://proceedings.mlr.press/v139/kiyasseh21a.html",
+      "url": "https://proceedings.mlr.press/v139/kiyasseh21a.html",
+      "venue": "ICML",
+      "modalities": [
+        "ecg"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-bendr-2021",
+      "branch": "single_signal",
+      "label": "BENDR",
+      "caption": "Contrastive EEG pretraining for task transfer",
+      "source_checked": {
+        "url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.653659/full",
+        "finding": "Published 23 June 2021; transformer-based contrastive self-supervision on EEG, followed by downstream transfer.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2021. EEG is one signal modality despite multiple channels and datasets.",
+      "year": 2021,
+      "title": "BENDR: Using Transformers and a Contrastive Self-Supervised Learning Task to Learn from Massive Amounts of EEG Data",
+      "registry_url": "https://doi.org/10.3389/fnhum.2021.653659",
+      "url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.653659/full",
+      "venue": "Frontiers in Human Neuroscience",
+      "modalities": [
+        "eeg"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-heartbeit-2023",
+      "branch": "single_signal",
+      "label": "HeartBEiT",
+      "caption": "Masked ECG-image pretraining for diagnostic transfer",
+      "source_checked": {
+        "url": "https://www.nature.com/articles/s41746-023-00840-9",
+        "finding": "Published 6 June 2023; masked-image pretraining on ECG images, evaluated on three cardiac diagnostic tasks.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2023. Clinical ECG images are body-sensed-adjacent, not consumer-wearable validation.",
+      "year": 2023,
+      "title": "A Foundational Vision Transformer Improves Diagnostic Performance for Electrocardiograms",
+      "registry_url": "https://www.nature.com/articles/s41746-023-00840-9",
+      "url": "https://www.nature.com/articles/s41746-023-00840-9",
+      "venue": "npj Digital Medicine",
+      "modalities": [
+        "ecg-image"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-biot-2023",
+      "branch": "cross_modal_language",
+      "label": "BIOT",
+      "caption": "Unified tokenization for heterogeneous biosignal datasets",
+      "source_checked": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/f6b30f3e2dd9cb53bbf2024402d02295-Abstract.html",
+        "finding": "NeurIPS 2023; channel-wise tokenization enables cross-data learning across heterogeneous biosignal formats.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2023. Cross-data representation learning should not be captioned as simultaneous fusion of every listed modality. Registry primary_url was inaccessible; the verified official proceedings URL is preserved here without modifying the registry.",
+      "year": 2023,
+      "title": "BIOT: Biosignal Transformer for Cross-Data Learning in the Wild",
+      "registry_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/9e1aeb8f0d1c35c6259361c1c17f81f0-Abstract-Conference.html",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/f6b30f3e2dd9cb53bbf2024402d02295-Abstract.html",
+      "venue": "NeurIPS",
+      "modalities": [
+        "eeg",
+        "ecg",
+        "emg",
+        "eog"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-ssl-wearables-700k-days-2024",
+      "branch": "single_signal",
+      "label": "SSL-Wearables",
+      "caption": "Accelerometer pretraining on 700,000 person-days",
+      "source_checked": {
+        "url": "https://www.nature.com/articles/s41746-024-01062-3",
+        "finding": "Published 12 April 2024; self-supervised wrist-accelerometer pretraining on 700,000 person-days, evaluated across eight HAR datasets.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2024. A tri-axial accelerometer is one modality with several channels.",
+      "year": 2024,
+      "title": "Self-Supervised Learning for Human Activity Recognition Using 700,000 Person-Days of Wearable Data",
+      "registry_url": "https://www.nature.com/articles/s41746-024-01062-3",
+      "url": "https://www.nature.com/articles/s41746-024-01062-3",
+      "venue": "npj Digital Medicine",
+      "modalities": [
+        "accelerometer"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-scaling-wearable-foundation-models-2024",
+      "branch": "cross_modal_language",
+      "label": "LSM",
+      "caption": "Scaling multimodal wearable representations",
+      "source_checked": {
+        "url": "https://arxiv.org/abs/2410.13638",
+        "finding": "Initial preprint 17 October 2024; multimodal wearable foundation model and scaling analysis. Google Research publication listing now labels the conference publication 2025.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Registry year 2024 matches the initial preprint and 20 November 2024 Google Research blog; official publication listing https://research.google/pubs/scaling-wearable-foundation-models/ uses 2025. Keep registry year visible and record the year basis outside the diagram.",
+      "year": 2024,
+      "title": "Scaling Wearable Foundation Models",
+      "registry_url": "https://research.google/pubs/scaling-wearable-foundation-models/",
+      "url": "https://arxiv.org/abs/2410.13638",
+      "venue": "Google Research",
+      "modalities": [
+        "heart-rate",
+        "heart-rate-variability",
+        "accelerometer",
+        "eda",
+        "skin-temperature",
+        "barometer"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-sleepfm-icml-2024",
+      "branch": "cross_modal_language",
+      "label": "SleepFM (ICML)",
+      "caption": "Contrastive sleep learning across physiological modalities",
+      "source_checked": {
+        "url": "https://proceedings.mlr.press/v235/thapa24a.html",
+        "finding": "ICML 2024; multimodal sleep pretraining with brain, ECG and respiratory signals, evaluated on sleep-related transfer tasks.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2024. Distinct registry paper from the 2026 disease-prediction article. PSG is clinical/body-sensed-adjacent rather than watch-only sensing.",
+      "year": 2024,
+      "title": "SleepFM: Multi-modal Representation Learning for Sleep Across Brain Activity, ECG and Respiratory Signals",
+      "registry_url": "https://proceedings.mlr.press/v235/thapa24a.html",
+      "url": "https://proceedings.mlr.press/v235/thapa24a.html",
+      "venue": "ICML",
+      "modalities": [
+        "eeg",
+        "ecg",
+        "respiration",
+        "eog",
+        "emg"
+      ],
+      "evidence_boundary": "This record supports a representation, recognition, sensing or control-system claim under the reported evaluation. It does not by itself establish clinical benefit, causal treatment effect, safety, transportability or regulatory readiness."
+    },
+    {
+      "id": "model-papagei-2025",
+      "branch": "single_signal",
+      "label": "PaPaGei",
+      "caption": "Open PPG pretraining with morphology-aware learning",
+      "source_checked": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/7871f51d332c8661cc729539d7987b21-Paper-Conference.pdf",
+        "finding": "ICLR 2025; open PPG foundation models with morphology-aware representation learning and multi-dataset evaluation.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Registry year 2025 is the conference year. Initial arXiv preprint https://arxiv.org/abs/2410.20542 appeared 27 October 2024. Registry OpenReview URL was inaccessible during checking; the official ICLR proceedings PDF was checked instead.",
+      "year": 2025,
+      "title": "PaPaGei: Open Foundation Models for Optical Physiological Signals",
+      "registry_url": "https://openreview.net/forum?id=q4cQHRjeW8",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/7871f51d332c8661cc729539d7987b21-Paper-Conference.pdf",
+      "venue": "ICLR",
+      "modalities": [
+        "ppg"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-sensorlm-2025",
+      "branch": "cross_modal_language",
+      "label": "SensorLM",
+      "caption": "Aligning wearable sensor sequences with language",
+      "source_checked": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/42cd98f0e7520d4a63c34891ac1c972f-Abstract-Conference.html",
+        "finding": "NeurIPS 2025; sensor-language pretraining with hierarchical captions, zero-shot recognition and cross-modal retrieval evaluations.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2025. Language alignment is represented as a research category, not an inferred descendant of LSM.",
+      "year": 2025,
+      "title": "SensorLM: Learning the Language of Wearable Sensors",
+      "registry_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/42cd98f0e7520d4a63c34891ac1c972f-Abstract-Conference.html",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/42cd98f0e7520d4a63c34891ac1c972f-Abstract-Conference.html",
+      "venue": "NeurIPS",
+      "modalities": [
+        "imu",
+        "wearable-sensors",
+        "text"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-gluformer-2026",
+      "branch": "single_signal",
+      "label": "GluFormer",
+      "caption": "Reusable representations from continuous glucose data",
+      "source_checked": {
+        "url": "https://www.nature.com/articles/s41586-025-09925-9",
+        "finding": "Nature version of record published 14 January 2026; self-supervised CGM pretraining yields representations evaluated across external cohorts.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2026; the 2025 component of the DOI is not the publication year. Caption avoids clinical-benefit or causal claims.",
+      "year": 2026,
+      "title": "A Foundation Model for Continuous Glucose Monitoring Data",
+      "registry_url": "https://www.nature.com/articles/s41586-025-09925-9",
+      "url": "https://www.nature.com/articles/s41586-025-09925-9",
+      "venue": "Nature",
+      "modalities": [
+        "cgm",
+        "glucose"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-sleepfm-clinical-2026",
+      "branch": "cross_modal_language",
+      "label": "SleepFM (clinical)",
+      "caption": "Multimodal sleep representations for disease prediction",
+      "source_checked": {
+        "url": "https://doi.org/10.1038/s41591-025-04133-4",
+        "finding": "Nature Medicine published 6 January 2026; multimodal PSG pretraining and downstream future-disease prediction evaluations.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2026. This milestone represents the clinical prediction study; the 2024 ICML study has a distinct task focus. Disease prediction is not a clinical intervention effect.",
+      "year": 2026,
+      "title": "A Multimodal Sleep Foundation Model for Disease Prediction",
+      "registry_url": "https://www.nature.com/articles/s41591-025-04133-4",
+      "url": "https://doi.org/10.1038/s41591-025-04133-4",
+      "venue": "Nature Medicine",
+      "modalities": [
+        "eeg",
+        "ecg",
+        "eog",
+        "emg",
+        "respiration"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "model-sensorfm-2026",
+      "branch": "cross_modal_language",
+      "label": "SensorFM",
+      "caption": "Wearable pretraining across five sensor modalities",
+      "source_checked": {
+        "url": "https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/",
+        "finding": "Google Research official report dated 9 July 2026; missingness-aware pretraining on five wearable sensor modalities with transfer and agent-grounding evaluations.",
+        "data_cutoff": "2026-09-02"
+      },
+      "note_optional": "Retain registry year 2026. Technical-report evidence; do not depict clinical approval, causal benefit or model ancestry.",
+      "year": 2026,
+      "title": "Towards a General Intelligence and Interface for Wearable Health Data",
+      "registry_url": "https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/",
+      "url": "https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/",
+      "venue": "Google Research",
+      "modalities": [
+        "ppg",
+        "accelerometer",
+        "eda",
+        "skin-temperature",
+        "barometer"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "measure-apple-heart-study-2019",
+      "branch": "digital_phenotypes",
+      "label": "Apple Heart Study",
+      "caption": "Population-scale AF notification validation",
+      "source_checked": true,
+      "note_optional": "Primary source: https://www.nejm.org/doi/full/10.1056/NEJMoa1901183 . Published 13 November 2019. Measures irregular-pulse notification yield and positive predictive value with subsequent ECG confirmation. Does not establish population sensitivity, stroke prevention, or net clinical benefit. Label is the study's own name.",
+      "year": 2019,
+      "title": "Large-Scale Assessment of a Smartwatch to Identify Atrial Fibrillation",
+      "registry_url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1901183",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1901183",
+      "venue": "New England Journal of Medicine",
+      "modalities": [
+        "ppg",
+        "ecg"
+      ],
+      "evidence_boundary": "This supports analytical or clinical validation in the studied cohort and device setting; it does not establish universal cross-device validity or downstream clinical benefit."
+    },
+    {
+      "id": "measure-covid-presymptomatic-2020",
+      "branch": "health_prediction",
+      "label": "COVID early detection",
+      "caption": "Personal baselines flag presymptomatic physiological deviations",
+      "source_checked": true,
+      "note_optional": "Primary source: https://www.nature.com/articles/s41551-020-00640-6 . Published 18 November 2020. Editorial abbreviated display label, not a canonical model name. Analysis used retrospective smartwatch data and a small infected subgroup; it does not establish a clinically deployed diagnostic test or improved patient outcomes.",
+      "year": 2020,
+      "title": "Pre-symptomatic Detection of COVID-19 from Smartwatch Data",
+      "registry_url": "https://www.nature.com/articles/s41551-020-00640-6",
+      "url": "https://www.nature.com/articles/s41551-020-00640-6",
+      "venue": "Nature Biomedical Engineering",
+      "modalities": [
+        "heart-rate",
+        "steps",
+        "sleep"
+      ],
+      "evidence_boundary": "This supports analytical or clinical validation in the studied cohort and device setting; it does not establish universal cross-device validity or downstream clinical benefit."
+    },
+    {
+      "id": "measure-prediabetes-glycemic-control-2021",
+      "branch": "health_prediction",
+      "label": "HbA1c change prediction",
+      "caption": "Activity patterns improve HbA1c-change prediction",
+      "source_checked": true,
+      "note_optional": "Primary source: https://www.nature.com/articles/s41746-021-00541-1 . Published 21 December 2021. Editorial abbreviated display label. Prediction analysis nested within a trial assigning wearable placement; the study did not randomize model-guided treatment and does not demonstrate that prediction itself improves glycemic outcomes.",
+      "year": 2021,
+      "title": "Predicting Changes in Glycemic Control among Adults with Prediabetes from Activity Patterns Collected by Wearable Devices",
+      "registry_url": "https://www.nature.com/articles/s41746-021-00541-1",
+      "url": "https://www.nature.com/articles/s41746-021-00541-1",
+      "venue": "npj Digital Medicine",
+      "modalities": [
+        "accelerometer",
+        "activity-summary"
+      ],
+      "evidence_boundary": "This supports analytical or clinical validation in the studied cohort and device setting; it does not establish universal cross-device validity or downstream clinical benefit."
+    },
+    {
+      "id": "measure-pd-virtual-exam-2022",
+      "branch": "digital_phenotypes",
+      "label": "PD-VME",
+      "caption": "Repeated remote motor-function measurements",
+      "source_checked": true,
+      "note_optional": "Primary source: https://www.nature.com/articles/s41746-022-00607-8 . Published 23 May 2022. Source defines Parkinson's Disease Virtual Motor Exam (PD-VME). Validates unsupervised smartwatch motor measurements, repeatability, and medication sensitivity in early-stage Parkinson disease. Not a regulatory-qualified progression endpoint or evidence of disease-modifying benefit.",
+      "year": 2022,
+      "title": "Virtual Exam for Parkinson’s Disease Enables Frequent and Reliable Remote Measurements of Motor Function",
+      "registry_url": "https://www.nature.com/articles/s41746-022-00607-8",
+      "url": "https://www.nature.com/articles/s41746-022-00607-8",
+      "venue": "npj Digital Medicine",
+      "modalities": [
+        "accelerometer",
+        "gyroscope",
+        "ppg",
+        "eda"
+      ],
+      "evidence_boundary": "This supports analytical or clinical validation in the studied cohort and device setting; it does not establish universal cross-device validity or downstream clinical benefit."
+    },
+    {
+      "id": "measure-cosinorage-2024",
+      "branch": "digital_phenotypes",
+      "label": "CosinorAge",
+      "caption": "Circadian rhythm biomarker of aging",
+      "source_checked": true,
+      "note_optional": "Primary source: https://www.nature.com/articles/s41746-024-01111-x . Published 4 June 2024. Canonical biomarker name. Links wearable-derived rhythms with aging-related outcomes, including external cohort analyses; associations do not show that modifying CosinorAge changes mortality or disease risk.",
+      "year": 2024,
+      "title": "Circadian Rhythm Analysis Using Wearable-Based Accelerometry as a Digital Biomarker of Aging and Healthspan",
+      "registry_url": "https://www.nature.com/articles/s41746-024-01111-x",
+      "url": "https://www.nature.com/articles/s41746-024-01111-x",
+      "venue": "npj Digital Medicine",
+      "modalities": [
+        "accelerometer"
+      ],
+      "evidence_boundary": "The reported relationship is observational or predictive. It does not establish that changing the wearable-derived measure will causally change the clinical outcome."
+    },
+    {
+      "id": "measure-mood-episode-prediction-2024",
+      "branch": "health_prediction",
+      "label": "Mood episode prediction",
+      "caption": "Sleep rhythms predict next-day mood episodes",
+      "source_checked": true,
+      "note_optional": "Primary source: https://www.nature.com/articles/s41746-024-01333-z . Published 18 November 2024. Editorial abbreviated display label. Predictive models use personal sleep-wake histories and circadian features in 168 patients; prospective model-guided decision support or intervention benefit was not tested.",
+      "year": 2024,
+      "title": "Accurately Predicting Mood Episodes in Mood Disorder Patients Using Wearable Sleep and Circadian Rhythm Features",
+      "registry_url": "https://www.nature.com/articles/s41746-024-01333-z",
+      "url": "https://www.nature.com/articles/s41746-024-01333-z",
+      "venue": "npj Digital Medicine",
+      "modalities": [
+        "sleep",
+        "activity-summary"
+      ],
+      "evidence_boundary": "This supports analytical or clinical validation in the studied cohort and device setting; it does not establish universal cross-device validity or downstream clinical benefit."
+    },
+    {
+      "id": "model-insulin-resistance-wearables-2026",
+      "branch": "health_prediction",
+      "label": "WEAR-ME / IR prediction",
+      "caption": "Wearables and biomarkers estimate insulin resistance",
+      "source_checked": true,
+      "note_optional": "Primary source: https://www.nature.com/articles/s41586-026-10179-2 . Published 16 March 2026. WEAR-ME is the source's study name; the combined label is editorial and refers to registry short_name IR-Prediction. Estimates HOMA-IR-defined insulin resistance using wearable data, demographics, and blood biomarkers, with independent validation. This is not prediction of future diabetes incidence, nor proof of treatment benefit.",
+      "year": 2026,
+      "title": "Insulin Resistance Prediction from Wearables and Routine Blood Biomarkers",
+      "registry_url": "https://www.nature.com/articles/s41586-026-10179-2",
+      "url": "https://www.nature.com/articles/s41586-026-10179-2",
+      "venue": "Nature",
+      "modalities": [
+        "wearable-summary",
+        "blood-biomarkers"
+      ],
+      "evidence_boundary": "This is representation or predictive-model evidence. It does not by itself establish a causal treatment effect, clinical benefit, safety, or regulatory readiness."
+    },
+    {
+      "id": "measure-longitudinal-activity-rhythm-aging-2026",
+      "branch": "digital_phenotypes",
+      "label": "Longitudinal rhythm aging",
+      "caption": "Multi-year activity rhythms and aging trajectories",
+      "source_checked": true,
+      "note_optional": "Primary source: https://www.nature.com/articles/s41467-026-76147-6 . First published 22 August 2026 (before the registry cutoff of 2 September 2026); publisher now lists version of record 24 September 2026. Editorial abbreviated display label, not a canonical model name. Fitbit rest-activity rhythms are associated with clinical biomarker-derived biological aging trajectories; observational evidence is not causal validation.",
+      "year": 2026,
+      "title": "Longitudinal Digital Phenotyping of Activity Rhythms and Biological Aging Using Commercial Wearables",
+      "registry_url": "https://www.nature.com/articles/s41467-026-76147-6",
+      "url": "https://www.nature.com/articles/s41467-026-76147-6",
+      "venue": "Nature Communications",
+      "modalities": [
+        "activity-summary",
+        "accelerometer-derived-activity"
+      ],
+      "evidence_boundary": "The reported relationship is observational or predictive. It does not establish that changing the wearable-derived measure will causally change the clinical outcome."
+    },
+    {
+      "id": "method-mrt-health-psychology-2015",
+      "branch": "adaptive_policy",
+      "label": "Micro-randomized trials",
+      "caption": "Repeated randomization for timely interventions",
+      "source_checked": true,
+      "note_optional": "2015 issue and DOI confirmed at https://pubmed.ncbi.nlm.nih.gov/26651463/. An experimental design for optimizing JITAI components; not itself an effective intervention or learned policy.",
+      "year": 2015,
+      "title": "Microrandomized Trials: An Experimental Design for Developing Just-in-Time Adaptive Interventions",
+      "registry_url": "https://doi.org/10.1037/hea0000305",
+      "url": "https://doi.org/10.1037/hea0000305",
+      "venue": "Health Psychology",
+      "modalities": [
+        "longitudinal-data"
+      ],
+      "evidence_boundary": "Micro-randomized evidence identifies randomized component effects at specified decision points, not the effectiveness of an untested full intervention package."
+    },
+    {
+      "id": "intervention-home-artificial-beta-cell-2015",
+      "branch": "physiological_control",
+      "label": "Home artificial beta cell",
+      "caption": "Home closed-loop insulin-delivery trial",
+      "source_checked": true,
+      "note_optional": "2015 publication and study checked at https://pmc.ncbi.nlm.nih.gov/articles/PMC4697362/ and https://pubmed.ncbi.nlm.nih.gov/26379095/. CGM-driven insulin delivery evaluated in home-use crossover studies; publication year is not the invention date.",
+      "year": 2015,
+      "title": "Home Use of an Artificial Beta Cell in Type 1 Diabetes",
+      "registry_url": "https://doi.org/10.1056/NEJMoa1509351",
+      "url": "https://doi.org/10.1056/NEJMoa1509351",
+      "venue": "New England Journal of Medicine",
+      "modalities": [
+        "cgm",
+        "insulin-pump"
+      ],
+      "evidence_boundary": "Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration."
+    },
+    {
+      "id": "intervention-idea-weight-loss-2016",
+      "branch": "behavioral_intervention",
+      "label": "IDEA trial",
+      "caption": "Less weight loss with tracker add-on",
+      "source_checked": true,
+      "note_optional": "2016 randomized trial checked at https://pmc.ncbi.nlm.nih.gov/articles/PMC5480209/. This specific 24-month lifestyle trial found less weight loss in the technology-enhanced group; it does not show that all activity trackers are ineffective.",
+      "year": 2016,
+      "title": "Effect of Wearable Technology Combined With a Lifestyle Intervention on Long-term Weight Loss: The IDEA Randomized Clinical Trial",
+      "registry_url": "https://doi.org/10.1001/jama.2016.12858",
+      "url": "https://doi.org/10.1001/jama.2016.12858",
+      "venue": "JAMA",
+      "modalities": [
+        "activity-tracker",
+        "steps"
+      ],
+      "evidence_boundary": "Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration."
+    },
+    {
+      "id": "method-mrt-moderation-2018",
+      "branch": "causal_inference",
+      "label": "Mobile-health effect moderation",
+      "caption": "Time-varying effect estimation in mobile health",
+      "source_checked": true,
+      "note_optional": "Primary manuscript checked at https://pmc.ncbi.nlm.nih.gov/articles/PMC6241330/. Registry year 2018 is the JASA issue year; online publication was 2017-03-29. Centered and weighted estimation with a BASICS-Mobile illustration; a mobile-health method rather than a wearable-native model.",
+      "year": 2018,
+      "title": "Assessing Time-Varying Causal Effect Moderation in Mobile Health",
+      "registry_url": "https://doi.org/10.1080/01621459.2017.1305274",
+      "url": "https://doi.org/10.1080/01621459.2017.1305274",
+      "venue": "Journal of the American Statistical Association",
+      "modalities": [
+        "longitudinal-data"
+      ],
+      "evidence_boundary": "Micro-randomized evidence identifies randomized component effects at specified decision points, not the effectiveness of an untested full intervention package."
+    },
+    {
+      "id": "method-heartsteps-mrt-2019",
+      "branch": "adaptive_policy",
+      "label": "HeartSteps MRT",
+      "caption": "Context-tailored activity suggestions; six-week trial",
+      "source_checked": true,
+      "note_optional": "Primary report checked at https://pmc.ncbi.nlm.nih.gov/articles/PMC6401341/; 2019 issue confirmed at https://pubmed.ncbi.nlm.nih.gov/30192907/. The registry lists this trial report as a method. Walking-suggestion effects weakened over time, and antisedentary suggestions had no detectable proximal step effect; do not call this an RL policy study.",
+      "year": 2019,
+      "title": "Efficacy of Contextually Tailored Suggestions for Physical Activity: A Micro-Randomized Optimization Trial of HeartSteps",
+      "registry_url": "https://doi.org/10.1093/abm/kay067",
+      "url": "https://doi.org/10.1093/abm/kay067",
+      "venue": "Annals of Behavioral Medicine",
+      "modalities": [
+        "steps",
+        "context",
+        "smartphone"
+      ],
+      "evidence_boundary": "Micro-randomized evidence identifies randomized component effects at specified decision points, not the effectiveness of an untested full intervention package."
+    },
+    {
+      "id": "intervention-ai-coaching-cancer-survivors-2021",
+      "branch": "behavioral_intervention",
+      "label": "MyCoach / SmartText",
+      "caption": "Pilot trial of Fitbit-informed coaching",
+      "source_checked": true,
+      "note_optional": "2021 date and intervention checked at https://www.nature.com/articles/s41746-021-00539-9. Three-arm, four-week trial in 42 cancer survivors with Fitbit-derived steps. Voice-coaching findings should not be generalized to all AI coaching or long-term health outcomes.",
+      "year": 2021,
+      "title": "Randomized Trial of Two Artificial Intelligence Coaching Interventions to Increase Physical Activity in Cancer Survivors",
+      "registry_url": "https://www.nature.com/articles/s41746-021-00539-9",
+      "url": "https://www.nature.com/articles/s41746-021-00539-9",
+      "venue": "npj Digital Medicine",
+      "modalities": [
+        "steps",
+        "fitbit",
+        "voice-assistant",
+        "text-messaging"
+      ],
+      "evidence_boundary": "The reported effect is tied to the randomized intervention, comparator, population, follow-up and endpoint; it should not be generalized to other devices or care pathways without new evidence."
+    },
+    {
+      "id": "intervention-open-source-aid-2022",
+      "branch": "physiological_control",
+      "label": "CREATE open-source AID",
+      "caption": "Randomized trial of open-source insulin control",
+      "source_checked": true,
+      "note_optional": "2022 trial confirmed at https://pubmed.ncbi.nlm.nih.gov/36069869/ and the primary author-institution copy https://ourarchive.otago.ac.nz/esploro/outputs/journalArticle/Open-Source-Automated-Insulin-Delivery-in-Type/9926495492901891. Evaluated a modified AndroidAPS/OpenAPS system in children and adults; not evidence for every open-source system configuration.",
+      "year": 2022,
+      "title": "Open-Source Automated Insulin Delivery in Type 1 Diabetes",
+      "registry_url": "https://doi.org/10.1056/NEJMoa2203913",
+      "url": "https://doi.org/10.1056/NEJMoa2203913",
+      "venue": "New England Journal of Medicine",
+      "modalities": [
+        "cgm",
+        "insulin-pump"
+      ],
+      "evidence_boundary": "Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration."
+    },
+    {
+      "id": "intervention-brain-spine-interface-2023",
+      "branch": "physiological_control",
+      "label": "Brain-spine interface",
+      "caption": "Single-participant implanted brain-to-spine control",
+      "source_checked": true,
+      "note_optional": "2023 study checked at https://pmc.ncbi.nlm.nih.gov/articles/PMC10232367/. Fully implanted recording/stimulation linked cortical decoding to spinal stimulation in one participant. Display as implantable-adjacent, not as a noninvasive wearable or population-level efficacy trial.",
+      "year": 2023,
+      "title": "Walking Naturally after Spinal Cord Injury Using a Brain-Spine Interface",
+      "registry_url": "https://www.nature.com/articles/s41586-023-06094-5",
+      "url": "https://www.nature.com/articles/s41586-023-06094-5",
+      "venue": "Nature",
+      "modalities": [
+        "ecog",
+        "motion",
+        "spinal-stimulation"
+      ],
+      "evidence_boundary": "Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration."
+    },
+    {
+      "id": "method-add-malts-2024",
+      "branch": "causal_inference",
+      "label": "ADD MALTS",
+      "caption": "Distributional treatment effects from wearable outcomes",
+      "source_checked": true,
+      "note_optional": "2024 AISTATS paper checked at https://proceedings.mlr.press/v238/katta24a.html. Matching for treatment-effect estimation with distribution-valued wearable/sensor outcomes, including a CGM application; validity depends on the causal identification assumptions.",
+      "year": 2024,
+      "title": "Interpretable Causal Inference for Analyzing Wearable, Sensor, and Distributional Data",
+      "registry_url": "https://proceedings.mlr.press/v238/katta24a.html",
+      "url": "https://proceedings.mlr.press/v238/katta24a.html",
+      "venue": "AISTATS",
+      "modalities": [
+        "wearable-distributions",
+        "cgm"
+      ],
+      "evidence_boundary": "This record supports causal methodology. It does not prove that any particular wearable-derived exposure or intervention has a causal effect without a design-specific analysis."
+    },
+    {
+      "id": "intervention-intandem-stroke-2024",
+      "branch": "physiological_control",
+      "label": "InTandem",
+      "caption": "Adaptive music tested in stroke rehabilitation",
+      "source_checked": true,
+      "note_optional": "2024 randomized trial checked at https://www.nature.com/articles/s41467-024-44791-5. Real-time gait sensing controls individualized auditory rhythm. Five-week post-stroke trial; long-term durability and other patient populations were not established.",
+      "year": 2024,
+      "title": "Efficacy and Safety of Using Auditory-Motor Entrainment to Improve Walking after Stroke: A Multi-Site Randomized Controlled Trial of InTandem",
+      "registry_url": "https://www.nature.com/articles/s41467-024-44791-5",
+      "url": "https://www.nature.com/articles/s41467-024-44791-5",
+      "venue": "Nature Communications",
+      "modalities": [
+        "gait-sensing",
+        "auditory-feedback"
+      ],
+      "evidence_boundary": "The reported effect is tied to the randomized intervention, comparator, population, follow-up and endpoint; it should not be generalized to other devices or care pathways without new evidence."
+    },
+    {
+      "id": "intervention-mybpmylife-2025",
+      "branch": "behavioral_intervention",
+      "label": "myBPmyLife",
+      "caption": "Activity gains without additional BP reduction",
+      "source_checked": true,
+      "note_optional": "2025 result report checked at https://www.nature.com/articles/s41746-025-01844-3. In 602 randomized participants, step count and sodium intake improved relative to control, but the six-month systolic blood-pressure primary endpoint did not. Do not substitute the 2024 rationale/protocol for the 2025 result report.",
+      "year": 2025,
+      "title": "Physical Activity and Diet Just-in-Time Adaptive Intervention to Reduce Blood Pressure: A Randomized Controlled Trial",
+      "registry_url": "https://www.nature.com/articles/s41746-025-01844-3",
+      "url": "https://www.nature.com/articles/s41746-025-01844-3",
+      "venue": "npj Digital Medicine",
+      "modalities": [
+        "steps",
+        "smartwatch",
+        "self-report"
+      ],
+      "evidence_boundary": "Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration."
+    },
+    {
+      "id": "method-jitai-annual-review-2026",
+      "branch": "adaptive_policy",
+      "label": "JITAI design synthesis",
+      "caption": "Review of adaptive intervention design",
+      "source_checked": true,
+      "note_optional": "Primary review checked at https://pmc.ncbi.nlm.nih.gov/articles/PMC13217361/ and https://www.annualreviews.org/doi/pdf/10.1146/annurev-psych-121024-044244. Registry year 2026 is the Annual Review of Psychology volume year; first online as a Review in Advance on 2025-09-12. This is a synthesis, not a new algorithm or clinical efficacy trial.",
+      "year": 2026,
+      "title": "Just-in-Time Adaptive Interventions: Where Are We Now and What Is Next?",
+      "registry_url": "https://doi.org/10.1146/annurev-psych-121024-044244",
+      "url": "https://doi.org/10.1146/annurev-psych-121024-044244",
+      "venue": "Annual Review of Psychology",
+      "modalities": [
+        "longitudinal-data"
+      ],
+      "evidence_boundary": "Micro-randomized evidence identifies randomized component effects at specified decision points, not the effectiveness of an untested full intervention package."
+    }
+  ]
+}
