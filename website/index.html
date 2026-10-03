@@ -288,6 +288,27 @@
         <p>The atlas separates the lifecycle of wearable intelligence from the kinds of resources used to study it. That distinction keeps the map useful—and the claims honest.</p>
       </div>
 
+      <div class="atlas-reading-guide" aria-label="Three-step guide to reading the atlas">
+        <article>
+          <span>01 · SCOPE</span>
+          <strong>See what is covered</strong>
+          <p><b>396 accepted records</b> across six resource types, connected by 2,169 explicit or machine-derived relations.</p>
+          <small>Coverage · provenance · links</small>
+        </article>
+        <article>
+          <span>02 · SYSTEM</span>
+          <strong>Follow the capability loop</strong>
+          <p>Read from body signals to representation, assessment, decision and action—then follow real-world response back into the loop.</p>
+          <small>Sense → represent → assess → decide → act</small>
+        </article>
+        <article>
+          <span>03 · EVIDENCE</span>
+          <strong>Check the claim boundary</strong>
+          <p>Record count shows coverage, not quality. Research role, evidence design and supported claim must be read separately.</p>
+          <small>Association ≠ prediction ≠ causation ≠ utility</small>
+        </article>
+      </div>
+
       <div class="overview-grid">
         <article class="overview-card capability-card">
           <div class="card-heading">
@@ -382,6 +403,7 @@
           </div>
           <p class="card-intro">Each band separates the computational role, the technical routes covered by the registry, and the claim boundary a reader should keep in view.</p>
           <figure class="taxonomy-figure" aria-labelledby="taxonomy-caption">
+            <div class="taxonomy-reading-key" aria-hidden="true"><span>Technical routes</span><span>Research role</span><span>Evidence question</span></div>
             <section class="taxonomy-band tax-representation">
               <span class="tax-number">01</span>
               <div class="tax-route-icons"><span><i class="route-icon icon-signal"></i><small>Signal models</small></span><span><i class="route-icon icon-multimodal"></i><small>Multimodal</small></span></div>
@@ -413,10 +435,15 @@
       </div>
     </section>
 
-    <section class="landscape-section" aria-labelledby="model-landscape-title">
+    <section class="landscape-section" id="model-landscape" aria-labelledby="model-landscape-title">
       <div class="landscape-heading">
         <div><p class="eyebrow">TAXONOMY DETAIL · 102 MODEL RECORDS</p><h2 id="model-landscape-title">The sensor &amp; model<br><em>landscape.</em></h2></div>
         <p>Eleven families are grouped by the signals and modelling scope they serve. Circle area encodes the number of accepted records; branches indicate grouping, not model ancestry.</p>
+      </div>
+      <div class="landscape-takeaways" aria-label="Key findings from the model landscape">
+        <article><span>Largest family</span><b>22</b><p>General time-series enablers</p></article>
+        <article><span>Sensor-specific depth</span><b>15 · 14 · 12</b><p>ECG · EEG / MEG · motion / IMU</p></article>
+        <article><span>Cross-modal bridge</span><b>15 + 10</b><p>Sensor-language agents + multimodal physiology</p></article>
       </div>
       <figure class="model-landscape-figure viz-card" data-viz-reveal aria-labelledby="model-landscape-caption">
         <div class="model-landscape-key"><span><i></i> Node area = record count</span><span>Click a family to filter the Atlas</span></div>
@@ -477,6 +504,7 @@
           <div><p class="eyebrow">COMPOSITION THROUGH TIME</p><h3>From dataset foundations to model-led growth</h3></div>
           <p>Ribbon width encodes record count. Windows sum to 396.</p>
         </div>
+        <p class="figure-scroll-cue">Swipe horizontally to compare all five publication windows →</p>
         <div class="quant-chart-scroll">
           <div class="stream-chart-wrap">
             <svg id="evolution-stream" class="stream-chart" viewBox="0 0 1200 500" role="img" aria-label="Stacked stream chart of 396 wearable AI records across five time windows and six record types"></svg>
@@ -487,10 +515,10 @@
           <span style="--legend:#4d9ee9">Datasets</span><span style="--legend:#8b72df">Models</span><span style="--legend:#eb795f">Methods</span><span style="--legend:#e980aa">Measures</span><span style="--legend:#5db88a">Interventions</span><span style="--legend:#e6b542">Infrastructure</span>
         </div>
         <div class="stream-annotations" aria-label="Major shifts in the registry">
-          <span><i>01</i><b>Datasets build the base</b><small>1980–2016</small></span>
-          <span><i>02</i><b>Methods and measures expand</b><small>2017–2020</small></span>
-          <span><i>03</i><b>Foundation models emerge</b><small>2021–2023</small></span>
-          <span><i>04</i><b>Models surge; intervention evidence broadens</b><small>2024–2026</small></span>
+          <span><i>01</i><b>Datasets build the base</b><small>1980–2016</small><em>Reusable cohorts and benchmarks make comparison possible.</em></span>
+          <span><i>02</i><b>Methods and measures expand</b><small>2017–2020</small><em>The field moves beyond sensing toward validated outcomes.</em></span>
+          <span><i>03</i><b>Foundation models emerge</b><small>2021–2023</small><em>Representation learning begins to connect modalities and tasks.</em></span>
+          <span><i>04</i><b>Models surge; interventions broaden</b><small>2024–2026</small><em>Scale grows quickly, while real-world evidence remains distinct.</em></span>
         </div>
         <figcaption id="quant-evolution-caption"><b>Figure 03 · Quantitative temporal evolution.</b> Values are computed from the registry rather than manually drawn. Publication windows summarize composition; they do not imply that one research type replaced another.</figcaption>
       </figure>
@@ -553,6 +581,15 @@
         <p>The atlas reports what kind of evidence each record contains—and what that design still cannot establish. Category frequency is not an evidence hierarchy.</p>
       </div>
 
+      <div class="claim-path" aria-label="Five claim levels requiring progressively different evidence">
+        <div><span>01</span><b>Association</b><small>Do variables move together?</small></div><i aria-hidden="true">→</i>
+        <div><span>02</span><b>Prediction</b><small>Does it generalize to new cases?</small></div><i aria-hidden="true">→</i>
+        <div><span>03</span><b>Causal effect</b><small>What changes under intervention?</small></div><i aria-hidden="true">→</i>
+        <div><span>04</span><b>Policy value</b><small>Which action works, and when?</small></div><i aria-hidden="true">→</i>
+        <div><span>05</span><b>Clinical utility</b><small>Does use improve meaningful outcomes?</small></div>
+        <p>Each step asks a new question and needs additional evidence—not merely a larger model or a higher record count.</p>
+      </div>
+
       <article class="overview-card boundaries-card evidence-dashboard viz-card" data-viz-reveal>
         <div class="card-heading">
           <div><p class="eyebrow">EVIDENCE PROFILE · 396 RECORDS</p><h3>Different claims require different evidence</h3></div>
@@ -578,6 +615,7 @@
 
           <section class="claim-support" aria-labelledby="claim-support-title">
             <div class="subfigure-heading"><h4 id="claim-support-title">What can each design support?</h4><span>Interpretation guide</span></div>
+            <p class="figure-scroll-cue">Swipe horizontally to compare every claim type →</p>
             <div class="claim-matrix-scroll">
               <div class="claim-matrix" role="table" aria-label="Claim type by evidence design support matrix">
                 <div class="matrix-corner" role="columnheader">Design \ Claim</div>
