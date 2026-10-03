@@ -207,9 +207,9 @@ body[data-scene="2"] .people-field-key, body[data-scene="3"] .people-field-key, 
 @keyframes float-chip { to { translate: 0 -8px; } }
 
 .representation-field, .lifecycle-field, .ecosystem-field, .evidence-field { opacity: 0; transform: scale(.93); pointer-events: none; }
-.world-kicker { fill: var(--ink); font: 500 13px var(--mono); letter-spacing: .19em; }
+.world-kicker { fill: var(--ink); font: 600 17px var(--mono); letter-spacing: .16em; paint-order:stroke fill; stroke:rgba(246,248,242,.92); stroke-width:3px; stroke-linejoin:round; }
 .raw-wave path { fill: none; stroke: var(--coral); stroke-width: 4; stroke-linejoin: round; }
-.raw-wave text, .representation-label { fill: var(--muted); font: 400 12px var(--mono); }
+.raw-wave text, .representation-label { fill:#4f647c; font:500 15px var(--mono); paint-order:stroke fill; stroke:rgba(246,248,242,.94); stroke-width:4px; stroke-linejoin:round; }
 .transform-arrow { fill: none; stroke: var(--ink); stroke-width: 2; stroke-dasharray: 8 7; }
 .latent-dots circle { fill: var(--blue); stroke: var(--ink); stroke-width: 2; }
 .latent-dots circle:nth-child(3n+2) { fill: var(--purple); }
@@ -218,23 +218,23 @@ body[data-scene="2"] .people-field-key, body[data-scene="3"] .people-field-key, 
 .loop-arrow { stroke: var(--green); opacity: .7; }
 .life-node circle { fill: white; stroke: var(--ink); stroke-width: 2; }
 .life-node:nth-of-type(3n+1) circle { fill: #c8e6ff; }.life-node:nth-of-type(3n+2) circle { fill: #d7f0df; }.life-node:nth-of-type(3n) circle { fill: #eddaf5; }
-.life-node text { text-anchor: middle; fill: var(--ink); font: 500 13px var(--sans); }
-.life-node .life-no { font: 500 12px var(--mono); }
+.life-node text { text-anchor:middle; fill:var(--ink); font:600 16px var(--sans); paint-order:stroke fill; stroke:rgba(246,248,242,.94); stroke-width:4px; stroke-linejoin:round; }
+.life-node .life-no { font:600 14px var(--mono); stroke:rgba(255,255,255,.72); stroke-width:3px; }
 .eco-lines path { fill: none; stroke: #adc4c6; stroke-width: 2; stroke-dasharray: 4 7; }
 .eco-core circle { fill: var(--ink); }
-.eco-core text { fill: white; text-anchor: middle; font: 500 18px var(--sans); letter-spacing: .05em; }
-.eco-core .eco-core-sub { font: 300 10px var(--mono); letter-spacing: 0; opacity: .7; }
+.eco-core text { fill:white; text-anchor:middle; font:600 21px var(--sans); letter-spacing:.04em; }
+.eco-core .eco-core-sub { font:400 13px var(--mono); letter-spacing:0; opacity:.82; }
 .eco-node circle { stroke: var(--ink); stroke-width: 2; }
-.eco-node text { text-anchor: middle; fill: var(--ink); font: 500 16px var(--sans); }
-.eco-node .eco-count { font: 400 12px var(--mono); }
+.eco-node text { text-anchor:middle; fill:var(--ink); font:600 19px var(--sans); }
+.eco-node .eco-count { font:500 15px var(--mono); }
 .eco-model circle { fill: #b8dafc; }.eco-data circle { fill: #bfe8d2; }.eco-method circle { fill: #d8c6f4; }
 .eco-measure circle { fill: #f4c4d0; }.eco-infra circle { fill: #f2d995; }.eco-intervention circle { fill: #f2b8a8; }
 .evidence-spine { stroke: #afc1c4; stroke-width: 3; stroke-dasharray: 3 7; }
 .evidence-node circle { fill: white; stroke: var(--ink); stroke-width: 2; }
 .evidence-node path { fill: none; stroke: var(--ink); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
 .evidence-node .mini { fill: var(--white); stroke-width: 3; }
-.evidence-node text { text-anchor: middle; fill: var(--ink); font: 500 18px var(--sans); }
-.evidence-node .ev-question { font: 400 11px var(--mono); fill: var(--muted); }
+.evidence-node text { text-anchor:middle; fill:var(--ink); font:600 21px var(--sans); paint-order:stroke fill; stroke:rgba(246,248,242,.95); stroke-width:5px; stroke-linejoin:round; }
+.evidence-node .ev-question { font:500 14px var(--mono); fill:#50657c; stroke-width:4px; }
 .ev-association circle { fill:#d8edf5 }.ev-predict circle { fill: #c7e1fb; }.ev-causal circle { fill: #dac9f5; }.ev-policy circle { fill: #f2d89b; }.ev-utility circle { fill: #f3baa9; }
 
 body[data-scene="0"] .person { transform: translate(140px, 40px) scale(.92); }
