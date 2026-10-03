@@ -602,12 +602,7 @@
       const frame = createSvg('rect', {
         class: 'map-cluster-frame', x: cell.x, y: cell.y,
         width: cell.width, height: cell.height, rx: 18,
-        style: `--cluster:${palette[index % palette.length]};--delay:${index * 170}ms`
-      });
-      const halo = createSvg('ellipse', {
-        class: 'map-cluster-halo', cx: cell.centreX, cy: cell.centreY,
-        rx: cell.radiusX, ry: cell.radiusY,
-        style: `--cluster:${palette[index % palette.length]};--delay:${index * 170}ms`
+        style: `--cluster:${palette[index % palette.length]}`
       });
       const labelPlate = createSvg('rect', {
         class: 'map-label-plate', x: cell.centreX - 96, y: cell.y + 10,
@@ -620,7 +615,7 @@
       });
       const count = state.filtered.filter(record => groupKey(record, els.group.value) === group.key).length;
       label.textContent = `${group.label} · ${count}`;
-      clusterLayer.append(frame, halo);
+      clusterLayer.append(frame);
       labelLayer.append(labelPlate, label);
     });
 
@@ -657,7 +652,9 @@
         const source = positions.get(relation.source_id);
         const target = positions.get(relation.target_id);
         const line = createSvg('line', {
-          class: 'map-link explicit-link', x1: source.x, y1: source.y, x2: target.x, y2: target.y
+          class: 'map-link explicit-link', x1: source.x, y1: source.y, x2: target.x, y2: target.y,
+          'data-source-id': relation.source_id,
+          'data-target-id': relation.target_id
         });
         const title = createSvg('title'); title.textContent = titleCase(relation.predicate);
         line.append(title); linkLayer.append(line);
@@ -671,6 +668,18 @@
       els.map.classList.add('is-tracing');
       els.map.querySelectorAll('.map-node').forEach(item => item.classList.toggle('is-related', item.dataset.family === family));
       els.map.querySelectorAll('.family-link').forEach(item => item.classList.toggle('is-related', item.dataset.family === family));
+      const focusId = focusNode.dataset.recordId;
+      const relatedIds = new Set();
+      els.map.querySelectorAll('.explicit-link').forEach(item => {
+        const isRelated = item.dataset.sourceId === focusId || item.dataset.targetId === focusId;
+        item.classList.toggle('is-related', isRelated);
+        if (isRelated) {
+          relatedIds.add(item.dataset.sourceId === focusId ? item.dataset.targetId : item.dataset.sourceId);
+        }
+      });
+      els.map.querySelectorAll('.map-node').forEach(item => {
+        if (relatedIds.has(item.dataset.recordId)) item.classList.add('is-related');
+      });
       focusNode.classList.add('is-focus');
     };
 
@@ -680,7 +689,8 @@
         class: 'map-node', tabindex: '0', role: 'button',
         'aria-label': `${record.title}, ${record.year}, ${record.record_type}`,
         transform: `translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})`,
-        'data-family': record.family || 'unclassified'
+        'data-family': record.family || 'unclassified',
+        'data-record-id': record.id
       });
       const dot = createSvg('circle', {
         r: record.evidence_depth === 'evidence_card' ? 7 : 5,

@@ -534,17 +534,16 @@ body[data-scene="1"] .stage-note[data-note="signal"], body[data-scene="4"] .stag
 .atlas-viewport { position: relative; height: min(670px, 68vh); min-height: 520px; background: radial-gradient(circle at 50% 42%, rgba(72,102,143,.4), transparent 52%), #152946; overflow: hidden; }
 #node-map { width: 100%; height: 100%; display: block; }
 .map-cluster-frame { fill:color-mix(in srgb,var(--cluster) 5%,transparent);stroke:color-mix(in srgb,var(--cluster) 32%,transparent);stroke-width:1;stroke-dasharray:3 7;vector-effect:non-scaling-stroke }
-.map-cluster-halo { fill:color-mix(in srgb,var(--cluster) 8%,transparent);stroke:color-mix(in srgb,var(--cluster) 23%,transparent);stroke-width:1;transform-box:fill-box;transform-origin:center;animation:cluster-breathe 7s ease-in-out var(--delay) infinite;pointer-events:none }
-@keyframes cluster-breathe { 50%{transform:scale(1.035);opacity:.72} }
 .map-label-plate { fill:rgba(11,31,58,.88);stroke:rgba(255,255,255,.11);stroke-width:1;pointer-events:none }
 .map-link { stroke:rgba(198,220,240,.24);stroke-width:1;vector-effect:non-scaling-stroke;transition:opacity .25s,stroke-width .25s;pointer-events:none }
-.explicit-link { stroke:#f4d171;stroke-width:1.5;stroke-dasharray:4 4;opacity:.78 }
+.explicit-link { stroke:rgba(218,228,239,.9);stroke-width:1.25;stroke-dasharray:4 5;opacity:0 }
 .map-node { cursor:pointer;outline:none;transition:opacity .25s; }
 .map-node circle { stroke:rgba(255,255,255,.66);stroke-width:1;transform-box:fill-box;transform-origin:center;transition:transform .22s,stroke-width .22s,filter .22s,opacity .22s; }
 .map-node:hover circle,.map-node:focus circle,.map-node.is-focus circle { transform:scale(1.55);stroke:white;stroke-width:2.5;filter:url(#nodeGlow) }
 #node-map.is-tracing .map-node:not(.is-related) { opacity:.18 }
 #node-map.is-tracing .map-link { opacity:.035 }
 #node-map.is-tracing .family-link.is-related { opacity:.9;stroke:#fff;stroke-width:1.8 }
+#node-map.is-tracing .explicit-link.is-related { opacity:.72;stroke:rgba(218,228,239,.9);stroke-width:1.25 }
 #node-map.is-tracing .map-node.is-related circle { transform:scale(1.22);opacity:1 }
 #node-map.is-tracing .map-node.is-focus circle { transform:scale(1.7) }
 .map-label { fill:rgba(255,255,255,.9);font:500 11px var(--mono);text-anchor:middle;text-transform:uppercase;letter-spacing:.08em;pointer-events:none; }
