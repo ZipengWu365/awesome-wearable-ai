@@ -59,6 +59,23 @@
     infrastructure: '#ebc45f',
     intervention: '#ef9278'
   };
+  const LIFECYCLE_ORDER = [
+    ['sensing', 'Sense'], ['representation', 'Represent'], ['measurement', 'Measure'],
+    ['prediction', 'Predict'], ['causal-inference', 'Causal'], ['policy-learning', 'Policy'],
+    ['intervention-design', 'Intervene'], ['clinical-evaluation', 'Evaluate'],
+    ['closed-loop-deployment', 'Close loop'], ['governance', 'Govern']
+  ];
+  const EVIDENCE_STAGE_ORDER = [
+    'official-resource', 'methodological', 'external-validation', 'randomized-controlled-trial',
+    'systematic-review', 'prospective-observational', 'clinical-deployment',
+    'micro-randomized-trial', 'retrospective'
+  ];
+  const CAUSAL_STATUS_ORDER = [
+    ['not-applicable', 'N/A'], ['not-causal', 'Not causal'],
+    ['causal-identification', 'Causal ID'], ['randomized-causal-effect', 'Randomized effect'],
+    ['policy-counterfactual', 'Policy CF'], ['mechanistic-closed-loop', 'Mechanistic loop'],
+    ['predictive-counterfactual', 'Predictive CF']
+  ];
 
   /* A persistent population, inspired by the reference story's use of the same
      people across scenes. Each scene changes their destination—not their identity. */
@@ -282,7 +299,10 @@
     infrastructure: 'Infrastructure', intervention: 'Interventions',
     evidence_card: 'Evidence card', metadata_verified: 'Metadata verified', venue_verified: 'Venue verified'
   };
-  const state = { records: [], relations: [], filtered: [], view: 'map', selected: null };
+  const state = {
+    records: [], relations: [], watchlist: [], filtered: [], view: 'map', selected: null, exactFilter: null,
+    familyType: 'model', datasetExpanded: false, watchlistExpanded: false
+  };
   const els = {
     search: document.querySelector('#search'),
     type: document.querySelector('#type-filter'),
@@ -297,7 +317,21 @@
     legend: document.querySelector('.legend'),
     shelf: document.querySelector('#detail-shelf'),
     shelfContent: document.querySelector('.shelf-content'),
-    backdrop: document.querySelector('.shelf-backdrop')
+    backdrop: document.querySelector('.shelf-backdrop'),
+    lifecycleMatrix: document.querySelector('#lifecycle-type-matrix'),
+    familyTabs: document.querySelector('#family-tabs'),
+    familyBrowser: document.querySelector('#family-browser'),
+    familySummary: document.querySelector('#family-summary'),
+    datasetSearch: document.querySelector('#dataset-search'),
+    datasetToggle: document.querySelector('#dataset-toggle'),
+    datasetCount: document.querySelector('#dataset-count'),
+    datasetTable: document.querySelector('#dataset-table-body'),
+    evidenceCausalMatrix: document.querySelector('#evidence-causal-matrix'),
+    watchlistSearch: document.querySelector('#watchlist-search'),
+    watchlistStatus: document.querySelector('#watchlist-status'),
+    watchlistList: document.querySelector('#watchlist-list'),
+    watchlistCount: document.querySelector('#watchlist-count'),
+    watchlistToggle: document.querySelector('#watchlist-toggle')
   };
 
   const svgNS = 'http://www.w3.org/2000/svg';
@@ -799,9 +833,241 @@
     state.selected = null;
   };
 
+  const resetAtlasControls = () => {
+    els.search.value = '';
+    els.type.value = 'all';
+    els.modality.value = 'all';
+    els.evidence.value = 'all';
+    els.year.value = 'all';
+  };
+
+  const showAtlasSubset = (predicate) => {
+    resetAtlasControls();
+    state.exactFilter = predicate;
+    applyFilters();
+    document.querySelector('#explore')?.scrollIntoView({ behavior: revealMotion.matches ? 'auto' : 'smooth' });
+  };
+
+  const searchAtlas = (type, query) => {
+    resetAtlasControls();
+    state.exactFilter = null;
+    els.type.value = type || 'all';
+    els.search.value = query || '';
+    applyFilters();
+    document.querySelector('#explore')?.scrollIntoView({ behavior: revealMotion.matches ? 'auto' : 'smooth' });
+  };
+
+  const appendTextCell = (parent, className, text, role) => {
+    const cell = document.createElement('div');
+    cell.className = className;
+    if (role) cell.setAttribute('role', role);
+    cell.textContent = text;
+    parent.append(cell);
+    return cell;
+  };
+
+  const renderLifecycleMatrix = () => {
+    if (!els.lifecycleMatrix) return;
+    els.lifecycleMatrix.replaceChildren();
+    appendTextCell(els.lifecycleMatrix, 'life-cell life-corner', 'Type → stage', 'columnheader');
+    LIFECYCLE_ORDER.forEach(([, label]) => appendTextCell(els.lifecycleMatrix, 'life-cell life-column', label, 'columnheader'));
+    appendTextCell(els.lifecycleMatrix, 'life-cell life-total', 'Total', 'columnheader');
+    const counts = TYPE_ORDER.flatMap(type => LIFECYCLE_ORDER.map(([stage]) => state.records.filter(record => record.record_type === type && record.lifecycle_stage === stage).length));
+    const max = Math.max(...counts, 1);
+    TYPE_ORDER.forEach(type => {
+      const rowRecords = state.records.filter(record => record.record_type === type);
+      const rowHead = appendTextCell(els.lifecycleMatrix, 'life-cell life-rowhead', '', 'rowheader');
+      rowHead.style.setProperty('--type-color', TYPE_COLORS[type]);
+      const marker = document.createElement('i'); marker.setAttribute('aria-hidden', 'true');
+      rowHead.append(marker, document.createTextNode(LABELS[type]));
+      LIFECYCLE_ORDER.forEach(([stage, label]) => {
+        const count = rowRecords.filter(record => record.lifecycle_stage === stage).length;
+        const wrapper = document.createElement('div'); wrapper.className = 'life-cell'; wrapper.setAttribute('role', 'cell');
+        const button = document.createElement('button'); button.type = 'button'; button.className = 'life-count';
+        button.style.setProperty('--type-color', TYPE_COLORS[type]);
+        button.style.setProperty('--heat-fill', `${8 + count / max * 43}%`);
+        button.style.setProperty('--heat-border', `${28 + count / max * 40}%`);
+        button.disabled = count === 0;
+        button.setAttribute('aria-label', `${count} ${LABELS[type].toLowerCase()} at the ${label} lifecycle stage`);
+        button.title = count ? `Open ${count} ${LABELS[type].toLowerCase()} indexed as ${label}` : 'No indexed records';
+        const value = document.createElement('b'); value.textContent = count || '—';
+        const unit = document.createElement('span'); unit.textContent = count === 1 ? 'record' : 'records';
+        button.append(value, unit);
+        if (count) button.addEventListener('click', () => showAtlasSubset(record => record.record_type === type && record.lifecycle_stage === stage));
+        wrapper.append(button); els.lifecycleMatrix.append(wrapper);
+      });
+      appendTextCell(els.lifecycleMatrix, 'life-cell life-total', String(rowRecords.length), 'cell');
+    });
+  };
+
+  const familyLabel = family => titleCase(family)
+    .replace(/ Foundation Models$/i, '')
+    .replace(/ Foundation Model$/i, '')
+    .replace(/ Models$/i, '')
+    .replace(/ Datasets$/i, '')
+    .replace(/ Methods$/i, '')
+    .replace(/ Measures$/i, '')
+    .replace(/ Interventions$/i, '');
+
+  const renderFamilyBrowser = () => {
+    if (!els.familyTabs || !els.familyBrowser) return;
+    els.familyTabs.replaceChildren();
+    TYPE_ORDER.forEach(type => {
+      const count = state.records.filter(record => record.record_type === type).length;
+      const button = document.createElement('button'); button.type = 'button'; button.role = 'tab';
+      button.classList.toggle('is-active', type === state.familyType);
+      button.setAttribute('aria-selected', String(type === state.familyType));
+      button.style.setProperty('--tab-color', TYPE_COLORS[type]);
+      button.textContent = `${LABELS[type]} · ${count}`;
+      button.addEventListener('click', () => { state.familyType = type; renderFamilyBrowser(); });
+      els.familyTabs.append(button);
+    });
+    const grouped = new Map();
+    state.records.filter(record => record.record_type === state.familyType).forEach(record => {
+      const family = record.family || 'unclassified';
+      grouped.set(family, (grouped.get(family) || 0) + 1);
+    });
+    const families = [...grouped].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const max = Math.max(...families.map(([, count]) => count), 1);
+    els.familyBrowser.replaceChildren();
+    families.forEach(([family, count]) => {
+      const button = document.createElement('button'); button.type = 'button'; button.className = 'family-bubble';
+      button.style.setProperty('--family-color', TYPE_COLORS[state.familyType]);
+      button.style.setProperty('--bubble', `${88 + Math.sqrt(count / max) * 68}px`);
+      button.title = `Search ${count} records in ${family}`;
+      const label = document.createElement('b'); label.textContent = familyLabel(family);
+      const value = document.createElement('span'); value.textContent = `${count} ${count === 1 ? 'record' : 'records'}`;
+      button.append(label, value);
+      button.addEventListener('click', () => searchAtlas(state.familyType, family));
+      els.familyBrowser.append(button);
+    });
+    const total = families.reduce((sum, [, count]) => sum + count, 0);
+    const largest = families[0];
+    els.familySummary.textContent = `${families.length} families · ${total} records${largest ? ` · largest: ${familyLabel(largest[0])} (${largest[1]})` : ''}`;
+  };
+
+  const tableTags = (values, limit = 3) => {
+    const container = document.createElement('div'); container.className = 'table-tags';
+    const list = asList(values).filter(Boolean);
+    list.slice(0, limit).forEach(value => {
+      const chip = document.createElement('span'); chip.textContent = titleCase(String(value)); container.append(chip);
+    });
+    if (list.length > limit) {
+      const more = document.createElement('span'); more.textContent = `+${list.length - limit}`; container.append(more);
+    }
+    if (!list.length) container.textContent = '—';
+    return container;
+  };
+
+  const renderDatasetTable = () => {
+    if (!els.datasetTable) return;
+    const query = (els.datasetSearch?.value || '').trim().toLowerCase();
+    const depthRank = { evidence_card: 0, metadata_verified: 1, venue_verified: 2 };
+    const datasets = state.records.filter(record => record.record_type === 'dataset').filter(record => {
+      if (!query) return true;
+      return [record.title, record.short_name, record.wearable_scope, ...asList(record.modalities), ...asList(record.populations), ...asList(record.body_locations), ...asList(record.clinical_domains), ...asList(record.tags)]
+        .filter(Boolean).join(' ').toLowerCase().includes(query);
+    }).sort((a, b) => (depthRank[a.evidence_depth] ?? 9) - (depthRank[b.evidence_depth] ?? 9) || Number(b.year) - Number(a.year) || a.title.localeCompare(b.title));
+    const visible = state.datasetExpanded ? datasets : datasets.slice(0, 15);
+    els.datasetTable.replaceChildren();
+    visible.forEach(record => {
+      const row = document.createElement('tr');
+      const nameCell = document.createElement('td');
+      const name = document.createElement('button'); name.type = 'button'; name.className = 'dataset-title-button'; name.textContent = record.title;
+      name.addEventListener('click', () => openShelf(record)); nameCell.append(name);
+      const year = document.createElement('td'); year.textContent = record.year || '—';
+      const modalities = document.createElement('td'); modalities.append(tableTags(record.modalities));
+      const populations = document.createElement('td'); populations.append(tableTags(record.populations, 2));
+      const domains = document.createElement('td'); domains.append(tableTags(record.clinical_domains, 2));
+      const scope = document.createElement('td'); scope.textContent = record.wearable_scope ? titleCase(record.wearable_scope) : '—';
+      const access = document.createElement('td'); access.textContent = record.open_data === true ? 'Open data' : record.open_data === false ? 'Not open' : 'Not recorded'; access.className = record.open_data === true ? 'access-open' : 'access-unknown';
+      const depth = document.createElement('td'); depth.textContent = LABELS[record.evidence_depth] || titleCase(record.evidence_depth);
+      row.append(nameCell, year, modalities, populations, domains, scope, access, depth); els.datasetTable.append(row);
+    });
+    els.datasetCount.textContent = `Showing ${visible.length} of ${datasets.length} matching datasets`;
+    els.datasetToggle.hidden = datasets.length <= 15;
+    els.datasetToggle.textContent = state.datasetExpanded ? 'Show first 15' : `Show all ${datasets.length}`;
+  };
+
+  const renderEvidenceCausalMatrix = () => {
+    if (!els.evidenceCausalMatrix) return;
+    els.evidenceCausalMatrix.replaceChildren();
+    appendTextCell(els.evidenceCausalMatrix, 'cross-cell cross-corner', 'Evidence stage ↓ · causal status →', 'columnheader');
+    CAUSAL_STATUS_ORDER.forEach(([, label]) => appendTextCell(els.evidenceCausalMatrix, 'cross-cell cross-column', label, 'columnheader'));
+    const counts = EVIDENCE_STAGE_ORDER.flatMap(stage => CAUSAL_STATUS_ORDER.map(([status]) => state.records.filter(record => record.evidence_stage === stage && record.causal_status === status).length));
+    const max = Math.max(...counts, 1);
+    EVIDENCE_STAGE_ORDER.forEach(stage => {
+      appendTextCell(els.evidenceCausalMatrix, 'cross-cell cross-row', titleCase(stage), 'rowheader');
+      CAUSAL_STATUS_ORDER.forEach(([status, label]) => {
+        const count = state.records.filter(record => record.evidence_stage === stage && record.causal_status === status).length;
+        const cell = appendTextCell(els.evidenceCausalMatrix, `cross-cell cross-count${count ? '' : ' is-empty'}`, count || '—', 'cell');
+        cell.style.setProperty('--heat-fill', `${5 + count / max * 48}%`);
+        cell.title = `${count} records: ${titleCase(stage)} × ${label}`;
+        cell.setAttribute('aria-label', `${count} records with evidence stage ${titleCase(stage)} and causal status ${label}`);
+      });
+    });
+  };
+
+  const renderWatchlist = () => {
+    if (!els.watchlistList) return;
+    const query = (els.watchlistSearch?.value || '').trim().toLowerCase();
+    const status = els.watchlistStatus?.value || 'all';
+    const items = state.watchlist.filter(item => {
+      if (status !== 'all' && item.status !== status) return false;
+      if (!query) return true;
+      return [item.title, item.status, item.reason, item.review_action, item.proposed_family, ...asList(item.tags)].filter(Boolean).join(' ').toLowerCase().includes(query);
+    }).sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title));
+    const visible = state.watchlistExpanded ? items : items.slice(0, 8);
+    els.watchlistList.replaceChildren();
+    visible.forEach(item => {
+      const card = document.createElement('article'); card.className = 'watchlist-item';
+      const header = document.createElement('header');
+      const statusLabel = document.createElement('span'); statusLabel.textContent = titleCase(item.status);
+      const year = document.createElement('span'); year.textContent = item.year || 'Year unresolved'; header.append(statusLabel, year);
+      const heading = document.createElement('h4'); heading.textContent = item.title;
+      const reason = document.createElement('p'); reason.textContent = item.reason || 'Awaiting review.';
+      card.append(header, heading, reason);
+      if (item.review_action) {
+        const details = document.createElement('details');
+        const summary = document.createElement('summary'); summary.textContent = 'What is needed for inclusion?';
+        const action = document.createElement('p'); action.textContent = item.review_action; details.append(summary, action); card.append(details);
+      }
+      if (item.primary_url) {
+        const link = document.createElement('a'); link.href = item.primary_url; link.target = '_blank'; link.rel = 'noreferrer'; link.textContent = 'Open candidate source ↗'; card.append(link);
+      }
+      els.watchlistList.append(card);
+    });
+    if (!visible.length) appendTextCell(els.watchlistList, 'empty-state', 'No watchlist candidates match these filters.');
+    els.watchlistCount.textContent = `Showing ${visible.length} of ${items.length} matching candidates`;
+    els.watchlistToggle.hidden = items.length <= 8;
+    els.watchlistToggle.textContent = state.watchlistExpanded ? 'Show first 8 candidates' : `Show all ${items.length} candidates`;
+  };
+
+  const updateRegistryMeta = (data) => {
+    const version = data.version ? `v${String(data.version).replace(/^v/, '')}` : 'unversioned';
+    const dates = [...state.records, ...state.watchlist].map(item => item.verified_on).filter(Boolean).sort();
+    const cutoff = dates.at(-1) || data.generated_on || 'not recorded';
+    document.querySelectorAll('[data-registry-version]').forEach(node => { node.textContent = version; });
+    document.querySelectorAll('[data-registry-cutoff]').forEach(node => { node.textContent = cutoff; });
+    document.querySelectorAll('[data-generated-on]').forEach(node => { node.textContent = data.generated_on || 'not recorded'; });
+    document.querySelectorAll('[data-accepted-count]').forEach(node => { node.textContent = state.records.length.toLocaleString(); });
+    document.querySelectorAll('[data-relation-count]').forEach(node => { node.textContent = state.relations.length.toLocaleString(); });
+    document.querySelectorAll('[data-watchlist-count]').forEach(node => { node.textContent = state.watchlist.length.toLocaleString(); });
+  };
+
+  const renderRegistryComparisons = (data) => {
+    renderLifecycleMatrix();
+    renderFamilyBrowser();
+    renderDatasetTable();
+    renderEvidenceCausalMatrix();
+    renderWatchlist();
+    updateRegistryMeta(data);
+  };
+
   const applyFilters = () => {
     const query = els.search.value.trim().toLowerCase();
     state.filtered = state.records.filter(record => {
+      if (state.exactFilter && !state.exactFilter(record)) return false;
       if (els.type.value !== 'all' && record.record_type !== els.type.value) return false;
       if (!matchesModality(record, els.modality.value)) return false;
       if (els.evidence.value !== 'all' && record.evidence_depth !== els.evidence.value) return false;
@@ -821,13 +1087,7 @@
   document.querySelectorAll('.family-node[data-family]').forEach(button => {
     button.addEventListener('click', () => {
       if (!state.records.length) return;
-      els.type.value = 'model';
-      els.modality.value = 'all';
-      els.evidence.value = 'all';
-      els.year.value = 'all';
-      els.search.value = button.dataset.family;
-      applyFilters();
-      document.querySelector('#explore')?.scrollIntoView({ behavior: revealMotion.matches ? 'auto' : 'smooth' });
+      searchAtlas('model', button.dataset.family);
     });
   });
 
@@ -839,7 +1099,15 @@
       els.viewport.classList.toggle('list-view', state.view === 'list');
     });
   });
-  [els.search, els.type, els.modality, els.evidence, els.year].forEach(control => control.addEventListener(control === els.search ? 'input' : 'change', applyFilters));
+  [els.search, els.type, els.modality, els.evidence, els.year].forEach(control => control.addEventListener(control === els.search ? 'input' : 'change', () => {
+    state.exactFilter = null;
+    applyFilters();
+  }));
+  els.datasetSearch?.addEventListener('input', () => { state.datasetExpanded = false; renderDatasetTable(); });
+  els.datasetToggle?.addEventListener('click', () => { state.datasetExpanded = !state.datasetExpanded; renderDatasetTable(); });
+  els.watchlistSearch?.addEventListener('input', () => { state.watchlistExpanded = false; renderWatchlist(); });
+  els.watchlistStatus?.addEventListener('change', () => { state.watchlistExpanded = false; renderWatchlist(); });
+  els.watchlistToggle?.addEventListener('click', () => { state.watchlistExpanded = !state.watchlistExpanded; renderWatchlist(); });
   els.group.addEventListener('change', renderMap);
   document.querySelector('.shelf-close').addEventListener('click', closeShelf);
   els.backdrop.addEventListener('click', closeShelf);
@@ -859,6 +1127,7 @@
     .then(data => {
       state.records = data.records || [];
       state.relations = data.relations || [];
+      state.watchlist = data.watchlist || [];
       renderResearchVisuals(state.records);
       TYPE_ORDER.forEach(type => appendOption(els.type, type, `${LABELS[type]} (${state.records.filter(record => record.record_type === type).length})`));
       Object.entries(MODALITY_GROUPS).forEach(([key, group]) => {
@@ -872,6 +1141,11 @@
         const count = state.records.filter(record => group.test(Number(record.year))).length;
         appendOption(els.year, group.key, `${group.label} (${count})`);
       });
+      [...new Set(state.watchlist.map(item => item.status).filter(Boolean))].sort().forEach(status => {
+        const count = state.watchlist.filter(item => item.status === status).length;
+        appendOption(els.watchlistStatus, status, `${titleCase(status)} (${count})`);
+      });
+      renderRegistryComparisons(data);
       applyFilters();
     })
     .catch(error => {
