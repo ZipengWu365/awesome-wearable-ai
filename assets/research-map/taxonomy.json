@@ -1,51 +1,23 @@
 {
-  "status": "editorial display taxonomy for a design handoff",
+  "status": "complete registry-native display taxonomy",
   "data_cutoff": "2026-09-02",
   "complete_registry": "../../generated/registry.json",
-  "accepted_record_count": 396,
-  "watchlist_record_count": 45,
-  "web_milestone_count": 16,
+  "coverage_manifest": "coverage.json",
+  "coverage_rule": "Every accepted and watchlist record appears exactly once. No representative-only selection is used.",
   "language": "en",
   "time_direction": "upward",
-  "line_semantics": "Classification and calendar structure only, not model inheritance or causal relationships.",
-  "supporting_resources": ["Datasets and cohorts", "Benchmarks and evaluation", "Tools, standards and governance"],
-  "orthogonal_facets": ["Signal and sensor", "Task and population", "Architecture", "Evidence"],
-  "roles": [
-    {
-      "id": "representation",
-      "label": "Representation",
-      "question": "How do we learn from body signals?",
-      "routes": [
-        {"id": "single_signal", "label": "Signal models", "web_records": [{"id": "model-bendr-2021", "label": "BENDR"}, {"id": "model-gluformer-2026", "label": "GluFormer"}]},
-        {"id": "cross_modal_language", "label": "Multimodal", "web_records": [{"id": "model-biot-2023", "label": "BIOT"}, {"id": "model-sensorfm-2026", "label": "SensorFM"}]}
-      ]
-    },
-    {
-      "id": "assessment",
-      "label": "Assessment",
-      "question": "What can we measure or predict?",
-      "routes": [
-        {"id": "digital_phenotypes", "label": "Phenotypes", "web_records": [{"id": "measure-apple-heart-study-2019", "label": "Apple Heart Study"}, {"id": "measure-longitudinal-activity-rhythm-aging-2026", "label": "Rhythm aging"}]},
-        {"id": "health_prediction", "label": "Prediction", "web_records": [{"id": "measure-covid-presymptomatic-2020", "label": "COVID detection"}, {"id": "model-insulin-resistance-wearables-2026", "label": "IR estimation"}]}
-      ]
-    },
-    {
-      "id": "decision",
-      "label": "Decision methods",
-      "question": "How do we estimate effects and design action?",
-      "routes": [
-        {"id": "causal_inference", "label": "Causal", "web_records": [{"id": "method-mrt-moderation-2018", "label": "Effect moderation"}, {"id": "method-add-malts-2024", "label": "ADD MALTS"}]},
-        {"id": "adaptive_policy", "label": "Adaptive design", "web_records": [{"id": "method-mrt-health-psychology-2015", "label": "MRT framework"}, {"id": "method-jitai-annual-review-2026", "label": "JITAI review"}]}
-      ]
-    },
-    {
-      "id": "intervention",
-      "label": "Intervention",
-      "question": "How do we deliver and test adaptive care?",
-      "routes": [
-        {"id": "behavioral_intervention", "label": "Behavior", "web_records": [{"id": "intervention-idea-weight-loss-2016", "label": "IDEA trial"}, {"id": "intervention-mybpmylife-2025", "label": "myBPmyLife"}]},
-        {"id": "physiological_control", "label": "Control", "web_records": [{"id": "intervention-home-artificial-beta-cell-2015", "label": "Home beta cell"}, {"id": "intervention-intandem-stroke-2024", "label": "InTandem"}]}
-      ]
-    }
+  "line_semantics": "Shared calendar and repository classification only, not paper-to-paper inheritance, causal relationships, or clinical benefit.",
+  "family_semantics": "Accepted records retain their native family; watchlist records use proposed_family without altering their original metadata or review status.",
+  "time_bins": "1980–2009, 2010–2014, then one bin per year from 2015 to the latest record year (at least 2026). Older records expand the first bin instead of being omitted.",
+  "archival_selection": "milestones.json retains the earlier selected examples and source warnings; it is not the full-map data source.",
+  "orthogonal_facets": ["Research family", "Signal and sensor", "Task and population", "Architecture", "Evidence", "Catalog status"],
+  "branches": [
+    {"id": "model", "label": "Models", "color": "#3979df"},
+    {"id": "measure", "label": "Measures", "color": "#17968b"},
+    {"id": "method", "label": "Methods", "color": "#9565c9"},
+    {"id": "intervention", "label": "Interventions", "color": "#d4824d"},
+    {"id": "dataset", "label": "Datasets", "color": "#568b9e"},
+    {"id": "infrastructure", "label": "Tools & standards", "color": "#9a8065"},
+    {"id": "watchlist", "label": "Watchlist", "color": "#8590a2"}
   ]
 }

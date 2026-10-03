@@ -1,0 +1,4126 @@
+{
+  "status": "complete registry coverage",
+  "source_registry": "../../generated/registry.json",
+  "source_sha256": "04b9ff537f5d11e06b8fc0c31ab4bdc78f70f47a0748a988844ce913e03f47d5",
+  "cutoff": "2026-09-02",
+  "version": "0.3.0",
+  "counts": {
+    "accepted": 396,
+    "watchlist": 45,
+    "by_type": {
+      "model": 102,
+      "measure": 35,
+      "method": 61,
+      "intervention": 40,
+      "dataset": 116,
+      "infrastructure": 42
+    }
+  },
+  "mapped_total": 441,
+  "unassigned_ids": [],
+  "omitted_ids": [],
+  "unexpected_ids": [],
+  "duplicate_ids": [],
+  "accepted_ids": [
+    "dataset-actrectut",
+    "dataset-all-of-us-fitbit",
+    "dataset-alspac-accelerometry",
+    "dataset-amigos",
+    "dataset-ascertain",
+    "dataset-bci-competition-iv-2a",
+    "dataset-bern-barcelona-eeg",
+    "dataset-bidmc-ppg-resp",
+    "dataset-biovid",
+    "dataset-but-ppg",
+    "dataset-cap-sleep",
+    "dataset-capgmyo",
+    "dataset-capnobase",
+    "dataset-capture24",
+    "dataset-case",
+    "dataset-chapman-shaoxing",
+    "dataset-chbmit",
+    "dataset-cinc2017-af",
+    "dataset-cinc2020-ecg",
+    "dataset-cinc2021-ecg",
+    "dataset-cleveland-family-sleep-study",
+    "dataset-cmu-mmac",
+    "dataset-code15",
+    "dataset-csl-hdemg",
+    "dataset-d1namo",
+    "dataset-daliac",
+    "dataset-daphnet",
+    "dataset-deap",
+    "dataset-diatrend",
+    "dataset-dreamer",
+    "dataset-dreams",
+    "dataset-dreem-open",
+    "dataset-dsads",
+    "dataset-eeg-motor-imagery",
+    "dataset-ego-exo4d",
+    "dataset-ego4d",
+    "dataset-emg2pose",
+    "dataset-emg2qwerty",
+    "dataset-extrasensory",
+    "dataset-fenland-study",
+    "dataset-georgia-ecg",
+    "dataset-hapt",
+    "dataset-harth",
+    "dataset-hchs-sol-sleep",
+    "dataset-hhar",
+    "dataset-hunt4-accelerometry",
+    "dataset-ieee-spcup2015-ppg",
+    "dataset-isruc-sleep",
+    "dataset-jackson-heart-actical",
+    "dataset-k-emocon",
+    "dataset-ku-har",
+    "dataset-lara",
+    "dataset-long-term-af",
+    "dataset-maastricht-study-activity",
+    "dataset-mahnob-hci",
+    "dataset-mass",
+    "dataset-mesa-sleep",
+    "dataset-mhealth",
+    "dataset-millennium-cohort-accelerometry",
+    "dataset-mimic-iii-waveform",
+    "dataset-mimic-iv-ecg",
+    "dataset-mimic-iv-waveform",
+    "dataset-mitbih-af",
+    "dataset-mitbih-arrhythmia",
+    "dataset-mitbih-polysomnographic",
+    "dataset-moabb",
+    "dataset-mobiact",
+    "dataset-motionsense",
+    "dataset-mros-sleep",
+    "dataset-nhanes-2003-2006-actigraph",
+    "dataset-nhanes-2011-2012-wrist",
+    "dataset-nhanes-2013-2014-wrist",
+    "dataset-ninapro",
+    "dataset-ohio-t1dm",
+    "dataset-opach-whi",
+    "dataset-openaps-data-commons",
+    "dataset-opportunity",
+    "dataset-pamap2",
+    "dataset-physionet-sleep-2018",
+    "dataset-ppg-bp",
+    "dataset-ppg-dalia",
+    "dataset-ptb-diagnostic-ecg",
+    "dataset-ptb-xl",
+    "dataset-pulsedb",
+    "dataset-raine-study-accelerometry",
+    "dataset-realdisp",
+    "dataset-realworld-har",
+    "dataset-regards-accelerometry",
+    "dataset-seed",
+    "dataset-seed-iv",
+    "dataset-shl",
+    "dataset-siena-scalp-eeg",
+    "dataset-sisfall",
+    "dataset-skoda",
+    "dataset-sleep-edf",
+    "dataset-sleep-heart-health-study",
+    "dataset-sphere-challenge",
+    "dataset-swell-kw",
+    "dataset-t1dexi",
+    "dataset-troika",
+    "dataset-tuh-eeg",
+    "dataset-tusz",
+    "dataset-ucd-sleep",
+    "dataset-uci-har",
+    "dataset-uk-biobank-accelerometer",
+    "dataset-uk-biobank-ecg",
+    "dataset-unimib-shar",
+    "dataset-up-fall",
+    "dataset-usc-had",
+    "dataset-utd-mhad",
+    "dataset-vitaldb",
+    "dataset-ward",
+    "dataset-wearable-free-living-annotated",
+    "dataset-wesad",
+    "dataset-wisconsin-sleep-cohort",
+    "dataset-wisdm",
+    "infra-actipy",
+    "infra-aeon",
+    "infra-aware",
+    "infra-beiwe",
+    "infra-biobank-accelerometer-analysis",
+    "infra-biosppy",
+    "infra-carekit",
+    "infra-consort-ai-2020",
+    "infra-decide-ai-2022",
+    "infra-fda-dht-remote-data",
+    "infra-fda-gmlp",
+    "infra-fitbit-web-api",
+    "infra-ggir",
+    "infra-health-connect",
+    "infra-healthkit",
+    "infra-heartpy",
+    "infra-hl7-fhir",
+    "infra-imdrf-samd-clinical-evaluation",
+    "infra-mindlamp",
+    "infra-mne-python",
+    "infra-moabb",
+    "infra-neurokit2",
+    "infra-nice-esf",
+    "infra-nsrr",
+    "infra-omop-cdm",
+    "infra-open-mhealth",
+    "infra-physionet",
+    "infra-pyactigraphy",
+    "infra-pyedflib",
+    "infra-pyppg",
+    "infra-radar-base",
+    "infra-researchkit",
+    "infra-samsung-health-data-sdk",
+    "infra-sktime",
+    "infra-spirit-ai-2020",
+    "infra-stard-ai-2025",
+    "infra-torchecg",
+    "infra-tsfresh",
+    "infra-v3-digital-biomarkers-2020",
+    "infra-wfdb-python",
+    "infra-who-ai-health-ethics",
+    "infra-yasa",
+    "intervention-achess-2014",
+    "intervention-adaptive-dbs-parkinson-2021",
+    "intervention-ai-coaching-cancer-survivors-2021",
+    "intervention-aid-digital-twin-coadaptation-2025",
+    "intervention-bionic-pancreas-2022",
+    "intervention-bionic-pancreas-outpatient-2014",
+    "intervention-brain-spine-interface-2023",
+    "intervention-cardiac-rehab-jitai-2023",
+    "intervention-closed-loop-depression-2021",
+    "intervention-closed-loop-vns-sci-2025",
+    "intervention-colorectal-digital-lifestyle-2025",
+    "intervention-control-iq-2019",
+    "intervention-copd-wearables-review-2023",
+    "intervention-digital-depression-anxiety-2025",
+    "intervention-ebrave-af-2022",
+    "intervention-home-artificial-beta-cell-2015",
+    "intervention-home-tdcs-mindfulness-2026",
+    "intervention-idea-weight-loss-2016",
+    "intervention-intandem-stroke-2024",
+    "intervention-knee-oa-mindset-2024",
+    "intervention-long-covid-pace-me-2026",
+    "intervention-low-back-digital-care-2023",
+    "intervention-mybpmylife-2025",
+    "intervention-open-source-aid-2022",
+    "intervention-perioperative-cancer-rpm-2025",
+    "intervention-pregnancy-closed-loop-2016",
+    "intervention-reverie-vr-sports-2025",
+    "intervention-rns-nine-year-2020",
+    "intervention-rns-pivotal-2011",
+    "intervention-sleep-auditory-closed-loop-2013",
+    "intervention-soft-robotic-apparel-parkinson-2024",
+    "intervention-telemedicine-wearables-chronic-pain-2025",
+    "intervention-trackers-umbrella-2022",
+    "intervention-trippa-2016",
+    "intervention-vr-chronic-pain-2025",
+    "intervention-wearable-hand-hygiene-feedback-2021",
+    "intervention-wearable-robot-cerebral-palsy-2024",
+    "intervention-wearable-visual-assistance-2025",
+    "intervention-wearables-blood-pressure-review-2025",
+    "intervention-wrist-wearables-umbrella-2026",
+    "measure-apple-heart-study-2019",
+    "measure-brain-health-review-2026",
+    "measure-circadian-disruption-mental-health-2024",
+    "measure-cosinorage-2024",
+    "measure-covid-passive-explainable-2021",
+    "measure-covid-physiological-signs-2020",
+    "measure-covid-presymptomatic-2020",
+    "measure-covid-sensor-symptoms-2021",
+    "measure-daily-steps-mortality-2020",
+    "measure-deepbeat-2020",
+    "measure-falls-frailty-mobility-2019",
+    "measure-fitbit-heart-study-2022",
+    "measure-frailty-fall-concern-2026",
+    "measure-inflammaging-activity-rhythm-2026",
+    "measure-long-covid-trajectories-2024",
+    "measure-longitudinal-activity-rhythm-aging-2026",
+    "measure-mood-episode-prediction-2024",
+    "measure-passive-af-smartwatch-2018",
+    "measure-pd-activity-incident-2023",
+    "measure-pd-progression-2026",
+    "measure-pd-sensor-data-value-2018",
+    "measure-pd-smartwatch-nonmotor-2024",
+    "measure-pd-virtual-exam-2022",
+    "measure-pd-weekend-warrior-2024",
+    "measure-persistent-post-covid-2025",
+    "measure-physical-activity-incident-disease-2022",
+    "measure-prediabetes-glycemic-control-2021",
+    "measure-pregnancy-biometrics-2024",
+    "measure-sleep-accelerometer-mortality-2024",
+    "measure-sleep-staging-heart-rate-2020",
+    "measure-steps-cancer-cvd-2022",
+    "measure-stress-phenotypes-2018",
+    "measure-swas-perspective-2026",
+    "measure-wearable-ecg-age-af-2026",
+    "measure-wrist-af-holter-2025",
+    "method-accelerometer-autocalibration-2014",
+    "method-add-malts-2024",
+    "method-ai-clinician-2018",
+    "method-brits-2018",
+    "method-causal-counterfactual-prediction-2020",
+    "method-causal-digital-twins-2026",
+    "method-causal-forests-2018",
+    "method-causal-transformer-2022",
+    "method-causal-transformer-ltmle-2024",
+    "method-causal-trees-2016",
+    "method-cevae-2017",
+    "method-cf-ode-2022",
+    "method-cfr-2017",
+    "method-crn-2020",
+    "method-dag-gnn-2019",
+    "method-data-efficient-ope-2016",
+    "method-deepiv-2017",
+    "method-dice-2020",
+    "method-dr-off-policy-rl-2016",
+    "method-dr-policy-evaluation-2011",
+    "method-dragonnet-2019",
+    "method-dynotears-2020",
+    "method-face-2020",
+    "method-federated-digital-health-2020",
+    "method-ganite-2018",
+    "method-generalized-random-forests-2019",
+    "method-gradient-v-learning-2020",
+    "method-gran-dag-2019",
+    "method-grud-2018",
+    "method-health-algorithm-bias-2019",
+    "method-healthcare-rl-guidelines-2019",
+    "method-heartsteps-mrt-2019",
+    "method-invariant-causal-prediction-2016",
+    "method-ivae-2020",
+    "method-jitai-annual-review-2026",
+    "method-mace-2020",
+    "method-mice-2011",
+    "method-mrt-health-psychology-2015",
+    "method-mrt-moderation-2018",
+    "method-mrt-practical-2022",
+    "method-mrt-sample-size-2018",
+    "method-mrt-statistics-medicine-2016",
+    "method-msm-2000",
+    "method-notears-2018",
+    "method-optical-hr-inaccuracy-2020",
+    "method-pcmci-2019",
+    "method-probabilistic-recourse-2020",
+    "method-pulse-ox-racial-bias-2020",
+    "method-q-learning-dtr-2005",
+    "method-rmsn-2018",
+    "method-scigan-2020",
+    "method-secure-federated-medical-2020",
+    "method-smart-design-2005",
+    "method-step-imputation-chil-2024",
+    "method-synctwin-2021",
+    "method-target-trial-big-data-2016",
+    "method-target-trial-immortal-time-2016",
+    "method-te-cde-2022",
+    "method-time-series-deconfounder-2020",
+    "method-time-varying-gp-treatment-2023",
+    "method-v-learning-2015",
+    "model-apple-wafm-2024",
+    "model-behavioral-fm-2025",
+    "model-belt2-2024",
+    "model-bendr-2021",
+    "model-biometric-contrastive-ecg-2024",
+    "model-biot-2023",
+    "model-brainomni-2025",
+    "model-brant-2023",
+    "model-cardiac-sensing-fm-2026",
+    "model-cbramod-2025",
+    "model-chattime-2025",
+    "model-chronos-2024",
+    "model-clocs-2021",
+    "model-collossl-2022",
+    "model-crosshar-2024",
+    "model-d-beta-2025",
+    "model-digital-stethoscope-fm-2024",
+    "model-ecg-diagnosis-explanation-2024",
+    "model-ecg-fm-open-2025",
+    "model-ecgfounder-2025",
+    "model-eeg-distiller-2025",
+    "model-eeg-eye-llm-2024",
+    "model-eeg-language-2025",
+    "model-eeg-language-alignment-2023",
+    "model-eeg-to-text-2022",
+    "model-esi-2024",
+    "model-frozen-lm-ecg-2024",
+    "model-full-body-haptic-network-2025",
+    "model-generic-neuromotor-interface-2025",
+    "model-geometry-aware-eeg-2023",
+    "model-glucofm-2026",
+    "model-gluformer-2026",
+    "model-goat-har-2024",
+    "model-gtt-2024",
+    "model-h-tuning-2025",
+    "model-health-llm-2024",
+    "model-hear-2024",
+    "model-heartbeit-2023",
+    "model-heartlang-2025",
+    "model-holollm-2025",
+    "model-hybrid-emg-eeg-rehab-2025",
+    "model-imugpt2-2023",
+    "model-imuzero-2025",
+    "model-insulin-resistance-wearables-2026",
+    "model-labram-2024",
+    "model-lanhar-2025",
+    "model-large-scale-wearable-biosignals-2024",
+    "model-llm4har-2025",
+    "model-luna-eeg-2025",
+    "model-melp-2025",
+    "model-merl-ecg-2024",
+    "model-mira-medical-ts-2025",
+    "model-moirai-2024",
+    "model-moment-2024",
+    "model-mopformer-2025",
+    "model-neuript-2025",
+    "model-neurogpt-2024",
+    "model-neurolm-2025",
+    "model-normwear-2026",
+    "model-one-fits-all-2023",
+    "model-onehar-2025",
+    "model-opera-2024",
+    "model-papagei-2025",
+    "model-patchtst-2023",
+    "model-personal-health-insights-agent-2026",
+    "model-personalized-physio-adaptation-2025",
+    "model-ph-llm-2025",
+    "model-physiojepa-2026",
+    "model-physiowave-2025",
+    "model-pulse-ppg-2025",
+    "model-qoq-med-2025",
+    "model-relcon-2025",
+    "model-reve-2025",
+    "model-scaling-wearable-foundation-models-2024",
+    "model-selfpab-2024",
+    "model-sempo-2025",
+    "model-senflow-2026",
+    "model-sensor2text-2024",
+    "model-sensorfm-2026",
+    "model-sensorlm-2025",
+    "model-siamquality-2024",
+    "model-sing-wearables-2025",
+    "model-sleepfm-clinical-2026",
+    "model-sleepfm-icml-2024",
+    "model-sleepgpt-2026",
+    "model-ssl-wearables-700k-days-2024",
+    "model-test-2024",
+    "model-time-ffm-2024",
+    "model-time-llm-2024",
+    "model-time-moe-2025",
+    "model-timepfn-2025",
+    "model-timer-2024",
+    "model-timer-xl-2025",
+    "model-timesfm-2024",
+    "model-timesfm3-2026",
+    "model-tnc-2021",
+    "model-ts2vec-2022",
+    "model-ttm-2024",
+    "model-unimts-2024",
+    "model-units-2024",
+    "model-watchsleepnet-2025",
+    "model-wearable-optomyography-2026"
+  ],
+  "watchlist_ids": [
+    "watch-actor-critic-personalized-mhealth-2017",
+    "watch-anyecg-2024",
+    "watch-bcg-fm-2026",
+    "watch-benchecg-xecg-2025",
+    "watch-beyond-lora-tsfm-2024",
+    "watch-biogap-ultra-2025",
+    "watch-biosignal-fingerprinting-2026",
+    "watch-brainwave-2024",
+    "watch-cardiofm-2026",
+    "watch-cet-mae-2024",
+    "watch-clef-ecg-2025",
+    "watch-cmab-llm-pa-2025",
+    "watch-conversational-health-agents-2024",
+    "watch-ecg-chat-2024",
+    "watch-ecg-jepa-2024",
+    "watch-eegformer-2024",
+    "watch-femwear-2026",
+    "watch-formed-2024",
+    "watch-gen-p-tuning-2024",
+    "watch-hargpt-2024",
+    "watch-human-symbiotic-health-intelligence-2025",
+    "watch-hybrid-ssl-ecg-fm-2024",
+    "watch-jitai-diffusion-twins-2026",
+    "watch-lag-llama-2023",
+    "watch-lora-ood-modality-2024",
+    "watch-mamba4cast-2024",
+    "watch-meit-2024",
+    "watch-moirai-moe-2024",
+    "watch-openecg-2025",
+    "watch-physiollm-2024",
+    "watch-physioomni-2025",
+    "watch-ppg-distill-2025",
+    "watch-protoecgnet-2025",
+    "watch-pulse-ecg-images-2024",
+    "watch-pulseox-fm-2026",
+    "watch-robust-actor-critic-mhealth-2018",
+    "watch-signalmc-med-2026",
+    "watch-timedit-2024",
+    "watch-timegpt1-2023",
+    "watch-timeraf-2024",
+    "watch-tsmamba-2024",
+    "watch-vital-sign-tsfm-2024",
+    "watch-vitime-2024",
+    "watch-wearable-echo-fm-2025",
+    "watch-zero-shot-trajectory-llm-2024"
+  ],
+  "branches": [
+    {
+      "id": "model",
+      "label": "Models",
+      "color": "#3979df"
+    },
+    {
+      "id": "measure",
+      "label": "Measures",
+      "color": "#17968b"
+    },
+    {
+      "id": "method",
+      "label": "Methods",
+      "color": "#9565c9"
+    },
+    {
+      "id": "intervention",
+      "label": "Interventions",
+      "color": "#d4824d"
+    },
+    {
+      "id": "dataset",
+      "label": "Datasets",
+      "color": "#568b9e"
+    },
+    {
+      "id": "infrastructure",
+      "label": "Tools & standards",
+      "color": "#9a8065"
+    },
+    {
+      "id": "watchlist",
+      "label": "Watchlist",
+      "color": "#8590a2"
+    }
+  ],
+  "bins": [
+    {
+      "id": "pre2010",
+      "label": "1980–2009",
+      "start": 1980,
+      "end": 2009
+    },
+    {
+      "id": "2010-2014",
+      "label": "2010–2014",
+      "start": 2010,
+      "end": 2014
+    },
+    {
+      "id": "2015",
+      "label": "2015",
+      "start": 2015,
+      "end": 2015
+    },
+    {
+      "id": "2016",
+      "label": "2016",
+      "start": 2016,
+      "end": 2016
+    },
+    {
+      "id": "2017",
+      "label": "2017",
+      "start": 2017,
+      "end": 2017
+    },
+    {
+      "id": "2018",
+      "label": "2018",
+      "start": 2018,
+      "end": 2018
+    },
+    {
+      "id": "2019",
+      "label": "2019",
+      "start": 2019,
+      "end": 2019
+    },
+    {
+      "id": "2020",
+      "label": "2020",
+      "start": 2020,
+      "end": 2020
+    },
+    {
+      "id": "2021",
+      "label": "2021",
+      "start": 2021,
+      "end": 2021
+    },
+    {
+      "id": "2022",
+      "label": "2022",
+      "start": 2022,
+      "end": 2022
+    },
+    {
+      "id": "2023",
+      "label": "2023",
+      "start": 2023,
+      "end": 2023
+    },
+    {
+      "id": "2024",
+      "label": "2024",
+      "start": 2024,
+      "end": 2024
+    },
+    {
+      "id": "2025",
+      "label": "2025",
+      "start": 2025,
+      "end": 2025
+    },
+    {
+      "id": "2026",
+      "label": "2026",
+      "start": 2026,
+      "end": 2026
+    }
+  ],
+  "records": [
+    {
+      "id": "dataset-actrectut",
+      "branch": "dataset",
+      "year": 2010,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-all-of-us-fitbit",
+      "branch": "dataset",
+      "year": 2019,
+      "bin": "2019",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-alspac-accelerometry",
+      "branch": "dataset",
+      "year": 2003,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-amigos",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ascertain",
+      "branch": "dataset",
+      "year": 2016,
+      "bin": "2016",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-bci-competition-iv-2a",
+      "branch": "dataset",
+      "year": 2008,
+      "bin": "pre2010",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-bern-barcelona-eeg",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-bidmc-ppg-resp",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-biovid",
+      "branch": "dataset",
+      "year": 2013,
+      "bin": "2010-2014",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-but-ppg",
+      "branch": "dataset",
+      "year": 2021,
+      "bin": "2021",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-cap-sleep",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-capgmyo",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "emg-neuromotor-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-capnobase",
+      "branch": "dataset",
+      "year": 2010,
+      "bin": "2010-2014",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-capture24",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "free-living-human-sensing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-case",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-chapman-shaoxing",
+      "branch": "dataset",
+      "year": 2020,
+      "bin": "2020",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-chbmit",
+      "branch": "dataset",
+      "year": 2010,
+      "bin": "2010-2014",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-cinc2017-af",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-cinc2020-ecg",
+      "branch": "dataset",
+      "year": 2020,
+      "bin": "2020",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-cinc2021-ecg",
+      "branch": "dataset",
+      "year": 2021,
+      "bin": "2021",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-cleveland-family-sleep-study",
+      "branch": "dataset",
+      "year": 1990,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-cmu-mmac",
+      "branch": "dataset",
+      "year": 2009,
+      "bin": "pre2010",
+      "family": "egocentric-multimodal-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-code15",
+      "branch": "dataset",
+      "year": 2021,
+      "bin": "2021",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-csl-hdemg",
+      "branch": "dataset",
+      "year": 2015,
+      "bin": "2015",
+      "family": "emg-neuromotor-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-d1namo",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "metabolic-cgm-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-daliac",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-daphnet",
+      "branch": "dataset",
+      "year": 2009,
+      "bin": "pre2010",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-deap",
+      "branch": "dataset",
+      "year": 2011,
+      "bin": "2010-2014",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-diatrend",
+      "branch": "dataset",
+      "year": 2022,
+      "bin": "2022",
+      "family": "metabolic-cgm-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-dreamer",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-dreams",
+      "branch": "dataset",
+      "year": 2008,
+      "bin": "pre2010",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-dreem-open",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-dsads",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-eeg-motor-imagery",
+      "branch": "dataset",
+      "year": 2009,
+      "bin": "pre2010",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ego-exo4d",
+      "branch": "dataset",
+      "year": 2024,
+      "bin": "2024",
+      "family": "egocentric-multimodal-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ego4d",
+      "branch": "dataset",
+      "year": 2022,
+      "bin": "2022",
+      "family": "egocentric-multimodal-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-emg2pose",
+      "branch": "dataset",
+      "year": 2024,
+      "bin": "2024",
+      "family": "emg-neuromotor-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-emg2qwerty",
+      "branch": "dataset",
+      "year": 2024,
+      "bin": "2024",
+      "family": "emg-neuromotor-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-extrasensory",
+      "branch": "dataset",
+      "year": 2016,
+      "bin": "2016",
+      "family": "free-living-human-sensing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-fenland-study",
+      "branch": "dataset",
+      "year": 2005,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-georgia-ecg",
+      "branch": "dataset",
+      "year": 2020,
+      "bin": "2020",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-hapt",
+      "branch": "dataset",
+      "year": 2013,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-harth",
+      "branch": "dataset",
+      "year": 2021,
+      "bin": "2021",
+      "family": "free-living-human-sensing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-hchs-sol-sleep",
+      "branch": "dataset",
+      "year": 2010,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-hhar",
+      "branch": "dataset",
+      "year": 2015,
+      "bin": "2015",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-hunt4-accelerometry",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ieee-spcup2015-ppg",
+      "branch": "dataset",
+      "year": 2015,
+      "bin": "2015",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-isruc-sleep",
+      "branch": "dataset",
+      "year": 2016,
+      "bin": "2016",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-jackson-heart-actical",
+      "branch": "dataset",
+      "year": 2000,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-k-emocon",
+      "branch": "dataset",
+      "year": 2020,
+      "bin": "2020",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ku-har",
+      "branch": "dataset",
+      "year": 2021,
+      "bin": "2021",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-lara",
+      "branch": "dataset",
+      "year": 2019,
+      "bin": "2019",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-long-term-af",
+      "branch": "dataset",
+      "year": 2008,
+      "bin": "pre2010",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-maastricht-study-activity",
+      "branch": "dataset",
+      "year": 2010,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mahnob-hci",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mass",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mesa-sleep",
+      "branch": "dataset",
+      "year": 2010,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mhealth",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-millennium-cohort-accelerometry",
+      "branch": "dataset",
+      "year": 2015,
+      "bin": "2015",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mimic-iii-waveform",
+      "branch": "dataset",
+      "year": 2016,
+      "bin": "2016",
+      "family": "multimodal-clinical-waveforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mimic-iv-ecg",
+      "branch": "dataset",
+      "year": 2023,
+      "bin": "2023",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mimic-iv-waveform",
+      "branch": "dataset",
+      "year": 2022,
+      "bin": "2022",
+      "family": "multimodal-clinical-waveforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mitbih-af",
+      "branch": "dataset",
+      "year": 1983,
+      "bin": "pre2010",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mitbih-arrhythmia",
+      "branch": "dataset",
+      "year": 1980,
+      "bin": "pre2010",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mitbih-polysomnographic",
+      "branch": "dataset",
+      "year": 2000,
+      "bin": "pre2010",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-moabb",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mobiact",
+      "branch": "dataset",
+      "year": 2016,
+      "bin": "2016",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-motionsense",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-mros-sleep",
+      "branch": "dataset",
+      "year": 2003,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-nhanes-2003-2006-actigraph",
+      "branch": "dataset",
+      "year": 2003,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-nhanes-2011-2012-wrist",
+      "branch": "dataset",
+      "year": 2011,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-nhanes-2013-2014-wrist",
+      "branch": "dataset",
+      "year": 2013,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ninapro",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "emg-neuromotor-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ohio-t1dm",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "metabolic-cgm-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-opach-whi",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-openaps-data-commons",
+      "branch": "dataset",
+      "year": 2016,
+      "bin": "2016",
+      "family": "metabolic-cgm-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-opportunity",
+      "branch": "dataset",
+      "year": 2010,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-pamap2",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-physionet-sleep-2018",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ppg-bp",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ppg-dalia",
+      "branch": "dataset",
+      "year": 2019,
+      "bin": "2019",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ptb-diagnostic-ecg",
+      "branch": "dataset",
+      "year": 2004,
+      "bin": "pre2010",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ptb-xl",
+      "branch": "dataset",
+      "year": 2020,
+      "bin": "2020",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-pulsedb",
+      "branch": "dataset",
+      "year": 2022,
+      "bin": "2022",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-raine-study-accelerometry",
+      "branch": "dataset",
+      "year": 2009,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-realdisp",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-realworld-har",
+      "branch": "dataset",
+      "year": 2016,
+      "bin": "2016",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-regards-accelerometry",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-seed",
+      "branch": "dataset",
+      "year": 2015,
+      "bin": "2015",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-seed-iv",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-shl",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "free-living-human-sensing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-siena-scalp-eeg",
+      "branch": "dataset",
+      "year": 2020,
+      "bin": "2020",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-sisfall",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-skoda",
+      "branch": "dataset",
+      "year": 2007,
+      "bin": "pre2010",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-sleep-edf",
+      "branch": "dataset",
+      "year": 2013,
+      "bin": "2010-2014",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-sleep-heart-health-study",
+      "branch": "dataset",
+      "year": 1995,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-sphere-challenge",
+      "branch": "dataset",
+      "year": 2016,
+      "bin": "2016",
+      "family": "free-living-human-sensing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-swell-kw",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-t1dexi",
+      "branch": "dataset",
+      "year": 2022,
+      "bin": "2022",
+      "family": "metabolic-cgm-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-troika",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "ppg-cardiac-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-tuh-eeg",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-tusz",
+      "branch": "dataset",
+      "year": 2015,
+      "bin": "2015",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ucd-sleep",
+      "branch": "dataset",
+      "year": 2000,
+      "bin": "pre2010",
+      "family": "eeg-sleep-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-uci-har",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-uk-biobank-accelerometer",
+      "branch": "dataset",
+      "year": 2013,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-uk-biobank-ecg",
+      "branch": "dataset",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-unimib-shar",
+      "branch": "dataset",
+      "year": 2017,
+      "bin": "2017",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-up-fall",
+      "branch": "dataset",
+      "year": 2019,
+      "bin": "2019",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-usc-had",
+      "branch": "dataset",
+      "year": 2012,
+      "bin": "2010-2014",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-utd-mhad",
+      "branch": "dataset",
+      "year": 2015,
+      "bin": "2015",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-vitaldb",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "multimodal-clinical-waveforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-ward",
+      "branch": "dataset",
+      "year": 2009,
+      "bin": "pre2010",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-wearable-free-living-annotated",
+      "branch": "dataset",
+      "year": 2024,
+      "bin": "2024",
+      "family": "free-living-human-sensing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-wesad",
+      "branch": "dataset",
+      "year": 2018,
+      "bin": "2018",
+      "family": "affect-stress-datasets",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-wisconsin-sleep-cohort",
+      "branch": "dataset",
+      "year": 1988,
+      "bin": "pre2010",
+      "family": "population-scale-cohorts",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "dataset-wisdm",
+      "branch": "dataset",
+      "year": 2019,
+      "bin": "2019",
+      "family": "har-benchmarks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-actipy",
+      "branch": "infrastructure",
+      "year": 2021,
+      "bin": "2021",
+      "family": "wearable-signal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-aeon",
+      "branch": "infrastructure",
+      "year": 2023,
+      "bin": "2023",
+      "family": "time-series-tooling",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-aware",
+      "branch": "infrastructure",
+      "year": 2015,
+      "bin": "2015",
+      "family": "mobile-health-platforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-beiwe",
+      "branch": "infrastructure",
+      "year": 2016,
+      "bin": "2016",
+      "family": "mobile-health-platforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-biobank-accelerometer-analysis",
+      "branch": "infrastructure",
+      "year": 2019,
+      "bin": "2019",
+      "family": "wearable-signal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-biosppy",
+      "branch": "infrastructure",
+      "year": 2015,
+      "bin": "2015",
+      "family": "biosignal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-carekit",
+      "branch": "infrastructure",
+      "year": 2016,
+      "bin": "2016",
+      "family": "mobile-health-platforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-consort-ai-2020",
+      "branch": "infrastructure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "reporting-guidelines",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-decide-ai-2022",
+      "branch": "infrastructure",
+      "year": 2022,
+      "bin": "2022",
+      "family": "reporting-guidelines",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-fda-dht-remote-data",
+      "branch": "infrastructure",
+      "year": 2023,
+      "bin": "2023",
+      "family": "regulatory-guidance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-fda-gmlp",
+      "branch": "infrastructure",
+      "year": 2021,
+      "bin": "2021",
+      "family": "regulatory-guidance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-fitbit-web-api",
+      "branch": "infrastructure",
+      "year": 2015,
+      "bin": "2015",
+      "family": "commercial-platform-apis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-ggir",
+      "branch": "infrastructure",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "wearable-signal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-health-connect",
+      "branch": "infrastructure",
+      "year": 2022,
+      "bin": "2022",
+      "family": "commercial-platform-apis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-healthkit",
+      "branch": "infrastructure",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "commercial-platform-apis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-heartpy",
+      "branch": "infrastructure",
+      "year": 2019,
+      "bin": "2019",
+      "family": "biosignal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-hl7-fhir",
+      "branch": "infrastructure",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "interoperability",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-imdrf-samd-clinical-evaluation",
+      "branch": "infrastructure",
+      "year": 2017,
+      "bin": "2017",
+      "family": "regulatory-guidance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-mindlamp",
+      "branch": "infrastructure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "mobile-health-platforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-mne-python",
+      "branch": "infrastructure",
+      "year": 2013,
+      "bin": "2010-2014",
+      "family": "biosignal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-moabb",
+      "branch": "infrastructure",
+      "year": 2018,
+      "bin": "2018",
+      "family": "benchmarking-and-evaluation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-neurokit2",
+      "branch": "infrastructure",
+      "year": 2021,
+      "bin": "2021",
+      "family": "biosignal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-nice-esf",
+      "branch": "infrastructure",
+      "year": 2022,
+      "bin": "2022",
+      "family": "regulatory-guidance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-nsrr",
+      "branch": "infrastructure",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "data-platforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-omop-cdm",
+      "branch": "infrastructure",
+      "year": 2009,
+      "bin": "pre2010",
+      "family": "interoperability",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-open-mhealth",
+      "branch": "infrastructure",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "interoperability",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-physionet",
+      "branch": "infrastructure",
+      "year": 2000,
+      "bin": "pre2010",
+      "family": "data-platforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-pyactigraphy",
+      "branch": "infrastructure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "sleep-analysis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-pyedflib",
+      "branch": "infrastructure",
+      "year": 2015,
+      "bin": "2015",
+      "family": "biosignal-io",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-pyppg",
+      "branch": "infrastructure",
+      "year": 2023,
+      "bin": "2023",
+      "family": "biosignal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-radar-base",
+      "branch": "infrastructure",
+      "year": 2019,
+      "bin": "2019",
+      "family": "mobile-health-platforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-researchkit",
+      "branch": "infrastructure",
+      "year": 2015,
+      "bin": "2015",
+      "family": "mobile-health-platforms",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-samsung-health-data-sdk",
+      "branch": "infrastructure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "commercial-platform-apis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-sktime",
+      "branch": "infrastructure",
+      "year": 2019,
+      "bin": "2019",
+      "family": "time-series-tooling",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-spirit-ai-2020",
+      "branch": "infrastructure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "reporting-guidelines",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-stard-ai-2025",
+      "branch": "infrastructure",
+      "year": 2025,
+      "bin": "2025",
+      "family": "reporting-guidelines",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-torchecg",
+      "branch": "infrastructure",
+      "year": 2022,
+      "bin": "2022",
+      "family": "biosignal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-tsfresh",
+      "branch": "infrastructure",
+      "year": 2018,
+      "bin": "2018",
+      "family": "time-series-feature-engineering",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-v3-digital-biomarkers-2020",
+      "branch": "infrastructure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "digital-measure-evaluation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-wfdb-python",
+      "branch": "infrastructure",
+      "year": 2019,
+      "bin": "2019",
+      "family": "biosignal-processing",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-who-ai-health-ethics",
+      "branch": "infrastructure",
+      "year": 2021,
+      "bin": "2021",
+      "family": "ethics-and-governance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "infra-yasa",
+      "branch": "infrastructure",
+      "year": 2021,
+      "bin": "2021",
+      "family": "sleep-analysis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-achess-2014",
+      "branch": "intervention",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "jitai-behavioral-interventions",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-adaptive-dbs-parkinson-2021",
+      "branch": "intervention",
+      "year": 2021,
+      "bin": "2021",
+      "family": "responsive-neurostimulation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-ai-coaching-cancer-survivors-2021",
+      "branch": "intervention",
+      "year": 2021,
+      "bin": "2021",
+      "family": "ai-coaching-and-adaptive-messaging",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-aid-digital-twin-coadaptation-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "automated-insulin-delivery",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-bionic-pancreas-2022",
+      "branch": "intervention",
+      "year": 2022,
+      "bin": "2022",
+      "family": "automated-insulin-delivery",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-bionic-pancreas-outpatient-2014",
+      "branch": "intervention",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "automated-insulin-delivery",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-brain-spine-interface-2023",
+      "branch": "intervention",
+      "year": 2023,
+      "bin": "2023",
+      "family": "adaptive-neurorehabilitation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-cardiac-rehab-jitai-2023",
+      "branch": "intervention",
+      "year": 2023,
+      "bin": "2023",
+      "family": "jitai-behavioral-interventions",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-closed-loop-depression-2021",
+      "branch": "intervention",
+      "year": 2021,
+      "bin": "2021",
+      "family": "responsive-neurostimulation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-closed-loop-vns-sci-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "responsive-neurostimulation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-colorectal-digital-lifestyle-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "remote-monitoring-and-clinical-escalation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-control-iq-2019",
+      "branch": "intervention",
+      "year": 2019,
+      "bin": "2019",
+      "family": "automated-insulin-delivery",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-copd-wearables-review-2023",
+      "branch": "intervention",
+      "year": 2023,
+      "bin": "2023",
+      "family": "wearable-feedback-evidence-synthesis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-digital-depression-anxiety-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "jitai-behavioral-interventions",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-ebrave-af-2022",
+      "branch": "intervention",
+      "year": 2022,
+      "bin": "2022",
+      "family": "digital-screening-and-clinical-escalation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-home-artificial-beta-cell-2015",
+      "branch": "intervention",
+      "year": 2015,
+      "bin": "2015",
+      "family": "automated-insulin-delivery",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-home-tdcs-mindfulness-2026",
+      "branch": "intervention",
+      "year": 2026,
+      "bin": "2026",
+      "family": "closed-loop-and-home-neuromodulation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-idea-weight-loss-2016",
+      "branch": "intervention",
+      "year": 2016,
+      "bin": "2016",
+      "family": "wearable-feedback-randomized-trials",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-intandem-stroke-2024",
+      "branch": "intervention",
+      "year": 2024,
+      "bin": "2024",
+      "family": "adaptive-rehabilitation-and-exercise",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-knee-oa-mindset-2024",
+      "branch": "intervention",
+      "year": 2024,
+      "bin": "2024",
+      "family": "digital-rehabilitation-and-pain",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-long-covid-pace-me-2026",
+      "branch": "intervention",
+      "year": 2026,
+      "bin": "2026",
+      "family": "jitai-behavioral-interventions",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-low-back-digital-care-2023",
+      "branch": "intervention",
+      "year": 2023,
+      "bin": "2023",
+      "family": "digital-rehabilitation-and-pain",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-mybpmylife-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "jitai-behavioral-interventions",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-open-source-aid-2022",
+      "branch": "intervention",
+      "year": 2022,
+      "bin": "2022",
+      "family": "automated-insulin-delivery",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-perioperative-cancer-rpm-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "remote-monitoring-and-clinical-escalation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-pregnancy-closed-loop-2016",
+      "branch": "intervention",
+      "year": 2016,
+      "bin": "2016",
+      "family": "automated-insulin-delivery",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-reverie-vr-sports-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "adaptive-rehabilitation-and-exercise",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-rns-nine-year-2020",
+      "branch": "intervention",
+      "year": 2020,
+      "bin": "2020",
+      "family": "responsive-neurostimulation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-rns-pivotal-2011",
+      "branch": "intervention",
+      "year": 2011,
+      "bin": "2010-2014",
+      "family": "responsive-neurostimulation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-sleep-auditory-closed-loop-2013",
+      "branch": "intervention",
+      "year": 2013,
+      "bin": "2010-2014",
+      "family": "closed-loop-sleep-interventions",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-soft-robotic-apparel-parkinson-2024",
+      "branch": "intervention",
+      "year": 2024,
+      "bin": "2024",
+      "family": "wearable-robotics-and-assistance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-telemedicine-wearables-chronic-pain-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "digital-rehabilitation-and-pain",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-trackers-umbrella-2022",
+      "branch": "intervention",
+      "year": 2022,
+      "bin": "2022",
+      "family": "wearable-feedback-evidence-synthesis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-trippa-2016",
+      "branch": "intervention",
+      "year": 2016,
+      "bin": "2016",
+      "family": "wearable-feedback-randomized-trials",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-vr-chronic-pain-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "digital-rehabilitation-and-pain",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-wearable-hand-hygiene-feedback-2021",
+      "branch": "intervention",
+      "year": 2021,
+      "bin": "2021",
+      "family": "workplace-behavior-feedback",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-wearable-robot-cerebral-palsy-2024",
+      "branch": "intervention",
+      "year": 2024,
+      "bin": "2024",
+      "family": "wearable-robotics-and-assistance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-wearable-visual-assistance-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "assistive-wearable-systems",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-wearables-blood-pressure-review-2025",
+      "branch": "intervention",
+      "year": 2025,
+      "bin": "2025",
+      "family": "wearable-feedback-evidence-synthesis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "intervention-wrist-wearables-umbrella-2026",
+      "branch": "intervention",
+      "year": 2026,
+      "bin": "2026",
+      "family": "wearable-feedback-evidence-synthesis",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-apple-heart-study-2019",
+      "branch": "measure",
+      "year": 2019,
+      "bin": "2019",
+      "family": "cardiac-rhythm-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-brain-health-review-2026",
+      "branch": "measure",
+      "year": 2026,
+      "bin": "2026",
+      "family": "digital-measure-frameworks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-circadian-disruption-mental-health-2024",
+      "branch": "measure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "mental-health-and-stress-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-cosinorage-2024",
+      "branch": "measure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "aging-and-circadian-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-covid-passive-explainable-2021",
+      "branch": "measure",
+      "year": 2021,
+      "bin": "2021",
+      "family": "infection-and-recovery-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-covid-physiological-signs-2020",
+      "branch": "measure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "infection-and-recovery-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-covid-presymptomatic-2020",
+      "branch": "measure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "infection-and-recovery-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-covid-sensor-symptoms-2021",
+      "branch": "measure",
+      "year": 2021,
+      "bin": "2021",
+      "family": "infection-and-recovery-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-daily-steps-mortality-2020",
+      "branch": "measure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "activity-and-population-risk-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-deepbeat-2020",
+      "branch": "measure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "cardiac-rhythm-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-falls-frailty-mobility-2019",
+      "branch": "measure",
+      "year": 2019,
+      "bin": "2019",
+      "family": "frailty-and-mobility-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-fitbit-heart-study-2022",
+      "branch": "measure",
+      "year": 2022,
+      "bin": "2022",
+      "family": "cardiac-rhythm-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-frailty-fall-concern-2026",
+      "branch": "measure",
+      "year": 2026,
+      "bin": "2026",
+      "family": "frailty-and-mobility-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-inflammaging-activity-rhythm-2026",
+      "branch": "measure",
+      "year": 2026,
+      "bin": "2026",
+      "family": "aging-and-circadian-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-long-covid-trajectories-2024",
+      "branch": "measure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "infection-and-recovery-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-longitudinal-activity-rhythm-aging-2026",
+      "branch": "measure",
+      "year": 2026,
+      "bin": "2026",
+      "family": "aging-and-circadian-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-mood-episode-prediction-2024",
+      "branch": "measure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "mental-health-and-stress-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-passive-af-smartwatch-2018",
+      "branch": "measure",
+      "year": 2018,
+      "bin": "2018",
+      "family": "cardiac-rhythm-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-pd-activity-incident-2023",
+      "branch": "measure",
+      "year": 2023,
+      "bin": "2023",
+      "family": "neurological-and-motor-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-pd-progression-2026",
+      "branch": "measure",
+      "year": 2026,
+      "bin": "2026",
+      "family": "neurological-and-motor-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-pd-sensor-data-value-2018",
+      "branch": "measure",
+      "year": 2018,
+      "bin": "2018",
+      "family": "neurological-and-motor-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-pd-smartwatch-nonmotor-2024",
+      "branch": "measure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "neurological-and-motor-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-pd-virtual-exam-2022",
+      "branch": "measure",
+      "year": 2022,
+      "bin": "2022",
+      "family": "neurological-and-motor-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-pd-weekend-warrior-2024",
+      "branch": "measure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "neurological-and-motor-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-persistent-post-covid-2025",
+      "branch": "measure",
+      "year": 2025,
+      "bin": "2025",
+      "family": "infection-and-recovery-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-physical-activity-incident-disease-2022",
+      "branch": "measure",
+      "year": 2022,
+      "bin": "2022",
+      "family": "activity-and-population-risk-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-prediabetes-glycemic-control-2021",
+      "branch": "measure",
+      "year": 2021,
+      "bin": "2021",
+      "family": "metabolic-and-glucose-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-pregnancy-biometrics-2024",
+      "branch": "measure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "pregnancy-and-reproductive-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-sleep-accelerometer-mortality-2024",
+      "branch": "measure",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sleep-and-circadian-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-sleep-staging-heart-rate-2020",
+      "branch": "measure",
+      "year": 2020,
+      "bin": "2020",
+      "family": "sleep-and-circadian-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-steps-cancer-cvd-2022",
+      "branch": "measure",
+      "year": 2022,
+      "bin": "2022",
+      "family": "activity-and-population-risk-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-stress-phenotypes-2018",
+      "branch": "measure",
+      "year": 2018,
+      "bin": "2018",
+      "family": "mental-health-and-stress-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-swas-perspective-2026",
+      "branch": "measure",
+      "year": 2026,
+      "bin": "2026",
+      "family": "digital-measure-frameworks",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-wearable-ecg-age-af-2026",
+      "branch": "measure",
+      "year": 2026,
+      "bin": "2026",
+      "family": "cardiac-risk-and-aging-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "measure-wrist-af-holter-2025",
+      "branch": "measure",
+      "year": 2025,
+      "bin": "2025",
+      "family": "cardiac-rhythm-measures",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-accelerometer-autocalibration-2014",
+      "branch": "method",
+      "year": 2014,
+      "bin": "2010-2014",
+      "family": "missingness-calibration-and-sensor-bias",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-add-malts-2024",
+      "branch": "method",
+      "year": 2024,
+      "bin": "2024",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-ai-clinician-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "adaptive-treatment-and-policy-learning",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-brits-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "missingness-calibration-and-sensor-bias",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-causal-counterfactual-prediction-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-causal-digital-twins-2026",
+      "branch": "method",
+      "year": 2026,
+      "bin": "2026",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-causal-forests-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-causal-transformer-2022",
+      "branch": "method",
+      "year": 2022,
+      "bin": "2022",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-causal-transformer-ltmle-2024",
+      "branch": "method",
+      "year": 2024,
+      "bin": "2024",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-causal-trees-2016",
+      "branch": "method",
+      "year": 2016,
+      "bin": "2016",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-cevae-2017",
+      "branch": "method",
+      "year": 2017,
+      "bin": "2017",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-cf-ode-2022",
+      "branch": "method",
+      "year": 2022,
+      "bin": "2022",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-cfr-2017",
+      "branch": "method",
+      "year": 2017,
+      "bin": "2017",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-crn-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-dag-gnn-2019",
+      "branch": "method",
+      "year": 2019,
+      "bin": "2019",
+      "family": "causal-discovery-and-invariance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-data-efficient-ope-2016",
+      "branch": "method",
+      "year": 2016,
+      "bin": "2016",
+      "family": "off-policy-evaluation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-deepiv-2017",
+      "branch": "method",
+      "year": 2017,
+      "bin": "2017",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-dice-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "counterfactual-explanations-and-recourse",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-dr-off-policy-rl-2016",
+      "branch": "method",
+      "year": 2016,
+      "bin": "2016",
+      "family": "off-policy-evaluation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-dr-policy-evaluation-2011",
+      "branch": "method",
+      "year": 2011,
+      "bin": "2010-2014",
+      "family": "off-policy-evaluation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-dragonnet-2019",
+      "branch": "method",
+      "year": 2019,
+      "bin": "2019",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-dynotears-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "causal-discovery-and-invariance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-face-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "counterfactual-explanations-and-recourse",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-federated-digital-health-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "privacy-fairness-and-transportability",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-ganite-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-generalized-random-forests-2019",
+      "branch": "method",
+      "year": 2019,
+      "bin": "2019",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-gradient-v-learning-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "adaptive-treatment-and-policy-learning",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-gran-dag-2019",
+      "branch": "method",
+      "year": 2019,
+      "bin": "2019",
+      "family": "causal-discovery-and-invariance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-grud-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "missingness-calibration-and-sensor-bias",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-health-algorithm-bias-2019",
+      "branch": "method",
+      "year": 2019,
+      "bin": "2019",
+      "family": "privacy-fairness-and-transportability",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-healthcare-rl-guidelines-2019",
+      "branch": "method",
+      "year": 2019,
+      "bin": "2019",
+      "family": "off-policy-evaluation",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-heartsteps-mrt-2019",
+      "branch": "method",
+      "year": 2019,
+      "bin": "2019",
+      "family": "micro-randomized-trial-methods",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-invariant-causal-prediction-2016",
+      "branch": "method",
+      "year": 2016,
+      "bin": "2016",
+      "family": "causal-discovery-and-invariance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-ivae-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "causal-discovery-and-invariance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-jitai-annual-review-2026",
+      "branch": "method",
+      "year": 2026,
+      "bin": "2026",
+      "family": "micro-randomized-trial-methods",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-mace-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "counterfactual-explanations-and-recourse",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-mice-2011",
+      "branch": "method",
+      "year": 2011,
+      "bin": "2010-2014",
+      "family": "missingness-calibration-and-sensor-bias",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-mrt-health-psychology-2015",
+      "branch": "method",
+      "year": 2015,
+      "bin": "2015",
+      "family": "micro-randomized-trial-methods",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-mrt-moderation-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "micro-randomized-trial-methods",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-mrt-practical-2022",
+      "branch": "method",
+      "year": 2022,
+      "bin": "2022",
+      "family": "micro-randomized-trial-methods",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-mrt-sample-size-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "micro-randomized-trial-methods",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-mrt-statistics-medicine-2016",
+      "branch": "method",
+      "year": 2016,
+      "bin": "2016",
+      "family": "micro-randomized-trial-methods",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-msm-2000",
+      "branch": "method",
+      "year": 2000,
+      "bin": "pre2010",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-notears-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "causal-discovery-and-invariance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-optical-hr-inaccuracy-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "missingness-calibration-and-sensor-bias",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-pcmci-2019",
+      "branch": "method",
+      "year": 2019,
+      "bin": "2019",
+      "family": "causal-discovery-and-invariance",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-probabilistic-recourse-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "counterfactual-explanations-and-recourse",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-pulse-ox-racial-bias-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "privacy-fairness-and-transportability",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-q-learning-dtr-2005",
+      "branch": "method",
+      "year": 2005,
+      "bin": "pre2010",
+      "family": "adaptive-treatment-and-policy-learning",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-rmsn-2018",
+      "branch": "method",
+      "year": 2018,
+      "bin": "2018",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-scigan-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-secure-federated-medical-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "privacy-fairness-and-transportability",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-smart-design-2005",
+      "branch": "method",
+      "year": 2005,
+      "bin": "pre2010",
+      "family": "adaptive-treatment-and-policy-learning",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-step-imputation-chil-2024",
+      "branch": "method",
+      "year": 2024,
+      "bin": "2024",
+      "family": "missingness-calibration-and-sensor-bias",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-synctwin-2021",
+      "branch": "method",
+      "year": 2021,
+      "bin": "2021",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-target-trial-big-data-2016",
+      "branch": "method",
+      "year": 2016,
+      "bin": "2016",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-target-trial-immortal-time-2016",
+      "branch": "method",
+      "year": 2016,
+      "bin": "2016",
+      "family": "causal-identification-foundations",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-te-cde-2022",
+      "branch": "method",
+      "year": 2022,
+      "bin": "2022",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-time-series-deconfounder-2020",
+      "branch": "method",
+      "year": 2020,
+      "bin": "2020",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-time-varying-gp-treatment-2023",
+      "branch": "method",
+      "year": 2023,
+      "bin": "2023",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "method-v-learning-2015",
+      "branch": "method",
+      "year": 2015,
+      "bin": "2015",
+      "family": "adaptive-treatment-and-policy-learning",
+      "catalog_status": "accepted",
+      "source_issue": "Title and DOI mismatch: DOI resolves to Zhao et al. dynamic-treatment-regime methods, not mHealth V-learning; link withheld.",
+      "link_withheld": true
+    },
+    {
+      "id": "model-apple-wafm-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-behavioral-fm-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-belt2-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-bendr-2021",
+      "branch": "model",
+      "year": 2021,
+      "bin": "2021",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-biometric-contrastive-ecg-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-biot-2023",
+      "branch": "model",
+      "year": 2023,
+      "bin": "2023",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-brainomni-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-brant-2023",
+      "branch": "model",
+      "year": 2023,
+      "bin": "2023",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-cardiac-sensing-fm-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-cbramod-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-chattime-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-chronos-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-clocs-2021",
+      "branch": "model",
+      "year": 2021,
+      "bin": "2021",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-collossl-2022",
+      "branch": "model",
+      "year": 2022,
+      "bin": "2022",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-crosshar-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-d-beta-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-digital-stethoscope-fm-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-ecg-diagnosis-explanation-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-ecg-fm-open-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-ecgfounder-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-eeg-distiller-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-eeg-eye-llm-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-eeg-language-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-eeg-language-alignment-2023",
+      "branch": "model",
+      "year": 2023,
+      "bin": "2023",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-eeg-to-text-2022",
+      "branch": "model",
+      "year": 2022,
+      "bin": "2022",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted",
+      "source_issue": "Primary URL points to an unrelated video-deblurring paper; not re-linked.",
+      "link_withheld": true
+    },
+    {
+      "id": "model-esi-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-frozen-lm-ecg-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-full-body-haptic-network-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-generic-neuromotor-interface-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "emg-neuromotor-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-geometry-aware-eeg-2023",
+      "branch": "model",
+      "year": 2023,
+      "bin": "2023",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-glucofm-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "cgm-metabolic-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-gluformer-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "cgm-metabolic-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-goat-har-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-gtt-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-h-tuning-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-health-llm-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-hear-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "respiratory-acoustic-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-heartbeit-2023",
+      "branch": "model",
+      "year": 2023,
+      "bin": "2023",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-heartlang-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-holollm-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-hybrid-emg-eeg-rehab-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "emg-neuromotor-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-imugpt2-2023",
+      "branch": "model",
+      "year": 2023,
+      "bin": "2023",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-imuzero-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-insulin-resistance-wearables-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-labram-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-lanhar-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-large-scale-wearable-biosignals-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-llm4har-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-luna-eeg-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-melp-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-merl-ecg-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-mira-medical-ts-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-moirai-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-moment-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-mopformer-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-neuript-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-neurogpt-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-neurolm-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-normwear-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-one-fits-all-2023",
+      "branch": "model",
+      "year": 2023,
+      "bin": "2023",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-onehar-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-opera-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "respiratory-acoustic-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-papagei-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ppg-optical-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-patchtst-2023",
+      "branch": "model",
+      "year": 2023,
+      "bin": "2023",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-personal-health-insights-agent-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-personalized-physio-adaptation-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-ph-llm-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-physiojepa-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-physiowave-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-pulse-ppg-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ppg-optical-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-qoq-med-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-relcon-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-reve-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-scaling-wearable-foundation-models-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-selfpab-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-sempo-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-senflow-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-sensor2text-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-sensorfm-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-sensorlm-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-siamquality-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ppg-optical-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-sing-wearables-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sensor-language-agents",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-sleepfm-clinical-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "sleep-psg-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-sleepfm-icml-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sleep-psg-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-sleepgpt-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "sleep-psg-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-ssl-wearables-700k-days-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-test-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-time-ffm-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-time-llm-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-time-moe-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-timepfn-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-timer-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-timer-xl-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-timesfm-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-timesfm3-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-tnc-2021",
+      "branch": "model",
+      "year": 2021,
+      "bin": "2021",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-ts2vec-2022",
+      "branch": "model",
+      "year": 2022,
+      "bin": "2022",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-ttm-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-unimts-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "motion-imu-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-units-2024",
+      "branch": "model",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-watchsleepnet-2025",
+      "branch": "model",
+      "year": 2025,
+      "bin": "2025",
+      "family": "sleep-psg-foundation-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "model-wearable-optomyography-2026",
+      "branch": "model",
+      "year": 2026,
+      "bin": "2026",
+      "family": "emg-neuromotor-models",
+      "catalog_status": "accepted"
+    },
+    {
+      "id": "watch-actor-critic-personalized-mhealth-2017",
+      "branch": "watchlist",
+      "year": 2017,
+      "bin": "2017",
+      "family": "adaptive-treatment-and-policy-learning",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-anyecg-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-bcg-fm-2026",
+      "branch": "watchlist",
+      "year": 2026,
+      "bin": "2026",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-benchecg-xecg-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-beyond-lora-tsfm-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-biogap-ultra-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "wearable-hardware-and-edge",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-biosignal-fingerprinting-2026",
+      "branch": "watchlist",
+      "year": 2026,
+      "bin": "2026",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-brainwave-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-cardiofm-2026",
+      "branch": "watchlist",
+      "year": 2026,
+      "bin": "2026",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-cet-mae-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-clef-ecg-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-cmab-llm-pa-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "jitai-behavioral-interventions",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-conversational-health-agents-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-ecg-chat-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-ecg-jepa-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-eegformer-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "eeg-neural-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-femwear-2026",
+      "branch": "watchlist",
+      "year": 2026,
+      "bin": "2026",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-formed-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-gen-p-tuning-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-hargpt-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-human-symbiotic-health-intelligence-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "frontier-frameworks",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-hybrid-ssl-ecg-fm-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-jitai-diffusion-twins-2026",
+      "branch": "watchlist",
+      "year": 2026,
+      "bin": "2026",
+      "family": "longitudinal-counterfactual-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-lag-llama-2023",
+      "branch": "watchlist",
+      "year": 2023,
+      "bin": "2023",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-lora-ood-modality-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-mamba4cast-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-meit-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-moirai-moe-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-openecg-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-physiollm-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-physioomni-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-ppg-distill-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ppg-optical-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-protoecgnet-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-pulse-ecg-images-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-pulseox-fm-2026",
+      "branch": "watchlist",
+      "year": 2026,
+      "bin": "2026",
+      "family": "ppg-optical-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-robust-actor-critic-mhealth-2018",
+      "branch": "watchlist",
+      "year": 2018,
+      "bin": "2018",
+      "family": "adaptive-treatment-and-policy-learning",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-signalmc-med-2026",
+      "branch": "watchlist",
+      "year": 2026,
+      "bin": "2026",
+      "family": "benchmarking-and-evaluation",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-timedit-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-timegpt1-2023",
+      "branch": "watchlist",
+      "year": 2023,
+      "bin": "2023",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-timeraf-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-tsmamba-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-vital-sign-tsfm-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "multimodal-physiological-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-vitime-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "general-time-series-enablers",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-wearable-echo-fm-2025",
+      "branch": "watchlist",
+      "year": 2025,
+      "bin": "2025",
+      "family": "ecg-cardiac-foundation-models",
+      "catalog_status": "watchlist"
+    },
+    {
+      "id": "watch-zero-shot-trajectory-llm-2024",
+      "branch": "watchlist",
+      "year": 2024,
+      "bin": "2024",
+      "family": "sensor-language-agents",
+      "catalog_status": "watchlist"
+    }
+  ]
+}

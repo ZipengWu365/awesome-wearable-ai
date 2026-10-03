@@ -3,152 +3,197 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="An interactive, one-page map of wearable AI research: representation learning, health assessment, decision methods and adaptive intervention.">
-<title>Wearable AI — Research Map</title>
+<meta name="description" content="Explore every record in the Wearable AI repository on an upward research timeline. Browse by year, research family and evidence status.">
+<title>Wearable AI — Full Research Map</title>
 <style>
-  :root { color-scheme:light; --ink:#26344b; --muted:#6c788b; --line:#e9edf4; --surface:#fff; --page:#f5f7fb; }
+  :root { color-scheme:light; --ink:#26344b; --muted:#6c788b; --line:#e6ebf3; --page:#f5f7fb; }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--page); color:var(--ink); font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
-  .atlas { max-width:1700px; height:100dvh; min-height:620px; margin:auto; padding:0 28px; display:grid; grid-template-rows:84px minmax(0,1fr) 77px 30px; }
-  header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-  .brand { display:flex; align-items:baseline; gap:16px; }
-  h1 { margin:0; font-size:27px; font-weight:650; letter-spacing:-1.1px; }
-  h1 span { color:#6672e8; }
-  .subtitle { font-size:13px; color:var(--muted); }
-  .links { display:flex; align-items:center; gap:18px; font-size:12px; }
-  .edition { color:var(--muted); }
+  [hidden] { display:none!important; }
+  body { margin:0; color:var(--ink); background:var(--page); font:14px/1.45 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+  button,input,select { font:inherit; color:inherit; }
+  button,a,input,select { -webkit-tap-highlight-color:transparent; }
+  button { cursor:pointer; }
   a { color:inherit; text-decoration:none; }
   a:hover { text-decoration:underline; }
-  .repo { padding:8px 12px; background:#fff; border:1px solid #e0e5ef; border-radius:7px; font-weight:550; }
-  .canvas { position:relative; min-height:0; background:var(--surface); border:1px solid #e3e8f2; border-radius:16px; box-shadow:0 6px 25px #26344b05; overflow:hidden; }
-  #graph { height:100%; width:100%; position:relative; }
+  :focus-visible { outline:2px solid #6672e8; outline-offset:3px; }
+  .atlas { height:100dvh; min-height:620px; max-width:1800px; margin:auto; padding:0 24px; display:grid; grid-template-rows:76px 48px minmax(0,1fr) 34px; }
+  header { display:flex; justify-content:space-between; align-items:center; gap:14px; }
+  .brand { display:flex; align-items:baseline; gap:16px; }
+  h1 { font-size:26px; font-weight:650; letter-spacing:-1px; margin:0; }
+  h1 span { color:#6672e8; }
+  .subtitle,.header-links { font-size:12px; color:var(--muted); }
+  .header-links { display:flex; gap:16px; align-items:center; }
+  .repo { color:var(--ink); background:#fff; border:1px solid #dde4ef; border-radius:7px; padding:7px 12px; }
+  .toolbar { display:flex; gap:9px; align-items:flex-start; min-width:0; }
+  .search { flex:1; max-width:350px; min-width:120px; position:relative; }
+  .search span { position:absolute; left:12px; top:7px; color:#8590a1; font-size:18px; }
+  input { width:100%; height:34px; padding:7px 10px 7px 35px; background:#fff; border:1px solid #dde4ef; border-radius:7px; font-size:12px; }
+  select { max-width:220px; height:34px; border:1px solid #dde4ef; border-radius:7px; padding:5px 26px 5px 10px; background:#fff; font-size:12px; text-overflow:ellipsis; }
+  .scope { display:flex; gap:3px; background:#e9edf4; padding:3px; border-radius:7px; }
+  .scope button { height:28px; border:0; background:transparent; border-radius:5px; padding:3px 10px; font-size:12px; color:var(--muted); white-space:nowrap; }
+  .scope button[aria-pressed="true"] { background:#fff; color:var(--ink); box-shadow:0 1px 3px #26344b10; }
+  .reset { height:34px; border:0; background:none; padding:0 4px; font-size:12px; color:var(--muted); }
+  .match-count { margin-left:auto; align-self:center; padding-bottom:12px; font-size:11px; color:var(--muted); white-space:nowrap; }
+  .workbench { position:relative; display:flex; min-height:0; gap:12px; }
+  .canvas { flex:1; min-width:0; position:relative; overflow:hidden; background:#fff; border:1px solid #e0e6f0; border-radius:14px; }
+  #graph { position:absolute; inset:0; }
   #paths { position:absolute; inset:0; width:100%; height:100%; }
-  .node { position:absolute; min-height:29px; text-align:left; border:1px solid transparent; background:var(--soft); color:var(--ink); border-radius:6px; font:500 13px/1.2 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; padding:5px 6px; cursor:pointer; transition:background .15s,border-color .15s,box-shadow .15s; white-space:normal; }
-  .node:hover { border-color:var(--series); box-shadow:0 2px 7px #26344b0c; }
-  .node[aria-pressed="true"] { border-color:var(--series); background:var(--selected); box-shadow:0 0 0 2px var(--soft); }
-  .node:focus-visible, a:focus-visible, select:focus-visible { outline:2px solid #6672e8; outline-offset:3px; }
-  .mobile-filter { display:none; }
-  .inspector { align-self:center; display:flex; align-items:center; gap:18px; min-width:0; padding:0 12px; }
-  .selection-dot { flex:0 0 9px; height:9px; border-radius:50%; background:#6672e8; }
-  .selected-info { min-width:0; flex:1; }
-  .selected-heading { display:flex; align-items:baseline; gap:10px; margin:0 0 5px; }
-  .selected-name { font-size:14px; font-weight:600; }
-  .selected-meta { font-size:11px; color:var(--muted); }
-  .selected-caption { margin:0; color:#566379; font-size:12px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
-  .paper-link { flex:0 0 auto; font-size:12px; font-weight:550; border-bottom:1px solid #cbd2df; padding:6px 0; }
-  footer { display:flex; justify-content:space-between; align-items:flex-start; gap:14px; font-size:10px; color:#7a8595; padding:0 12px; }
-  @media(min-height:920px) { .atlas { max-height:960px; } }
-  @media(max-width:900px) {
-    .atlas { padding:0 14px; grid-template-rows:83px minmax(0,1fr) 84px 36px; min-height:610px; }
-    .brand { display:block; }
-    h1 { font-size:25px; }
-    .subtitle { display:block; margin-top:5px; font-size:12px; }
-    .edition { display:none; }
-    .canvas { padding-top:40px; }
-    .mobile-filter { display:block; position:absolute; z-index:2; top:11px; left:15px; font-size:12px; }
-    .mobile-filter select { font:inherit; color:var(--ink); background:#fff; border:1px solid #dde4ef; border-radius:5px; padding:5px 9px; }
-    .selected-heading { display:block; margin-bottom:4px; }
-    .selected-meta { display:block; margin-top:3px; }
-    .inspector { gap:10px; padding:0 4px; }
-    footer { padding:0 4px; font-size:9px; }
-    .node { font-size:14px; padding:6px 9px; }
+  #nodes { position:absolute; inset:0; }
+  .branch { position:absolute; top:17px; height:45px; border:0; background:none; text-align:center; font-size:13px; font-weight:600; color:var(--series); padding:0 3px; line-height:1.3; }
+  .branch small { display:block; color:var(--muted); font-size:10px; font-weight:400; margin-top:5px; }
+  .bucket { position:absolute; height:24px; min-width:34px; border:1px solid color-mix(in srgb,var(--series) 24%,white); border-radius:20px; color:var(--series); background:color-mix(in srgb,var(--series) 9%,white); padding:1px 10px; font-size:11px; font-weight:600; box-shadow:0 0 0 4px white; }
+  .bucket:hover,.bucket[aria-pressed="true"] { color:#fff; background:var(--series); border-color:var(--series); }
+  .empty { position:absolute; top:45%; left:0; width:100%; text-align:center; color:var(--muted); font-size:13px; pointer-events:none; }
+  .panel { flex:0 0 380px; min-width:0; background:#fff; border:1px solid #e0e6f0; border-radius:14px; display:flex; flex-direction:column; overflow:hidden; }
+  .panel-head { padding:18px 18px 14px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+  .panel-head h2 { font-size:16px; margin:0 0 4px; font-weight:600; }
+  .panel-head p { font-size:11px; color:var(--muted); margin:0; }
+  .icon-button { border:0; background:#f1f4f9; border-radius:5px; height:27px; padding:2px 9px; font-size:14px; }
+  .panel-body { min-height:0; overflow:auto; overscroll-behavior:contain; }
+  .result { display:block; width:100%; text-align:left; padding:15px 18px; border:0; border-bottom:1px solid #eef1f6; background:#fff; }
+  .result:hover { background:#f7f9fd; }
+  .result .meta { font-size:10px; color:var(--muted); display:flex; gap:8px; align-items:center; margin-bottom:5px; }
+  .dot { width:6px; height:6px; border-radius:50%; display:inline-block; background:var(--series); flex:none; }
+  .result .title { font-size:13px; font-weight:550; line-height:1.55; display:block; overflow-wrap:anywhere; }
+  .result .family { display:block; font-size:10px; color:var(--muted); margin-top:6px; }
+  .detail { padding:17px 18px 24px; }
+  .back { border:0; background:none; padding:0; color:var(--muted); font-size:12px; margin-bottom:19px; }
+  .detail h3 { font-size:19px; letter-spacing:-.3px; line-height:1.4; margin:0 0 12px; font-weight:600; overflow-wrap:anywhere; }
+  .detail .byline { font-size:11px; color:var(--muted); margin:0 0 13px; }
+  .tags { display:flex; gap:5px; flex-wrap:wrap; margin:12px 0 18px; }
+  .tag { border-radius:4px; background:#f0f3f8; color:#63728a; font-size:10px; padding:3px 6px; }
+  .source-link { display:inline-block; color:#3979df; border-bottom:1px solid #c8d7f1; margin:0 12px 10px 0; font-size:12px; padding-bottom:3px; }
+  .detail section { margin-top:20px; }
+  .detail section h4 { font-size:10px; text-transform:uppercase; letter-spacing:.7px; color:var(--muted); font-weight:600; margin:0 0 6px; }
+  .detail section p { font-size:12px; line-height:1.7; margin:0; overflow-wrap:anywhere; }
+  .warning { border-left:3px solid #d4824d; background:#fff7ef; padding:10px 12px; font-size:11px; line-height:1.65; margin:8px 0 16px; }
+  details { margin-top:24px; font-size:11px; color:var(--muted); }
+  pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:10px; line-height:1.6; color:#556479; }
+  footer { display:flex; justify-content:space-between; align-items:center; gap:10px; font-size:10px; color:#7a8595; }
+  #track { display:none; }
+  @media(max-width:1100px) {
+    .panel { position:absolute; right:0; top:0; bottom:0; width:380px; z-index:3; box-shadow:-12px 0 36px #26344b14; }
+    .subtitle { display:none; }
+    select { max-width:185px; }
+    .match-count { display:none; }
   }
-  @media(prefers-reduced-motion:reduce) { .node { transition:none; } }
+  @media(max-width:760px) {
+    .atlas { padding:0 12px; grid-template-rows:65px 124px minmax(0,1fr) 45px; min-height:720px; }
+    h1 { font-size:23px; }
+    .edition { display:none; }
+    .toolbar { display:grid; grid-template-columns:minmax(0,1fr) 120px; grid-template-rows:34px 34px 34px; gap:7px; }
+    .search { grid-column:1/-1; max-width:none; }
+    .scope { width:max-content; }
+    #family { max-width:none; width:100%; }
+    #track { display:block; width:120px; }
+    .reset { justify-self:end; }
+    .scope button { padding:3px 7px; font-size:11px; }
+    .panel { width:100%; box-shadow:none; }
+    footer { font-size:9px; align-items:flex-start; padding-top:9px; }
+    footer span:first-child { max-width:57%; }
+    footer span:last-child { text-align:right; }
+  }
+  @media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; } }
 </style>
 </head>
 <body>
 <main class="atlas">
   <header>
-    <div class="brand"><h1>Wearable <span>AI</span></h1><span class="subtitle">A research map, from signals to action.</span></div>
-    <div class="links"><span class="edition">2015–2026 · Selected milestones</span><a class="repo" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noopener">GitHub ↗</a></div>
+    <div class="brand"><h1>Wearable <span>AI</span></h1><span class="subtitle">The full repository, on one research map.</span></div>
+    <div class="header-links"><span class="edition" id="coverage-label"></span><a class="repo" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noopener">GitHub ↗</a></div>
   </header>
-  <section class="canvas" aria-label="Wearable AI research timeline">
-    <label class="mobile-filter">Track <select id="mobile-track" aria-label="Research track"><option value="0">Representation</option><option value="1">Assessment</option><option value="2">Decision methods</option><option value="3">Intervention</option></select></label>
-    <div id="graph"><svg id="paths" role="img" aria-labelledby="graph-title graph-desc"><title id="graph-title">Wearable AI research tree</title><desc id="graph-desc">Sixteen selected works in four research tracks. Years increase upward from 2015 to 2026. Branches represent research categories, not model inheritance. Select a work for its contribution and paper link.</desc></svg><div id="nodes"></div></div>
-  </section>
-  <aside class="inspector" aria-live="polite" aria-label="Selected work">
-    <span class="selection-dot" id="selection-dot"></span>
-    <div class="selected-info"><p class="selected-heading"><span class="selected-name" id="selected-name">Select a milestone</span><span class="selected-meta" id="selected-meta">Name · Year · Source</span></p><p class="selected-caption" id="selected-caption">Explore the contribution without crowding the map.</p></div>
-    <a class="paper-link" id="paper-link" target="_blank" rel="noopener" hidden>Read paper ↗</a>
-  </aside>
-  <footer><span>Paths group research topics, not model ancestry.</span><span>Registry years · Data cutoff: 2026-09-02</span></footer>
+  <div class="toolbar" aria-label="Filter research records">
+    <label class="search"><span aria-hidden="true">⌕</span><input id="query" type="search" placeholder="Search every title, topic or year" aria-label="Search registry records"></label>
+    <div class="scope" aria-label="Catalog status"><button id="accepted-scope" type="button" aria-pressed="true">Registry</button><button id="watchlist-scope" type="button" aria-pressed="false">Watchlist</button></div>
+    <select id="track" aria-label="Research branch"></select>
+    <select id="family" aria-label="Research family"><option value="">All research families</option></select>
+    <button id="reset" class="reset" type="button">Reset</button><span id="match-count" class="match-count" role="status"></span>
+  </div>
+  <div class="workbench">
+    <section class="canvas" aria-label="Upward research timeline">
+      <div id="graph"><svg id="paths" role="img" aria-labelledby="graph-title graph-desc"><title id="graph-title">Wearable AI full research map</title><desc id="graph-desc">All repository records are grouped by branch and calendar year. Years increase upward. Select a count to expand every record in that group. Earlier years are grouped into explicitly labelled ranges. Branches represent categories, not ancestry.</desc></svg><div id="nodes"></div><p class="empty" id="empty" hidden>No records match. Try another topic or reset the filters.</p></div>
+    </section>
+    <aside id="panel" class="panel" aria-label="Research records" hidden>
+      <div class="panel-head"><div><h2 id="panel-title">Research records</h2><p id="panel-count" role="status"></p></div><button id="close-panel" class="icon-button" type="button" aria-label="Close research records">×</button></div>
+      <div id="panel-body" class="panel-body"></div>
+    </aside>
+  </div>
+  <footer><span>Categories, not ancestry · Earlier years grouped · Click a count to open every record.</span><span id="cutoff"></span></footer>
 </main>
 <script id="research-data" type="application/json">__RESEARCH_DATA__</script>
 <script>
 (() => {
+  'use strict';
   const data=JSON.parse(document.getElementById('research-data').textContent);
-  const roles=[
-    {name:'Representation',tag:'Learning from body signals',color:'#3979df',soft:'#eef4ff',selected:'#e3edff',routes:[['single_signal','Signal models'],['cross_modal_language','Multimodal']]},
-    {name:'Assessment',tag:'Measuring and predicting health',color:'#17968b',soft:'#eaf7f4',selected:'#d8f0eb',routes:[['digital_phenotypes','Phenotypes'],['health_prediction','Prediction']]},
-    {name:'Decision methods',tag:'Estimating effects and designing action',color:'#9565c9',soft:'#f4effb',selected:'#ece2f8',routes:[['causal_inference','Causal'],['adaptive_policy','Adaptive design']]},
-    {name:'Intervention',tag:'Delivering and testing adaptive care',color:'#d4824d',soft:'#fff3e9',selected:'#ffe8d7',routes:[['behavioral_intervention','Behavior'],['physiological_control','Control']]}
-  ];
-  const graph=document.getElementById('graph'), svg=document.getElementById('paths'), nodes=document.getElementById('nodes');
-  const mobileTrack=document.getElementById('mobile-track');
-  let selected=null;
+  const byId=new Map(data.records.map(r=>[r.id,r]));
+  const $=id=>document.getElementById(id);
+  const graph=$('graph'),svg=$('paths'),nodes=$('nodes'),panel=$('panel'),body=$('panel-body');
   const ns='http://www.w3.org/2000/svg';
-  function add(tag,attrs,text){const el=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;svg.append(el);return el;}
-  function text(x,y,value,size=12,fill='#6c788b',weight=400,anchor='middle'){return add('text',{x,y,fill,'font-size':size,'font-weight':weight,'font-family':'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif','text-anchor':anchor},value);}
-  function curve(a,b,c,d,color,width=2,opacity=1){return add('path',{d:`M${a[0]},${a[1]} C${b[0]},${b[1]} ${c[0]},${c[1]} ${d[0]},${d[1]}`,fill:'none',stroke:color,'stroke-width':width,opacity,'stroke-linecap':'round'});}
-  function choose(n,role){
-    selected=n.id;
-    for(const b of nodes.querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset.id===selected));
-    document.getElementById('selected-name').textContent=n.name;
-    document.getElementById('selected-meta').textContent=`${n.year} · ${n.venue}`;
-    document.getElementById('selected-caption').textContent=n.caption;
-    document.getElementById('selected-caption').title=n.caption;
-    document.getElementById('selection-dot').style.background=role.color;
-    const link=document.getElementById('paper-link');link.href=n.url;link.hidden=false;
+  let scope='accepted',selection=null,detail=null,returnFocus=null;
+  const branchOf=id=>data.branches.find(b=>b.id===id);
+  const familyLabel=value=>String(value||'Unclassified').replace(/-/g,' ');
+  const colorOf=r=>branchOf(r.branch).color;
+  function element(tag,cls,value){const el=document.createElement(tag);if(cls)el.className=cls;if(value!==undefined)el.textContent=value;return el;}
+  function add(tag,attrs,value){const el=document.createElementNS(ns,tag);for(const [k,v]of Object.entries(attrs))el.setAttribute(k,v);if(value!==undefined)el.textContent=value;svg.append(el);return el;}
+  function text(x,y,value,size=11,fill='#7b889c',anchor='middle'){return add('text',{x,y,fill,'font-size':size,'font-family':'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif','text-anchor':anchor},value);}
+  function scoped(){return data.records.filter(r=>r.catalog_status===scope);}
+  function filtered(){
+    const q=$('query').value.trim().toLowerCase(),family=$('family').value,yearOnly=/^\d{4}$/.test(q);
+    return scoped().filter(r=>(!family||r.family===family)&&(!q||(yearOnly?r.year===Number(q):JSON.stringify([r.id,r.title,r.short_name,r.year,r.venue,r.status,r.family,r.modalities,r.clinical_domains,r.tags,r.lifecycle_stage,r.contribution,r.reason]).toLowerCase().includes(q))));
   }
+  function fillFamilies(){const select=$('family'),old=select.value;select.replaceChildren(element('option','','All research families'));select.firstChild.value='';for(const f of [...new Set(scoped().map(r=>r.family))].sort()){const o=element('option','',familyLabel(f));o.value=f;select.append(o);}select.value=[...select.options].some(o=>o.value===old)?old:'';}
+  function fillTracks(){const select=$('track'),old=select.value;select.replaceChildren();for(const branch of data.branches.filter(b=>(scope==='watchlist')===(b.id==='watchlist'))){const o=element('option','',branch.label);o.value=branch.id;select.append(o);}select.value=[...select.options].some(o=>o.value===old)?old:select.firstChild.value;}
+  function sorted(rows){return [...rows].sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title));}
+  function selectedRows(){return filtered().filter(r=>!selection||(!selection.branch||r.branch===selection.branch)&&(!selection.bin||r.bin===selection.bin));}
+  function selectionTitle(){if(!selection)return $('query').value.trim()?'Search results':'All records';const branch=branchOf(selection.branch),bin=data.bins.find(b=>b.id===selection.bin);return [branch&&branch.label,bin&&bin.label].filter(Boolean).join(' · ');}
+  function showList(){
+    detail=null;history.replaceState(null,'',location.pathname+location.search);body.replaceChildren();$('panel-title').textContent=selectionTitle();const rows=sorted(selectedRows());$('panel-count').textContent=`${rows.length} ${scope==='watchlist'?'watchlist candidates':'records'} · all results shown`;
+    if(!rows.length){body.append(element('p','detail','No records match these filters.'));return;}
+    for(const r of rows){const b=element('button','result');b.type='button';b.dataset.recordId=r.id;b.style.setProperty('--series',colorOf(r));const meta=element('span','meta');meta.append(element('i','dot'),element('span','',String(r.year)),element('span','',r.venue||r.status||branchOf(r.branch).label));b.append(meta,element('span','title',r.title),element('span','family',familyLabel(r.family)));b.onclick=()=>showDetail(r);body.append(b);}
+    body.scrollTop=0;
+  }
+  function openList(next,focusSource){selection=next;returnFocus=focusSource||returnFocus;panel.hidden=false;showList();render();$('close-panel').focus();}
+  function safeLink(url,label,container){if(!/^https?:\/\//i.test(url||''))return;const a=element('a','source-link',label);a.href=url;a.target='_blank';a.rel='noopener';container.append(a);}
+  function showDetail(r){
+    detail=r.id;panel.hidden=false;$('panel-title').textContent=branchOf(r.branch).label;$('panel-count').textContent=`${r.year} · ${r.catalog_status==='watchlist'?'Watchlist — not accepted':'Accepted registry record'}`;body.replaceChildren();
+    const content=element('article','detail'),back=element('button','back','← Back to records');back.type='button';back.onclick=()=>{showList();render();const row=[...body.querySelectorAll('.result')].find(b=>b.dataset.recordId===r.id);(row||$('close-panel')).focus();};content.append(back,element('h3','',r.title),element('p','byline',[r.short_name,r.year,r.venue||r.status].filter(Boolean).join(' · ')));
+    const tags=element('div','tags');for(const value of [familyLabel(r.family),r.wearable_scope,r.evidence_stage,r.evidence_depth].filter(Boolean))tags.append(element('span','tag',value));content.append(tags);
+    if(r.source_issue)content.append(element('p','warning',`Source warning: ${r.source_issue} The original metadata is retained; the incorrect source link is withheld.`));else safeLink(r.primary_url,r.catalog_status==='watchlist'?'Candidate source ↗':'Original source ↗',content);
+    safeLink(r.code_url,'Code ↗',content);safeLink(r.data_url,'Data ↗',content);
+    if(r.catalog_status==='watchlist')content.append(element('p','warning','This candidate is not part of the accepted registry. Its publication status and reason remain visible.'));
+    for(const [key,label]of [['contribution','Contribution'],['why_it_matters','Why it matters'],['outcome_status','Reported outcome'],['limitations','Limitations'],['evidence_boundary','Evidence boundary'],['reason','Watchlist reason'],['review_action','Review action']])if(r[key]){const section=element('section');section.append(element('h4','',label),element('p','',r[key]));content.append(section);}
+    const metadata=element('details'),summary=element('summary','','All registry metadata');metadata.append(summary,element('pre','',JSON.stringify(r,null,2)));content.append(metadata);body.append(content);body.scrollTop=0;
+    history.replaceState(null,'',`#${encodeURIComponent(r.id)}`);render();back.focus();
+  }
+  function closePanel(){panel.hidden=true;detail=null;selection=null;history.replaceState(null,'',location.pathname+location.search);render();if(returnFocus&&returnFocus.isConnected)returnFocus.focus();else $('query').focus();}
   function render(){
-    const w=graph.clientWidth,h=graph.clientHeight,narrow=w<850;
-    svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
-    while(svg.children.length>2)svg.lastChild.remove();nodes.replaceChildren();
-    const active=narrow?[Number(mobileTrack.value)]:[0,1,2,3];
-    const left=narrow?49:61,right=narrow?20:24, groupW=(w-left-right)/active.length;
-    const top=narrow?99:90,bottom=h-112;
-    const yy=year=>top+(2026-year)/11*(bottom-top);
-    const rootY=h-39,rootX=(left+w-right)/2;
-    for(const year of [2015,2018,2021,2024,2026]){
-      const y=yy(year);add('line',{x1:left-3,y1:y,x2:w-right,y2:y,stroke:'#edf0f6','stroke-width':1});text(left-13,y+4,year,11,'#8290a3',400,'end');
-    }
-    text(left-13,top-22,'Year ↑',10,'#8290a3',400,'end');
-    active.forEach((roleIndex,slot)=>{
-      const role=roles[roleIndex],start=left+slot*groupW,center=start+groupW/2;
-      const heading=text(center,25,role.name,narrow?17:15,role.color,600);
-      text(center,46,narrow?role.tag:'',11,'#7b889b');
-      add('circle',{cx:center-heading.getComputedTextLength()/2-10,cy:21,r:narrow?0:3,fill:role.color});
-      curve([rootX,rootY],[rootX,rootY-20],[center,rootY-16],[center,h-75],role.color,2,.65);
-      role.routes.forEach(([key,title],j)=>{
-        const laneW=groupW/2,x=start+j*laneW+8;
-        const width=laneW-(narrow?31:23);
-        text(x+width/2+9,narrow?62:54,title,12,'#68758a',500);
-        const works=data.filter(n=>n.branch===key),first=Math.min(...works.map(n=>n.year));
-        curve([center,h-75],[center,h-89],[x,h-80],[x,bottom+18],role.color,2,.65);
-        add('line',{x1:x,y1:bottom+18,x2:x,y2:yy(first),stroke:role.color,'stroke-width':1.5,opacity:.15});
-        add('line',{x1:x,y1:yy(first),x2:x,y2:top-14,stroke:role.color,'stroke-width':1.8,opacity:.5});
-        works.forEach(n=>{
-          const y=yy(n.year);
-          add('line',{x1:x,y1:y,x2:x+10,y2:y,stroke:role.color,'stroke-width':1.5});
-          add('circle',{cx:x,cy:y,r:3.5,fill:role.color});
-          const b=document.createElement('button');b.type='button';b.className='node';b.dataset.id=n.id;b.textContent=n.name;
-          b.setAttribute('aria-label',`${n.name}, ${n.year}. ${n.caption}`);b.setAttribute('aria-pressed',String(n.id===selected));
-          b.style.cssText=`left:${x+9}px;top:${y-14.5}px;width:${width}px;--series:${role.color};--soft:${role.soft};--selected:${role.selected}`;
-          b.onclick=()=>choose(n,role);nodes.append(b);b.style.top=`${y-b.offsetHeight/2}px`;
-        });
-      });
+    const w=graph.clientWidth,h=graph.clientHeight,narrow=w<640;svg.setAttribute('viewBox',`0 0 ${w} ${h}`);while(svg.children.length>2)svg.lastChild.remove();nodes.replaceChildren();
+    const rows=filtered(),allBranches=data.branches.filter(b=>(scope==='watchlist')===(b.id==='watchlist')),active=narrow?allBranches.filter(b=>b.id===$('track').value):allBranches;
+    const left=narrow?84:88,right=20,lane=(w-left-right)/active.length,top=88,bottom=h-102,rootY=h-37,rootX=(left+w-right)/2;
+    const yy=bin=>bottom-(data.bins.indexOf(bin)/(data.bins.length-1))*(bottom-top);
+    for(const bin of data.bins){const y=yy(bin);add('line',{x1:left-7,x2:w-right,y1:y,y2:y,stroke:'#edf1f7'});text(left-17,y+4,bin.label,10,'#8290a3','end');}
+    text(left-17,25,'Year ↑',10,'#8290a3','end');
+    active.forEach((branch,slot)=>{
+      const center=left+(slot+.5)*lane,branchRows=rows.filter(r=>r.branch===branch.id),heading=element('button','branch',branch.label);heading.type='button';heading.style.cssText=`left:${center-lane/2}px;width:${lane}px;--series:${branch.color}`;heading.append(element('small','',`${branchRows.length} records`));heading.setAttribute('aria-label',`Open all ${branchRows.length} ${branch.label.toLowerCase()} records`);heading.onclick=()=>openList({branch:branch.id},heading);nodes.append(heading);
+      add('path',{d:`M${rootX},${rootY-10} C${rootX},${rootY-38} ${center},${rootY-22} ${center},${bottom+22}`,fill:'none',stroke:branch.color,'stroke-width':1.8,opacity:.55});
+      add('line',{x1:center,x2:center,y1:bottom+22,y2:top-15,stroke:branch.color,'stroke-width':1.5,opacity:.3});
+      for(const bin of data.bins){const group=branchRows.filter(r=>r.bin===bin.id);if(!group.length)continue;const y=yy(bin),b=element('button','bucket',String(group.length));b.type='button';b.dataset.branch=branch.id;b.dataset.bin=bin.id;b.dataset.count=String(group.length);b.style.cssText=`left:${center-19}px;top:${y-12}px;--series:${branch.color}`;b.title=`${branch.label} · ${bin.label} · ${group.length} records`;b.setAttribute('aria-label',`Open ${group.length} ${branch.label.toLowerCase()} records from ${bin.label}`);const r=detail&&byId.get(detail);b.setAttribute('aria-pressed',String(Boolean(r?r.branch===branch.id&&r.bin===bin.id:selection&&selection.branch===branch.id&&selection.bin===bin.id)));b.onclick=()=>openList({branch:branch.id,bin:bin.id},b);nodes.append(b);b.style.left=`${center-b.offsetWidth/2}px`;}
     });
-    add('rect',{x:rootX-62,y:rootY-14,width:124,height:28,rx:7,fill:'#344460'});text(rootX,rootY+4,'Wearable AI',12,'#fff',600);
-    text(rootX,h-9,'Data · Evaluation · Infrastructure',11,'#8993a4');
+    add('rect',{x:rootX-61,y:rootY-13,width:122,height:27,rx:7,fill:'#344460'});text(rootX,rootY+4,scope==='watchlist'?'Watchlist':'Wearable AI',12,'#fff');
+    text(rootX,h-8,narrow?'Choose a count to expand every record':'Choose a branch or year count to expand every record',10,'#8290a3');
+    $('empty').hidden=rows.length>0;$('match-count').textContent=`${rows.length} / ${scoped().length} records`;
   }
-  mobileTrack.addEventListener('change',()=>{
-    const role=roles[Number(mobileTrack.value)];
-    const n=data.filter(n=>role.routes.some(([key])=>key===n.branch)).sort((a,b)=>b.year-a.year)[0];
-    choose(n,role);render();
-  });
-  new ResizeObserver(render).observe(graph);
-  render();
-  const first=data.find(n=>n.id==='model-sensorfm-2026');choose(first,roles[0]);
+  function updateFilters(){selection=null;detail=null;const first=filtered()[0];if(first)$('track').value=first.branch;panel.hidden=false;showList();render();history.replaceState(null,'',location.pathname+location.search);}
+  function changeScope(value){scope=value;selection=null;detail=null;panel.hidden=true;history.replaceState(null,'',location.pathname+location.search);$('accepted-scope').setAttribute('aria-pressed',String(value==='accepted'));$('watchlist-scope').setAttribute('aria-pressed',String(value==='watchlist'));fillFamilies();fillTracks();render();if($('query').value.trim())openList(null);}
+  $('coverage-label').textContent=`${data.counts.accepted} / ${data.counts.accepted} records mapped`;
+  $('accepted-scope').textContent=`Registry ${data.counts.accepted}`;$('watchlist-scope').textContent=`Watchlist ${data.counts.watchlist}`;
+  $('cutoff').textContent=`${data.counts.accepted} accepted + ${data.counts.watchlist} candidates · Cutoff ${data.cutoff}`;
+  $('query').addEventListener('input',updateFilters);$('family').addEventListener('change',updateFilters);$('track').addEventListener('change',()=>{selection=null;detail=null;panel.hidden=true;render();});
+  $('accepted-scope').onclick=()=>changeScope('accepted');$('watchlist-scope').onclick=()=>changeScope('watchlist');$('close-panel').onclick=closePanel;
+  $('reset').onclick=()=>{$('query').value='';$('family').value='';changeScope('accepted');history.replaceState(null,'',location.pathname+location.search);};
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)closePanel();if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();$('query').focus();}});
+  fillFamilies();fillTracks();new ResizeObserver(render).observe(graph);render();
+  const initial=byId.get(decodeURIComponent(location.hash.slice(1)));if(initial){changeScope(initial.catalog_status);selection={branch:initial.branch,bin:initial.bin};showDetail(initial);}
 })();
 </script>
 </body>
