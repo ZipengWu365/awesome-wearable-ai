@@ -12,32 +12,32 @@
 
   const activateScene = (step) => {
     const scene = step.dataset.scene;
-    if (body.dataset.scene === scene) return;
-    body.dataset.scene = scene;
+    if (body.dataset.scene !== scene) body.dataset.scene = scene;
     steps.forEach(item => item.classList.toggle('is-active', item === step));
   };
 
-  steps[0].classList.add('is-active');
-  const sceneObserver = new IntersectionObserver((entries) => {
-    const candidates = entries
-      .filter(entry => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-    if (candidates[0]) activateScene(candidates[0].target);
-  }, { rootMargin: '-28% 0px -28% 0px', threshold: [0, .15, .35, .65] });
-  steps.forEach(step => sceneObserver.observe(step));
-
   let progressFrame = null;
-  const updateProgress = () => {
+  const updateStory = () => {
     progressFrame = null;
     const rect = story.getBoundingClientRect();
     const travelled = Math.max(0, -rect.top);
     const available = Math.max(1, rect.height - innerHeight);
     progress.style.width = `${Math.min(100, travelled / available * 100)}%`;
+
+    const focusLine = innerHeight * .5;
+    const activeStep = steps.reduce((closest, step) => {
+      const bounds = step.getBoundingClientRect();
+      const distance = Math.abs((bounds.top + bounds.bottom) / 2 - focusLine);
+      return distance < closest.distance ? { step, distance } : closest;
+    }, { step: steps[0], distance: Infinity }).step;
+    activateScene(activeStep);
   };
-  addEventListener('scroll', () => {
-    if (!progressFrame) progressFrame = requestAnimationFrame(updateProgress);
-  }, { passive: true });
-  updateProgress();
+  const requestStoryUpdate = () => {
+    if (!progressFrame) progressFrame = requestAnimationFrame(updateStory);
+  };
+  addEventListener('scroll', requestStoryUpdate, { passive: true });
+  addEventListener('resize', requestStoryUpdate, { passive: true });
+  updateStory();
 
   menuButton.addEventListener('click', () => {
     const open = navigation.classList.toggle('is-open');
@@ -88,6 +88,11 @@
       };
     };
 
+    const transformScenePoint = ([x, y], offsetX, scale) => [
+      600 + (x - 600) * scale + offsetX,
+      400 + (y - 400) * scale
+    ];
+
     const clusterSvg = (person, centre, spreadX, spreadY) => {
       const angle = seeded(person.id * 3 + 2) * Math.PI * 2;
       const radius = Math.sqrt(seeded(person.id * 7 + 5));
@@ -113,22 +118,30 @@
       if (scene === 2) {
         if (person.id < 36) {
           const progress = person.id / 35;
-          return svgPoint(205 + progress * 230, 285 + Math.sin(progress * Math.PI * 8) * (9 + progress * 28));
+          const point = transformScenePoint([
+            205 + progress * 230,
+            285 + Math.sin(progress * Math.PI * 8) * (9 + progress * 28)
+          ], -170, .82);
+          return svgPoint(point[0], point[1]);
         }
         const latent = [[780,245],[825,270],[865,224],[911,274],[770,328],[818,345],[872,319],[924,342],[789,409],[847,397],[897,418]];
-        return clusterSvg(person, latent[(person.id - 36) % latent.length], 18, 20);
+        const centre = transformScenePoint(latent[(person.id - 36) % latent.length], -170, .82);
+        return clusterSvg(person, centre, 15, 16);
       }
       if (scene === 3) {
-        const lifecycle = [[95,411],[207,411],[319,411],[431,411],[543,411],[657,411],[769,411],[881,411],[993,411],[1105,411]];
-        return ringSvg(person, lifecycle[person.id % lifecycle.length], 43, 60);
+        const lifecycle = [[95,411],[207,411],[319,411],[431,411],[543,411],[657,411],[769,411],[881,411],[993,411],[1105,411]]
+          .map(point => transformScenePoint(point, 250, .78));
+        return ringSvg(person, lifecycle[person.id % lifecycle.length], 34, 47);
       }
       if (scene === 4) {
-        const ecosystem = [[335,233],[605,175],[871,230],[334,558],[598,626],[879,554]];
-        return ringSvg(person, ecosystem[person.id % ecosystem.length], 82, 111);
+        const ecosystem = [[335,233],[605,175],[871,230],[334,558],[598,626],[879,554]]
+          .map(point => transformScenePoint(point, -150, .84));
+        return ringSvg(person, ecosystem[person.id % ecosystem.length], 69, 93);
       }
       if (scene === 5) {
-        const evidence = [[135,403],[365,403],[600,403],[835,403],[1065,403]];
-        return ringSvg(person, evidence[person.id % evidence.length], 88, 116);
+        const evidence = [[135,403],[365,403],[600,403],[835,403],[1065,403]]
+          .map(point => transformScenePoint(point, 270, .8));
+        return ringSvg(person, evidence[person.id % evidence.length], 70, 93);
       }
       return {
         x: (person.id % 2 ? 1.08 : -.08) * width,

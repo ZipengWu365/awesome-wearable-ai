@@ -131,8 +131,8 @@ body[data-scene="2"] .people-field-key, body[data-scene="3"] .people-field-key, 
 .story-steps { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
 .step { min-height: 105vh; display: flex; align-items: center; padding: 12vh 5vw; }
 .step:first-child { min-height: 100vh; }
-.story-copy, .quiet-copy { width: min(510px, 43vw); pointer-events: auto; opacity: .18; transform: translateY(24px); transition: opacity .5s, transform .7s; }
-.step.is-active .story-copy, .step.is-active .quiet-copy { opacity: 1; transform: translateY(0); }
+.story-copy, .quiet-copy { width:min(510px,43vw);pointer-events:none;opacity:.035;filter:blur(2.5px);transform:translateY(30px) scale(.985);transition:opacity .42s,filter .42s,transform .62s cubic-bezier(.2,.8,.2,1);will-change:opacity,filter,transform; }
+.step.is-active .story-copy, .step.is-active .quiet-copy { pointer-events:auto;opacity:1;filter:none;transform:translateY(0) scale(1); }
 .left-copy { margin-right: auto; }
 .right-copy { margin-left: auto; }
 .compact-copy { width: min(425px, 38vw); }
@@ -158,6 +158,15 @@ body[data-scene="2"] .people-field-key, body[data-scene="3"] .people-field-key, 
 .hero-actions .primary-button { padding: 14px 18px; }
 .hero-actions .scroll-cue { margin: 0; }
 .hand-note { margin: 25px 0 0 18px !important; color: #457fcb !important; font: italic 400 22px/1.1 var(--serif) !important; transform: rotate(-4deg); }
+
+@media (min-width:1151px) {
+  .step:not(.hero-step):not(.quiet-step) .story-copy{width:min(420px,32vw);padding:22px 24px;border:1px solid rgba(46,83,109,.16);border-radius:14px;background:rgba(250,252,248,.87);box-shadow:0 18px 48px rgba(26,55,78,.12);backdrop-filter:blur(12px)}
+  .step:not(.hero-step):not(.quiet-step) .compact-copy{width:min(390px,30vw)}
+  .step:not(.hero-step):not(.quiet-step) .story-copy h2{margin-bottom:18px;font-size:clamp(34px,3.35vw,54px);line-height:1.01}
+  .step:not(.hero-step):not(.quiet-step) .story-copy>p:not(.eyebrow):not(.margin-note){font-size:clamp(15px,1.15vw,18px);line-height:1.55}
+  .step:not(.hero-step):not(.quiet-step) .story-copy .eyebrow{margin-bottom:15px}
+  .step:not(.hero-step):not(.quiet-step) .margin-note{margin-top:18px;padding:11px 0 11px 16px}
+}
 
 /* The continuous visual world */
 .landscape, .person, .signal-labels, .signal-lines, .representation-field, .lifecycle-field, .ecosystem-field, .evidence-field { transition: opacity 1s, transform 1.2s cubic-bezier(.2,.8,.2,1), filter .8s; transform-origin: center; }
@@ -236,13 +245,13 @@ body[data-scene="1"] .landscape { opacity: .55; }
 body[data-scene="2"] .person { opacity: .16; transform: translate(-180px, 55px) scale(.72); }
 body[data-scene="2"] .signal-labels, body[data-scene="2"] .signal-lines { opacity: 0; }
 body[data-scene="2"] .landscape { opacity: .22; }
-body[data-scene="2"] .representation-field { opacity: 1; transform: scale(1); }
+body[data-scene="2"] .representation-field { opacity: 1; transform: translateX(-170px) scale(.82); }
 body[data-scene="3"] .person, body[data-scene="3"] .signal-labels, body[data-scene="3"] .signal-lines, body[data-scene="3"] .landscape { opacity: 0; }
-body[data-scene="3"] .lifecycle-field { opacity: 1; transform: scale(1); }
+body[data-scene="3"] .lifecycle-field { opacity: 1; transform: translateX(250px) scale(.78); }
 body[data-scene="4"] .person, body[data-scene="4"] .signal-labels, body[data-scene="4"] .signal-lines, body[data-scene="4"] .landscape { opacity: 0; }
-body[data-scene="4"] .ecosystem-field { opacity: 1; transform: scale(1); }
+body[data-scene="4"] .ecosystem-field { opacity: 1; transform: translateX(-150px) scale(.84); }
 body[data-scene="5"] .person, body[data-scene="5"] .signal-labels, body[data-scene="5"] .signal-lines, body[data-scene="5"] .landscape { opacity: 0; }
-body[data-scene="5"] .evidence-field { opacity: 1; transform: scale(1); }
+body[data-scene="5"] .evidence-field { opacity: 1; transform: translateX(270px) scale(.8); }
 body[data-scene="6"] .person, body[data-scene="6"] .signal-labels, body[data-scene="6"] .signal-lines { opacity: .06; }
 body[data-scene="6"] .landscape { opacity: .15; }
 body[data-scene="6"] .evidence-field { opacity: .11; transform: scale(.86); filter: blur(7px); }
