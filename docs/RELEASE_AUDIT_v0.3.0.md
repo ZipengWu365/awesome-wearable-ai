@@ -79,9 +79,20 @@ test_intervention_outcome_transparency (test_registry.RegistryTests) ... ok
 test_registry_export (test_registry.RegistryTests) ... ok
 test_relations (test_registry.RegistryTests) ... ok
 test_unique_ids_and_titles (test_registry.RegistryTests) ... ok
+test_coverage_manifest_proves_exact_id_sets (test_research_map.ResearchMapTests) ... ok
+test_coverage_rejects_an_omitted_or_duplicate_record (test_research_map.ResearchMapTests) ... ok
+test_coverage_rejects_changed_classification_counts_or_metadata (test_research_map.ResearchMapTests) ... ok
+test_every_record_has_one_native_branch_and_time_bin (test_research_map.ResearchMapTests) ... ok
+test_exact_accepted_and_watchlist_coverage (test_research_map.ResearchMapTests) ... ok
+test_future_or_earlier_years_are_not_silently_dropped (test_research_map.ResearchMapTests) ... ok
+test_invalid_year_type_branch_or_duplicate_id_fails (test_research_map.ResearchMapTests) ... ok
+test_known_bad_links_are_withheld_without_losing_records (test_research_map.ResearchMapTests) ... ok
+test_oldest_dataset_and_infrastructure_guidelines_are_retained (test_research_map.ResearchMapTests) ... ok
+test_original_metadata_and_source_are_unchanged (test_research_map.ResearchMapTests) ... ok
+test_template_requires_one_placeholder_and_escapes_script_close (test_research_map.ResearchMapTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests
+Ran 17 tests
 
 OK
 ```
