@@ -1,0 +1,336 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Wearable AI papers",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+      },
+      "scope_tier": {
+        "enum": [
+          "core",
+          "adjacent"
+        ]
+      },
+      "curation_level": {
+        "enum": [
+          "metadata_checked",
+          "evidence_appraised"
+        ]
+      },
+      "source_ids": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "field_sources": {
+        "type": "object",
+        "propertyNames": {
+          "enum": [
+            "id",
+            "scope_tier",
+            "curation_level",
+            "source_ids",
+            "field_sources",
+            "related_ids",
+            "added_on",
+            "last_verified",
+            "title",
+            "authors",
+            "year",
+            "venue",
+            "url",
+            "code",
+            "dataset",
+            "category",
+            "subcategory",
+            "sensor",
+            "task",
+            "foundation_model",
+            "review_or_method",
+            "open_access",
+            "doi",
+            "arxiv_id",
+            "publication_status",
+            "notes"
+          ]
+        },
+        "additionalProperties": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "related_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "added_on": {
+        "type": "string",
+        "format": "date"
+      },
+      "last_verified": {
+        "type": "string",
+        "format": "date"
+      },
+      "title": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "authors": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "year": {
+        "anyOf": [
+          {
+            "type": "integer",
+            "minimum": 0
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "venue": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "url": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "code": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "dataset": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "category": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "subcategory": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "sensor": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "task": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "foundation_model": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "review_or_method": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "open_access": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "doi": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "arxiv_id": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "publication_status": {
+        "enum": [
+          "peer_reviewed",
+          "accepted_in_press",
+          "preprint",
+          "official_report",
+          "unknown"
+        ]
+      },
+      "notes": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "scope_tier",
+      "curation_level",
+      "source_ids",
+      "field_sources",
+      "related_ids",
+      "added_on",
+      "last_verified",
+      "title",
+      "authors",
+      "year",
+      "venue",
+      "url",
+      "code",
+      "dataset",
+      "category",
+      "subcategory",
+      "sensor",
+      "task",
+      "foundation_model",
+      "review_or_method",
+      "open_access",
+      "doi",
+      "arxiv_id",
+      "publication_status",
+      "notes"
+    ],
+    "additionalProperties": false
+  }
+}

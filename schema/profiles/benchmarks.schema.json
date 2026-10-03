@@ -1,0 +1,326 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Wearable AI benchmarks",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+      },
+      "scope_tier": {
+        "enum": [
+          "core",
+          "adjacent"
+        ]
+      },
+      "curation_level": {
+        "enum": [
+          "metadata_checked",
+          "evidence_appraised"
+        ]
+      },
+      "source_ids": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "field_sources": {
+        "type": "object",
+        "propertyNames": {
+          "enum": [
+            "id",
+            "scope_tier",
+            "curation_level",
+            "source_ids",
+            "field_sources",
+            "related_ids",
+            "added_on",
+            "last_verified",
+            "benchmark_name",
+            "paper",
+            "repo",
+            "task",
+            "datasets",
+            "sensors",
+            "body_location",
+            "splitting_protocol",
+            "metrics",
+            "cross_subject",
+            "cross_dataset",
+            "cross_device",
+            "zero_shot",
+            "foundation_model_evaluation",
+            "leaderboard",
+            "actively_maintained",
+            "notes"
+          ]
+        },
+        "additionalProperties": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "related_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "added_on": {
+        "type": "string",
+        "format": "date"
+      },
+      "last_verified": {
+        "type": "string",
+        "format": "date"
+      },
+      "benchmark_name": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "paper": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "repo": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "task": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "datasets": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "sensors": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "body_location": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "splitting_protocol": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "metrics": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "cross_subject": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "cross_dataset": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "cross_device": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "zero_shot": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "foundation_model_evaluation": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "leaderboard": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "actively_maintained": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "notes": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "scope_tier",
+      "curation_level",
+      "source_ids",
+      "field_sources",
+      "related_ids",
+      "added_on",
+      "last_verified",
+      "benchmark_name",
+      "paper",
+      "repo",
+      "task",
+      "datasets",
+      "sensors",
+      "body_location",
+      "splitting_protocol",
+      "metrics",
+      "cross_subject",
+      "cross_dataset",
+      "cross_device",
+      "zero_shot",
+      "foundation_model_evaluation",
+      "leaderboard",
+      "actively_maintained",
+      "notes"
+    ],
+    "additionalProperties": false
+  }
+}

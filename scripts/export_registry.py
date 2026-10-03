@@ -5,6 +5,9 @@ from collections import Counter
 from pathlib import Path
 import csv
 import json
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from scripts.profiles import public_profiles
 
 from registry import (
     ROOT,
@@ -56,7 +59,8 @@ def main() -> int:
     }
     registry = {
         "version": "0.3.0",
-        "generated_on": "2026-09-02",
+        "generated_on": "2026-09-28",
+        "profiles": public_profiles(records, watchlist),
         "records": records,
         "watchlist": watchlist,
         "relations": relations,
@@ -66,6 +70,8 @@ def main() -> int:
     }
     (OUT / "registry.json").write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (OUT / "statistics.json").write_text(json.dumps(statistics, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for name in ("digital_twin", "causal", "resources"):
+        write_csv(OUT / f"{name}_profiles.csv", registry["profiles"][name])
     write_csv(OUT / "catalog.csv", records)
     write_csv(OUT / "watchlist.csv", watchlist)
     write_csv(OUT / "relations.csv", relations)

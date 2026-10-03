@@ -19,7 +19,7 @@ def normalize_output(output: str) -> str:
 
 
 def run(command: list[str]) -> tuple[bool, str]:
-    proc = subprocess.run(command, cwd=ROOT, text=True, capture_output=True)
+    proc = subprocess.run(command, cwd=ROOT, text=True, encoding="utf-8", capture_output=True)
     return proc.returncode == 0, normalize_output(proc.stdout + proc.stderr)
 
 
@@ -59,7 +59,7 @@ def main() -> int:
     title_dupes = duplicates(records, "title")
     url_dupes = duplicates(records, "primary_url")
     lines = [
-        "# Awesome Wearable AI v0.3.0 release audit",
+        "# Awesome Wearable AI current repository audit",
         "",
         f"**Decision: {decision}**",
         "",
@@ -109,10 +109,10 @@ def main() -> int:
         "- Protocols are labelled as protocols and do not count as effectiveness evidence.",
         "- Predictive counterfactual explanations are separated from causal treatment effects and policy-value evidence.",
         "- A model's inclusion does not imply that its weights, training data or commercial use rights are open.",
-        "- Coverage is frozen at 2026-09-02; subsequent venue decisions and publications require a new release.",
+        "- Original catalogue snapshot: 2026-09-02. The 2026-09-28 local integration retains per-source review dates; see LOCAL_SYNC.md.",
     ])
     report = "\n".join(lines) + "\n"
-    path = ROOT / "docs" / "RELEASE_AUDIT_v0.3.0.md"
+    path = ROOT / "docs" / "RELEASE_AUDIT.md"
     path.write_text(report, encoding="utf-8")
     print(f"Audit written to {path.relative_to(ROOT)}: {decision}")
     return 0 if decision == "PASS" else 1

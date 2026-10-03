@@ -6,6 +6,7 @@ from urllib.parse import urlparse
 import json
 import re
 import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from jsonschema import Draft202012Validator
 
@@ -62,7 +63,7 @@ def main() -> int:
         seen_titles[normalized_title] = record_id
         if not ID_PATTERN.fullmatch(record_id):
             errors.append(f"{record_id}: id must match {ID_PATTERN.pattern}")
-        for field in ("primary_url", "code_url", "data_url", "project_url"):
+        for field in ("primary_url", "code_url", "data_url", "project_url", "weights_url"):
             if record.get(field):
                 validate_url(str(record[field]), f"{record_id}.{field}", errors)
         if record["inclusion_basis"] in SCIENTIFIC_BASES:
@@ -94,6 +95,9 @@ def main() -> int:
         if not ID_PATTERN.fullmatch(record_id):
             errors.append(f"watchlist {record_id}: invalid id")
         validate_url(item["primary_url"], f"watchlist.{record_id}.primary_url", errors)
+
+    from scripts.profiles import validate_profiles
+    errors.extend(validate_profiles(records, watchlist))
 
     if errors:
         print("Registry validation FAILED", file=sys.stderr)

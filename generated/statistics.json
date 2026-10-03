@@ -1,13 +1,13 @@
 {
-  "accepted_total": 396,
-  "watchlist_total": 45,
-  "relation_total": 2169,
+  "accepted_total": 408,
+  "watchlist_total": 53,
+  "relation_total": 2198,
   "by_record_type": {
     "dataset": 116,
     "infrastructure": 42,
-    "intervention": 40,
+    "intervention": 41,
     "measure": 35,
-    "method": 61,
+    "method": 72,
     "model": 102
   },
   "by_family": {
@@ -37,6 +37,7 @@
     "digital-measure-frameworks": 2,
     "digital-rehabilitation-and-pain": 4,
     "digital-screening-and-clinical-escalation": 1,
+    "digital-twins": 12,
     "ecg-cardiac-foundation-models": 15,
     "eeg-neural-foundation-models": 14,
     "eeg-sleep-datasets": 17,
@@ -87,22 +88,22 @@
   },
   "by_venue_tier": {
     "big_tech_report": 6,
-    "domain_leading_conference": 8,
+    "domain_leading_conference": 9,
     "official_dataset": 116,
     "official_guidance": 5,
     "official_standard": 2,
     "official_tool": 30,
-    "sci_journal": 143,
+    "sci_journal": 154,
     "top_conference": 86
   },
   "by_verification_status": {
     "official_resource_checked": 153,
-    "primary_source_checked": 167,
+    "primary_source_checked": 179,
     "review_reference_checked": 76
   },
   "by_evidence_depth": {
     "evidence_card": 95,
-    "metadata_verified": 225,
+    "metadata_verified": 237,
     "venue_verified": 76
   },
   "by_year": {
@@ -132,8 +133,8 @@
     "2021": 21,
     "2022": 24,
     "2023": 18,
-    "2024": 55,
-    "2025": 54,
-    "2026": 25
+    "2024": 59,
+    "2025": 59,
+    "2026": 28
   }
 }

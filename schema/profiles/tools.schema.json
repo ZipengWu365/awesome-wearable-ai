@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Wearable AI tools",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+      },
+      "scope_tier": {
+        "enum": [
+          "core",
+          "adjacent"
+        ]
+      },
+      "curation_level": {
+        "enum": [
+          "metadata_checked",
+          "evidence_appraised"
+        ]
+      },
+      "source_ids": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "field_sources": {
+        "type": "object",
+        "propertyNames": {
+          "enum": [
+            "id",
+            "scope_tier",
+            "curation_level",
+            "source_ids",
+            "field_sources",
+            "related_ids",
+            "added_on",
+            "last_verified",
+            "name",
+            "repo",
+            "language",
+            "purpose",
+            "sensor_support",
+            "license",
+            "stars",
+            "last_commit",
+            "maintenance_status",
+            "notes"
+          ]
+        },
+        "additionalProperties": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "related_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "added_on": {
+        "type": "string",
+        "format": "date"
+      },
+      "last_verified": {
+        "type": "string",
+        "format": "date"
+      },
+      "name": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "repo": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "language": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "purpose": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "sensor_support": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "license": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "stars": {
+        "anyOf": [
+          {
+            "type": "integer",
+            "minimum": 0
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "last_commit": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "maintenance_status": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "notes": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "scope_tier",
+      "curation_level",
+      "source_ids",
+      "field_sources",
+      "related_ids",
+      "added_on",
+      "last_verified",
+      "name",
+      "repo",
+      "language",
+      "purpose",
+      "sensor_support",
+      "license",
+      "stars",
+      "last_commit",
+      "maintenance_status",
+      "notes"
+    ],
+    "additionalProperties": false
+  }
+}

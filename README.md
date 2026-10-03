@@ -8,9 +8,9 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Registry CI](https://github.com/ZipengWu365/awesome-wearable-ai/actions/workflows/validate.yml/badge.svg)](https://github.com/ZipengWu365/awesome-wearable-ai/actions/workflows/validate.yml)
-[![Accepted](https://img.shields.io/badge/accepted-396-1f6feb)](generated/statistics.json)
+[![Accepted](https://img.shields.io/badge/accepted-408-1f6feb)](generated/statistics.json)
 [![Models](https://img.shields.io/badge/models-102-8250df)](data/records/models.yaml)
-[![Watchlist](https://img.shields.io/badge/watchlist-45-b7791f)](data/excluded/watchlist.yaml)
+[![Watchlist](https://img.shields.io/badge/watchlist-53-b7791f)](data/excluded/watchlist.yaml)
 [![Version](https://img.shields.io/badge/version-v0.3.0-4c1)](CHANGELOG.md)
 
 **Models · Datasets · Digital Measures · Causal Methods · JITAIs · Closed-loop Systems · Standards**
@@ -21,9 +21,15 @@ Research map: [full-repository interactive timeline](site/research-map.html) · 
 
 > **Scope and evidence rule.** Scientific entries must appear in the explicit venue whitelist: SCI/SCIE journals, explicitly whitelisted top journals, top conferences, or domain-leading archival conferences. Official technical reports from major research organizations are allowed. Canonical datasets, standards and research tools use separate official-resource criteria. Pure preprints, workshop-only papers, unresolved publication claims and borderline venues remain in a visible watchlist and are excluded from headline counts.
 
-## What changed in v0.3.0
+## Explore the research portal
 
-The earlier package contained only a small seed registry. This release rebuilds the project around **396 accepted records**, **45 screened watchlist candidates**, and **2169 machine-derived or explicit relations**. Counts are generated from the YAML source files during every build; they are not manually typed marketing figures.
+Filter by sensor, dataset release, model weights and digital-twin evaluation. Export your shortlist as CSV/JSON and share the same query. [Local setup and migration notes](docs/LOCAL_SYNC.md) · [中文数字孪生阅读路线](docs/digital_twins_zh.md) · [Evaluation checklist](docs/digital_twin_evaluation.md).
+
+The local-catalogue integration preserves the original 396 records, adds 12 eligible publications, and retains 22 twin profiles with accepted/watchlist status kept separate. Imported profiles are annotations, not additional independent studies.
+
+## Catalogue snapshot
+
+The current registry contains **408 accepted records**, **53 screened watchlist candidates**, and **2198 machine-derived or explicit relations**. Counts are generated from the YAML source files during every build; they are not manually typed marketing figures.
 
 ## Registry at a glance
 
@@ -31,9 +37,9 @@ The earlier package contained only a small seed registry. This release rebuilds 
 |---|---:|
 | Models and representation systems | 102 |
 | Datasets, cohorts and benchmarks | 116 |
-| Causal, counterfactual and adaptive-policy methods | 61 |
+| Causal, counterfactual and adaptive-policy methods | 72 |
 | Digital measures and computational phenotypes | 35 |
-| Adaptive interventions and closed-loop systems | 40 |
+| Adaptive interventions and closed-loop systems | 41 |
 | Tools, platforms, standards and guidance | 42 |
 
 > The **102 model records are not claimed to be 102 foundation models**. They include 84 records explicitly tagged as foundation-model work, plus leading self-supervised representations, sensor-language systems, cross-dataset models and wearable control interfaces. This distinction prevents count inflation through terminology drift.
@@ -43,7 +49,7 @@ The earlier package contained only a small seed registry. This release rebuilds 
 | Evidence depth | Records | Interpretation |
 |---|---:|---|
 | `evidence_card` | 95 | Contribution, limitation and claim boundary were curated from a primary or canonical source. |
-| `metadata_verified` | 225 | Core metadata and scope were checked; full methodological appraisal remains pending. |
+| `metadata_verified` | 237 | Core metadata and scope were checked; full methodological appraisal remains pending. |
 | `venue_verified` | 76 | Bibliographic and venue eligibility were screened; treat as an index record, not a completed evidence appraisal. |
 
 ### Source-verification status
@@ -51,7 +57,7 @@ The earlier package contained only a small seed registry. This release rebuilds 
 | Verification status | Records |
 |---|---:|
 | `official_resource_checked` | 153 |
-| `primary_source_checked` | 167 |
+| `primary_source_checked` | 179 |
 | `review_reference_checked` | 76 |
 
 ## Navigate by research question
@@ -125,13 +131,14 @@ The README shows only recent representative records. The complete source of trut
 
 ## Adaptive intervention and closed-loop evidence
 
-The intervention registry contains **40 accepted records**, including **14 records explicitly marked as negative, null or materially mixed**. Protocols, proximal-effect analyses, randomized clinical outcomes and deployed closed-loop systems are kept distinct. A protocol is not effectiveness evidence; a model counterfactual is not a causal treatment effect.
+The intervention registry contains **41 accepted records**, including **14 records explicitly marked as negative, null or materially mixed**. Protocols, proximal-effect analyses, randomized clinical outcomes and deployed closed-loop systems are kept distinct. A protocol is not effectiveness evidence; a model counterfactual is not a causal treatment effect.
 
 | Resource | Year | Venue/source | Family | Evidence boundary |
 |---|---:|---|---|---|
 | [A Digital Platform with Activity Tracking for Energy Management Support in Long COVID: A Randomised Controlled Trial](https://www.nature.com/articles/s41467-025-64831-y) | 2026 | Nature Communications | `jitai-behavioral-interventions` | Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration. |
 | [A Randomized Trial of a Digitally Delivered, Home-Based Neuromodulation and Mindfulness Intervention for Pain Management in Older Adults with Knee Osteoarthritis](https://www.nature.com/articles/s41746-026-02577-7) | 2026 | npj Digital Medicine | `closed-loop-and-home-neuromodulation` | Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration. |
 | [An Umbrella Review of Systematic Reviews of the Impact of Wrist-Worn Wearables on Health Outcomes](https://doi.org/10.1152/physrev.00049.2024) | 2026 | Physiological Reviews | `wearable-feedback-evidence-synthesis` | Evidence synthesis estimates average effects over included studies and does not establish effectiveness for every device, population or intervention design. |
+| [A digital twin-enhanced decision support system improves time-in-range in type 1 diabetes: a randomized clinical trial](https://www.nature.com/articles/s41598-025-23165-x) | 2025 | Scientific Reports | `digital-twins` | Small short-term system-level trial; no isolated twin-component effect or long-term disease benefit established. |
 | [A Randomized Controlled Trial of a Digital Lifestyle Intervention Involving Postoperative Patients with Colorectal Cancer](https://www.nature.com/articles/s41746-025-01716-w) | 2025 | npj Digital Medicine | `remote-monitoring-and-clinical-escalation` | Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration. |
 | [An Adaptive AI-Based Virtual Reality Sports System for Adolescents with Excess Body Weight: A Randomized Controlled Trial](https://www.nature.com/articles/s41591-025-03724-5) | 2025 | Nature Medicine | `adaptive-rehabilitation-and-exercise` | The reported effect is tied to the randomized intervention, comparator, population, follow-up and endpoint; it should not be generalized to other devices or care pathways without new evidence. |
 | [Closed-Loop Vagus Nerve Stimulation Aids Recovery from Spinal Cord Injury](https://www.nature.com/articles/s41586-025-09028-5) | 2025 | Nature | `responsive-neurostimulation` | The reported effect is tied to the randomized intervention, comparator, population, follow-up and endpoint; it should not be generalized to other devices or care pathways without new evidence. |
@@ -146,7 +153,6 @@ The intervention registry contains **40 accepted records**, including **14 recor
 | [A Randomized Clinical Trial Testing Digital Mindset Intervention for Knee Osteoarthritis Pain and Activity Improvement](https://www.nature.com/articles/s41746-024-01281-8) | 2024 | npj Digital Medicine | `digital-rehabilitation-and-pain` | Randomization supports the specified trial estimand, but it does not validate every algorithmic component, subgroup policy or future deployment configuration. |
 | [Efficacy and Safety of Using Auditory-Motor Entrainment to Improve Walking after Stroke: A Multi-Site Randomized Controlled Trial of InTandem](https://www.nature.com/articles/s41467-024-44791-5) | 2024 | Nature Communications | `adaptive-rehabilitation-and-exercise` | The reported effect is tied to the randomized intervention, comparator, population, follow-up and endpoint; it should not be generalized to other devices or care pathways without new evidence. |
 | [Overground Gait Training With a Wearable Robot in Children With Cerebral Palsy: A Randomized Clinical Trial](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2821278) | 2024 | JAMA Network Open | `wearable-robotics-and-assistance` | The reported effect is tied to the randomized intervention, comparator, population, follow-up and endpoint; it should not be generalized to other devices or care pathways without new evidence. |
-| [Soft Robotic Apparel to Avert Freezing of Gait in Parkinson's Disease](https://www.nature.com/articles/s41591-023-02731-8) | 2024 | Nature Medicine | `wearable-robotics-and-assistance` | Repeated within-person effects are compelling mechanistic evidence for this participant but cannot establish population-level effectiveness. |
 
 ## Counterfactual reasoning: four non-equivalent meanings
 
@@ -175,7 +181,7 @@ Build locally:
 
 ```bash
 python -m pip install -r requirements.txt
-make build
+python scripts/build_all.py
 make test
 make audit
 ```

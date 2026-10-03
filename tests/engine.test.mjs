@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {enrich,select,parseState,serializeState,safeURL,toCSV} from '../site/engine.mjs';
+const payload=JSON.parse(readFileSync(new URL('../generated/registry.json',import.meta.url),'utf8'));
+const rows=enrich(payload);
+test('default query preserves all accepted records and excludes watchlist',()=>{assert.equal(select(rows,{}).length,payload.records.length);assert.ok(select(rows,{}).every(r=>r.pool==='accepted'));});
+test('watchlist toggle explicitly includes existing and imported watchlist',()=>{assert.equal(select(rows,{watchlist:'yes'}).length,payload.records.length+payload.watchlist.length);});
+test('twin profiles remain separate from accepted status',()=>{assert.equal(select(rows,{twin:'any'}).length,14);assert.equal(select(rows,{twin:'any',watchlist:'yes'}).length,22);});
+test('Share query round trips Unicode and punctuation',()=>{const s={q:'腕部 + A&B',raw:'false',watchlist:'yes',record:'method-dt-lung'};const result=parseState(serializeState(s));for(const [k,v] of Object.entries(s))assert.equal(result[k],v);});
+test('unknown availability never becomes false',()=>{const s=select(rows,{weights:'unknown'});assert.ok(s.length);assert.ok(s.every(r=>r.open_weights===undefined||r.open_weights==='unknown'));assert.ok(!s.some(r=>r.open_weights===false));});
+test('release filters cannot combine different data products',()=>{const r={id:'x',title:'x',pool:'accepted',twins:[],resource_profiles:[{metadata:{local_kind:'datasets',raw_data_available:true,n_participants:10}},{metadata:{local_kind:'datasets',raw_data_available:false,n_participants:1000}}]};assert.equal(select([r],{raw:'true',participants:'100'}).length,0);});
+test('raw and labelled accelerometry query returns real release profiles',()=>{const result=select(rows,{type:'dataset',modality:'accelerometer',raw:'true',labels:'true'});assert.ok(result.some(r=>r.id==='dataset-wesad'));});
+test('UniMTS weights correction is usable',()=>{assert.ok(select(rows,{q:'UniMTS',weights:'true'}).some(r=>r.id==='model-unimts-2024'));});
+test('unsafe links cannot become active anchors',()=>{assert.equal(safeURL('javascript:alert(1)'),null);assert.equal(safeURL('https://user:pass@example.com'),null);assert.equal(safeURL('https://example.com'),'https://example.com/');});
+test('CSV protects formulas, quotes and multiline strings',()=>{const s=toCSV([{title:'=CMD()',note:'A "quote"\nand newline'}]);assert.ok(s.includes("'=CMD()"));assert.ok(s.includes('""quote""'));assert.ok(s.endsWith('\r\n'));});
+test('unreviewed backlog is absent from the portal',()=>{assert.ok(rows.every(r=>!r.id.startsWith('candidate-local-')));});
+test('numeric sample-rate filter respects selected sensor',()=>{const r={title:'x',pool:'accepted',modalities:['accelerometer','gyroscope'],resource_profiles:[{metadata:{local_kind:'datasets',sampling_frequency_hz:{accelerometer:10,gyroscope:100}}}]};assert.equal(select([r],{modality:'accelerometer',rate:'50'}).length,0);});

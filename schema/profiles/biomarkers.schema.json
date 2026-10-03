@@ -1,0 +1,362 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Wearable AI biomarkers",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+      },
+      "scope_tier": {
+        "enum": [
+          "core",
+          "adjacent"
+        ]
+      },
+      "curation_level": {
+        "enum": [
+          "metadata_checked",
+          "evidence_appraised"
+        ]
+      },
+      "source_ids": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "field_sources": {
+        "type": "object",
+        "propertyNames": {
+          "enum": [
+            "id",
+            "scope_tier",
+            "curation_level",
+            "source_ids",
+            "field_sources",
+            "related_ids",
+            "added_on",
+            "last_verified",
+            "biomarker_name",
+            "category",
+            "definition",
+            "sensor",
+            "required_modalities",
+            "typical_sampling_frequency",
+            "window_or_duration",
+            "algorithm",
+            "reference",
+            "reference_implementation",
+            "clinical_interpretation",
+            "validated_population",
+            "known_confounders",
+            "device_dependence",
+            "longitudinal_use",
+            "disease_associations",
+            "reproducibility_status",
+            "notes",
+            "measure_class",
+            "evidence_boundary"
+          ]
+        },
+        "additionalProperties": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "related_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "added_on": {
+        "type": "string",
+        "format": "date"
+      },
+      "last_verified": {
+        "type": "string",
+        "format": "date"
+      },
+      "biomarker_name": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "category": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "definition": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "sensor": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "required_modalities": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "typical_sampling_frequency": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "window_or_duration": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "algorithm": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "reference": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "reference_implementation": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "^https?://[^\\s]+$"
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "clinical_interpretation": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "validated_population": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "known_confounders": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "device_dependence": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "longitudinal_use": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "disease_associations": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "reproducibility_status": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "notes": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      },
+      "measure_class": {
+        "enum": [
+          "research_feature",
+          "context_validated_measure",
+          "commercial_proprietary_metric"
+        ]
+      },
+      "evidence_boundary": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "const": "unknown"
+          }
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "scope_tier",
+      "curation_level",
+      "source_ids",
+      "field_sources",
+      "related_ids",
+      "added_on",
+      "last_verified",
+      "biomarker_name",
+      "category",
+      "definition",
+      "sensor",
+      "required_modalities",
+      "typical_sampling_frequency",
+      "window_or_duration",
+      "algorithm",
+      "reference",
+      "reference_implementation",
+      "clinical_interpretation",
+      "validated_population",
+      "known_confounders",
+      "device_dependence",
+      "longitudinal_use",
+      "disease_associations",
+      "reproducibility_status",
+      "notes",
+      "measure_class",
+      "evidence_boundary"
+    ],
+    "additionalProperties": false
+  }
+}

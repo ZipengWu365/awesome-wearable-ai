@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0.0",
+  "theme": "Wearable counterfactual and causal reasoning",
+  "theme_zh": "智能穿戴反事实与因果推理",
+  "interpretation": "Project-specific top-level thematic navigation. Function/variable and intervention facets are distinct, may overlap, and do not rank evidence or relabel all wearable studies as causal.",
+  "layers": [
+    {
+      "id": "reasoning",
+      "label": "Reasoning questions",
+      "label_zh": "推理问题层",
+      "description": "Model explanations, causal estimands, longitudinal effects, recourse and policy evaluation; semantics are recorded separately."
+    },
+    {
+      "id": "function_variables",
+      "label": "Functions and variables",
+      "label_zh": "功能与变量层",
+      "description": "Identity, behavior, physiology, sleep, disease risk and other target functions; causal variable roles are contextual."
+    },
+    {
+      "id": "interventions",
+      "label": "Interventions and delivery",
+      "label_zh": "干预与执行层",
+      "description": "Fixed support, contextual rules, learned policies and closed-loop systems; study design and outcomes remain independent facets."
+    }
+  ],
+  "functions": [
+    {
+      "id": "identity",
+      "label": "Identity / fingerprinting",
+      "label_zh": "身份识别／指纹",
+      "description": "Who generated the sensor history? Identity discrimination and re-identification risk."
+    },
+    {
+      "id": "activity_behavior",
+      "label": "Activity and behavior",
+      "label_zh": "活动与行为",
+      "description": "What behavior occurred and how much? Activity labels, walking and steps."
+    },
+    {
+      "id": "physiological_state",
+      "label": "Physiological and affective state",
+      "label_zh": "生理与心理状态",
+      "description": "Heart, glucose, stress and other state measures; not necessarily actionable."
+    },
+    {
+      "id": "sleep_circadian",
+      "label": "Sleep and circadian patterns",
+      "label_zh": "睡眠与昼夜节律",
+      "description": "Sleep states, duration and rhythm measurements."
+    },
+    {
+      "id": "disease_risk",
+      "label": "Disease and prognosis",
+      "label_zh": "疾病与预后",
+      "description": "Detection, incident risk, prognosis and survival; keep cross-sectional diagnosis separate from future outcomes."
+    },
+    {
+      "id": "functional_status",
+      "label": "Functional status",
+      "label_zh": "功能能力",
+      "description": "Mobility, recovery, motor impairment and physical function."
+    },
+    {
+      "id": "context_receptivity",
+      "label": "Context, availability and receptivity",
+      "label_zh": "情境、可用性与接受度",
+      "description": "Can and should support be delivered at this time? Need and receptivity are not the same variable."
+    },
+    {
+      "id": "measurement_quality",
+      "label": "Measurement quality",
+      "label_zh": "测量质量",
+      "description": "Validity, artifacts, missingness, nonwear and device reliability."
+    }
+  ],
+  "vocabularies": {
+    "layers": [
+      "reasoning",
+      "function_variables",
+      "interventions"
+    ],
+    "functions": [
+      "identity",
+      "activity_behavior",
+      "physiological_state",
+      "sleep_circadian",
+      "disease_risk",
+      "functional_status",
+      "context_receptivity",
+      "measurement_quality"
+    ],
+    "reasoning_tasks": [
+      "not_applicable",
+      "prediction_association",
+      "model_counterfactual",
+      "causal_structure",
+      "causal_effect",
+      "longitudinal_effect",
+      "policy_evaluation",
+      "causal_recourse"
+    ],
+    "variable_role": [
+      "identity",
+      "measurement",
+      "context",
+      "exposure",
+      "action",
+      "confounder",
+      "mediator",
+      "outcome",
+      "effect_modifier",
+      "availability"
+    ],
+    "claim_kind": [
+      "resource_support",
+      "prediction_association",
+      "model_explanation",
+      "causal_method",
+      "policy_method",
+      "proximal_trial_effect",
+      "clinical_trial_effect",
+      "design_framework"
+    ],
+    "counterfactual_semantics": [
+      "not_applicable",
+      "model_input_edit",
+      "potential_outcomes",
+      "structural_intervention",
+      "mechanistic_replay",
+      "unknown"
+    ],
+    "wearable_relation": [
+      "direct_wrist",
+      "other_wearable",
+      "mixed_wearable",
+      "mobile_adjacent",
+      "method_transfer",
+      "unknown"
+    ],
+    "intervention_kind": [
+      "none",
+      "design_framework",
+      "fixed_feedback",
+      "contextual_rule",
+      "learned_policy",
+      "generative_assistance",
+      "closed_loop",
+      "decision_support"
+    ],
+    "study_design": [
+      "resource",
+      "observational_prediction",
+      "observational_causal",
+      "method_simulation",
+      "micro_randomized_trial",
+      "randomized_trial",
+      "randomized_sequence_trial",
+      "pilot_deployment",
+      "review_framework",
+      "unknown"
+    ],
+    "review_scope": [
+      "primary_html_sections",
+      "primary_abstract_metadata",
+      "publisher_indexed_abstract",
+      "institutional_publication_record",
+      "existing_registry_metadata"
+    ],
+    "result_direction": [
+      "not_applicable",
+      "not_appraised",
+      "mixed",
+      "null_primary",
+      "positive_primary",
+      "simulation_only"
+    ],
+    "actionability": [
+      "not_an_action",
+      "observed_exposure",
+      "candidate_action",
+      "implemented_action",
+      "unknown"
+    ]
+  }
+}
