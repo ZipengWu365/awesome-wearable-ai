@@ -23,6 +23,51 @@ def load_issues() -> dict:
     return read_json(ASSETS / "milestones.json").get("known_source_issues", {})
 
 
+def route_classification(registry: dict) -> dict:
+    """Build the editorial layer without changing native registry fields."""
+    if __package__:
+        from .classify_research_routes import build_classification
+    else:
+        from classify_research_routes import build_classification
+    return build_classification(registry)
+
+
+def route_counts(records: list, routes: list) -> dict:
+    return {
+        status: {
+            route["id"]: {
+                "total": sum(r["catalog_status"] == status and r["primary_route"] == route["id"] for r in records),
+                **{
+                    role: sum(r["catalog_status"] == status and r["primary_route"] == route["id"] and r["route_role"] == role for r in records)
+                    for role in ("direct", "support", "framework", "adjacent")
+                },
+            }
+            for route in routes
+        }
+        for status in ("accepted", "watchlist")
+    }
+
+
+def matches_keyword(record: dict, route: dict, keyword: dict) -> bool:
+    """Match reviewed metadata selectors, never boilerplate claim boundaries."""
+    belongs = record["primary_route"] == route["id"] or (
+        keyword.get("include_secondary", False) and route["id"] in record["secondary_routes"]
+    )
+    if not belongs:
+        return False
+    return any((
+        record["id"] in keyword.get("ids", []),
+        record["family"] in keyword.get("families", []),
+        record["subtopic"] in keyword.get("subtopics", []),
+        bool(set(record.get("tags", [])) & set(keyword.get("tags", []))),
+        record.get("record_type") in keyword.get("record_types", []),
+    ))
+
+
+def topic_keywords(record: dict, routes: list) -> list:
+    return sorted({keyword["label"] for route in routes for keyword in route["keywords"] if matches_keyword(record, route, keyword)})
+
+
 def build_bins(years: list) -> list:
     if not years or any(type(year) is not int or year < 1 for year in years):
         raise ValueError("Every record must have a valid integer publication year")
@@ -61,6 +106,12 @@ def build_payload(registry: dict = None, issues: dict = None) -> dict:
         raise ValueError("Every registry record must have a nonempty string ID")
     if len(ids) != len(set(ids)):
         raise ValueError("Registry IDs must be unique across accepted records and watchlist")
+    classification = route_classification(registry)
+    assignments = {row["id"]: row for row in classification["records"]}
+    if len(assignments) != len(ids) or set(assignments) != set(ids):
+        raise ValueError("Four-theme classification must cover every registry ID exactly once")
+    routes = copy.deepcopy(taxonomy["routes"])
+    route_ids = {route["id"] for route in routes}
     bins = build_bins([record["year"] for record in originals])
     mapped = []
     for status, original_records in (("accepted", registry["records"]), ("watchlist", registry["watchlist"])):
@@ -76,7 +127,14 @@ def build_payload(registry: dict = None, issues: dict = None) -> dict:
                 "branch": branch,
                 "family": family,
                 "bin": bin_for_year(original["year"], bins),
+                **{key: value for key, value in assignments[original["id"]].items() if key != "id"},
             }
+            if additions["primary_route"] not in route_ids:
+                raise ValueError(f"Unknown primary theme for {original['id']}")
+            if additions["route_role"] not in ("direct", "support", "framework", "adjacent"):
+                raise ValueError(f"Unknown research role for {original['id']}")
+            if any(route not in route_ids or route == additions["primary_route"] for route in additions["secondary_routes"]):
+                raise ValueError(f"Invalid cross-theme link for {original['id']}")
             if original["id"] in issues:
                 additions["source_issue"] = issues[original["id"]]
                 additions["link_withheld"] = True
@@ -85,11 +143,15 @@ def build_payload(registry: dict = None, issues: dict = None) -> dict:
                     raise ValueError(f"Map metadata would overwrite original field {key!r} for {original['id']}")
             record = copy.deepcopy(original)
             record.update(additions)
+            record["topic_keywords"] = topic_keywords(record, routes)
             mapped.append(record)
     return {
         "cutoff": registry["generated_on"],
         "version": registry["version"],
         "branches": branches,
+        "routes": routes,
+        "route_counts": route_counts(mapped, routes),
+        "classification": {key: value for key, value in classification.items() if key != "records"},
         "bins": bins,
         "records": mapped,
         "counts": {
@@ -130,6 +192,11 @@ def build_coverage(registry: dict, payload: dict) -> dict:
     if payload["cutoff"] != registry["generated_on"] or payload["version"] != registry["version"]:
         raise ValueError("Coverage version and cutoff must match the source registry")
     mappings = []
+    classifications = {row["id"]: row for row in route_classification(registry)["records"]}
+    if payload["routes"] != read_json(ASSETS / "taxonomy.json")["routes"]:
+        raise ValueError("Theme definitions must match the editorial taxonomy")
+    if payload["route_counts"] != route_counts(payload["records"], payload["routes"]):
+        raise ValueError("Theme counts must match record assignments")
     for record in sorted(payload["records"], key=lambda item: item["id"]):
         original = original_by_id[record["id"]]
         for field, value in original.items():
@@ -146,7 +213,14 @@ def build_coverage(registry: dict, payload: dict) -> dict:
         expected_family = original.get("family") or original.get("proposed_family")
         if record["branch"] != expected_branch or record["family"] != expected_family:
             raise ValueError(f"Incorrect native classification for {record['id']}")
+        for key, value in classifications[record["id"]].items():
+            if record.get(key) != value:
+                raise ValueError(f"Incorrect editorial classification for {record['id']}: {key}")
+        if record["topic_keywords"] != topic_keywords(record, payload["routes"]):
+            raise ValueError(f"Incorrect topic keywords for {record['id']}")
         mapping = {key: record[key] for key in ("id", "branch", "year", "bin", "family", "catalog_status")}
+        mapping.update({key: value for key, value in classifications[record["id"]].items() if key != "id"})
+        mapping["topic_keywords"] = record["topic_keywords"]
         if record.get("source_issue"):
             mapping.update(source_issue=record["source_issue"], link_withheld=record["link_withheld"])
         mappings.append(mapping)
@@ -166,6 +240,8 @@ def build_coverage(registry: dict, payload: dict) -> dict:
         "accepted_ids": accepted_ids,
         "watchlist_ids": watchlist_ids,
         "branches": copy.deepcopy(payload["branches"]),
+        "routes": copy.deepcopy(payload["routes"]),
+        "route_counts": copy.deepcopy(payload["route_counts"]),
         "bins": copy.deepcopy(payload["bins"]),
         "records": mappings,
     }
@@ -182,10 +258,11 @@ def main() -> int:
     registry = read_json(REGISTRY_PATH)
     payload = build_payload(registry)
     coverage = build_coverage(registry, payload)
-    template = (ASSETS / "compact-map-source.html").read_text(encoding="utf-8")
+    template = (ASSETS / "four-theme-map-source.html").read_text(encoding="utf-8")
     output = render_template(template, payload)
     (ROOT / "site" / "research-map.html").write_text(output, encoding="utf-8")
     (ASSETS / "coverage.json").write_text(json.dumps(coverage, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (ASSETS / "route-classification.json").write_text(json.dumps(route_classification(registry), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     counts = payload["counts"]
     print(f"Research map rendered: {counts['accepted']} accepted + {counts['watchlist']} watchlist records; no omissions")
     return 0

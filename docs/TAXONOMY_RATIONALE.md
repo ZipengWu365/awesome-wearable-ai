@@ -4,6 +4,22 @@
 
 Awesome Wearable AI uses a **lifecycle backbone plus orthogonal facets**. A single nested tree is inadequate because the same resource can be, for example, an accelerometer model, a sleep phenotype system, a causal method, an older-adult study, and an on-device deployment at the same time.
 
+## Reader-facing research route
+
+The intelligence station organizes all existing records around four user-defined themes:
+
+```text
+Wearable disease prediction → Intervention / counterfactuals → Personal digital twin
+                                                                       ↕
+                                                        Metaverse / mixed-reality entry
+```
+
+The first three themes describe a research agenda. The fourth describes how a personal twin could be sensed, presented and interacted with through mixed-reality glasses and related interfaces. It is not another clinical stage, nor an assertion that every paper advances through the route.
+
+The [editorial classification](../assets/research-map/route-classification.json) is an additive layer: one primary theme, optional secondary themes, a research role, and a placement reason for every accepted and watchlist record. Native families, resource types, publication status and evidence metadata remain unchanged. Supporting models, datasets, tools and standards are explicitly marked as enablers rather than achieved route endpoints.
+
+Digital-twin frameworks, limited physiological implementations, subpopulation simulators and rendered avatars remain distinct. Personalization alone does not establish a dynamic twin; model-level recourse alone does not identify a treatment effect. Sparse twin and MR coverage is a gap to expose, not a reason to inflate the categories.
+
 ## Lifecycle backbone
 
 ```text

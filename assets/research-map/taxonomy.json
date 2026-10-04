@@ -1,16 +1,72 @@
 {
-  "status": "complete registry-native display taxonomy",
+  "status": "four-theme editorial research-route taxonomy",
   "data_cutoff": "2026-09-02",
   "complete_registry": "../../generated/registry.json",
   "coverage_manifest": "coverage.json",
   "coverage_rule": "Every accepted and watchlist record appears exactly once. No representative-only selection is used.",
   "language": "en",
   "time_direction": "upward",
-  "line_semantics": "Shared calendar and repository classification only, not paper-to-paper inheritance, causal relationships, or clinical benefit.",
+  "line_semantics": "The first three themes form a research agenda: prediction, intervention/counterfactuals, and a personal digital twin. The fourth is its presentation and interaction entry point, not a fourth clinical stage. Calendar branches do not assert paper ancestry or inevitable technical progress.",
   "family_semantics": "Accepted records retain their native family; watchlist records use proposed_family without altering their original metadata or review status.",
   "time_bins": "1980–2009, 2010–2014, then one bin per year from 2015 to the latest record year (at least 2026). Older records expand the first bin instead of being omitted.",
   "archival_selection": "milestones.json retains the earlier selected examples and source warnings; it is not the full-map data source.",
-  "orthogonal_facets": ["Research family", "Signal and sensor", "Task and population", "Architecture", "Evidence", "Catalog status"],
+  "classification_layer": "route-classification.json",
+  "classification_semantics": "One primary theme per record, with cross-theme links and a direct/support/framework/adjacent role. Theme membership is editorial placement, not a claim that an achieved capability or clinical benefit has been demonstrated.",
+  "orthogonal_facets": ["Research role", "Native resource type", "Research family", "Signal and sensor", "Task and population", "Architecture", "Evidence", "Catalog status"],
+  "routes": [
+    {
+      "id": "prediction", "number": "01", "label": "Disease prediction", "short_label": "Prediction", "color": "#087f8c",
+      "question": "What might happen to this person?",
+      "summary": "Wearable signals, digital measures and models for identifying health states and forecasting risk.",
+      "topics": ["Signals & biomarkers", "Health & disease models", "Foundation models"],
+      "keywords": [
+        {"id": "risk", "label": "Disease risk", "subtopics": ["Disease prediction", "Disease risk estimation", "Disease episode prediction", "Early disease warning", "Future glycemic-control prediction", "Aging & outcome risk estimation", "Disease risk & digital biomarkers"]},
+        {"id": "biomarkers", "label": "Biomarkers", "subtopics": ["Disease risk & digital biomarkers", "Disease screening & monitoring", "Biomarker evaluation frameworks", "Brain-health biomarker synthesis", "Aging & outcome risk estimation"]},
+        {"id": "foundation", "label": "Foundation models", "tags": ["foundation-model"], "note": "Records explicitly tagged as foundation-model work; pretraining alone does not establish a disease forecast or treatment effect."}
+      ],
+      "boundary": "Sensing, recognition and representation learning support prediction. Predictive accuracy alone does not establish treatment benefit.",
+      "next_question": "Which predictions remain reliable across people, devices and daily life?"
+    },
+    {
+      "id": "intervention", "number": "02", "label": "Intervention & counterfactuals", "short_label": "Intervention", "color": "#5266c8",
+      "question": "What changes under a different action?",
+      "summary": "Causal effects, alternative-action simulations and adaptive policies that connect observation to action.",
+      "topics": ["Causal & counterfactual methods", "Adaptive policies", "Trials & closed-loop care"],
+      "keywords": [
+        {"id": "causal", "label": "Causal inference", "families": ["causal-identification-foundations", "causal-discovery-and-invariance"]},
+        {"id": "counterfactual", "label": "Counterfactuals", "families": ["longitudinal-counterfactual-models", "counterfactual-explanations-and-recourse"], "note": "Predictive recourse and causal treatment-effect estimates are distinct; consult each record's evidence boundary."},
+        {"id": "adaptive", "label": "Adaptive interventions", "subtopics": ["Adaptive health interventions", "Adaptive trials & JITAI", "Adaptive-intervention synthesis", "Policy learning & evaluation", "Closed-loop physiological control", "Rehabilitation & assistance", "Intention-aware rehabilitation control", "VR-assisted health intervention"]}
+      ],
+      "boundary": "Model-level what-if explanations, causal effects and intervention trials are different evidence classes. Null and mixed results remain visible.",
+      "next_question": "Do estimated intervention effects hold outside the model and in prospective studies?"
+    },
+    {
+      "id": "twin", "number": "03", "label": "Personal digital twin", "short_label": "Digital twin", "color": "#9264b5",
+      "question": "Can we build an evolving model of this person?",
+      "summary": "Individual dynamics, longitudinal state updates and simulations of possible personal trajectories.",
+      "topics": ["Individual state & dynamics", "Intervention simulation", "Twin frameworks & validation"],
+      "keywords": [
+        {"id": "personalization", "label": "Personalization", "include_secondary": true, "ids": ["model-personalized-physio-adaptation-2025", "model-personal-health-insights-agent-2026", "model-ph-llm-2025", "watch-physiollm-2024", "watch-conversational-health-agents-2024"], "note": "Cross-theme enablers: individual adaptation and health interpretation are not implemented dynamic twins."},
+        {"id": "simulation", "label": "Dynamic simulation", "include_secondary": true, "ids": ["intervention-aid-digital-twin-coadaptation-2025", "watch-jitai-diffusion-twins-2026", "method-synctwin-2021", "method-cf-ode-2022", "method-te-cde-2022", "method-causal-transformer-2022", "method-rmsn-2018"], "note": "Includes cross-theme methods. Individual physiological simulation, subpopulation simulation and counterfactual-method enablers remain distinct."},
+        {"id": "frameworks", "label": "Causal frameworks", "include_secondary": true, "ids": ["method-causal-digital-twins-2026", "method-causal-counterfactual-prediction-2020"], "note": "Conceptual requirements, not prospective validation of deployed personal twins."}
+      ],
+      "boundary": "A personalized predictor is not automatically a digital twin. Conceptual frameworks and subpopulation simulators are not validated whole-person twins.",
+      "next_question": "Can an individual model stay calibrated over time and simulate unseen actions?"
+    },
+    {
+      "id": "interface", "number": "04", "label": "Metaverse & mixed reality", "short_label": "Mixed reality", "color": "#b97936",
+      "question": "How can a person see and interact with their twin?",
+      "summary": "Mixed-reality glasses as a sensing, visualization and interaction entry point to a personal digital twin.",
+      "topics": ["Egocentric & spatial context", "Natural & neural interfaces", "Embodiment & XR applications"],
+      "keywords": [
+        {"id": "glasses", "label": "Smart glasses", "ids": ["model-sing-wearables-2025", "dataset-ego4d", "dataset-ego-exo4d", "model-generic-neuromotor-interface-2025", "dataset-emg2pose", "dataset-emg2qwerty"], "note": "Curated spatial-perception and body-input enablers, not direct smart-glasses system evidence. The catalog has no complete MR-glasses personal-twin system."},
+        {"id": "egocentric", "label": "First-person vision", "families": ["egocentric-multimodal-datasets"]},
+        {"id": "neural", "label": "Neural interfaces", "families": ["emg-neuromotor-models", "emg-neuromotor-datasets"], "subtopics": ["Neuromotor & neural interfaces", "Neural-language decoding"], "note": "EMG and BCI input research; relevance does not establish MR integration or mind-reading."}
+      ],
+      "boundary": "The current registry contains adjacent egocentric, neural-interface and XR work, not a complete smart-glasses frontier. A rendered avatar is not itself a digital twin.",
+      "next_question": "Which capabilities make a personal twin usable through mixed-reality glasses?"
+    }
+  ],
   "branches": [
     {"id": "model", "label": "Models", "color": "#3979df"},
     {"id": "measure", "label": "Measures", "color": "#17968b"},

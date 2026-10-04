@@ -8,6 +8,7 @@ from scripts.render_research_map import (
     bin_for_year,
     build_coverage,
     build_payload,
+    matches_keyword,
     read_json,
     render_template,
 )
@@ -28,6 +29,47 @@ class ResearchMapTests(unittest.TestCase):
             self.assertEqual(len(expected), self.payload["counts"][status])
         ids = [record["id"] for record in self.payload["records"]]
         self.assertEqual(len(ids), len(set(ids)))
+
+    def test_four_user_themes_cover_every_record_with_honest_roles(self):
+        self.assertEqual(["prediction", "intervention", "twin", "interface"], [r["id"] for r in self.payload["routes"]])
+        for record in self.payload["records"]:
+            self.assertIn(record["primary_route"], {r["id"] for r in self.payload["routes"]})
+            self.assertIn(record["route_role"], {"direct", "support", "framework", "adjacent"})
+            self.assertTrue(record["classification_reason"])
+            self.assertNotIn(record["primary_route"], record["secondary_routes"])
+        for status in ("accepted", "watchlist"):
+            self.assertEqual(self.payload["counts"][status], sum(row["total"] for row in self.payload["route_counts"][status].values()))
+        twins = {r["id"]: r for r in self.payload["records"] if r["primary_route"] == "twin"}
+        self.assertEqual({"method-causal-digital-twins-2026", "intervention-aid-digital-twin-coadaptation-2025"}, set(twins))
+        self.assertEqual("framework", twins["method-causal-digital-twins-2026"]["route_role"])
+
+    def test_coverage_rejects_tampered_editorial_assignment(self):
+        for field, value in (("primary_route", "twin"), ("secondary_routes", ["twin"]), ("route_role", "direct"), ("classification_reason", "Unverified claim")):
+            payload = copy.deepcopy(self.payload)
+            record = next(r for r in payload["records"] if r["id"] == "dataset-mitbih-arrhythmia")
+            record[field] = value
+            with self.assertRaises(ValueError):
+                build_coverage(self.registry, payload)
+
+    def test_keywords_have_real_matches_and_explicit_selectors(self):
+        source_ids = {r["id"] for r in self.payload["records"]}
+        for route in self.payload["routes"]:
+            self.assertEqual(3, len(route["keywords"]))
+            self.assertEqual(3, len({keyword["id"] for keyword in route["keywords"]}))
+            for keyword in route["keywords"]:
+                self.assertTrue(set(keyword.get("ids", [])) <= source_ids, keyword["id"])
+                self.assertTrue(any(matches_keyword(r, route, keyword) for r in self.payload["records"]), keyword["id"])
+        mapped = {r["id"]: r for r in self.payload["records"]}
+        self.assertIn("Smart glasses", mapped["model-sing-wearables-2025"]["topic_keywords"])
+        self.assertIn("Personalization", mapped["model-ph-llm-2025"]["topic_keywords"])
+        self.assertEqual("prediction", mapped["model-ph-llm-2025"]["primary_route"])
+        self.assertNotIn("Personalization", mapped["dataset-mitbih-arrhythmia"]["topic_keywords"])
+
+    def test_coverage_rejects_invented_keywords(self):
+        payload = copy.deepcopy(self.payload)
+        payload["records"][0]["topic_keywords"] = ["Invented evidence"]
+        with self.assertRaises(ValueError):
+            build_coverage(self.registry, payload)
 
     def test_original_metadata_and_source_are_unchanged(self):
         before = copy.deepcopy(self.registry)
