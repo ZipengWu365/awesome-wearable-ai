@@ -82,17 +82,50 @@ test_unique_ids_and_titles (test_registry.RegistryTests) ... ok
 test_coverage_manifest_proves_exact_id_sets (test_research_map.ResearchMapTests) ... ok
 test_coverage_rejects_an_omitted_or_duplicate_record (test_research_map.ResearchMapTests) ... ok
 test_coverage_rejects_changed_classification_counts_or_metadata (test_research_map.ResearchMapTests) ... ok
+test_coverage_rejects_invented_keywords (test_research_map.ResearchMapTests) ... ok
+test_coverage_rejects_tampered_editorial_assignment (test_research_map.ResearchMapTests) ... ok
+test_deployed_workspace_is_identical_and_keeps_all_registry_ids (test_research_map.ResearchMapTests) ... ok
 test_every_record_has_one_native_branch_and_time_bin (test_research_map.ResearchMapTests) ... ok
 test_exact_accepted_and_watchlist_coverage (test_research_map.ResearchMapTests) ... ok
+test_four_user_themes_cover_every_record_with_honest_roles (test_research_map.ResearchMapTests) ... ok
 test_future_or_earlier_years_are_not_silently_dropped (test_research_map.ResearchMapTests) ... ok
 test_invalid_year_type_branch_or_duplicate_id_fails (test_research_map.ResearchMapTests) ... ok
+test_keywords_have_real_matches_and_explicit_selectors (test_research_map.ResearchMapTests) ... ok
 test_known_bad_links_are_withheld_without_losing_records (test_research_map.ResearchMapTests) ... ok
 test_oldest_dataset_and_infrastructure_guidelines_are_retained (test_research_map.ResearchMapTests) ... ok
 test_original_metadata_and_source_are_unchanged (test_research_map.ResearchMapTests) ... ok
+test_real_radar_keeps_intelligence_and_registry_status_separate (test_research_map.ResearchMapTests) ... ok
 test_template_requires_one_placeholder_and_escapes_script_close (test_research_map.ResearchMapTests) ... ok
+test_counts_and_stored_document_are_reproducible (test_route_classification.RouteClassificationTests) ... ok
+test_does_not_modify_canonical_metadata (test_route_classification.RouteClassificationTests) ... ok
+test_every_id_is_present_once (test_route_classification.RouteClassificationTests) ... ok
+test_one_primary_and_valid_secondary_routes (test_route_classification.RouteClassificationTests) ... ok
+test_rules_do_not_use_boilerplate_or_twin_keyword_alone (test_route_classification.RouteClassificationTests) ... ok
+test_subpopulation_and_synthetic_twins_are_not_individual_twins (test_route_classification.RouteClassificationTests) ... ok
+test_twin_route_does_not_absorb_every_personalized_model (test_route_classification.RouteClassificationTests) ... ok
+test_unknown_family_and_duplicate_ids_fail_instead_of_silent_assignment (test_route_classification.RouteClassificationTests) ... ok
+test_vr_trials_and_adjacent_interfaces_preserve_contribution_boundaries (test_route_classification.RouteClassificationTests) ... ok
+test_watchlist_status_is_not_promoted_and_reviews_are_explicit (test_route_classification.RouteClassificationTests) ... ok
+test_assessment_signal_links_are_real_and_relevant (test_technology_radar.TechnologyRadarTests) ... ok
+test_availability_and_claim_boundaries_cannot_be_blank (test_technology_radar.TechnologyRadarTests) ... ok
+test_date_shape_and_calendar_validity_fail (test_technology_radar.TechnologyRadarTests) ... ok
+test_duplicate_signal_ids_and_unknown_registry_ids_fail (test_technology_radar.TechnologyRadarTests) ... ok
+test_emerging_pattern_requires_two_distinct_event_dates (test_technology_radar.TechnologyRadarTests) ... ok
+test_event_date_remains_separate_from_publication_date (test_technology_radar.TechnologyRadarTests) ... ok
+test_four_assessments_have_unique_valid_routes (test_technology_radar.TechnologyRadarTests) ... ok
+test_invalid_primary_secondary_and_duplicate_routes_fail (test_technology_radar.TechnologyRadarTests) ... ok
+test_no_recent_signal_is_required_or_fabricated (test_technology_radar.TechnologyRadarTests) ... ok
+test_performance_needs_explicit_comparison_conditions (test_technology_radar.TechnologyRadarTests) ... ok
+test_schema_is_valid_and_validation_preserves_input (test_technology_radar.TechnologyRadarTests) ... ok
+test_six_update_types_are_unique_and_complete (test_technology_radar.TechnologyRadarTests) ... ok
+test_sources_require_https_host_and_no_credentials (test_technology_radar.TechnologyRadarTests) ... ok
+test_vendor_and_preprint_status_are_not_upgraded (test_technology_radar.TechnologyRadarTests) ... ok
+test_verification_cannot_precede_publication (test_technology_radar.TechnologyRadarTests) ... ok
+test_version_missing_fields_and_unexpected_fields_fail (test_technology_radar.TechnologyRadarTests) ... ok
+test_window_order_and_review_cutoff_are_validated (test_technology_radar.TechnologyRadarTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 17 tests
+Ran 50 tests
 
 OK
 ```

@@ -19,6 +19,8 @@
 
 Research map: [four-theme overview and full-repository timeline](site/research-map.html) · [designer handoff and editable assets](assets/research-map/README.md). Every accepted record and watchlist candidate is included, with an [ID-by-ID coverage ledger](assets/research-map/coverage.json), expandable year groups and complete search results.
 
+Technology intelligence: [open the radar](https://zipengwu365.github.io/awesome-wearable-ai/research-map.html) for four-theme assessments and dated changes in methods, data, hardware, performance, products/features and research directions. Each signal compares before/after, evidence, limits and implications. The initial selected-source review is dated **2026-10-04**; it is separate from the frozen registry cutoff, not exhaustive weekly monitoring or an automatic acceptance of new papers.
+
 > **Scope and evidence rule.** Scientific entries must appear in the explicit venue whitelist: SCI/SCIE journals, explicitly whitelisted top journals, top conferences, or domain-leading archival conferences. Official technical reports from major research organizations are allowed. Canonical datasets, standards and research tools use separate official-resource criteria. Pure preprints, workshop-only papers, unresolved publication claims and borderline venues remain in a visible watchlist and are excluded from headline counts.
 
 ## Four research themes

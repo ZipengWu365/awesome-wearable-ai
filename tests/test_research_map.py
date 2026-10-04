@@ -1,5 +1,6 @@
 import copy
 import json
+import re
 import unittest
 
 from scripts.render_research_map import (
@@ -190,6 +191,28 @@ class ResearchMapTests(unittest.TestCase):
         for template in ("no placeholder", "__RESEARCH_DATA__ __RESEARCH_DATA__"):
             with self.assertRaises(ValueError):
                 render_template(template, payload)
+
+    def test_deployed_workspace_is_identical_and_keeps_all_registry_ids(self):
+        root = ASSETS.parents[1]
+        local = (root / "site" / "research-map.html").read_text(encoding="utf-8")
+        self.assertEqual(local, (root / "website" / "research-map.html").read_text(encoding="utf-8"))
+        embedded = re.search(r'<script id="research-data" type="application/json">(.*?)</script>', local, re.S)
+        self.assertIsNotNone(embedded)
+        payload = json.loads(embedded.group(1))
+        self.assertEqual(self.payload["records"], payload["records"])
+        self.assertEqual(self.payload["cutoff"], payload["cutoff"])
+        self.assertEqual(read_json(ASSETS / "technology-radar.json"), payload["radar"])
+        self.assertEqual(build_coverage(self.registry, self.payload), build_coverage(self.registry, payload))
+
+    def test_real_radar_keeps_intelligence_and_registry_status_separate(self):
+        from scripts.validate_technology_radar import validate_radar
+        radar = read_json(ASSETS / "technology-radar.json")
+        validate_radar(radar, {r["id"] for r in self.payload["records"]}, {r["id"] for r in self.payload["routes"]})
+        self.assertEqual(4, len(radar["assessments"]))
+        self.assertEqual(7, len(radar["signals"]))
+        self.assertEqual({"preprint", "peer_reviewed", "vendor_announcement"}, {s["evidence_level"] for s in radar["signals"]})
+        self.assertTrue(all(not s["registry_ids"] for s in radar["signals"] if s["evidence_level"] != "peer_reviewed"))
+        self.assertTrue(all(s["event_date"] < radar["window"]["start"] for s in radar["signals"] if s["temporal_role"] == "baseline"))
 
 
 if __name__ == "__main__":

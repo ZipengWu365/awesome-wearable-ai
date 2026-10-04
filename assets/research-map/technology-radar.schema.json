@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wearable AI technology radar",
+  "description": "Editorial change signals are separate from the frozen research registry. Structural validity does not establish scientific evidence or a trend.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "reviewed_on", "window", "coverage_note", "update_types", "assessments", "signals"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "reviewed_on": {"$ref": "#/$defs/date"},
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": {"$ref": "#/$defs/date"},
+        "end": {"$ref": "#/$defs/date"}
+      }
+    },
+    "coverage_note": {"$ref": "#/$defs/text"},
+    "update_types": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label"],
+        "properties": {
+          "id": {"$ref": "#/$defs/updateType"},
+          "label": {"$ref": "#/$defs/text"}
+        }
+      }
+    },
+    "assessments": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["route", "kind", "headline", "summary", "limit", "signal_ids"],
+        "properties": {
+          "route": {"$ref": "#/$defs/text"},
+          "kind": {"enum": ["assessment", "emerging_pattern"]},
+          "headline": {"$ref": "#/$defs/text"},
+          "summary": {"$ref": "#/$defs/text"},
+          "limit": {"$ref": "#/$defs/text"},
+          "signal_ids": {"$ref": "#/$defs/strings"}
+        }
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/signal"}
+    }
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "date": {"type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "strings": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+    "updateType": {"enum": ["method", "data", "hardware", "performance", "product", "direction"]},
+    "signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "route", "secondary_routes", "types", "publication_date", "event_date", "verified_on", "temporal_role", "evidence_level", "availability", "title", "before", "after", "evidence", "limit", "implication", "sources", "registry_ids", "keywords"],
+      "properties": {
+        "id": {"$ref": "#/$defs/text"},
+        "route": {"$ref": "#/$defs/text"},
+        "secondary_routes": {"$ref": "#/$defs/strings"},
+        "types": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/updateType"}
+        },
+        "publication_date": {"$ref": "#/$defs/date"},
+        "event_date": {"$ref": "#/$defs/date"},
+        "verified_on": {"$ref": "#/$defs/date"},
+        "temporal_role": {"enum": ["baseline", "update"]},
+        "evidence_level": {"enum": ["peer_reviewed", "preprint", "vendor_announcement"]},
+        "availability": {"$ref": "#/$defs/text"},
+        "title": {"$ref": "#/$defs/text"},
+        "before": {"$ref": "#/$defs/text"},
+        "after": {"$ref": "#/$defs/text"},
+        "evidence": {"$ref": "#/$defs/text"},
+        "limit": {"$ref": "#/$defs/text"},
+        "implication": {"$ref": "#/$defs/text"},
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "url"],
+            "properties": {
+              "title": {"$ref": "#/$defs/text"},
+              "url": {"type": "string", "minLength": 1, "format": "uri"}
+            }
+          }
+        },
+        "registry_ids": {"$ref": "#/$defs/strings"},
+        "keywords": {"$ref": "#/$defs/strings"},
+        "comparison": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["baseline", "result", "conditions"],
+          "properties": {
+            "baseline": {"$ref": "#/$defs/text"},
+            "result": {"$ref": "#/$defs/text"},
+            "conditions": {"$ref": "#/$defs/text"}
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"types": {"contains": {"const": "performance"}}}, "required": ["types"]},
+          "then": {"required": ["comparison"]}
+        }
+      ]
+    }
+  }
+}

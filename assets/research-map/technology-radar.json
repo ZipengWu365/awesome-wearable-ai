@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-04",
+  "window": {"start": "2026-09-28", "end": "2026-10-04"},
+  "coverage_note": "Selected primary-source checks, not exhaustive weekly monitoring. Event dates can be publication dates or vendor-announced rollout dates; verification is not independent replication. Radar items do not change the registry cutoff or acceptance counts.",
+  "update_types": [
+    {"id": "method", "label": "Methods"},
+    {"id": "data", "label": "Data"},
+    {"id": "hardware", "label": "Hardware"},
+    {"id": "performance", "label": "Performance"},
+    {"id": "product", "label": "Products & features"},
+    {"id": "direction", "label": "New directions"}
+  ],
+  "assessments": [
+    {
+      "route": "prediction", "kind": "emerging_pattern",
+      "headline": "From signal encoding to longitudinal reasoning",
+      "summary": "Physiology-aware generation and long personal histories extend representation learning into richer temporal context.",
+      "limit": "Preprints; no prospective disease-prediction or clinical-utility validation.",
+      "signal_ids": ["soter-2026", "wearableqa-2026"]
+    },
+    {
+      "route": "intervention", "kind": "assessment",
+      "headline": "Action claims need intervention evidence",
+      "summary": "Frameworks and controlled trials answer different questions. Judge actions against outcomes and identification assumptions.",
+      "limit": "No new intervention result verified in the selected weekly window.",
+      "signal_ids": ["causal-twin-framework-2026", "aid-twin-baseline-2025", "t2d-predictive-twin-2026"]
+    },
+    {
+      "route": "twin", "kind": "emerging_pattern",
+      "headline": "Useful twins remain disease-specific",
+      "summary": "Individual diabetes models couple repeated feedback with adaptation; whole-person causal twins remain an open research agenda.",
+      "limit": "Predictive, mechanistic and causal twins are not interchangeable.",
+      "signal_ids": ["aid-twin-baseline-2025", "t2d-predictive-twin-2026", "causal-twin-framework-2026"]
+    },
+    {
+      "route": "interface", "kind": "assessment",
+      "headline": "Glasses are becoming a programmable entry point",
+      "summary": "Inputs and developer tooling are advancing; delivery status and regional availability need separate tracking.",
+      "limit": "Vendor evidence; avatars are not health twins or complete spatial MR.",
+      "signal_ids": ["meta-dat-1-2026", "meta-display-expansion-2026"]
+    }
+  ],
+  "signals": [
+    {
+      "id": "meta-dat-1-2026", "route": "interface", "secondary_routes": [],
+      "types": ["method", "product"],
+      "publication_date": "2026-09-24", "event_date": "2026-09-30", "verified_on": "2026-10-04",
+      "temporal_role": "update", "evidence_level": "vendor_announcement",
+      "availability": "Rollout announced from September 30; universal availability not independently checked.",
+      "title": "Meta DAT 1.0: developer preview → supported release",
+      "before": "A year of developer-preview integrations and developer-mode testing.",
+      "after": "A supported toolkit connects mobile-app logic to glasses camera, speech, head motion and Neural Band input.",
+      "evidence": "Meta's developer announcement dates the rollout start to September 30.",
+      "limit": "WebMCP remains preview; connectors are early access; discovery is coming soon. Not an independent performance test.",
+      "implication": "A concrete integration surface for future personal-model interfaces, not proof that a twin or full MR system exists.",
+      "sources": [{"title": "Meta developer announcement · Sep 24", "url": "https://developers.meta.com/blog/meta-connect-recap-ai-glasses/"}],
+      "registry_ids": [], "keywords": ["Smart glasses", "Developer toolkit", "Neural interfaces"]
+    },
+    {
+      "id": "meta-display-expansion-2026", "route": "interface", "secondary_routes": [],
+      "types": ["hardware", "product", "direction"],
+      "publication_date": "2026-09-23", "event_date": "2026-09-23", "verified_on": "2026-10-04",
+      "temporal_role": "update", "evidence_level": "vendor_announcement",
+      "availability": "UK/Canada sales and US online ordering announced; France/Italy/Germany preorders, supply planned October 13. Hologram US early access later this fall.",
+      "title": "Meta Display: wider sales; face-avatar calls announced",
+      "before": "The 2025 launch used selected US retail locations.",
+      "after": "More markets and online ordering; a voice-driven face avatar is announced for hands-free calls.",
+      "evidence": "Official launch and availability statements, not an independent hands-on assessment.",
+      "limit": "Preorder is not delivery. The avatar infers expressions from speech; it is not a physiological twin. A HUD is not automatically spatial MR.",
+      "implication": "Separate the interaction entrance from the underlying body model, and track feature delivery by region.",
+      "sources": [
+        {"title": "Meta feature and availability announcement", "url": "https://about.fb.com/news/2026/09/new-features-for-meta-ray-ban-display-navigation-hologram/"},
+        {"title": "2025 launch baseline", "url": "https://about.fb.com/news/2025/09/meta-ray-ban-display-ai-glasses-emg-wristband/"}
+      ],
+      "registry_ids": [], "keywords": ["Smart glasses", "Display", "Avatar", "Availability"]
+    },
+    {
+      "id": "soter-2026", "route": "prediction", "secondary_routes": [],
+      "types": ["method", "performance"],
+      "publication_date": "2026-09-15", "event_date": "2026-09-15", "verified_on": "2026-10-04",
+      "temporal_role": "update", "evidence_level": "preprint",
+      "availability": "Research preprint; not accepted into the frozen registry.",
+      "title": "SOTER: physiology-aware forecasting and imputation",
+      "before": "General time-series transfer or static physiological representations.",
+      "after": "Cross-channel dependencies, frequency-informed expert routing and continuous-time decoding.",
+      "evidence": "Authors evaluate six datasets: best zero-shot RMSE on four, MAE on five, and best imputation at 75% missingness on six.",
+      "limit": "Preprint and author-run comparisons; hospital waveforms are not all free-living wearables. No prospective clinical benefit.",
+      "implication": "Track temporal and physiological structure as an enabling method, not a validated disease predictor.",
+      "comparison": {
+        "baseline": "Paper's general time-series and physiological-model comparators.",
+        "result": "Dataset-specific best scores, not a single universal improvement percentage.",
+        "conditions": "Use the paper's matched forecasting/imputation protocols; tasks and metrics differ across datasets."
+      },
+      "sources": [
+        {"title": "arXiv v1 · date and identity", "url": "https://arxiv.org/abs/2609.16804"},
+        {"title": "Methods and comparison protocols", "url": "https://arxiv.org/html/2609.16804v1"}
+      ],
+      "registry_ids": [], "keywords": ["Foundation models", "Physiology", "Continuous time", "Imputation"]
+    },
+    {
+      "id": "wearableqa-2026", "route": "prediction", "secondary_routes": ["twin"],
+      "types": ["data", "performance", "direction"],
+      "publication_date": "2026-09-04", "event_date": "2026-09-04", "verified_on": "2026-10-04",
+      "temporal_role": "update", "evidence_level": "preprint",
+      "availability": "Research benchmark preprint; not accepted into the frozen registry.",
+      "title": "WearableQA: longitudinal personal-data reasoning",
+      "before": "Text-only health QA or directly prompting over long sensor sequences.",
+      "after": "4,084 ten-choice questions across 200 people, with up to 500 days of wearable histories and additional health context.",
+      "evidence": "Table 2: the same GPT-5.4 scores 51.2% with row-wise CoT and 71.3% with fixed-representation agentic Python access.",
+      "limit": "Tool access and computation change. This is QA accuracy, not a weight upgrade, diagnosis accuracy or clinical benefit.",
+      "implication": "A testbed for reasoning over personal histories; not an evolving, causally validated individual twin.",
+      "comparison": {
+        "baseline": "GPT-5.4, row-wise chain-of-thought: 51.2%.",
+        "result": "Same model, fixed-repr agentic Python access: 71.3% (+20.1 percentage points).",
+        "conditions": "Same WearableQA benchmark; different tool access and compute. Do not compare this with disease-prediction metrics."
+      },
+      "sources": [
+        {"title": "arXiv v1 · date and identity", "url": "https://arxiv.org/abs/2609.05405"},
+        {"title": "Benchmark design and Table 2", "url": "https://arxiv.org/html/2609.05405v1"}
+      ],
+      "registry_ids": [], "keywords": ["Longitudinal data", "Personalization", "Benchmark", "Tool use"]
+    },
+    {
+      "id": "t2d-predictive-twin-2026", "route": "twin", "secondary_routes": ["intervention"],
+      "types": ["method", "direction"],
+      "publication_date": "2026-07-08", "event_date": "2026-07-08", "verified_on": "2026-10-04",
+      "temporal_role": "baseline", "evidence_level": "peer_reviewed",
+      "availability": "Published small clinical trial; event date is publication, not trial completion. Not yet cataloged.",
+      "title": "T2D predictive twin: weekly model updates, daily feedback",
+      "before": "Self-monitoring and periodic care without model-generated daily feedback.",
+      "after": "Individual transfer learning, weekly retraining and daily SMS suggestions with nurse-scored safeguards.",
+      "evidence": "Single-centre randomized substudy: 19 participants, 10 AI and 9 control; three-month intervention after three-month baseline. Weight differed; glucose stayed stable.",
+      "limit": "Authors describe a predictive twin, not a fully bidirectional, real-time mechanistic twin. Small sample; not proof of glucose improvement.",
+      "implication": "Inspect which twin properties exist and which outcomes changed before treating personalization as a full twin.",
+      "sources": [{"title": "npj Health Systems · July 8, 2026", "url": "https://www.nature.com/articles/s44401-026-00118-8"}],
+      "registry_ids": [], "keywords": ["Predictive twin", "Personalization", "Type 2 diabetes", "Feedback"]
+    },
+    {
+      "id": "causal-twin-framework-2026", "route": "twin", "secondary_routes": ["intervention"],
+      "types": ["method", "direction"],
+      "publication_date": "2026-02-24", "event_date": "2026-02-24", "verified_on": "2026-10-04",
+      "temporal_role": "baseline", "evidence_level": "peer_reviewed",
+      "availability": "Published conceptual framework, not an empirical trial or deployed system.",
+      "title": "Causal digital twins: a framework, not a clinical result",
+      "before": "Predicting a person's trajectory does not identify what changing treatment would do.",
+      "after": "A framework combines causal models, potential outcomes and sequential policy optimization.",
+      "evidence": "Peer-reviewed methodological proposal; no new dataset, benchmark or empirical effectiveness test.",
+      "limit": "Identification assumptions, individual calibration and prospective intervention utility still require evidence.",
+      "implication": "Use as a technical checklist for the prediction-to-intervention route, not a reported performance breakthrough.",
+      "sources": [{"title": "Journal of Translational Medicine · Feb 24", "url": "https://link.springer.com/article/10.1186/s12967-026-07895-8"}],
+      "registry_ids": ["method-causal-digital-twins-2026"], "keywords": ["Causal inference", "Counterfactuals", "Causal frameworks"]
+    },
+    {
+      "id": "aid-twin-baseline-2025", "route": "twin", "secondary_routes": ["intervention"],
+      "types": ["method"],
+      "publication_date": "2025-05-06", "event_date": "2025-05-06", "verified_on": "2026-10-04",
+      "temporal_role": "baseline", "evidence_level": "peer_reviewed",
+      "availability": "Published randomized trial; event date is publication, not trial completion.",
+      "title": "AID co-adaptation: a bounded physiological-twin baseline",
+      "before": "Automated insulin delivery with conventional feedback rather than twin-guided co-adaptation.",
+      "after": "Individual glucose-insulin models support parameter optimization and personal what-if replay.",
+      "evidence": "72 participants, six-month randomized trial. The twin-guided co-adaptation package improved time in range; information feedback alone added no effect.",
+      "limit": "Type 1 diabetes-specific physiology, not a whole-body twin. A 2025 result must not be presented as this week's news.",
+      "implication": "A useful intervention-validated reference for judging later twin claims, within its reported population and protocol.",
+      "sources": [{"title": "npj Digital Medicine · May 6, 2025", "url": "https://www.nature.com/articles/s41746-025-01679-y"}],
+      "registry_ids": ["intervention-aid-digital-twin-coadaptation-2025"], "keywords": ["Dynamic simulation", "Automated insulin delivery", "Counterfactuals"]
+    }
+  ]
+}

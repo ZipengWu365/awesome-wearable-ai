@@ -26,6 +26,9 @@ The [map coverage ledger](coverage.json) lists every accepted and watchlist ID w
 | [taxonomy.json](taxonomy.json) | Four research themes, research-route semantics, evidence boundaries, topics and native resource types. |
 | [route-classification.json](route-classification.json) | Reproducible ID-by-ID theme placement, classification reasons and review notes; never replaces canonical metadata. |
 | [four-theme-map-source.html](four-theme-map-source.html) | Current editable English overview, upward year tree, complete library, cross-theme links and evidence details. |
+| [technology-radar.json](technology-radar.json) | Dated technical changes, before/after comparisons, evidence limits, sources and four-theme editorial assessments. Separate from registry acceptance. |
+| [technology-radar.schema.json](technology-radar.schema.json) | Validated signal contract; methods, data, hardware, performance, products/features and new directions. |
+| [preview-intelligence.jpg](preview-intelligence.jpg) | First technology-intelligence workspace screenshot. |
 | [preview-four-themes.jpg](preview-four-themes.jpg) | Browser screenshot of the first four-theme overview for design review. |
 | [compact-map-source.html](compact-map-source.html) | Preserved earlier native-resource-type interface, retained as a design reference only. |
 | [milestones.json](milestones.json) | Earlier 32 source-checked examples, captions, original IDs, date notes and evidence boundaries. Supplemental material only; no longer the map's data source. |
@@ -43,6 +46,18 @@ The poster and XMind layouts are earlier reference drafts, not approved final de
 - Use a coherent palette tied to research roles. Reveal fuller descriptions and source links on selection instead of placing paragraphs beside every node.
 - Cover every repository paper and resource within the interface, not merely through a download link. Use expandable year counts and complete lists rather than selecting a few highlights. Never cap results or silently omit unfamiliar families. Filtering changes the visible subset, not the included data.
 - Branches describe research categories. Do not imply model inheritance, clinical benefit or a causal progression without supporting evidence.
+
+## Technology intelligence updates
+
+The default workspace is a compact intelligence radar; the Research map switch retains the complete upward timeline and all 441 records. Four current-state assessments sit above a dated signal list. Keywords open the original full-library lenses. Search, theme, change-type and time-window filters narrow the signals; every item opens a concise before → change → evidence → limits → implication comparison with primary-source links.
+
+The first review is **2026-10-04**, covering selected signals and evidence baselines. The weekly filter is **2026-09-28–2026-10-04**, not an assertion that all four themes advanced that week. Publication, event and source-check dates remain distinct. A vendor-announced rollout can fall inside a review window without being independently confirmed; that distinction stays visible. An empty selection means no verified updates in this curated selection, not no activity in the entire field.
+
+Maintain the six change types in `technology-radar.json`: methods, data, hardware, performance, products/features and new directions. A performance item must state its baseline, result and comparison conditions. Extra tools or compute must not be reported as a model-weight improvement. Preprints, peer-reviewed frameworks/trials and vendor announcements retain separate evidence labels. Announced, early-access, preordered and delivered features are not interchangeable. Product intelligence does not enter the scientific paper count; new research signals require the normal registry screening process before inclusion.
+
+An assessment is an explicitly labelled editorial interpretation. An emerging pattern must link at least two relevant, differently dated signals, but this structural check is not proof of a scientific trend. Do not manufacture weekly entries for themes with no verified change. Keep older trials available as comparison baselines, not recirculated news. No scheduled monitoring or automatic article generation is configured by this update.
+
+Run `python scripts/validate_technology_radar.py` to check the source contract. The renderer validates it again before publishing, including dates, unique IDs, safe source URLs, four-theme assessment coverage and valid registry references.
 
 ## Source caveats
 
@@ -62,6 +77,6 @@ These links are design references, not evidence that all of them use the same ch
 
 ## Rebuild and preview
 
-Run `python3 scripts/render_research_map.py` from the repository root to rebuild `site/research-map.html`, the four-theme classification and its coverage ledger. The classifier uses reviewed family rules and explicit contribution-based ID overrides, never keywords in generic limitations. Unreviewed families fail the build rather than being silently placed. Run `make test` with the repository virtual environment activated to check registry integrity and exact map coverage. The page is self-contained and can be opened locally. The existing published editorial site in [website](../../website/) and its deployment workflow are unchanged by this handoff.
+Run `python scripts/render_research_map.py` with the repository virtual environment activated to rebuild the standalone workspace, four-theme classification and coverage ledger. The classifier uses reviewed family rules and explicit contribution-based ID overrides, never keywords in generic limitations. Unreviewed families fail the build. Run `make audit` to check registry integrity, radar validation, exact map coverage and the reproducible release report. The self-contained workspace is generated identically into `site/research-map.html` and `website/research-map.html`; the latter is published by the existing Pages deployment. The designer's main presentation is retained, with an Intelligence navigation link and a research-section entry to the new workspace.
 
 Repository-created materials use the [repository license](../../LICENSE). Linked papers, images and other third-party resources retain their own rights and access conditions.

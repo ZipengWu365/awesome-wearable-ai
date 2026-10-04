@@ -24,8 +24,8 @@ jobs:
       - run: make audit
       - name: Ensure generated outputs are committed and deterministic
         run: |
-          git diff --exit-code README.md generated/ site/ docs/RELEASE_AUDIT_v0.3.0.md
-          sha256sum README.md generated/registry.json generated/statistics.json site/index.html site/registry.json > /tmp/before.sha256
+          git diff --exit-code README.md generated/ site/ assets/research-map/ website/research-map.html docs/RELEASE_AUDIT_v0.3.0.md
+          sha256sum README.md generated/registry.json generated/statistics.json site/index.html site/registry.json site/research-map.html website/research-map.html assets/research-map/coverage.json assets/research-map/route-classification.json > /tmp/before.sha256
           make build
-          sha256sum README.md generated/registry.json generated/statistics.json site/index.html site/registry.json > /tmp/after.sha256
+          sha256sum README.md generated/registry.json generated/statistics.json site/index.html site/registry.json site/research-map.html website/research-map.html assets/research-map/coverage.json assets/research-map/route-classification.json > /tmp/after.sha256
           diff -u /tmp/before.sha256 /tmp/after.sha256

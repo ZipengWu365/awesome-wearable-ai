@@ -258,9 +258,20 @@ def main() -> int:
     registry = read_json(REGISTRY_PATH)
     payload = build_payload(registry)
     coverage = build_coverage(registry, payload)
+    if __package__:
+        from .validate_technology_radar import validate_radar
+    else:
+        from validate_technology_radar import validate_radar
+    # Editorial signals are separate from the frozen scientific registry.
+    payload["radar"] = validate_radar(
+        read_json(ASSETS / "technology-radar.json"),
+        {record["id"] for record in payload["records"]},
+        {route["id"] for route in payload["routes"]},
+    )
     template = (ASSETS / "four-theme-map-source.html").read_text(encoding="utf-8")
     output = render_template(template, payload)
     (ROOT / "site" / "research-map.html").write_text(output, encoding="utf-8")
+    (ROOT / "website" / "research-map.html").write_text(output, encoding="utf-8")
     (ASSETS / "coverage.json").write_text(json.dumps(coverage, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (ASSETS / "route-classification.json").write_text(json.dumps(route_classification(registry), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     counts = payload["counts"]
