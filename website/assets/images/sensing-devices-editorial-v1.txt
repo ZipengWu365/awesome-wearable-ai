@@ -1,0 +1,8 @@
+Asset: sensing-devices-editorial-v1.png
+Created with the built-in image generation tool, 2026-10-05.
+Purpose: supporting illustration for the sensing scene; the homepage artwork is unchanged.
+Illustrative only: not measured data, product specifications, or evidence of performance.
+Labels and scientific explanations are rendered as HTML, not generated into the image.
+
+Prompt:
+Create a refined editorial scientific illustration for a wearable AI research website, landscape 3:2 composition. Quiet warm off-white background, restrained desaturated navy, teal and sky blue palette, realistic adult-oriented watercolor/gouache with crisp devices and subtle shadows. No people, no cityscape, no words, no letters, no numbers, no logos. An organized tabletop-like composition of four clearly separated modern wearable sensing devices: a dark smartwatch showing a simple ECG trace, a small white adhesive ECG chest patch, a slim EEG headband with visible small electrodes, and a round white continuous glucose monitor adhesive sensor. Each device accompanied by a short, understated associated signal trace in its own small area (cardiac pulse, ECG, brain waves, glucose trend); traces are illustrative not claimed measurements. Coherent device-to-signal relationship, not decorative random network lines. Four balanced vignettes in a two-by-two arrangement, plenty of space between, all devices fully visible. Soft background seamlessly matching #f4f7f3 at the edges. Premium medical review-article visual, not cute, no cartoon characters, no labels. This is the supporting sensors illustration, NOT a hero banner.

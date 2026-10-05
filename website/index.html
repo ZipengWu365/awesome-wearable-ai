@@ -72,9 +72,12 @@
         </div>
       </div>
 
-      <div class="theme-route" aria-label="Four-theme wearable AI research route">
-        <a href="#trend-prediction">01 · Disease prediction</a><i>→</i><a href="#trend-intervention">02 · Intervention &amp; counterfactuals</a><i>→</i><a href="#trend-twin">03 · Personal digital twins</a><i>↔</i><a href="#trend-interface">04 · Metaverse &amp; mixed reality</a>
-      </div>
+      <nav class="update-overview" aria-label="Four research themes: key findings at a glance">
+        <a href="#trend-prediction"><span>01 · Disease prediction</span><b>Long-history reasoning and physiology-aware models</b><small>New benchmarks · preprint results ↓</small></a>
+        <a href="#trend-intervention"><span>02 · Intervention &amp; counterfactuals</span><b>No new trial outcome verified in this review window</b><small>Frameworks compared with earlier trials ↓</small></a>
+        <a href="#trend-twin"><span>03 · Personal digital twins</span><b>Repeated feedback in diabetes-specific models</b><small>Earlier studies · bounded applications ↓</small></a>
+        <a href="#trend-interface"><span>04 · Metaverse &amp; mixed reality</span><b>Supported glasses APIs and announced product expansion</b><small>Vendor updates · availability varies ↓</small></a>
+      </nav>
 
       <div class="trend-grid">
         <article class="trend-card trend-prediction" id="trend-prediction" style="--theme:#087f8c" data-viz-reveal>
@@ -131,7 +134,8 @@
           <p class="trend-dateline">Meta DAT 1.0 &amp; Display · Sep 2026 · Vendor announcements</p>
           <div class="trend-deltas">
             <div><b>Developer stack</b><span>Meta DAT 1.0 moves from preview to supported tooling for camera, speech, head motion and Neural Band input.</span></div>
-            <div><b>Hardware/product</b><span>Selected US retail → more markets and online ordering. Voice-driven face-avatar calls are announced for later early access; delivery depends on region.</span></div>
+            <div><b>Hardware</b><span>Display glasses and wrist neural input: broader availability is announced, not a new independently tested sensor-performance gain.</span></div>
+            <div><b>Product features</b><span>Selected US retail → more markets and online ordering. Voice-driven face-avatar calls are announced for later early access; delivery depends on region.</span></div>
             <div><b>New direction</b><span>Glasses can become an interaction entrance to a personal model rather than the model itself.</span></div>
           </div>
           <p class="trend-boundary"><b>Boundary</b> Vendor announcements are not independent tests; an avatar is not a physiological twin and a HUD is not automatically spatial MR.</p>
@@ -139,22 +143,9 @@
         </article>
       </div>
 
-      <div class="change-ledger" data-viz-reveal>
-        <div class="change-ledger-heading"><p class="eyebrow">HOW UPDATES ARE CLASSIFIED</p><h3>Six types of wearable-AI technology change</h3><p>Each update is classified by what actually changed: method, data, hardware, performance, product function or research direction.</p></div>
-        <div class="change-types">
-          <article><span>01</span><b>Methods</b><p>Physiology-aware temporal modeling, causal frameworks and supported glasses APIs.</p></article>
-          <article><span>02</span><b>Data</b><p>Longitudinal reasoning benchmarks now pair multi-month wearable histories with structured questions.</p></article>
-          <article><span>03</span><b>Hardware</b><p>Display glasses and wrist neural input are moving toward broader—but region-dependent—availability.</p></article>
-          <article><span>04</span><b>Performance</b><p>Large gains appear when tool access changes; results must stay tied to the same benchmark and protocol.</p></article>
-          <article><span>05</span><b>Products &amp; features</b><p>Developer preview becomes supported release; hands-free avatar calls enter the product roadmap.</p></article>
-          <article><span>06</span><b>New directions</b><p>Long-history reasoning, bounded personal twins and mixed-reality access begin to converge—without proving a full system.</p></article>
-        </div>
-      </div>
-
-      <div class="intelligence-boundary">
-        <div><span>NEW</span><p>Richer longitudinal context, explicit tool use, disease-specific adaptive twins and programmable glasses interfaces.</p></div>
-        <div><span>NOT YET</span><p>These sources do not establish prospective clinical utility or a whole-person twin. No new intervention outcome was verified in the selected review window.</p></div>
-        <a href="research-map.html">Open the full technology radar and 441-record map <span>↗</span></a>
+      <div class="review-bottom">
+        <p><b>Need the full comparison?</b> Filter source entries by method, data, hardware, performance, product feature or new direction.</p>
+        <a href="research-map.html">Open technology radar &amp; sources <span aria-hidden="true">↗</span></a>
       </div>
       <p class="intelligence-source-note">Sources reviewed 28 Sep–4 Oct 2026; publication and event dates are shown on each card. Recent updates include September publications and announcements; older studies provide comparison baselines. This is a dated review, not a live news feed. <a href="research-map.html">Read all 7 source entries and their limitations ↗</a></p>
     </section>
@@ -168,19 +159,8 @@
       <div class="visual-stage" aria-hidden="true">
         <div class="ambient ambient-one"></div>
         <div class="ambient ambient-two"></div>
-        <div class="hero-art"></div>
         <canvas class="people-field" aria-hidden="true"></canvas>
         <p class="people-field-key" aria-hidden="true"><span></span><b id="people-field-label">People become structured evidence</b></p>
-        <div class="sensor-pills">
-          <span class="sensor-pill pill-eeg"><i class="sig-eeg"></i><b>EEG</b><small>Brain activity</small></span>
-          <span class="sensor-pill pill-ecg"><i class="sig-ecg"></i><b>ECG</b><small>Heart rhythm</small></span>
-          <span class="sensor-pill pill-ppg"><i class="sig-ppg"></i><b>PPG</b><small>Optical pulse</small></span>
-          <span class="sensor-pill pill-cgm"><i class="sig-cgm"></i><b>CGM</b><small>Glucose levels</small></span>
-          <span class="sensor-pill pill-imu"><i class="sig-imu"></i><b>IMU</b><small>Motion &amp; posture</small></span>
-          <span class="sensor-pill pill-sleep"><i class="sig-sleep"></i><b>Sleep</b><small>Sleep patterns</small></span>
-          <span class="sensor-pill pill-emg"><i class="sig-emg"></i><b>EMG</b><small>Muscle activity</small></span>
-          <span class="sensor-pill pill-resp"><i class="sig-resp"></i><b>Respiration</b><small>Breathing &amp; airflow</small></span>
-        </div>
 
         <svg class="world" viewBox="0 0 1200 800" role="img" aria-label="A person wearing sensors surrounded by signals that grow into a research atlas">
           <defs>
@@ -309,17 +289,27 @@
           </g>
         </svg>
 
-        <div class="stage-note" data-note="signal">Each pulse has its own physics, timescale, and uncertainty.</div>
         <div class="stage-note" data-note="relations"><strong>2,169</strong> explicit or machine-derived relations connect the atlas.</div>
       </div>
 
       <div class="story-steps">
         <article class="step" id="signals" data-scene="1">
+          <div class="hero-art">
+            <figure class="sensing-figure">
+              <img src="assets/images/sensing-devices-editorial-v1.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Illustrated ECG smartwatch, adhesive cardiac patch, EEG headband and glucose sensor, each paired with an example signal trace.">
+              <figcaption>
+                <span><b>ECG watch &amp; chest patch</b>Electrical heart activity</span>
+                <span><b>EEG headband</b>Electrical brain activity</span>
+                <span><b>Glucose sensor</b>Interstitial glucose trend</span>
+              </figcaption>
+              <p>Illustrative devices and traces · not product specifications or measured results</p>
+            </figure>
+          </div>
           <div class="story-copy left-copy">
             <p class="eyebrow">01 · SENSE</p>
             <h2>Wearable sensors capture <em>body and context signals.</em></h2>
-            <p>A wrist pulse. A change in gait. A night of sleep. Wearables turn continuous life into measurements—but every modality sees only part of the person.</p>
-            <p class="margin-note">Motion, ECG, EEG, PPG, EMG, glucose and sleep each require different assumptions.</p>
+            <p>ECG records electrical heart activity; EEG records brain activity; CGM tracks interstitial glucose. Devices measure different signals—not a complete picture of health.</p>
+            <p class="margin-note">Other inputs include optical pulse (PPG), motion (IMU), muscle activity (EMG) and respiration. Sleep is inferred from signals, not a sensor type.</p>
           </div>
         </article>
 
@@ -361,8 +351,8 @@
 
         <article class="step quiet-step" data-scene="6">
           <div class="quiet-copy">
-            <p class="eyebrow">A PAUSE FOR PROVENANCE</p>
-            <blockquote>Evidence is not a badge. It is a boundary around what a record can legitimately support.</blockquote>
+            <p class="eyebrow">HOW MUCH OF THE LIBRARY WAS CHECKED?</p>
+            <blockquote>95 of 396 accepted records have curated evidence cards.</blockquote>
             <p>The registry separates evidence cards, verified metadata, and venue-screened records. It tracks whether a source was checked against a primary paper, official resource, or review reference. Coverage is curated—not claimed to be exhaustive.</p>
             <div class="depth-bars" aria-label="Evidence depth counts">
               <div><span>Evidence card</span><i style="--size:42%"></i><strong>95</strong></div>
@@ -870,16 +860,6 @@
     </section>
     </details>
 
-    <section class="reference-directory" aria-labelledby="reference-title">
-      <div><p class="eyebrow">REFERENCE LAYERS</p><h2 id="reference-title">Research maps, taxonomies<br><em>and downloadable resources.</em></h2><p>Use these supporting views to verify the headline trends, inspect evidence boundaries and download the underlying registry data.</p></div>
-      <nav aria-label="Research reference layers">
-        <a href="research-map.html"><span>01</span><b>Technology radar &amp; complete four-theme map</b><i>441 records · dated signals ↗</i></a>
-        <a href="#taxonomy"><span>02</span><b>Capability loop and research taxonomy</b><i>Sense → represent → decide → act ↑</i></a>
-        <a href="#evidence-map"><span>03</span><b>Evidence design and claim boundaries</b><i>Association ≠ causation ↑</i></a>
-        <a href="#comparison-lab"><span>04</span><b>Advanced registry comparisons</b><i>Matrices · datasets · watchlist ↑</i></a>
-      </nav>
-    </section>
-
     <section class="explore-section" id="explore">
       <div class="section-heading">
         <p class="eyebrow">INTERACTIVE RESEARCH ATLAS</p>
@@ -940,16 +920,16 @@
 
     <section class="impact-section" aria-labelledby="impact-title">
       <div class="impact-intro">
-        <p class="eyebrow">FROM KNOWLEDGE TO CARE</p>
+        <p class="eyebrow">APPLICATIONS IN THE RESEARCH LIBRARY</p>
         <h2 id="impact-title">Five real-world application areas<br>for <em>wearable AI.</em></h2>
-        <p>Wearable AI already connects research to health, recovery, performance and everyday support. The atlas keeps the route from evidence to impact visible.</p>
+        <p>These are tasks studied in the library, not five new breakthroughs. Monitoring, prediction and tested treatment benefit require different evidence.</p>
       </div>
       <div class="impact-track">
-        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:0" alt="Adult woman checking health information on a smartwatch"></div><p class="eyebrow">MONITOR</p><h3>Health monitoring</h3><p>Earlier signals, healthier lives.</p></article>
-        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:1" alt="Adult man sleeping peacefully while wearing a sensor ring"></div><p class="eyebrow">RECOVER</p><h3>Sleep & recovery</h3><p>Better rest, brighter days.</p></article>
-        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:2" alt="Adult runner wearing an upper-arm and wrist sensor"></div><p class="eyebrow">ADAPT</p><h3>Sports & performance</h3><p>Understand, improve, go further.</p></article>
-        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:3" alt="Older adult using a smartwatch for ongoing health monitoring"></div><p class="eyebrow">SUPPORT</p><h3>Chronic disease</h3><p>Long-term care, real-world impact.</p></article>
-        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:4" alt="Two adult friends sharing a supportive moment"></div><p class="eyebrow">CONNECT</p><h3>Mental wellbeing</h3><p>More awareness, more support.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:0" alt="Adult woman checking health information on a smartwatch"></div><p class="eyebrow">MONITOR</p><h3>Health monitoring</h3><p>ECG and optical pulse support rhythm screening and risk estimation.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:1" alt="Adult man sleeping peacefully while wearing a sensor ring"></div><p class="eyebrow">ESTIMATE</p><h3>Sleep &amp; recovery</h3><p>Multiple signals support sleep staging and sleep-related risk prediction.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:2" alt="Adult runner wearing an upper-arm and wrist sensor"></div><p class="eyebrow">MEASURE</p><h3>Sports &amp; performance</h3><p>Motion sensors help recognize activities and quantify movement patterns.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:3" alt="Older adult using a smartwatch for ongoing health monitoring"></div><p class="eyebrow">INTERVENE</p><h3>Chronic disease</h3><p>Glucose sensing supports personalized models and tested insulin-delivery systems.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:4" alt="Two adult friends sharing a supportive moment"></div><p class="eyebrow">STUDY</p><h3>Mental wellbeing</h3><p>Physiology and behavior are studied as stress indicators and inputs to adaptive support.</p></article>
       </div>
     </section>
 
