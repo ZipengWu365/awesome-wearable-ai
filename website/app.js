@@ -50,6 +50,15 @@
     menuButton.textContent = 'Menu';
   });
 
+  const comparisonDisclosure = document.querySelector('#comparison-lab');
+  document.querySelectorAll('a[href="#comparison-lab"]').forEach(link => link.addEventListener('click', () => {
+    if (comparisonDisclosure) comparisonDisclosure.open = true;
+  }));
+  if (comparisonDisclosure) comparisonDisclosure.open = initialHash === '#comparison-lab';
+  addEventListener('pageshow', () => {
+    if (comparisonDisclosure) comparisonDisclosure.open = location.hash === '#comparison-lab';
+  });
+
   const TYPE_ORDER = ['model', 'dataset', 'method', 'measure', 'infrastructure', 'intervention'];
   const TYPE_COLORS = {
     model: '#69adf3',
@@ -1157,6 +1166,7 @@
     });
 
   addEventListener('load', () => {
+    if (comparisonDisclosure) comparisonDisclosure.open = location.hash === '#comparison-lab';
     if (!initialHash) return;
     const target = document.querySelector(initialHash);
     if (target) window.scrollTo(0, target.offsetTop - 70);
