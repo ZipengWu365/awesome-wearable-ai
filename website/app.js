@@ -180,12 +180,12 @@
       people.forEach(person => Object.assign(person, { target: targetFor(person, scene) }));
       if (peopleLabel) {
         const sceneLabels = {
-          2: 'People move from raw signals into learned representations',
-          3: 'Records gather around ten lifecycle stages',
-          4: 'Colours regroup the same records by resource type',
-          5: 'Records separate around five claim layers'
+          2: 'Illustration: signals become learned features',
+          3: 'Illustration: ten stages from sensing to action',
+          4: 'Illustration: six types of research resources',
+          5: 'Illustration: five different research questions'
         };
-        peopleLabel.textContent = sceneLabels[scene] || 'People become structured evidence';
+        peopleLabel.textContent = sceneLabels[scene] || 'Concept illustration, not participant counts';
       }
       if (reducedMotion.matches) {
         people.forEach(person => { person.x = person.target.x; person.y = person.target.y; });
@@ -803,9 +803,9 @@
       const chip = document.createElement('span'); chip.textContent = titleCase(tag); tags.append(chip);
     });
     els.shelfContent.append(kicker, heading, venue, tags);
-    addShelfBlock('Contribution', record.contribution);
+    addShelfBlock('What this work adds', record.contribution);
     addShelfBlock('Why it matters', record.why_it_matters);
-    addShelfBlock('Evidence boundary', record.evidence_boundary);
+    addShelfBlock('What the evidence does not establish', record.evidence_boundary);
     addShelfBlock('Limitations', record.limitations);
     const indexing = [
       ['Lifecycle', record.lifecycle_stage],
@@ -815,14 +815,20 @@
       ['Wearable scope', record.wearable_scope],
       ['Venue tier', record.venue_tier]
     ].filter(([, value]) => value).map(([label, value]) => `${label}: ${titleCase(value)}`).join(' · ');
-    addShelfBlock('Atlas indexing', indexing);
+    addShelfBlock('How this record is classified', indexing);
     const openness = [
       ['Code', record.open_code],
       ['Weights', record.open_weights],
       ['Data', record.open_data]
     ].map(([label, value]) => `${label}: ${value === true ? 'open' : value === false ? 'not open' : 'not recorded'}`).join(' · ');
     addShelfBlock('Openness', openness);
-    addShelfBlock('Verification', `${titleCase(record.verification_status)}${record.verified_on ? ` · ${record.verified_on}` : ''}`);
+    const reviewDescriptions = {
+      evidence_card: 'Curators summarized the study, contribution and limitations. This is not independent replication or a full risk-of-bias review.',
+      metadata_verified: 'Core metadata were checked against a primary or official source. A detailed appraisal of the study is not included.',
+      venue_verified: 'Title, year, publication venue and source identity were screened. The study findings have not received a detailed appraisal here.'
+    };
+    addShelfBlock('How much was reviewed', reviewDescriptions[record.evidence_depth]);
+    addShelfBlock('Source check', `${titleCase(record.verification_status)}${record.verified_on ? ` · ${record.verified_on}` : ''}`);
     if (record.primary_url) {
       const link = document.createElement('a'); link.className = 'shelf-link';
       link.href = record.primary_url; link.target = '_blank'; link.rel = 'noreferrer';

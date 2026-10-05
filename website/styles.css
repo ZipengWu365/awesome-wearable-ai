@@ -1,6 +1,6 @@
 :root {
   --ink: #172a4a;
-  --muted: #68778d;
+  --muted: #53647a;
   --paper: #f6f8f2;
   --paper-deep: #edf2e9;
   --white: #fffef9;
@@ -873,6 +873,70 @@ body[data-scene="1"] .hero-art { transform:none; filter:none; }
   .update-overview a { padding:17px 14px; gap:9px; }
   .update-overview b { font-size:15px; }
   .update-overview span,.update-overview small { font-size:11px; }
+}
+/* Reading pass: explanatory copy is not microtype; allow cards to grow. */
+main .eyebrow,.home-content .eyebrow,.people-field-key,.update-overview small,
+.art-sequence span small,.art-sequence span b,.stream-annotations small,
+.milestone-details>summary small,.timeline-scroll-hint,.timeline-root-label small,
+.comparison-disclosure>summary small,.grounding-strip>p { font-size:12px; line-height:1.5; letter-spacing:.04em; }
+.evidence-notes>p { font-size:15px; line-height:1.65; }
+.evidence-notes>div span,.taxonomy-reading-key,.resource-stats span,.resource-links span { font-size:12px; line-height:1.5; }
+.evidence-dashboard-grid { grid-template-columns:minmax(270px,.5fr) minmax(0,1.5fr); }
+.watchlist-list p { font-size:14px; line-height:1.6; }
+.trend-card header b,.trend-card header span { color:#344e65; }
+.overview-card .eyebrow,.comparison-card .eyebrow { color:#3d6189; }
+.figure-scroll-cue,.art-scroll-cue { width:fit-content; max-width:100%; white-space:normal; }
+.evolution-actions a { max-width:100%; white-space:normal; }
+.tax-route-icons>span { grid-template-columns:1fr; justify-items:center; gap:6px; padding:10px 8px; }
+.tax-route-icons small { text-align:center; }
+.reading-terms { margin:0; padding:0 6vw 28px; background:#f6f8f2; color:#334d61; }
+.reading-terms summary { width:fit-content; max-width:100%; cursor:pointer; font-size:15px; line-height:1.6; text-decoration:underline; text-underline-offset:4px; }
+.reading-terms dl { display:grid; grid-template-columns:1fr 1fr; gap:20px 32px; max-width:1200px; margin:24px 0 0; padding:24px; border:1px solid #ccd9d5; border-radius:12px; background:#fff; }
+.reading-terms dt { font-size:16px; font-weight:600; }
+.reading-terms dd { margin:7px 0 0; font-size:15px; line-height:1.65; color:#4c6173; }
+.capability-figure figcaption,.taxonomy-figure figcaption,.evolution-map figcaption,
+.model-landscape-figure figcaption,.quant-evolution figcaption,.evidence-figure-caption,
+.comparison-note,.matrix-note { font:400 13px/1.65 var(--sans); color:#4c6177; }
+.cap-stage header small,.grounding-strip span,.taxonomy-band aside span,.family-group header small,
+.atlas-reading-guide small,.model-root small,.model-landscape-key,.timeline-lane header p,
+.timeline-cell a>span,.quant-chart-head>p,.stream-annotations em,.comparison-card-heading>span,
+.status-chip,.matrix-legend b,.metric-row,.depth-bars,.evidence-axis-note,.figure-scroll-cue,
+.art-scroll-cue,.subfigure-heading span { font-size:13px; line-height:1.5; text-transform:none; letter-spacing:normal; }
+.cap-stage>p,.tax-content p,.comparison-intro,.scope-note p,.record-card p,.shelf-block p { font-size:15px; line-height:1.65; }
+.taxonomy-band aside span,.grounding-strip span { color:#4d6175; }
+.tax-route-icons small { font:500 13px/1.4 var(--sans); text-transform:none; overflow-wrap:normal; }
+.claim-matrix { min-width:820px; grid-template-columns:180px repeat(5,minmax(128px,1fr)); }
+.claim-matrix>div { font:500 13px/1.4 var(--sans); text-transform:none; }
+.matrix-legend { justify-content:flex-start; }
+.matrix-legend b { font-family:var(--sans); }
+.supports { color:#08796c!important; }
+.conditional { color:#8b5b08!important; }
+.not-established { color:#68788a!important; }
+.trend-deltas b { color:#304b61; }
+.trend-boundary,.trend-dateline { font-size:13px; color:#506579; }
+.dataset-table td,.dataset-title-button { font-size:14px; line-height:1.5; }
+.dataset-table th,.dataset-table .table-tags span { font:500 12px/1.5 var(--sans); text-transform:none; }
+.life-corner,.life-column,.life-total,.cross-corner,.cross-column { font:500 12px/1.5 var(--sans); text-transform:none; letter-spacing:normal; overflow-wrap:anywhere; }
+.life-count span,.family-tabs button,.comparison-controls label span,.comparison-controls button,
+.resource-links span,.watchlist-card header,.shelf-tags span,.shelf-block h3,.record-card .record-meta { font-size:12px; line-height:1.5; text-transform:none; letter-spacing:normal; }
+.shelf-content { overflow-wrap:anywhere; }
+.family-bubble { min-width:140px; min-height:140px; }
+.family-bubble b { font-size:13px; line-height:1.35; }
+.family-bubble span { font-size:12px; }
+.atlas-toolbar label>span,.legend span { font-size:12px; line-height:1.5; letter-spacing:normal; text-transform:none; }
+.atlas-viewport.map-view { display:grid; grid-template-rows:minmax(0,1fr) auto; }
+.map-hint { position:static; width:auto; max-width:none; margin:0 12px 12px; transform:none; border-radius:10px; font:400 13px/1.5 var(--sans); letter-spacing:normal; color:#d8e4ef; }
+.map-label { font-size:14px; letter-spacing:normal; }
+@media (max-width:1350px) {
+  .evidence-dashboard-grid { grid-template-columns:1fr; }
+}
+@media (max-width:680px) {
+  .reading-terms { padding:0 22px 24px; }
+  .reading-terms dl { grid-template-columns:1fr; padding:18px; }
+  .family-bubble { min-width:140px; min-height:140px; }
+  .atlas-viewport.map-view { overflow-x:auto; }
+  .map-view #node-map { width:1100px; max-width:none; }
+  .map-hint { width:calc(100vw - 86px); box-sizing:border-box; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
