@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-scene="0">
-  <a class="skip-link" href="#story">Skip to the story</a>
+  <a class="skip-link" href="#intelligence">Skip to latest research updates</a>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Awesome Wearable AI home">
@@ -27,11 +27,11 @@
       <span>Awesome Wearable AI</span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#intelligence">Latest</a>
-      <a href="research-map.html">Full intelligence map</a>
-      <a href="#taxonomy">Research system</a>
+      <a href="#intelligence">Latest updates</a>
+      <a href="research-map.html">Research map</a>
+      <a href="#taxonomy">Research guide</a>
       <a href="#evidence-map">Evidence</a>
-      <a href="#explore">Atlas</a>
+      <a href="#explore">Library</a>
       <a class="nav-github" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
     <button class="menu-button" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
@@ -40,6 +40,130 @@
   <div class="story-progress" aria-hidden="true"><span></span></div>
 
   <main id="top">
+    <section class="home-intro" id="overview" aria-labelledby="home-title">
+      <div class="home-art" aria-hidden="true"></div>
+      <div class="home-content">
+        <p class="eyebrow">AWESOME WEARABLE AI · RESEARCH UPDATES</p>
+        <h1 id="home-title">Wearable AI.<br><em>Research &amp;<br>technology updates.</em></h1>
+        <p class="home-description">Track new studies, model capabilities, datasets and wearable products—and see what changed, how it compares and what the evidence supports.</p>
+        <nav class="home-themes" aria-label="Four research themes">
+          <a href="#trend-prediction"><span>01</span>Disease prediction</a>
+          <a href="#trend-intervention"><span>02</span>Intervention &amp; counterfactuals</a>
+          <a href="#trend-twin"><span>03</span>Personal digital twins</a>
+          <a href="#trend-interface"><span>04</span>Metaverse &amp; mixed reality</a>
+        </nav>
+        <div class="home-actions">
+          <a class="primary-button" href="#intelligence">Read the latest updates <span aria-hidden="true">↓</span></a>
+          <a class="home-library" href="#explore">Browse the research library <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="home-edition">Last reviewed <time datetime="2026-10-04">4 Oct 2026</time><span aria-hidden="true"> · </span><a href="#explore">396 accepted records</a></p>
+      </div>
+    </section>
+
+    <section class="intelligence-section" id="intelligence" aria-labelledby="intelligence-title">
+      <div class="intelligence-heading">
+        <div>
+          <p class="eyebrow">TECHNOLOGY INTELLIGENCE · REVIEWED 2026-10-04</p>
+          <h2 id="intelligence-title">Latest research<br><em>&amp; technology changes.</em></h2>
+        </div>
+        <div class="intelligence-brief">
+          <p>Four research themes, with concrete comparisons of methods, data, performance and product capabilities. Each summary links to dated sources and the conditions behind the result.</p>
+          <div class="intelligence-stats"><span><b>4</b> recent updates</span><span><b>3</b> earlier evidence baselines</span><span>Reviewed <b>4 Oct 2026</b></span></div>
+        </div>
+      </div>
+
+      <div class="theme-route" aria-label="Four-theme wearable AI research route">
+        <a href="#trend-prediction">01 · Disease prediction</a><i>→</i><a href="#trend-intervention">02 · Intervention &amp; counterfactuals</a><i>→</i><a href="#trend-twin">03 · Personal digital twins</a><i>↔</i><a href="#trend-interface">04 · Metaverse &amp; mixed reality</a>
+      </div>
+
+      <div class="trend-grid">
+        <article class="trend-card trend-prediction" id="trend-prediction" style="--theme:#087f8c" data-viz-reveal>
+          <header><span>01 · PREDICTION</span><b>Emerging pattern</b></header>
+          <p class="trend-question">What might happen to this person?</p>
+          <h3>Longer health histories, physiology-aware models</h3>
+          <p class="trend-summary">SOTER improves physiological forecasting and missing-signal reconstruction. WearableQA tests reasoning across months of personal data. Both enable future prediction systems; neither establishes clinical benefit.</p>
+          <p class="trend-dateline">SOTER · 15 Sep 2026 / WearableQA · 4 Sep 2026 · Preprints</p>
+          <div class="trend-deltas">
+            <div><b>Method</b><span>General transfer → cross-channel structure, frequency-aware expert routing and continuous-time decoding.</span></div>
+            <div><b>Data</b><span>WearableQA adds 4,084 questions, 200 people and histories up to 500 days.</span></div>
+            <div><b>Performance</b><span><strong>51.2% → 71.3% QA accuracy (+20.1 percentage points).</strong> Same GPT-5.4; row-wise prompting → agentic Python. Tool access and compute differ.</span></div>
+            <div><b>Model results</b><span>SOTER reports best zero-shot RMSE on 4 of 6 datasets and MAE on 5 of 6; comparisons depend on the task and protocol.</span></div>
+          </div>
+          <p class="trend-boundary"><b>Boundary</b> SOTER and WearableQA are preprints; benchmark gains are not diagnosis accuracy or clinical utility.</p>
+          <a href="research-map.html#assessment-prediction">Inspect signals &amp; sources <span>↗</span></a>
+        </article>
+
+        <article class="trend-card trend-intervention" id="trend-intervention" style="--theme:#5266c8" data-viz-reveal>
+          <header><span>02 · INTERVENTION</span><b>Evidence checkpoint</b></header>
+          <p class="trend-question">What changes under a different action?</p>
+          <h3>Causal frameworks and intervention trial results</h3>
+          <p class="trend-summary">Causal digital twins propose how to compare treatment alternatives. Earlier controlled trials provide a baseline for judging whether a personalized action improves an outcome.</p>
+          <p class="trend-dateline">Causal framework · Feb 2026 / AID trial · May 2025 · Earlier baselines</p>
+          <div class="trend-deltas">
+            <div><b>Framework</b><span>Prediction → causal models, potential outcomes and sequential policy optimization.</span></div>
+            <div><b>Trial baseline</b><span>In a 72-person, six-month automated insulin delivery (AID) trial, twin-guided co-adaptation improved time in glucose range; feedback alone added no effect.</span></div>
+            <div><b>This review week</b><span>No new intervention outcome was verified in the selected weekly window.</span></div>
+          </div>
+          <p class="trend-boundary"><b>Boundary</b> A model-level what-if, a causal estimate and an intervention result answer different questions.</p>
+          <a href="research-map.html#assessment-intervention">Inspect evidence baseline <span>↗</span></a>
+        </article>
+
+        <article class="trend-card trend-twin" id="trend-twin" style="--theme:#9264b5" data-viz-reveal>
+          <header><span>03 · DIGITAL TWIN</span><b>Emerging pattern</b></header>
+          <p class="trend-question">Can we build an evolving model of this person?</p>
+          <h3>Diabetes twins add repeated updates and feedback</h3>
+          <p class="trend-summary">Recent systems combine individual adaptation, repeated updates, feedback and what-if replay—but within tightly bounded physiological problems.</p>
+          <p class="trend-dateline">T2D predictive twin · Jul 2026 / AID trial · May 2025 · Earlier baselines</p>
+          <div class="trend-deltas">
+            <div><b>Before</b><span>Static personalization or periodic self-monitoring without a continuously updated action model.</span></div>
+            <div><b>Now</b><span>Weekly retraining, daily suggestions and person-specific glucose–insulin simulation.</span></div>
+            <div><b>Observed outcome</b><span>In a 19-person T2D substudy, weight differed while glucose stayed stable.</span></div>
+          </div>
+          <p class="trend-boundary"><b>Boundary</b> Predictive, mechanistic and causal twins are not interchangeable; no whole-person twin is established.</p>
+          <a href="research-map.html#assessment-twin">Inspect twin evidence <span>↗</span></a>
+        </article>
+
+        <article class="trend-card trend-interface" id="trend-interface" style="--theme:#b97936" data-viz-reveal>
+          <header><span>04 · METAVERSE &amp; MIXED REALITY</span><b>Product updates</b></header>
+          <p class="trend-question">How can a person see and interact with their twin?</p>
+          <h3>Smart glasses: supported APIs and new calling features</h3>
+          <p class="trend-summary">The near-term change is not a complete health twin. It is a more programmable wearable interface combining sensing, input and display.</p>
+          <p class="trend-dateline">Meta DAT 1.0 &amp; Display · Sep 2026 · Vendor announcements</p>
+          <div class="trend-deltas">
+            <div><b>Developer stack</b><span>Meta DAT 1.0 moves from preview to supported tooling for camera, speech, head motion and Neural Band input.</span></div>
+            <div><b>Hardware/product</b><span>Selected US retail → more markets and online ordering. Voice-driven face-avatar calls are announced for later early access; delivery depends on region.</span></div>
+            <div><b>New direction</b><span>Glasses can become an interaction entrance to a personal model rather than the model itself.</span></div>
+          </div>
+          <p class="trend-boundary"><b>Boundary</b> Vendor announcements are not independent tests; an avatar is not a physiological twin and a HUD is not automatically spatial MR.</p>
+          <a href="research-map.html#assessment-interface">Inspect product signals <span>↗</span></a>
+        </article>
+      </div>
+
+      <div class="change-ledger" data-viz-reveal>
+        <div class="change-ledger-heading"><p class="eyebrow">HOW UPDATES ARE CLASSIFIED</p><h3>Six types of wearable-AI technology change</h3><p>Each update is classified by what actually changed: method, data, hardware, performance, product function or research direction.</p></div>
+        <div class="change-types">
+          <article><span>01</span><b>Methods</b><p>Physiology-aware temporal modeling, causal frameworks and supported glasses APIs.</p></article>
+          <article><span>02</span><b>Data</b><p>Longitudinal reasoning benchmarks now pair multi-month wearable histories with structured questions.</p></article>
+          <article><span>03</span><b>Hardware</b><p>Display glasses and wrist neural input are moving toward broader—but region-dependent—availability.</p></article>
+          <article><span>04</span><b>Performance</b><p>Large gains appear when tool access changes; results must stay tied to the same benchmark and protocol.</p></article>
+          <article><span>05</span><b>Products &amp; features</b><p>Developer preview becomes supported release; hands-free avatar calls enter the product roadmap.</p></article>
+          <article><span>06</span><b>New directions</b><p>Long-history reasoning, bounded personal twins and mixed-reality access begin to converge—without proving a full system.</p></article>
+        </div>
+      </div>
+
+      <div class="intelligence-boundary">
+        <div><span>NEW</span><p>Richer longitudinal context, explicit tool use, disease-specific adaptive twins and programmable glasses interfaces.</p></div>
+        <div><span>NOT YET</span><p>These sources do not establish prospective clinical utility or a whole-person twin. No new intervention outcome was verified in the selected review window.</p></div>
+        <a href="research-map.html">Open the full technology radar and 441-record map <span>↗</span></a>
+      </div>
+      <p class="intelligence-source-note">Sources reviewed 28 Sep–4 Oct 2026; publication and event dates are shown on each card. Recent updates include September publications and announcements; older studies provide comparison baselines. This is a dated review, not a live news feed. <a href="research-map.html">Read all 7 source entries and their limitations ↗</a></p>
+    </section>
+
+    <div class="story-intro">
+      <div><p class="eyebrow">BACKGROUND · HOW TO INTERPRET THE RESEARCH</p><h2>From sensor data to<br>health decisions.</h2></div>
+      <div><p>Follow the animated guide to signals, models, interventions and the evidence needed to connect them.</p><a href="#taxonomy">Skip to research charts <span aria-hidden="true">↓</span></a></div>
+    </div>
+
     <section class="scrolly" id="story" aria-label="The wearable AI story">
       <div class="visual-stage" aria-hidden="true">
         <div class="ambient ambient-one"></div>
@@ -47,15 +171,6 @@
         <div class="hero-art"></div>
         <canvas class="people-field" aria-hidden="true"></canvas>
         <p class="people-field-key" aria-hidden="true"><span></span><b id="people-field-label">People become structured evidence</b></p>
-        <div class="hero-sidecopy">
-          <p class="eyebrow">WEARABLE-AI RESEARCH, MAPPED</p>
-          <h2>An evidence map of wearable-AI research.</h2>
-          <ul>
-            <li><i>↗</i><span>From sensing to real-world impact</span></li>
-            <li><i>◎</i><span>Open, collaborative and machine-readable</span></li>
-            <li><i>♡</i><span>Evidence boundaries made visible</span></li>
-          </ul>
-        </div>
         <div class="sensor-pills">
           <span class="sensor-pill pill-eeg"><i class="sig-eeg"></i><b>EEG</b><small>Brain activity</small></span>
           <span class="sensor-pill pill-ecg"><i class="sig-ecg"></i><b>ECG</b><small>Heart rhythm</small></span>
@@ -199,26 +314,6 @@
       </div>
 
       <div class="story-steps">
-        <article class="step hero-step" data-scene="0">
-          <div class="story-copy hero-copy">
-            <p class="eyebrow">RESEARCH TRENDS &amp; EVIDENCE ATLAS</p>
-            <h1>Wearable AI research<br><em>mapped from signals</em><br>to real-world impact.</h1>
-            <p class="dek">Explore 396 source-checked datasets, models, measures, causal methods, interventions, tools and standards—and track what is changing now.</p>
-            <div class="hero-stats" aria-label="Atlas summary">
-              <span><strong>396</strong> accepted records</span>
-              <span><strong>102</strong> model records</span>
-              <span><strong>116</strong> datasets</span>
-              <span><strong>2,169</strong> relations</span>
-              <span><strong>6</strong> categories</span>
-            </div>
-            <div class="hero-actions">
-              <a class="primary-button" href="#intelligence">View latest research updates <span>→</span></a>
-              <a class="scroll-cue" href="#explore"><span>Explore the atlas</span><i aria-hidden="true">↓</i></a>
-            </div>
-            <p class="hand-note">Small signals. Big possibilities.</p>
-          </div>
-        </article>
-
         <article class="step" id="signals" data-scene="1">
           <div class="story-copy left-copy">
             <p class="eyebrow">01 · SENSE</p>
@@ -242,7 +337,7 @@
         <article class="step" data-scene="3">
           <div class="story-copy left-copy compact-copy">
             <p class="eyebrow">03 · THE LIFECYCLE</p>
-            <h2>Wearable AI is a <em>ten-stage feedback loop.</em></h2>
+            <h2>Ten stages connect <em>sensing to adaptive action.</em></h2>
             <p>Real-world impact depends on the chain around it: quality, measurement, prediction, causal reasoning, intervention, and learning from what happens next.</p>
           </div>
         </article>
@@ -277,100 +372,6 @@
           </div>
         </article>
       </div>
-    </section>
-
-    <section class="intelligence-section" id="intelligence" aria-labelledby="intelligence-title">
-      <div class="intelligence-heading">
-        <div>
-          <p class="eyebrow">TECHNOLOGY INTELLIGENCE · REVIEWED 2026-10-04</p>
-          <h2 id="intelligence-title">Latest wearable-AI research<br><em>across four themes.</em></h2>
-        </div>
-        <div class="intelligence-brief">
-          <p>The latest project layer tracks dated changes—not just publications. It asks whether methods, data, hardware, model performance, product functions or research directions have materially moved.</p>
-          <div class="intelligence-stats"><span><b>4</b> research themes</span><span><b>7</b> selected signals</span><span><b>6</b> change types</span></div>
-        </div>
-      </div>
-
-      <div class="theme-route" aria-label="Four-theme wearable AI research route">
-        <span>01 · Disease prediction</span><i>→</i><span>02 · Intervention &amp; counterfactuals</span><i>→</i><span>03 · Personal digital twin</span><i>↔</i><span>04 · Mixed-reality entry point</span>
-      </div>
-
-      <div class="trend-grid">
-        <article class="trend-card trend-prediction" style="--theme:#087f8c" data-viz-reveal>
-          <header><span>01 · PREDICTION</span><b>Emerging pattern</b></header>
-          <p class="trend-question">What might happen to this person?</p>
-          <h3>New models reason over longer wearable histories</h3>
-          <p class="trend-summary">Physiology-aware generation and long personal histories move the field beyond static representations toward richer temporal reasoning.</p>
-          <div class="trend-deltas">
-            <div><b>Method</b><span>General transfer → cross-channel structure, frequency-aware expert routing and continuous-time decoding.</span></div>
-            <div><b>Data</b><span>WearableQA adds 4,084 questions, 200 people and histories up to 500 days.</span></div>
-            <div><b>Performance</b><span>Same GPT-5.4: 51.2% → 71.3% with fixed-representation agentic Python access.</span></div>
-          </div>
-          <p class="trend-boundary"><b>Boundary</b> SOTER and WearableQA are preprints; benchmark gains are not diagnosis accuracy or clinical utility.</p>
-          <a href="research-map.html#assessment-prediction">Inspect signals &amp; sources <span>↗</span></a>
-        </article>
-
-        <article class="trend-card trend-intervention" style="--theme:#5266c8" data-viz-reveal>
-          <header><span>02 · INTERVENTION</span><b>Evidence checkpoint</b></header>
-          <p class="trend-question">What changes under a different action?</p>
-          <h3>Intervention research still lacks new outcome evidence</h3>
-          <p class="trend-summary">The technical update is a sharper separation between counterfactual frameworks, adaptive policies and observed outcomes in controlled trials.</p>
-          <div class="trend-deltas">
-            <div><b>Framework</b><span>Prediction → causal models, potential outcomes and sequential policy optimization.</span></div>
-            <div><b>Trial baseline</b><span>A 72-person AID study supports bounded twin-guided co-adaptation; feedback alone added no effect.</span></div>
-            <div><b>This review week</b><span>No new intervention outcome was verified in the selected weekly window.</span></div>
-          </div>
-          <p class="trend-boundary"><b>Boundary</b> A model-level what-if, a causal estimate and an intervention result answer different questions.</p>
-          <a href="research-map.html#assessment-intervention">Inspect evidence baseline <span>↗</span></a>
-        </article>
-
-        <article class="trend-card trend-twin" style="--theme:#9264b5" data-viz-reveal>
-          <header><span>03 · DIGITAL TWIN</span><b>Emerging pattern</b></header>
-          <p class="trend-question">Can we build an evolving model of this person?</p>
-          <h3>Personal digital twins are becoming adaptive—but remain disease-specific</h3>
-          <p class="trend-summary">Recent systems combine individual adaptation, repeated updates, feedback and what-if replay—but within tightly bounded physiological problems.</p>
-          <div class="trend-deltas">
-            <div><b>Before</b><span>Static personalization or periodic self-monitoring without a continuously updated action model.</span></div>
-            <div><b>Now</b><span>Weekly retraining, daily suggestions and person-specific glucose–insulin simulation.</span></div>
-            <div><b>Observed outcome</b><span>In a 19-person T2D substudy, weight differed while glucose stayed stable.</span></div>
-          </div>
-          <p class="trend-boundary"><b>Boundary</b> Predictive, mechanistic and causal twins are not interchangeable; no whole-person twin is established.</p>
-          <a href="research-map.html#assessment-twin">Inspect twin evidence <span>↗</span></a>
-        </article>
-
-        <article class="trend-card trend-interface" style="--theme:#b97936" data-viz-reveal>
-          <header><span>04 · MIXED REALITY</span><b>Programmable entry point</b></header>
-          <p class="trend-question">How can a person see and interact with their twin?</p>
-          <h3>Smart glasses are emerging as interfaces to personal AI systems</h3>
-          <p class="trend-summary">The near-term change is not a complete health twin. It is a more programmable wearable interface combining sensing, input and display.</p>
-          <div class="trend-deltas">
-            <div><b>Developer stack</b><span>Meta DAT 1.0 moves from preview to supported tooling for camera, speech, head motion and Neural Band input.</span></div>
-            <div><b>Hardware/product</b><span>Display availability expands and voice-driven face-avatar calls are announced.</span></div>
-            <div><b>New direction</b><span>Glasses can become an interaction entrance to a personal model rather than the model itself.</span></div>
-          </div>
-          <p class="trend-boundary"><b>Boundary</b> Vendor announcements are not independent tests; an avatar is not a physiological twin and a HUD is not automatically spatial MR.</p>
-          <a href="research-map.html#assessment-interface">Inspect product signals <span>↗</span></a>
-        </article>
-      </div>
-
-      <div class="change-ledger" data-viz-reveal>
-        <div class="change-ledger-heading"><p class="eyebrow">HOW UPDATES ARE CLASSIFIED</p><h3>Six types of wearable-AI technology change</h3><p>Each update is classified by what actually changed: method, data, hardware, performance, product function or research direction.</p></div>
-        <div class="change-types">
-          <article><span>01</span><b>Methods</b><p>Physiology-aware temporal modeling, causal frameworks and supported glasses APIs.</p></article>
-          <article><span>02</span><b>Data</b><p>Longitudinal reasoning benchmarks now pair multi-month wearable histories with structured questions.</p></article>
-          <article><span>03</span><b>Hardware</b><p>Display glasses and wrist neural input are moving toward broader—but region-dependent—availability.</p></article>
-          <article><span>04</span><b>Performance</b><p>Large gains appear when tool access changes; results must stay tied to the same benchmark and protocol.</p></article>
-          <article><span>05</span><b>Products &amp; features</b><p>Developer preview becomes supported release; hands-free avatar calls enter the product roadmap.</p></article>
-          <article><span>06</span><b>New directions</b><p>Long-history reasoning, bounded personal twins and mixed-reality access begin to converge—without proving a full system.</p></article>
-        </div>
-      </div>
-
-      <div class="intelligence-boundary">
-        <div><span>NEW</span><p>Richer longitudinal context, explicit tool use, disease-specific adaptive twins and programmable glasses interfaces.</p></div>
-        <div><span>NOT YET</span><p>No prospective clinical utility for the new preprints, no new weekly intervention result, and no validated whole-person twin.</p></div>
-        <a href="research-map.html">Open the full technology radar and 441-record map <span>↗</span></a>
-      </div>
-      <p class="intelligence-source-note">Selected primary-source review window: 2026-09-28 → 2026-10-04. Event date may be a publication date or vendor-announced rollout date. The radar is separate from the frozen registry cutoff and does not automatically accept new papers.</p>
     </section>
 
     <section class="atlas-overview" id="taxonomy">
@@ -529,7 +530,7 @@
 
     <section class="landscape-section" id="model-landscape" aria-labelledby="model-landscape-title">
       <div class="landscape-heading">
-        <div><p class="eyebrow">TAXONOMY DETAIL · 102 MODEL RECORDS</p><h2 id="model-landscape-title">102 wearable-AI models<br><em>grouped by sensor family.</em></h2></div>
+        <div><p class="eyebrow">TAXONOMY DETAIL · 102 MODEL RECORDS</p><h2 id="model-landscape-title">Model records by<br><em>signal and task.</em></h2></div>
         <p>Eleven families are grouped by the signals and modelling scope they serve. Circle area encodes the number of accepted records; branches indicate grouping, not model ancestry.</p>
       </div>
       <div class="landscape-takeaways" aria-label="Key findings from the model landscape">
@@ -583,7 +584,7 @@
       <div class="evolution-heading">
         <div>
           <p class="eyebrow">FIGURE 03 · 396 ACCEPTED RECORDS · 1980–2026</p>
-          <h2 id="research-map-title">How wearable-AI research<br><em>changed from 1980 to 2026.</em></h2>
+          <h2 id="research-map-title">Research records<br><em>through time.</em></h2>
         </div>
         <div class="evolution-intro">
           <p>The river chart summarizes every accepted record by publication window and record type. A second layer preserves 16 source-checked milestones for interpretation and direct access to primary sources.</p>
@@ -669,7 +670,7 @@
 
     <section class="evidence-viz-section" id="evidence-map" aria-labelledby="evidence-viz-title">
       <div class="evidence-viz-heading">
-        <div><p class="eyebrow">FIGURE 04 · CLAIMS AND EVIDENCE BOUNDARIES</p><h2 id="evidence-viz-title">What each evidence level<br><em>can—and cannot—support.</em></h2></div>
+        <div><p class="eyebrow">FIGURE 04 · CLAIMS AND EVIDENCE BOUNDARIES</p><h2 id="evidence-viz-title">Study designs<br><em>and supported claims.</em></h2></div>
         <p>The atlas reports what kind of evidence each record contains—and what that design still cannot establish. Category frequency is not an evidence hierarchy.</p>
       </div>
 

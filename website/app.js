@@ -156,7 +156,7 @@
       }
       if (scene === 3) {
         const lifecycle = [[95,411],[207,411],[319,411],[431,411],[543,411],[657,411],[769,411],[881,411],[993,411],[1105,411]]
-          .map(point => transformScenePoint(point, 250, .78));
+          .map(point => transformScenePoint(point, 180, .62));
         return ringSvg(person, lifecycle[person.id % lifecycle.length], 34, 47);
       }
       if (scene === 4) {
@@ -166,7 +166,7 @@
       }
       if (scene === 5) {
         const evidence = [[135,403],[365,403],[600,403],[835,403],[1065,403]]
-          .map(point => transformScenePoint(point, 270, .8));
+          .map(point => transformScenePoint(point, 180, .63));
         return ringSvg(person, evidence[person.id % evidence.length], 70, 93);
       }
       return {
