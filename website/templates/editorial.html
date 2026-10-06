@@ -1,0 +1,988 @@
+<!doctype html>
+<!-- Editorial source fragments. Run website/build_pages.py to build the
+     separate public pages; this source is not a public navigation target. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f2">
+  <meta name="description" content="Track the latest wearable-AI methods, data, hardware, performance, product features and research directions across prediction, intervention, digital twins and mixed reality.">
+  <link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Awesome Wearable AI — Research Trends & Evidence Atlas">
+  <meta property="og:description" content="A source-checked technology intelligence atlas for disease prediction, intervention, personal digital twins and mixed-reality interfaces.">
+  <meta property="og:url" content="https://zipengwu365.github.io/awesome-wearable-ai/">
+  <meta property="og:image" content="https://zipengwu365.github.io/awesome-wearable-ai/assets/images/hero-wearable-researcher-v3.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Awesome Wearable AI — Research Trends &amp; Evidence Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-scene="0">
+  <a class="skip-link" href="#intelligence">Skip to latest research updates</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Awesome Wearable AI home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Awesome Wearable AI</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#intelligence">Latest updates</a>
+      <a href="research-map.html">Research columns</a>
+      <a href="#taxonomy">Research guide</a>
+      <a href="#evidence-map">Evidence</a>
+      <a href="#explore">Library</a>
+      <a class="nav-github" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <button class="menu-button" type="button" aria-expanded="false" aria-label="Open navigation">Menu</button>
+  </header>
+
+  <div class="story-progress" aria-hidden="true"><span></span></div>
+
+  <main id="top">
+    <section class="home-intro" id="overview" aria-labelledby="home-title">
+      <div class="home-art" aria-hidden="true"></div>
+      <div class="home-content">
+        <p class="eyebrow">AWESOME WEARABLE AI · RESEARCH UPDATES</p>
+        <h1 id="home-title">Wearable AI.<br><em>Research &amp;<br>technology updates.</em></h1>
+        <p class="home-description">Track new studies, model capabilities, datasets and wearable products—and see what changed, how it compares and what the evidence supports.</p>
+        <nav class="home-themes" aria-label="Four research themes">
+          <a href="#trend-prediction"><span>01</span>Disease prediction</a>
+          <a href="#trend-intervention"><span>02</span>Intervention &amp; counterfactuals</a>
+          <a href="#trend-twin"><span>03</span>Personal digital twins</a>
+          <a href="#trend-interface"><span>04</span>Metaverse &amp; mixed reality</a>
+        </nav>
+        <div class="home-actions">
+          <a class="primary-button" href="columns.html">Explore research columns <span aria-hidden="true">→</span></a>
+          <a class="home-library" href="library.html">Browse the research library <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="home-edition">Last reviewed <time datetime="2026-10-04">4 Oct 2026</time><span aria-hidden="true"> · </span><a href="#explore">396 accepted records</a></p>
+      </div>
+    </section>
+
+    <section class="intelligence-section" id="intelligence" aria-labelledby="intelligence-title">
+      <div class="intelligence-heading">
+        <div>
+          <p class="eyebrow">RESEARCH &amp; PRODUCT UPDATES · REVIEWED 2026-10-04</p>
+          <h2 id="intelligence-title">Latest research<br><em>&amp; technology changes.</em></h2>
+        </div>
+        <div class="intelligence-brief">
+          <p>Four research columns: see what changed, then follow the full paper and resource timeline for each theme. All 396 accepted and 45 watchlist records are included—not just the selected updates summarized here.</p>
+          <div class="intelligence-stats"><span><b>4</b> research columns</span><span><b>441</b> repository records</span><span>Source updates reviewed <b>4 Oct 2026</b></span></div>
+        </div>
+      </div>
+
+      <nav class="update-overview" aria-label="Four research themes: key findings at a glance">
+        <a href="#trend-prediction"><span>01 · Disease prediction</span><b>WearableQA answer accuracy: 51.2% → 71.3%</b><small>Same model, added Python tools · preprint, not a clinical result ↓</small></a>
+        <a href="#trend-intervention"><span>02 · Intervention &amp; counterfactuals</span><b>From predicting outcomes to testing treatment choices</b><small>Earlier framework and trial · no new trial outcome verified in this review ↓</small></a>
+        <a href="#trend-twin"><span>03 · Personal digital twins</span><b>Weekly model updates and daily diabetes feedback</b><small>19-person substudy · earlier evidence, not a whole-person twin ↓</small></a>
+        <a href="#trend-interface"><span>04 · Metaverse &amp; mixed reality</span><b>Glasses tools: preview → supported release</b><small>DAT 1.0 · wider sales and avatar calls announced; availability varies ↓</small></a>
+      </nav>
+
+      <div class="trend-grid">
+        <article class="trend-card trend-prediction" id="trend-prediction" style="--theme:#087f8c" data-viz-reveal>
+          <header><span>01 · PREDICTION</span><b>Emerging pattern</b></header>
+          <p class="trend-question">What might happen to this person?</p>
+          <h3>Models forecast body signals and answer questions about health histories</h3>
+          <p class="trend-summary">SOTER predicts future signal values and fills missing readings. WearableQA tests questions about months of personal data. These are tools for future health-prediction systems, not clinically validated disease predictors.</p>
+          <p class="trend-dateline">SOTER · 15 Sep 2026 / WearableQA · 4 Sep 2026 · Preprints</p>
+          <div class="trend-deltas">
+            <div><b>Method</b><span>SOTER adapts general time-series modelling to physiology: it learns relationships between signals, routes different frequency patterns to specialized model components, and predicts values at requested times.</span></div>
+            <div><b>Data</b><span>WearableQA adds 4,084 questions, 200 people and histories up to 500 days.</span></div>
+            <div><b>Performance</b><span><strong>51.2% → 71.3% question-answering accuracy (+20.1 percentage points).</strong> On WearableQA, the same GPT-5.4 improves when allowed to run Python calculations instead of only reading the data as text. This changes the tools and compute, not the model version.</span></div>
+            <div><b>Model results</b><span>Without training on the target dataset, SOTER reports the lowest root-mean-square error (RMSE) on 4 of 6 datasets and mean absolute error (MAE) on 5 of 6. Both measure prediction error; lower is better.</span></div>
+          </div>
+          <p class="trend-boundary"><b>What this does not prove</b> These preprint results do not establish better diagnosis or patient outcomes. SOTER also includes hospital signals, not only everyday wearable data.</p>
+          <nav class="theme-timeline-preview" aria-label="Disease prediction timeline preview"><b>Follow the research through time</b><a href="research-map.html?theme=prediction#model-biot-2023"><span>2023</span>BIOT · learning across biosignals</a><a href="research-map.html?theme=prediction#model-sensorfm-2026"><span>2026</span>SensorFM · reusable sensor models</a><a href="research-map.html?theme=prediction#signal-wearableqa-2026"><span>Sep 2026</span>WearableQA · questions about health histories</a></nav>
+          <a href="research-map.html?theme=prediction">Read this column &amp; full timeline <span>↗</span></a>
+          <p class="theme-coverage">281 accepted + 40 watchlist records in this primary column, plus labelled cross-theme work.</p>
+        </article>
+
+        <article class="trend-card trend-intervention" id="trend-intervention" style="--theme:#5266c8" data-viz-reveal>
+          <header><span>02 · INTERVENTION</span><b>Evidence checkpoint</b></header>
+          <p class="trend-question">What changes under a different action?</p>
+          <h3>Causal frameworks and intervention trial results</h3>
+          <p class="trend-summary">Causal digital twins propose how to compare treatment alternatives. Earlier controlled trials provide a baseline for judging whether a personalized action improves an outcome.</p>
+          <p class="trend-dateline">Causal framework · Feb 2026 / AID trial · May 2025 · Earlier baselines</p>
+          <div class="trend-deltas">
+            <div><b>Framework</b><span>Move from predicting what happens next to estimating what would change under a different treatment, then choosing a sequence of actions. This is a proposed framework, not a tested treatment benefit.</span></div>
+            <div><b>Trial baseline</b><span>In a 72-person, six-month automated insulin delivery (AID) trial, adjustments guided by a person's glucose–insulin simulation improved the time spent within the target glucose range. Information feedback alone did not show an additional improvement.</span></div>
+            <div><b>This review week</b><span>No new intervention outcome was verified in the selected weekly window.</span></div>
+          </div>
+          <p class="trend-boundary"><b>What this does not prove</b> Changing a model input is not the same as changing treatment in a trial. A simulated benefit still needs real-world testing.</p>
+          <nav class="theme-timeline-preview" aria-label="Intervention timeline preview"><b>Follow the research through time</b><a href="research-map.html?theme=intervention#method-rmsn-2018"><span>2018</span>RMSN · treatment sequences over time</a><a href="research-map.html?theme=intervention#method-causal-transformer-2022"><span>2022</span>Causal Transformer · treatment effects</a><a href="research-map.html?theme=intervention#intervention-long-covid-pace-me-2026"><span>2026</span>Long COVID trial · a null result retained</a></nav>
+          <a href="research-map.html?theme=intervention">Read this column &amp; full timeline <span>↗</span></a>
+          <p class="theme-coverage">91 accepted + 4 watchlist records in this primary column, plus labelled cross-theme work.</p>
+        </article>
+
+        <article class="trend-card trend-twin" id="trend-twin" style="--theme:#9264b5" data-viz-reveal>
+          <header><span>03 · DIGITAL TWIN</span><b>Emerging pattern</b></header>
+          <p class="trend-question">Can we build an evolving model of this person?</p>
+          <h3>Diabetes twins add repeated updates and feedback</h3>
+          <p class="trend-summary">A personal digital twin is a model of one person that can be updated with their data. The studies here focus on diabetes, not a simulation of the entire person.</p>
+          <p class="trend-dateline">T2D predictive twin · Jul 2026 / AID trial · May 2025 · Earlier baselines</p>
+          <div class="trend-deltas">
+            <div><b>Type 2 diabetes</b><span>The July 2026 study adds weekly model retraining and daily text-message suggestions. In a small substudy (10 people receiving AI feedback; 9 controls), mean weight loss was 5.87 vs 3.57 lb over the three-month intervention. Glucose levels remained stable. <a href="https://pubmed.ncbi.nlm.nih.gov/42527576/" target="_blank" rel="noreferrer">Study details ↗</a></span></div>
+            <div><b>Type 1 diabetes</b><span>The separate 2025 trial uses individual glucose–insulin simulations to adjust automated insulin delivery and replay alternative actions. It is not the same system as the type 2 diabetes study.</span></div>
+          </div>
+          <p class="trend-boundary"><b>What this does not prove</b> Forecasting glucose, simulating physiology and estimating treatment effects are different capabilities. These studies do not establish a whole-person digital twin.</p>
+          <nav class="theme-timeline-preview" aria-label="Digital twin timeline preview"><b>Follow the research through time</b><a href="research-map.html?theme=twin#intervention-aid-digital-twin-coadaptation-2025"><span>2025</span>Individual glucose–insulin simulation trial</a><a href="research-map.html?theme=twin#method-causal-digital-twins-2026"><span>2026</span>Causal twins · a proposed framework</a><a href="research-map.html?theme=twin#signal-t2d-predictive-twin-2026"><span>Jul 2026</span>Predictive twin · repeated updates and feedback</a></nav>
+          <a href="research-map.html?theme=twin">Read this column &amp; full timeline <span>↗</span></a>
+          <p class="theme-coverage">2 primary accepted records, plus related simulation and personalization research. Supporting work is not counted as a demonstrated twin.</p>
+        </article>
+
+        <article class="trend-card trend-interface" id="trend-interface" style="--theme:#b97936" data-viz-reveal>
+          <header><span>04 · METAVERSE &amp; MIXED REALITY</span><b>Product updates</b></header>
+          <p class="trend-question">How can a person see and interact with their twin?</p>
+          <h3>Smart glasses add developer tools; avatar calls are announced</h3>
+          <p class="trend-summary">The near-term change is not a complete health twin. It is a more programmable wearable interface combining sensing, input and display.</p>
+          <p class="trend-dateline">Meta DAT 1.0 &amp; Display · Sep 2026 · Vendor announcements</p>
+          <div class="trend-deltas">
+            <div><b>Developer tools</b><span>Meta's Wearables Device Access Toolkit (DAT 1.0) moves from preview to a supported release. Apps can use glasses cameras, speech, head motion and Neural Band wrist input.</span></div>
+            <div><b>Hardware</b><span>Display glasses and wrist neural input: broader availability is announced, not a new independently tested sensor-performance gain.</span></div>
+            <div><b>Product features</b><span>Selected US retail → more markets and online ordering. Voice-driven face-avatar calls are announced for later early access; delivery depends on region.</span></div>
+            <div><b>Possible use</b><span>Glasses could let people view information from, or send input to, a personal health model. This is a possible application, not a demonstrated health-twin product.</span></div>
+          </div>
+          <p class="trend-boundary"><b>What this does not prove</b> These are vendor announcements, not independent tests. A face avatar is not a body model; a glasses display is not necessarily content anchored in the physical world.</p>
+          <nav class="theme-timeline-preview" aria-label="Mixed reality timeline preview"><b>Follow the research through time</b><a href="research-map.html?theme=interface#dataset-ego-exo4d"><span>2024</span>Ego-Exo4D · first- and third-person data</a><a href="research-map.html?theme=interface#model-generic-neuromotor-interface-2025"><span>2025</span>Muscle-signal input across users and tasks</a><a href="research-map.html?theme=interface#signal-meta-dat-1-2026"><span>Sep 2026</span>Glasses developer toolkit · release announced</a></nav>
+          <a href="research-map.html?theme=interface">Read this column &amp; full timeline <span>↗</span></a>
+          <p class="theme-coverage">22 accepted + 1 watchlist record in this primary column. Product updates are labelled separately from research papers.</p>
+        </article>
+      </div>
+
+      <div class="review-bottom">
+        <p><b>Need the full comparison?</b> Filter source entries by method, data, hardware, performance, product feature or new direction.</p>
+        <a href="research-map.html">Open all four columns &amp; paper timelines <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="intelligence-source-note">Each column includes the full repository timeline, not only these reading suggestions. The 7 additional source reviews were checked 28 Sep–4 Oct 2026; older studies are labelled as comparison baselines. Catalog years and source-review dates are kept separate. <a href="research-map.html">Browse all 396 accepted + 45 watchlist records by theme ↗</a></p>
+    </section>
+
+    <div class="story-intro">
+      <div><p class="eyebrow">BACKGROUND · HOW TO INTERPRET THE RESEARCH</p><h2>From sensor data to<br>health decisions.</h2></div>
+      <div><p>Follow the animated guide to signals, models, interventions and evidence. The moving figures illustrate these concepts; they are not counts of participants or studies.</p><a href="#taxonomy">Skip to research charts <span aria-hidden="true">↓</span></a></div>
+    </div>
+
+    <details class="reading-terms" id="reading-terms">
+      <summary>Quick definitions: digital twins, counterfactuals and evidence labels</summary>
+      <dl>
+        <div><dt>Counterfactual</dt><dd>A “what if?” comparison: what might happen under a different action. Changing a model input alone does not prove a real treatment effect.</dd></div>
+        <div><dt>Digital twin</dt><dd>A model of a particular person or system, updated using observations. Check which signals it models and whether its simulations were tested.</dd></div>
+        <div><dt>Representation / features</dt><dd>A summary learned from signals that can be used for tasks such as activity recognition or risk prediction.</dd></div>
+        <div><dt>Policy value</dt><dd>The expected outcome of following a rule for choosing actions over time—not a government policy.</dd></div>
+        <div><dt>Clinical utility</dt><dd>Whether using a system improves patient or care outcomes, considering harms as well as benefits.</dd></div>
+        <div><dt>Review depth</dt><dd>How much curators checked: publication details, core metadata, or a study summary with limitations. This is not a score for scientific quality.</dd></div>
+        <div><dt>Signal abbreviations</dt><dd>ECG: electrical heart activity. PPG: optical pulse. EEG / MEG: electrical / magnetic brain activity. EMG: muscle activity. IMU: motion sensors. CGM: continuous glucose monitoring. PSG: a multi-signal sleep study.</dd></div>
+        <div><dt>Foundation model</dt><dd>A model pretrained for reuse across tasks. The library includes other model types too; not every model record is a foundation model.</dd></div>
+      </dl>
+    </details>
+
+    <section class="scrolly" id="story" aria-label="The wearable AI story">
+      <div class="visual-stage" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <canvas class="people-field" aria-hidden="true"></canvas>
+        <p class="people-field-key" aria-hidden="true"><span></span><b id="people-field-label">Concept illustration, not participant counts</b></p>
+
+        <svg class="world" viewBox="0 0 1200 800" role="img" aria-label="A person wearing sensors surrounded by signals that grow into a research atlas">
+          <defs>
+            <linearGradient id="shirtGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#83d9d0"/>
+              <stop offset="1" stop-color="#4caeb8"/>
+            </linearGradient>
+            <linearGradient id="trouserGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f39a78"/>
+              <stop offset="1" stop-color="#e87660"/>
+            </linearGradient>
+            <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+              <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#20375a" flood-opacity=".12"/>
+            </filter>
+            <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+              <feGaussianBlur stdDeviation="9" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <g class="landscape">
+            <circle class="sun" cx="1035" cy="154" r="74"/>
+            <path class="cloud cloud-a" d="M85 193c16-31 57-36 79-11 27-22 76-5 76 31H85c-14 0-15-14 0-20Z"/>
+            <path class="cloud cloud-b" d="M924 285c11-25 45-29 63-9 23-18 62-3 62 25H918c-10 0-8-11 6-16Z"/>
+            <path class="hill hill-back" d="M0 639c131-121 244-108 349-26 116-127 262-103 369 16 123-131 314-95 482 1v170H0Z"/>
+            <path class="hill hill-front" d="M0 710c155-98 291-93 438 5 185-107 407-78 762 22v63H0Z"/>
+            <g class="plant plant-a"><path d="M108 699c-8-47 5-99 38-137M128 645c-32-19-40-51-35-79M133 625c35-18 52-48 51-79"/><circle cx="94" cy="559" r="20"/><circle cx="186" cy="541" r="23"/></g>
+            <g class="plant plant-b"><path d="M1076 706c8-44-4-93-35-129M1058 660c28-18 37-47 31-74M1057 638c-31-15-48-42-47-70"/><circle cx="1091" cy="581" r="18"/><circle cx="1008" cy="562" r="21"/></g>
+          </g>
+
+          <g class="signal-lines">
+            <path class="flow flow-ecg" d="M415 382h58l10-22 16 55 17-91 20 67 13-32 13 23h71"/>
+            <path class="flow flow-eeg" d="M552 247c15-18 27 17 42-2s27 17 43-2 27 17 43-2"/>
+            <path class="flow flow-imu" d="M409 504c-52 2-81 38-92 77"/>
+            <path class="flow flow-cgm" d="M666 504c64 2 100 35 126 78"/>
+          </g>
+
+          <g class="person" filter="url(#softShadow)">
+            <ellipse class="person-shadow" cx="582" cy="716" rx="142" ry="24"/>
+            <path class="leg leg-left" d="M516 535c-4 69-10 137-18 175h68l22-175Z"/>
+            <path class="leg leg-right" d="M584 535l17 175h72c-12-48-22-112-23-175Z"/>
+            <path class="shoe" d="M493 697h77c5 4 7 16 1 22H477c-2-13 5-20 16-22Z"/>
+            <path class="shoe" d="M599 697h77c13 4 20 11 19 22h-98c-5-8-4-16 2-22Z"/>
+            <path class="torso" d="M490 327c33-35 147-34 178 0l-17 221c-39 24-119 23-160 0Z"/>
+            <path class="arm arm-left" d="M504 345c-30 28-45 82-56 132-4 18 24 26 33 8l49-111Z"/>
+            <path class="arm arm-right" d="M652 345c33 29 49 78 60 129 5 21-26 27-34 8l-50-108Z"/>
+            <rect class="watch" x="686" y="442" width="31" height="42" rx="11" transform="rotate(-13 686 442)"/>
+            <rect class="watch-face" x="691" y="449" width="21" height="25" rx="7" transform="rotate(-13 691 449)"/>
+            <circle class="neck" cx="579" cy="309" r="26"/>
+            <circle class="head" cx="579" cy="242" r="77"/>
+            <path class="hair" d="M506 235c-5-75 102-109 148-49 12 16 14 37 8 59-10-6-20-18-24-34-25 13-69 18-104 7-3 19-12 32-28 40Z"/>
+            <path class="ear" d="M509 244c-21-6-25 34-3 38"/>
+            <path class="ear" d="M649 244c20-5 23 33 3 38"/>
+            <path class="brow" d="M543 245c9-5 18-5 27 0M598 245c9-5 18-5 26 0"/>
+            <circle class="eye" cx="557" cy="260" r="4"/>
+            <circle class="eye" cx="610" cy="260" r="4"/>
+            <path class="smile" d="M562 286c12 10 27 10 40 0"/>
+            <path class="earbud" d="M649 245c13-5 18 4 13 16"/>
+            <circle class="chest-sensor" cx="580" cy="392" r="18"/>
+            <path class="chest-wave" d="M568 392h7l4-7 5 15 5-8h7"/>
+          </g>
+
+          <g class="signal-labels">
+            <g class="signal-chip chip-eeg" transform="translate(370 218)"><circle r="29"/><text x="43" y="-2">EEG</text><text class="chip-sub" x="43" y="18">neural signals</text></g>
+            <g class="signal-chip chip-ppg" transform="translate(783 295)"><circle r="29"/><text x="43" y="-2">PPG</text><text class="chip-sub" x="43" y="18">optical pulse</text></g>
+            <g class="signal-chip chip-ecg" transform="translate(345 413)"><circle r="29"/><text x="43" y="-2">ECG</text><text class="chip-sub" x="43" y="18">cardiac rhythm</text></g>
+            <g class="signal-chip chip-imu" transform="translate(312 579)"><circle r="29"/><text x="43" y="-2">IMU</text><text class="chip-sub" x="43" y="18">motion</text></g>
+            <g class="signal-chip chip-cgm" transform="translate(810 587)"><circle r="29"/><text x="43" y="-2">CGM</text><text class="chip-sub" x="43" y="18">metabolic state</text></g>
+            <g class="signal-chip chip-sleep" transform="translate(840 431)"><circle r="29"/><text x="43" y="-2">SLEEP</text><text class="chip-sub" x="43" y="18">recovery</text></g>
+          </g>
+
+          <g class="representation-field">
+            <text class="world-kicker" x="600" y="142" text-anchor="middle">RAW SIGNALS BECOME LEARNED FEATURES</text>
+            <g class="raw-wave" transform="translate(205 285)">
+              <text x="0" y="-35">raw signal</text>
+              <path d="M0 0h58l11-25 17 62 19-98 22 72 15-32 18 21h73"/>
+            </g>
+            <path class="transform-arrow" d="M472 292h208"/>
+            <g class="latent-dots">
+              <circle cx="780" cy="245" r="10"/><circle cx="825" cy="270" r="8"/><circle cx="865" cy="224" r="13"/><circle cx="911" cy="274" r="7"/>
+              <circle cx="770" cy="328" r="7"/><circle cx="818" cy="345" r="13"/><circle cx="872" cy="319" r="9"/><circle cx="924" cy="342" r="11"/>
+              <circle cx="789" cy="409" r="12"/><circle cx="847" cy="397" r="8"/><circle cx="897" cy="418" r="13"/>
+            </g>
+            <text class="representation-label" x="851" y="474" text-anchor="middle">learned signal features</text>
+          </g>
+
+          <g class="lifecycle-field">
+            <text class="world-kicker" x="600" y="142" text-anchor="middle">THE TEN-STAGE WEARABLE AI LIFECYCLE</text>
+            <path class="lifecycle-track" d="M80 411H1120"/>
+            <g class="life-node" transform="translate(95 411)"><circle r="30"/><text y="72">Sense</text><text class="life-no" y="5">01</text></g>
+            <g class="life-node" transform="translate(207 411)"><circle r="30"/><text y="72">Represent</text><text class="life-no" y="5">02</text></g>
+            <g class="life-node" transform="translate(319 411)"><circle r="30"/><text y="72">Measure</text><text class="life-no" y="5">03</text></g>
+            <g class="life-node" transform="translate(431 411)"><circle r="30"/><text y="72">Predict</text><text class="life-no" y="5">04</text></g>
+            <g class="life-node" transform="translate(543 411)"><circle r="30"/><text y="72">Cause</text><text class="life-no" y="5">05</text></g>
+            <g class="life-node" transform="translate(657 411)"><circle r="30"/><text y="72">Learn policy</text><text class="life-no" y="5">06</text></g>
+            <g class="life-node" transform="translate(769 411)"><circle r="30"/><text y="72">Intervene</text><text class="life-no" y="5">07</text></g>
+            <g class="life-node" transform="translate(881 411)"><circle r="30"/><text y="72">Evaluate</text><text class="life-no" y="5">08</text></g>
+            <g class="life-node" transform="translate(993 411)"><circle r="30"/><text y="72">Close loop</text><text class="life-no" y="5">09</text></g>
+            <g class="life-node" transform="translate(1105 411)"><circle r="30"/><text y="72">Govern</text><text class="life-no" y="5">10</text></g>
+            <path class="loop-arrow" d="M1105 354c-68-176-942-178-1010 0"/>
+          </g>
+
+          <g class="ecosystem-field">
+            <text class="world-kicker" x="600" y="98" text-anchor="middle">ONE CONNECTED RESEARCH ECOSYSTEM</text>
+            <g class="eco-lines">
+              <path d="M600 385 335 233M600 385 605 175M600 385 871 230M600 385 334 558M600 385 598 626M600 385 879 554"/>
+              <path d="M335 233 605 175 871 230M334 558 598 626 879 554"/>
+            </g>
+            <g class="eco-core" transform="translate(600 385)"><circle r="94"/><text y="-9">AWESOME</text><text y="20">WEARABLE AI</text><text class="eco-core-sub" y="48">396 accepted records</text></g>
+            <g class="eco-node eco-model" transform="translate(335 233)"><circle r="68"/><text y="-3">Models</text><text class="eco-count" y="24">102</text></g>
+            <g class="eco-node eco-data" transform="translate(605 175)"><circle r="68"/><text y="-3">Datasets</text><text class="eco-count" y="24">116</text></g>
+            <g class="eco-node eco-method" transform="translate(871 230)"><circle r="68"/><text y="-3">Methods</text><text class="eco-count" y="24">61</text></g>
+            <g class="eco-node eco-measure" transform="translate(334 558)"><circle r="68"/><text y="-3">Measures</text><text class="eco-count" y="24">35</text></g>
+            <g class="eco-node eco-infra" transform="translate(598 626)"><circle r="68"/><text y="-3">Infrastructure</text><text class="eco-count" y="24">42</text></g>
+            <g class="eco-node eco-intervention" transform="translate(879 554)"><circle r="68"/><text y="-3">Interventions</text><text class="eco-count" y="24">40</text></g>
+          </g>
+
+          <g class="evidence-field">
+            <text class="world-kicker" x="600" y="116" text-anchor="middle">FIVE CLAIM LAYERS · DISTINCT EVIDENCE REQUIREMENTS</text>
+            <path class="evidence-spine" d="M125 403H1075"/>
+            <g class="evidence-node ev-association" transform="translate(135 403)"><circle r="58"/><circle class="mini" cx="-22" cy="16" r="8"/><circle class="mini" cx="-4" cy="-19" r="8"/><circle class="mini" cx="24" cy="10" r="8"/><path d="M-17 9-8-10M3-15 18 5"/><text y="92">Association</text><text class="ev-question" y="116">What is related?</text></g>
+            <g class="evidence-node ev-predict" transform="translate(365 403)"><circle r="58"/><path d="M-35 17c18-7 26-43 45-31 14 9 22-19 39-26"/><text y="92">Prediction</text><text class="ev-question" y="116">What may happen?</text></g>
+            <g class="evidence-node ev-causal" transform="translate(600 403)"><circle r="58"/><circle class="mini" cx="-22" cy="-13" r="9"/><circle class="mini" cx="23" cy="-25" r="9"/><circle class="mini" cx="18" cy="23" r="9"/><path d="M-13-16 13-23M-15-5 10 15M23-16 19 13"/><text y="92">Causal effect</text><text class="ev-question" y="116">What changes under action?</text></g>
+            <g class="evidence-node ev-policy" transform="translate(835 403)"><circle r="58"/><path d="M-31-14h22l17-21M-9-14l23 23 24-17M14 9l22 20"/><text y="92">Policy value</text><text class="ev-question" y="116">What should we do?</text></g>
+            <g class="evidence-node ev-utility" transform="translate(1065 403)"><circle r="58"/><path d="M-29 2h17l9-23 14 45 10-22h19M0-38v14M-7-31H7"/><text y="92">Clinical utility</text><text class="ev-question" y="116">Does it help in care?</text></g>
+          </g>
+        </svg>
+
+        <div class="stage-note" data-note="relations"><strong>2,169</strong> explicit or machine-derived relations connect the atlas.</div>
+      </div>
+
+      <div class="story-steps">
+        <article class="step" id="signals" data-scene="1">
+          <div class="hero-art">
+            <figure class="sensing-figure">
+              <img src="assets/images/sensing-devices-editorial-v1.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Illustrated ECG smartwatch, adhesive cardiac patch, EEG headband and glucose sensor, each paired with an example signal trace.">
+              <figcaption>
+                <span><b>ECG watch &amp; chest patch</b>Electrical heart activity</span>
+                <span><b>EEG headband</b>Electrical brain activity</span>
+                <span><b>Glucose sensor</b>Interstitial glucose trend</span>
+              </figcaption>
+              <p>Illustrative devices and traces · not product specifications or measured results</p>
+            </figure>
+          </div>
+          <div class="story-copy left-copy">
+            <p class="eyebrow">01 · SENSE</p>
+            <h2>Wearable sensors capture <em>body and context signals.</em></h2>
+            <p>ECG records electrical heart activity; EEG records brain activity; CGM tracks interstitial glucose. Devices measure different signals—not a complete picture of health.</p>
+            <p class="margin-note">Other inputs include optical pulse (PPG), motion (IMU), muscle activity (EMG) and respiration. Sleep is inferred from signals, not a sensor type.</p>
+          </div>
+        </article>
+
+        <article class="step" id="representations" data-scene="2">
+          <div class="story-copy right-copy">
+            <p class="eyebrow">02 · REPRESENT</p>
+            <h2>Models turn raw signals into <em>features for prediction.</em></h2>
+            <p>A representation is a set of learned features that summarizes the signal. Other models can use those features to recognize an activity or estimate risk; accuracy must be tested on new people and devices.</p>
+            <ul class="micro-list" aria-label="Signal transformation stages">
+              <li>calibrate</li><li>encode</li><li>learn</li><li>interpret</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="step" id="lifecycle-story" data-scene="3">
+          <div class="story-copy left-copy compact-copy">
+            <p class="eyebrow">03 · THE LIFECYCLE</p>
+            <h2>Ten stages connect <em>sensing to adaptive action.</em></h2>
+            <p>A useful system must do more than predict: check signal quality, select an action, evaluate its effects and use the observed response to update future decisions.</p>
+          </div>
+        </article>
+
+        <article class="step" id="resource-types-story" data-scene="4">
+          <div class="story-copy right-copy compact-copy">
+            <p class="eyebrow">04 · THE ATLAS</p>
+            <h2>The atlas connects <em>six research resource types.</em></h2>
+            <p>Browse models, datasets, analysis methods, health measures, interventions, and tools or standards. These describe the type of resource; the lifecycle shows where each resource is used.</p>
+          </div>
+        </article>
+
+        <article class="step evidence-step" id="evidence" data-scene="5">
+          <div class="story-copy left-copy compact-copy">
+            <p class="eyebrow">05 · EVIDENCE BOUNDARIES</p>
+            <h2>Each research claim requires <em>different evidence.</em></h2>
+            <p>A link between two measurements is not proof of cause. Accurate forecasts do not tell us whether a treatment will help. Choosing when to act and showing patient benefit require separate tests.</p>
+            <p class="margin-note">Policy value means the expected outcome of a rule for choosing actions. Clinical utility means benefit when a system is used in care.</p>
+          </div>
+        </article>
+
+        <article class="step quiet-step" id="review-depth-story" data-scene="6">
+          <div class="quiet-copy">
+            <p class="eyebrow">HOW MUCH OF THE LIBRARY WAS CHECKED?</p>
+            <blockquote>95 of 396 accepted records have curated evidence cards.</blockquote>
+            <p>For these 95 entries, curators summarized the study, contribution and limitations. Another 225 have core metadata checks; 76 have bibliographic and publication-venue checks. None of these labels means the results were independently reproduced.</p>
+            <div class="depth-bars" aria-label="Evidence depth counts">
+              <div><span>Evidence card</span><i style="--size:42%"></i><strong>95</strong></div>
+              <div><span>Metadata verified</span><i style="--size:100%"></i><strong>225</strong></div>
+              <div><span>Venue verified</span><i style="--size:34%"></i><strong>76</strong></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="atlas-overview" id="taxonomy">
+      <div class="overview-heading">
+        <p class="eyebrow">A RESEARCH ATLAS, NOT JUST A PAPER LIST</p>
+        <h2>How the atlas organizes<br><em>wearable-AI research.</em></h2>
+        <p>Use the first figure to follow a system from measurement to action. Use the next two to find resource types and technical roles. These categories organize the library; they do not rank research quality.</p>
+      </div>
+
+      <div class="atlas-reading-guide" aria-label="Three-step guide to reading the atlas">
+        <article>
+          <span>01 · SCOPE</span>
+          <strong>See what is covered</strong>
+          <p><b>396 accepted records</b> across six resource types, connected by 2,169 explicit or machine-derived relations.</p>
+          <small>Coverage · provenance · links</small>
+        </article>
+        <article>
+          <span>02 · SYSTEM</span>
+          <strong>Follow the capability loop</strong>
+          <p>Read from body signals to representation, assessment, decision and action—then follow real-world response back into the loop.</p>
+          <small>Sense → represent → assess → decide → act</small>
+        </article>
+        <article>
+          <span>03 · EVIDENCE</span>
+          <strong>Check what the study actually shows</strong>
+          <p>Record count shows coverage, not quality. Research role, evidence design and supported claim must be read separately.</p>
+          <small>Association ≠ prediction ≠ causation ≠ utility</small>
+        </article>
+      </div>
+
+      <div class="overview-grid">
+        <article class="overview-card capability-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">FIGURE 01 · CAPABILITY LOOP</p><h3>How wearable AI moves from body signals to adaptive action</h3></div>
+            <span class="status-chip">Sense → Represent → Assess → Decide → Act → Learn</span>
+          </div>
+          <p class="card-intro">An adaptive system measures signals, summarizes them, estimates a person's state, chooses an action and learns from the response. The figure describes a system design; an individual study may address only one stage.</p>
+          <figure class="capability-figure" aria-labelledby="capability-caption">
+            <div class="capability-art-strip">
+              <img src="assets/images/capability-story-v1.png" loading="lazy" decoding="async" alt="Five connected editorial illustrations showing wearable sensing, learned representation, health assessment, decision comparison, and real-world intervention with feedback">
+              <div class="art-sequence" aria-hidden="true"><span><b>01</b><small>Sense</small></span><i>→</i><span><b>02</b><small>Represent</small></span><i>→</i><span><b>03</b><small>Assess</small></span><i>→</i><span><b>04</b><small>Decide</small></span><i>→</i><span><b>05</b><small>Act &amp; learn</small></span></div>
+              <p class="art-scroll-cue">Scroll to follow all five scenes →</p>
+            </div>
+            <div class="capability-path">
+              <section class="cap-stage stage-sense">
+                <header><span>01</span><div><b>Sense</b><small>What was observed?</small></div></header>
+                <p>Collect signals over time, together with activity and device context.</p>
+              </section>
+              <i class="stage-arrow" aria-hidden="true">→</i>
+              <section class="cap-stage stage-represent">
+                <header><span>02</span><div><b>Represent</b><small>Which features summarize the signals?</small></div></header>
+                <p>Learn patterns while preserving timing and relationships between signals.</p>
+              </section>
+              <i class="stage-arrow" aria-hidden="true">→</i>
+              <section class="cap-stage stage-assess">
+                <header><span>03</span><div><b>Assess</b><small>What can be inferred?</small></div></header>
+                <p>Measure or predict—without confusing prediction with effect.</p>
+              </section>
+              <i class="stage-arrow" aria-hidden="true">→</i>
+              <section class="cap-stage stage-decide">
+                <header><span>04</span><div><b>Decide</b><small>What changes under action?</small></div></header>
+                <p>Compare possible actions, their expected benefits and their risks.</p>
+              </section>
+              <i class="stage-arrow" aria-hidden="true">→</i>
+              <section class="cap-stage stage-act">
+                <header><span>05</span><div><b>Act &amp; learn</b><small>Did reality match?</small></div></header>
+                <p>Compare predicted and observed response; recalibrate the loop.</p>
+              </section>
+            </div>
+            <div class="feedback-rail"><span>Real-world feedback</span><b>Observed response returns to sensing, representation and policy</b><i aria-hidden="true">↶</i></div>
+            <div class="grounding-strip">
+              <p>What must be checked?</p>
+              <div><b>Signal &amp; sensor</b><span>Noise, missing data and differences between devices</span></div>
+              <div><b>Population</b><span>Whether results hold for other people and settings</span></div>
+              <div><b>Evidence</b><span>Which claims the study tested and supported</span></div>
+              <div><b>Safety &amp; governance</b><span>Risks, privacy and human oversight</span></div>
+            </div>
+            <figcaption id="capability-caption"><b>Capability-oriented overview.</b> The numbered illustration sequence maps directly to the five stages below. Solid arrows denote information or decision flow; the dashed return path denotes real-world feedback.</figcaption>
+          </figure>
+        </article>
+
+        <article class="overview-card ecosystem-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">SIX INTERCONNECTED RECORD TYPES</p><h3>Six resource types and how they connect</h3></div>
+            <a href="#explore">Open atlas <span>→</span></a>
+          </div>
+          <div class="ecosystem-layout">
+            <div class="ecosystem-wheel" aria-label="Record type counts">
+              <svg class="wheel-links" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <line x1="50" y1="50" x2="50" y2="8"></line>
+                <line x1="50" y1="50" x2="84" y2="31"></line>
+                <line x1="50" y1="50" x2="85" y2="77"></line>
+                <line x1="50" y1="50" x2="52" y2="82"></line>
+                <line x1="50" y1="50" x2="11" y2="78"></line>
+                <line x1="50" y1="50" x2="8" y2="30"></line>
+              </svg>
+              <div class="wheel-core"><span class="brand-mark"><i></i><i></i><i></i></span><b>Awesome<br>Wearable AI</b></div>
+              <div class="wheel-node wn-dataset"><b>116</b><span>Datasets</span></div>
+              <div class="wheel-node wn-model"><b>102</b><span>Models</span></div>
+              <div class="wheel-node wn-method"><b>61</b><span>Methods</span></div>
+              <div class="wheel-node wn-intervention"><b>40</b><span>Interventions</span></div>
+              <div class="wheel-node wn-infra"><b>42</b><span>Infrastructure</span></div>
+              <div class="wheel-node wn-measure"><b>35</b><span>Measures</span></div>
+            </div>
+            <aside class="connected-note">
+              <h4>All connected</h4>
+              <p>Models, data, methods, measures, interventions, tools and standards answer different questions across one lifecycle.</p>
+              <dl>
+                <div><dt>Accepted</dt><dd>396</dd></div>
+                <div><dt>Relations</dt><dd>2,169</dd></div>
+                <div><dt>Watchlist</dt><dd>45</dd></div>
+                <div><dt>Version</dt><dd>0.3.0</dd></div>
+              </dl>
+            </aside>
+          </div>
+        </article>
+
+        <article class="overview-card taxonomy-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">FIGURE 02 · RESEARCH TAXONOMY</p><h3>Four technical roles across the wearable-AI lifecycle</h3></div>
+            <span class="status-chip">Four roles · eight routes</span>
+          </div>
+          <p class="card-intro">These are four technical roles, not the four research themes at the top of the page. Each row shows the methods used, their purpose and what needs testing.</p>
+          <figure class="taxonomy-figure" aria-labelledby="taxonomy-caption">
+            <div class="taxonomy-reading-key" aria-hidden="true"><span>Technical routes</span><span>Research role</span><span>Evidence question</span></div>
+            <section class="taxonomy-band tax-representation">
+              <span class="tax-number">01</span>
+              <div class="tax-route-icons"><span><i class="route-icon icon-signal"></i><small>Signal models</small></span><span><i class="route-icon icon-multimodal"></i><small>Multiple signals</small></span></div>
+              <div class="tax-content"><h4>Representation</h4><p>Learn features from one or more sensor streams for reuse in different tasks.</p></div>
+              <aside><b>Does it preserve useful information?</b><span>Signal relationships, timing and alignment</span></aside>
+            </section>
+            <section class="taxonomy-band tax-assessment">
+              <span class="tax-number">02</span>
+              <div class="tax-route-icons"><span><i class="route-icon icon-phenotype"></i><small>Health patterns</small></span><span><i class="route-icon icon-prediction"></i><small>Prediction</small></span></div>
+              <div class="tax-content"><h4>Assessment</h4><p>Estimate health measures, recognizable patterns of health or behavior, and future risk.</p></div>
+              <aside><b>Does the estimate hold up?</b><span>Accuracy and reliability in new people and settings</span></aside>
+            </section>
+            <section class="taxonomy-band tax-decision">
+              <span class="tax-number">03</span>
+              <div class="tax-route-icons"><span><i class="route-icon icon-causal"></i><small>Causal effects</small></span><span><i class="route-icon icon-adaptive"></i><small>Action rules</small></span></div>
+              <div class="tax-content"><h4>Decision methods</h4><p>Estimate what would happen under alternative actions, then learn when to choose each action.</p></div>
+              <aside><b>Would a different action help?</b><span>Causal assumptions, uncertainty and expected outcomes</span></aside>
+            </section>
+            <section class="taxonomy-band tax-intervention">
+              <span class="tax-number">04</span>
+              <div class="tax-route-icons"><span><i class="route-icon icon-behavior"></i><small>Behavior</small></span><span><i class="route-icon icon-control"></i><small>Control</small></span></div>
+              <div class="tax-content"><h4>Intervention</h4><p>Deliver behavioral, rehabilitation or device action and observe response.</p></div>
+              <aside><b>Test in the real world</b><span>Benefit · burden · safety · human override</span></aside>
+            </section>
+            <figcaption id="taxonomy-caption">Roles describe what a system contributes to the loop; they are not mutually exclusive model families or levels of clinical readiness.</figcaption>
+          </figure>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="landscape-section" id="model-landscape" aria-labelledby="model-landscape-title">
+      <div class="landscape-heading">
+        <div><p class="eyebrow">TAXONOMY DETAIL · 102 MODEL RECORDS</p><h2 id="model-landscape-title">Model records by<br><em>signal and task.</em></h2></div>
+        <p>Eleven model families are grouped by signal and task. Number labels give exact record counts; circle sizes are visual cues, not a proportional area scale. Connecting lines show categories, not which model was built from another.</p>
+      </div>
+      <div class="landscape-takeaways" aria-label="Key findings from the model landscape">
+        <article><span>Largest family</span><b>22</b><p>General time-series models and tools</p></article>
+        <article><span>Sensor-specific depth</span><b>15 · 14 · 12</b><p>ECG · EEG / MEG · motion / IMU</p></article>
+        <article><span>Cross-modal bridge</span><b>15 + 10</b><p>Sensor-language agents + multimodal physiology</p></article>
+      </div>
+      <figure class="model-landscape-figure viz-card" data-viz-reveal aria-labelledby="model-landscape-caption">
+        <div class="model-landscape-key"><span><i></i> Numbers = records · size is illustrative</span><span>Select a family to filter the library</span></div>
+        <div class="model-tree">
+          <div class="model-root"><span>102</span><b>Model &amp; representation records</b><small>11 distinct families</small></div>
+          <div class="family-groups">
+            <section class="family-group group-motion">
+              <header><span>01</span><div><b>Movement &amp; activity</b><small>Body motion and posture</small></div></header>
+              <div class="family-nodes">
+                <button class="family-node" style="--diameter:76px;--delay:1" data-family="motion-imu-foundation-models" type="button"><i class="family-icon fi-motion"></i><strong>12</strong><span>Motion / IMU</span></button>
+              </div>
+            </section>
+            <section class="family-group group-physiology">
+              <header><span>02</span><div><b>Physiological</b><small>Cardiac, metabolic and respiratory signals</small></div></header>
+              <div class="family-nodes">
+                <button class="family-node" style="--diameter:82px;--delay:2" data-family="ecg-cardiac-foundation-models" type="button"><i class="family-icon fi-ecg"></i><strong>15</strong><span>ECG / cardiac</span></button>
+                <button class="family-node" style="--diameter:58px;--delay:3" data-family="ppg-optical-foundation-models" type="button"><i class="family-icon fi-ppg"></i><strong>3</strong><span>PPG / optical</span></button>
+                <button class="family-node" style="--diameter:60px;--delay:4" data-family="sleep-psg-foundation-models" type="button"><i class="family-icon fi-sleep"></i><strong>4</strong><span>Sleep / PSG</span></button>
+                <button class="family-node" style="--diameter:55px;--delay:5" data-family="cgm-metabolic-foundation-models" type="button"><i class="family-icon fi-cgm"></i><strong>2</strong><span>CGM / metabolic</span></button>
+                <button class="family-node" style="--diameter:55px;--delay:6" data-family="respiratory-acoustic-foundation-models" type="button"><i class="family-icon fi-respiratory"></i><strong>2</strong><span>Respiratory / acoustic</span></button>
+              </div>
+            </section>
+            <section class="family-group group-neural">
+              <header><span>03</span><div><b>Neural &amp; neuromotor</b><small>Brain and muscle activity</small></div></header>
+              <div class="family-nodes">
+                <button class="family-node" style="--diameter:80px;--delay:7" data-family="eeg-neural-foundation-models" type="button"><i class="family-icon fi-eeg"></i><strong>14</strong><span>EEG / MEG</span></button>
+                <button class="family-node" style="--diameter:58px;--delay:8" data-family="emg-neuromotor-models" type="button"><i class="family-icon fi-emg"></i><strong>3</strong><span>EMG / neuromotor</span></button>
+              </div>
+            </section>
+            <section class="family-group group-cross">
+              <header><span>04</span><div><b>Cross-modal &amp; general</b><small>Reusable modelling across signals</small></div></header>
+              <div class="family-nodes">
+                <button class="family-node" style="--diameter:72px;--delay:9" data-family="multimodal-physiological-models" type="button"><i class="family-icon fi-multimodal"></i><strong>10</strong><span>Multimodal physiology</span></button>
+                <button class="family-node" style="--diameter:82px;--delay:10" data-family="sensor-language-agents" type="button"><i class="family-icon fi-language"></i><strong>15</strong><span>Sensor-language &amp; agents</span></button>
+                <button class="family-node" style="--diameter:92px;--delay:11" data-family="general-time-series-enablers" type="button"><i class="family-icon fi-timeseries"></i><strong>22</strong><span>General time-series</span></button>
+              </div>
+            </section>
+          </div>
+        </div>
+        <figcaption id="model-landscape-caption"><b>Taxonomy detail.</b> Counts reflect the 102 accepted model records. The registry includes 84 records explicitly tagged as foundation-model work; “102 models” does not mean “102 foundation models.”</figcaption>
+      </figure>
+    </section>
+
+    <section class="evolution-section" id="research-map" aria-labelledby="research-map-title">
+      <div class="evolution-heading">
+        <div>
+          <p class="eyebrow">FIGURE 03 · 396 ACCEPTED RECORDS · 1980–2026</p>
+          <h2 id="research-map-title">Research records<br><em>through time.</em></h2>
+        </div>
+        <div class="evolution-intro">
+          <p>The river chart summarizes every accepted record by publication window and record type. A second layer preserves 16 source-checked milestones for interpretation and direct access to primary sources.</p>
+          <div><span>396 accepted records</span><span>6 record types</span><span>16 annotated milestones</span></div>
+        </div>
+      </div>
+
+      <figure class="quant-evolution viz-card" data-viz-reveal aria-labelledby="quant-evolution-caption">
+        <div class="quant-chart-head">
+          <div><p class="eyebrow">PUBLICATION DATES IN THIS LIBRARY</p><h3>How the mix of research resources changes over time</h3></div>
+          <p>Band thickness shows records per period. Counts sum to 396; periods have different lengths.</p>
+        </div>
+        <p class="figure-scroll-cue">Swipe horizontally to compare all five publication windows →</p>
+        <div class="quant-chart-scroll">
+          <div class="stream-chart-wrap">
+            <svg id="evolution-stream" class="stream-chart" viewBox="0 0 1200 500" role="img" aria-label="Stacked stream chart of 396 wearable AI records across five time windows and six record types"></svg>
+            <div class="stream-tooltip" id="stream-tooltip" hidden></div>
+          </div>
+        </div>
+        <div class="stream-legend" aria-label="Record type legend">
+          <span style="--legend:#4d9ee9">Datasets</span><span style="--legend:#8b72df">Models</span><span style="--legend:#eb795f">Methods</span><span style="--legend:#e980aa">Measures</span><span style="--legend:#5db88a">Interventions</span><span style="--legend:#e6b542">Infrastructure</span>
+        </div>
+        <div class="stream-annotations" aria-label="Major shifts in the registry">
+          <span><i>01</i><b>Datasets build the base</b><small>1980–2016</small><em>Reusable cohorts and benchmarks make comparison possible.</em></span>
+          <span><i>02</i><b>Methods and measures expand</b><small>2017–2020</small><em>More entries describe analysis methods and health measures, not only signal collection.</em></span>
+          <span><i>03</i><b>Foundation models emerge</b><small>2021–2023</small><em>Representation learning begins to connect modalities and tasks.</em></span>
+          <span><i>04</i><b>Models surge; interventions broaden</b><small>2024–2026</small><em>Scale grows quickly, while real-world evidence remains distinct.</em></span>
+        </div>
+        <figcaption id="quant-evolution-caption"><b>Figure 03 · Records by publication period.</b> Counts come from this curated library, not a complete census of the field. Unequal time periods cannot be compared as annual growth rates. The chart does not show study quality or one research type replacing another.</figcaption>
+      </figure>
+
+      <details class="milestone-details" open>
+        <summary><span>Inspect 16 source-checked milestones</span><small>Representative works clarify the research routes behind the aggregate trend.</small></summary>
+      <figure class="evolution-map milestone-map" aria-labelledby="evolution-caption">
+        <p class="timeline-scroll-hint"><span aria-hidden="true">&#8596;</span> Scroll horizontally on smaller screens to inspect every milestone</p>
+        <div class="timeline-scale" aria-hidden="true"><span class="timeline-root-label"><b>Wearable AI</b><small>research directions</small></span><b>2015–2018</b><b>2019–2021</b><b>2022–2024</b><b>2025</b><b>2026</b></div>
+
+        <section class="timeline-lane lane-representation">
+          <header><span>01</span><div><h3>Representation</h3><p>Signal models · multimodal representations</p></div></header>
+          <div class="timeline-cell"></div>
+          <div class="timeline-cell"><a class="route-signal" href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.653659/full" target="_blank" rel="noreferrer"><time>2021</time><b>BENDR</b><span>EEG pretraining</span></a></div>
+          <div class="timeline-cell"><a class="route-multimodal" href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/f6b30f3e2dd9cb53bbf2024402d02295-Abstract.html" target="_blank" rel="noreferrer"><time>2023</time><b>BIOT</b><span>Unified biosignal tokens</span></a></div>
+          <div class="timeline-cell"></div>
+          <div class="timeline-cell"><a class="route-signal" href="https://www.nature.com/articles/s41586-025-09925-9" target="_blank" rel="noreferrer"><time>2026</time><b>GluFormer</b><span>Continuous glucose states</span></a><a class="route-multimodal" href="https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/" target="_blank" rel="noreferrer"><time>2026</time><b>SensorFM</b><span>Five sensor modalities</span></a></div>
+        </section>
+
+        <section class="timeline-lane lane-assessment">
+          <header><span>02</span><div><h3>Assessment</h3><p>Digital phenotypes · health prediction</p></div></header>
+          <div class="timeline-cell"></div>
+          <div class="timeline-cell"><a class="route-phenotype" href="https://www.nejm.org/doi/full/10.1056/NEJMoa1901183" target="_blank" rel="noreferrer"><time>2019</time><b>Apple Heart Study</b><span>Testing irregular heart-rhythm notifications</span></a><a class="route-prediction" href="https://www.nature.com/articles/s41551-020-00640-6" target="_blank" rel="noreferrer"><time>2020</time><b>COVID detection</b><span>Changes from a person's usual readings</span></a></div>
+          <div class="timeline-cell"></div>
+          <div class="timeline-cell"></div>
+          <div class="timeline-cell"><a class="route-phenotype" href="https://www.nature.com/articles/s41467-026-76147-6" target="_blank" rel="noreferrer"><time>2026</time><b>Rhythm aging</b><span>How daily rhythms change over several years</span></a><a class="route-prediction" href="https://www.nature.com/articles/s41586-026-10179-2" target="_blank" rel="noreferrer"><time>2026</time><b>Insulin resistance estimation</b><span>Wearables and blood biomarkers</span></a></div>
+        </section>
+
+        <section class="timeline-lane lane-decision">
+          <header><span>03</span><div><h3>Decision methods</h3><p>Causal inference · adaptive design</p></div></header>
+          <div class="timeline-cell"><a class="route-adaptive" href="https://doi.org/10.1037/hea0000305" target="_blank" rel="noreferrer"><time>2015</time><b>Micro-randomized trials</b><span>Randomize actions repeatedly to test when they help</span></a><a class="route-causal" href="https://doi.org/10.1080/01621459.2017.1305274" target="_blank" rel="noreferrer"><time>2018</time><b>Effect moderation</b><span>How an action's effect depends on time and context</span></a></div>
+          <div class="timeline-cell"></div>
+          <div class="timeline-cell"><a class="route-causal" href="https://proceedings.mlr.press/v238/katta24a.html" target="_blank" rel="noreferrer"><time>2024</time><b>ADD MALTS</b><span>Distributional effects</span></a></div>
+          <div class="timeline-cell"></div>
+          <div class="timeline-cell"><a class="route-adaptive" href="https://doi.org/10.1146/annurev-psych-121024-044244" target="_blank" rel="noreferrer"><time>2026</time><b>Just-in-time adaptive interventions</b><span>Review of support delivered when it is needed</span></a></div>
+        </section>
+
+        <section class="timeline-lane lane-intervention">
+          <header><span>04</span><div><h3>Intervention</h3><p>Behavior · physiological control</p></div></header>
+          <div class="timeline-cell"><a class="route-control" href="https://doi.org/10.1056/NEJMoa1509351" target="_blank" rel="noreferrer"><time>2015</time><b>Home beta cell</b><span>Closed-loop insulin</span></a><a class="route-behavior" href="https://doi.org/10.1001/jama.2016.12858" target="_blank" rel="noreferrer"><time>2016</time><b>IDEA trial</b><span>Negative tracker result</span></a></div>
+          <div class="timeline-cell"></div>
+          <div class="timeline-cell"><a class="route-control" href="https://www.nature.com/articles/s41467-024-44791-5" target="_blank" rel="noreferrer"><time>2024</time><b>InTandem</b><span>Adaptive rehabilitation</span></a></div>
+          <div class="timeline-cell"><a class="route-behavior" href="https://www.nature.com/articles/s41746-025-01844-3" target="_blank" rel="noreferrer"><time>2025</time><b>myBPmyLife</b><span>Mixed real-world outcome</span></a></div>
+          <div class="timeline-cell"></div>
+        </section>
+        <figcaption id="evolution-caption"><b>Milestone annotation layer.</b> Horizontal position shows publication window, line color shows research role, and repeated pictograms identify technical routes. Branches do not imply model ancestry or strict sequential replacement.</figcaption>
+      </figure>
+      </details>
+
+      <div class="evolution-context">
+        <div><p class="eyebrow">SUPPORTING LAYER</p><span>Datasets & cohorts</span><span>Benchmarks & evaluation</span><span>Tools, standards & governance</span></div>
+        <p><strong>Read the map carefully.</strong> These branches classify research roles and place selected works in time. They do not imply paper-to-paper inheritance, causal progression or clinical readiness.</p>
+        <div class="evolution-actions"><a href="research-map.html">Technology radar & full research map <span>↗</span></a><a href="#explore">Explore all 396 accepted records <span>↓</span></a><a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/assets/research-map/README.md" target="_blank" rel="noreferrer">Map sources & design notes <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="evidence-viz-section" id="evidence-map" aria-labelledby="evidence-viz-title">
+      <div class="evidence-viz-heading">
+        <div><p class="eyebrow">FIGURE 04 · WHAT DOES A STUDY SHOW?</p><h2 id="evidence-viz-title">Study designs<br><em>and what they can test.</em></h2></div>
+        <p>A study's design determines which questions it can address. The bars count records of each design; more records do not mean stronger evidence.</p>
+      </div>
+
+      <div class="claim-path" aria-label="Five claim levels requiring progressively different evidence">
+        <div><span>01</span><b>Association</b><small>Do variables move together?</small></div><i aria-hidden="true">→</i>
+        <div><span>02</span><b>Prediction</b><small>Does it generalize to new cases?</small></div><i aria-hidden="true">→</i>
+        <div><span>03</span><b>Causal effect</b><small>What changes under intervention?</small></div><i aria-hidden="true">→</i>
+        <div><span>04</span><b>Policy value</b><small>Which action works, and when?</small></div><i aria-hidden="true">→</i>
+        <div><span>05</span><b>Clinical utility</b><small>Does use improve meaningful outcomes?</small></div>
+        <p>Each step asks a new question and needs additional evidence—not merely a larger model or a higher record count.</p>
+      </div>
+
+      <article class="overview-card boundaries-card evidence-dashboard viz-card" data-viz-reveal>
+        <div class="card-heading">
+          <div><p class="eyebrow">EVIDENCE PROFILE · 396 RECORDS</p><h3>Different claims require different evidence</h3></div>
+          <span class="status-chip">Study design alone does not prove benefit</span>
+        </div>
+        <div class="evidence-dashboard-grid">
+          <section class="evidence-profile" aria-labelledby="evidence-profile-title">
+            <div class="subfigure-heading"><h4 id="evidence-profile-title">What the registry contains</h4><span>Count</span></div>
+            <div class="evidence-bars" id="evidence-profile-bars">
+              <div class="evidence-bar resource-stage" data-stage="official-resource"><span>Official resource</span><i style="--bar:100%"></i><b>153</b></div>
+              <div class="evidence-divider"><span>Study and evaluation evidence</span></div>
+              <div class="evidence-bar" data-stage="methodological"><span>Methodological</span><i style="--bar:85%"></i><b>130</b></div>
+              <div class="evidence-bar" data-stage="external-validation"><span>External validation</span><i style="--bar:40%"></i><b>61</b></div>
+              <div class="evidence-bar" data-stage="randomized-controlled-trial"><span>Randomized trial</span><i style="--bar:20%"></i><b>31</b></div>
+              <div class="evidence-bar" data-stage="systematic-review"><span>Systematic review</span><i style="--bar:6%"></i><b>9</b></div>
+              <div class="evidence-bar" data-stage="prospective-observational"><span>Prospective observational</span><i style="--bar:4%"></i><b>6</b></div>
+              <div class="evidence-bar" data-stage="clinical-deployment"><span>Clinical deployment</span><i style="--bar:3%"></i><b>4</b></div>
+              <div class="evidence-bar" data-stage="retrospective"><span>Retrospective</span><i style="--bar:1%"></i><b>1</b></div>
+              <div class="evidence-bar" data-stage="micro-randomized-trial"><span>Micro-randomized trial</span><i style="--bar:1%"></i><b>1</b></div>
+            </div>
+            <p class="evidence-axis-note">Category count ≠ evidence rank</p>
+          </section>
+
+          <section class="claim-support" aria-labelledby="claim-support-title">
+            <div class="subfigure-heading"><h4 id="claim-support-title">Which claims can a design test?</h4><span>Not a result-quality rating</span></div>
+            <p class="figure-scroll-cue">Swipe horizontally to compare every claim type →</p>
+            <div class="claim-matrix-scroll">
+              <div class="claim-matrix" role="table" aria-label="Claim type by evidence design support matrix">
+                <div class="matrix-corner" role="columnheader">Design \ Claim</div>
+                <div role="columnheader">Association</div><div role="columnheader">Prediction</div><div role="columnheader">Causal effect</div><div role="columnheader">Policy value</div><div role="columnheader">Clinical utility</div>
+
+                <div class="matrix-rowhead" role="rowheader">Method validation</div>
+                <span class="conditional" role="cell" aria-label="Association requires a suitable empirical evaluation" title="Requires a suitable empirical evaluation">◐</span><span class="conditional" role="cell" aria-label="Prediction requires held-out evaluation" title="Requires held-out evaluation">◐</span><span class="not-established" role="cell" aria-label="Causal effect not established" title="Not established by method validation alone">—</span><span class="not-established" role="cell" aria-label="Policy value not established" title="Not established by method validation alone">—</span><span class="not-established" role="cell" aria-label="Clinical utility not established" title="Not established by method validation alone">—</span>
+
+                <div class="matrix-rowhead" role="rowheader">External validation</div>
+                <span class="supports" role="cell" aria-label="Can test association in another dataset" title="Can test association in another dataset">●</span><span class="supports" role="cell" aria-label="Can test prediction on new cases" title="Can test prediction on new cases">●</span><span class="not-established" role="cell" aria-label="Causal effect not established" title="Not established by external validation alone">—</span><span class="not-established" role="cell" aria-label="Policy value not established" title="Not established by external validation alone">—</span><span class="not-established" role="cell" aria-label="Clinical utility not established" title="Predictive accuracy alone does not establish patient benefit">—</span>
+
+                <div class="matrix-rowhead" role="rowheader">Observational design</div>
+                <span class="supports" role="cell" aria-label="Can test association" title="Can test association">●</span><span class="conditional" role="cell" aria-label="Prediction needs held-out evaluation" title="Needs held-out evaluation">◐</span><span class="conditional" role="cell" aria-label="Causal effects need identification assumptions and sensitivity checks" title="Needs identification assumptions and sensitivity checks">◐</span><span class="conditional" role="cell" aria-label="Policy value needs defensible off-policy evaluation" title="Needs suitable action data, overlap and off-policy evaluation">◐</span><span class="conditional" role="cell" aria-label="Clinical utility needs prospective comparative evaluation" title="Needs prospective comparative evaluation of care outcomes and harms">◐</span>
+
+                <div class="matrix-rowhead" role="rowheader">Randomized intervention</div>
+                <span class="supports" role="cell" aria-label="Can test association" title="Can test association">●</span><span class="conditional" role="cell" aria-label="Prediction needs separate validation" title="Needs separate prediction validation">◐</span><span class="supports" role="cell" aria-label="Can test the causal effect of the randomized intervention" title="Can test the effect of the randomized intervention, subject to trial assumptions">●</span><span class="conditional" role="cell" aria-label="Policy value needs evaluation of the specified decision rule" title="Needs evaluation of the specified decision rule">◐</span><span class="conditional" role="cell" aria-label="Clinical utility needs relevant care outcomes and harms" title="Needs relevant care outcomes and harms in the intended setting">◐</span>
+
+                <div class="matrix-rowhead" role="rowheader">Prospective deployment</div>
+                <span class="supports" role="cell" aria-label="Can test association in collected deployment data" title="Can test association in collected data">●</span><span class="conditional" role="cell" aria-label="Prediction needs recorded outcomes and a validation protocol" title="Needs recorded outcomes and a validation protocol">◐</span><span class="conditional" role="cell" aria-label="Causal effects need a comparator and defensible identification" title="Needs a comparator and defensible identification">◐</span><span class="conditional" role="cell" aria-label="Policy value needs a trial or defensible policy evaluation" title="Deployment alone is insufficient; needs a trial or defensible policy evaluation">◐</span><span class="conditional" role="cell" aria-label="Clinical utility needs comparative evaluation of outcomes and harms" title="Needs comparative evaluation of outcomes and harms">◐</span>
+              </div>
+            </div>
+            <div class="matrix-legend"><span class="supports">● <b>Can test directly</b></span><span class="conditional">◐ <b>Needs extra design or assumptions</b></span><span class="not-established">— <b>Not from this alone</b></span></div>
+            <p class="matrix-note">No symbol means “proven.” Check the comparison group, target population, measured outcome and assumptions. In particular, putting a system into use does not by itself show that its decisions help patients. <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/docs/EVIDENCE_GUIDE.md" target="_blank" rel="noreferrer">Read the evidence guide ↗</a></p>
+          </section>
+        </div>
+        <div class="evidence-boundary-strip"><span>Venue ≠ validity</span><span>Prediction ≠ causation</span><span>Protocol ≠ effectiveness</span></div>
+        <div class="evidence-notes">
+          <p><b>Testing a digital twin.</b> Check whether it matches the person's observed data, predicts responses to actions, and helps people make better decisions.</p>
+          <div><strong>40</strong><span>accepted intervention records</span><strong>14</strong><span>negative, null or materially mixed outcomes remain visible</span></div>
+        </div>
+        <p class="evidence-figure-caption"><b>Figure 04 · Study designs and testable claims.</b> Bar lengths show record counts, not quality. The matrix describes possible uses of a design; it does not assess the findings of individual studies.</p>
+      </article>
+
+      <article class="overview-card curation-card" id="curation">
+        <div class="card-heading">
+          <div><p class="eyebrow">CURATION YOU CAN INSPECT</p><h3>How the registry verifies sources and evidence</h3></div>
+          <span class="status-chip">Counts generated at build time</span>
+        </div>
+        <div class="curation-columns">
+          <div class="curation-group">
+            <h4>How much was reviewed</h4>
+            <div class="metric-row"><span>Evidence cards</span><i style="--fill:42%"></i><b>95</b></div>
+            <div class="metric-row"><span>Metadata verified</span><i style="--fill:100%"></i><b>225</b></div>
+            <div class="metric-row"><span>Venue verified</span><i style="--fill:34%"></i><b>76</b></div>
+          </div>
+          <div class="curation-group">
+            <h4>Source verification</h4>
+            <div class="metric-row"><span>Official resource</span><i style="--fill:92%"></i><b>153</b></div>
+            <div class="metric-row"><span>Primary source</span><i style="--fill:100%"></i><b>167</b></div>
+            <div class="metric-row"><span>Review reference</span><i style="--fill:46%"></i><b>76</b></div>
+          </div>
+          <aside class="scope-note"><b>What inclusion means</b><p>This is a selected research library, not an exhaustive systematic review. Research papers must meet the project's publication rules; official datasets, tools and standards have separate criteria. Preprints and unresolved entries remain outside the accepted count. Each accepted entry has one primary resource type. Its check date records when metadata were reviewed—not when all findings were independently verified.</p></aside>
+        </div>
+      </article>
+    </section>
+
+    <details class="comparison-disclosure" id="comparison-lab">
+      <summary><span><small>ADVANCED REGISTRY WORKSPACE</small><b>Open tables comparing models, datasets and evidence</b></span><em>Lifecycle matrix · 73 families · 116 datasets · evidence crosswalk · watchlist · downloads</em><i aria-hidden="true">+</i></summary>
+    <section class="comparison-section" aria-labelledby="comparison-title">
+      <div class="comparison-heading">
+        <div>
+          <p class="eyebrow">REGISTRY-DERIVED SURVEY VIEWS</p>
+          <h2 id="comparison-title">Compare wearable-AI resources<br><em>by lifecycle and evidence.</em></h2>
+        </div>
+        <p>These views are calculated from the same machine-readable registry as the atlas. They add comparison density without turning metadata counts into rankings or scientific claims.</p>
+      </div>
+
+      <div class="comparison-grid">
+        <article class="comparison-card matrix-card comparison-wide" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">RECORD TYPE × LIFECYCLE</p><h3>Record counts across ten lifecycle stages</h3></div>
+            <span>Cell colour follows record count</span>
+          </div>
+          <p class="comparison-intro">Read across to see which resource types support sensing, representation, evaluation and deployment. Select any non-empty cell to open that subset in the atlas.</p>
+          <p class="figure-scroll-cue">Swipe horizontally to compare all ten stages →</p>
+          <div class="comparison-scroll"><div id="lifecycle-type-matrix" class="lifecycle-type-matrix" role="table" aria-label="Record type by lifecycle stage count matrix"></div></div>
+          <p class="comparison-note">Each accepted record has one primary record type and one indexed lifecycle stage. Counts describe registry coverage, not field importance.</p>
+        </article>
+
+        <article class="comparison-card family-browser-card comparison-wide" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">SIX TYPES · ALL INDEXED FAMILIES</p><h3>All 73 research families by resource type</h3></div>
+            <span id="family-summary">Loading registry families…</span>
+          </div>
+          <div id="family-tabs" class="family-tabs" role="tablist" aria-label="Choose a record type"></div>
+          <div id="family-browser" class="family-browser" aria-live="polite"></div>
+          <p class="comparison-note">Number labels give exact counts. Circle sizes are visual cues, not proportional areas; on small screens sizes are equal. Select a family to view its records in the library.</p>
+        </article>
+
+        <article class="comparison-card dataset-table-card comparison-wide" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">DATASET COMPARISON</p><h3>Compare 116 datasets by signal, population and access</h3></div>
+            <span id="dataset-count">Loading datasets…</span>
+          </div>
+          <div class="comparison-controls">
+            <label><span>Filter datasets</span><input id="dataset-search" type="search" placeholder="Try ECG, sleep, gait or clinical…" autocomplete="off"></label>
+            <button id="dataset-toggle" type="button">Show all datasets</button>
+          </div>
+          <p class="figure-scroll-cue">Swipe the table to compare all metadata columns →</p>
+          <div class="dataset-table-scroll">
+            <table class="dataset-table">
+              <thead><tr><th>Dataset</th><th>Year</th><th>Signals / modalities</th><th>Population</th><th>Clinical domain</th><th>Wearable scope</th><th>Access</th><th>Evidence depth</th></tr></thead>
+              <tbody id="dataset-table-body"></tbody>
+            </table>
+          </div>
+          <p class="comparison-note">This is a metadata comparison, not a quality ranking. Open a row to inspect provenance, contribution, limitations and the primary source.</p>
+        </article>
+
+        <article class="comparison-card evidence-crosswalk-card comparison-wide" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">EMPIRICAL METADATA CROSSWALK</p><h3>Evidence designs compared with causal claim status</h3></div>
+            <span>Accepted records only</span>
+          </div>
+          <p class="comparison-intro">Each cell counts records with a particular study design and causal-status label. Darker cells contain more records; empty cells mean no entries with that combination in this library.</p>
+          <p class="figure-scroll-cue">Swipe horizontally to compare every causal-status column →</p>
+          <div class="comparison-scroll"><div id="evidence-causal-matrix" class="evidence-causal-matrix" role="table" aria-label="Evidence stage by causal status count matrix"></div></div>
+          <p class="comparison-note">A cell is a count of registry metadata—not proof that a design supports a causal claim. Use the claim-boundary guide above and inspect individual records.</p>
+        </article>
+
+        <article class="comparison-card watchlist-card" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">TRANSPARENT EXCLUSION QUEUE</p><h3>45 candidates awaiting eligibility review</h3></div>
+            <span id="watchlist-count">Loading candidates…</span>
+          </div>
+          <p class="comparison-intro">Candidates remain visible while venue, scope, version or evidence requirements are unresolved. Watchlist items are not included in the 396 accepted records.</p>
+          <div class="watchlist-controls">
+            <input id="watchlist-search" type="search" placeholder="Search candidate or reason…" autocomplete="off" aria-label="Search watchlist">
+            <select id="watchlist-status" aria-label="Filter watchlist by status"><option value="all">All statuses</option></select>
+          </div>
+          <div id="watchlist-list" class="watchlist-list" aria-live="polite"></div>
+          <button id="watchlist-toggle" class="text-button" type="button">Show all candidates</button>
+        </article>
+
+        <article class="comparison-card resource-hub-card" id="resources" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">REPRODUCIBLE RESOURCES</p><h3>Download the machine-readable atlas</h3></div>
+            <span>Registry <b data-registry-version>v0.3.0</b></span>
+          </div>
+          <p class="comparison-intro">The interactive library uses data generated from the repository. Editorial summaries explain selected findings separately. Download the underlying records or inspect the inclusion rules.</p>
+          <div class="resource-stats">
+            <div><strong data-accepted-count>396</strong><span>accepted</span></div>
+            <div><strong data-relation-count>2,169</strong><span>relations</span></div>
+            <div><strong data-watchlist-count>45</strong><span>watchlist</span></div>
+            <div><strong data-registry-cutoff>2026-09-02</strong><span>verified through</span></div>
+          </div>
+          <div class="resource-links">
+            <a href="registry.json" download><b>Website registry</b><span>JSON · exact data rendered here ↓</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/generated/catalog.csv" target="_blank" rel="noreferrer"><b>Catalog table</b><span>CSV · accepted records ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/generated/relations.csv" target="_blank" rel="noreferrer"><b>Relation table</b><span>CSV · curated and automatically derived links ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/tree/main/schema" target="_blank" rel="noreferrer"><b>Data schema</b><span>Required fields and validation rules ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/generated/coverage.md" target="_blank" rel="noreferrer"><b>Coverage report</b><span>Counts and completeness ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/data/excluded/watchlist.yaml" target="_blank" rel="noreferrer"><b>Watchlist source</b><span>Review queue ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/docs/RELEASE_AUDIT_v0.3.0.md" target="_blank" rel="noreferrer"><b>Release audit</b><span>Quality checks ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer"><b>Full repository</b><span>Methods, docs and contribution guide ↗</span></a>
+          </div>
+          <p class="comparison-note">Generated on <span data-generated-on>2026-09-02</span>. The latest <code>verified_on</code> date is shown above; it is a metadata-check date, not a guarantee that no newer version exists.</p>
+        </article>
+      </div>
+    </section>
+    </details>
+
+    <section class="explore-section" id="explore">
+      <div class="section-heading">
+        <p class="eyebrow">INTERACTIVE RESEARCH ATLAS</p>
+        <h2>Search and filter<br><em>396 wearable-AI records.</em></h2>
+        <p>Search, regroup and inspect all 396 accepted records from the project’s machine-readable registry.</p>
+        <p class="metadata-axis">Filter by resource type, signal, review depth and year. Open a record for its population, study design, limitations, data access and original source.</p>
+      </div>
+
+      <div class="atlas-shell">
+        <div class="atlas-toolbar" aria-label="Atlas controls">
+          <label class="search-control">
+            <span>Search records</span>
+            <input id="search" type="search" placeholder="Try ‘sleep’, ‘ECG’ or ‘causal’…" autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+          <label>
+            <span>Record type</span>
+            <select id="type-filter"><option value="all">All types</option></select>
+          </label>
+          <label class="modality-control">
+            <span>Modality</span>
+            <select id="modality-filter"><option value="all">All modalities</option></select>
+          </label>
+          <label>
+            <span>Review depth</span>
+            <select id="evidence-filter"><option value="all">All review levels</option></select>
+          </label>
+          <label class="year-control">
+            <span>Year</span>
+            <select id="year-filter"><option value="all">All years</option></select>
+          </label>
+          <label class="group-control">
+            <span>Group nodes by</span>
+            <select id="group-filter">
+              <option value="record_type">Record type</option>
+              <option value="evidence_depth">Review depth</option>
+              <option value="year">Publication year</option>
+            </select>
+          </label>
+          <div class="view-switcher" role="group" aria-label="View mode">
+            <button class="is-active" data-view="map" type="button">Map</button>
+            <button data-view="list" type="button">List</button>
+          </div>
+        </div>
+
+        <div class="atlas-status">
+          <p><strong id="result-count">396</strong> records in view</p>
+          <div class="legend" aria-label="Record type legend"></div>
+        </div>
+
+        <div class="atlas-viewport map-view" id="atlas-viewport">
+          <svg id="node-map" viewBox="0 0 1100 620" role="group" aria-label="Interactive map of research records"></svg>
+          <div class="record-list" id="record-list" aria-live="polite"></div>
+          <p class="map-hint">One dot = one record. Larger dots have a curated evidence card—not necessarily stronger results. Solid lines connect records in the same family. Hover or focus a dot to see recorded links; select it for details. On small screens, scroll the map sideways or choose List.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-section" aria-labelledby="impact-title">
+      <div class="impact-intro">
+        <p class="eyebrow">APPLICATIONS IN THE RESEARCH LIBRARY</p>
+        <h2 id="impact-title">Five real-world application areas<br>for <em>wearable AI.</em></h2>
+        <p>These are tasks studied in the library, not five new breakthroughs. Monitoring, prediction and tested treatment benefit require different evidence.</p>
+      </div>
+      <div class="impact-track">
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:0" alt="Adult woman checking health information on a smartwatch"></div><p class="eyebrow">MONITOR</p><h3>Health monitoring</h3><p>ECG and optical pulse support rhythm screening and risk estimation.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:1" alt="Adult man sleeping peacefully while wearing a sensor ring"></div><p class="eyebrow">ESTIMATE</p><h3>Sleep &amp; recovery</h3><p>Multiple signals support sleep staging and sleep-related risk prediction.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:2" alt="Adult runner wearing an upper-arm and wrist sensor"></div><p class="eyebrow">MEASURE</p><h3>Sports &amp; performance</h3><p>Motion sensors help recognize activities and quantify movement patterns.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:3" alt="Older adult using a smartwatch for ongoing health monitoring"></div><p class="eyebrow">INTERVENE</p><h3>Chronic disease</h3><p>Glucose sensing supports personalized models and tested insulin-delivery systems.</p></article>
+        <article><div class="impact-image"><img src="assets/images/impact-vignettes-v3.png" style="--panel:4" alt="Two adult friends sharing a supportive moment"></div><p class="eyebrow">STUDY</p><h3>Mental wellbeing</h3><p>Physiology and behavior are studied as stress indicators and inputs to adaptive support.</p></article>
+      </div>
+    </section>
+
+    <section class="closing-section" id="community">
+      <div class="closing-art" aria-hidden="true"></div>
+      <div class="closing-copy">
+        <p class="eyebrow">OPEN SOURCE · COMMUNITY DRIVEN</p>
+        <h2>Use and contribute to<br><em>the open wearable-AI atlas.</em></h2>
+        <p>Propose a record, improve an evidence card, inspect the JSON Schemas, or reuse the generated JSON and CSV in your own research.</p>
+        <div class="closing-actions">
+          <a class="primary-button" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">Explore on GitHub <span>↗</span></a>
+          <a class="text-button" href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer">Read the contribution guide</a>
+        </div>
+        <div class="machine-readable"><span>YAML source of truth</span><span>JSON Schemas</span><span>Generated JSON / CSV</span><span>Source-checked milestone map</span><span>CI validation & audit</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+    <p>Counts show library coverage. Being listed does not mean a system is effective, safe or approved for clinical use.</p>
+    <p class="footer-meta"><a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/CITATION.cff" target="_blank" rel="noreferrer">Citation</a> · <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT license</a> · Atlas data <span data-registry-version>v0.3.0</span> · Registry metadata checked through <span data-registry-cutoff>2026-09-02</span></p>
+  </footer>
+
+  <aside class="detail-shelf" id="detail-shelf" aria-hidden="true" aria-labelledby="detail-title">
+    <button class="shelf-close" type="button" aria-label="Close details">×</button>
+    <div class="shelf-content"></div>
+  </aside>
+  <div class="shelf-backdrop" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f2">
+  <meta name="description" content="Track the latest wearable-AI methods, data, hardware, performance, product features and research directions across prediction, intervention, digital twins and mixed reality.">
+  <link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/story.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Animated research guide">
+  <meta property="og:description" content="A source-checked technology intelligence atlas for disease prediction, intervention, personal digital twins and mixed-reality interfaces.">
+  <meta property="og:url" content="https://zipengwu365.github.io/awesome-wearable-ai/story.html">
+  <meta property="og:image" content="https://zipengwu365.github.io/awesome-wearable-ai/assets/images/hero-wearable-researcher-v3.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Animated research guide · Awesome Wearable AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=c05362d67180">
+<link rel="stylesheet" href="navigation.css?v=6d8b1befd043">
+</head>
+<body class="page-interior" data-scene="0"><a class="skip-link" href="#page-content">Skip to page content</a><header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+<nav id="primary-navigation" aria-label="Primary navigation"><a href="index.html">Home</a><a href="columns.html">Research columns</a><a href="guide.html">Research guide</a><a href="evidence.html">Evidence</a><a href="library.html">Library</a><a class="nav-github" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button></header><div class="story-progress" aria-hidden="true"><span></span></div><main id="page-content"><div class="page-intro"><nav aria-label="Breadcrumb"><a href="guide.html">Research guide</a><span aria-hidden="true"> / </span><span>From body signals to decisions</span></nav><h1>From body signals to decisions</h1><p>An optional visual explanation. Scroll through six scenes, or use the chapter links to go directly to a concept.</p></div><nav class="page-shortcuts" aria-label="Research guide pages"><a href="guide.html">Lifecycle &amp; taxonomy</a><a href="story.html">Animated explanation</a><a href="models.html">Sensor &amp; model families</a><a href="history.html">Research through time</a></nav><nav class="page-shortcuts story-chapters" aria-label="Jump to a story chapter"><a href="#signals">01 Signals</a><a href="#representations">02 Learned features</a><a href="#lifecycle-story">03 Lifecycle</a><a href="#resource-types-story">04 Resource types</a><a href="#evidence">05 Evidence</a><a href="#review-depth-story">06 Review depth</a></nav><section class="scrolly" id="story" aria-label="The wearable AI story">
+      <div class="visual-stage" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <canvas class="people-field" aria-hidden="true"></canvas>
+        <p class="people-field-key" aria-hidden="true"><span></span><b id="people-field-label">Concept illustration, not participant counts</b></p>
+
+        <svg class="world" viewBox="0 0 1200 800" role="img" aria-label="A person wearing sensors surrounded by signals that grow into a research atlas">
+          <defs>
+            <linearGradient id="shirtGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#83d9d0"/>
+              <stop offset="1" stop-color="#4caeb8"/>
+            </linearGradient>
+            <linearGradient id="trouserGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f39a78"/>
+              <stop offset="1" stop-color="#e87660"/>
+            </linearGradient>
+            <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+              <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#20375a" flood-opacity=".12"/>
+            </filter>
+            <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+              <feGaussianBlur stdDeviation="9" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <g class="landscape">
+            <circle class="sun" cx="1035" cy="154" r="74"/>
+            <path class="cloud cloud-a" d="M85 193c16-31 57-36 79-11 27-22 76-5 76 31H85c-14 0-15-14 0-20Z"/>
+            <path class="cloud cloud-b" d="M924 285c11-25 45-29 63-9 23-18 62-3 62 25H918c-10 0-8-11 6-16Z"/>
+            <path class="hill hill-back" d="M0 639c131-121 244-108 349-26 116-127 262-103 369 16 123-131 314-95 482 1v170H0Z"/>
+            <path class="hill hill-front" d="M0 710c155-98 291-93 438 5 185-107 407-78 762 22v63H0Z"/>
+            <g class="plant plant-a"><path d="M108 699c-8-47 5-99 38-137M128 645c-32-19-40-51-35-79M133 625c35-18 52-48 51-79"/><circle cx="94" cy="559" r="20"/><circle cx="186" cy="541" r="23"/></g>
+            <g class="plant plant-b"><path d="M1076 706c8-44-4-93-35-129M1058 660c28-18 37-47 31-74M1057 638c-31-15-48-42-47-70"/><circle cx="1091" cy="581" r="18"/><circle cx="1008" cy="562" r="21"/></g>
+          </g>
+
+          <g class="signal-lines">
+            <path class="flow flow-ecg" d="M415 382h58l10-22 16 55 17-91 20 67 13-32 13 23h71"/>
+            <path class="flow flow-eeg" d="M552 247c15-18 27 17 42-2s27 17 43-2 27 17 43-2"/>
+            <path class="flow flow-imu" d="M409 504c-52 2-81 38-92 77"/>
+            <path class="flow flow-cgm" d="M666 504c64 2 100 35 126 78"/>
+          </g>
+
+          <g class="person" filter="url(#softShadow)">
+            <ellipse class="person-shadow" cx="582" cy="716" rx="142" ry="24"/>
+            <path class="leg leg-left" d="M516 535c-4 69-10 137-18 175h68l22-175Z"/>
+            <path class="leg leg-right" d="M584 535l17 175h72c-12-48-22-112-23-175Z"/>
+            <path class="shoe" d="M493 697h77c5 4 7 16 1 22H477c-2-13 5-20 16-22Z"/>
+            <path class="shoe" d="M599 697h77c13 4 20 11 19 22h-98c-5-8-4-16 2-22Z"/>
+            <path class="torso" d="M490 327c33-35 147-34 178 0l-17 221c-39 24-119 23-160 0Z"/>
+            <path class="arm arm-left" d="M504 345c-30 28-45 82-56 132-4 18 24 26 33 8l49-111Z"/>
+            <path class="arm arm-right" d="M652 345c33 29 49 78 60 129 5 21-26 27-34 8l-50-108Z"/>
+            <rect class="watch" x="686" y="442" width="31" height="42" rx="11" transform="rotate(-13 686 442)"/>
+            <rect class="watch-face" x="691" y="449" width="21" height="25" rx="7" transform="rotate(-13 691 449)"/>
+            <circle class="neck" cx="579" cy="309" r="26"/>
+            <circle class="head" cx="579" cy="242" r="77"/>
+            <path class="hair" d="M506 235c-5-75 102-109 148-49 12 16 14 37 8 59-10-6-20-18-24-34-25 13-69 18-104 7-3 19-12 32-28 40Z"/>
+            <path class="ear" d="M509 244c-21-6-25 34-3 38"/>
+            <path class="ear" d="M649 244c20-5 23 33 3 38"/>
+            <path class="brow" d="M543 245c9-5 18-5 27 0M598 245c9-5 18-5 26 0"/>
+            <circle class="eye" cx="557" cy="260" r="4"/>
+            <circle class="eye" cx="610" cy="260" r="4"/>
+            <path class="smile" d="M562 286c12 10 27 10 40 0"/>
+            <path class="earbud" d="M649 245c13-5 18 4 13 16"/>
+            <circle class="chest-sensor" cx="580" cy="392" r="18"/>
+            <path class="chest-wave" d="M568 392h7l4-7 5 15 5-8h7"/>
+          </g>
+
+          <g class="signal-labels">
+            <g class="signal-chip chip-eeg" transform="translate(370 218)"><circle r="29"/><text x="43" y="-2">EEG</text><text class="chip-sub" x="43" y="18">neural signals</text></g>
+            <g class="signal-chip chip-ppg" transform="translate(783 295)"><circle r="29"/><text x="43" y="-2">PPG</text><text class="chip-sub" x="43" y="18">optical pulse</text></g>
+            <g class="signal-chip chip-ecg" transform="translate(345 413)"><circle r="29"/><text x="43" y="-2">ECG</text><text class="chip-sub" x="43" y="18">cardiac rhythm</text></g>
+            <g class="signal-chip chip-imu" transform="translate(312 579)"><circle r="29"/><text x="43" y="-2">IMU</text><text class="chip-sub" x="43" y="18">motion</text></g>
+            <g class="signal-chip chip-cgm" transform="translate(810 587)"><circle r="29"/><text x="43" y="-2">CGM</text><text class="chip-sub" x="43" y="18">metabolic state</text></g>
+            <g class="signal-chip chip-sleep" transform="translate(840 431)"><circle r="29"/><text x="43" y="-2">SLEEP</text><text class="chip-sub" x="43" y="18">recovery</text></g>
+          </g>
+
+          <g class="representation-field">
+            <text class="world-kicker" x="600" y="142" text-anchor="middle">RAW SIGNALS BECOME LEARNED FEATURES</text>
+            <g class="raw-wave" transform="translate(205 285)">
+              <text x="0" y="-35">raw signal</text>
+              <path d="M0 0h58l11-25 17 62 19-98 22 72 15-32 18 21h73"/>
+            </g>
+            <path class="transform-arrow" d="M472 292h208"/>
+            <g class="latent-dots">
+              <circle cx="780" cy="245" r="10"/><circle cx="825" cy="270" r="8"/><circle cx="865" cy="224" r="13"/><circle cx="911" cy="274" r="7"/>
+              <circle cx="770" cy="328" r="7"/><circle cx="818" cy="345" r="13"/><circle cx="872" cy="319" r="9"/><circle cx="924" cy="342" r="11"/>
+              <circle cx="789" cy="409" r="12"/><circle cx="847" cy="397" r="8"/><circle cx="897" cy="418" r="13"/>
+            </g>
+            <text class="representation-label" x="851" y="474" text-anchor="middle">learned signal features</text>
+          </g>
+
+          <g class="lifecycle-field">
+            <text class="world-kicker" x="600" y="142" text-anchor="middle">THE TEN-STAGE WEARABLE AI LIFECYCLE</text>
+            <path class="lifecycle-track" d="M80 411H1120"/>
+            <g class="life-node" transform="translate(95 411)"><circle r="30"/><text y="72">Sense</text><text class="life-no" y="5">01</text></g>
+            <g class="life-node" transform="translate(207 411)"><circle r="30"/><text y="72">Represent</text><text class="life-no" y="5">02</text></g>
+            <g class="life-node" transform="translate(319 411)"><circle r="30"/><text y="72">Measure</text><text class="life-no" y="5">03</text></g>
+            <g class="life-node" transform="translate(431 411)"><circle r="30"/><text y="72">Predict</text><text class="life-no" y="5">04</text></g>
+            <g class="life-node" transform="translate(543 411)"><circle r="30"/><text y="72">Cause</text><text class="life-no" y="5">05</text></g>
+            <g class="life-node" transform="translate(657 411)"><circle r="30"/><text y="72">Learn policy</text><text class="life-no" y="5">06</text></g>
+            <g class="life-node" transform="translate(769 411)"><circle r="30"/><text y="72">Intervene</text><text class="life-no" y="5">07</text></g>
+            <g class="life-node" transform="translate(881 411)"><circle r="30"/><text y="72">Evaluate</text><text class="life-no" y="5">08</text></g>
+            <g class="life-node" transform="translate(993 411)"><circle r="30"/><text y="72">Close loop</text><text class="life-no" y="5">09</text></g>
+            <g class="life-node" transform="translate(1105 411)"><circle r="30"/><text y="72">Govern</text><text class="life-no" y="5">10</text></g>
+            <path class="loop-arrow" d="M1105 354c-68-176-942-178-1010 0"/>
+          </g>
+
+          <g class="ecosystem-field">
+            <text class="world-kicker" x="600" y="98" text-anchor="middle">ONE CONNECTED RESEARCH ECOSYSTEM</text>
+            <g class="eco-lines">
+              <path d="M600 385 335 233M600 385 605 175M600 385 871 230M600 385 334 558M600 385 598 626M600 385 879 554"/>
+              <path d="M335 233 605 175 871 230M334 558 598 626 879 554"/>
+            </g>
+            <g class="eco-core" transform="translate(600 385)"><circle r="94"/><text y="-9">AWESOME</text><text y="20">WEARABLE AI</text><text class="eco-core-sub" y="48">396 accepted records</text></g>
+            <g class="eco-node eco-model" transform="translate(335 233)"><circle r="68"/><text y="-3">Models</text><text class="eco-count" y="24">102</text></g>
+            <g class="eco-node eco-data" transform="translate(605 175)"><circle r="68"/><text y="-3">Datasets</text><text class="eco-count" y="24">116</text></g>
+            <g class="eco-node eco-method" transform="translate(871 230)"><circle r="68"/><text y="-3">Methods</text><text class="eco-count" y="24">61</text></g>
+            <g class="eco-node eco-measure" transform="translate(334 558)"><circle r="68"/><text y="-3">Measures</text><text class="eco-count" y="24">35</text></g>
+            <g class="eco-node eco-infra" transform="translate(598 626)"><circle r="68"/><text y="-3">Infrastructure</text><text class="eco-count" y="24">42</text></g>
+            <g class="eco-node eco-intervention" transform="translate(879 554)"><circle r="68"/><text y="-3">Interventions</text><text class="eco-count" y="24">40</text></g>
+          </g>
+
+          <g class="evidence-field">
+            <text class="world-kicker" x="600" y="116" text-anchor="middle">FIVE CLAIM LAYERS · DISTINCT EVIDENCE REQUIREMENTS</text>
+            <path class="evidence-spine" d="M125 403H1075"/>
+            <g class="evidence-node ev-association" transform="translate(135 403)"><circle r="58"/><circle class="mini" cx="-22" cy="16" r="8"/><circle class="mini" cx="-4" cy="-19" r="8"/><circle class="mini" cx="24" cy="10" r="8"/><path d="M-17 9-8-10M3-15 18 5"/><text y="92">Association</text><text class="ev-question" y="116">What is related?</text></g>
+            <g class="evidence-node ev-predict" transform="translate(365 403)"><circle r="58"/><path d="M-35 17c18-7 26-43 45-31 14 9 22-19 39-26"/><text y="92">Prediction</text><text class="ev-question" y="116">What may happen?</text></g>
+            <g class="evidence-node ev-causal" transform="translate(600 403)"><circle r="58"/><circle class="mini" cx="-22" cy="-13" r="9"/><circle class="mini" cx="23" cy="-25" r="9"/><circle class="mini" cx="18" cy="23" r="9"/><path d="M-13-16 13-23M-15-5 10 15M23-16 19 13"/><text y="92">Causal effect</text><text class="ev-question" y="116">What changes under action?</text></g>
+            <g class="evidence-node ev-policy" transform="translate(835 403)"><circle r="58"/><path d="M-31-14h22l17-21M-9-14l23 23 24-17M14 9l22 20"/><text y="92">Policy value</text><text class="ev-question" y="116">What should we do?</text></g>
+            <g class="evidence-node ev-utility" transform="translate(1065 403)"><circle r="58"/><path d="M-29 2h17l9-23 14 45 10-22h19M0-38v14M-7-31H7"/><text y="92">Clinical utility</text><text class="ev-question" y="116">Does it help in care?</text></g>
+          </g>
+        </svg>
+
+        <div class="stage-note" data-note="relations"><strong>2,169</strong> explicit or machine-derived relations connect the atlas.</div>
+      </div>
+
+      <div class="story-steps">
+        <article class="step" id="signals" data-scene="1">
+          <div class="hero-art">
+            <figure class="sensing-figure">
+              <img src="assets/images/sensing-devices-editorial-v1.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Illustrated ECG smartwatch, adhesive cardiac patch, EEG headband and glucose sensor, each paired with an example signal trace.">
+              <figcaption>
+                <span><b>ECG watch &amp; chest patch</b>Electrical heart activity</span>
+                <span><b>EEG headband</b>Electrical brain activity</span>
+                <span><b>Glucose sensor</b>Interstitial glucose trend</span>
+              </figcaption>
+              <p>Illustrative devices and traces · not product specifications or measured results</p>
+            </figure>
+          </div>
+          <div class="story-copy left-copy">
+            <p class="eyebrow">01 · SENSE</p>
+            <h2>Wearable sensors capture <em>body and context signals.</em></h2>
+            <p>ECG records electrical heart activity; EEG records brain activity; CGM tracks interstitial glucose. Devices measure different signals—not a complete picture of health.</p>
+            <p class="margin-note">Other inputs include optical pulse (PPG), motion (IMU), muscle activity (EMG) and respiration. Sleep is inferred from signals, not a sensor type.</p>
+          </div>
+        </article>
+
+        <article class="step" id="representations" data-scene="2">
+          <div class="story-copy right-copy">
+            <p class="eyebrow">02 · REPRESENT</p>
+            <h2>Models turn raw signals into <em>features for prediction.</em></h2>
+            <p>A representation is a set of learned features that summarizes the signal. Other models can use those features to recognize an activity or estimate risk; accuracy must be tested on new people and devices.</p>
+            <ul class="micro-list" aria-label="Signal transformation stages">
+              <li>calibrate</li><li>encode</li><li>learn</li><li>interpret</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="step" id="lifecycle-story" data-scene="3">
+          <div class="story-copy left-copy compact-copy">
+            <p class="eyebrow">03 · THE LIFECYCLE</p>
+            <h2>Ten stages connect <em>sensing to adaptive action.</em></h2>
+            <p>A useful system must do more than predict: check signal quality, select an action, evaluate its effects and use the observed response to update future decisions.</p>
+          </div>
+        </article>
+
+        <article class="step" id="resource-types-story" data-scene="4">
+          <div class="story-copy right-copy compact-copy">
+            <p class="eyebrow">04 · THE ATLAS</p>
+            <h2>The atlas connects <em>six research resource types.</em></h2>
+            <p>Browse models, datasets, analysis methods, health measures, interventions, and tools or standards. These describe the type of resource; the lifecycle shows where each resource is used.</p>
+          </div>
+        </article>
+
+        <article class="step evidence-step" id="evidence" data-scene="5">
+          <div class="story-copy left-copy compact-copy">
+            <p class="eyebrow">05 · EVIDENCE BOUNDARIES</p>
+            <h2>Each research claim requires <em>different evidence.</em></h2>
+            <p>A link between two measurements is not proof of cause. Accurate forecasts do not tell us whether a treatment will help. Choosing when to act and showing patient benefit require separate tests.</p>
+            <p class="margin-note">Policy value means the expected outcome of a rule for choosing actions. Clinical utility means benefit when a system is used in care.</p>
+          </div>
+        </article>
+
+        <article class="step quiet-step" id="review-depth-story" data-scene="6">
+          <div class="quiet-copy">
+            <p class="eyebrow">HOW MUCH OF THE LIBRARY WAS CHECKED?</p>
+            <blockquote>95 of 396 accepted records have curated evidence cards.</blockquote>
+            <p>For these 95 entries, curators summarized the study, contribution and limitations. Another 225 have core metadata checks; 76 have bibliographic and publication-venue checks. None of these labels means the results were independently reproduced.</p>
+            <div class="depth-bars" aria-label="Evidence depth counts">
+              <div><span>Evidence card</span><i style="--size:42%"></i><strong>95</strong></div>
+              <div><span>Metadata verified</span><i style="--size:100%"></i><strong>225</strong></div>
+              <div><span>Venue verified</span><i style="--size:34%"></i><strong>76</strong></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section></main><footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+    <p>Counts show library coverage. Being listed does not mean a system is effective, safe or approved for clinical use.</p>
+    <p class="footer-meta"><a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/CITATION.cff" target="_blank" rel="noreferrer">Citation</a> · <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT license</a> · Atlas data <span data-registry-version>v0.3.0</span> · Registry metadata checked through <span data-registry-cutoff>2026-09-02</span></p>
+  </footer><aside class="detail-shelf" id="detail-shelf" aria-hidden="true" aria-labelledby="detail-title">
+    <button class="shelf-close" type="button" aria-label="Close details">×</button>
+    <div class="shelf-content"></div>
+  </aside><div class="shelf-backdrop" hidden></div><script src="navigation.js?v=4cdb165a8bbd"></script><script src="app.js?v=ca5d3d441d88"></script></body></html>

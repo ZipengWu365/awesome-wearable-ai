@@ -19,6 +19,7 @@
   let progressFrame = null;
   const updateStory = () => {
     progressFrame = null;
+    if (!story || !progress || !steps.length) return;
     const rect = story.getBoundingClientRect();
     const travelled = Math.max(0, -rect.top);
     const available = Math.max(1, rect.height - innerHeight);
@@ -35,20 +36,11 @@
   const requestStoryUpdate = () => {
     if (!progressFrame) progressFrame = requestAnimationFrame(updateStory);
   };
-  addEventListener('scroll', requestStoryUpdate, { passive: true });
-  addEventListener('resize', requestStoryUpdate, { passive: true });
+  if (story) addEventListener('scroll', requestStoryUpdate, { passive: true });
+  if (story) addEventListener('resize', requestStoryUpdate, { passive: true });
   updateStory();
 
-  menuButton.addEventListener('click', () => {
-    const open = navigation.classList.toggle('is-open');
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.textContent = open ? 'Close' : 'Menu';
-  });
-  navigation.addEventListener('click', () => {
-    navigation.classList.remove('is-open');
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.textContent = 'Menu';
-  });
+  // Shared cross-page navigation is handled once by navigation.js.
 
   const comparisonDisclosure = document.querySelector('#comparison-lab');
   document.querySelectorAll('a[href="#comparison-lab"]').forEach(link => link.addEventListener('click', () => {
@@ -538,6 +530,7 @@
   };
 
   const appendOption = (select, value, label) => {
+    if (!select) return;
     const option = document.createElement('option');
     option.value = value;
     option.textContent = label;
@@ -545,6 +538,7 @@
   };
 
   const buildLegend = () => {
+    if (!els.legend) return;
     TYPE_ORDER.forEach(type => {
       const item = document.createElement('span');
       const dot = document.createElement('i');
@@ -857,6 +851,10 @@
   };
 
   const showAtlasSubset = (predicate) => {
+    if (!els.search) {
+      location.href = 'library.html?' + new URLSearchParams({ids:state.records.filter(predicate).map(r=>r.id).join(',')});
+      return;
+    }
     resetAtlasControls();
     state.exactFilter = predicate;
     applyFilters();
@@ -864,6 +862,10 @@
   };
 
   const searchAtlas = (type, query) => {
+    if (!els.search) {
+      location.href = 'library.html?' + new URLSearchParams({type:type || 'all',q:query || ''});
+      return;
+    }
     resetAtlasControls();
     state.exactFilter = null;
     els.type.value = type || 'all';
@@ -1080,6 +1082,7 @@
   };
 
   const applyFilters = () => {
+    if (!els.search) return;
     const query = els.search.value.trim().toLowerCase();
     state.filtered = state.records.filter(record => {
       if (state.exactFilter && !state.exactFilter(record)) return false;
@@ -1114,7 +1117,7 @@
       els.viewport.classList.toggle('list-view', state.view === 'list');
     });
   });
-  [els.search, els.type, els.modality, els.evidence, els.year].forEach(control => control.addEventListener(control === els.search ? 'input' : 'change', () => {
+  [els.search, els.type, els.modality, els.evidence, els.year].filter(Boolean).forEach(control => control.addEventListener(control === els.search ? 'input' : 'change', () => {
     state.exactFilter = null;
     applyFilters();
   }));
@@ -1123,18 +1126,18 @@
   els.watchlistSearch?.addEventListener('input', () => { state.watchlistExpanded = false; renderWatchlist(); });
   els.watchlistStatus?.addEventListener('change', () => { state.watchlistExpanded = false; renderWatchlist(); });
   els.watchlistToggle?.addEventListener('click', () => { state.watchlistExpanded = !state.watchlistExpanded; renderWatchlist(); });
-  els.group.addEventListener('change', renderMap);
-  document.querySelector('.shelf-close').addEventListener('click', closeShelf);
-  els.backdrop.addEventListener('click', closeShelf);
+  els.group?.addEventListener('change', renderMap);
+  document.querySelector('.shelf-close')?.addEventListener('click', closeShelf);
+  els.backdrop?.addEventListener('click', closeShelf);
   addEventListener('keydown', event => {
     if (event.key === 'Escape' && state.selected) closeShelf();
-    if (event.key === '/' && document.activeElement?.tagName !== 'INPUT') {
+    if (els.search && event.key === '/' && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)) {
       event.preventDefault(); els.search.focus(); document.querySelector('#explore').scrollIntoView();
     }
   });
 
   buildLegend();
-  fetch('registry.json')
+  if (document.querySelector('#explore,#lifecycle-type-matrix,#evidence-profile-title,#evolution-stream,.family-node[data-family]')) fetch('registry.json')
     .then(response => {
       if (!response.ok) throw new Error(`Registry request failed: ${response.status}`);
       return response.json();
@@ -1161,21 +1164,27 @@
         appendOption(els.watchlistStatus, status, `${titleCase(status)} (${count})`);
       });
       renderRegistryComparisons(data);
+      if (els.search) {
+        const params = new URLSearchParams(location.search);
+        els.search.value = params.get('q') || '';
+        if ([...els.type.options].some(o=>o.value===params.get('type'))) els.type.value=params.get('type');
+        if (params.has('ids')) { const ids=new Set(params.get('ids').split(',')); state.exactFilter=r=>ids.has(r.id); }
+      }
       applyFilters();
     })
     .catch(error => {
       console.error(error);
-      els.count.textContent = '—';
+      if (els.count) els.count.textContent = '—';
       const message = document.createElement('p'); message.className = 'empty-state';
       message.textContent = 'The atlas data could not be loaded. Serve this folder with a local web server and try again.';
-      els.list.append(message);
+      (els.list || document.querySelector('main')).append(message);
     });
 
   addEventListener('load', () => {
     if (comparisonDisclosure) comparisonDisclosure.open = location.hash === '#comparison-lab';
     if (!initialHash) return;
-    const target = document.querySelector(initialHash);
-    if (target) window.scrollTo(0, target.offsetTop - 70);
+    const target = document.getElementById(decodeURIComponent(initialHash.slice(1)));
+    if (target) window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY - 90);
     requestAnimationFrame(() => { document.documentElement.style.scrollBehavior = ''; });
   });
 })();

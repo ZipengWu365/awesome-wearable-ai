@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import runpy
 from collections import Counter
 from pathlib import Path
 
@@ -269,6 +270,12 @@ def main() -> int:
         {route["id"] for route in payload["routes"]},
     )
     template = (ASSETS / "four-theme-map-source.html").read_text(encoding="utf-8")
+    # The reading interface is presentation-only. Keep the original registry,
+    # route assignments and selected source reviews unchanged.
+    for placeholder, filename in (("__COLUMNS_STYLE__", "columns.css"), ("__COLUMNS_SCRIPT__", "columns.js")):
+        if template.count(placeholder) != 1:
+            raise ValueError(f"Expected exactly one {placeholder}")
+        template = template.replace(placeholder, (ROOT / "website" / filename).read_text(encoding="utf-8"))
     output = render_template(template, payload)
     (ROOT / "site" / "research-map.html").write_text(output, encoding="utf-8")
     (ROOT / "website" / "research-map.html").write_text(output, encoding="utf-8")
@@ -276,6 +283,7 @@ def main() -> int:
     (ASSETS / "route-classification.json").write_text(json.dumps(route_classification(registry), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     counts = payload["counts"]
     print(f"Research map rendered: {counts['accepted']} accepted + {counts['watchlist']} watchlist records; no omissions")
+    runpy.run_path(str(ROOT / "website" / "build_pages.py"), run_name="__main__")
     return 0
 
 

@@ -884,6 +884,13 @@ main .eyebrow,.home-content .eyebrow,.people-field-key,.update-overview small,
 .evidence-dashboard-grid { grid-template-columns:minmax(270px,.5fr) minmax(0,1.5fr); }
 .watchlist-list p { font-size:14px; line-height:1.6; }
 .trend-card header b,.trend-card header span { color:#344e65; }
+.theme-timeline-preview{display:grid;gap:0;margin:6px 0 22px;padding:14px 0 0;border-top:1px solid #d6e1eb}
+.theme-timeline-preview>b{font-size:14px;color:#28455f;margin-bottom:14px}
+.theme-timeline-preview>a{position:relative;display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;padding:0 0 16px 18px;margin-left:4px;border-left:2px solid #c5d8e3;color:#2e536d;text-decoration:none;font-size:14px;line-height:1.5}
+.theme-timeline-preview>a:before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;background:var(--theme);border-radius:50%}
+.theme-timeline-preview>a:hover{text-decoration:underline}.theme-timeline-preview>a:last-child{padding-bottom:0}.theme-timeline-preview span{font-size:13px;color:#52697e}
+.trend-card .theme-coverage{font-size:13px;line-height:1.6;color:#53697f;margin:12px 0 0}
+.trend-card>a{max-width:100%;width:fit-content;line-height:1.5}
 .overview-card .eyebrow,.comparison-card .eyebrow { color:#3d6189; }
 .figure-scroll-cue,.art-scroll-cue { width:fit-content; max-width:100%; white-space:normal; }
 .evolution-actions a { max-width:100%; white-space:normal; }

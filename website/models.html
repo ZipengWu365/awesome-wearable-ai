@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f2">
+  <meta name="description" content="Track the latest wearable-AI methods, data, hardware, performance, product features and research directions across prediction, intervention, digital twins and mixed reality.">
+  <link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/models.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sensor &amp; model families">
+  <meta property="og:description" content="A source-checked technology intelligence atlas for disease prediction, intervention, personal digital twins and mixed-reality interfaces.">
+  <meta property="og:url" content="https://zipengwu365.github.io/awesome-wearable-ai/models.html">
+  <meta property="og:image" content="https://zipengwu365.github.io/awesome-wearable-ai/assets/images/hero-wearable-researcher-v3.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Sensor &amp; model families · Awesome Wearable AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=c05362d67180">
+<link rel="stylesheet" href="navigation.css?v=6d8b1befd043">
+</head>
+<body class="page-interior" data-scene="0"><a class="skip-link" href="#page-content">Skip to page content</a><header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+<nav id="primary-navigation" aria-label="Primary navigation"><a href="index.html">Home</a><a href="columns.html">Research columns</a><a href="guide.html">Research guide</a><a href="evidence.html">Evidence</a><a href="library.html">Library</a><a class="nav-github" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button></header><main id="page-content"><div class="page-intro"><nav aria-label="Breadcrumb"><a href="guide.html">Research guide</a><span aria-hidden="true"> / </span><span>Sensor & model families</span></nav><h1>Sensor & model families</h1><p>Browse the model landscape by signal and research family.</p></div><nav class="page-shortcuts" aria-label="Research guide pages"><a href="guide.html">Lifecycle &amp; taxonomy</a><a href="story.html">Animated explanation</a><a href="models.html">Sensor &amp; model families</a><a href="history.html">Research through time</a></nav><section class="landscape-section" id="model-landscape" aria-labelledby="model-landscape-title">
+      <div class="landscape-heading">
+        <div><p class="eyebrow">TAXONOMY DETAIL · 102 MODEL RECORDS</p><h2 id="model-landscape-title">Model records by<br><em>signal and task.</em></h2></div>
+        <p>Eleven model families are grouped by signal and task. Number labels give exact record counts; circle sizes are visual cues, not a proportional area scale. Connecting lines show categories, not which model was built from another.</p>
+      </div>
+      <div class="landscape-takeaways" aria-label="Key findings from the model landscape">
+        <article><span>Largest family</span><b>22</b><p>General time-series models and tools</p></article>
+        <article><span>Sensor-specific depth</span><b>15 · 14 · 12</b><p>ECG · EEG / MEG · motion / IMU</p></article>
+        <article><span>Cross-modal bridge</span><b>15 + 10</b><p>Sensor-language agents + multimodal physiology</p></article>
+      </div>
+      <figure class="model-landscape-figure viz-card" data-viz-reveal aria-labelledby="model-landscape-caption">
+        <div class="model-landscape-key"><span><i></i> Numbers = records · size is illustrative</span><span>Select a family to filter the library</span></div>
+        <div class="model-tree">
+          <div class="model-root"><span>102</span><b>Model &amp; representation records</b><small>11 distinct families</small></div>
+          <div class="family-groups">
+            <section class="family-group group-motion">
+              <header><span>01</span><div><b>Movement &amp; activity</b><small>Body motion and posture</small></div></header>
+              <div class="family-nodes">
+                <button class="family-node" style="--diameter:76px;--delay:1" data-family="motion-imu-foundation-models" type="button"><i class="family-icon fi-motion"></i><strong>12</strong><span>Motion / IMU</span></button>
+              </div>
+            </section>
+            <section class="family-group group-physiology">
+              <header><span>02</span><div><b>Physiological</b><small>Cardiac, metabolic and respiratory signals</small></div></header>
+              <div class="family-nodes">
+                <button class="family-node" style="--diameter:82px;--delay:2" data-family="ecg-cardiac-foundation-models" type="button"><i class="family-icon fi-ecg"></i><strong>15</strong><span>ECG / cardiac</span></button>
+                <button class="family-node" style="--diameter:58px;--delay:3" data-family="ppg-optical-foundation-models" type="button"><i class="family-icon fi-ppg"></i><strong>3</strong><span>PPG / optical</span></button>
+                <button class="family-node" style="--diameter:60px;--delay:4" data-family="sleep-psg-foundation-models" type="button"><i class="family-icon fi-sleep"></i><strong>4</strong><span>Sleep / PSG</span></button>
+                <button class="family-node" style="--diameter:55px;--delay:5" data-family="cgm-metabolic-foundation-models" type="button"><i class="family-icon fi-cgm"></i><strong>2</strong><span>CGM / metabolic</span></button>
+                <button class="family-node" style="--diameter:55px;--delay:6" data-family="respiratory-acoustic-foundation-models" type="button"><i class="family-icon fi-respiratory"></i><strong>2</strong><span>Respiratory / acoustic</span></button>
+              </div>
+            </section>
+            <section class="family-group group-neural">
+              <header><span>03</span><div><b>Neural &amp; neuromotor</b><small>Brain and muscle activity</small></div></header>
+              <div class="family-nodes">
+                <button class="family-node" style="--diameter:80px;--delay:7" data-family="eeg-neural-foundation-models" type="button"><i class="family-icon fi-eeg"></i><strong>14</strong><span>EEG / MEG</span></button>
+                <button class="family-node" style="--diameter:58px;--delay:8" data-family="emg-neuromotor-models" type="button"><i class="family-icon fi-emg"></i><strong>3</strong><span>EMG / neuromotor</span></button>
+              </div>
+            </section>
+            <section class="family-group group-cross">
+              <header><span>04</span><div><b>Cross-modal &amp; general</b><small>Reusable modelling across signals</small></div></header>
+              <div class="family-nodes">
+                <button class="family-node" style="--diameter:72px;--delay:9" data-family="multimodal-physiological-models" type="button"><i class="family-icon fi-multimodal"></i><strong>10</strong><span>Multimodal physiology</span></button>
+                <button class="family-node" style="--diameter:82px;--delay:10" data-family="sensor-language-agents" type="button"><i class="family-icon fi-language"></i><strong>15</strong><span>Sensor-language &amp; agents</span></button>
+                <button class="family-node" style="--diameter:92px;--delay:11" data-family="general-time-series-enablers" type="button"><i class="family-icon fi-timeseries"></i><strong>22</strong><span>General time-series</span></button>
+              </div>
+            </section>
+          </div>
+        </div>
+        <figcaption id="model-landscape-caption"><b>Taxonomy detail.</b> Counts reflect the 102 accepted model records. The registry includes 84 records explicitly tagged as foundation-model work; “102 models” does not mean “102 foundation models.”</figcaption>
+      </figure>
+    </section></main><footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+    <p>Counts show library coverage. Being listed does not mean a system is effective, safe or approved for clinical use.</p>
+    <p class="footer-meta"><a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/CITATION.cff" target="_blank" rel="noreferrer">Citation</a> · <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT license</a> · Atlas data <span data-registry-version>v0.3.0</span> · Registry metadata checked through <span data-registry-cutoff>2026-09-02</span></p>
+  </footer><aside class="detail-shelf" id="detail-shelf" aria-hidden="true" aria-labelledby="detail-title">
+    <button class="shelf-close" type="button" aria-label="Close details">×</button>
+    <div class="shelf-content"></div>
+  </aside><div class="shelf-backdrop" hidden></div><script src="navigation.js?v=4cdb165a8bbd"></script><script src="app.js?v=ca5d3d441d88"></script></body></html>

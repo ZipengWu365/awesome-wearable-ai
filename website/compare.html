@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f2">
+  <meta name="description" content="Track the latest wearable-AI methods, data, hardware, performance, product features and research directions across prediction, intervention, digital twins and mixed reality.">
+  <link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/compare.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Compare research resources">
+  <meta property="og:description" content="A source-checked technology intelligence atlas for disease prediction, intervention, personal digital twins and mixed-reality interfaces.">
+  <meta property="og:url" content="https://zipengwu365.github.io/awesome-wearable-ai/compare.html">
+  <meta property="og:image" content="https://zipengwu365.github.io/awesome-wearable-ai/assets/images/hero-wearable-researcher-v3.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Compare research resources · Awesome Wearable AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=c05362d67180">
+<link rel="stylesheet" href="navigation.css?v=6d8b1befd043">
+</head>
+<body class="page-interior" data-scene="0"><a class="skip-link" href="#page-content">Skip to page content</a><header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+<nav id="primary-navigation" aria-label="Primary navigation"><a href="index.html">Home</a><a href="columns.html">Research columns</a><a href="guide.html">Research guide</a><a href="evidence.html">Evidence</a><a href="library.html">Library</a><a class="nav-github" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button></header><main id="page-content"><div class="page-intro"><nav aria-label="Breadcrumb"><a href="library.html">Library</a><span aria-hidden="true"> / </span><span>Compare datasets, models and evidence</span></nav><h1>Compare datasets, models and evidence</h1><p>Choose one focused table. The other views remain available from the navigation below.</p></div><nav class="page-shortcuts resource-tabs" aria-label="Comparison pages"><a href="compare.html?panel=lifecycle">Lifecycle matrix</a><a href="compare.html?panel=families">Research families</a><a href="compare.html?panel=datasets">Datasets</a><a href="compare.html?panel=evidence">Evidence crosswalk</a><a href="compare.html?panel=watchlist">Watchlist</a><a href="compare.html?panel=downloads">Downloads</a></nav><section class="comparison-section"><div class="comparison-grid"><article data-comparison-panel="lifecycle" class="comparison-card matrix-card comparison-wide" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">RECORD TYPE × LIFECYCLE</p><h3>Record counts across ten lifecycle stages</h3></div>
+            <span>Cell colour follows record count</span>
+          </div>
+          <p class="comparison-intro">Read across to see which resource types support sensing, representation, evaluation and deployment. Select any non-empty cell to open that subset in the atlas.</p>
+          <p class="figure-scroll-cue">Swipe horizontally to compare all ten stages →</p>
+          <div class="comparison-scroll"><div id="lifecycle-type-matrix" class="lifecycle-type-matrix" role="table" aria-label="Record type by lifecycle stage count matrix"></div></div>
+          <p class="comparison-note">Each accepted record has one primary record type and one indexed lifecycle stage. Counts describe registry coverage, not field importance.</p>
+        </article><article data-comparison-panel="families" hidden class="comparison-card family-browser-card comparison-wide" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">SIX TYPES · ALL INDEXED FAMILIES</p><h3>All 73 research families by resource type</h3></div>
+            <span id="family-summary">Loading registry families…</span>
+          </div>
+          <div id="family-tabs" class="family-tabs" role="tablist" aria-label="Choose a record type"></div>
+          <div id="family-browser" class="family-browser" aria-live="polite"></div>
+          <p class="comparison-note">Number labels give exact counts. Circle sizes are visual cues, not proportional areas; on small screens sizes are equal. Select a family to view its records in the library.</p>
+        </article><article data-comparison-panel="datasets" hidden class="comparison-card dataset-table-card comparison-wide" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">DATASET COMPARISON</p><h3>Compare 116 datasets by signal, population and access</h3></div>
+            <span id="dataset-count">Loading datasets…</span>
+          </div>
+          <div class="comparison-controls">
+            <label><span>Filter datasets</span><input id="dataset-search" type="search" placeholder="Try ECG, sleep, gait or clinical…" autocomplete="off"></label>
+            <button id="dataset-toggle" type="button">Show all datasets</button>
+          </div>
+          <p class="figure-scroll-cue">Swipe the table to compare all metadata columns →</p>
+          <div class="dataset-table-scroll">
+            <table class="dataset-table">
+              <thead><tr><th>Dataset</th><th>Year</th><th>Signals / modalities</th><th>Population</th><th>Clinical domain</th><th>Wearable scope</th><th>Access</th><th>Evidence depth</th></tr></thead>
+              <tbody id="dataset-table-body"></tbody>
+            </table>
+          </div>
+          <p class="comparison-note">This is a metadata comparison, not a quality ranking. Open a row to inspect provenance, contribution, limitations and the primary source.</p>
+        </article><article data-comparison-panel="evidence" hidden class="comparison-card evidence-crosswalk-card comparison-wide" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">EMPIRICAL METADATA CROSSWALK</p><h3>Evidence designs compared with causal claim status</h3></div>
+            <span>Accepted records only</span>
+          </div>
+          <p class="comparison-intro">Each cell counts records with a particular study design and causal-status label. Darker cells contain more records; empty cells mean no entries with that combination in this library.</p>
+          <p class="figure-scroll-cue">Swipe horizontally to compare every causal-status column →</p>
+          <div class="comparison-scroll"><div id="evidence-causal-matrix" class="evidence-causal-matrix" role="table" aria-label="Evidence stage by causal status count matrix"></div></div>
+          <p class="comparison-note">A cell is a count of registry metadata—not proof that a design supports a causal claim. Use the claim-boundary guide above and inspect individual records.</p>
+        </article><article data-comparison-panel="watchlist" hidden class="comparison-card watchlist-card" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">TRANSPARENT EXCLUSION QUEUE</p><h3>45 candidates awaiting eligibility review</h3></div>
+            <span id="watchlist-count">Loading candidates…</span>
+          </div>
+          <p class="comparison-intro">Candidates remain visible while venue, scope, version or evidence requirements are unresolved. Watchlist items are not included in the 396 accepted records.</p>
+          <div class="watchlist-controls">
+            <input id="watchlist-search" type="search" placeholder="Search candidate or reason…" autocomplete="off" aria-label="Search watchlist">
+            <select id="watchlist-status" aria-label="Filter watchlist by status"><option value="all">All statuses</option></select>
+          </div>
+          <div id="watchlist-list" class="watchlist-list" aria-live="polite"></div>
+          <button id="watchlist-toggle" class="text-button" type="button">Show all candidates</button>
+        </article><article data-comparison-panel="downloads" hidden class="comparison-card resource-hub-card" id="resources" data-viz-reveal>
+          <div class="comparison-card-heading">
+            <div><p class="eyebrow">REPRODUCIBLE RESOURCES</p><h3>Download the machine-readable atlas</h3></div>
+            <span>Registry <b data-registry-version>v0.3.0</b></span>
+          </div>
+          <p class="comparison-intro">The interactive library uses data generated from the repository. Editorial summaries explain selected findings separately. Download the underlying records or inspect the inclusion rules.</p>
+          <div class="resource-stats">
+            <div><strong data-accepted-count>396</strong><span>accepted</span></div>
+            <div><strong data-relation-count>2,169</strong><span>relations</span></div>
+            <div><strong data-watchlist-count>45</strong><span>watchlist</span></div>
+            <div><strong data-registry-cutoff>2026-09-02</strong><span>verified through</span></div>
+          </div>
+          <div class="resource-links">
+            <a href="registry.json" download><b>Website registry</b><span>JSON · exact data rendered here ↓</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/generated/catalog.csv" target="_blank" rel="noreferrer"><b>Catalog table</b><span>CSV · accepted records ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/generated/relations.csv" target="_blank" rel="noreferrer"><b>Relation table</b><span>CSV · curated and automatically derived links ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/tree/main/schema" target="_blank" rel="noreferrer"><b>Data schema</b><span>Required fields and validation rules ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/generated/coverage.md" target="_blank" rel="noreferrer"><b>Coverage report</b><span>Counts and completeness ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/data/excluded/watchlist.yaml" target="_blank" rel="noreferrer"><b>Watchlist source</b><span>Review queue ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/docs/RELEASE_AUDIT_v0.3.0.md" target="_blank" rel="noreferrer"><b>Release audit</b><span>Quality checks ↗</span></a>
+            <a href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer"><b>Full repository</b><span>Methods, docs and contribution guide ↗</span></a>
+          </div>
+          <p class="comparison-note">Generated on <span data-generated-on>2026-09-02</span>. The latest <code>verified_on</code> date is shown above; it is a metadata-check date, not a guarantee that no newer version exists.</p>
+        </article></div></section></main><footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+    <p>Counts show library coverage. Being listed does not mean a system is effective, safe or approved for clinical use.</p>
+    <p class="footer-meta"><a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/CITATION.cff" target="_blank" rel="noreferrer">Citation</a> · <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT license</a> · Atlas data <span data-registry-version>v0.3.0</span> · Registry metadata checked through <span data-registry-cutoff>2026-09-02</span></p>
+  </footer><aside class="detail-shelf" id="detail-shelf" aria-hidden="true" aria-labelledby="detail-title">
+    <button class="shelf-close" type="button" aria-label="Close details">×</button>
+    <div class="shelf-content"></div>
+  </aside><div class="shelf-backdrop" hidden></div><script src="navigation.js?v=4cdb165a8bbd"></script><script src="app.js?v=ca5d3d441d88"></script></body></html>

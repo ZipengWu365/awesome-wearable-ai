@@ -74,9 +74,33 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
 @media(max-height:800px) and (min-width:761px){.radar-heading{padding-top:14px;padding-bottom:11px}.radar-heading h2{font-size:20px}.assessment{padding:10px 12px}.assessment .synthesis{font-size:10px;line-height:1.5}.assessment .assessment-limit{font-size:9px;margin-bottom:9px}.assessment h3{font-size:14px}.assessment-meta{margin-top:9px}.assessments{padding-bottom:14px}.signal{padding-top:10px;padding-bottom:10px}}
 @media(max-width:760px){.header-links{gap:7px}.header-links .library-button{display:none}.view-switch button{font-size:10px;padding:6px}.radar-row{grid-template-columns:1fr 1fr}.radar-row .search{grid-column:1/-1}.radar-row select{max-width:none}.radar-row #radar-kind,.radar-reset{display:none}.radar-heading{padding:13px 12px}.radar-heading h2{font-size:18px}.review-stamp{display:none}.assessments{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 12px 12px;gap:7px}.assessment{padding:9px}.assessment h3{font-size:12px}.assessment .synthesis,.assessment .assessment-limit{display:none}.assessment-meta{font-size:8px}.signal{grid-template-columns:70px minmax(0,1fr);padding:12px;gap:8px}.signal .signal-meta{grid-column:2;display:flex;gap:8px}.signals-heading,.radar-note{padding-left:12px;padding-right:12px}.radar-note{font-size:9px}.signals-heading span{max-width:45%;text-align:right}}
 </style>
+<style>__COLUMNS_STYLE__</style>
 </head>
 <body>
-<main class="atlas">
+<main id="columns-reader" class="columns-reader">
+  <header class="columns-header"><a href="index.html" class="columns-brand">Awesome Wearable AI</a><nav aria-label="Research navigation"><a href="index.html">Home</a><a href="research-map.html?view=map">Visual map</a><a href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></header>
+  <div class="columns-intro"><p class="columns-kicker">FOUR RESEARCH COLUMNS · THE COMPLETE REPOSITORY</p><h1>What changed in wearable AI?</h1><p>Choose a column. Read the research direction, compare contributions, then follow every related paper and resource through time.</p><p id="columns-coverage" class="columns-coverage"></p></div>
+  <nav id="columns-nav" class="columns-nav" aria-label="Choose a research column"></nav>
+  <section id="column-brief" class="column-brief" aria-labelledby="column-title"></section>
+  <section class="column-archive" aria-labelledby="column-archive-title">
+    <div class="column-archive-heading"><div><p class="columns-kicker">PAPERS, DATASETS, METHODS &amp; TOOLS</p><h2 id="column-archive-title">The complete column timeline</h2><p>Newest year first. Exact dates appear only when supplied by the source review; records with only a year are not ordered by recency within that year.</p></div><a href="#column-title">Back to the trend ↑</a></div>
+    <form id="column-filters" class="column-filters" role="search" aria-label="Search this column">
+      <label class="column-search">Find a paper or topic<input id="column-query" type="search" placeholder="Search title, method, sensor, contribution…"></label>
+      <label>Year<select id="column-year"><option value="">All years</option></select></label>
+      <label>Content<select id="column-type"><option value="">All content</option><option value="model">Models</option><option value="dataset">Datasets</option><option value="measure">Measures</option><option value="method">Methods</option><option value="intervention">Interventions</option><option value="infrastructure">Tools &amp; standards</option><option value="update">Additional source updates</option></select></label>
+      <label>Catalog status<select id="column-status"><option value="">All statuses</option><option value="accepted">Accepted in repository</option><option value="watchlist">Watchlist candidates</option><option value="update">Additional source updates</option></select></label>
+      <button id="column-reset" type="button">Reset filters</button>
+      <label class="column-related"><input id="column-related" type="checkbox" checked> Include related work from the other columns</label>
+    </form>
+    <p id="column-result-count" class="column-result-count" role="status" aria-live="polite"></p>
+    <nav id="column-years" class="column-years" aria-label="Filter timeline by publication year"></nav>
+    <div id="column-timeline" class="column-timeline"></div>
+    <p class="column-end">All matching records remain accessible through the page controls and year filters. Pagination changes how much is displayed, not what is included.</p>
+  </section>
+  <footer class="columns-footer"><p>All original repository records are retained. Themes are an editorial reading guide, not evidence of a completed product or clinical capability.</p><a href="index.html">← Back to the illustrated overview</a></footer>
+</main>
+<noscript><p style="padding:24px">The interactive timeline needs JavaScript. <a href="https://github.com/ZipengWu365/awesome-wearable-ai">Read the complete repository on GitHub instead.</a></p></noscript>
+<main class="atlas" hidden>
 <header><div class="brand"><h1>Wearable <span>AI</span></h1><span class="subtitle">Four-theme research intelligence and evidence map.</span></div><div class="header-links"><div class="view-switch" aria-label="Workspace view"><button type="button" id="radar-tab" aria-pressed="true">Intelligence</button><button type="button" id="map-tab" aria-pressed="false">Research map</button></div><span class="edition" id="coverage-label"></span><button type="button" id="library" class="library-button">Browse library ↗</button><a class="repo" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noopener">GitHub ↗</a></div></header>
 <div class="command-row">
 <div class="toolbar" id="map-toolbar" aria-label="Filter research records" hidden>
@@ -111,6 +135,10 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
 <script>
 (() => {
 'use strict';
+if(!['map','radar'].includes(new URLSearchParams(location.search).get('view')))return;
+document.getElementById('columns-reader').hidden=true;
+document.querySelector('.atlas').hidden=false;
+const columnsBack=document.createElement('a');columnsBack.href='research-map.html';columnsBack.textContent='Research columns';document.querySelector('.header-links').prepend(columnsBack);
 const data=JSON.parse(document.getElementById('research-data').textContent);
 const $=id=>document.getElementById(id),byId=new Map(data.records.map(r=>[r.id,r]));
 const graph=$('graph'),svg=$('paths'),nodes=$('nodes'),panel=$('panel'),body=$('panel-body'),context=$('panel-context');
@@ -181,5 +209,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)close
 const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(initialHash),initialSignal=signalById.get(initialHash.replace(/^signal-/,'')),initialAssessment=radar.assessments.find(a=>`assessment-${a.route}`===initialHash);setView(initial?'map':initialSignal||initialAssessment?'radar':new URLSearchParams(location.search).get('view')==='map'?'map':'radar');if(initial){selection={route:initial.primary_route,bin:initial.bin};showDetail(initial);}else if(initialSignal)showSignal(initialSignal);else if(initialAssessment)showAssessment(initialAssessment);
 })();
 </script>
+<script>__COLUMNS_SCRIPT__</script>
 </body>
 </html>

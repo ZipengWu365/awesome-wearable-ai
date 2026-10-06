@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f2">
+  <meta name="description" content="Track the latest wearable-AI methods, data, hardware, performance, product features and research directions across prediction, intervention, digital twins and mixed reality.">
+  <link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/guide.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research guide">
+  <meta property="og:description" content="A source-checked technology intelligence atlas for disease prediction, intervention, personal digital twins and mixed-reality interfaces.">
+  <meta property="og:url" content="https://zipengwu365.github.io/awesome-wearable-ai/guide.html">
+  <meta property="og:image" content="https://zipengwu365.github.io/awesome-wearable-ai/assets/images/hero-wearable-researcher-v3.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Research guide · Awesome Wearable AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=c05362d67180">
+<link rel="stylesheet" href="navigation.css?v=6d8b1befd043">
+</head>
+<body class="page-interior" data-scene="0"><a class="skip-link" href="#page-content">Skip to page content</a><header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+<nav id="primary-navigation" aria-label="Primary navigation"><a href="index.html">Home</a><a href="columns.html">Research columns</a><a href="guide.html">Research guide</a><a href="evidence.html">Evidence</a><a href="library.html">Library</a><a class="nav-github" href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button></header><main id="page-content"><div class="page-intro"><nav aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true"> / </span><span>How wearable-AI research fits together</span></nav><h1>How wearable-AI research fits together</h1><p>Understand the lifecycle and technical roles before comparing individual studies.</p></div><nav class="page-shortcuts" aria-label="Research guide pages"><a href="guide.html">Lifecycle &amp; taxonomy</a><a href="story.html">Animated explanation</a><a href="models.html">Sensor &amp; model families</a><a href="history.html">Research through time</a></nav><details class="reading-terms" id="reading-terms">
+      <summary>Quick definitions: digital twins, counterfactuals and evidence labels</summary>
+      <dl>
+        <div><dt>Counterfactual</dt><dd>A “what if?” comparison: what might happen under a different action. Changing a model input alone does not prove a real treatment effect.</dd></div>
+        <div><dt>Digital twin</dt><dd>A model of a particular person or system, updated using observations. Check which signals it models and whether its simulations were tested.</dd></div>
+        <div><dt>Representation / features</dt><dd>A summary learned from signals that can be used for tasks such as activity recognition or risk prediction.</dd></div>
+        <div><dt>Policy value</dt><dd>The expected outcome of following a rule for choosing actions over time—not a government policy.</dd></div>
+        <div><dt>Clinical utility</dt><dd>Whether using a system improves patient or care outcomes, considering harms as well as benefits.</dd></div>
+        <div><dt>Review depth</dt><dd>How much curators checked: publication details, core metadata, or a study summary with limitations. This is not a score for scientific quality.</dd></div>
+        <div><dt>Signal abbreviations</dt><dd>ECG: electrical heart activity. PPG: optical pulse. EEG / MEG: electrical / magnetic brain activity. EMG: muscle activity. IMU: motion sensors. CGM: continuous glucose monitoring. PSG: a multi-signal sleep study.</dd></div>
+        <div><dt>Foundation model</dt><dd>A model pretrained for reuse across tasks. The library includes other model types too; not every model record is a foundation model.</dd></div>
+      </dl>
+    </details><section class="atlas-overview" id="taxonomy">
+      <div class="overview-heading">
+        <p class="eyebrow">A RESEARCH ATLAS, NOT JUST A PAPER LIST</p>
+        <h2>How the atlas organizes<br><em>wearable-AI research.</em></h2>
+        <p>Use the first figure to follow a system from measurement to action. Use the next two to find resource types and technical roles. These categories organize the library; they do not rank research quality.</p>
+      </div>
+
+      <div class="atlas-reading-guide" aria-label="Three-step guide to reading the atlas">
+        <article>
+          <span>01 · SCOPE</span>
+          <strong>See what is covered</strong>
+          <p><b>396 accepted records</b> across six resource types, connected by 2,169 explicit or machine-derived relations.</p>
+          <small>Coverage · provenance · links</small>
+        </article>
+        <article>
+          <span>02 · SYSTEM</span>
+          <strong>Follow the capability loop</strong>
+          <p>Read from body signals to representation, assessment, decision and action—then follow real-world response back into the loop.</p>
+          <small>Sense → represent → assess → decide → act</small>
+        </article>
+        <article>
+          <span>03 · EVIDENCE</span>
+          <strong>Check what the study actually shows</strong>
+          <p>Record count shows coverage, not quality. Research role, evidence design and supported claim must be read separately.</p>
+          <small>Association ≠ prediction ≠ causation ≠ utility</small>
+        </article>
+      </div>
+
+      <div class="overview-grid">
+        <article class="overview-card capability-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">FIGURE 01 · CAPABILITY LOOP</p><h3>How wearable AI moves from body signals to adaptive action</h3></div>
+            <span class="status-chip">Sense → Represent → Assess → Decide → Act → Learn</span>
+          </div>
+          <p class="card-intro">An adaptive system measures signals, summarizes them, estimates a person's state, chooses an action and learns from the response. The figure describes a system design; an individual study may address only one stage.</p>
+          <figure class="capability-figure" aria-labelledby="capability-caption">
+            <div class="capability-art-strip">
+              <img src="assets/images/capability-story-v1.png" loading="lazy" decoding="async" alt="Five connected editorial illustrations showing wearable sensing, learned representation, health assessment, decision comparison, and real-world intervention with feedback">
+              <div class="art-sequence" aria-hidden="true"><span><b>01</b><small>Sense</small></span><i>→</i><span><b>02</b><small>Represent</small></span><i>→</i><span><b>03</b><small>Assess</small></span><i>→</i><span><b>04</b><small>Decide</small></span><i>→</i><span><b>05</b><small>Act &amp; learn</small></span></div>
+              <p class="art-scroll-cue">Scroll to follow all five scenes →</p>
+            </div>
+            <div class="capability-path">
+              <section class="cap-stage stage-sense">
+                <header><span>01</span><div><b>Sense</b><small>What was observed?</small></div></header>
+                <p>Collect signals over time, together with activity and device context.</p>
+              </section>
+              <i class="stage-arrow" aria-hidden="true">→</i>
+              <section class="cap-stage stage-represent">
+                <header><span>02</span><div><b>Represent</b><small>Which features summarize the signals?</small></div></header>
+                <p>Learn patterns while preserving timing and relationships between signals.</p>
+              </section>
+              <i class="stage-arrow" aria-hidden="true">→</i>
+              <section class="cap-stage stage-assess">
+                <header><span>03</span><div><b>Assess</b><small>What can be inferred?</small></div></header>
+                <p>Measure or predict—without confusing prediction with effect.</p>
+              </section>
+              <i class="stage-arrow" aria-hidden="true">→</i>
+              <section class="cap-stage stage-decide">
+                <header><span>04</span><div><b>Decide</b><small>What changes under action?</small></div></header>
+                <p>Compare possible actions, their expected benefits and their risks.</p>
+              </section>
+              <i class="stage-arrow" aria-hidden="true">→</i>
+              <section class="cap-stage stage-act">
+                <header><span>05</span><div><b>Act &amp; learn</b><small>Did reality match?</small></div></header>
+                <p>Compare predicted and observed response; recalibrate the loop.</p>
+              </section>
+            </div>
+            <div class="feedback-rail"><span>Real-world feedback</span><b>Observed response returns to sensing, representation and policy</b><i aria-hidden="true">↶</i></div>
+            <div class="grounding-strip">
+              <p>What must be checked?</p>
+              <div><b>Signal &amp; sensor</b><span>Noise, missing data and differences between devices</span></div>
+              <div><b>Population</b><span>Whether results hold for other people and settings</span></div>
+              <div><b>Evidence</b><span>Which claims the study tested and supported</span></div>
+              <div><b>Safety &amp; governance</b><span>Risks, privacy and human oversight</span></div>
+            </div>
+            <figcaption id="capability-caption"><b>Capability-oriented overview.</b> The numbered illustration sequence maps directly to the five stages below. Solid arrows denote information or decision flow; the dashed return path denotes real-world feedback.</figcaption>
+          </figure>
+        </article>
+
+        <article class="overview-card ecosystem-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">SIX INTERCONNECTED RECORD TYPES</p><h3>Six resource types and how they connect</h3></div>
+            <a href="library.html#explore">Open atlas <span>→</span></a>
+          </div>
+          <div class="ecosystem-layout">
+            <div class="ecosystem-wheel" aria-label="Record type counts">
+              <svg class="wheel-links" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <line x1="50" y1="50" x2="50" y2="8"></line>
+                <line x1="50" y1="50" x2="84" y2="31"></line>
+                <line x1="50" y1="50" x2="85" y2="77"></line>
+                <line x1="50" y1="50" x2="52" y2="82"></line>
+                <line x1="50" y1="50" x2="11" y2="78"></line>
+                <line x1="50" y1="50" x2="8" y2="30"></line>
+              </svg>
+              <div class="wheel-core"><span class="brand-mark"><i></i><i></i><i></i></span><b>Awesome<br>Wearable AI</b></div>
+              <div class="wheel-node wn-dataset"><b>116</b><span>Datasets</span></div>
+              <div class="wheel-node wn-model"><b>102</b><span>Models</span></div>
+              <div class="wheel-node wn-method"><b>61</b><span>Methods</span></div>
+              <div class="wheel-node wn-intervention"><b>40</b><span>Interventions</span></div>
+              <div class="wheel-node wn-infra"><b>42</b><span>Infrastructure</span></div>
+              <div class="wheel-node wn-measure"><b>35</b><span>Measures</span></div>
+            </div>
+            <aside class="connected-note">
+              <h4>All connected</h4>
+              <p>Models, data, methods, measures, interventions, tools and standards answer different questions across one lifecycle.</p>
+              <dl>
+                <div><dt>Accepted</dt><dd>396</dd></div>
+                <div><dt>Relations</dt><dd>2,169</dd></div>
+                <div><dt>Watchlist</dt><dd>45</dd></div>
+                <div><dt>Version</dt><dd>0.3.0</dd></div>
+              </dl>
+            </aside>
+          </div>
+        </article>
+
+        <article class="overview-card taxonomy-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">FIGURE 02 · RESEARCH TAXONOMY</p><h3>Four technical roles across the wearable-AI lifecycle</h3></div>
+            <span class="status-chip">Four roles · eight routes</span>
+          </div>
+          <p class="card-intro">These are four technical roles, not the four research themes at the top of the page. Each row shows the methods used, their purpose and what needs testing.</p>
+          <figure class="taxonomy-figure" aria-labelledby="taxonomy-caption">
+            <div class="taxonomy-reading-key" aria-hidden="true"><span>Technical routes</span><span>Research role</span><span>Evidence question</span></div>
+            <section class="taxonomy-band tax-representation">
+              <span class="tax-number">01</span>
+              <div class="tax-route-icons"><span><i class="route-icon icon-signal"></i><small>Signal models</small></span><span><i class="route-icon icon-multimodal"></i><small>Multiple signals</small></span></div>
+              <div class="tax-content"><h4>Representation</h4><p>Learn features from one or more sensor streams for reuse in different tasks.</p></div>
+              <aside><b>Does it preserve useful information?</b><span>Signal relationships, timing and alignment</span></aside>
+            </section>
+            <section class="taxonomy-band tax-assessment">
+              <span class="tax-number">02</span>
+              <div class="tax-route-icons"><span><i class="route-icon icon-phenotype"></i><small>Health patterns</small></span><span><i class="route-icon icon-prediction"></i><small>Prediction</small></span></div>
+              <div class="tax-content"><h4>Assessment</h4><p>Estimate health measures, recognizable patterns of health or behavior, and future risk.</p></div>
+              <aside><b>Does the estimate hold up?</b><span>Accuracy and reliability in new people and settings</span></aside>
+            </section>
+            <section class="taxonomy-band tax-decision">
+              <span class="tax-number">03</span>
+              <div class="tax-route-icons"><span><i class="route-icon icon-causal"></i><small>Causal effects</small></span><span><i class="route-icon icon-adaptive"></i><small>Action rules</small></span></div>
+              <div class="tax-content"><h4>Decision methods</h4><p>Estimate what would happen under alternative actions, then learn when to choose each action.</p></div>
+              <aside><b>Would a different action help?</b><span>Causal assumptions, uncertainty and expected outcomes</span></aside>
+            </section>
+            <section class="taxonomy-band tax-intervention">
+              <span class="tax-number">04</span>
+              <div class="tax-route-icons"><span><i class="route-icon icon-behavior"></i><small>Behavior</small></span><span><i class="route-icon icon-control"></i><small>Control</small></span></div>
+              <div class="tax-content"><h4>Intervention</h4><p>Deliver behavioral, rehabilitation or device action and observe response.</p></div>
+              <aside><b>Test in the real world</b><span>Benefit · burden · safety · human override</span></aside>
+            </section>
+            <figcaption id="taxonomy-caption">Roles describe what a system contributes to the loop; they are not mutually exclusive model families or levels of clinical readiness.</figcaption>
+          </figure>
+        </article>
+
+      </div>
+    </section></main><footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Awesome Wearable AI</span></a>
+    <p>Counts show library coverage. Being listed does not mean a system is effective, safe or approved for clinical use.</p>
+    <p class="footer-meta"><a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/CITATION.cff" target="_blank" rel="noreferrer">Citation</a> · <a href="https://github.com/ZipengWu365/awesome-wearable-ai/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT license</a> · Atlas data <span data-registry-version>v0.3.0</span> · Registry metadata checked through <span data-registry-cutoff>2026-09-02</span></p>
+  </footer><aside class="detail-shelf" id="detail-shelf" aria-hidden="true" aria-labelledby="detail-title">
+    <button class="shelf-close" type="button" aria-label="Close details">×</button>
+    <div class="shelf-content"></div>
+  </aside><div class="shelf-backdrop" hidden></div><script src="navigation.js?v=4cdb165a8bbd"></script><script src="app.js?v=ca5d3d441d88"></script></body></html>
