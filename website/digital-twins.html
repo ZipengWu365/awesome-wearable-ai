@@ -133,6 +133,19 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
 @media(max-width:1000px){.column-filters{grid-template-columns:repeat(3,minmax(0,1fr))}.column-filters .column-search{grid-column:1/-1}.column-filters button{grid-column:3}.column-filters .column-related{grid-column:1/3;grid-row:3;align-self:center}.column-highlight-grid{grid-template-columns:1fr 1fr}.columns-nav b{font-size:15px}}
 @media(max-width:700px){.columns-reader{padding:0 16px}.columns-header{display:block;padding:18px 0}.columns-header nav{margin-top:12px;gap:20px;flex-wrap:wrap}.columns-intro{padding:28px 0 16px}.columns-nav{grid-template-columns:1fr 1fr;gap:8px}.columns-nav a{padding:12px}.columns-nav b{font-size:15px}.columns-nav small,.columns-nav span{font-size:12px}.column-brief{padding:21px 18px}.column-path,.column-highlight-grid{grid-template-columns:1fr}.column-path{gap:10px}.column-takeaway{font-size:17px!important}.column-archive-heading{display:block}.column-filters{padding:14px;grid-template-columns:1fr 1fr}.column-filters .column-search{grid-column:1/-1}.column-filters button{grid-column:auto}.column-filters .column-related{grid-column:1/-1;grid-row:auto}.column-year-group{grid-template-columns:1fr;gap:10px}.column-year-label{position:static;font-size:25px!important;display:flex;gap:12px;align-items:center}.column-year-entries{margin-left:5px;padding-left:17px}.column-entry{padding:17px 15px}.column-entry:before{left:-24px}.column-entry h4{font-size:19px}.column-comparison{grid-template-columns:1fr}.column-meta{font-size:12px}.column-years{gap:6px}.column-years a{font-size:13px}.column-archive{padding-top:30px}}
 @media(prefers-reduced-motion:no-preference){.column-brief{animation:column-in .25s ease-out}@keyframes column-in{from{opacity:.7;transform:translateY(5px)}to{opacity:1;transform:none}}}
+/* Horizontal overview + complete, expandable catalog. No clipped titles or paging. */
+.column-time-overview{background:#fff;border:1px solid #d3e0e9;border-radius:14px;padding:22px;margin:22px 0;scroll-margin-top:96px}#column-archive-title,#column-directory-title{scroll-margin-top:96px}
+.column-time-toolbar{display:flex;justify-content:space-between;align-items:start;gap:24px}.column-time-toolbar h3{font-size:21px;line-height:1.35;margin:0 0 6px}.column-time-toolbar p{max-width:660px;font-size:14px;line-height:1.6;color:#50677c;margin:0}
+.column-time-controls{display:flex;flex-wrap:wrap;gap:7px;flex-shrink:0}.column-time-controls button{cursor:pointer;padding:9px 12px;border:1px solid #bdcedb;border-radius:7px;background:white;color:#24465d;font-size:14px;min-height:42px}.column-time-controls button[aria-pressed=true]{background:var(--column);color:white;border-color:var(--column)}.column-time-controls button:disabled{opacity:.4;cursor:default}
+.column-years{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:12px;scroll-snap-type:x proximity;scrollbar-width:auto;scrollbar-color:var(--column) #e7eef3;padding:16px 3px 14px;margin:14px 0 0;overscroll-behavior-x:contain}
+.column-years .column-year-tick{flex:0 0 174px;display:flex;flex-direction:column;align-items:stretch;scroll-snap-align:center;padding:14px 12px;background:#f6f9fb;border:1px solid #d7e2ea;border-bottom:3px solid #c0d5df;border-radius:9px;white-space:normal;color:#263e55;font-size:14px;text-decoration:none}
+.column-years .column-year-tick:hover,.column-years .column-year-tick[aria-current=true]{border-color:var(--column);background:color-mix(in srgb,var(--column) 8%,white)}
+.column-year-tick>strong{font-size:24px;color:var(--column);line-height:1.3}.column-year-count{font-size:15px;font-weight:650}.column-year-bar{height:64px;display:flex;flex-direction:column;justify-content:end;border-bottom:1px solid #b2c6d3;margin:10px 0}.column-year-bar i{display:block;width:100%;flex-shrink:0}.year-accepted{background:var(--column)}.year-watchlist{background:repeating-linear-gradient(135deg,#e5af55 0 4px,#fff2d8 4px 8px)}.column-time-legend span{margin-right:8px}
+.column-years .column-year-tick small{font-size:12px;color:#40596f;margin:3px 0}.column-year-types{font-size:12px;line-height:1.5;margin-top:8px;color:#4b6279}.column-year-gap{font-size:11px;margin-top:auto;padding-top:10px;color:#536a7d}.column-time-legend{font-size:13px;line-height:1.6;color:#51697e;margin:12px 0 0}.column-time-legend span:first-child{color:var(--column)}.column-time-legend span:nth-child(2){color:#79541b}
+.column-year-insights{margin:20px 0 26px;background:#edf3f7;border-radius:10px;padding:20px}.column-year-insights h3{font-size:22px;margin:0 0 12px}.column-year-insights>p{font-size:15px;margin:0;color:#435d74}.column-year-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.column-year-review{background:white;border:1px solid #d7e2ea;border-radius:8px;padding:18px}.column-year-review>a{font-size:18px;font-weight:700;line-height:1.4}.column-year-review p{font-size:15px;line-height:1.65;margin:12px 0}.column-year-review .column-year-limit{font-size:14px;color:#566b80;border-top:1px solid #dbe4eb;padding-top:12px}
+.column-directory-title{font-size:23px;margin:24px 0 18px}.column-catalog-row{position:relative;background:white;border:1px solid #d7e2e9;border-radius:8px;scroll-margin-top:100px;overflow-wrap:anywhere}.column-catalog-row>summary{display:grid;grid-template-columns:142px minmax(0,1fr) 65px;gap:16px;align-items:start;cursor:pointer;list-style:none;padding:17px 18px}.column-catalog-row>summary::-webkit-details-marker{display:none}.column-catalog-meta{display:flex;flex-wrap:wrap;gap:5px;font-size:12px;line-height:1.5;color:#526a7e}.column-catalog-meta>span:first-child{width:100%;font-size:15px;font-weight:650;color:var(--column)}.column-catalog-copy{display:grid;gap:6px}.column-catalog-title{font-size:17px;line-height:1.45;color:#233e58;font-weight:650}.column-catalog-contribution{display:block;font-size:15px;line-height:1.65;color:#486178}.column-catalog-open{font-size:13px;color:var(--column);font-weight:650}.column-catalog-row[open]{border-color:var(--column)}.column-catalog-row[open]>.column-entry{margin:0 16px 16px;background:#f8fafc;box-shadow:none}.column-catalog-row>.column-entry:before{display:none}.column-catalog-row>summary:hover{background:#f3f7fa}.column-catalog-row>summary:focus-visible,.column-year-tick:focus-visible,.column-time-controls button:focus-visible{outline:3px solid #367cad;outline-offset:3px}.column-catalog-row[open] .column-catalog-open{font-size:0}.column-catalog-row[open] .column-catalog-open:after{content:'Close −';font-size:13px}.column-year-label{top:100px}.column-year-entries{gap:8px}
+@media(max-width:1000px){.column-time-toolbar{flex-direction:column;gap:12px}.column-catalog-row>summary{grid-template-columns:110px minmax(0,1fr) 60px;gap:12px}}
+@media(max-width:700px){.column-time-overview{padding:15px}.column-time-controls{flex-shrink:1}.column-years .column-year-tick{flex-basis:164px}.column-year-review-grid{grid-template-columns:1fr}.column-year-insights{padding:15px}.column-catalog-row>summary{grid-template-columns:minmax(0,1fr) 64px;padding:15px;gap:8px}.column-catalog-meta{grid-column:1/-1;align-items:center}.column-catalog-meta>span:first-child{width:auto}.column-catalog-title{font-size:17px}.column-catalog-copy{grid-column:1/-1;grid-row:2}.column-catalog-open{grid-column:2;grid-row:3}.column-catalog-row[open]>.column-entry{margin:0 8px 8px}.column-year-entries{padding-left:0;border-left:0;margin-left:0}}
 </style>
 <link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/digital-twins.html"></head>
 <body data-column-page="twin">
@@ -145,7 +158,7 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
   <nav id="columns-nav" class="columns-nav" aria-label="Choose a research column"></nav>
   <section id="column-brief" class="column-brief" aria-labelledby="column-title"></section>
   <section class="column-archive" aria-labelledby="column-archive-title">
-    <div class="column-archive-heading"><div><p class="columns-kicker">PAPERS, DATASETS, METHODS &amp; TOOLS</p><h2 id="column-archive-title">The complete column timeline</h2><p>Newest year first. Exact dates appear only when supplied by the source review; records with only a year are not ordered by recency within that year.</p></div><a href="#column-title">Back to the trend ↑</a></div>
+    <div class="column-archive-heading"><div><p class="columns-kicker">PAPERS, DATASETS, METHODS &amp; TOOLS</p><h2 id="column-archive-title">Research through time · every record</h2><p>Scan the years horizontally, then read the complete directory below. Select a year to focus; choose All years to see every matching title without pagination.</p></div><a href="#column-title">Back to the trend ↑</a></div>
     <form id="column-filters" class="column-filters" role="search" aria-label="Search this column">
       <label class="column-search">Find a paper or topic<input id="column-query" type="search" placeholder="Search title, method, sensor, contribution…"></label>
       <label>Year<select id="column-year"><option value="">All years</option></select></label>
@@ -155,9 +168,15 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
       <label class="column-related"><input id="column-related" type="checkbox" checked> Include related work from the other columns</label>
     </form>
     <p id="column-result-count" class="column-result-count" role="status" aria-live="polite"></p>
-    <nav id="column-years" class="column-years" aria-label="Filter timeline by publication year"></nav>
+    <section class="column-time-overview" aria-label="Publication year overview">
+      <div class="column-time-toolbar"><div><h3>Earlier work → recent research</h3><p>Bar height = matching catalog records, not research quality or performance. Years are equally spaced; gaps are labelled.</p></div><div class="column-time-controls"><button type="button" id="column-all-years">All years</button><button type="button" id="column-years-back" aria-label="Scroll toward earlier years" aria-controls="column-years">←</button><button type="button" id="column-years-next" aria-label="Scroll toward newer years" aria-controls="column-years">→</button><button type="button" id="column-years-latest">Latest year</button></div></div>
+      <nav id="column-years" class="column-years" aria-label="Filter timeline by publication year" tabindex="0"></nav>
+      <p class="column-time-legend"><span>● Accepted</span><span>○ Watchlist</span> · Source reviews counted separately · Scroll sideways or use the arrow buttons</p>
+    </section>
+    <section id="column-year-insights" class="column-year-insights" aria-live="polite" aria-label="Selected year reading guide"></section>
+    <h3 id="column-directory-title" class="column-directory-title">Complete paper &amp; resource directory</h3>
     <div id="column-timeline" class="column-timeline"></div>
-    <p class="column-end">All matching records remain accessible through the page controls and year filters. Pagination changes how much is displayed, not what is included.</p>
+    <p class="column-end">Every matching title is listed above; expand any entry for its full contribution, evidence and sources. Within a year, catalog titles are alphabetical—not ranked by recency or quality.</p>
   </section>
   <footer class="columns-footer"><p>All original repository records are retained. Themes are an editorial reading guide, not evidence of a completed product or clinical capability.</p><a href="index.html">← Back to the illustrated overview</a></footer>
 </main>
@@ -284,8 +303,6 @@ const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(in
   const signalById = new Map(radar.signals.map(s => [s.id, s]));
   const columnFiles = {prediction:'prediction.html',intervention:'intervention.html',twin:'digital-twins.html',interface:'mixed-reality.html'};
   const pageTheme = document.body.dataset.columnPage;
-  const PAGE_SIZE = 8;
-  let pageNumber = 1;
   const typeNames = {model: 'Model', dataset: 'Dataset', measure: 'Measure', method: 'Method', intervention: 'Intervention', infrastructure: 'Tools & standards'};
   const roleNames = {direct: 'Direct research', support: 'Supporting method or resource', framework: 'Conceptual framework', adjacent: 'Adjacent research'};
   const evidenceNames = {evidence_card: 'Detailed evidence summary available', metadata_verified: 'Bibliographic metadata checked', venue_verified: 'Publication venue checked'};
@@ -386,14 +403,12 @@ const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(in
     return a;
   }
   function resetFields() {
-    pageNumber = 1;
     for (const id of ['column-query', 'column-year', 'column-type', 'column-status']) $(id).value = '';
     $('column-related').checked = true;
   }
   function syncUrl(push = false, hash = '') {
     const u = new URL(location.href); u.search = '';
     if (!pageTheme) u.searchParams.set('theme', theme);
-    if (pageNumber > 1) u.searchParams.set('page', String(pageNumber));
     for (const [key, id] of [['q', 'column-query'], ['year', 'column-year'], ['type', 'column-type'], ['status', 'column-status']]) {
       if ($(id).value) u.searchParams.set(key, $(id).value);
     }
@@ -469,8 +484,8 @@ const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(in
     }
     return rows;
   }
-  function matches(item) {
-    const q = $('column-query').value.toLowerCase().trim(), year = $('column-year').value, status = $('column-status').value, type = $('column-type').value;
+  function matches(item, ignoreYear = false) {
+    const q = $('column-query').value.toLowerCase().trim(), year = ignoreYear ? '' : $('column-year').value, status = $('column-status').value, type = $('column-type').value;
     const r = item.record, s = item.signal;
     const values = r ? [r.title, r.short_name, r.contribution, r.why_it_matters, r.family, r.subtopic, r.tags, r.modalities, r.year, r.venue, r.reason] : [s.title, s.before, s.after, s.keywords, s.evidence, s.types];
     return (!year || item.year === Number(year)) && (!status || (r ? r.catalog_status : 'update') === status) && (!type || (r ? r.record_type : 'update') === type) && (!q || JSON.stringify(values).toLowerCase().includes(q));
@@ -537,47 +552,113 @@ const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(in
     card.append(detail); return card;
   }
   function sortedItems() {
-    return allTimelineItems().filter(matches).sort((a, b) => b.year - a.year || (a.kind === 'update' && b.kind === 'update' ? b.signal.event_date.localeCompare(a.signal.event_date) : a.kind !== b.kind ? a.kind === 'update' ? -1 : 1 : a.title.localeCompare(b.title)));
+    return allTimelineItems().filter(item => matches(item)).sort((a, b) => b.year - a.year || (a.kind === 'update' && b.kind === 'update' ? b.signal.event_date.localeCompare(a.signal.event_date) : a.kind !== b.kind ? a.kind === 'update' ? -1 : 1 : a.title.localeCompare(b.title)));
   }
-  function paginator(total, cls) {
-    const nav = el('nav', 'column-pagination ' + cls); nav.setAttribute('aria-label','Timeline pages');
-    const totalPages = Math.max(1,Math.ceil(total/PAGE_SIZE));
-    for (const [direction,label] of [[-1,'← Previous'],[1,'Next →']]) {
-      if (direction===1) nav.append(el('span','',`Page ${pageNumber} of ${totalPages} · ${total} entries`));
-      const button=el('button','',label);button.type='button';button.dataset.pageDirection=String(direction);
-      button.disabled=direction<0?pageNumber===1:pageNumber===totalPages;
-      button.onclick=()=>{pageNumber+=direction;renderTimeline();syncUrl(true,'column-archive-title');$('column-archive-title').scrollIntoView({block:'start'});document.querySelector('.column-pagination-top button:not(:disabled)')?.focus({preventScroll:true});};
-      nav.append(button);
+  function selectYear(year) {
+    $('column-year').value = String(year);
+    renderTimeline(); syncUrl(true, 'column-archive-title');
+    const active = $('column-years').querySelector('[aria-current="true"]');
+    if (active) { active.scrollIntoView({block:'nearest',inline:'center',behavior:'instant'}); active.focus({preventScroll:true}); }
+  }
+  function yearOverview() {
+    const years = $('column-years'), previousScroll = years.scrollLeft, firstRender = !years.children.length;
+    const rows = allTimelineItems().filter(item => matches(item, true));
+    const values = [...new Set(allTimelineItems().map(item => item.year))].sort((a,b)=>a-b);
+    const largest = Math.max(1, ...values.map(y => rows.filter(item => item.year===y && item.record).length));
+    years.replaceChildren();
+    for (const [index, year] of values.entries()) {
+      const items = rows.filter(item => item.year===year);
+      const accepted = items.filter(item => item.record?.catalog_status==='accepted').length;
+      const watchlist = items.filter(item => item.record?.catalog_status==='watchlist').length;
+      const reviews = items.filter(item => item.kind==='update').length;
+      const a = href('', '?year='+year+'#column-archive-title', 'column-year-tick');
+      a.dataset.year = String(year);a.dataset.accepted=String(accepted);a.dataset.watchlist=String(watchlist); a.setAttribute('aria-current', String($('column-year').value===String(year)));
+      a.setAttribute('aria-label', `${year}: ${accepted} accepted, ${watchlist} watchlist, ${reviews} additional reviews. Show this year.`);
+      a.append(el('strong','',String(year)),el('span','column-year-count',`${accepted+watchlist} records`));
+      const chart = el('span','column-year-bar'); chart.setAttribute('aria-hidden','true');
+      const acceptedBar=el('i','year-accepted'),watchBar=el('i','year-watchlist');
+      acceptedBar.style.height=(accepted/largest*60)+'px';watchBar.style.height=(watchlist/largest*60)+'px';
+      chart.append(watchBar,acceptedBar);a.append(chart);
+      a.append(el('small','',`${accepted} accepted · ${watchlist} watchlist`));
+      if (reviews) a.append(el('small','',`+ ${reviews} source reviews`));
+      const types=[...new Set(items.flatMap(item=>item.record?[typeNames[item.record.record_type]]:[]))];
+      a.append(el('span','column-year-types',types.length?types.join(' · '):reviews?'Dated source updates':'No matches for these filters'));
+      if(index && year-values[index-1]>1) a.append(el('span','column-year-gap',`${year-values[index-1]} years after ${values[index-1]}`));
+      a.onclick=e=>{e.preventDefault();selectYear(year);};years.append(a);
     }
-    return nav;
+    years.scrollLeft = firstRender ? years.scrollWidth : previousScroll;
+    $('column-all-years').setAttribute('aria-pressed',String(!$('column-year').value));
+    updateYearControls();
+  }
+  function updateYearControls() {
+    const years=$('column-years');
+    $('column-years-back').disabled=years.scrollLeft<=1;
+    $('column-years-next').disabled=years.scrollLeft+years.clientWidth>=years.scrollWidth-2;
+  }
+  function yearInsights(rows) {
+    const box=$('column-year-insights'), year=$('column-year').value;
+    box.replaceChildren();
+    if(!year) {
+      box.append(el('p','','All years selected: every matching title is listed below, newest year first. Choose a year above to compare its contributions and source-reviewed updates.'));
+      return;
+    }
+    box.append(el('h3','',`${year} · contributions & updates`));
+    // Only existing reviewed comparisons are used; catalog size is never a trend claim.
+    const selected = new Set(rows.map(item=>item.id));
+    const signals = relevantSignals().filter(s=>s.event_date.startsWith(year) && (selected.has('signal-'+s.id)||s.registry_ids.some(id=>selected.has(id))));
+    const grid=el('div','column-year-review-grid');
+    for(const s of signals) {
+      const card=el('article','column-year-review');
+      card.append(el('p','column-meta',`${s.event_date} · ${signalEvidence[s.evidence_level]}`),linkToEntry('signal-'+s.id,s.title));
+      const before=el('p');before.append(el('strong','','Before: '),document.createTextNode(s.before));
+      const after=el('p');after.append(el('strong','','What changed: '),document.createTextNode(s.after));
+      card.append(before,after);
+      if(s.comparison){const result=el('p');result.append(el('strong','','Reported comparison: '),document.createTextNode(s.comparison.result+' '+s.comparison.conditions));card.append(result);}
+      card.append(el('p','column-year-limit',s.limit));grid.append(card);
+    }
+    if(signals.length) box.append(grid);
+    else box.append(el('p','','No separately reviewed before/after comparison is available for this year under the current filters. The directory below gives each record’s original contribution; a newer publication date does not establish better performance.'));
+  }
+  function compactEntry(item) {
+    const r=item.record,s=item.signal,row=el('details','column-catalog-row');
+    row.id=item.id;
+    if(r)row.dataset.recordId=r.id;else row.dataset.signalId=s.id;
+    const summary=el('summary'),meta=el('span','column-catalog-meta');
+    meta.append(el('span','',String(item.year)),el('span','column-badge',r?typeNames[r.record_type]:'Source review'));
+    meta.append(el('span',r?.catalog_status==='watchlist'?'column-badge column-badge-watch':'',r?(r.catalog_status==='watchlist'?'Watchlist':'Accepted'):signalEvidence[s.evidence_level]));
+    if(r?.primary_route!==theme && r)meta.append(el('span','', 'Related · '+routeOf(r.primary_route).short_label));
+    const text=el('span','column-catalog-copy');
+    text.append(el('strong','column-catalog-title',item.title),el('span','column-catalog-contribution',r?(r.contribution||r.reason||'Contribution not yet reviewed in the repository.'):(updateSummaries[s.id]||s.after)));
+    summary.append(meta,text,el('span','column-catalog-open','Details +'));row.append(summary);
+    // Keep all titles searchable in the DOM; build long evidence text only on demand.
+    row._hydrate=()=>{
+      if(row.dataset.loaded)return;
+      row.dataset.loaded='true';
+      const card=r?recordCard(r):updateCard(s);card.removeAttribute('id');card.removeAttribute('data-record-id');card.removeAttribute('data-signal-id');
+      row.append(card);
+    };
+    row.addEventListener('toggle',()=>{if(row.open)row._hydrate();});
+    return row;
   }
   function renderTimeline() {
     const rows = sortedItems();
-    pageNumber = Math.min(Math.max(1,pageNumber),Math.max(1,Math.ceil(rows.length/PAGE_SIZE)));
-    const start=(pageNumber-1)*PAGE_SIZE,visible=rows.slice(start,start+PAGE_SIZE);
     const accepted = rows.filter(i => i.record?.catalog_status === 'accepted').length;
     const watchlist = rows.filter(i => i.record?.catalog_status === 'watchlist').length;
     const updates = rows.filter(i => i.kind === 'update').length;
     const primary = rows.filter(i => i.record?.primary_route === theme).length;
-    $('column-result-count').textContent = `${accepted + watchlist} matching repository records (${accepted} accepted + ${watchlist} watchlist; ${primary} primary + ${accepted + watchlist - primary} cross-theme) · ${updates} additional source reviews. Showing entries ${rows.length?start+1:0}–${start+visible.length} of ${rows.length}; browse pages or choose a year.`;
-    const list = $('column-timeline'), years = $('column-years'); list.replaceChildren(); years.replaceChildren();
+    const total=data.records.filter(belongs).length;
+    $('column-result-count').textContent = `${accepted + watchlist} / ${total} repository records match (${accepted} accepted + ${watchlist} watchlist; ${primary} primary + ${accepted + watchlist - primary} cross-theme) · ${updates} additional source reviews. All ${rows.length} matching titles are listed—no pagination.`;
+    const list = $('column-timeline'); list.replaceChildren();yearOverview();yearInsights(rows);
+    $('column-directory-title').textContent=($('column-year').value||'All years')+' · complete paper & resource directory';
     if (!rows.length) {
       const empty = el('div', 'column-empty'); empty.append(el('p', '', 'No records match these filters. Try another year, clear the search, or include related work.'));
       const reset = el('button', '', 'Show all records in this column'); reset.type = 'button'; reset.onclick = () => { resetFields(); syncUrl(); renderTimeline(); }; empty.append(reset); list.append(empty); return;
     }
-    for (const year of [...new Set(allTimelineItems().map(r => r.year))].sort((a,b)=>b-a)) {
-      const a=href(String(year),'?year='+year+'#column-archive-title');
-      a.append(el('small','',String(allTimelineItems().filter(r=>r.year===year).length)));
-      a.setAttribute('aria-current',String($('column-year').value===String(year)));
-      a.onclick=e=>{e.preventDefault();$('column-year').value=String(year);pageNumber=1;renderTimeline();syncUrl(true,'column-archive-title');$('column-archive-title').scrollIntoView({block:'start'});};years.append(a);
-    }
-    list.append(paginator(rows.length,'column-pagination-top'));
-    for (const year of [...new Set(visible.map(r => r.year))]) {
-      const items = visible.filter(r => r.year === year), group = el('section', 'column-year-group'); group.id = 'year-' + year;
+    for (const year of [...new Set(rows.map(r => r.year))]) {
+      const items = rows.filter(r => r.year === year), group = el('section', 'column-year-group'); group.id = 'year-' + year;
       const label = el('h3', 'column-year-label', String(year)); label.append(el('small', '', `${items.length} entries`)); group.append(label);
-      const body = el('div', 'column-year-entries'); for (const item of items) body.append(item.kind === 'record' ? recordCard(item.record) : updateCard(item.signal)); group.append(body); list.append(group);
+      const body = el('div', 'column-year-entries'); for (const item of items) body.append(compactEntry(item)); group.append(body); list.append(group);
     }
-    list.append(paginator(rows.length,'column-pagination-bottom'));
   }
   function renderColumn() {
     $('columns-reader').style.setProperty('--column', routeOf(theme).color);
@@ -600,9 +681,12 @@ const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(in
       let index=findIndex(sortedItems());
       if(index<0){resetFields();renderColumn();index=findIndex(sortedItems());}
       if(index<0)return false;
-      pageNumber=Math.floor(index/PAGE_SIZE)+1;renderTimeline();target=$(id);
+      renderTimeline();
+      if(s)for(const recordId of s.registry_ids){const owner=$(recordId);if(owner?._hydrate){owner._hydrate();owner.open=true;}}
+      target=$(id);
     }
     if (!target) return false;
+    target._hydrate?.();
     let parent = target.parentElement;
     while (parent) { if (parent.tagName === 'DETAILS') parent.open = true; parent = parent.parentElement; }
     if (target.tagName === 'DETAILS') target.open = true;
@@ -618,7 +702,9 @@ const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(in
     resetFields(); renderColumn();
     for (const [key,id] of [['q','column-query'],['year','column-year'],['type','column-type'],['status','column-status']]) $(id).value = params.get(key) || '';
     $('column-related').checked = params.get('related') !== '0';
-    pageNumber=Math.max(1,Number.parseInt(params.get('page')||'1',10)||1);renderTimeline();
+    renderTimeline();
+    const selectedTick=$('column-years').querySelector('[aria-current="true"]');
+    if(selectedTick) $('column-years').scrollLeft+=selectedTick.getBoundingClientRect().left-$('column-years').getBoundingClientRect().left-($('column-years').clientWidth-selectedTick.clientWidth)/2;
     if (legacyTheme) { syncUrl(false); $('column-title').scrollIntoView({block:'start'}); }
     else if (hash) requestAnimationFrame(() => jumpTo(hash));
   }
@@ -627,8 +713,13 @@ const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(in
   if (new Set(ids).size !== ids.length || ids.length !== data.counts.accepted + data.counts.watchlist || data.records.some(r => !routeOf(r.primary_route))) throw new Error('Incomplete column assignment');
   $('columns-coverage').textContent = `${data.counts.accepted} accepted + ${data.counts.watchlist} watchlist records, each assigned to one primary column. Cross-theme links do not add new records. Catalog: ${data.cutoff} · Selected source updates reviewed: ${radar.reviewed_on}.`;
   $('column-filters').onsubmit = e => e.preventDefault();
-  for (const id of ['column-query','column-year','column-type','column-status','column-related']) $(id).addEventListener(id === 'column-query' ? 'input' : 'change', () => { pageNumber=1;renderTimeline();syncUrl(); });
+  for (const id of ['column-query','column-year','column-type','column-status','column-related']) $(id).addEventListener(id === 'column-query' ? 'input' : 'change', () => { renderTimeline();syncUrl(); });
   $('column-reset').onclick = () => { resetFields(); syncUrl(); renderTimeline(); };
+  $('column-all-years').onclick=()=>selectYear('');
+  $('column-years-latest').onclick=()=>selectYear(Math.max(...allTimelineItems().map(item=>item.year)));
+  for(const [id,direction] of [['column-years-back',-1],['column-years-next',1]]) $(id).onclick=()=>$('column-years').scrollBy({left:direction*Math.max(200,$('column-years').clientWidth*.75),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+  $('column-years').addEventListener('scroll',updateYearControls,{passive:true});
+  window.addEventListener('resize',updateYearControls);
   window.addEventListener('popstate', restoreLocation);
   window.addEventListener('hashchange', () => { const hash = cleanHash(); if (hash) jumpTo(hash); });
   restoreLocation();

@@ -40,18 +40,33 @@ socket.addEventListener('open',async()=>{try{
     assert.equal(await evaluate(`(()=>{const d=JSON.parse(document.querySelector('#research-data').textContent),ids=new Set([...d.records.map(r=>r.id),...d.radar.signals.map(s=>'signal-'+s.id)]);return [...document.querySelectorAll('.column-change a')].every(a=>ids.has(decodeURIComponent(a.hash.slice(1))));})()`),true,'Change summaries link to genuine sources');
     const expected=await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route==='${theme}').map(r=>r.id).sort()`);
     await evaluate(`document.querySelector('#column-related').click();true`);
-    const collected=[];let pages=0;
-    do{const ids=await json(`[...document.querySelectorAll('[data-record-id]')].map(n=>n.dataset.recordId)`);assert(ids.length<=8,'Page size must stay bounded');collected.push(...ids);pages++;if(await evaluate(`document.querySelector('.column-pagination-top [data-page-direction="1"]').disabled`))break;await evaluate(`document.querySelector('.column-pagination-top [data-page-direction="1"]').click();true`);assert(pages<80,'Pagination loop');}while(true);
-    assert.deepEqual(collected.sort(),expected,theme+' exact complete paginated coverage');for(const id of collected){assert(!allIds.has(id),'Duplicate primary ID');allIds.add(id);}
+    const collected=await json(`[...document.querySelectorAll('[data-record-id]')].map(n=>n.dataset.recordId)`);
+    assert.deepEqual(collected.sort(),expected,theme+' exact complete directory coverage');for(const id of collected){assert(!allIds.has(id),'Duplicate primary ID');allIds.add(id);}
+    assert.equal(await evaluate(`document.querySelectorAll('.column-pagination').length`),0,'No hidden pages');
+    const years=await json(`[...document.querySelectorAll('.column-year-tick')].map(n=>Number(n.dataset.year))`);
+    assert.deepEqual(years,[...years].sort((a,b)=>a-b),'Horizontal years must be chronological');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.column-year-tick')].reduce((sum,n)=>sum+Number(n.dataset.accepted)+Number(n.dataset.watchlist),0)`),expected.length,'Bars count all primary records exactly');
+    for(const y of years){
+      await evaluate(`document.querySelector('.column-year-tick[data-year="${y}"]').click();true`);
+      assert.equal(await evaluate(`(()=>{const expected=JSON.parse(document.querySelector('#research-data').textContent).records.filter(r=>r.primary_route==='${theme}'&&r.year===${y}).map(r=>r.id).sort();const actual=[...document.querySelectorAll('[data-record-id]')].map(n=>n.dataset.recordId).sort();return JSON.stringify(actual)===JSON.stringify(expected)})()`),true,'Exact IDs for '+theme+' '+y);
+    }
+    const year=years.at(-1);
+    await evaluate(`document.querySelector('.column-year-tick[data-year="${year}"]').click();true`);
+    const expectedYear=await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route==='${theme}'&&r.year===${year}).map(r=>r.id).sort()`);
+    assert.deepEqual(await json(`[...document.querySelectorAll('[data-record-id]')].map(n=>n.dataset.recordId).sort()`),expectedYear,'Every selected-year title visible');
+    assert.equal(await evaluate(`document.querySelector('.column-year-tick[data-year="${year}"]').getAttribute('aria-current')`),'true');
+    await evaluate(`document.querySelector('#column-all-years').click();true`);
+    assert.equal(await evaluate(`document.querySelectorAll('[data-record-id]').length`),expected.length);
     await evaluate(`document.querySelector('#column-reset').click();document.querySelector('#column-query').value='no-match-xyz-123';document.querySelector('#column-query').dispatchEvent(new Event('input'));true`);
-    assert.equal(await evaluate(`!!document.querySelector('.column-empty')`),true);await evaluate(`document.querySelector('.column-empty button').click();true`);assert.equal(await evaluate(`document.querySelectorAll('.column-pagination').length`),2);
-    console.log('PASS paginated coverage',theme,expected.length,'primary records across',pages,'pages');
+    assert.equal(await evaluate(`!!document.querySelector('.column-empty')`),true);await evaluate(`document.querySelector('.column-empty button').click();true`);assert.equal(await evaluate(`document.querySelectorAll('.column-pagination').length`),0);
+    for(const width of [1440,390]){await send('browsingContext.setViewport',{context,viewport:{width,height:960},devicePixelRatio:1});await evaluate(`document.querySelector('.column-time-overview').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-timeline-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true);}
+    console.log('PASS complete horizontal timeline',theme,expected.length,'primary records; every year and title accessible');
   }
   assert.equal(allIds.size,441);
   await navigate('prediction.html#dataset-mitbih-arrhythmia');await pause(200);assert.equal(await evaluate(`document.querySelector('#dataset-mitbih-arrhythmia .column-record-detail').open`),true,'Deep link opens a later-page record');
   await navigate('digital-twins.html#signal-aid-twin-baseline-2025');assert.equal(await evaluate(`document.getElementById('signal-aid-twin-baseline-2025').open`),true,'Linked review opens');
-  await navigate('prediction.html?year=2024&page=2#column-archive-title');assert.equal(await evaluate(`document.querySelector('.column-pagination-top span').textContent.startsWith('Page 2 ')`),true);
-  await evaluate(`document.querySelector('.column-pagination-top [data-page-direction="1"]').click();history.back();true`);await pause(180);assert.equal(await evaluate(`document.querySelector('.column-pagination-top span').textContent.startsWith('Page 2 ')`),true,'Back restores pagination');
+  await navigate('prediction.html?year=2024&page=2#column-archive-title');assert.equal(await evaluate(`document.querySelector('#column-year').value`),'2024','Old pagination links retain year');
+  await evaluate(`document.querySelector('.column-year-tick[data-year="2025"]').click();history.back();true`);await pause(180);assert.equal(await evaluate(`document.querySelector('#column-year').value`),'2024','Back restores year');
   await navigate('prediction.html');await evaluate(`document.querySelector('#columns-nav a[href="digital-twins.html"]').click();true`);await pause(250);assert.equal(await evaluate(`location.pathname.endsWith('/digital-twins.html')`),true,'Theme changes actual page');
   await navigate('index.html#explore');await pause(250);assert.equal(await evaluate(`location.pathname.endsWith('/library.html')`),true,'Old homepage link redirects');
   await navigate('models.html');await pause(200);await evaluate(`document.querySelector('.family-node[data-family]').click();true`);await pause(350);assert.equal(await evaluate(`location.pathname.endsWith('/library.html')&&new URLSearchParams(location.search).get('type')==='model'`),true,'Family opens library filter');
@@ -60,7 +75,7 @@ socket.addEventListener('open',async()=>{try{
   await navigate('story.html');assert.equal(await evaluate(`document.querySelectorAll('.step').length`),6);
   for(let n=0;n<6;n++){await evaluate(`document.querySelectorAll('.step')[${n}].scrollIntoView({block:'center',behavior:'instant'});true`);await pause(180);assert.equal(await evaluate(`document.querySelectorAll('.step.is-active').length`),1);}
   await navigate('research-map.html?view=map');assert.equal(await evaluate(`document.querySelector('.atlas').hidden`),false);
-  assert.deepEqual(errors,[]);console.log('PASS 441 IDs; navigation; filters; pagination history; legacy links; graph links; 6 scenes; no page JS errors');
+  assert.deepEqual(errors,[]);console.log('PASS 441 IDs; navigation; filters; horizontal years; complete directory; legacy links; graph links; 6 scenes; no page JS errors');
   await send('session.end');socket.close();
 }catch(error){console.error(error);process.exitCode=1;try{await send('session.end');}catch{}socket.close();}});
 await done;

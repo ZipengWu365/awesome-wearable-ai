@@ -83,7 +83,7 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
   <nav id="columns-nav" class="columns-nav" aria-label="Choose a research column"></nav>
   <section id="column-brief" class="column-brief" aria-labelledby="column-title"></section>
   <section class="column-archive" aria-labelledby="column-archive-title">
-    <div class="column-archive-heading"><div><p class="columns-kicker">PAPERS, DATASETS, METHODS &amp; TOOLS</p><h2 id="column-archive-title">The complete column timeline</h2><p>Newest year first. Exact dates appear only when supplied by the source review; records with only a year are not ordered by recency within that year.</p></div><a href="#column-title">Back to the trend ↑</a></div>
+    <div class="column-archive-heading"><div><p class="columns-kicker">PAPERS, DATASETS, METHODS &amp; TOOLS</p><h2 id="column-archive-title">Research through time · every record</h2><p>Scan the years horizontally, then read the complete directory below. Select a year to focus; choose All years to see every matching title without pagination.</p></div><a href="#column-title">Back to the trend ↑</a></div>
     <form id="column-filters" class="column-filters" role="search" aria-label="Search this column">
       <label class="column-search">Find a paper or topic<input id="column-query" type="search" placeholder="Search title, method, sensor, contribution…"></label>
       <label>Year<select id="column-year"><option value="">All years</option></select></label>
@@ -93,9 +93,15 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
       <label class="column-related"><input id="column-related" type="checkbox" checked> Include related work from the other columns</label>
     </form>
     <p id="column-result-count" class="column-result-count" role="status" aria-live="polite"></p>
-    <nav id="column-years" class="column-years" aria-label="Filter timeline by publication year"></nav>
+    <section class="column-time-overview" aria-label="Publication year overview">
+      <div class="column-time-toolbar"><div><h3>Earlier work → recent research</h3><p>Bar height = matching catalog records, not research quality or performance. Years are equally spaced; gaps are labelled.</p></div><div class="column-time-controls"><button type="button" id="column-all-years">All years</button><button type="button" id="column-years-back" aria-label="Scroll toward earlier years" aria-controls="column-years">←</button><button type="button" id="column-years-next" aria-label="Scroll toward newer years" aria-controls="column-years">→</button><button type="button" id="column-years-latest">Latest year</button></div></div>
+      <nav id="column-years" class="column-years" aria-label="Filter timeline by publication year" tabindex="0"></nav>
+      <p class="column-time-legend"><span>● Accepted</span><span>○ Watchlist</span> · Source reviews counted separately · Scroll sideways or use the arrow buttons</p>
+    </section>
+    <section id="column-year-insights" class="column-year-insights" aria-live="polite" aria-label="Selected year reading guide"></section>
+    <h3 id="column-directory-title" class="column-directory-title">Complete paper &amp; resource directory</h3>
     <div id="column-timeline" class="column-timeline"></div>
-    <p class="column-end">All matching records remain accessible through the page controls and year filters. Pagination changes how much is displayed, not what is included.</p>
+    <p class="column-end">Every matching title is listed above; expand any entry for its full contribution, evidence and sources. Within a year, catalog titles are alphabetical—not ranked by recency or quality.</p>
   </section>
   <footer class="columns-footer"><p>All original repository records are retained. Themes are an editorial reading guide, not evidence of a completed product or clinical capability.</p><a href="index.html">← Back to the illustrated overview</a></footer>
 </main>
