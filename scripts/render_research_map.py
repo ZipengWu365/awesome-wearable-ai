@@ -270,6 +270,11 @@ def main() -> int:
         {route["id"] for route in payload["routes"]},
     )
     template = (ASSETS / "four-theme-map-source.html").read_text(encoding="utf-8")
+    editorial = read_json(ROOT / "website" / "editorial-briefs.json")
+    runpy.run_path(str(ROOT / "website" / "build_pages.py"))["validate_editorial"](editorial, payload)
+    if template.count("__EDITORIAL_DATA__") != 1:
+        raise ValueError("Expected one editorial data placeholder")
+    template = template.replace("__EDITORIAL_DATA__", json.dumps(editorial, ensure_ascii=False).replace("<", "\\u003c"))
     # The reading interface is presentation-only. Keep the original registry,
     # route assignments and selected source reviews unchanged.
     for placeholder, filename in (("__COLUMNS_STYLE__", "columns.css"), ("__COLUMNS_SCRIPT__", "columns.js")):

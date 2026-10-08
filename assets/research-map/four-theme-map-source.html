@@ -83,27 +83,28 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
   <nav id="columns-nav" class="columns-nav" aria-label="Choose a research column"></nav>
   <section id="column-brief" class="column-brief" aria-labelledby="column-title"></section>
   <section class="column-archive" aria-labelledby="column-archive-title">
-    <div class="column-archive-heading"><div><p class="columns-kicker">PAPERS, DATASETS, METHODS &amp; TOOLS</p><h2 id="column-archive-title">Research through time · every record</h2><p>Scan the years horizontally, then read the complete directory below. Select a year to focus; choose All years to see every matching title without pagination.</p></div><a href="#column-title">Back to the trend ↑</a></div>
+    <div class="column-archive-heading"><div><p class="columns-kicker">PAPERS, DATASETS, METHODS &amp; TOOLS</p><h2 id="column-archive-title">Browse every paper and resource by year</h2><p>Choose a year to see its papers below. Choose All years to see every matching title on one page.</p></div><a href="#column-title">Back to the research summary</a></div>
     <form id="column-filters" class="column-filters" role="search" aria-label="Search this column">
       <label class="column-search">Find a paper or topic<input id="column-query" type="search" placeholder="Search title, method, sensor, contribution…"></label>
       <label>Year<select id="column-year"><option value="">All years</option></select></label>
       <label>Content<select id="column-type"><option value="">All content</option><option value="model">Models</option><option value="dataset">Datasets</option><option value="measure">Measures</option><option value="method">Methods</option><option value="intervention">Interventions</option><option value="infrastructure">Tools &amp; standards</option><option value="update">Additional source updates</option></select></label>
-      <label>Catalog status<select id="column-status"><option value="">All statuses</option><option value="accepted">Accepted in repository</option><option value="watchlist">Watchlist candidates</option><option value="update">Additional source updates</option></select></label>
+      <label>Review status<select id="column-status"><option value="">Show all</option><option value="accepted">In the collection</option><option value="watchlist">Awaiting review</option><option value="update">Extra research or product updates</option></select></label>
       <button id="column-reset" type="button">Reset filters</button>
       <label class="column-related"><input id="column-related" type="checkbox" checked> Include related work from the other columns</label>
     </form>
     <p id="column-result-count" class="column-result-count" role="status" aria-live="polite"></p>
+    <section id="column-evolution" class="column-evolution" aria-label="How the research has changed"></section>
     <section class="column-time-overview" aria-label="Publication year overview">
-      <div class="column-time-toolbar"><div><h3>Earlier work → recent research</h3><p>Bar height = matching catalog records, not research quality or performance. Years are equally spaced; gaps are labelled.</p></div><div class="column-time-controls"><button type="button" id="column-all-years">All years</button><button type="button" id="column-years-back" aria-label="Scroll toward earlier years" aria-controls="column-years">←</button><button type="button" id="column-years-next" aria-label="Scroll toward newer years" aria-controls="column-years">→</button><button type="button" id="column-years-latest">Latest year</button></div></div>
+      <div class="column-time-toolbar"><div><h3>Explore the work published each year</h3><p>Choose a year to read its contributions and supporting papers. Research-stage notes above explain the changes; resource counts below describe this collection, not technical progress.</p></div><div class="column-time-controls"><button type="button" id="column-all-years">All years</button><button type="button" id="column-years-back" aria-label="Scroll toward earlier years" aria-controls="column-years">←</button><button type="button" id="column-years-next" aria-label="Scroll toward newer years" aria-controls="column-years">→</button><button type="button" id="column-years-latest">Latest year</button></div></div>
       <nav id="column-years" class="column-years" aria-label="Filter timeline by publication year" tabindex="0"></nav>
-      <p class="column-time-legend"><span>● Accepted</span><span>○ Watchlist</span> · Source reviews counted separately · Scroll sideways or use the arrow buttons</p>
+      <p class="column-time-legend">Year labels follow the repository. Extra updates are counted separately. Each displayed year has equal width, not equal elapsed time. Scroll sideways or use the arrow buttons.</p>
     </section>
     <section id="column-year-insights" class="column-year-insights" aria-live="polite" aria-label="Selected year reading guide"></section>
     <h3 id="column-directory-title" class="column-directory-title">Complete paper &amp; resource directory</h3>
     <div id="column-timeline" class="column-timeline"></div>
-    <p class="column-end">Every matching title is listed above; expand any entry for its full contribution, evidence and sources. Within a year, catalog titles are alphabetical—not ranked by recency or quality.</p>
+    <p class="column-end">Every matching title is listed above. Open an entry to read what the work adds, its results and its sources. Within each year, collected titles are in alphabetical order, not ranked from best to worst.</p>
   </section>
-  <footer class="columns-footer"><p>All original repository records are retained. Themes are an editorial reading guide, not evidence of a completed product or clinical capability.</p><a href="index.html">← Back to the illustrated overview</a></footer>
+  <footer class="columns-footer"><p>All original resources are kept. The four topics help you find related work. Being included here does not mean that a study is peer-reviewed, its results have been independently confirmed, or a product is ready to use.</p><a href="index.html">Back to the home page</a></footer>
 </main>
 <noscript><p style="padding:24px">The interactive timeline needs JavaScript. <a href="https://github.com/ZipengWu365/awesome-wearable-ai">Read the complete repository on GitHub instead.</a></p></noscript>
 <main class="atlas" hidden>
@@ -138,6 +139,7 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
 <footer><div class="key" id="roles-key" aria-label="Evidence legend"><span>Research</span><span>Enabler</span><span>Framework</span><span>Adjacent</span></div><span id="cutoff" class="footer-note"></span></footer>
 </main>
 <script id="research-data" type="application/json">__RESEARCH_DATA__</script>
+<script id="editorial-data" type="application/json">__EDITORIAL_DATA__</script>
 <script>
 (() => {
 'use strict';

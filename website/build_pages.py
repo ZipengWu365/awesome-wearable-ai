@@ -6,10 +6,53 @@ import json
 import hashlib
 from pathlib import Path
 import re
+from datetime import date
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent
 THEMES = {"prediction": "prediction.html", "intervention": "intervention.html", "twin": "digital-twins.html", "interface": "mixed-reality.html"}
+THEME_LABELS = {"prediction": "Predicting health changes", "intervention": "Health actions and their effects", "twin": "Personal health models", "interface": "Wearable devices and mixed reality"}
 NAV = [("index.html", "Home"), ("columns.html", "Research columns"), ("guide.html", "Research guide"), ("evidence.html", "Evidence"), ("library.html", "Library")]
+
+
+def validate_editorial(editorial, payload):
+    """Validate presentation-only briefs against actual repository IDs."""
+    edited = date.fromisoformat(editorial['edited_on'])
+    assert re.fullmatch(r'[0-9a-f]{40}', editorial['repository_commit']), 'Missing source revision'
+    assert editorial['scope'].strip(), 'Missing scope'
+    assert set(editorial['columns']) == set(THEMES), 'Exactly four columns required'
+    known = {r['id'] for r in payload['records']} | {'signal-' + s['id'] for s in payload['radar']['signals']}
+    for brief in editorial['columns'].values():
+        for field in ('headline', 'summary', 'status', 'use', 'takeaway'):
+            assert brief[field].strip(), f'Missing {field}'
+        assert len(set(brief['ids'])) >= 2, 'A trend needs more than one supporting work'
+        assert set(brief['ids']) <= known, 'Unknown trend source'
+        assert len(brief['evolution']) >= 2, 'Research history needs comparisons'
+        prior_end = 0
+        source_years = {r['id']: r['year'] for r in payload['records']}
+        source_years.update({'signal-' + s['id']: int(s['event_date'][:4]) for s in payload['radar']['signals']})
+        for stage in brief['evolution']:
+            assert prior_end < stage['start'] <= stage['end'] <= edited.year, 'Overlapping or invalid research periods'
+            prior_end = stage['end']
+            for field in ('headline', 'change', 'meaning', 'limit'):
+                assert stage[field].strip(), f'Missing history {field}'
+            assert stage['ids'] and set(stage['ids']) <= known, 'Unknown history source'
+            assert all(stage['start'] <= source_years[id] <= stage['end'] for id in stage['ids']), 'History source outside stated period'
+        assert len(brief['dimensions']) == 6
+        assert {d['kind'] for d in brief['dimensions']} == {'Methods','Data','Hardware','Functions','Performance','New directions'}
+        for dimension in brief['dimensions']:
+            assert dimension['text'].strip()
+            assert set(dimension['ids']) <= known, 'Unknown comparison source'
+        assert len(brief['stories']) == 3
+        assert len({s['id'] for s in brief['stories']}) == 3, 'Duplicate featured work'
+        for story in brief['stories']:
+            assert story['id'] in known, 'Unknown featured work'
+            for field in ('name','date','headline','change','result','before','benefit','condition','locator'):
+                assert story[field].strip(), f'Missing study {field}'
+            source = urlsplit(story['source'])
+            assert source.scheme == 'https' and source.netloc and not source.username and not source.password, 'Invalid source link'
+            assert date.fromisoformat(story['checked_on']) <= edited, 'Source check after editorial date'
+    return editorial
 
 
 class Fragments(HTMLParser):
@@ -64,18 +107,13 @@ def version_assets(html):
     return html
 
 
-def theme_cards(payload):
-    takeaways = {
-        "prediction": "New models, biosignals and longer health histories. Compare what they can predict and how they are evaluated.",
-        "intervention": "Causal methods, alternative actions and intervention trials. See what changed outcomes—and what did not.",
-        "twin": "Individual simulations, repeated updates and personalized feedback. Distinguish working components from proposed frameworks.",
-        "interface": "First-person data, muscle-signal input and wearable products. Separate research capabilities from product announcements.",
-    }
+def theme_cards(payload, editorial):
     cards = []
     for r in payload["routes"]:
         accepted = payload["route_counts"]["accepted"][r["id"]]["total"]
         watchlist = payload["route_counts"]["watchlist"][r["id"]]["total"]
-        cards.append(f'<a class="directory-card" href="{THEMES[r["id"]]}" style="--theme:{r["color"]}"><span>COLUMN {r["number"]}</span><h3>{escape(r["label"])}</h3><p>{takeaways[r["id"]]}</p><small>{accepted} accepted · {watchlist} watchlist · related work labelled separately</small><b>Read trends &amp; paper timeline →</b></a>')
+        brief = editorial['columns'][r['id']]
+        cards.append(f'<a class="directory-card" href="{THEMES[r["id"]]}" style="--theme:{r["color"]}"><span>COLUMN {r["number"]}</span><h3>{escape(THEME_LABELS[r["id"]])}</h3><p class="directory-trend">{escape(brief["headline"])}</p><p>{escape(brief["takeaway"])}</p><small>{accepted} resources in the collection. {watchlist} more awaiting review.</small><b>Read this research brief and all papers</b></a>')
     return '<div class="page-directory">' + "".join(cards) + '</div>'
 
 
@@ -85,19 +123,20 @@ def build():
     research = (ROOT / "research-map.html").read_text()
     data_match = re.search(r'<script id="research-data" type="application/json">(.*?)</script>', research, re.S)
     payload = json.loads(data_match.group(1))
+    editorial = validate_editorial(json.loads((ROOT / 'editorial-briefs.json').read_text()), payload)
     head = source[source.index("<head>"):source.index("</head>") + len("</head>")]
     footer = fragments[".site-footer"]
     shelf = fragments["detail-shelf"] + '<div class="shelf-backdrop" hidden></div>'
-    cards = theme_cards(payload)
+    cards = theme_cards(payload, editorial)
     resource_panels = [("lifecycle", "Lifecycle matrix", ".matrix-card"), ("families", "Research families", ".family-browser-card"), ("datasets", "Datasets", ".dataset-table-card"), ("evidence", "Evidence crosswalk", ".evidence-crosswalk-card"), ("watchlist", "Watchlist", ".watchlist-card"), ("downloads", "Downloads", ".resource-hub-card")]
     resource_tabs = '<nav class="page-shortcuts resource-tabs" aria-label="Comparison pages">' + ''.join(f'<a href="compare.html?panel={key}">{label}</a>' for key,label,_ in resource_panels) + '</nav>'
     comparisons = '<section class="comparison-section"><div class="comparison-grid">' + ''.join(fragments[cls].replace('<article ', f'<article data-comparison-panel="{key}" ' + ('' if key=='lifecycle' else 'hidden '), 1) for key,_,cls in resource_panels) + '</div></section>'
-    landing = '<section class="home-directory" aria-labelledby="home-columns"><p class="eyebrow">CHOOSE A RESEARCH COLUMN</p><h2 id="home-columns">Four topics. Clear updates. Every catalog record.</h2><p>Read the direction of research, then browse papers by year. The four columns cover all 396 accepted and 45 watchlist records.</p>' + cards + '</section>'
+    landing = '<section class="home-directory" aria-labelledby="home-columns"><p class="eyebrow">CHOOSE A RESEARCH COLUMN</p><h2 id="home-columns">Explore wearable AI research in four topics</h2><p>Find out what researchers are working on and browse every paper by year. The collection contains 396 resources, with 45 more awaiting review. Resources include papers, datasets and research tools.</p>' + cards + '</section>'
     guide_links = '<nav class="page-shortcuts" aria-label="Research guide pages"><a href="guide.html">Lifecycle &amp; taxonomy</a><a href="story.html">Animated explanation</a><a href="models.html">Sensor &amp; model families</a><a href="history.html">Research through time</a></nav>'
     scene_links = '<nav class="page-shortcuts story-chapters" aria-label="Jump to a story chapter">' + ''.join(f'<a href="#{key}">{label}</a>' for key,label in [('signals','01 Signals'),('representations','02 Learned features'),('lifecycle-story','03 Lifecycle'),('resource-types-story','04 Resource types'),('evidence','05 Evidence'),('review-depth-story','06 Review depth')]) + '</nav>'
     pages = {
         "index.html": ("Wearable AI research & technology updates", fragments["overview"] + landing),
-        "columns.html": ("Four research columns", banner("Four research columns", "Choose your topic. Each column has its own page, a research summary and a searchable paper timeline.") + '<section class="directory-section">' + cards + '<p class="directory-note">Source updates reviewed 4 Oct 2026. Accepted papers, watchlist candidates and product announcements remain clearly separated.</p></section>'),
+        "columns.html": ("Four research columns", banner("Four research columns", "Start with a short research brief: what is changing, which work supports it and why it matters for people building wearable technology. Then explore every paper by year.") + '<section class="directory-section">' + cards + '<p class="directory-note">Briefs edited 8 Oct 2026 using the current repository. Each study shows its own date and source-check date. These briefs summarise collected work, not every paper published this week. Resources include papers, datasets and tools; each has one main topic, without counting related links twice.</p></section>'),
         "guide.html": ("Research guide", banner("How wearable-AI research fits together", "Understand the lifecycle and technical roles before comparing individual studies.") + guide_links + fragments["reading-terms"] + fragments["taxonomy"]),
         "story.html": ("Animated research guide", banner("From body signals to decisions", "An optional visual explanation. Scroll through six scenes, or use the chapter links to go directly to a concept.", "Research guide", "guide.html") + guide_links + scene_links + fragments["story"]),
         "models.html": ("Sensor & model families", banner("Sensor & model families", "Browse the model landscape by signal and research family.", "Research guide", "guide.html") + guide_links + fragments["model-landscape"]),
@@ -145,7 +184,7 @@ def build():
         column = re.sub(r'<header class="columns-header">.*?</header>', header(), column, count=1, flags=re.S)
         column = column.replace('<style>/* Full-page', '<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="navigation.css"><style>/* Full-page')
         column = column.replace('</body>', '<script src="navigation.js"></script></body>')
-        title = next(r['label'] for r in payload['routes'] if r['id'] == theme)
+        title = THEME_LABELS[theme]
         column = re.sub(r'<div class="columns-intro">.*?</div>', '<div class="columns-intro"><p class="columns-kicker"><a href="columns.html">RESEARCH COLUMNS</a> / ' + escape(title.upper()) + '</p><p id="columns-coverage" class="columns-coverage"></p></div>', column, count=1, flags=re.S)
         column = re.sub(r'<title>.*?</title>', '<title>' + escape(title) + ' · Awesome Wearable AI</title>', column, count=1)
         column = column.replace('</head>', f'<link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/{filename}"></head>', 1)

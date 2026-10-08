@@ -36,8 +36,18 @@ socket.addEventListener('open',async()=>{try{
   for(const [theme,file] of Object.entries(themeFiles)){
     await navigate(file);
     assert.equal(await evaluate(`document.querySelectorAll('.column-change').length`),3,'Three concrete change summaries per theme');
+    assert.equal(await evaluate(`document.querySelector('.column-brief h3').textContent`),'What changed in methods, data and devices?','Plain-language section heading');
+    assert.equal(await evaluate(`document.querySelectorAll('.column-dimension').length`),6,'All six reader questions addressed');
+    assert.equal(await evaluate(`document.querySelectorAll('.column-study-comparison').length`),3,'Every featured work has comparison and limits');
+    assert.equal(await evaluate(`document.querySelectorAll('.column-trend-sources a').length>=2`),true,'Trend supported by several works');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.column-study-links a:first-child')].every(a=>a.href.startsWith('https://'))`),true,'Direct primary-source links');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.column-change h4,.column-change p')].every(n=>!/[→↗↓↑]/.test(n.textContent))`),true,'Explain comparisons with words, not arrows');
+    assert.equal(await evaluate(`document.querySelector('#columns-coverage').textContent.includes('awaiting review')`),true,'Explain review status without watchlist jargon');
     assert.equal(await evaluate(`document.querySelector('.column-background').open`),false,'Background must not obscure current changes');
-    assert.equal(await evaluate(`(()=>{const d=JSON.parse(document.querySelector('#research-data').textContent),ids=new Set([...d.records.map(r=>r.id),...d.radar.signals.map(s=>'signal-'+s.id)]);return [...document.querySelectorAll('.column-change a')].every(a=>ids.has(decodeURIComponent(a.hash.slice(1))));})()`),true,'Change summaries link to genuine sources');
+    assert.equal(await evaluate(`document.querySelectorAll('.column-evolution-stage').length>=2`),true,'Research history explains several stages');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.column-evolution-stage')].every(n=>n.querySelector('.column-stage-meaning').textContent.length>50&&n.querySelector('.column-stage-sources a'))`),true,'Every stage explains its contribution and links evidence');
+    assert.equal(await evaluate(`document.querySelectorAll('.column-year-bar').length`),0,'Do not present resource volume as the research trend');
+    assert.equal(await evaluate(`(()=>{const d=JSON.parse(document.querySelector('#research-data').textContent),ids=new Set([...d.records.map(r=>r.id),...d.radar.signals.map(s=>'signal-'+s.id)]);return [...document.querySelectorAll('.column-change a,.column-dimension a,.column-trend-sources a')].filter(a=>a.hash).every(a=>ids.has(decodeURIComponent(a.hash.slice(1))));})()`),true,'Brief links to genuine records');
     const expected=await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route==='${theme}').map(r=>r.id).sort()`);
     await evaluate(`document.querySelector('#column-related').click();true`);
     const collected=await json(`[...document.querySelectorAll('[data-record-id]')].map(n=>n.dataset.recordId)`);
@@ -48,6 +58,7 @@ socket.addEventListener('open',async()=>{try{
     assert.equal(await evaluate(`[...document.querySelectorAll('.column-year-tick')].reduce((sum,n)=>sum+Number(n.dataset.accepted)+Number(n.dataset.watchlist),0)`),expected.length,'Bars count all primary records exactly');
     for(const y of years){
       await evaluate(`document.querySelector('.column-year-tick[data-year="${y}"]').click();true`);
+      assert.equal(await evaluate(`document.querySelector('#column-year-insights').textContent.includes('what this work adds')`),true,'Year selection explains contributions');
       assert.equal(await evaluate(`(()=>{const expected=JSON.parse(document.querySelector('#research-data').textContent).records.filter(r=>r.primary_route==='${theme}'&&r.year===${y}).map(r=>r.id).sort();const actual=[...document.querySelectorAll('[data-record-id]')].map(n=>n.dataset.recordId).sort();return JSON.stringify(actual)===JSON.stringify(expected)})()`),true,'Exact IDs for '+theme+' '+y);
     }
     const year=years.at(-1);
@@ -59,7 +70,11 @@ socket.addEventListener('open',async()=>{try{
     assert.equal(await evaluate(`document.querySelectorAll('[data-record-id]').length`),expected.length);
     await evaluate(`document.querySelector('#column-reset').click();document.querySelector('#column-query').value='no-match-xyz-123';document.querySelector('#column-query').dispatchEvent(new Event('input'));true`);
     assert.equal(await evaluate(`!!document.querySelector('.column-empty')`),true);await evaluate(`document.querySelector('.column-empty button').click();true`);assert.equal(await evaluate(`document.querySelectorAll('.column-pagination').length`),0);
-    for(const width of [1440,390]){await send('browsingContext.setViewport',{context,viewport:{width,height:960},devicePixelRatio:1});await evaluate(`document.querySelector('.column-time-overview').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-timeline-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true);}
+    for(const width of [1440,390]){await send('browsingContext.setViewport',{context,viewport:{width,height:960},devicePixelRatio:1});await evaluate(`document.querySelector('#column-evolution').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-evolution-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true);await evaluate(`document.querySelector('.column-time-overview').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-timeline-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true);}
+    const featuredIds=await json(`[...document.querySelectorAll('[data-featured-id]')].map(n=>n.dataset.featuredId)`);
+    for(const id of featuredIds){await navigate(file+'#'+encodeURIComponent(id));await pause(80);assert.equal(await evaluate(`document.getElementById(${JSON.stringify(id)})?.open`),true,'Featured entry opens: '+id);}
+    await navigate(file);await send('browsingContext.setViewport',{context,viewport:{width:1440,height:960},devicePixelRatio:1});
+    await evaluate(`document.querySelector('#column-dimensions').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(120);await screenshot(theme+'-brief-comparisons');
     console.log('PASS complete horizontal timeline',theme,expected.length,'primary records; every year and title accessible');
   }
   assert.equal(allIds.size,441);
