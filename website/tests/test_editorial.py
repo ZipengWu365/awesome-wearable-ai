@@ -29,6 +29,13 @@ class EditorialBriefTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             validate(changed, payload)
 
+    def test_questions_require_answers_and_evidence_scope(self):
+        for field, value in [('answer',''), ('basis','unclear'), ('ids',[])]:
+            changed = copy.deepcopy(briefs)
+            changed['columns']['prediction']['dimensions'][0][field] = value
+            with self.assertRaises(AssertionError):
+                validate(changed, payload)
+
     def test_future_check_date_fails(self):
         changed = copy.deepcopy(briefs)
         changed['columns']['prediction']['stories'][0]['checked_on'] = '2099-01-01'
@@ -62,6 +69,19 @@ class EditorialBriefTests(unittest.TestCase):
         self.assertEqual(len(payload['records']), 441)
         self.assertEqual(len({r['id'] for r in payload['records']}), 441)
         self.assertEqual(sum(r['catalog_status']=='accepted' for r in payload['records']), 396)
+
+    def test_directory_describes_topics_not_featured_results(self):
+        from html import escape
+        for name in ('index', 'columns'):
+            text = (ROOT / (name + '.html')).read_text()
+            cards = re.findall(r'<a class="directory-card".*?</a>', text, re.S)
+            self.assertEqual(len(cards), 4)
+            for card, brief in zip(cards, briefs['columns'].values()):
+                self.assertIn(escape(brief['description']), card)
+                self.assertNotIn(escape(brief['takeaway']), card)
+                self.assertNotIn('awaiting review', card)
+                self.assertNotIn('<small>', card)
+        self.assertNotIn('id="columns-coverage"', page)
 
     def test_result_conditions_are_not_missing(self):
         for brief in briefs['columns'].values():

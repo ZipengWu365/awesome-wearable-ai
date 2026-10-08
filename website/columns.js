@@ -19,6 +19,15 @@
   const roleNames = {direct: 'Research on this topic', support: 'A method or resource used for this topic', framework: 'A proposed approach', adjacent: 'Research on a related topic'};
   const evidenceNames = {evidence_card: 'A detailed study summary is available', metadata_verified: 'Basic publication details checked', venue_verified: 'Journal or conference details checked'};
   const signalEvidence = {preprint: 'Preprint — not yet peer-reviewed', peer_reviewed: 'Study reviewed by other researchers', vendor_announcement: 'Company announcement'};
+  const changeQuestions = {
+    Methods: 'How are researchers doing it differently?',
+    Data: 'What data are they using?',
+    Hardware: 'Is there a new sensor or device?',
+    Functions: 'What can the system do?',
+    Performance: 'What did the tests actually show?',
+    'New directions': 'What are researchers or developers trying next?'
+  };
+  const changeBasis = {synthesis:'Comparison across cited works',study:'Specific study',review:'Research review',no_update:'No device update shown here',proposal:'Proposed method',dataset:'Earlier dataset',prototype:'Research prototype',product:'Company announcement'};
   const updateSummaries = {
     'soter-2026': 'Predicts future body-signal values and fills missing readings by modelling relationships between signals, different frequency patterns and the timing of measurements.',
     'wearableqa-2026': 'Tests whether an AI can answer questions about months of personal wearable history: 4,084 questions, 200 people and histories up to 500 days.',
@@ -108,10 +117,9 @@
   function renderNavigation() {
     $('columns-nav').replaceChildren();
     for (const route of routes) {
-      const primary = data.records.filter(r => r.primary_route === route.id);
       const a = href('', columnFiles[route.id]); a.style.setProperty('--column', route.color);
       if (theme === route.id) a.setAttribute('aria-current', 'page');
-      a.append(el('span', '', 'COLUMN ' + route.number), el('b', '', route.label), el('small', '', `${primary.filter(r => r.catalog_status === 'accepted').length} collected resources; ${primary.filter(r => r.catalog_status === 'watchlist').length} awaiting review`));
+      a.append(el('span', '', 'COLUMN ' + route.number), el('b', '', route.label));
       $('columns-nav').append(a);
     }
   }
@@ -121,25 +129,28 @@
   }
   function renderBrief() {
     const c = copy[theme], brief = editorial.columns[theme], node = $('column-brief'); node.replaceChildren();
-    node.append(el('p', 'columns-kicker', `${routeOf(theme).number} · ${routeOf(theme).label.toUpperCase()} · RESEARCH BRIEF`));
-    const title = el(pageTheme ? 'h1' : 'h2', '', brief.headline); title.id = 'column-title'; title.tabIndex = -1;
-    node.append(title, el('p', 'column-takeaway', brief.summary));
-    const key = el('div','column-brief-key');key.append(el('strong','','What the results show'),el('p','',brief.takeaway));node.append(key);
+    const title = el(pageTheme ? 'h1' : 'h2', '', routeOf(theme).label); title.id = 'column-title'; title.tabIndex = -1;
+    node.append(title, el('p', 'column-scope', brief.description));
+    node.append(el('p', 'columns-kicker', '1 · RESEARCH DIRECTION ACROSS THE COLLECTED WORK'));
+    node.append(el('p','column-reading-note','This is our summary of the cited work, not the result of one experiment. The specific studies and product announcements appear separately below.'));
+    node.append(el(pageTheme ? 'h2' : 'h3','column-current-title',brief.headline), el('p', 'column-takeaway', brief.summary));
     node.append(el('p','column-practical',brief.use));
-    const evidence = el('div','column-trend-sources');evidence.append(el('span','',brief.status+'. Based on: '));
+    const evidence = el('div','column-trend-sources');evidence.append(el('span','', 'Work behind this summary: '));
     for(const id of brief.ids)evidence.append(linkToEntry(id));node.append(evidence);
-    const shortcuts=el('nav','column-brief-shortcuts');shortcuts.setAttribute('aria-label','Research brief sections');
-    shortcuts.append(href('Browse all papers by year','#column-archive-title','column-jump'),href('Compare six types of change','#column-dimensions'),href('Read the featured studies','#column-featured'));node.append(shortcuts);
-    node.append(el('p','column-edition',`Brief edited ${editorial.edited_on} using the repository’s collected work. Each featured study shows its publication date and how its source was checked.`));
-    const heading=el('h3','','What changed in methods, data and devices?');heading.id='column-dimensions';node.append(heading);
+    const shortcuts=el('nav','column-brief-shortcuts');shortcuts.setAttribute('aria-label','Topic overview sections');
+    shortcuts.append(href('Browse all papers by year','#column-archive-title','column-jump'),href('See what is new','#column-dimensions'),href('Read the specific examples','#column-featured'));node.append(shortcuts);
+    node.append(el('p','column-edition',`Summary updated ${editorial.edited_on}. Study dates and source checks are listed with each example.`));
+    const heading=el('h3','','2 · What is new, and what has been tested?');heading.id='column-dimensions';node.append(heading);
+    node.append(el('p','column-reading-note','Six questions about the work discussed here, not six separate trends. Each answer names its source and says whether it describes several works, one study or a company announcement.'));
     const dimensions=el('div','column-dimensions');
     for(const item of brief.dimensions){
       const cell=el('article','column-dimension');cell.dataset.dimension=item.kind;
-      cell.append(el('h4','',item.kind),el('p','',item.text));
+      cell.append(el('h4','',changeQuestions[item.kind]),el('p','column-dimension-answer',item.answer),el('p','',item.text),el('span','column-dimension-basis',changeBasis[item.basis]));
       const links=el('div','column-dimension-links');for(const id of item.ids)links.append(linkToEntry(id));cell.append(links);dimensions.append(cell);
     }
     node.append(dimensions);
-    const featured=el('h3','','Key studies: what they add and how they were tested');featured.id='column-featured';node.append(featured);
+    const featured=el('h3','','3 · Specific studies and product updates');featured.id='column-featured';node.append(featured);
+    node.append(el('p','column-reading-note','These are individual examples, not results for the whole field. Each card explains what one study or announcement adds; open the comparison for its earlier approach and limits.'));
     const deltas=el('div','column-changes');
     for(const story of brief.stories){
       const card=el('article','column-change');
@@ -410,7 +421,6 @@
   }
   function renderColumn() {
     $('columns-reader').style.setProperty('--column', routeOf(theme).color);
-    if(pageTheme) $('columns-coverage').textContent = `${data.route_counts.accepted[theme].total} resources in the collection. ${data.route_counts.watchlist[theme].total} more awaiting review. Research brief edited ${editorial.edited_on}; individual source dates appear below.`;
     document.title = `${routeOf(theme).label} · Papers & timeline · Awesome Wearable AI`;
     renderNavigation(); renderBrief(); renderEvolution();
     const value = $('column-year').value; $('column-year').replaceChildren();
@@ -459,7 +469,6 @@
   // ID coverage is independent of the selected reading view and cross-links.
   const ids = data.records.map(r => r.id);
   if (new Set(ids).size !== ids.length || ids.length !== data.counts.accepted + data.counts.watchlist || data.records.some(r => !routeOf(r.primary_route))) throw new Error('Incomplete column assignment');
-  $('columns-coverage').textContent = `${data.counts.accepted} resources in the collection. ${data.counts.watchlist} more awaiting review. Each has one main topic; links from other topics do not count it twice. Collection date: ${data.cutoff}. Updates last checked: ${radar.reviewed_on}.`;
   $('column-filters').onsubmit = e => e.preventDefault();
   for (const id of ['column-query','column-year','column-type','column-status','column-related']) $(id).addEventListener(id === 'column-query' ? 'input' : 'change', () => { renderTimeline();syncUrl(); });
   $('column-reset').onclick = () => { resetFields(); syncUrl(); renderTimeline(); };

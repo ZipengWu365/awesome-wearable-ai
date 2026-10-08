@@ -36,13 +36,16 @@ socket.addEventListener('open',async()=>{try{
   for(const [theme,file] of Object.entries(themeFiles)){
     await navigate(file);
     assert.equal(await evaluate(`document.querySelectorAll('.column-change').length`),3,'Three concrete change summaries per theme');
-    assert.equal(await evaluate(`document.querySelector('.column-brief h3').textContent`),'What changed in methods, data and devices?','Plain-language section heading');
+    assert.equal(await evaluate(`document.querySelector('#column-dimensions').textContent`),'2 · What is new, and what has been tested?','Separate questions from the overall direction');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.column-dimension')].every(n=>n.querySelector('h4').textContent.endsWith('?')&&n.querySelector('.column-dimension-answer').textContent&&n.querySelector('.column-dimension-basis').textContent)`),true,'Questions have direct answers and explicit evidence scope');
+    assert.equal(await evaluate(`document.querySelectorAll('.column-brief-key').length`),0,'Do not present a single example as the overall trend');
     assert.equal(await evaluate(`document.querySelectorAll('.column-dimension').length`),6,'All six reader questions addressed');
     assert.equal(await evaluate(`document.querySelectorAll('.column-study-comparison').length`),3,'Every featured work has comparison and limits');
     assert.equal(await evaluate(`document.querySelectorAll('.column-trend-sources a').length>=2`),true,'Trend supported by several works');
     assert.equal(await evaluate(`[...document.querySelectorAll('.column-study-links a:first-child')].every(a=>a.href.startsWith('https://'))`),true,'Direct primary-source links');
     assert.equal(await evaluate(`[...document.querySelectorAll('.column-change h4,.column-change p')].every(n=>!/[→↗↓↑]/.test(n.textContent))`),true,'Explain comparisons with words, not arrows');
-    assert.equal(await evaluate(`document.querySelector('#columns-coverage').textContent.includes('awaiting review')`),true,'Explain review status without watchlist jargon');
+    assert.equal(await evaluate(`document.querySelector('#columns-coverage')===null`),true,'No resource-count line above the column');
+    assert.equal(await evaluate(`document.querySelector('#column-title').textContent===document.querySelector('#columns-nav [aria-current="page"] b').textContent`),true,'Column title describes its scope, not one example');
     assert.equal(await evaluate(`document.querySelector('.column-background').open`),false,'Background must not obscure current changes');
     assert.equal(await evaluate(`document.querySelectorAll('.column-evolution-stage').length>=2`),true,'Research history explains several stages');
     assert.equal(await evaluate(`[...document.querySelectorAll('.column-evolution-stage')].every(n=>n.querySelector('.column-stage-meaning').textContent.length>50&&n.querySelector('.column-stage-sources a'))`),true,'Every stage explains its contribution and links evidence');

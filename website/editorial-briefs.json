@@ -4,6 +4,7 @@
   "scope": "Summaries of the repository’s collected work and existing research updates, not a search of every new paper. Dates on studies are separate from the date this page was edited.",
   "columns": {
     "prediction": {
+      "description": "Models and datasets for using wearable signals to track health, recognise patterns and predict changes.",
       "evolution": [
         {"start":1980,"end":2020,"headline":"Build shared recordings for testing models","change":"Annotated heart-signal datasets give researchers common examples and labels to test against.","meaning":"This supplies the data needed for later learning methods; it is not itself a reusable AI model.","limit":"An early foundation in this collection, not a description of every study before 2021.","ids":["dataset-mitbih-arrhythmia"]},
         {"start":2021,"end":2023,"headline":"Reuse what a model learns across datasets","change":"BENDR learns patterns from unlabelled brain recordings. BIOT extends cross-dataset learning to different body signals.","meaning":"Compared with the data foundation above, the reusable component is now a trained model, not just a set of recordings.","limit":"Transfer to another dataset still needs testing.","ids":["model-bendr-2021","model-biot-2023"]},
@@ -18,12 +19,12 @@
       "takeaway": "A concrete gain: WearableQA reports 51.2% correct answers without Python tools and 71.3% with them, using the same GPT-5.4 model. Tool access and computing work differ.",
       "ids": ["model-sensorfm-2026", "signal-soter-2026", "signal-wearableqa-2026"],
       "dimensions": [
-        {"kind":"Methods","text":"Models are being reused across tasks, rather than trained for just one outcome.","ids":["model-sensorfm-2026","signal-soter-2026"]},
-        {"kind":"Data","text":"WearableQA tests questions about up to 500 days per person; SensorFM uses population-scale training data.","ids":["signal-wearableqa-2026","model-sensorfm-2026"]},
-        {"kind":"Hardware","text":"The highlighted gains concern software and data. They do not establish a new sensor or longer battery life.","ids":[]},
-        {"kind":"Functions","text":"One research model can support several tasks, including prediction and filling gaps in recordings.","ids":["signal-soter-2026"]},
-        {"kind":"Performance","text":"SenFlow reports faster training and up to 51-fold faster inference in its comparisons; this is a speed result, not health accuracy.","ids":["model-senflow-2026"]},
-        {"kind":"New directions","text":"AI is being tested on questions about personal records, not only on recognising short signal patterns.","ids":["signal-wearableqa-2026"]}
+        {"kind":"Methods","answer":"Reuse one trained model for several tasks","basis":"synthesis","text":"SensorFM and SOTER test models on several tasks, instead of building a separate model for each use.","ids":["model-sensorfm-2026","signal-soter-2026"]},
+        {"kind":"Data","answer":"Use longer personal histories and larger training collections","basis":"synthesis","text":"WearableQA includes up to 500 days per person. SensorFM learns from a large collection of people's sensor recordings. These are different datasets.","ids":["signal-wearableqa-2026","model-sensorfm-2026"]},
+        {"kind":"Hardware","answer":"No new device is established by these examples","basis":"no_update","text":"The selected work changes software and data use. It does not demonstrate a new sensor or longer battery life.","ids":[]},
+        {"kind":"Functions","answer":"Predict future readings and fill missing ones","basis":"study","text":"SOTER tests both tasks. Filling a gap in a recording is a different task from predicting a person's disease.","ids":["signal-soter-2026"]},
+        {"kind":"Performance","answer":"One study reports faster computation","basis":"study","text":"SenFlow reports up to 51 times faster model execution in its tests. This is a speed comparison, not a gain in disease-detection accuracy.","ids":["model-senflow-2026"]},
+        {"kind":"New directions","answer":"Answer questions about months of personal data","basis":"study","text":"WearableQA tests whether AI can use a person's long wearable history to answer questions, rather than only label a short signal segment.","ids":["signal-wearableqa-2026"]}
       ],
       "stories": [
         {
@@ -56,6 +57,7 @@
       ]
     },
     "intervention": {
+      "description": "Methods and trials that test which advice, treatments and device actions help, and when to use them.",
       "evolution": [
         {"start":2000,"end":2018,"headline":"Work out how to compare treatment choices","change":"Marginal structural models address changing treatment and patient history. Later repeated-randomisation trial designs test when support helps.","meaning":"The starting question is the effect of an action, not just what a prediction model expects to happen.","limit":"Estimating an effect from existing records requires assumptions; a randomised trial answers a different kind of evidence question.","ids":["method-msm-2000","method-mrt-health-psychology-2015"]},
         {"start":2019,"end":2023,"headline":"Study the timing and sequence of actions","change":"HeartSteps tests walking suggestions at repeated moments. Causal Transformer estimates outcomes under changing treatment sequences.","meaning":"Compared with a single treatment choice, these examples ask when to act and how earlier decisions affect later outcomes.","limit":"A model's estimated treatment response is not the same as benefit demonstrated in a trial.","ids":["method-heartsteps-mrt-2019","method-causal-transformer-2022"]},
@@ -70,12 +72,12 @@
       "takeaway":"The wrist-wearable review finds more consistent benefits for physical activity than for many other health outcomes. The Long COVID messaging trial found no better main result than its comparison group.",
       "ids":["method-jitai-annual-review-2026","intervention-long-covid-pace-me-2026","intervention-wrist-wearables-umbrella-2026"],
       "dimensions":[
-        {"kind":"Methods","text":"Support can be timed using a person’s changing circumstances, rather than sent on one fixed schedule.","ids":["method-jitai-annual-review-2026"]},
-        {"kind":"Data","text":"A review brings together 39 reviews covering 98 studies. It is a summary of existing evidence, not a new sensor dataset.","ids":["intervention-wrist-wearables-umbrella-2026"]},
-        {"kind":"Hardware","text":"These examples use wearable feedback to test actions. They do not demonstrate that a new device alone improves health.","ids":["intervention-long-covid-pace-me-2026"]},
-        {"kind":"Functions","text":"Pace Me sends energy-management messages when a person reaches set activity levels.","ids":["intervention-long-covid-pace-me-2026"]},
-        {"kind":"Performance","text":"Physical-activity effects were more consistent than other outcomes. The Long COVID trial’s main comparison was negative.","ids":["intervention-wrist-wearables-umbrella-2026","intervention-long-covid-pace-me-2026"]},
-        {"kind":"New directions","text":"Choosing a useful moment while limiting burden is a research priority, not a solved product feature.","ids":["method-jitai-annual-review-2026"]}
+        {"kind":"Methods","answer":"Choose when to help based on the person's situation","basis":"review","text":"The review describes support that adapts to changing circumstances, rather than sending the same advice on a fixed schedule.","ids":["method-jitai-annual-review-2026"]},
+        {"kind":"Data","answer":"Combine existing study results, not new sensor recordings","basis":"review","text":"One review brings together 39 reviews covering 98 studies to assess the effects of wrist-wearable feedback.","ids":["intervention-wrist-wearables-umbrella-2026"]},
+        {"kind":"Hardware","answer":"The example tests advice, not a new sensor","basis":"study","text":"Pace Me uses wearable activity tracking to trigger messages. It does not show that changing the device alone improves health.","ids":["intervention-long-covid-pace-me-2026"]},
+        {"kind":"Functions","answer":"Send a message when activity reaches a set level","basis":"study","text":"Pace Me uses this trigger to send advice about managing activity and energy to people with Long COVID.","ids":["intervention-long-covid-pace-me-2026"]},
+        {"kind":"Performance","answer":"More feedback does not always improve health","basis":"synthesis","text":"The review finds more consistent benefits for activity than for other outcomes. Pace Me did not improve its main symptom outcome compared with control.","ids":["intervention-wrist-wearables-umbrella-2026","intervention-long-covid-pace-me-2026"]},
+        {"kind":"New directions","answer":"Help at the right time without too many interruptions","basis":"review","text":"The review identifies timing and burden as problems researchers still need to solve. This is a research goal, not an available product feature.","ids":["method-jitai-annual-review-2026"]}
       ],
       "stories":[
         {
@@ -108,23 +110,24 @@
       ]
     },
     "twin": {
+      "description": "Personal digital twins: computer models updated with a person's health data to study possible changes and care options.",
       "evolution": [
         {"start":2025,"end":2025,"headline":"Test a personal model inside insulin treatment","change":"A trial tests digital-twin-supported experimentation as part of automated insulin delivery.","meaning":"The model is studied within a treatment system, rather than as a stand-alone prediction demo.","limit":"This is a diabetes-specific example. The column has too few primary records for a broad historical trend.","ids":["intervention-aid-digital-twin-coadaptation-2025"]},
         {"start":2026,"end":2026,"headline":"Update personal feedback and propose treatment comparisons","change":"A small type 2 diabetes study retrains models weekly and sends daily feedback. A separate causal-twin paper proposes how to compare possible actions.","meaning":"Compared with the 2025 insulin example, the collection adds a different diabetes-care use and a framework for treatment reasoning.","limit":"The studies concern different systems and populations; this does not establish improvement over the 2025 trial. The causal framework is not a clinical result.","ids":["signal-t2d-predictive-twin-2026","method-causal-digital-twins-2026"]}
       ],
-      "headline":"Personal health models are being tested as parts of diabetes care",
+      "headline":"Personal models are being tested for feedback and treatment decisions",
       "summary":"The concrete examples link a model of one person to repeated feedback or treatment adjustment. The common direction is a model that keeps being used and updated, rather than a one-time prediction. The evidence here remains specific to diabetes.",
       "status":"Our comparison of disease-specific studies and a proposed method",
       "use":"For teams building personal models: specify what the model represents, how often it updates and which decision it supports. Test that decision before calling the system a complete digital twin.",
       "takeaway":"The 2026 study updates models weekly and sends daily feedback, but includes only 19 people. Earlier insulin-delivery work provides a separate trial example; it is not an October 2026 breakthrough.",
       "ids":["signal-t2d-predictive-twin-2026","intervention-aid-digital-twin-coadaptation-2025","method-causal-digital-twins-2026"],
       "dimensions":[
-        {"kind":"Methods","text":"A 2026 diabetes study adds weekly model retraining; causal-twin work proposes comparing alternative actions.","ids":["signal-t2d-predictive-twin-2026","method-causal-digital-twins-2026"]},
-        {"kind":"Data","text":"The newer diabetes analysis includes 19 people. It is a small trial dataset, not a population-scale data release.","ids":["signal-t2d-predictive-twin-2026"]},
-        {"kind":"Hardware","text":"The examples connect models to monitoring or insulin delivery; a new general-purpose body sensor is not established here.","ids":["intervention-aid-digital-twin-coadaptation-2025"]},
-        {"kind":"Functions","text":"Weekly model updates and daily messages add repeated feedback between care visits.","ids":["signal-t2d-predictive-twin-2026"]},
-        {"kind":"Performance","text":"The small 2026 study reports different weight outcomes between groups; glucose stayed stable.","ids":["signal-t2d-predictive-twin-2026"]},
-        {"kind":"New directions","text":"Estimating what a different treatment would change is a proposed next step, not a demonstrated whole-person simulator.","ids":["method-causal-digital-twins-2026"]}
+        {"kind":"Methods","answer":"Update the personal model as new data arrives","basis":"study","text":"The 2026 type 2 diabetes study retrains each person's model weekly, instead of leaving it unchanged after its initial training.","ids":["signal-t2d-predictive-twin-2026"]},
+        {"kind":"Data","answer":"A small study of 19 people","basis":"study","text":"This is the group analysed in the newer diabetes study, not a large new public dataset for general personal-health models.","ids":["signal-t2d-predictive-twin-2026"]},
+        {"kind":"Hardware","answer":"Use a personal model within an insulin-delivery system","basis":"study","text":"The 2025 trial studies model-supported treatment adjustment. It is not evidence of a new general-purpose body sensor.","ids":["intervention-aid-digital-twin-coadaptation-2025"]},
+        {"kind":"Functions","answer":"Give daily feedback between care visits","basis":"study","text":"The 2026 study combines weekly model updates with daily text messages. This is one diabetes-care example, not the full scope of personal models.","ids":["signal-t2d-predictive-twin-2026"]},
+        {"kind":"Performance","answer":"Weight outcomes differed; glucose stayed stable","basis":"study","text":"The small 2026 study reports these outcomes for its two groups. It does not show that all personal-health models improve care.","ids":["signal-t2d-predictive-twin-2026"]},
+        {"kind":"New directions","answer":"Estimate what a different treatment might change","basis":"proposal","text":"The causal-twin paper proposes a framework for comparing choices. It has not demonstrated a working simulator of an entire person.","ids":["method-causal-digital-twins-2026"]}
       ],
       "stories":[
         {
@@ -157,6 +160,7 @@
       ]
     },
     "interface": {
+      "description": "Smart glasses, mixed reality, and brain or muscle signals for controlling devices and interacting with digital content.",
       "evolution": [
         {"start":2008,"end":2018,"headline":"Build datasets for brain and muscle controls","change":"Motor-imagery and hand-movement datasets support testing interfaces driven by brain or muscle recordings. MOABB makes brain-interface comparisons more consistent.","meaning":"These resources make controlled comparisons possible before claiming that an interface works across users.","limit":"A benchmark is not a finished wearable product.","ids":["dataset-bci-competition-iv-2a","dataset-ninapro","infra-moabb"]},
         {"start":2022,"end":2022,"headline":"Include what the wearer sees in daily life","change":"Ego4D provides videos recorded from the wearer's viewpoint during everyday activities.","meaning":"Alongside body-signal controls, researchers can study actions in their visual surroundings.","limit":"This is another research branch, not a replacement for brain or muscle sensing.","ids":["dataset-ego4d"]},
@@ -171,12 +175,12 @@
       "takeaway":"The optical wristband study tested nine people. Meta’s September toolkit update is a company-announced release, not an independent test showing better accuracy or longer battery life.",
       "ids":["model-wearable-optomyography-2026","signal-meta-dat-1-2026"],
       "dimensions":[
-        {"kind":"Methods","text":"Muscle signals are used for ongoing cursor-like control, not just a list of separate gestures.","ids":["model-wearable-optomyography-2026","model-generic-neuromotor-interface-2025"]},
-        {"kind":"Data","text":"Ego-Exo4D remains an earlier resource pairing the wearer’s view with outside views. It is not a new 2026 release.","ids":["dataset-ego-exo4d"]},
-        {"kind":"Hardware","text":"The optical research wristband uses 50 data channels to read muscle activity with light.","ids":["model-wearable-optomyography-2026"]},
-        {"kind":"Functions","text":"Meta’s announced toolkit connects mobile apps to glasses and body inputs; some related tools remain preview or early access.","ids":["signal-meta-dat-1-2026"]},
-        {"kind":"Performance","text":"Nine participants learned optical wristband controls. This is not proof of better retail-device accuracy or battery life.","ids":["model-wearable-optomyography-2026"]},
-        {"kind":"New directions","text":"Glasses and body input offer an app interface for personal software, but do not themselves create a health model.","ids":["signal-meta-dat-1-2026"]}
+        {"kind":"Methods","answer":"Use muscle signals for continuous device control","basis":"synthesis","text":"The interface studies examine controls such as moving a cursor, rather than only recognising a fixed set of separate gestures.","ids":["model-wearable-optomyography-2026","model-generic-neuromotor-interface-2025"]},
+        {"kind":"Data","answer":"An earlier dataset links wearer and outside views","basis":"dataset","text":"Ego-Exo4D records the same activity from different viewpoints. It supports this research but is not a new 2026 dataset.","ids":["dataset-ego-exo4d"]},
+        {"kind":"Hardware","answer":"A research wristband reads muscle movement using light","basis":"prototype","text":"The optical wristband uses 50 recording channels. It is a research prototype, not a confirmed retail-device upgrade.","ids":["model-wearable-optomyography-2026"]},
+        {"kind":"Functions","answer":"Let mobile apps use glasses and body inputs","basis":"product","text":"Meta announced an app-development toolkit. Some related tools are still in preview or early access, so availability must be checked feature by feature.","ids":["signal-meta-dat-1-2026"]},
+        {"kind":"Performance","answer":"Small user tests, not a consumer-device ranking","basis":"prototype","text":"Nine participants learned the optical wristband controls. This does not establish better accuracy or battery life than retail devices.","ids":["model-wearable-optomyography-2026"]},
+        {"kind":"New directions","answer":"Build apps that use glasses and body movements","basis":"product","text":"The announced tools give developers another way to receive user input. They do not by themselves create a personal health model.","ids":["signal-meta-dat-1-2026"]}
       ],
       "stories":[
         {

@@ -10,7 +10,7 @@
 .columns-kicker{font-size:12px;font-weight:700;letter-spacing:.09em;color:#52677d;margin:0 0 12px}
 .columns-intro h1{font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-1.4px;margin:0 0 18px}
 .columns-intro>p:not(.columns-kicker){color:#53677e;margin:12px 0}
-.columns-coverage{font-size:14px}
+.column-brief .column-scope{font-size:18px;line-height:1.7;color:#435d74;padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid #d4e0e8}.column-brief .column-current-title{font-size:clamp(24px,3vw,32px);line-height:1.3;margin:10px 0 16px}
 .columns-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:28px}
 .columns-nav a{display:flex;flex-direction:column;padding:17px 18px;border:1px solid #d5e0e7;border-top:3px solid var(--column);border-radius:10px;background:white;text-decoration:none;color:#263b51;line-height:1.4;transition:background .18s,transform .18s}
 .columns-nav a:hover{transform:translateY(-2px)}
@@ -77,3 +77,4 @@
 @media(max-width:700px){.column-evolution{padding:16px}.column-evolution-stage{flex-basis:min(330px,85%);padding:16px}.column-years .column-year-tick{flex-basis:220px}.column-selected-stage{padding:16px}.column-evolution h3{font-size:23px}}
 .column-stage-nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:18px 0}.column-stage-nav a{display:flex;flex-direction:column;gap:7px;padding:12px;border:1px solid #d4e0e8;border-radius:7px;text-decoration:none;font-size:14px;line-height:1.5;color:#29465d}.column-stage-nav b{color:var(--column);font-size:16px}.column-stage-nav a:hover{background:#edf3f7}.column-evolution-stage:focus-visible{outline:3px solid var(--column);outline-offset:-3px}
 @media(max-width:700px){.column-stage-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.column-stage-nav a{font-size:13px;padding:10px}}
+.column-reading-note{font-size:15px;line-height:1.65;color:#526a7d;max-width:1000px;margin:8px 0 20px}.column-dimension{display:flex;flex-direction:column}.column-dimension h4{font-size:16px;line-height:1.5;font-weight:500}.column-dimension .column-dimension-answer{font-size:18px;line-height:1.45;font-weight:700;color:#203e56;margin:4px 0 12px}.column-dimension-basis{display:block;font-size:12px;line-height:1.5;color:#4c6276;font-weight:600;margin-top:auto;padding-top:8px}.column-dimension-links{margin-top:7px}.column-brief>.columns-kicker{font-size:13px;letter-spacing:.03em}
