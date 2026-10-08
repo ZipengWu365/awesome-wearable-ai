@@ -9,7 +9,7 @@
   const $ = id => document.getElementById(id);
   const records = new Map(data.records.map(r => [r.id, r]));
   // Plain-language display names only; original classifications stay in data.routes.
-  const themeLabels = {prediction:'Predicting health changes',intervention:'Health actions and their effects',twin:'Personal health models',interface:'Wearable devices and mixed reality'};
+  const themeLabels = {prediction:'Health modeling & disease prediction',intervention:'Intervention & counterfactual reasoning',twin:'Personal digital twins & simulation',interface:'Smart wearables & mixed reality'};
   const routes = data.routes.map(r=>({...r,label:themeLabels[r.id]||r.label,short_label:themeLabels[r.id]||r.short_label}));
   const routeOf = id => routes.find(r => r.id === id);
   const signalById = new Map(radar.signals.map(s => [s.id, s]));
@@ -130,7 +130,7 @@
   function renderBrief() {
     const c = copy[theme], brief = editorial.columns[theme], node = $('column-brief'); node.replaceChildren();
     const title = el(pageTheme ? 'h1' : 'h2', '', routeOf(theme).label); title.id = 'column-title'; title.tabIndex = -1;
-    node.append(title, el('p', 'column-scope', brief.description));
+    $('column-heading').replaceChildren(title, el('p', 'column-scope', brief.description));
     node.append(el('p', 'columns-kicker', '1 · RESEARCH DIRECTION ACROSS THE COLLECTED WORK'));
     node.append(el('p','column-reading-note','This is our summary of the cited work, not the result of one experiment. The specific studies and product announcements appear separately below.'));
     node.append(el(pageTheme ? 'h2' : 'h3','column-current-title',brief.headline), el('p', 'column-takeaway', brief.summary));
@@ -138,7 +138,7 @@
     const evidence = el('div','column-trend-sources');evidence.append(el('span','', 'Work behind this summary: '));
     for(const id of brief.ids)evidence.append(linkToEntry(id));node.append(evidence);
     const shortcuts=el('nav','column-brief-shortcuts');shortcuts.setAttribute('aria-label','Topic overview sections');
-    shortcuts.append(href('Browse all papers by year','#column-archive-title','column-jump'),href('See what is new','#column-dimensions'),href('Read the specific examples','#column-featured'));node.append(shortcuts);
+    shortcuts.append(href('Explore the research tree','#column-tree'),href('Browse all papers by year','#column-archive-title','column-jump'),href('See what is new','#column-dimensions'),href('Read the specific examples','#column-featured'));node.append(shortcuts);
     node.append(el('p','column-edition',`Summary updated ${editorial.edited_on}. Study dates and source checks are listed with each example.`));
     const heading=el('h3','','2 · What is new, and what has been tested?');heading.id='column-dimensions';node.append(heading);
     node.append(el('p','column-reading-note','Six questions about the work discussed here, not six separate trends. Each answer names its source and says whether it describes several works, one study or a company announcement.'));
@@ -423,6 +423,7 @@
     $('columns-reader').style.setProperty('--column', routeOf(theme).color);
     document.title = `${routeOf(theme).label} · Papers & timeline · Awesome Wearable AI`;
     renderNavigation(); renderBrief(); renderEvolution();
+    window.renderResearchTree({data, theme, label:routeOf(theme).label, records, signals:signalById, jumpTo});
     const value = $('column-year').value; $('column-year').replaceChildren();
     const all = el('option', '', 'All years'); all.value = ''; $('column-year').append(all);
     for (const year of [...new Set(allTimelineItems().map(i => i.year))].sort((a,b) => b-a)) { const option = el('option', '', String(year)); option.value = String(year); $('column-year').append(option); }

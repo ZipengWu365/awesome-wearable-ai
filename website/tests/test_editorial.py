@@ -70,6 +70,29 @@ class EditorialBriefTests(unittest.TestCase):
         self.assertEqual(len({r['id'] for r in payload['records']}), 441)
         self.assertEqual(sum(r['catalog_status']=='accepted' for r in payload['records']), 396)
 
+    def test_tree_preserves_every_primary_record_and_existing_cross_links(self):
+        primary = []
+        for theme, tree in payload['tree']['columns'].items():
+            nodes = tree['nodes']
+            self.assertEqual(len(nodes), len({n['id'] for n in nodes}))
+            expected = {r['id'] for r in payload['records'] if r['primary_route'] == theme}
+            actual = {n['id'] for n in nodes if not n['related'] and not n['id'].startswith('signal-')}
+            self.assertEqual(actual, expected)
+            primary.extend(actual)
+            related = {n['id'] for n in nodes if n['related']}
+            self.assertEqual(related, {r['id'] for r in payload['records'] if r['primary_route'] != theme and theme in r['secondary_routes']})
+        self.assertEqual(len(primary), 441)
+        self.assertEqual(len(set(primary)), 441)
+
+    def test_tree_family_coverage_and_dates_are_validated(self):
+        config = json.loads((ROOT / 'research-tree-config.json').read_text())
+        build_tree = runpy.run_path(str(ROOT / 'research_tree.py'))['build_tree']
+        self.assertEqual(build_tree(payload, config), payload['tree'])
+        changed = copy.deepcopy(config)
+        changed['columns']['prediction']['branches'][0]['families'] = ''
+        with self.assertRaises(AssertionError):
+            build_tree(payload, changed)
+
     def test_directory_describes_topics_not_featured_results(self):
         from html import escape
         for name in ('index', 'columns'):

@@ -4,7 +4,7 @@
   "scope": "Summaries of the repository’s collected work and existing research updates, not a search of every new paper. Dates on studies are separate from the date this page was edited.",
   "columns": {
     "prediction": {
-      "description": "Models and datasets for using wearable signals to track health, recognise patterns and predict changes.",
+      "description": "From human activity recognition to health modeling: body signals, digital measures and models for monitoring health and predicting disease risk.",
       "evolution": [
         {"start":1980,"end":2020,"headline":"Build shared recordings for testing models","change":"Annotated heart-signal datasets give researchers common examples and labels to test against.","meaning":"This supplies the data needed for later learning methods; it is not itself a reusable AI model.","limit":"An early foundation in this collection, not a description of every study before 2021.","ids":["dataset-mitbih-arrhythmia"]},
         {"start":2021,"end":2023,"headline":"Reuse what a model learns across datasets","change":"BENDR learns patterns from unlabelled brain recordings. BIOT extends cross-dataset learning to different body signals.","meaning":"Compared with the data foundation above, the reusable component is now a trained model, not just a set of recordings.","limit":"Transfer to another dataset still needs testing.","ids":["model-bendr-2021","model-biot-2023"]},
@@ -57,7 +57,7 @@
       ]
     },
     "intervention": {
-      "description": "Methods and trials that test which advice, treatments and device actions help, and when to use them.",
+      "description": "Use wearable data and health records to compare possible actions, design adaptive support and test treatment effects.",
       "evolution": [
         {"start":2000,"end":2018,"headline":"Work out how to compare treatment choices","change":"Marginal structural models address changing treatment and patient history. Later repeated-randomisation trial designs test when support helps.","meaning":"The starting question is the effect of an action, not just what a prediction model expects to happen.","limit":"Estimating an effect from existing records requires assumptions; a randomised trial answers a different kind of evidence question.","ids":["method-msm-2000","method-mrt-health-psychology-2015"]},
         {"start":2019,"end":2023,"headline":"Study the timing and sequence of actions","change":"HeartSteps tests walking suggestions at repeated moments. Causal Transformer estimates outcomes under changing treatment sequences.","meaning":"Compared with a single treatment choice, these examples ask when to act and how earlier decisions affect later outcomes.","limit":"A model's estimated treatment response is not the same as benefit demonstrated in a trial.","ids":["method-heartsteps-mrt-2019","method-causal-transformer-2022"]},
@@ -110,7 +110,7 @@
       ]
     },
     "twin": {
-      "description": "Personal digital twins: computer models updated with a person's health data to study possible changes and care options.",
+      "description": "Models of an individual's changing physiology, updated with personal data to simulate possible trajectories and treatment choices.",
       "evolution": [
         {"start":2025,"end":2025,"headline":"Test a personal model inside insulin treatment","change":"A trial tests digital-twin-supported experimentation as part of automated insulin delivery.","meaning":"The model is studied within a treatment system, rather than as a stand-alone prediction demo.","limit":"This is a diabetes-specific example. The column has too few primary records for a broad historical trend.","ids":["intervention-aid-digital-twin-coadaptation-2025"]},
         {"start":2026,"end":2026,"headline":"Update personal feedback and propose treatment comparisons","change":"A small type 2 diabetes study retrains models weekly and sends daily feedback. A separate causal-twin paper proposes how to compare possible actions.","meaning":"Compared with the 2025 insulin example, the collection adds a different diabetes-care use and a framework for treatment reasoning.","limit":"The studies concern different systems and populations; this does not establish improvement over the 2025 trial. The causal framework is not a clinical result.","ids":["signal-t2d-predictive-twin-2026","method-causal-digital-twins-2026"]}
@@ -160,7 +160,7 @@
       ]
     },
     "interface": {
-      "description": "Smart glasses, mixed reality, and brain or muscle signals for controlling devices and interacting with digital content.",
+      "description": "Wearable sensing, body input and mixed reality as potential ways to display and interact with a personal digital twin.",
       "evolution": [
         {"start":2008,"end":2018,"headline":"Build datasets for brain and muscle controls","change":"Motor-imagery and hand-movement datasets support testing interfaces driven by brain or muscle recordings. MOABB makes brain-interface comparisons more consistent.","meaning":"These resources make controlled comparisons possible before claiming that an interface works across users.","limit":"A benchmark is not a finished wearable product.","ids":["dataset-bci-competition-iv-2a","dataset-ninapro","infra-moabb"]},
         {"start":2022,"end":2022,"headline":"Include what the wearer sees in daily life","change":"Ego4D provides videos recorded from the wearer's viewpoint during everyday activities.","meaning":"Alongside body-signal controls, researchers can study actions in their visual surroundings.","limit":"This is another research branch, not a replacement for brain or muscle sensing.","ids":["dataset-ego4d"]},

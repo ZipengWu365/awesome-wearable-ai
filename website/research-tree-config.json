@@ -1,0 +1,53 @@
+{
+  "periods": [
+    {"start":1,"end":2009,"label":"Through 2009"},
+    {"start":2010,"end":2019,"label":"2010–2019"},
+    {"start":2020,"end":2023,"label":"2020–2023"},
+    {"start":2024,"end":2024,"label":"2024"},
+    {"start":2025,"end":2025,"label":"2025"},
+    {"start":2026,"end":2026,"label":"2026"}
+  ],
+  "columns": {
+    "prediction": {
+      "branches": [
+        {"id":"activity","label":"Activity & mobility","color":"#2776aa","families":"har-benchmarks free-living-human-sensing motion-imu-foundation-models activity-and-population-risk-measures frailty-and-mobility-measures neurological-and-motor-measures","summary":"Recognise activities and measure movement, mobility and behaviour."},
+        {"id":"physiology","label":"Physiological models","color":"#267d73","families":"ecg-cardiac-foundation-models ppg-optical-foundation-models cgm-metabolic-foundation-models eeg-neural-foundation-models sleep-psg-foundation-models respiratory-acoustic-foundation-models multimodal-physiological-models","summary":"Learn from heart, brain, sleep, breathing and metabolic signals."},
+        {"id":"risk","label":"Health measures & risk","color":"#ac6960","families":"aging-and-circadian-measures cardiac-rhythm-measures cardiac-risk-and-aging-measures infection-and-recovery-measures mental-health-and-stress-measures metabolic-and-glucose-measures pregnancy-and-reproductive-measures sleep-and-circadian-measures digital-measure-frameworks","summary":"Measure current health states and investigate future health outcomes."},
+        {"id":"reasoning","label":"Forecasting & health reasoning","color":"#8364aa","families":"general-time-series-enablers sensor-language-agents frontier-frameworks","summary":"Forecast time series and connect personal sensor histories with language."},
+        {"id":"data","label":"Health datasets & cohorts","color":"#9a7a2e","families":"affect-stress-datasets population-scale-cohorts ppg-cardiac-datasets eeg-sleep-datasets metabolic-cgm-datasets multimodal-clinical-waveforms","summary":"Provide recordings, labels and longitudinal cohorts for modelling and evaluation."},
+        {"id":"tools","label":"Tools, validation & safety","color":"#6b7a8f","families":"benchmarking-and-evaluation biosignal-io biosignal-processing commercial-platform-apis data-platforms digital-measure-evaluation ethics-and-governance interoperability missingness-calibration-and-sensor-bias mobile-health-platforms privacy-fairness-and-transportability regulatory-guidance reporting-guidelines sleep-analysis time-series-feature-engineering time-series-tooling wearable-hardware-and-edge wearable-signal-processing","summary":"Collect and process data, evaluate models, and define reporting and safety requirements."}
+      ],
+      "signal_branches":{"soter-2026":"reasoning","wearableqa-2026":"reasoning"},
+      "featured":["dataset-opportunity","dataset-uci-har","dataset-wisdm","model-bendr-2021","model-biot-2023","model-sleepfm-clinical-2026","model-sensorfm-2026"]
+    },
+    "intervention": {
+      "branches": [
+        {"id":"causal","label":"Causal effects & alternative actions","color":"#7163a5","families":"causal-identification-foundations causal-discovery-and-invariance longitudinal-counterfactual-models counterfactual-explanations-and-recourse","summary":"Estimate effects and compare possible treatment histories under explicit assumptions."},
+        {"id":"timing","label":"Adaptive decisions & trial design","color":"#327ca0","families":"adaptive-treatment-and-policy-learning off-policy-evaluation micro-randomized-trial-methods","summary":"Choose actions over time and test when intervention components help."},
+        {"id":"feedback","label":"Behavioural support & outcome trials","color":"#9b7842","families":"ai-coaching-and-adaptive-messaging jitai-behavioral-interventions wearable-feedback-evidence-synthesis wearable-feedback-randomized-trials workplace-behavior-feedback reporting-guidelines","summary":"Test wearable feedback, messaging and coaching against measured outcomes."},
+        {"id":"control","label":"Closed-loop physiological control","color":"#337f77","families":"automated-insulin-delivery closed-loop-and-home-neuromodulation closed-loop-sleep-interventions responsive-neurostimulation","summary":"Adjust treatment or stimulation using detected physiological signals."},
+        {"id":"rehabilitation","label":"Rehabilitation & monitored care","color":"#b77559","families":"adaptive-neurorehabilitation adaptive-rehabilitation-and-exercise digital-rehabilitation-and-pain digital-screening-and-clinical-escalation emg-neuromotor-models remote-monitoring-and-clinical-escalation wearable-robotics-and-assistance","summary":"Support rehabilitation, assistance and escalation of monitored care."}
+      ],
+      "signal_branches":{},
+      "featured":["method-msm-2000","method-causal-counterfactual-prediction-2020","method-heartsteps-mrt-2019","method-causal-transformer-2022","intervention-idea-weight-loss-2016","intervention-intandem-stroke-2024","intervention-mybpmylife-2025","intervention-long-covid-pace-me-2026"]
+    },
+    "twin": {
+      "branches": [
+        {"id":"simulation","label":"Individual physiological simulation","color":"#8261ac","families":"automated-insulin-delivery","summary":"Test a person's simulated treatment responses within a clinical system."},
+        {"id":"framework","label":"Causal twin frameworks","color":"#b18640","families":"longitudinal-counterfactual-models","summary":"Specify how an evolving personal model could compare alternative actions."},
+        {"id":"feedback","label":"Repeated personal feedback","color":"#33877d","families":"","summary":"Connect model updates to repeated personal feedback; check the study's twin definition."}
+      ],
+      "signal_branches":{"t2d-predictive-twin-2026":"feedback"},
+      "featured":["intervention-aid-digital-twin-coadaptation-2025","method-causal-digital-twins-2026"]
+    },
+    "interface": {
+      "branches": [
+        {"id":"context","label":"First-person & spatial sensing","color":"#32849a","families":"egocentric-multimodal-datasets sensor-language-agents","summary":"Connect the wearer's actions with visual and spatial context."},
+        {"id":"body","label":"Brain, muscle & motion input","color":"#8b66ae","families":"eeg-neural-foundation-models eeg-sleep-datasets emg-neuromotor-datasets emg-neuromotor-models motion-imu-foundation-models benchmarking-and-evaluation","summary":"Translate body signals into commands, gestures and continuous control."},
+        {"id":"apps","label":"Wearable apps & assistance","color":"#b07b3d","families":"assistive-wearable-systems","summary":"Use sensing and body input in glasses apps and assistive systems."}
+      ],
+      "signal_branches":{"meta-dat-1-2026":"apps","meta-display-expansion-2026":"apps"},
+      "featured":["dataset-ego4d","dataset-ego-exo4d","dataset-emg2pose","dataset-emg2qwerty","model-generic-neuromotor-interface-2025","model-wearable-optomyography-2026"]
+    }
+  }
+}

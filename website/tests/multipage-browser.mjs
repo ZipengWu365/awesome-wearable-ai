@@ -35,6 +35,25 @@ socket.addEventListener('open',async()=>{try{
   const allIds=new Set(),themeFiles={prediction:'prediction.html',intervention:'intervention.html',twin:'digital-twins.html',interface:'mixed-reality.html'};
   for(const [theme,file] of Object.entries(themeFiles)){
     await navigate(file);
+    const primaryTree=await json(`[...document.querySelectorAll('.tree-leaf')].filter(n=>n.dataset.related==='false'&&!n.dataset.treeId.startsWith('signal-')).map(n=>n.dataset.treeId).sort()`);
+    const primaryRegistry=await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route==='${theme}').map(r=>r.id).sort()`);
+    assert.deepEqual(primaryTree,primaryRegistry,'Tree preserves every primary entry in '+theme);
+    await evaluate(`document.querySelector('.tree-toolbar button').click();true`);await pause(150);
+    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf')].every(n=>n.getClientRects().length>0)`),true,'Show every leaf reveals all names');
+    await evaluate(`document.querySelector('.tree-leaf').click();true`);
+    assert.equal(await evaluate(`document.querySelector('.tree-dialog').open`),true,'Leaf opens an immediate article summary');
+    assert.equal(await evaluate(`document.querySelector('.tree-dialog h2').textContent.length>0`),true,'Popup names the actual work');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-dialog a')].every(a=>!a.href.includes('/pdf/')&&!/\.pdf([?#]|$)/i.test(a.href))`),true,'Article links use landing pages');
+    await evaluate(`document.querySelector('.tree-dialog-close').click();document.querySelector('.tree-toolbar button').click();true`);
+    await evaluate(`document.querySelector('.tree-related input').click();true`);await pause(120);
+    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf')].filter(n=>n.dataset.related==='true').length===JSON.parse(document.querySelector('#research-data').textContent).records.filter(r=>r.primary_route!=='${theme}'&&r.secondary_routes.includes('${theme}')).length`),true,'Related tree entries follow repository cross-links');
+    await evaluate(`document.querySelector('.tree-related input').click();true`);
+    const branch=await evaluate(`document.querySelector('.tree-toolbar select option:nth-child(2)').value`);
+    await evaluate(`document.querySelector('.tree-toolbar select').value=${JSON.stringify(branch)};document.querySelector('.tree-toolbar select').dispatchEvent(new Event('change'));true`);
+    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-branch-box')].every(n=>n.dataset.branch===${JSON.stringify(branch)})`),true,'Branch filter matches the tree');
+    await evaluate(`document.querySelector('.tree-toolbar select').value='';document.querySelector('.tree-toolbar select').dispatchEvent(new Event('change'));true`);
+    for(const width of [1440,390]){await send('browsingContext.setViewport',{context,viewport:{width,height:960},devicePixelRatio:1});await evaluate(`document.querySelector('#column-tree').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-tree-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true,'Tree remains within the page');}
+    assert.equal(await evaluate(`(()=>{const boxes=[...document.querySelectorAll('.tree-branch-box')];return boxes.every(box=>[...box.querySelectorAll('.tree-leaf')].filter(n=>n.getClientRects().length).every(n=>{const a=n.getBoundingClientRect(),b=box.getBoundingClientRect();return a.left>=b.left&&a.right<=b.right+1;}));})()`),true,'Leaf text stays inside its branch box');
     assert.equal(await evaluate(`document.querySelectorAll('.column-change').length`),3,'Three concrete change summaries per theme');
     assert.equal(await evaluate(`document.querySelector('#column-dimensions').textContent`),'2 · What is new, and what has been tested?','Separate questions from the overall direction');
     assert.equal(await evaluate(`[...document.querySelectorAll('.column-dimension')].every(n=>n.querySelector('h4').textContent.endsWith('?')&&n.querySelector('.column-dimension-answer').textContent&&n.querySelector('.column-dimension-basis').textContent)`),true,'Questions have direct answers and explicit evidence scope');

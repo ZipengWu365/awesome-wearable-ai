@@ -11,7 +11,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent
 THEMES = {"prediction": "prediction.html", "intervention": "intervention.html", "twin": "digital-twins.html", "interface": "mixed-reality.html"}
-THEME_LABELS = {"prediction": "Predicting health changes", "intervention": "Health actions and their effects", "twin": "Personal health models", "interface": "Wearable devices and mixed reality"}
+THEME_LABELS = {"prediction": "Health modeling & disease prediction", "intervention": "Intervention & counterfactual reasoning", "twin": "Personal digital twins & simulation", "interface": "Smart wearables & mixed reality"}
 NAV = [("index.html", "Home"), ("columns.html", "Research columns"), ("guide.html", "Research guide"), ("evidence.html", "Evidence"), ("library.html", "Library")]
 
 
@@ -132,11 +132,11 @@ def build():
     resource_panels = [("lifecycle", "Lifecycle matrix", ".matrix-card"), ("families", "Research families", ".family-browser-card"), ("datasets", "Datasets", ".dataset-table-card"), ("evidence", "Evidence crosswalk", ".evidence-crosswalk-card"), ("watchlist", "Watchlist", ".watchlist-card"), ("downloads", "Downloads", ".resource-hub-card")]
     resource_tabs = '<nav class="page-shortcuts resource-tabs" aria-label="Comparison pages">' + ''.join(f'<a href="compare.html?panel={key}">{label}</a>' for key,label,_ in resource_panels) + '</nav>'
     comparisons = '<section class="comparison-section"><div class="comparison-grid">' + ''.join(fragments[cls].replace('<article ', f'<article data-comparison-panel="{key}" ' + ('' if key=='lifecycle' else 'hidden '), 1) for key,_,cls in resource_panels) + '</div></section>'
-    landing = '<section class="home-directory" aria-labelledby="home-columns"><p class="eyebrow">CHOOSE A RESEARCH COLUMN</p><h2 id="home-columns">Four areas of wearable AI research</h2><p>Choose a topic to explore its research, tools and recent developments.</p>' + cards + '</section>'
+    landing = '<section class="home-directory" aria-labelledby="home-columns"><p class="eyebrow">CHOOSE A RESEARCH COLUMN</p><h2 id="home-columns">Four areas of wearable AI research</h2><p>Start with a research tree, then read the trends and complete literature for that area.</p>' + cards + '</section>'
     guide_links = '<nav class="page-shortcuts" aria-label="Research guide pages"><a href="guide.html">Lifecycle &amp; taxonomy</a><a href="story.html">Animated explanation</a><a href="models.html">Sensor &amp; model families</a><a href="history.html">Research through time</a></nav>'
     scene_links = '<nav class="page-shortcuts story-chapters" aria-label="Jump to a story chapter">' + ''.join(f'<a href="#{key}">{label}</a>' for key,label in [('signals','01 Signals'),('representations','02 Learned features'),('lifecycle-story','03 Lifecycle'),('resource-types-story','04 Resource types'),('evidence','05 Evidence'),('review-depth-story','06 Review depth')]) + '</nav>'
     pages = {
-        "index.html": ("Wearable AI research & technology updates", fragments["overview"] + landing),
+        "index.html": ("Wearable AI research evolution", fragments["overview"] + landing + fragments['research-path']),
         "columns.html": ("Four research columns", banner("Four research columns", "Choose a topic to read its research direction, specific studies and complete paper timeline.") + '<section class="directory-section">' + cards + '</section>'),
         "guide.html": ("Research guide", banner("How wearable-AI research fits together", "Understand the lifecycle and technical roles before comparing individual studies.") + guide_links + fragments["reading-terms"] + fragments["taxonomy"]),
         "story.html": ("Animated research guide", banner("From body signals to decisions", "An optional visual explanation. Scroll through six scenes, or use the chapter links to go directly to a concept.", "Research guide", "guide.html") + guide_links + scene_links + fragments["story"]),

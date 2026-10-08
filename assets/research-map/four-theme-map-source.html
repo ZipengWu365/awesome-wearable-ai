@@ -81,6 +81,8 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:10px;fo
   <header class="columns-header"><a href="index.html" class="columns-brand">Awesome Wearable AI</a><nav aria-label="Research navigation"><a href="index.html">Home</a><a href="research-map.html?view=map">Visual map</a><a href="https://github.com/ZipengWu365/awesome-wearable-ai" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></header>
   <div class="columns-intro"><p class="columns-kicker">FOUR RESEARCH COLUMNS</p><h1>What changed in wearable AI?</h1><p>Choose a column. Read the research direction, compare contributions, then follow every related paper and resource through time.</p></div>
   <nav id="columns-nav" class="columns-nav" aria-label="Choose a research column"></nav>
+  <section id="column-heading" class="column-heading" aria-labelledby="column-title"></section>
+  <section id="column-tree" class="research-tree" aria-labelledby="tree-title"></section>
   <section id="column-brief" class="column-brief" aria-labelledby="column-title"></section>
   <section class="column-archive" aria-labelledby="column-archive-title">
     <div class="column-archive-heading"><div><p class="columns-kicker">PAPERS, DATASETS, METHODS &amp; TOOLS</p><h2 id="column-archive-title">Browse every paper and resource by year</h2><p>Choose a year to see its papers below. Choose All years to see every matching title on one page.</p></div><a href="#column-title">Back to the research summary</a></div>
@@ -217,6 +219,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)close
 const initialHash=decodeURIComponent(location.hash.slice(1)),initial=byId.get(initialHash),initialSignal=signalById.get(initialHash.replace(/^signal-/,'')),initialAssessment=radar.assessments.find(a=>`assessment-${a.route}`===initialHash);setView(initial?'map':initialSignal||initialAssessment?'radar':new URLSearchParams(location.search).get('view')==='map'?'map':'radar');if(initial){selection={route:initial.primary_route,bin:initial.bin};showDetail(initial);}else if(initialSignal)showSignal(initialSignal);else if(initialAssessment)showAssessment(initialAssessment);
 })();
 </script>
+<script>__TREE_SCRIPT__</script>
 <script>__COLUMNS_SCRIPT__</script>
 </body>
 </html>
