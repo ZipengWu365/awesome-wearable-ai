@@ -42,3 +42,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+      - name: Check public pages and assets over HTTPS
+        timeout-minutes: 6
+        run: python3 scripts/check_website_availability.py --base-url https://zipengwu.me/awesome-wearable-ai/
