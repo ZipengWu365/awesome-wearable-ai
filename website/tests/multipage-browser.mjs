@@ -35,11 +35,18 @@ socket.addEventListener('open',async()=>{try{
   const allIds=new Set(),themeFiles={prediction:'prediction.html',intervention:'intervention.html',twin:'digital-twins.html',interface:'mixed-reality.html'};
   for(const [theme,file] of Object.entries(themeFiles)){
     await navigate(file);
+    assert.equal(await evaluate(`document.querySelector('#column-tree').dataset.treeDesign`),'chronological-branches','Shared reference-style tree layout');
+    assert.equal(await evaluate(`document.querySelectorAll('.tree-palette-item').length`),6,'Consistent six resource-type colours');
+    await evaluate(`document.fonts.load('18px "Research Hand"').then(()=>true)`);
+    assert.equal(await evaluate(`document.fonts.check('18px "Research Hand"')`),true,'The diagram uses its local readable handwriting font');
+    assert.equal(await evaluate(`document.querySelectorAll('.tree-lane-label').length`),2,'Upper and lower research roles are labelled');
     const primaryTree=await json(`[...document.querySelectorAll('.tree-leaf')].filter(n=>n.dataset.related==='false'&&!n.dataset.treeId.startsWith('signal-')).map(n=>n.dataset.treeId).sort()`);
     const primaryRegistry=await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route==='${theme}').map(r=>r.id).sort()`);
     assert.deepEqual(primaryTree,primaryRegistry,'Tree preserves every primary entry in '+theme);
     await evaluate(`document.querySelector('.tree-toolbar button').click();true`);await pause(150);
     assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf')].every(n=>n.getClientRects().length>0)`),true,'Show every leaf reveals all names');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf')].every(n=>n.querySelector('.tree-leaf-name').textContent===n.dataset.fullTitle)`),true,'Expanded tree shows original complete titles, not clipped display labels');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-branch-box')].every(box=>{const years=[...box.querySelectorAll('.tree-leaf')].map(n=>Number(n.dataset.year));return years.every((year,i)=>i===0||year>=years[i-1]);})`),true,'Complete tree follows chronological order within each group');
     await evaluate(`document.querySelector('.tree-leaf').click();true`);
     assert.equal(await evaluate(`document.querySelector('.tree-dialog').open`),true,'Leaf opens an immediate article summary');
     assert.equal(await evaluate(`document.querySelector('.tree-dialog h2').textContent.length>0`),true,'Popup names the actual work');

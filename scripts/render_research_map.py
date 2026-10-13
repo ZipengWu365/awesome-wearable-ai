@@ -278,7 +278,7 @@ def main() -> int:
     template = template.replace("__EDITORIAL_DATA__", json.dumps(editorial, ensure_ascii=False).replace("<", "\\u003c"))
     # The reading interface is presentation-only. Keep the original registry,
     # route assignments and selected source reviews unchanged.
-    for placeholder, filename in (("__COLUMNS_STYLE__", "columns.css"), ("__COLUMNS_SCRIPT__", "columns.js"), ("__TREE_SCRIPT__", "research-tree.js")):
+    for placeholder, filename in (("__COLUMNS_STYLE__", "columns.css"), ("__TREE_STYLE__", "research-tree.css"), ("__COLUMNS_SCRIPT__", "columns.js"), ("__TREE_SCRIPT__", "research-tree.js")):
         if template.count(placeholder) != 1:
             raise ValueError(f"Expected exactly one {placeholder}")
         template = template.replace(placeholder, (ROOT / "website" / filename).read_text(encoding="utf-8"))

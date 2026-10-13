@@ -5,7 +5,10 @@ import copy
 def build_tree(payload, config):
     periods = config['periods']
     assert all(a['end'] < b['start'] for a, b in zip(periods, periods[1:]))
-    result = {'periods': copy.deepcopy(periods), 'columns': {}}
+    known_ids = {r['id'] for r in payload['records']}
+    labels = config.get('display_labels', {})
+    assert set(labels) <= known_ids, 'Display label refers to an unknown resource'
+    result = {'periods': copy.deepcopy(periods), 'columns': {}, 'display_labels':copy.deepcopy(labels)}
     for theme, settings in config['columns'].items():
         branches = copy.deepcopy(settings['branches'])
         families = {}
@@ -40,5 +43,6 @@ def build_tree(payload, config):
         assert len(nodes) == len({n['id'] for n in nodes})
         expected = {r['id'] for r in payload['records'] if r['primary_route'] == theme}
         assert {n['id'] for n in nodes if not n['related'] and not n['id'].startswith('signal-')} == expected
-        result['columns'][theme] = {'branches':branches, 'nodes':nodes}
+        assert set(settings['lanes']) == {'top', 'bottom'}
+        result['columns'][theme] = {'branches':branches, 'nodes':nodes, 'lanes':copy.deepcopy(settings['lanes'])}
     return result

@@ -1,14 +1,13 @@
 {
   "periods": [
-    {"start":1,"end":2009,"label":"Through 2009"},
-    {"start":2010,"end":2019,"label":"2010–2019"},
+    {"start":1,"end":2019,"label":"Through 2019"},
     {"start":2020,"end":2023,"label":"2020–2023"},
-    {"start":2024,"end":2024,"label":"2024"},
-    {"start":2025,"end":2025,"label":"2025"},
+    {"start":2024,"end":2025,"label":"2024–2025"},
     {"start":2026,"end":2026,"label":"2026"}
   ],
   "columns": {
     "prediction": {
+      "lanes":{"top":"Activity recognition & health models","bottom":"Health data, measures & validation"},
       "branches": [
         {"id":"activity","label":"Activity & mobility","color":"#2776aa","families":"har-benchmarks free-living-human-sensing motion-imu-foundation-models activity-and-population-risk-measures frailty-and-mobility-measures neurological-and-motor-measures","summary":"Recognise activities and measure movement, mobility and behaviour."},
         {"id":"physiology","label":"Physiological models","color":"#267d73","families":"ecg-cardiac-foundation-models ppg-optical-foundation-models cgm-metabolic-foundation-models eeg-neural-foundation-models sleep-psg-foundation-models respiratory-acoustic-foundation-models multimodal-physiological-models","summary":"Learn from heart, brain, sleep, breathing and metabolic signals."},
@@ -21,6 +20,7 @@
       "featured":["dataset-opportunity","dataset-uci-har","dataset-wisdm","model-bendr-2021","model-biot-2023","model-sleepfm-clinical-2026","model-sensorfm-2026"]
     },
     "intervention": {
+      "lanes":{"top":"Causal methods & adaptive decisions","bottom":"Intervention trials & care systems"},
       "branches": [
         {"id":"causal","label":"Causal effects & alternative actions","color":"#7163a5","families":"causal-identification-foundations causal-discovery-and-invariance longitudinal-counterfactual-models counterfactual-explanations-and-recourse","summary":"Estimate effects and compare possible treatment histories under explicit assumptions."},
         {"id":"timing","label":"Adaptive decisions & trial design","color":"#327ca0","families":"adaptive-treatment-and-policy-learning off-policy-evaluation micro-randomized-trial-methods","summary":"Choose actions over time and test when intervention components help."},
@@ -32,6 +32,7 @@
       "featured":["method-msm-2000","method-causal-counterfactual-prediction-2020","method-heartsteps-mrt-2019","method-causal-transformer-2022","intervention-idea-weight-loss-2016","intervention-intandem-stroke-2024","intervention-mybpmylife-2025","intervention-long-covid-pace-me-2026"]
     },
     "twin": {
+      "lanes":{"top":"Individual simulation & personal feedback","bottom":"Causal frameworks & related methods"},
       "branches": [
         {"id":"simulation","label":"Individual physiological simulation","color":"#8261ac","families":"automated-insulin-delivery","summary":"Test a person's simulated treatment responses within a clinical system."},
         {"id":"framework","label":"Causal twin frameworks","color":"#b18640","families":"longitudinal-counterfactual-models","summary":"Specify how an evolving personal model could compare alternative actions."},
@@ -41,6 +42,7 @@
       "featured":["intervention-aid-digital-twin-coadaptation-2025","method-causal-digital-twins-2026"]
     },
     "interface": {
+      "lanes":{"top":"Body input & wearable interaction","bottom":"First-person data & enabling resources"},
       "branches": [
         {"id":"context","label":"First-person & spatial sensing","color":"#32849a","families":"egocentric-multimodal-datasets sensor-language-agents","summary":"Connect the wearer's actions with visual and spatial context."},
         {"id":"body","label":"Brain, muscle & motion input","color":"#8b66ae","families":"eeg-neural-foundation-models eeg-sleep-datasets emg-neuromotor-datasets emg-neuromotor-models motion-imu-foundation-models benchmarking-and-evaluation","summary":"Translate body signals into commands, gestures and continuous control."},
@@ -49,5 +51,21 @@
       "signal_branches":{"meta-dat-1-2026":"apps","meta-display-expansion-2026":"apps"},
       "featured":["dataset-ego4d","dataset-ego-exo4d","dataset-emg2pose","dataset-emg2qwerty","model-generic-neuromotor-interface-2025","model-wearable-optomyography-2026"]
     }
+  },
+  "display_labels": {
+    "dataset-uci-har":"UCI HAR",
+    "dataset-opportunity":"OPPORTUNITY",
+    "dataset-wisdm":"WISDM",
+    "intervention-aid-digital-twin-coadaptation-2025":"Digital-twin AID trial",
+    "method-causal-digital-twins-2026":"Causal digital twins",
+    "model-generic-neuromotor-interface-2025":"Neuromotor interface",
+    "method-msm-2000":"Marginal structural models",
+    "method-causal-counterfactual-prediction-2020":"Actionable healthcare",
+    "method-heartsteps-mrt-2019":"HeartSteps trial",
+    "method-causal-transformer-2022":"Causal Transformer",
+    "intervention-idea-weight-loss-2016":"IDEA trial",
+    "intervention-intandem-stroke-2024":"InTandem",
+    "intervention-mybpmylife-2025":"myBPmyLife",
+    "intervention-long-covid-pace-me-2026":"Pace Me trial"
   }
 }

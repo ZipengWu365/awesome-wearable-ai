@@ -93,6 +93,28 @@ class EditorialBriefTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             build_tree(payload, changed)
 
+    def test_reference_tree_style_is_shared_across_all_columns(self):
+        css = (ROOT / 'research-tree.css').read_text()
+        self.assertTrue((ROOT / 'assets/fonts/Kalam-Regular.ttf').exists())
+        self.assertIn('SIL OPEN FONT LICENSE', (ROOT / 'assets/fonts/Kalam-OFL.txt').read_text())
+        for name in ('prediction', 'intervention', 'digital-twins', 'mixed-reality'):
+            html = (ROOT / (name + '.html')).read_text()
+            self.assertIn(css, html)
+            self.assertIn('assets/fonts/Kalam-Regular.ttf', html)
+            self.assertIn("root.dataset.treeDesign='chronological-branches'", html)
+            self.assertIn('tree-time-wash', html)
+
+    def test_short_labels_and_two_lanes_keep_original_record_ids(self):
+        ids = {r['id'] for r in payload['records']}
+        self.assertLessEqual(set(payload['tree']['display_labels']), ids)
+        for column in payload['tree']['columns'].values():
+            self.assertEqual(set(column['lanes']), {'top', 'bottom'})
+            self.assertTrue(all(column['lanes'].values()))
+        config = json.loads((ROOT / 'research-tree-config.json').read_text())
+        config['display_labels']['invented-paper'] = 'Invented result'
+        with self.assertRaises(AssertionError):
+            runpy.run_path(str(ROOT / 'research_tree.py'))['build_tree'](payload, config)
+
     def test_directory_describes_topics_not_featured_results(self):
         from html import escape
         for name in ('index', 'columns'):
