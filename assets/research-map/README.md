@@ -77,6 +77,14 @@ These links are design references, not evidence that all of them use the same ch
 
 ## Rebuild and preview
 
+### Search discovery
+
+The public origin is [zipengwu.me/awesome-wearable-ai](https://zipengwu.me/awesome-wearable-ai/); the previous `github.io` address redirects there. `website/seo.py` owns canonical URLs, per-page metadata, social previews, descriptive structured data and the generated [sitemap](https://zipengwu.me/awesome-wearable-ai/sitemap.xml). Never point canonical tags or sitemap entries back to the redirecting origin. Keep metadata in the builders, not only in generated HTML.
+
+The [text source directory](https://zipengwu.me/awesome-wearable-ai/sources.html) makes all accepted and watchlist records readable without JavaScript. It preserves evidence boundaries, source-link warnings and the dated intelligence snapshot; it does not claim an October literature refresh. Existing interactive pages and their design remain intact.
+
+This is a project site under a shared host. Only the origin-root `https://zipengwu.me/robots.txt` controls crawling; a project-local robots file would not. Submit this project's sitemap in the existing verified Search Console property instead of changing rules for unrelated projects. Sitemap submission and canonical metadata help discovery but do not guarantee indexing, rankings or a particular Google result appearance. See Google's [JavaScript SEO](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics), [canonical URL](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) and [sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap) guidance.
+
 Run `python scripts/render_research_map.py` with the repository virtual environment activated to rebuild the standalone workspace, four-theme classification and coverage ledger. The classifier uses reviewed family rules and explicit contribution-based ID overrides, never keywords in generic limitations. Unreviewed families fail the build. Run `make audit` to check registry integrity, radar validation, exact map coverage and the reproducible release report. The self-contained workspace is generated identically into `site/research-map.html` and `website/research-map.html`; the latter is published by the existing Pages deployment. The designer's main presentation is retained, with an Intelligence navigation link and a research-section entry to the new workspace.
 
 Repository-created materials use the [repository license](../../LICENSE). Linked papers, images and other third-party resources retain their own rights and access conditions.

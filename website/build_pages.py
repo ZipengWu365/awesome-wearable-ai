@@ -6,13 +6,30 @@ import json
 import hashlib
 from pathlib import Path
 import re
+import runpy
 from datetime import date
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent
 THEMES = {"prediction": "prediction.html", "intervention": "intervention.html", "twin": "digital-twins.html", "interface": "mixed-reality.html"}
 THEME_LABELS = {"prediction": "Health modeling & disease prediction", "intervention": "Intervention & counterfactual reasoning", "twin": "Personal digital twins & simulation", "interface": "Smart wearables & mixed reality"}
-NAV = [("index.html", "Home"), ("columns.html", "Research columns"), ("guide.html", "Research guide"), ("evidence.html", "Evidence"), ("library.html", "Library")]
+NAV = [("index.html", "Home"), ("columns.html", "Research columns"), ("guide.html", "Research guide"), ("evidence.html", "Evidence"), ("library.html", "Library"), ("sources.html", "Text sources")]
+DESCRIPTIONS = {
+    "index.html": "Explore wearable AI research on health prediction, causal intervention, personal digital twins and smart-glasses interfaces, with papers and evidence boundaries.",
+    "columns.html": "Compare four wearable AI research themes: disease prediction, intervention and counterfactual reasoning, personal digital twins, and mixed-reality interfaces.",
+    "guide.html": "Understand wearable AI research methods, sensing modalities, evidence types and the route from health-state prediction to intervention and personal simulation.",
+    "story.html": "Follow an illustrated guide from wearable body signals and learned representations to study evidence, health decisions and research resources.",
+    "models.html": "Explore wearable AI sensor and model families, including ECG, PPG, EEG, EMG, motion sensing and physiological foundation models.",
+    "history.html": "Trace wearable AI research through publication years, datasets, model families and study milestones, with explicit limits on chronological interpretation.",
+    "evidence.html": "Compare wearable AI study designs, claim types and evidence depth. Distinguish predictive results, causal effects, clinical outcomes and deployment claims.",
+    "library.html": "Search 396 accepted wearable AI papers and resources by signal, year and research type, with links to all 45 watchlist candidates and the static source directory.",
+    "compare.html": "Compare wearable AI datasets, models, research families and evidence. Inspect watchlist status, provenance and limitations without treating counts as rankings.",
+    "prediction.html": "Read wearable AI papers on health modeling and disease prediction, from activity recognition and digital biomarkers to physiological foundation models.",
+    "intervention.html": "Explore wearable AI intervention studies, adaptive policies and counterfactual reasoning, with causal assumptions, clinical trial evidence and limitations.",
+    "digital-twins.html": "Study personal digital twins and physiological simulation, including diabetes models, individual adaptation and the limits of predictive and causal twin claims.",
+    "mixed-reality.html": "Track smart glasses, egocentric sensing, neural interfaces and mixed-reality interaction as potential entry points to personal digital twins.",
+    "research-map.html": "Compare wearable AI research across four chronological themes, inspect source-linked technology changes and browse all 441 accepted and watchlist resources.",
+}
 
 
 def validate_editorial(editorial, payload):
@@ -119,6 +136,8 @@ def theme_cards(payload, editorial):
 
 
 def build():
+    seo = runpy.run_path(str(ROOT / 'seo.py'))
+    page_head = seo['page_head']
     source = (ROOT / "templates/editorial.html").read_text()
     fragments = Fragments(source).parts
     research = (ROOT / "research-map.html").read_text()
@@ -167,16 +186,12 @@ def build():
         return text.replace('href="research-map.html"', 'href="columns.html"')
 
     for filename, (title, content) in pages.items():
-        page_head = re.sub(r'<title>.*?</title>', '<title>' + escape(title) + ' · Awesome Wearable AI</title>', head)
-        url = 'https://zipengwu365.github.io/awesome-wearable-ai/' + ('' if filename == 'index.html' else filename)
-        page_head = re.sub(r'(<link rel="canonical" href=")[^"]+', r'\g<1>' + url, page_head)
-        page_head = re.sub(r'(<meta property="og:url" content=")[^"]+', r'\g<1>' + url, page_head)
-        page_head = re.sub(r'(<meta property="og:title" content=")[^"]+', r'\g<1>' + escape(title), page_head)
-        page_head = page_head.replace('</head>', '<link rel="stylesheet" href="navigation.css">\n</head>')
+        rendered_head = page_head(head, filename, title + ' · Awesome Wearable AI', DESCRIPTIONS[filename], 'CollectionPage' if filename in ('columns.html', 'library.html', 'compare.html') else 'WebPage')
+        rendered_head = rendered_head.replace('</head>', '<link rel="stylesheet" href="navigation.css">\n</head>')
         intro_class = 'page-home' if filename == 'index.html' else 'page-interior'
         progress = '<div class="story-progress" aria-hidden="true"><span></span></div>' if filename == 'story.html' else ''
         old = '<script>window.ATLAS_ANCHOR_PAGES=' + json.dumps(owners) + ';</script>' if filename == 'index.html' else ''
-        rendered = '<!doctype html>\n<html lang="en">\n' + page_head + f'\n<body class="{intro_class}" data-scene="0"><a class="skip-link" href="#page-content">Skip to page content</a>' + header() + progress + '<main id="page-content">' + links(content, filename) + '</main>' + links(footer, filename) + shelf + old + '<script src="navigation.js"></script><script src="app.js"></script></body></html>\n'
+        rendered = '<!doctype html>\n<html lang="en">\n' + rendered_head + f'\n<body class="{intro_class}" data-scene="0"><a class="skip-link" href="#page-content">Skip to page content</a>' + header() + progress + '<main id="page-content">' + links(content, filename) + '</main>' + links(footer, filename) + shelf + old + '<script src="navigation.js"></script><script src="app.js"></script></body></html>\n'
         (ROOT / filename).write_text(version_assets(rendered))
 
     # Dedicated routes, not one long page or a hash-based tab pretending to be a page.
@@ -187,9 +202,13 @@ def build():
         column = column.replace('</body>', '<script src="navigation.js"></script></body>')
         title = THEME_LABELS[theme]
         column = re.sub(r'<div class="columns-intro">.*?</div>', '<div class="columns-intro"><p class="columns-kicker"><a href="columns.html">RESEARCH COLUMNS</a> / ' + escape(title.upper()) + '</p></div>', column, count=1, flags=re.S)
-        column = re.sub(r'<title>.*?</title>', '<title>' + escape(title) + ' · Awesome Wearable AI</title>', column, count=1)
-        column = column.replace('</head>', f'<link rel="canonical" href="https://zipengwu365.github.io/awesome-wearable-ai/{filename}"></head>', 1)
+        column_head = re.search(r'<head>.*?</head>', column, re.S).group(0)
+        column = column.replace(column_head, page_head(column_head, filename, title + ' · Awesome Wearable AI', DESCRIPTIONS[filename], 'CollectionPage'), 1)
         (ROOT / filename).write_text(version_assets(column))
+    discovery = {filename: {'title': title, 'description': DESCRIPTIONS[filename]} for filename, (title, _) in pages.items()}
+    discovery.update({filename: {'title': THEME_LABELS[theme], 'description': DESCRIPTIONS[filename]} for theme, filename in THEMES.items()})
+    discovery['research-map.html'] = {'title': 'Wearable AI research intelligence', 'description': DESCRIPTIONS['research-map.html']}
+    seo['write_discovery_pages'](payload, discovery)
     print(f"Built {len(pages) + len(THEMES)} focused pages; all original research data unchanged")
 
 

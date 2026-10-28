@@ -106,6 +106,21 @@ test_twin_route_does_not_absorb_every_personalized_model (test_route_classificat
 test_unknown_family_and_duplicate_ids_fail_instead_of_silent_assignment (test_route_classification.RouteClassificationTests) ... ok
 test_vr_trials_and_adjacent_interfaces_preserve_contribution_boundaries (test_route_classification.RouteClassificationTests) ... ok
 test_watchlist_status_is_not_promoted_and_reviews_are_explicit (test_route_classification.RouteClassificationTests) ... ok
+test_canonical_urls_use_the_final_project_domain (test_seo_pages.SEOPageTests) ... ok
+test_deployed_sitemap_targets_have_page_specific_metadata_and_exist (test_seo_pages.SEOPageTests) ... ok
+test_directory_escapes_html_and_unsafe_links (test_seo_pages.SEOPageTests) ... ok
+test_directory_is_readable_without_script_and_has_normal_navigation (test_seo_pages.SEOPageTests) ... ok
+test_directory_preserves_metadata_and_claim_boundaries_without_mutation (test_seo_pages.SEOPageTests) ... ok
+test_discovery_writer_only_writes_two_outputs_and_checks_page_existence (test_seo_pages.SEOPageTests) ... ok
+test_every_real_record_has_one_static_primary_assignment_and_status (test_seo_pages.SEOPageTests) ... ok
+test_head_cleanup_removes_trailing_whitespace_from_retained_lines (test_seo_pages.SEOPageTests) ... ok
+test_head_escapes_user_text_and_rejects_unsupported_inputs (test_seo_pages.SEOPageTests) ... ok
+test_head_replaces_legacy_metadata_without_removing_assets (test_seo_pages.SEOPageTests) ... ok
+test_known_bad_links_are_retained_as_inert_metadata_not_clickable_sources (test_seo_pages.SEOPageTests) ... ok
+test_missing_duplicate_or_invalid_record_mapping_is_rejected (test_seo_pages.SEOPageTests) ... ok
+test_parser_keeps_svg_accessibility_titles_out_of_document_title (test_seo_pages.SEOPageTests) ... ok
+test_sitemap_contains_only_unique_canonical_pages_without_fake_dates (test_seo_pages.SEOPageTests) ... ok
+test_static_assessments_and_signals_retain_evidence_dates_and_limits (test_seo_pages.SEOPageTests) ... ok
 test_assessment_signal_links_are_real_and_relevant (test_technology_radar.TechnologyRadarTests) ... ok
 test_availability_and_claim_boundaries_cannot_be_blank (test_technology_radar.TechnologyRadarTests) ... ok
 test_date_shape_and_calendar_validity_fail (test_technology_radar.TechnologyRadarTests) ... ok
@@ -125,7 +140,7 @@ test_version_missing_fields_and_unexpected_fields_fail (test_technology_radar.Te
 test_window_order_and_review_cutoff_are_validated (test_technology_radar.TechnologyRadarTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 50 tests
+Ran 65 tests
 
 OK
 ```

@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import re
 import runpy
 from collections import Counter
 from pathlib import Path
@@ -283,6 +284,13 @@ def main() -> int:
             raise ValueError(f"Expected exactly one {placeholder}")
         template = template.replace(placeholder, (ROOT / "website" / filename).read_text(encoding="utf-8"))
     output = render_template(template, payload)
+    seo = runpy.run_path(str(ROOT / 'website' / 'seo.py'))
+    original_head = re.search(r'<head>.*?</head>', output, re.S).group(0)
+    output = output.replace(original_head, seo['page_head'](
+        original_head, 'research-map.html', 'Wearable AI research intelligence · Awesome Wearable AI',
+        'Compare wearable AI research across four chronological themes, inspect source-linked technology changes and browse all 441 accepted and watchlist resources.',
+        'CollectionPage',
+    ), 1)
     (ROOT / "site" / "research-map.html").write_text(output, encoding="utf-8")
     (ROOT / "website" / "research-map.html").write_text(output, encoding="utf-8")
     (ASSETS / "coverage.json").write_text(json.dumps(coverage, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
