@@ -38,13 +38,30 @@ socket.addEventListener('open',async()=>{try{
     assert.equal(await evaluate(`document.querySelector('#column-tree').dataset.treeDesign`),'chronological-branches','Shared reference-style tree layout');
     assert.equal(await evaluate(`document.querySelectorAll('.tree-palette-item').length`),6,'Consistent six resource-type colours');
     await evaluate(`document.fonts.load('18px "Research Hand"').then(()=>true)`);
+    await evaluate(`document.fonts.ready.then(()=>true)`);await pause(150);
     assert.equal(await evaluate(`document.fonts.check('18px "Research Hand"')`),true,'The diagram uses its local readable handwriting font');
     assert.equal(await evaluate(`document.querySelectorAll('.tree-lane-label').length`),2,'Upper and lower research roles are labelled');
     const primaryTree=await json(`[...document.querySelectorAll('.tree-leaf')].filter(n=>n.dataset.related==='false'&&!n.dataset.treeId.startsWith('signal-')).map(n=>n.dataset.treeId).sort()`);
-    const primaryRegistry=await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route==='${theme}').map(r=>r.id).sort()`);
-    assert.deepEqual(primaryTree,primaryRegistry,'Tree preserves every primary entry in '+theme);
+    const primaryRegistry=await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route==='${theme}'&&r.year>=2016).map(r=>r.id).sort()`);
+    assert.deepEqual(primaryTree,primaryRegistry,'Default tree displays every recent primary entry in '+theme);
+    const recentRelated=await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route!=='${theme}'&&r.secondary_routes.includes('${theme}')&&r.year>=2016).map(r=>r.id).sort()`);
+    assert.deepEqual(await json(`[...document.querySelectorAll('.tree-leaf[data-related="true"]')].filter(n=>!n.dataset.treeId.startsWith('signal-')).map(n=>n.dataset.treeId).sort()`),recentRelated,'Default tree includes all recent repository cross-links');
+    const expectedPapers=await json(`JSON.parse(document.querySelector('#research-data').textContent).radar.signals.filter(s=>s.added_on&&(s.route==='${theme}'||s.secondary_routes.includes('${theme}'))).map(s=>s.id).sort()`);
+    assert.deepEqual(await json(`[...document.querySelectorAll('.column-new-paper')].map(n=>n.dataset.paperId).sort()`),expectedPapers,'Every November paper appears in the visible reading list');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.column-new-paper')].every(n=>n.getClientRects().length&&n.querySelector('.column-publication-status').textContent&&n.querySelector('.column-meta').textContent)`),true,'New papers show publication status and source dates');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.column-new-paper .column-entry-links a:first-child')].every(a=>a.href.startsWith('https://')&&!a.href.includes('/pdf/')&&!/\.pdf([?#]|$)/i.test(a.href))`),true,'All new paper links open landing pages');
+    const treeReviewIds=await json(`(()=>{const d=JSON.parse(document.querySelector('#research-data').textContent),t=d.tree.columns['${theme}'];return t.nodes.filter(n=>n.id.startsWith('signal-')&&d.radar.signals.find(s=>'signal-'+s.id===n.id).event_date>='2016-01-01').map(n=>n.id).sort()})()`);
+    assert.deepEqual(await json(`[...document.querySelectorAll('.tree-leaf')].filter(n=>n.dataset.treeId.startsWith('signal-')).map(n=>n.dataset.treeId).sort()`),treeReviewIds,'Every recent standalone review is drawn in its tree');
+    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf')].every(n=>n.getClientRects().length>0)`),true,'Every default label participates in layout, not hidden behind expansion');
+    assert.equal(await evaluate(`document.querySelectorAll('.tree-more').length`),0,'No representative-only sampling or hidden remainder');
+    assert.deepEqual(await json(`[...document.querySelectorAll('.tree-time-nav button')].map(n=>Number(n.dataset.year))`),Array.from({length:11},(_,i)=>2016+i),'One navigation position per year');
+    const defaultIds=await json(`[...document.querySelectorAll('.tree-leaf')].map(n=>n.dataset.treeId).sort()`);
+    await evaluate(`document.querySelector('.tree-earlier input').click();true`);await pause(150);
+    assert.deepEqual(await json(`[...document.querySelectorAll('.tree-leaf')].filter(n=>n.dataset.related==='false'&&!n.dataset.treeId.startsWith('signal-')).map(n=>n.dataset.treeId).sort()`),await json(`JSON.parse(document.getElementById('research-data').textContent).records.filter(r=>r.primary_route==='${theme}').map(r=>r.id).sort()`),'Optional earlier years retain every historical primary entry');
+    await evaluate(`document.querySelector('.tree-earlier input').click();true`);await pause(150);
+    assert.deepEqual(await json(`[...document.querySelectorAll('.tree-leaf')].map(n=>n.dataset.treeId).sort()`),defaultIds,'Returning to recent years restores every matching entry');
     await evaluate(`document.querySelector('.tree-toolbar button').click();true`);await pause(150);
-    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf')].every(n=>n.getClientRects().length>0)`),true,'Show every leaf reveals all names');
+    assert.deepEqual(await json(`[...document.querySelectorAll('.tree-leaf')].map(n=>n.dataset.treeId).sort()`),defaultIds,'Full-title toggle changes names, never coverage');
     assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf')].every(n=>n.querySelector('.tree-leaf-name').textContent===n.dataset.fullTitle)`),true,'Expanded tree shows original complete titles, not clipped display labels');
     assert.equal(await evaluate(`[...document.querySelectorAll('.tree-branch-box')].every(box=>{const years=[...box.querySelectorAll('.tree-leaf')].map(n=>Number(n.dataset.year));return years.every((year,i)=>i===0||year>=years[i-1]);})`),true,'Complete tree follows chronological order within each group');
     await evaluate(`document.querySelector('.tree-leaf').click();true`);
@@ -53,13 +70,20 @@ socket.addEventListener('open',async()=>{try{
     assert.equal(await evaluate(`[...document.querySelectorAll('.tree-dialog a')].every(a=>!a.href.includes('/pdf/')&&!/\.pdf([?#]|$)/i.test(a.href))`),true,'Article links use landing pages');
     await evaluate(`document.querySelector('.tree-dialog-close').click();document.querySelector('.tree-toolbar button').click();true`);
     await evaluate(`document.querySelector('.tree-related input').click();true`);await pause(120);
-    assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf')].filter(n=>n.dataset.related==='true').length===JSON.parse(document.querySelector('#research-data').textContent).records.filter(r=>r.primary_route!=='${theme}'&&r.secondary_routes.includes('${theme}')).length`),true,'Related tree entries follow repository cross-links');
+    assert.equal(await evaluate(`document.querySelectorAll('.tree-leaf[data-related="true"]').length`),0,'Related checkbox explicitly filters cross-links');
     await evaluate(`document.querySelector('.tree-related input').click();true`);
+    assert.deepEqual(await json(`[...document.querySelectorAll('.tree-leaf[data-related="true"]')].filter(n=>!n.dataset.treeId.startsWith('signal-')).map(n=>n.dataset.treeId).sort()`),recentRelated,'Re-enabling related restores every recent cross-link');
     const branch=await evaluate(`document.querySelector('.tree-toolbar select option:nth-child(2)').value`);
     await evaluate(`document.querySelector('.tree-toolbar select').value=${JSON.stringify(branch)};document.querySelector('.tree-toolbar select').dispatchEvent(new Event('change'));true`);
     assert.equal(await evaluate(`[...document.querySelectorAll('.tree-branch-box')].every(n=>n.dataset.branch===${JSON.stringify(branch)})`),true,'Branch filter matches the tree');
     await evaluate(`document.querySelector('.tree-toolbar select').value='';document.querySelector('.tree-toolbar select').dispatchEvent(new Event('change'));true`);
-    for(const width of [1440,390]){await send('browsingContext.setViewport',{context,viewport:{width,height:960},devicePixelRatio:1});await evaluate(`document.querySelector('#column-tree').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-tree-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true,'Tree remains within the page');}
+    for(const width of [1440,390]){await send('browsingContext.setViewport',{context,viewport:{width,height:960},devicePixelRatio:1});await evaluate(`document.querySelector('#column-tree').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-tree-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true,'Tree remains within the page');const treeSize=await json(`(()=>{const v=document.querySelector('.tree-viewport'),c=document.querySelector('.tree-chart'),w=document.querySelector('.tree-wires');return {height:v.clientHeight,scroll:v.scrollHeight,chart:c.offsetHeight,wires:w.getAttribute('height')}})()`);assert(treeSize.scroll<=treeSize.height+1,'No vertical cropping in '+theme+' '+width+': '+JSON.stringify(treeSize));assert.equal(await evaluate(`[...document.querySelectorAll('.tree-leaf-name')].every(n=>n.scrollHeight<=n.clientHeight+1&&getComputedStyle(n).overflow==='visible')`),true,'Complete labels wrap instead of being clipped');}
+    await evaluate(`document.querySelector('.tree-time-nav button[data-year="2024"]').click();true`);await pause(650);
+    assert.equal(await evaluate(`document.querySelector('.tree-time-nav button[data-year="2024"]').getAttribute('aria-current')`),'true','Year navigation locates a complete annual group');
+    assert.equal(await evaluate(`Math.abs(document.querySelector('.tree-overview-scroll').scrollLeft-document.querySelector('.tree-viewport').scrollLeft)<2`),true,'Top scrollbar follows year navigation');
+    await evaluate(`document.querySelector('.tree-overview-scroll').scrollLeft+=40;true`);await pause(120);
+    assert.equal(await evaluate(`Math.abs(document.querySelector('.tree-overview-scroll').scrollLeft-document.querySelector('.tree-viewport').scrollLeft)<2`),true,'Top scrollbar pans the complete figure without scrolling to its bottom');
+    assert.deepEqual(await json(`[...document.querySelectorAll('.tree-leaf')].map(n=>n.dataset.treeId).sort()`),defaultIds,'Year navigation scrolls without hiding other years');
     assert.equal(await evaluate(`(()=>{const boxes=[...document.querySelectorAll('.tree-branch-box')];return boxes.every(box=>[...box.querySelectorAll('.tree-leaf')].filter(n=>n.getClientRects().length).every(n=>{const a=n.getBoundingClientRect(),b=box.getBoundingClientRect();return a.left>=b.left&&a.right<=b.right+1;}));})()`),true,'Leaf text stays inside its branch box');
     assert.equal(await evaluate(`document.querySelectorAll('.column-change').length`),3,'Three concrete change summaries per theme');
     assert.equal(await evaluate(`document.querySelector('#column-dimensions').textContent`),'2 · What is new, and what has been tested?','Separate questions from the overall direction');
@@ -102,6 +126,7 @@ socket.addEventListener('open',async()=>{try{
     for(const width of [1440,390]){await send('browsingContext.setViewport',{context,viewport:{width,height:960},devicePixelRatio:1});await evaluate(`document.querySelector('#column-evolution').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-evolution-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true);await evaluate(`document.querySelector('.column-time-overview').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(150);await screenshot(theme+'-timeline-'+width);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),true);}
     const featuredIds=await json(`[...document.querySelectorAll('[data-featured-id]')].map(n=>n.dataset.featuredId)`);
     for(const id of featuredIds){await navigate(file+'#'+encodeURIComponent(id));await pause(80);assert.equal(await evaluate(`document.getElementById(${JSON.stringify(id)})?.open`),true,'Featured entry opens: '+id);}
+    for(const id of expectedPapers){await navigate(file+'#signal-'+encodeURIComponent(id));await pause(80);assert.equal(await evaluate(`document.getElementById(${JSON.stringify('signal-'+id)})?.open`),true,'New paper opens its complete entry: '+id);}
     await navigate(file);await send('browsingContext.setViewport',{context,viewport:{width:1440,height:960},devicePixelRatio:1});
     await evaluate(`document.querySelector('#column-dimensions').scrollIntoView({block:'start',behavior:'instant'});true`);await pause(120);await screenshot(theme+'-brief-comparisons');
     console.log('PASS complete horizontal timeline',theme,expected.length,'primary records; every year and title accessible');
@@ -119,7 +144,9 @@ socket.addEventListener('open',async()=>{try{
   await navigate('story.html');assert.equal(await evaluate(`document.querySelectorAll('.step').length`),6);
   for(let n=0;n<6;n++){await evaluate(`document.querySelectorAll('.step')[${n}].scrollIntoView({block:'center',behavior:'instant'});true`);await pause(180);assert.equal(await evaluate(`document.querySelectorAll('.step.is-active').length`),1);}
   await navigate('research-map.html?view=map');assert.equal(await evaluate(`document.querySelector('.atlas').hidden`),false);
-  assert.deepEqual(errors,[]);console.log('PASS 441 IDs; navigation; filters; horizontal years; complete directory; legacy links; graph links; 6 scenes; no page JS errors');
+  const externalFontWarnings=errors.filter(text=>text.startsWith('downloadable font: download failed')&&text.includes('source: https://fonts.gstatic.com/'));
+  if(externalFontWarnings.length)console.log('WARN external Google font downloads unavailable in test environment; local diagram font passed and system fallbacks remain readable');
+  assert.deepEqual(errors.filter(text=>!externalFontWarnings.includes(text)),[]);console.log('PASS 441 IDs; navigation; filters; horizontal years; complete directory; legacy links; graph links; 6 scenes; no page JS errors');
   await send('session.end');socket.close();
 }catch(error){console.error(error);process.exitCode=1;try{await send('session.end');}catch{}socket.close();}});
 await done;

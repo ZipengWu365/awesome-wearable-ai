@@ -9,6 +9,7 @@ import xml.etree.ElementTree as ET
 
 from scripts.render_research_map import build_payload
 from scripts.validate_technology_radar import validate_radar
+from website.research_updates import merge_updates
 from website.seo import (
     BASE_URL, SOURCE_FILENAME, canonical_url, page_head,
     render_sources, render_sitemap, write_discovery_pages,
@@ -60,7 +61,8 @@ class ParsedHTML(HTMLParser):
 def payload():
     data = build_payload()
     data["radar"] = validate_radar(
-        json.loads((ROOT / "assets/research-map/technology-radar.json").read_text()),
+        merge_updates(json.loads((ROOT / "assets/research-map/technology-radar.json").read_text()),
+                      json.loads((ROOT / "website/literature-updates.json").read_text())),
         {record["id"] for record in data["records"]},
         {route["id"] for route in data["routes"]},
     )
@@ -148,7 +150,7 @@ class SEOPageTests(unittest.TestCase):
                 if record.get(field): self.assertIn(record[field], text)
         self.assertIn("Catalog cutoff: " + data["cutoff"], text)
         self.assertIn("Watchlist candidate — not accepted", text)
-        self.assertIn("Complete repository coverage does not mean a complete frontier survey", text)
+        self.assertIn("Original records retain their metadata and review status", text)
 
     def test_known_bad_links_are_retained_as_inert_metadata_not_clickable_sources(self):
         hrefs = {row.get("href") for row in self.parsed.anchors}

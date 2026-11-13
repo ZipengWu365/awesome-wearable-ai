@@ -135,6 +135,19 @@ def theme_cards(payload, editorial):
     return '<div class="page-directory">' + "".join(cards) + '</div>'
 
 
+def publication_digest(payload, editorial):
+    signals = {s['id']:s for s in payload['radar']['signals']}
+    rows = []
+    for route in payload['routes']:
+        brief = editorial['columns'][route['id']]
+        links = []
+        for id in brief['latest_ids']:
+            signal = signals[id.removeprefix('signal-')]
+            links.append(f'<a href="{THEMES[route["id"]]}#{escape(id, quote=True)}">{escape(signal["short_name"])}</a>')
+        rows.append(f'<article class="home-publication" style="--theme:{route["color"]}"><h3>{escape(THEME_LABELS[route["id"]])}</h3><p>{escape(brief["latest_summary"])}</p><div>{"".join(links)}</div><a class="home-paper-index" href="{THEMES[route["id"]]}#column-new-papers">All new reading in this column</a></article>')
+    return '<section class="home-publications" aria-labelledby="home-publications-title"><p class="eyebrow">READING UPDATE · 13 NOVEMBER 2026</p><h2 id="home-publications-title">New journal and conference papers</h2><p>15 added papers from Nature Portfolio and the 2026 NeurIPS, ICML and ICLR conferences, plus a conference update for GlucoFM. Publication dates and manuscript revisions are shown with each paper.</p><div class="home-publication-grid">'+''.join(rows)+'</div></section>'
+
+
 def build():
     seo = runpy.run_path(str(ROOT / 'seo.py'))
     page_head = seo['page_head']
@@ -148,6 +161,7 @@ def build():
     footer = fragments[".site-footer"]
     shelf = fragments["detail-shelf"] + '<div class="shelf-backdrop" hidden></div>'
     cards = theme_cards(payload, editorial)
+    digest = publication_digest(payload, editorial)
     resource_panels = [("lifecycle", "Lifecycle matrix", ".matrix-card"), ("families", "Research families", ".family-browser-card"), ("datasets", "Datasets", ".dataset-table-card"), ("evidence", "Evidence crosswalk", ".evidence-crosswalk-card"), ("watchlist", "Watchlist", ".watchlist-card"), ("downloads", "Downloads", ".resource-hub-card")]
     resource_tabs = '<nav class="page-shortcuts resource-tabs" aria-label="Comparison pages">' + ''.join(f'<a href="compare.html?panel={key}">{label}</a>' for key,label,_ in resource_panels) + '</nav>'
     comparisons = '<section class="comparison-section"><div class="comparison-grid">' + ''.join(fragments[cls].replace('<article ', f'<article data-comparison-panel="{key}" ' + ('' if key=='lifecycle' else 'hidden '), 1) for key,_,cls in resource_panels) + '</div></section>'
@@ -155,14 +169,14 @@ def build():
     guide_links = '<nav class="page-shortcuts" aria-label="Research guide pages"><a href="guide.html">Lifecycle &amp; taxonomy</a><a href="story.html">Animated explanation</a><a href="models.html">Sensor &amp; model families</a><a href="history.html">Research through time</a></nav>'
     scene_links = '<nav class="page-shortcuts story-chapters" aria-label="Jump to a story chapter">' + ''.join(f'<a href="#{key}">{label}</a>' for key,label in [('signals','01 Signals'),('representations','02 Learned features'),('lifecycle-story','03 Lifecycle'),('resource-types-story','04 Resource types'),('evidence','05 Evidence'),('review-depth-story','06 Review depth')]) + '</nav>'
     pages = {
-        "index.html": ("Wearable AI research evolution", fragments["overview"] + landing + fragments['research-path']),
-        "columns.html": ("Four research columns", banner("Four research columns", "Choose a topic to read its research direction, specific studies and complete paper timeline.") + '<section class="directory-section">' + cards + '</section>'),
+        "index.html": ("Wearable AI research evolution", fragments["overview"] + landing + digest + fragments['research-path']),
+        "columns.html": ("Four research columns", banner("Four research columns", "Choose a topic for the November paper additions, research summaries and complete timeline.") + '<section class="directory-section">' + cards + '</section>'+digest),
         "guide.html": ("Research guide", banner("How wearable-AI research fits together", "Understand the lifecycle and technical roles before comparing individual studies.") + guide_links + fragments["reading-terms"] + fragments["taxonomy"]),
         "story.html": ("Animated research guide", banner("From body signals to decisions", "An optional visual explanation. Scroll through six scenes, or use the chapter links to go directly to a concept.", "Research guide", "guide.html") + guide_links + scene_links + fragments["story"]),
         "models.html": ("Sensor & model families", banner("Sensor & model families", "Browse the model landscape by signal and research family.", "Research guide", "guide.html") + guide_links + fragments["model-landscape"]),
         "history.html": ("Research through time", banner("Research through time", "A visual overview of the repository. For the full paper-by-paper history, open a research column.", "Research guide", "guide.html") + guide_links + fragments["research-map"]),
         "evidence.html": ("Evidence & study claims", banner("What does the evidence support?", "Compare study designs, claim types and the depth of the repository’s review.") + fragments["evidence-map"]),
-        "library.html": ("Research library", banner("Search the research library", "Explore 396 accepted records in the interactive map or list. Use the columns for chronological reading and all 45 watchlist candidates.") + '<nav class="page-shortcuts" aria-label="Resource views"><a href="library.html">Interactive library</a><a href="compare.html">Comparison tables &amp; watchlist</a><a href="columns.html">Papers by research theme</a></nav>' + fragments["explore"]),
+        "library.html": ("Research library", banner("Search the research library", "Search the original 396 accepted records in the map or list. The research columns also include the November journal and conference additions and all 45 watchlist candidates.") + '<nav class="page-shortcuts" aria-label="Resource views"><a href="library.html">Interactive library</a><a href="compare.html">Comparison tables &amp; watchlist</a><a href="columns.html">New papers and research themes</a><a href="sources.html#intelligence">All source updates</a></nav>' + fragments["explore"]),
         "compare.html": ("Compare research resources", banner("Compare datasets, models and evidence", "Choose one focused table. The other views remain available from the navigation below.", "Library", "library.html") + resource_tabs + comparisons),
     }
     owners = {}

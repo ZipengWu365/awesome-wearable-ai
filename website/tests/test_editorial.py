@@ -79,7 +79,7 @@ class EditorialBriefTests(unittest.TestCase):
             actual = {n['id'] for n in nodes if not n['related'] and not n['id'].startswith('signal-')}
             self.assertEqual(actual, expected)
             primary.extend(actual)
-            related = {n['id'] for n in nodes if n['related']}
+            related = {n['id'] for n in nodes if n['related'] and not n['id'].startswith('signal-')}
             self.assertEqual(related, {r['id'] for r in payload['records'] if r['primary_route'] != theme and theme in r['secondary_routes']})
         self.assertEqual(len(primary), 441)
         self.assertEqual(len(set(primary)), 441)
@@ -92,6 +92,37 @@ class EditorialBriefTests(unittest.TestCase):
         changed['columns']['prediction']['branches'][0]['families'] = ''
         with self.assertRaises(AssertionError):
             build_tree(payload, changed)
+
+    def test_tree_has_one_complete_group_per_recent_publication_year(self):
+        tree = payload['tree']
+        self.assertEqual(tree['default_start_year'], 2016)
+        self.assertEqual(tree['periods'][0]['end'], 2015)
+        self.assertEqual(tree['periods'][1:], [
+            {'start':year, 'end':year, 'label':str(year)}
+            for year in range(2016, tree['latest_year'] + 1)])
+        records = {r['id']:r for r in payload['records']}
+        recent = set()
+        for column in tree['columns'].values():
+            for node in column['nodes']:
+                if node['id'] not in records:
+                    continue
+                record = records[node['id']]
+                period = tree['periods'][node['period']]
+                self.assertLessEqual(period['start'], record['year'])
+                self.assertGreaterEqual(period['end'], record['year'])
+                if record['year'] >= 2016:
+                    self.assertEqual(period['label'], str(record['year']))
+                    if not node['related']:
+                        recent.add(record['id'])
+        self.assertEqual(recent, {r['id'] for r in records.values() if r['year'] >= 2016})
+
+    def test_tree_periods_extend_when_a_future_record_is_added(self):
+        config = json.loads((ROOT / 'research-tree-config.json').read_text())
+        changed = copy.deepcopy(payload)
+        changed['records'][0]['year'] = payload['tree']['latest_year'] + 1
+        tree = runpy.run_path(str(ROOT / 'research_tree.py'))['build_tree'](changed, config)
+        self.assertEqual(tree['latest_year'], changed['records'][0]['year'])
+        self.assertEqual(tree['periods'][-1]['label'], str(tree['latest_year']))
 
     def test_reference_tree_style_is_shared_across_all_columns(self):
         css = (ROOT / 'research-tree.css').read_text()

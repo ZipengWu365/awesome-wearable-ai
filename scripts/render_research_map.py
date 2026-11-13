@@ -265,8 +265,12 @@ def main() -> int:
     else:
         from validate_technology_radar import validate_radar
     # Editorial signals are separate from the frozen scientific registry.
+    radar = runpy.run_path(str(ROOT / 'website' / 'research_updates.py'))['merge_updates'](
+        read_json(ASSETS / 'technology-radar.json'),
+        read_json(ROOT / 'website' / 'literature-updates.json'),
+    )
     payload["radar"] = validate_radar(
-        read_json(ASSETS / "technology-radar.json"),
+        radar,
         {record["id"] for record in payload["records"]},
         {route["id"] for route in payload["routes"]},
     )

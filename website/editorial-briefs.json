@@ -1,215 +1,709 @@
 {
-  "edited_on": "2026-10-13",
-  "repository_commit": "88dbe3ed8ec0dfb5d2b6189656d055235f982cee",
-  "scope": "Summaries of the repository’s collected work and existing research updates, not a search of every new paper. Dates on studies are separate from the date this page was edited.",
+  "edited_on": "2026-11-13",
+  "repository_commit": "8f7678982b418dc9bef1580df75e7c760825468c",
+  "scope": "Research summaries across the existing collection and November additions from Nature Portfolio, NeurIPS, ICML and ICLR. Paper dates, manuscript revisions and website addition dates are shown separately.",
   "columns": {
     "prediction": {
       "description": "From human activity recognition to health modeling: body signals, digital measures and models for monitoring health and predicting disease risk.",
       "evolution": [
-        {"start":1980,"end":2020,"headline":"Build shared recordings for testing models","change":"Annotated heart-signal datasets give researchers common examples and labels to test against.","meaning":"This supplies the data needed for later learning methods; it is not itself a reusable AI model.","limit":"An early foundation in this collection, not a description of every study before 2021.","ids":["dataset-mitbih-arrhythmia"]},
-        {"start":2021,"end":2023,"headline":"Reuse what a model learns across datasets","change":"BENDR learns patterns from unlabelled brain recordings. BIOT extends cross-dataset learning to different body signals.","meaning":"Compared with the data foundation above, the reusable component is now a trained model, not just a set of recordings.","limit":"Transfer to another dataset still needs testing.","ids":["model-bendr-2021","model-biot-2023"]},
-        {"start":2024,"end":2024,"headline":"Learn from several signals together","change":"SleepFM combines brain, heart and breathing recordings to learn reusable patterns for sleep-related tasks.","meaning":"Compared with the earlier transfer examples, this study tests how several simultaneous signals can contribute to one model.","limit":"The study uses sleep-lab recordings. Its results do not establish performance on everyday smartwatch data.","ids":["model-sleepfm-icml-2024"]},
-        {"start":2025,"end":2025,"headline":"Connect sensor readings with language","change":"SensorLM links sensor sequences to text. PH-LLM studies personalised reasoning about longer wearable histories.","meaning":"Alongside signal analysis, the target now includes describing and reasoning about a person's data in words.","limit":"A fluent answer can still be wrong. These are research tasks, not proof of safe medical advice.","ids":["model-sensorlm-2025","model-ph-llm-2025"]},
-        {"start":2026,"end":2026,"headline":"Test more tasks and longer personal histories","change":"SensorFM tests transfer across 35 health tasks. SOTER predicts and fills missing readings. WearableQA tests questions about histories up to 500 days.","meaning":"The question becomes which tasks a reusable model can handle, and whether calculation tools help it use long records.","limit":"These studies test different tasks. Their scores do not form one year-by-year accuracy ranking.","ids":["model-sensorfm-2026","signal-soter-2026","signal-wearableqa-2026"]}
+        {
+          "start": 1980,
+          "end": 2020,
+          "headline": "Build shared recordings for testing models",
+          "change": "Annotated heart-signal datasets give researchers common examples and labels to test against.",
+          "meaning": "This supplies the data needed for later learning methods; it is not itself a reusable AI model.",
+          "limit": "This stage covers shared data resources collected before 2021.",
+          "ids": [
+            "dataset-mitbih-arrhythmia"
+          ]
+        },
+        {
+          "start": 2021,
+          "end": 2023,
+          "headline": "Reuse what a model learns across datasets",
+          "change": "BENDR learns patterns from unlabelled brain recordings. BIOT extends cross-dataset learning to different body signals.",
+          "meaning": "A trained model becomes a reusable component alongside the shared recordings.",
+          "limit": "Transfer to another dataset still needs testing.",
+          "ids": [
+            "model-bendr-2021",
+            "model-biot-2023"
+          ]
+        },
+        {
+          "start": 2024,
+          "end": 2024,
+          "headline": "Learn from several signals together",
+          "change": "SleepFM combines brain, heart and breathing recordings to learn reusable patterns for sleep-related tasks.",
+          "meaning": "Compared with the earlier transfer examples, this study tests how several simultaneous signals can contribute to one model.",
+          "limit": "The study uses sleep-lab recordings. Its results do not establish performance on everyday smartwatch data.",
+          "ids": [
+            "model-sleepfm-icml-2024"
+          ]
+        },
+        {
+          "start": 2025,
+          "end": 2025,
+          "headline": "Connect sensor readings with language",
+          "change": "SensorLM links sensor sequences to text. PH-LLM studies personalised reasoning about longer wearable histories.",
+          "meaning": "Alongside signal analysis, the target now includes describing and reasoning about a person's data in words.",
+          "limit": "A fluent answer can still be wrong. These are research tasks, not proof of safe medical advice.",
+          "ids": [
+            "model-sensorlm-2025",
+            "model-ph-llm-2025"
+          ]
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "headline": "Learn across sensors and test transfer to new settings",
+          "change": "xMAE builds physiological timing into training. EEG-X handles changing EEG layouts, and EmoPhone tests transfer across people and collection waves.",
+          "meaning": "Reusable models need tests that reflect changes in the sensor, user and recording conditions.",
+          "limit": "Reported gains use different tasks and metrics; each comparison is reported with its own setup.",
+          "ids": [
+            "signal-xmae-icml-2026",
+            "signal-eeg-x-neurips-2026",
+            "signal-emophone-neurips-2026"
+          ]
+        }
       ],
-      "headline": "Wearable AI is learning more tasks from longer health records",
-      "summary": "Across SensorFM, SOTER and WearableQA, the shared direction is to reuse body-signal models and work with more personal history. The gains come from different places: training across tasks, modelling how signals change, and giving AI tools to calculate with data.",
-      "status": "Our synthesis of the cited studies",
-      "use": "For teams building health-data software: compare the task, data and tools, not just the model name. A good question-answering result does not prove accurate disease prediction.",
-      "takeaway": "A concrete gain: WearableQA reports 51.2% correct answers without Python tools and 71.3% with them, using the same GPT-5.4 model. Tool access and computing work differ.",
-      "ids": ["model-sensorfm-2026", "signal-soter-2026", "signal-wearableqa-2026"],
+      "headline": "Models learn across body signals; new benchmarks test where they transfer",
+      "summary": "xMAE uses the timing between ECG and PPG. BioX-Bridge transfers knowledge between signal types, and EEG-X reuses models across headsets. New benchmarks test longer recordings and changes between study populations. The common question is whether a reusable model still works when the task, person or sensor changes.",
+      "status": "Our comparison of the cited model and benchmark studies",
+      "use": "For health-data teams: compare the signals available, the test population and the adaptation cost. The consumer-API study is a useful check on what heart rate and step counts can predict.",
+      "takeaway": "EEG-X reports a 1.67-percentage-point gain in one cross-device test. xMAE improves 15 of 19 tested tasks. EmoPhone adds repeated collection waves for testing changes over time.",
+      "ids": [
+        "signal-xmae-icml-2026",
+        "signal-biox-bridge-iclr-2026",
+        "signal-eeg-x-neurips-2026",
+        "signal-hearts-icml-2026",
+        "signal-wearable-api-craving-2026"
+      ],
       "dimensions": [
-        {"kind":"Methods","answer":"Reuse one trained model for several tasks","basis":"synthesis","text":"SensorFM and SOTER test models on several tasks, instead of building a separate model for each use.","ids":["model-sensorfm-2026","signal-soter-2026"]},
-        {"kind":"Data","answer":"Use longer personal histories and larger training collections","basis":"synthesis","text":"WearableQA includes up to 500 days per person. SensorFM learns from a large collection of people's sensor recordings. These are different datasets.","ids":["signal-wearableqa-2026","model-sensorfm-2026"]},
-        {"kind":"Hardware","answer":"No new device is established by these examples","basis":"no_update","text":"The selected work changes software and data use. It does not demonstrate a new sensor or longer battery life.","ids":[]},
-        {"kind":"Functions","answer":"Predict future readings and fill missing ones","basis":"study","text":"SOTER tests both tasks. Filling a gap in a recording is a different task from predicting a person's disease.","ids":["signal-soter-2026"]},
-        {"kind":"Performance","answer":"One study reports faster computation","basis":"study","text":"SenFlow reports up to 51 times faster model execution in its tests. This is a speed comparison, not a gain in disease-detection accuracy.","ids":["model-senflow-2026"]},
-        {"kind":"New directions","answer":"Answer questions about months of personal data","basis":"study","text":"WearableQA tests whether AI can use a person's long wearable history to answer questions, rather than only label a short signal segment.","ids":["signal-wearableqa-2026"]}
+        {
+          "kind": "Methods",
+          "answer": "Use the relationship between sensors during training",
+          "basis": "synthesis",
+          "text": "xMAE preserves ECG-PPG timing. BioX-Bridge connects models trained on different signals with a small trainable bridge.",
+          "ids": [
+            "signal-xmae-icml-2026",
+            "signal-biox-bridge-iclr-2026"
+          ]
+        },
+        {
+          "kind": "Data",
+          "answer": "Test across people and collection years",
+          "basis": "synthesis",
+          "text": "EmoPhone contains 282 people and 53,139 momentary self-reports. Inertia-1 compares design choices using over 18.2 million hours of movement recordings.",
+          "ids": [
+            "signal-emophone-neurips-2026",
+            "signal-inertia-1-neurips-2026"
+          ]
+        },
+        {
+          "kind": "Hardware",
+          "answer": "Adapt the software to different headsets and small processors",
+          "basis": "synthesis",
+          "text": "EEG-X covers five EEG headset configurations. HiMAE evaluates running a multi-resolution signal model on smartwatch-class CPUs.",
+          "ids": [
+            "signal-eeg-x-neurips-2026",
+            "signal-himae-iclr-2026"
+          ]
+        },
+        {
+          "kind": "Functions",
+          "answer": "Ask questions about signals and find events using text",
+          "basis": "synthesis",
+          "text": "SleepLM adds descriptions, retrieval and language-guided event localization. HEARTS tests which health-signal reasoning tasks language models can handle.",
+          "ids": [
+            "signal-sleeplm-icml-2026",
+            "signal-hearts-icml-2026"
+          ]
+        },
+        {
+          "kind": "Performance",
+          "answer": "Compare gains within the same task and test setup",
+          "basis": "synthesis",
+          "text": "EEG-X scores 37.58% versus 35.91% balanced accuracy in one frozen-encoder transfer test. BioX-Bridge reduces trainable parameters by 88% to 99% in its tested adaptations.",
+          "ids": [
+            "signal-eeg-x-neurips-2026",
+            "signal-biox-bridge-iclr-2026"
+          ]
+        },
+        {
+          "kind": "New directions",
+          "answer": "Check the information available through real device APIs",
+          "basis": "study",
+          "text": "In a 16-person study, models using Fitbit heart rate and steps had mean AUROC between 0.569 and 0.617 for substance use or craving. The choice of accessible signal affects the task.",
+          "ids": [
+            "signal-wearable-api-craving-2026"
+          ]
+        }
       ],
       "stories": [
         {
-          "id":"signal-soter-2026","name":"SOTER","date":"15 Sep 2026 · preprint","headline":"One model predicts body signals and fills missing readings",
-          "change":"It learns relationships between signals, their timing and recurring patterns, instead of treating them as unrelated sequences.",
-          "result":"Across six datasets, the authors report the lowest prediction error on four using RMSE and five using MAE. These are two different error measures.",
-          "before":"The paper compares against general time-series models and earlier physiological models.",
-          "benefit":"A candidate for teams that need both prediction and missing-data handling from one model.",
-          "condition":"Results depend on the paper’s test settings. Some training data are hospital recordings; the tests do not establish patient benefit.",
-          "source":"https://arxiv.org/html/2609.16804v1","locator":"Sections 4.1–4.3 and Table 1","checked_on":"2026-10-08"
+          "id": "signal-eeg-x-neurips-2026",
+          "name": "EEG-X",
+          "date": "2026-11-10 manuscript update · NeurIPS 2026",
+          "headline": "Reuse a brain-signal model across different headsets",
+          "change": "Channel locations and reconstruction of cleaned activity help the encoder transfer across sensor layouts.",
+          "result": "Across eight datasets and five headset configurations, one TUAB-to-BCICIV_2A test reached 37.58% balanced accuracy, compared with REVE's 35.91%.",
+          "before": "Changing electrode layouts makes it difficult to reuse an EEG encoder across headsets.",
+          "benefit": "Teams can evaluate a shared encoder across different headset layouts.",
+          "condition": "This comparison freezes the pretrained encoder and trains a linear classifier under the paper's transfer protocol.",
+          "source": "https://arxiv.org/abs/2511.08861",
+          "locator": "Latest manuscript, Table 3: TUAB-to-BCICIV_2A linear evaluation",
+          "checked_on": "2026-11-13"
         },
         {
-          "id":"signal-wearableqa-2026","name":"WearableQA","date":"4 Sep 2026 · preprint","headline":"Calculating with personal data improves AI answers",
-          "change":"The test contains 4,084 questions from 200 people, using wearable histories of up to 500 days.",
-          "result":"GPT-5.4 scores 51.2% with row-by-row text prompting and 71.3% with Python access: a gain of 20.1 percentage points.",
-          "before":"In the comparison, the same model reads the data without a Python tool.",
-          "benefit":"Helps developers test whether a health assistant can calculate from real personal records.",
-          "condition":"Tools and computing work change; the model version does not. These are multiple-choice answers, not diagnosis accuracy.",
-          "source":"https://arxiv.org/html/2609.05405v1","locator":"Section 3 and Table 2","checked_on":"2026-10-08"
+          "id": "signal-emophone-neurips-2026",
+          "name": "EmoPhone",
+          "date": "2026-11-11 manuscript update · NeurIPS 2026",
+          "headline": "Test affect sensing across people and annual collection waves",
+          "change": "Android and Fitbit recordings cover three annual waves, with tests across people, time and collection waves.",
+          "result": "The dataset includes 282 people, 297 participant-wave records and 53,139 momentary self-reports. Fourteen people returned in later waves.",
+          "before": "A single collection period gives little evidence about transfer across different annual study waves.",
+          "benefit": "Benchmark across changing users and collection conditions before choosing a sensing model for daily use.",
+          "condition": "In the latest full paper, adaptation improves its MLP backbone while supervised tree models remain competitive.",
+          "source": "https://arxiv.org/abs/2609.16581",
+          "locator": "November v2 full paper: dataset and cross-wave results",
+          "checked_on": "2026-11-13"
         },
         {
-          "id":"model-senflow-2026","name":"SenFlow","date":"May 2026 · conference paper","headline":"Learning from sensor data with less computing time",
-          "change":"SenFlow trains a signal encoder together with a generator that uses flow matching, an alternative to the diffusion method used for comparison.",
-          "result":"The paper reports 50.4% less training time and up to 51-fold faster inference, with tests on five datasets.",
-          "before":"The compared diffusion approach generates outputs through repeated sampling steps.",
-          "benefit":"A method to investigate when training or generation cost limits a sensor-data project.",
-          "condition":"The speedup is an author-reported maximum under the paper’s settings, not a guaranteed speedup on every device. It does not measure patient benefit.",
-          "source":"https://proceedings.mlr.press/v300/ukita26a.html","locator":"Publisher abstract; use the linked paper for timing settings","checked_on":"2026-10-08"
+          "id": "signal-xmae-icml-2026",
+          "name": "xMAE",
+          "date": "2026-05-01 first manuscript · ICML 2026",
+          "headline": "Teach a model how heart and pulse signals are related",
+          "change": "Masked reconstruction across ECG and PPG teaches a model to preserve the delay between heart electrical activity and the peripheral pulse.",
+          "result": "The paper reports stronger performance than unimodal and multimodal baselines on 15 of 19 downstream tasks.",
+          "before": "Pretraining often treats ECG and PPG as interchangeable views, losing their physiological timing relationship.",
+          "benefit": "Known relationships between sensors can guide pretraining and improve transfer across devices.",
+          "condition": "The 19 tasks include cardiovascular outcomes, laboratory results, sleep stages and demographic attributes.",
+          "source": "https://proceedings.mlr.press/v306/zhou26u.html",
+          "locator": "Formal proceedings abstract and cross-modal reconstruction method",
+          "checked_on": "2026-11-13"
         }
+      ],
+      "latest_summary": "EEG-X tests transfer across headsets. EmoPhone adds multiple years of real-life sensing data. ICML and ICLR papers add cross-signal learning and health-reasoning tests.",
+      "latest_ids": [
+        "signal-eeg-x-neurips-2026",
+        "signal-emophone-neurips-2026"
       ]
     },
     "intervention": {
       "description": "Use wearable data and health records to compare possible actions, design adaptive support and test treatment effects.",
       "evolution": [
-        {"start":2000,"end":2018,"headline":"Work out how to compare treatment choices","change":"Marginal structural models address changing treatment and patient history. Later repeated-randomisation trial designs test when support helps.","meaning":"The starting question is the effect of an action, not just what a prediction model expects to happen.","limit":"Estimating an effect from existing records requires assumptions; a randomised trial answers a different kind of evidence question.","ids":["method-msm-2000","method-mrt-health-psychology-2015"]},
-        {"start":2019,"end":2023,"headline":"Study the timing and sequence of actions","change":"HeartSteps tests walking suggestions at repeated moments. Causal Transformer estimates outcomes under changing treatment sequences.","meaning":"Compared with a single treatment choice, these examples ask when to act and how earlier decisions affect later outcomes.","limit":"A model's estimated treatment response is not the same as benefit demonstrated in a trial.","ids":["method-heartsteps-mrt-2019","method-causal-transformer-2022"]},
-        {"start":2024,"end":2024,"headline":"Use richer sensor outcomes and responsive devices","change":"ADD MALTS compares patterns of wearable measurements, not just one average. InTandem adjusts musical cues to a person's walking.","meaning":"Methods can retain more of the sensor record, while devices can change their output as movement changes.","limit":"These are separate method and treatment studies, not a direct performance comparison.","ids":["method-add-malts-2024","intervention-intandem-stroke-2024"]},
-        {"start":2025,"end":2025,"headline":"Check whether tailored advice improves health","change":"myBPmyLife tests activity and food suggestions in 602 adults with hypertension. It did not improve the main blood-pressure outcome compared with control.","meaning":"Adding adaptive suggestions does not guarantee the intended health benefit, even when some behaviours improve.","limit":"This result concerns this intervention and population, not every adaptive health system.","ids":["intervention-mybpmylife-2025"]},
-        {"start":2026,"end":2026,"headline":"Separate useful feedback from proven health benefit","change":"The Pace Me trial found no better main symptom outcome. The wrist-wearables review finds more consistent effects on activity than on several other health outcomes.","meaning":"Together with the earlier trial, this makes the practical question clearer: which outcome improves, for whom, and at what burden?","limit":"Evidence differs by outcome and study design; newer feedback is not automatically better treatment.","ids":["intervention-long-covid-pace-me-2026","intervention-wrist-wearables-umbrella-2026","method-jitai-annual-review-2026"]}
-      ],
-      "headline":"Health feedback is becoming more adaptive, but benefit must be tested",
-      "summary":"The collected work connects sensor readings to decisions about when and how to offer support. Reviews and trials show why this needs two checks: can the system adapt its actions, and do those actions improve the outcome people care about?",
-      "status":"A research direction supported by reviews and trials",
-      "use":"For teams building coaching or treatment systems: test the advice, timing and outcome together. More reminders or a more accurate sensor do not automatically mean better health.",
-      "takeaway":"The wrist-wearable review finds more consistent benefits for physical activity than for many other health outcomes. The Long COVID messaging trial found no better main result than its comparison group.",
-      "ids":["method-jitai-annual-review-2026","intervention-long-covid-pace-me-2026","intervention-wrist-wearables-umbrella-2026"],
-      "dimensions":[
-        {"kind":"Methods","answer":"Choose when to help based on the person's situation","basis":"review","text":"The review describes support that adapts to changing circumstances, rather than sending the same advice on a fixed schedule.","ids":["method-jitai-annual-review-2026"]},
-        {"kind":"Data","answer":"Combine existing study results, not new sensor recordings","basis":"review","text":"One review brings together 39 reviews covering 98 studies to assess the effects of wrist-wearable feedback.","ids":["intervention-wrist-wearables-umbrella-2026"]},
-        {"kind":"Hardware","answer":"The example tests advice, not a new sensor","basis":"study","text":"Pace Me uses wearable activity tracking to trigger messages. It does not show that changing the device alone improves health.","ids":["intervention-long-covid-pace-me-2026"]},
-        {"kind":"Functions","answer":"Send a message when activity reaches a set level","basis":"study","text":"Pace Me uses this trigger to send advice about managing activity and energy to people with Long COVID.","ids":["intervention-long-covid-pace-me-2026"]},
-        {"kind":"Performance","answer":"More feedback does not always improve health","basis":"synthesis","text":"The review finds more consistent benefits for activity than for other outcomes. Pace Me did not improve its main symptom outcome compared with control.","ids":["intervention-wrist-wearables-umbrella-2026","intervention-long-covid-pace-me-2026"]},
-        {"kind":"New directions","answer":"Help at the right time without too many interruptions","basis":"review","text":"The review identifies timing and burden as problems researchers still need to solve. This is a research goal, not an available product feature.","ids":["method-jitai-annual-review-2026"]}
-      ],
-      "stories":[
         {
-          "id":"method-jitai-annual-review-2026","name":"Review of adaptive health support","date":"2026 journal volume · review","headline":"Choose a useful moment to offer support",
-          "change":"The review explains how support can adapt to a person’s changing needs and surroundings.",
-          "result":"It identifies continued use, burden and social context as design problems. It does not report one new performance score.",
-          "before":"Fixed or poorly timed support may arrive when a person cannot or will not use it.",
-          "benefit":"A guide for deciding what information a coaching system needs before it sends advice.",
-          "condition":"A review combines earlier work. Immediate responses to a message need not imply lasting health improvement.",
-          "source":"https://www.annualreviews.org/content/journals/10.1146/annurev-psych-121024-044244","locator":"Overview and research challenges","checked_on":"2026-10-08"
+          "start": 2000,
+          "end": 2018,
+          "headline": "Work out how to compare treatment choices",
+          "change": "Marginal structural models address changing treatment and patient history. Later repeated-randomisation trial designs test when support helps.",
+          "meaning": "Define the action and estimate its effect on the outcome of interest.",
+          "limit": "Estimating an effect from existing records requires assumptions; a randomised trial answers a different kind of evidence question.",
+          "ids": [
+            "method-msm-2000",
+            "method-mrt-health-psychology-2015"
+          ]
         },
         {
-          "id":"intervention-long-covid-pace-me-2026","name":"Pace Me trial","date":"2 Feb 2026 · randomised trial","headline":"Activity-triggered messages did not improve the main outcome",
-          "change":"The app adds a wearable tracker and messages at set activity levels to support energy management.",
-          "result":"The six-month trial randomised 250 people. It found no better main result for symptoms after exertion than the comparison group.",
-          "before":"The comparison app provided data-entry screens rather than the tracker-linked support package.",
-          "benefit":"A useful test case for checking whether sensing-linked advice adds benefit, not just features.",
-          "condition":"The final per-protocol analysis included 161 people. The finding applies to this Long COVID intervention, not all health messaging.",
-          "source":"https://www.nature.com/articles/s41467-025-64831-y","locator":"Abstract: design, participant counts and primary outcome","checked_on":"2026-10-08"
+          "start": 2019,
+          "end": 2023,
+          "headline": "Study the timing and sequence of actions",
+          "change": "HeartSteps tests walking suggestions at repeated moments. Causal Transformer estimates outcomes under changing treatment sequences.",
+          "meaning": "Compared with a single treatment choice, these examples ask when to act and how earlier decisions affect later outcomes.",
+          "limit": "A model's estimated treatment response is not the same as benefit demonstrated in a trial.",
+          "ids": [
+            "method-heartsteps-mrt-2019",
+            "method-causal-transformer-2022"
+          ]
         },
         {
-          "id":"intervention-wrist-wearables-umbrella-2026","name":"Review of wrist-wearable health effects","date":"2026 journal issue · first online Dec 2025","headline":"Activity benefits are clearer than wider health benefits",
-          "change":"The authors combine 39 systematic reviews covering 98 original studies of wearable-based feedback.",
-          "result":"Physical activity increased more consistently. Effects on several other outcomes were limited or inconsistent.",
-          "before":"Individual studies test different devices, support packages and outcomes, making isolated results hard to compare.",
-          "benefit":"Helps teams choose a specific outcome to test instead of promising a broad health improvement.",
-          "condition":"Most included reviews had low confidence ratings, and comparison groups differed. This is not a ranking of devices.",
-          "source":"https://pubmed.ncbi.nlm.nih.gov/41460208/","locator":"Authors’ abstract and publication dates","checked_on":"2026-10-08"
+          "start": 2024,
+          "end": 2024,
+          "headline": "Use richer sensor outcomes and responsive devices",
+          "change": "ADD MALTS compares patterns of wearable measurements. InTandem adjusts musical cues to a person's walking.",
+          "meaning": "Methods can retain more of the sensor record, while devices can change their output as movement changes.",
+          "limit": "The method and treatment studies use separate tasks and evaluation designs.",
+          "ids": [
+            "method-add-malts-2024",
+            "intervention-intandem-stroke-2024"
+          ]
+        },
+        {
+          "start": 2025,
+          "end": 2025,
+          "headline": "Check whether tailored advice improves health",
+          "change": "myBPmyLife tests activity and food suggestions in 602 adults with hypertension. It did not improve the main blood-pressure outcome compared with control.",
+          "meaning": "The main blood-pressure outcome remained similar between groups while some behaviours improved.",
+          "limit": "This result concerns this intervention and population, not every adaptive health system.",
+          "ids": [
+            "intervention-mybpmylife-2025"
+          ]
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "headline": "Add personal-data reasoning and more detailed movement feedback",
+          "change": "The Personal Health Agent coordinates analysis and coaching. EEG experiments detect movement mismatch during virtual and electrically stimulated actions.",
+          "meaning": "These functions help a system interpret needs and detect errors; outcome trials assess the effects of using the resulting support.",
+          "limit": "The assistant uses expert and user ratings; movement-error classification was tested in able-bodied volunteers.",
+          "ids": [
+            "signal-pha-nature-2026",
+            "signal-eeg-movement-errors-2026"
+          ]
         }
+      ],
+      "headline": "Wearable records guide health conversations and movement feedback",
+      "summary": "The Personal Health Agent combines data analysis with coaching. A separate EEG experiment detects when intended and stimulated arm movements differ. These studies add ways to interpret personal records and measure feedback. The existing trials show which advice and treatment packages changed health outcomes.",
+      "status": "Our comparison of assistant evaluations, feedback experiments and trials",
+      "use": "For coaching and rehabilitation teams: decide what the system must change, then measure that outcome. Conversation ratings, movement-error detection and treatment response answer different design questions.",
+      "takeaway": "New work improves the quality of health conversations and supplies a candidate feedback signal for stimulation. Existing outcome trials remain the basis for judging treatment benefit.",
+      "ids": [
+        "signal-pha-nature-2026",
+        "signal-eeg-movement-errors-2026",
+        "intervention-long-covid-pace-me-2026"
+      ],
+      "dimensions": [
+        {
+          "kind": "Methods",
+          "answer": "Coordinate analysis, health knowledge and coaching",
+          "basis": "study",
+          "text": "The Personal Health Agent assigns parts of a question to specialist agents and combines their responses.",
+          "ids": [
+            "signal-pha-nature-2026"
+          ]
+        },
+        {
+          "kind": "Data",
+          "answer": "Bring wearable histories into the health conversation",
+          "basis": "study",
+          "text": "The assistant uses wearable histories, laboratory results and conversation context. Experts and users evaluate its replies.",
+          "ids": [
+            "signal-pha-nature-2026"
+          ]
+        },
+        {
+          "kind": "Hardware",
+          "answer": "Combine EEG with virtual movement and electrical stimulation",
+          "basis": "prototype",
+          "text": "The movement study records EEG while participants compare intended movements with an avatar or stimulation of their own arm.",
+          "ids": [
+            "signal-eeg-movement-errors-2026"
+          ]
+        },
+        {
+          "kind": "Functions",
+          "answer": "Detect a mismatch that could guide the next action",
+          "basis": "study",
+          "text": "Error-related brain activity supplies feedback when a movement differs from its target.",
+          "ids": [
+            "signal-eeg-movement-errors-2026"
+          ]
+        },
+        {
+          "kind": "Performance",
+          "answer": "Measure the specific function being added",
+          "basis": "synthesis",
+          "text": "PHA's expert conversation-quality score is 72.8%, versus 54.4% for PHIA. The EEG study reports 91 ± 13% classification accuracy at its best tested feature window for large movement mismatches.",
+          "ids": [
+            "signal-pha-nature-2026",
+            "signal-eeg-movement-errors-2026"
+          ]
+        },
+        {
+          "kind": "New directions",
+          "answer": "Connect feedback to decisions, then test the resulting support",
+          "basis": "synthesis",
+          "text": "The new studies evaluate conversation quality and error detection. Existing randomized trials provide separate evidence about the health outcomes of a delivered intervention.",
+          "ids": [
+            "signal-pha-nature-2026",
+            "signal-eeg-movement-errors-2026",
+            "intervention-long-covid-pace-me-2026"
+          ]
+        }
+      ],
+      "stories": [
+        {
+          "id": "signal-pha-nature-2026",
+          "name": "Personal Health Agent",
+          "date": "2026-10-21 published · Nature",
+          "headline": "A health assistant combines calculations with personal coaching",
+          "change": "A coordinator brings together wearable-data analysis, health knowledge and personal coaching.",
+          "result": "Experts rated overall conversation quality at 72.8%, compared with 54.4% for PHIA and 64.3% for parallel agents.",
+          "before": "Single-agent PHIA or parallel specialists answer using the same Gemini backbone.",
+          "benefit": "Personal health assistants can connect calculations with advice, with response quality and latency assessed together.",
+          "condition": "The live study used 45 people role-playing 50 health-data personas; the outcome was conversation quality.",
+          "source": "https://www.nature.com/articles/s41586-026-11161-8",
+          "locator": "PHA evaluation and Supplementary Tables 38-39",
+          "checked_on": "2026-11-13"
+        },
+        {
+          "id": "signal-eeg-movement-errors-2026",
+          "name": "EEG movement-error feedback",
+          "date": "2026-11-09 published · npj Biomedical Innovations",
+          "headline": "Brain signals identify when an assisted movement misses its target",
+          "change": "EEG measures responses to mismatches between intended arm movements and an avatar or electrically stimulated movement.",
+          "result": "Five volunteers completed discrete-movement tests and 16 completed continuous-movement tests. At the best tested feature window, electrical-stimulation classification accuracy averaged 91 ± 13%.",
+          "before": "A stimulation controller needs feedback about whether its movement matches the person's intended movement.",
+          "benefit": "Detected movement errors provide a signal that future stimulation controllers could use for feedback.",
+          "condition": "Participants were able-bodied. Continuous-movement classifiers used large mismatches and unequal error/no-error trial counts.",
+          "source": "https://www.nature.com/articles/s44385-026-00123-4",
+          "locator": "Single-trial classifier performance and Fig. 7",
+          "checked_on": "2026-11-13"
+        },
+        {
+          "id": "intervention-long-covid-pace-me-2026",
+          "name": "Pace Me trial",
+          "date": "2 Feb 2026 · randomised trial",
+          "headline": "Activity-triggered messages did not improve the main outcome",
+          "change": "The app adds a wearable tracker and messages at set activity levels to support energy management.",
+          "result": "The six-month trial randomised 250 people. It found no better main result for symptoms after exertion than the comparison group.",
+          "before": "The comparison app provided data-entry screens rather than the tracker-linked support package.",
+          "benefit": "Helps teams assess the added value of a tracker-linked support package.",
+          "condition": "The six-month Long COVID trial randomized 250 people; its final per-protocol analysis included 161.",
+          "source": "https://www.nature.com/articles/s41467-025-64831-y",
+          "locator": "Abstract: design, participant counts and primary outcome",
+          "checked_on": "2026-10-08"
+        }
+      ],
+      "latest_summary": "A Nature health assistant coordinates analysis and coaching. A November EEG study detects errors during avatar and electrically stimulated arm movements.",
+      "latest_ids": [
+        "signal-pha-nature-2026",
+        "signal-eeg-movement-errors-2026"
       ]
     },
     "twin": {
       "description": "Models of an individual's changing physiology, updated with personal data to simulate possible trajectories and treatment choices.",
       "evolution": [
-        {"start":2025,"end":2025,"headline":"Test a personal model inside insulin treatment","change":"A trial tests digital-twin-supported experimentation as part of automated insulin delivery.","meaning":"The model is studied within a treatment system, rather than as a stand-alone prediction demo.","limit":"This is a diabetes-specific example. The column has too few primary records for a broad historical trend.","ids":["intervention-aid-digital-twin-coadaptation-2025"]},
-        {"start":2026,"end":2026,"headline":"Update personal feedback and propose treatment comparisons","change":"A small type 2 diabetes study retrains models weekly and sends daily feedback. A separate causal-twin paper proposes how to compare possible actions.","meaning":"Compared with the 2025 insulin example, the collection adds a different diabetes-care use and a framework for treatment reasoning.","limit":"The studies concern different systems and populations; this does not establish improvement over the 2025 trial. The causal framework is not a clinical result.","ids":["signal-t2d-predictive-twin-2026","method-causal-digital-twins-2026"]}
-      ],
-      "headline":"Personal models are being tested for feedback and treatment decisions",
-      "summary":"The concrete examples link a model of one person to repeated feedback or treatment adjustment. The common direction is a model that keeps being used and updated, rather than a one-time prediction. The evidence here remains specific to diabetes.",
-      "status":"Our comparison of disease-specific studies and a proposed method",
-      "use":"For teams building personal models: specify what the model represents, how often it updates and which decision it supports. Test that decision before calling the system a complete digital twin.",
-      "takeaway":"The 2026 study updates models weekly and sends daily feedback, but includes only 19 people. Earlier insulin-delivery work provides a separate trial example; it is not an October 2026 breakthrough.",
-      "ids":["signal-t2d-predictive-twin-2026","intervention-aid-digital-twin-coadaptation-2025","method-causal-digital-twins-2026"],
-      "dimensions":[
-        {"kind":"Methods","answer":"Update the personal model as new data arrives","basis":"study","text":"The 2026 type 2 diabetes study retrains each person's model weekly, instead of leaving it unchanged after its initial training.","ids":["signal-t2d-predictive-twin-2026"]},
-        {"kind":"Data","answer":"A small study of 19 people","basis":"study","text":"This is the group analysed in the newer diabetes study, not a large new public dataset for general personal-health models.","ids":["signal-t2d-predictive-twin-2026"]},
-        {"kind":"Hardware","answer":"Use a personal model within an insulin-delivery system","basis":"study","text":"The 2025 trial studies model-supported treatment adjustment. It is not evidence of a new general-purpose body sensor.","ids":["intervention-aid-digital-twin-coadaptation-2025"]},
-        {"kind":"Functions","answer":"Give daily feedback between care visits","basis":"study","text":"The 2026 study combines weekly model updates with daily text messages. This is one diabetes-care example, not the full scope of personal models.","ids":["signal-t2d-predictive-twin-2026"]},
-        {"kind":"Performance","answer":"Weight outcomes differed; glucose stayed stable","basis":"study","text":"The small 2026 study reports these outcomes for its two groups. It does not show that all personal-health models improve care.","ids":["signal-t2d-predictive-twin-2026"]},
-        {"kind":"New directions","answer":"Estimate what a different treatment might change","basis":"proposal","text":"The causal-twin paper proposes a framework for comparing choices. It has not demonstrated a working simulator of an entire person.","ids":["method-causal-digital-twins-2026"]}
-      ],
-      "stories":[
         {
-          "id":"signal-t2d-predictive-twin-2026","name":"Type 2 diabetes predictive twin","date":"8 Jul 2026 · small trial","headline":"Weekly model updates support daily personal feedback",
-          "change":"Personal models are retrained weekly and generate daily text-message suggestions, with nurse-scored safeguards.",
-          "result":"The analysis includes 19 people: 10 in the AI group and 9 in the comparison group. Weight outcomes differed; glucose stayed stable.",
-          "before":"The comparison uses self-monitoring and periodic care without model-generated daily feedback.",
-          "benefit":"Shows one way to connect a personal model with support between visits.",
-          "condition":"This small, single-centre study does not establish better glucose control or a full real-time model of the body.",
-          "source":"https://www.nature.com/articles/s44401-026-00118-8","locator":"Methods: participant selection and model updates; results","checked_on":"2026-10-08"
+          "start": 2025,
+          "end": 2025,
+          "headline": "Test a personal model inside insulin treatment",
+          "change": "A trial tests digital-twin-supported experimentation as part of automated insulin delivery.",
+          "meaning": "The trial evaluates the personal model within a treatment system.",
+          "limit": "The trial evaluates a diabetes-specific treatment package.",
+          "ids": [
+            "intervention-aid-digital-twin-coadaptation-2025"
+          ]
         },
         {
-          "id":"intervention-aid-digital-twin-coadaptation-2025","name":"Twin-supported insulin-delivery trial","date":"May 2025 · earlier comparison study","headline":"Test the personal model inside a treatment system",
-          "change":"Individual glucose–insulin models support treatment adjustment as part of a larger care package.",
-          "result":"The repository’s source review reports 72 participants over six months and improved time in the target glucose range for the full package.",
-          "before":"The study compares twin-guided adjustment with conventional feedback around automated insulin delivery.",
-          "benefit":"An earlier example of evaluating an action supported by the model, rather than only prediction accuracy.",
-          "condition":"This summary relies on the repository’s 4 Oct source review; the publisher page could not be reopened in this check. The trial concerns type 1 diabetes and the full package, not an unrestricted body simulator.",
-          "source":"https://www.nature.com/articles/s41746-025-01679-y","locator":"Repository source review: aid-twin-baseline-2025","checked_on":"2026-10-04","verification":"Existing source review retained; original page could not be reopened in this check"
-        },
-        {
-          "id":"method-causal-digital-twins-2026","name":"Causal digital-twin proposal","date":"Feb 2026 · proposed method","headline":"Ask what a different treatment would change",
-          "change":"The proposal connects personal models with methods for comparing alternative actions over time.",
-          "result":"It offers a design framework, not a new dataset or a clinical performance result.",
-          "before":"A model that predicts a person’s future does not by itself show the effect of changing treatment.",
-          "benefit":"A checklist for separating prediction from action claims in personal-model projects.",
-          "condition":"Summarised from the existing reviewed repository entry. Assumptions about cause and effect still need to be checked in each application.",
-          "source":"https://link.springer.com/article/10.1186/s12967-026-07895-8","locator":"Existing repository entry and source review","checked_on":"2026-10-04","verification":"Existing source review retained; original paper not rechecked in this pass"
+          "start": 2026,
+          "end": 2026,
+          "headline": "Check forecast errors and update the personal model",
+          "change": "The ICU glucose study tests error-triggered adaptation with 15- and 30-minute forecasts. Another diabetes study uses weekly retraining and daily feedback.",
+          "meaning": "A personal model can be designed around a measurable update loop, with a defined task and time horizon.",
+          "limit": "The ICU study is retrospective and evaluates forecasting; the daily-feedback study is a separate small trial.",
+          "ids": [
+            "signal-septic-glucose-twin-2026",
+            "signal-t2d-predictive-twin-2026"
+          ]
         }
+      ],
+      "headline": "Personal models update their predictions as new measurements arrive",
+      "summary": "The new ICU glucose study tests a concrete update loop: predict, check the next measurements and adapt when errors grow. Earlier diabetes studies connect personal models to treatment adjustment or daily feedback. The engineering choices are what the model represents, how it updates and which decision it informs.",
+      "status": "Our comparison of individual glucose models and treatment frameworks",
+      "use": "For teams building personal models: specify the measurements, prediction horizon and update rule. Keep forecast evaluation and treatment evaluation distinct in the development plan.",
+      "takeaway": "The October study adapts a pretrained model to ten ICU patients in seconds on a laptop, then tests rolling 15- and 30-minute glucose forecasts.",
+      "ids": [
+        "signal-septic-glucose-twin-2026",
+        "signal-t2d-predictive-twin-2026",
+        "intervention-aid-digital-twin-coadaptation-2025"
+      ],
+      "dimensions": [
+        {
+          "kind": "Methods",
+          "answer": "Update the model when new readings show growing errors",
+          "basis": "study",
+          "text": "The ICU study uses a pretrained PatchTST model and checks its forecasts against incoming glucose measurements.",
+          "ids": [
+            "signal-septic-glucose-twin-2026"
+          ]
+        },
+        {
+          "kind": "Data",
+          "answer": "Use repeated measurements from the person being modelled",
+          "basis": "study",
+          "text": "The new study evaluates ten septic ICU patients after pretraining on one patient's glucose data.",
+          "ids": [
+            "signal-septic-glucose-twin-2026"
+          ]
+        },
+        {
+          "kind": "Hardware",
+          "answer": "Run adaptation on a laptop using continuous glucose records",
+          "basis": "study",
+          "text": "The contribution is the model-update workflow and its computation time. The study uses inpatient CGM recordings.",
+          "ids": [
+            "signal-septic-glucose-twin-2026"
+          ]
+        },
+        {
+          "kind": "Functions",
+          "answer": "Forecast the next 15 or 30 minutes of glucose",
+          "basis": "synthesis",
+          "text": "The model uses the latest 30 minutes of measurements. Earlier diabetes work uses model updates to support daily feedback.",
+          "ids": [
+            "signal-septic-glucose-twin-2026",
+            "signal-t2d-predictive-twin-2026"
+          ]
+        },
+        {
+          "kind": "Performance",
+          "answer": "Measure adaptation time and patient-specific forecast error",
+          "basis": "study",
+          "text": "Personalization takes seconds on a standard laptop. The retrospective tests compare ways to adapt predictions to each patient.",
+          "ids": [
+            "signal-septic-glucose-twin-2026"
+          ]
+        },
+        {
+          "kind": "New directions",
+          "answer": "Connect individual prediction with decisions about support",
+          "basis": "synthesis",
+          "text": "The ICU workflow checks forecasts continuously. Earlier insulin-care and feedback studies evaluate other ways to use personal models.",
+          "ids": [
+            "signal-septic-glucose-twin-2026",
+            "intervention-aid-digital-twin-coadaptation-2025",
+            "signal-t2d-predictive-twin-2026"
+          ]
+        }
+      ],
+      "stories": [
+        {
+          "id": "signal-septic-glucose-twin-2026",
+          "name": "Adaptive ICU glucose twin",
+          "date": "2026-10-01 published · npj Metabolic Health and Disease",
+          "headline": "A personal glucose model checks and updates its forecasts",
+          "change": "A pretrained PatchTST model checks new glucose readings and adapts when forecast errors require an update.",
+          "result": "Ten septic ICU patients were evaluated after pretraining on one patient's data. Thirty minutes of readings supported 15- or 30-minute forecasts; personalization took seconds on a laptop.",
+          "before": "A fixed model forecasts without checking when an individual's signal patterns have changed.",
+          "benefit": "A personal model needs a defined update rule, a prediction horizon and a way to check its errors.",
+          "condition": "The retrospective study tested inpatient glucose forecasts; dosing decisions remained outside the evaluated workflow.",
+          "source": "https://www.nature.com/articles/s44324-026-00132-2",
+          "locator": "Digital twin workflow; methods for the ten additional ICU patients",
+          "checked_on": "2026-11-13"
+        },
+        {
+          "id": "signal-t2d-predictive-twin-2026",
+          "name": "Type 2 diabetes predictive twin",
+          "date": "8 Jul 2026 · small trial",
+          "headline": "Weekly model updates support daily personal feedback",
+          "change": "Personal models are retrained weekly and generate daily text-message suggestions, with nurse-scored safeguards.",
+          "result": "Nineteen people were analysed: 10 in the AI group and 9 in the comparison group. Weight outcomes differed; glucose remained stable.",
+          "before": "The comparison uses self-monitoring and periodic care without model-generated daily feedback.",
+          "benefit": "Shows one way to connect a personal model with support between visits.",
+          "condition": "Single-centre analysis of 19 participants, with nurse-scored safeguards. Glucose remained stable during the study.",
+          "source": "https://www.nature.com/articles/s44401-026-00118-8",
+          "locator": "Methods: participant selection and model updates; results",
+          "checked_on": "2026-10-08"
+        },
+        {
+          "id": "intervention-aid-digital-twin-coadaptation-2025",
+          "name": "Twin-supported insulin-delivery trial",
+          "date": "May 2025 · earlier comparison study",
+          "headline": "Test the personal model inside a treatment system",
+          "change": "Individual glucose-insulin models support treatment adjustment as part of a larger care package.",
+          "result": "The repository’s source review reports 72 participants over six months and improved time in the target glucose range for the full package.",
+          "before": "The study compares twin-guided adjustment with conventional feedback around automated insulin delivery.",
+          "benefit": "An earlier trial of treatment decisions supported by a personal model.",
+          "condition": "Six-month, 72-participant diabetes trial of the full twin-supported treatment package.",
+          "source": "https://www.nature.com/articles/s41746-025-01679-y",
+          "locator": "Repository source review: aid-twin-baseline-2025",
+          "checked_on": "2026-10-04",
+          "verification": "Existing source review retained; original page could not be reopened in this check"
+        }
+      ],
+      "latest_summary": "An October glucose study tests rapid patient adaptation and error-triggered updates. Its data come from ICU monitoring; earlier work covers personal diabetes feedback and insulin care.",
+      "latest_ids": [
+        "signal-septic-glucose-twin-2026"
       ]
     },
     "interface": {
       "description": "Wearable sensing, body input and mixed reality as potential ways to display and interact with a personal digital twin.",
       "evolution": [
-        {"start":2008,"end":2018,"headline":"Build datasets for brain and muscle controls","change":"Motor-imagery and hand-movement datasets support testing interfaces driven by brain or muscle recordings. MOABB makes brain-interface comparisons more consistent.","meaning":"These resources make controlled comparisons possible before claiming that an interface works across users.","limit":"A benchmark is not a finished wearable product.","ids":["dataset-bci-competition-iv-2a","dataset-ninapro","infra-moabb"]},
-        {"start":2022,"end":2022,"headline":"Include what the wearer sees in daily life","change":"Ego4D provides videos recorded from the wearer's viewpoint during everyday activities.","meaning":"Alongside body-signal controls, researchers can study actions in their visual surroundings.","limit":"This is another research branch, not a replacement for brain or muscle sensing.","ids":["dataset-ego4d"]},
-        {"start":2024,"end":2024,"headline":"Link viewpoints and record detailed hand actions","change":"Ego-Exo4D pairs wearer and outside views. emg2pose and emg2qwerty provide wrist-muscle data for hand pose and typing.","meaning":"The data support more detailed questions than which broad activity or gesture occurred.","limit":"Dataset access does not by itself demonstrate a reliable interface in everyday use.","ids":["dataset-ego-exo4d","dataset-emg2pose","dataset-emg2qwerty"]},
-        {"start":2025,"end":2025,"headline":"Train muscle controls across people and tasks","change":"The generic neuromotor-interface study trains a noninvasive muscle-signal model across users and interaction tasks.","meaning":"Compared with collecting labelled movements, the focus is now how widely one control model can be reused.","limit":"Performance still depends on the task, device and user conditions that were tested.","ids":["model-generic-neuromotor-interface-2025"]},
-        {"start":2026,"end":2026,"headline":"Try optical muscle controls and open glasses app tools","change":"An optical wristband tests continuous cursor control using light-based muscle sensing. Meta announces supported tools for connecting apps to AI glasses.","meaning":"One branch changes the sensing hardware; another gives developers access to device functions. They are different kinds of progress.","limit":"The optical interface is a small research study. Glasses features have separate rollout and preview conditions.","ids":["model-wearable-optomyography-2026","signal-meta-dat-1-2026"]}
-      ],
-      "headline":"Wearables are gaining new body controls and more app-building tools",
-      "summary":"Two related developments stand out: research uses muscle signals for continuous device control, while glasses makers expose more inputs to apps. Together they suggest more ways to interact without a handheld controller. Research tests and product availability remain separate questions.",
-      "status":"Our synthesis of sensor research and company announcements",
-      "use":"For interface teams: separate input accuracy, user calibration and app access. A working research sensor and an announced software toolkit are different levels of readiness.",
-      "takeaway":"The optical wristband study tested nine people. Meta’s September toolkit update is a company-announced release, not an independent test showing better accuracy or longer battery life.",
-      "ids":["model-wearable-optomyography-2026","signal-meta-dat-1-2026"],
-      "dimensions":[
-        {"kind":"Methods","answer":"Use muscle signals for continuous device control","basis":"synthesis","text":"The interface studies examine controls such as moving a cursor, rather than only recognising a fixed set of separate gestures.","ids":["model-wearable-optomyography-2026","model-generic-neuromotor-interface-2025"]},
-        {"kind":"Data","answer":"An earlier dataset links wearer and outside views","basis":"dataset","text":"Ego-Exo4D records the same activity from different viewpoints. It supports this research but is not a new 2026 dataset.","ids":["dataset-ego-exo4d"]},
-        {"kind":"Hardware","answer":"A research wristband reads muscle movement using light","basis":"prototype","text":"The optical wristband uses 50 recording channels. It is a research prototype, not a confirmed retail-device upgrade.","ids":["model-wearable-optomyography-2026"]},
-        {"kind":"Functions","answer":"Let mobile apps use glasses and body inputs","basis":"product","text":"Meta announced an app-development toolkit. Some related tools are still in preview or early access, so availability must be checked feature by feature.","ids":["signal-meta-dat-1-2026"]},
-        {"kind":"Performance","answer":"Small user tests, not a consumer-device ranking","basis":"prototype","text":"Nine participants learned the optical wristband controls. This does not establish better accuracy or battery life than retail devices.","ids":["model-wearable-optomyography-2026"]},
-        {"kind":"New directions","answer":"Build apps that use glasses and body movements","basis":"product","text":"The announced tools give developers another way to receive user input. They do not by themselves create a personal health model.","ids":["signal-meta-dat-1-2026"]}
-      ],
-      "stories":[
         {
-          "id":"signal-meta-dat-1-2026","name":"Meta Wearables Device Access Toolkit","date":"Rollout announced for 30 Sep 2026 · company news","headline":"A supported toolkit for building glasses apps",
-          "change":"Meta announced a supported release after its developer-preview period, with app access to glasses and body inputs.",
-          "result":"This changes what developers can connect to apps. It is an availability announcement, not a measured performance gain.",
-          "before":"Earlier integrations relied on a developer-preview toolkit and testing mode.",
-          "benefit":"Relevant to mobile teams exploring hands-free app interactions.",
-          "condition":"WebMCP is still preview, connectors are early access and discovery is described as coming soon. Check each feature separately.",
-          "source":"https://developers.meta.com/blog/meta-connect-recap-ai-glasses/","locator":"Device Access Toolkit section and rollout notice","checked_on":"2026-10-08"
+          "start": 2008,
+          "end": 2018,
+          "headline": "Build datasets for brain and muscle controls",
+          "change": "Motor-imagery and hand-movement datasets support testing interfaces driven by brain or muscle recordings. MOABB makes brain-interface comparisons more consistent.",
+          "meaning": "These resources make controlled comparisons possible before claiming that an interface works across users.",
+          "limit": "The work supplies recordings and a benchmark for testing sensing models.",
+          "ids": [
+            "dataset-bci-competition-iv-2a",
+            "dataset-ninapro",
+            "infra-moabb"
+          ]
         },
         {
-          "id":"model-wearable-optomyography-2026","name":"Optical muscle-sensing wristband","date":"21 Mar 2026 · research prototype","headline":"Use light-based muscle sensing for cursor control",
-          "change":"A 50-channel wristband and a small neural network translate muscle activity into computer controls.",
-          "result":"Eight participants without limb loss and one participant with limb loss learned cursor tasks and Tetris controls.",
-          "before":"The study investigates an optical alternative to skin electrodes that read muscle electrical activity.",
-          "benefit":"A prototype to study for continuous hands-free control and alternative sensor design.",
-          "condition":"Users need calibration and training. This small study does not prove a retail-device upgrade or a general speed advantage over every electrical sensor.",
-          "source":"https://www.nature.com/articles/s41598-025-32646-y","locator":"Abstract and Figure 1: hardware, calibration and participants","checked_on":"2026-10-08"
+          "start": 2022,
+          "end": 2022,
+          "headline": "Include what the wearer sees in daily life",
+          "change": "Ego4D provides videos recorded from the wearer's viewpoint during everyday activities.",
+          "meaning": "Alongside body-signal controls, researchers can study actions in their visual surroundings.",
+          "limit": "This branch studies body input through a different sensing approach.",
+          "ids": [
+            "dataset-ego4d"
+          ]
         },
         {
-          "id":"dataset-ego-exo4d","name":"Ego-Exo4D","date":"2024 · earlier dataset in the collection","headline":"Study the same activity from the wearer and outside cameras",
-          "change":"Paired recordings connect what a person sees with their actions in the surrounding scene.",
-          "result":"The repository lists more than 1,400 hours. This is a data resource, not a new glasses function.",
-          "before":"A single camera view does not show both the wearer’s view and the full external scene.",
-          "benefit":"Useful background data for teams studying movements in context.",
-          "condition":"This summary uses the existing repository entry, not a newly checked data release. Read the dataset’s access terms before reuse.",
-          "source":"https://ego-exo4d-data.org/","locator":"Existing dataset entry: scale, contribution and access","checked_on":"2026-10-08","verification":"Repository entry read; original dataset site not rechecked in this pass"
+          "start": 2024,
+          "end": 2024,
+          "headline": "Link viewpoints and record detailed hand actions",
+          "change": "Ego-Exo4D pairs wearer and outside views. emg2pose and emg2qwerty provide wrist-muscle data for hand pose and typing.",
+          "meaning": "The data support more detailed questions than which broad activity or gesture occurred.",
+          "limit": "The dataset supports testing first-person context and interactions under the study's recording conditions.",
+          "ids": [
+            "dataset-ego-exo4d",
+            "dataset-emg2pose",
+            "dataset-emg2qwerty"
+          ]
+        },
+        {
+          "start": 2025,
+          "end": 2025,
+          "headline": "Train muscle controls across people and tasks",
+          "change": "The generic neuromotor-interface study trains a noninvasive muscle-signal model across users and interaction tasks.",
+          "meaning": "Compared with collecting labelled movements, the focus is now how widely one control model can be reused.",
+          "limit": "Performance still depends on the task, device and user conditions that were tested.",
+          "ids": [
+            "model-generic-neuromotor-interface-2025"
+          ]
+        },
+        {
+          "start": 2026,
+          "end": 2026,
+          "headline": "Improve long-term input and integrate touch with wearable displays",
+          "change": "Dry electrodes support multiday muscle-signal control. Magnetic sensing tracks muscle movement, and pixel fibres combine touch sensing with a garment display.",
+          "meaning": "Input stability and usable output surfaces are practical design targets alongside richer software.",
+          "limit": "These studies evaluate research prototypes; their tasks and sensors differ.",
+          "ids": [
+            "signal-stable-emg-electrodes-2026",
+            "signal-magnetic-muscle-interface-2026",
+            "signal-pixel-fibre-nature-2026"
+          ]
         }
+      ],
+      "headline": "More stable body input and touch displays expand wearable interaction",
+      "summary": "New electrodes keep muscle-signal decoding stable for days. Magnetic beads let an external sensor measure muscle movement directly. Pixel fibres turn a garment sleeve into a touch-sensitive display. These studies address different parts of an interface: acquiring signals, controlling a device and showing information.",
+      "status": "Our comparison of sensing and interaction prototypes",
+      "use": "For wearable-interface teams: compare calibration effort, movement tracking and interaction tasks. Separate laboratory prototypes from products available to users.",
+      "takeaway": "The dry-electrode study maintains EMG control for 14 days without retraining. The textile prototype combines a 96 × 54-pixel display with touch input.",
+      "ids": [
+        "signal-stable-emg-electrodes-2026",
+        "signal-magnetic-muscle-interface-2026",
+        "signal-pixel-fibre-nature-2026"
+      ],
+      "dimensions": [
+        {
+          "kind": "Methods",
+          "answer": "Improve signal stability at the body interface",
+          "basis": "synthesis",
+          "text": "Carbon-nanotube dry electrodes reduce drift. Magnetic sensing measures muscle mechanics alongside the electrical activity used by EMG.",
+          "ids": [
+            "signal-stable-emg-electrodes-2026",
+            "signal-magnetic-muscle-interface-2026"
+          ]
+        },
+        {
+          "kind": "Data",
+          "answer": "Test real control tasks over time",
+          "basis": "synthesis",
+          "text": "The electrode study follows 14 days without decoder retraining. Three participants with amputations test magnetic control of a virtual ankle-foot cursor.",
+          "ids": [
+            "signal-stable-emg-electrodes-2026",
+            "signal-magnetic-muscle-interface-2026"
+          ]
+        },
+        {
+          "kind": "Hardware",
+          "answer": "Add stable electrodes, magnetic tracking and textile displays",
+          "basis": "synthesis",
+          "text": "The new work changes the sensing contact, the measured physical signal and the surface used for display and touch.",
+          "ids": [
+            "signal-stable-emg-electrodes-2026",
+            "signal-magnetic-muscle-interface-2026",
+            "signal-pixel-fibre-nature-2026"
+          ]
+        },
+        {
+          "kind": "Functions",
+          "answer": "Use body signals for control and clothing for touch input",
+          "basis": "synthesis",
+          "text": "Magnetic tracking drives a virtual prosthetic cursor. Pixel fibres support touch, video and wireless image transfer on a sleeve.",
+          "ids": [
+            "signal-magnetic-muscle-interface-2026",
+            "signal-pixel-fibre-nature-2026"
+          ]
+        },
+        {
+          "kind": "Performance",
+          "answer": "Read the measurement that matches the interface task",
+          "basis": "synthesis",
+          "text": "EMG control remains stable for 14 days. The sleeve provides 96 × 54 pixels, 8-bit colour and 30 frames per second for video without audio.",
+          "ids": [
+            "signal-stable-emg-electrodes-2026",
+            "signal-pixel-fibre-nature-2026"
+          ]
+        },
+        {
+          "kind": "New directions",
+          "answer": "Connect wearable sensing with displays that fit daily use",
+          "basis": "synthesis",
+          "text": "The new prototypes cover stable input, body control and garment output. Smart-glasses software remains another route for presenting information.",
+          "ids": [
+            "signal-stable-emg-electrodes-2026",
+            "signal-pixel-fibre-nature-2026",
+            "signal-meta-dat-1-2026"
+          ]
+        }
+      ],
+      "stories": [
+        {
+          "id": "signal-stable-emg-electrodes-2026",
+          "name": "Multi-day EMG electrodes",
+          "date": "2026-10-13 published · Nature Communications",
+          "headline": "Keep muscle-signal control stable without daily retraining",
+          "change": "Breathable carbon-nanotube dry electrodes maintain skin contact and reduce drift and movement artifacts.",
+          "result": "The multichannel EMG interface maintained task performance for 14 days without decoder retraining after minutes of initial training.",
+          "before": "Changes at the electrode-skin contact can force muscle-signal decoders to be recalibrated.",
+          "benefit": "Stable sensing hardware can reduce the calibration work required for long-term body-input systems.",
+          "condition": "The result concerns the tested electrophysiology interface and recording conditions.",
+          "source": "https://www.nature.com/articles/s41467-026-78169-6",
+          "locator": "Abstract and multiday EMG interface results",
+          "checked_on": "2026-11-13"
+        },
+        {
+          "id": "signal-magnetic-muscle-interface-2026",
+          "name": "Magnetic muscle sensing",
+          "date": "2026-10-29 published · Nature Sensors",
+          "headline": "Track muscle movement directly for virtual prosthetic control",
+          "change": "A skin-mounted array tracks 3-mm implanted magnetic beads to measure muscle movement directly.",
+          "result": "Three participants with below-knee amputations controlled a virtual ankle-foot cursor. The system tracked beads at depths up to 6 cm with sub-millimetre resolution.",
+          "before": "EMG interfaces infer movement from muscle electrical activity.",
+          "benefit": "Muscle mechanics offer another input alongside electrical signals for assistive-device control.",
+          "condition": "Participants controlled an on-screen cursor representing prosthetic movement; walking with a physical prosthesis was outside this experiment.",
+          "source": "https://www.nature.com/articles/s44460-026-00157-6",
+          "locator": "Abstract and three-participant cursor-control experiment",
+          "checked_on": "2026-11-13"
+        },
+        {
+          "id": "signal-pixel-fibre-nature-2026",
+          "name": "Touch-sensitive textile display",
+          "date": "2026-10-21 published · Nature",
+          "headline": "A garment sleeve becomes a touch-sensitive display",
+          "change": "One fibre architecture combines individually addressable LEDs, connections and touch sensing in a garment sleeve.",
+          "result": "The prototype has 96 × 54 pixels, 8-bit colour and 30 frames per second, with touch input and wireless image transfer.",
+          "before": "Fibre displays separated display circuitry from touch localization.",
+          "benefit": "Clothing can display information and accept touch input at the same surface.",
+          "condition": "The 30-frame rate is for video without audio; synchronized audio-video was demonstrated at 25 frames per second.",
+          "source": "https://www.nature.com/articles/s41586-026-11128-9",
+          "locator": "Abstract and supplementary video demonstrations",
+          "checked_on": "2026-11-13"
+        }
+      ],
+      "latest_summary": "Nature-family papers add longer-lasting EMG input, magnetic muscle tracking and a touch-sensitive garment display. Each improves a different part of wearable interaction.",
+      "latest_ids": [
+        "signal-magnetic-muscle-interface-2026",
+        "signal-pixel-fibre-nature-2026"
       ]
     }
   }

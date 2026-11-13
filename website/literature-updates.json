@@ -1,0 +1,824 @@
+{
+  "reviewed_on": "2026-11-13",
+  "window": {
+    "start": "2026-10-05",
+    "end": "2026-11-13"
+  },
+  "coverage_note": "November additions cover Nature Portfolio research and 2026 NeurIPS, ICML and ICLR papers. Each entry gives its source date and publication status; earlier work remains available for comparison. Original registry totals retain their existing cutoff.",
+  "assessments": [
+    {
+      "route": "prediction",
+      "kind": "emerging_pattern",
+      "headline": "Models learn across signals, devices and longer records",
+      "summary": "xMAE uses ECG-PPG timing, BioX-Bridge transfers between signals and EEG-X transfers across headsets. HEARTS and EmoPhone test reasoning and changes in recording conditions.",
+      "limit": "Results are task-specific; the wearable-API study reports weak substance-use and craving prediction even after personalization.",
+      "signal_ids": [
+        "xmae-icml-2026",
+        "biox-bridge-iclr-2026",
+        "eeg-x-neurips-2026",
+        "hearts-icml-2026",
+        "emophone-neurips-2026",
+        "wearable-api-craving-2026"
+      ]
+    },
+    {
+      "route": "intervention",
+      "kind": "emerging_pattern",
+      "headline": "Personal health data enter coaching and movement feedback",
+      "summary": "The Personal Health Agent coordinates analysis and coaching. EEG movement-error detection supplies a feedback signal for stimulation systems.",
+      "limit": "These new studies measure conversation quality and laboratory error detection; treatment outcomes remain reported with the existing trials.",
+      "signal_ids": [
+        "pha-nature-2026",
+        "eeg-movement-errors-2026"
+      ]
+    },
+    {
+      "route": "twin",
+      "kind": "emerging_pattern",
+      "headline": "Personal models update when new measurements arrive",
+      "summary": "The ICU glucose twin tests fast patient adaptation and error-triggered updates. Earlier diabetes work links model updates to daily feedback and treatment support.",
+      "limit": "The new ICU study uses ten patients' retrospective glucose recordings; the evaluated output is a short-horizon forecast.",
+      "signal_ids": [
+        "septic-glucose-twin-2026",
+        "t2d-predictive-twin-2026",
+        "aid-twin-baseline-2025"
+      ]
+    },
+    {
+      "route": "interface",
+      "kind": "emerging_pattern",
+      "headline": "Wearable input stays stable longer, and clothing adds touch displays",
+      "summary": "Dry electrodes reduce repeated calibration, implanted magnets track muscle mechanics and pixel fibres combine display with touch input.",
+      "limit": "The new studies evaluate research interfaces and prototypes; the magnetic-control experiment uses a virtual prosthetic cursor.",
+      "signal_ids": [
+        "stable-emg-electrodes-2026",
+        "magnetic-muscle-interface-2026",
+        "pixel-fibre-nature-2026"
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "id": "pha-nature-2026",
+      "route": "intervention",
+      "secondary_routes": [
+        "prediction"
+      ],
+      "types": [
+        "method",
+        "performance",
+        "direction"
+      ],
+      "publication_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "verified_on": "2026-11-13",
+      "temporal_role": "update",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "Personal Health Agent",
+      "title": "The anatomy of a personal health agent",
+      "venue": "Nature",
+      "publication_status": "Published research article",
+      "article_type": "Health-assistant evaluation",
+      "resource_type": "method",
+      "registry_ids": [],
+      "before": "Single-agent PHIA or parallel specialists answer using the same Gemini backbone.",
+      "after": "A coordinator brings together wearable-data analysis, health knowledge and personal coaching.",
+      "evidence": "Experts rated overall conversation quality at 72.8%, compared with 54.4% for PHIA and 64.3% for parallel agents.",
+      "limit": "The live study used 45 people role-playing 50 health-data personas; the outcome was conversation quality.",
+      "implication": "Personal health assistants can connect calculations with advice, with response quality and latency assessed together.",
+      "availability": "Research implementation and evaluation materials released by the authors.",
+      "comparison": {
+        "baseline": "Single-agent PHIA and parallel specialists, using the same Gemini backbone.",
+        "result": "Expert overall quality: 72.8% for PHA, 54.4% for PHIA and 64.3% for parallel specialists.",
+        "conditions": "Role-played health conversations; reported in the PHA evaluation and Supplementary Tables 38-39."
+      },
+      "sources": [
+        {
+          "title": "Nature article and evaluation",
+          "url": "https://www.nature.com/articles/s41586-026-11161-8"
+        },
+        {
+          "title": "Earlier manuscript",
+          "url": "https://arxiv.org/abs/2508.20148"
+        }
+      ],
+      "keywords": [
+        "Health coaching",
+        "Wearable histories",
+        "Multi-agent systems"
+      ]
+    },
+    {
+      "id": "pixel-fibre-nature-2026",
+      "route": "interface",
+      "secondary_routes": [],
+      "types": [
+        "hardware",
+        "product"
+      ],
+      "publication_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "verified_on": "2026-11-13",
+      "temporal_role": "update",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "Touch-sensitive textile display",
+      "title": "Touch-sensing digital pixel fibre enables interactive garment GUI",
+      "venue": "Nature",
+      "publication_status": "Published research article",
+      "article_type": "Wearable interface prototype",
+      "resource_type": "infrastructure",
+      "registry_ids": [],
+      "before": "Fibre displays separated display circuitry from touch localization.",
+      "after": "One fibre architecture combines individually addressable LEDs, connections and touch sensing in a garment sleeve.",
+      "evidence": "The prototype has 96 × 54 pixels, 8-bit colour and 30 frames per second, with touch input and wireless image transfer.",
+      "limit": "The 30-frame rate is for video without audio; synchronized audio-video was demonstrated at 25 frames per second.",
+      "implication": "Clothing can display information and accept touch input at the same surface.",
+      "availability": "Research garment prototype.",
+      "sources": [
+        {
+          "title": "Nature article and demonstrations",
+          "url": "https://www.nature.com/articles/s41586-026-11128-9"
+        }
+      ],
+      "keywords": [
+        "Textile electronics",
+        "Wearable display",
+        "Touch input"
+      ]
+    },
+    {
+      "id": "stable-emg-electrodes-2026",
+      "route": "interface",
+      "secondary_routes": [
+        "prediction"
+      ],
+      "types": [
+        "hardware",
+        "method"
+      ],
+      "publication_date": "2026-10-13",
+      "event_date": "2026-10-13",
+      "verified_on": "2026-11-13",
+      "temporal_role": "update",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "Multi-day EMG electrodes",
+      "title": "Multi-day recalibration-free electrophysiology interface based on carbon nanotube thin film dry electrodes",
+      "venue": "Nature Communications",
+      "publication_status": "Peer-reviewed accepted manuscript",
+      "article_type": "Research article",
+      "resource_type": "infrastructure",
+      "registry_ids": [],
+      "before": "Changes at the electrode-skin contact can force muscle-signal decoders to be recalibrated.",
+      "after": "Breathable carbon-nanotube dry electrodes maintain skin contact and reduce drift and movement artifacts.",
+      "evidence": "The multichannel EMG interface maintained task performance for 14 days without decoder retraining after minutes of initial training.",
+      "limit": "The result concerns the tested electrophysiology interface and recording conditions.",
+      "implication": "Stable sensing hardware can reduce the calibration work required for long-term body-input systems.",
+      "availability": "Research electrodes made with a roll-to-roll process.",
+      "sources": [
+        {
+          "title": "Nature Communications article",
+          "url": "https://www.nature.com/articles/s41467-026-78169-6"
+        }
+      ],
+      "keywords": [
+        "EMG",
+        "Dry electrodes",
+        "Calibration",
+        "Long-term sensing"
+      ]
+    },
+    {
+      "id": "septic-glucose-twin-2026",
+      "route": "twin",
+      "secondary_routes": [
+        "prediction"
+      ],
+      "types": [
+        "method",
+        "direction"
+      ],
+      "publication_date": "2026-10-01",
+      "event_date": "2026-10-01",
+      "verified_on": "2026-11-13",
+      "temporal_role": "baseline",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "Adaptive ICU glucose twin",
+      "title": "A digital twin for tracking and forecasting glycemia with septic patients in ICUs",
+      "venue": "npj Metabolic Health and Disease",
+      "publication_status": "Published research article",
+      "article_type": "Retrospective glucose-forecasting study",
+      "resource_type": "model",
+      "registry_ids": [],
+      "before": "A fixed model forecasts without checking when an individual's signal patterns have changed.",
+      "after": "A pretrained PatchTST model checks new glucose readings and adapts when forecast errors require an update.",
+      "evidence": "Ten septic ICU patients were evaluated after pretraining on one patient's data. Thirty minutes of readings supported 15- or 30-minute forecasts; personalization took seconds on a laptop.",
+      "limit": "The retrospective study tested inpatient glucose forecasts; dosing decisions remained outside the evaluated workflow.",
+      "implication": "A personal model needs a defined update rule, a prediction horizon and a way to check its errors.",
+      "availability": "Research workflow evaluated on hospital continuous-glucose recordings.",
+      "sources": [
+        {
+          "title": "Article, workflow and patient data",
+          "url": "https://www.nature.com/articles/s44324-026-00132-2"
+        }
+      ],
+      "keywords": [
+        "Digital twins",
+        "Glucose",
+        "Continuous updates",
+        "ICU"
+      ]
+    },
+    {
+      "id": "eeg-movement-errors-2026",
+      "route": "intervention",
+      "secondary_routes": [
+        "interface"
+      ],
+      "types": [
+        "method",
+        "hardware"
+      ],
+      "publication_date": "2026-11-09",
+      "event_date": "2026-11-09",
+      "verified_on": "2026-11-13",
+      "temporal_role": "update",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "EEG movement-error feedback",
+      "title": "Using error-related brain activity to identify mismatches during virtually simulated and electrically stimulated upper-limb movements",
+      "venue": "npj Biomedical Innovations",
+      "publication_status": "Published research article",
+      "article_type": "Laboratory feedback experiment",
+      "resource_type": "method",
+      "registry_ids": [],
+      "before": "A stimulation controller needs feedback about whether its movement matches the person's intended movement.",
+      "after": "EEG measures responses to mismatches between intended arm movements and an avatar or electrically stimulated movement.",
+      "evidence": "Five volunteers completed discrete-movement tests and 16 completed continuous-movement tests. At the best tested feature window, electrical-stimulation classification accuracy averaged 91 ± 13%.",
+      "limit": "Participants were able-bodied. Continuous-movement classifiers used large mismatches and unequal error/no-error trial counts.",
+      "implication": "Detected movement errors provide a signal that future stimulation controllers could use for feedback.",
+      "availability": "EEG, avatar and electrical-stimulation laboratory setup.",
+      "sources": [
+        {
+          "title": "Article and single-trial classification, Fig. 7",
+          "url": "https://www.nature.com/articles/s44385-026-00123-4"
+        }
+      ],
+      "keywords": [
+        "EEG",
+        "Electrical stimulation",
+        "Movement feedback",
+        "Virtual avatars"
+      ]
+    },
+    {
+      "id": "wearable-api-craving-2026",
+      "route": "prediction",
+      "secondary_routes": [
+        "intervention"
+      ],
+      "types": [
+        "data",
+        "method"
+      ],
+      "publication_date": "2026-10-14",
+      "event_date": "2026-10-14",
+      "verified_on": "2026-11-13",
+      "temporal_role": "update",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "Wearable API prediction limits",
+      "title": "Limited utility of consumer wearable APIs for predicting substance use and craving, despite model personalization",
+      "venue": "npj Biosensing",
+      "publication_status": "Peer-reviewed accepted manuscript",
+      "article_type": "Daily-life prediction study",
+      "resource_type": "measure",
+      "registry_ids": [],
+      "before": "Personalization is often used to adapt a general model to one person's wearable history.",
+      "after": "The study compares global supervised, global self-supervised and personalized self-supervised models on Fitbit heart-rate and step data.",
+      "evidence": "Sixteen participants supplied 47 substance-use or craving prediction scenarios. Mean AUROC across the model approaches ranged from 0.569 to 0.617.",
+      "limit": "The results concern six substances and the signals available through the tested consumer API.",
+      "implication": "Choose sensor access around the target task; model adaptation alone may add little when available signals carry little relevant information.",
+      "availability": "Published analysis of wearable records collected in daily life.",
+      "sources": [
+        {
+          "title": "npj Biosensing article",
+          "url": "https://www.nature.com/articles/s44328-026-00117-7"
+        }
+      ],
+      "keywords": [
+        "Consumer APIs",
+        "Personalization",
+        "Substance use",
+        "Data access"
+      ]
+    },
+    {
+      "id": "magnetic-muscle-interface-2026",
+      "route": "interface",
+      "secondary_routes": [
+        "intervention"
+      ],
+      "types": [
+        "hardware",
+        "method"
+      ],
+      "publication_date": "2026-10-29",
+      "event_date": "2026-10-29",
+      "verified_on": "2026-11-13",
+      "temporal_role": "update",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "Magnetic muscle sensing",
+      "title": "A wireless magnetic implant system for continuous neuromuscular sensing",
+      "venue": "Nature Sensors",
+      "publication_status": "Published research article",
+      "article_type": "Human body-input prototype",
+      "resource_type": "infrastructure",
+      "registry_ids": [],
+      "before": "EMG interfaces infer movement from muscle electrical activity.",
+      "after": "A skin-mounted array tracks 3-mm implanted magnetic beads to measure muscle movement directly.",
+      "evidence": "Three participants with below-knee amputations controlled a virtual ankle-foot cursor. The system tracked beads at depths up to 6 cm with sub-millimetre resolution.",
+      "limit": "Participants controlled an on-screen cursor representing prosthetic movement; walking with a physical prosthesis was outside this experiment.",
+      "implication": "Muscle mechanics offer another input alongside electrical signals for assistive-device control.",
+      "availability": "Research system with implanted magnets and an external wearable sensor array.",
+      "sources": [
+        {
+          "title": "Nature Sensors article",
+          "url": "https://www.nature.com/articles/s44460-026-00157-6"
+        },
+        {
+          "title": "MIT study description",
+          "url": "https://news.mit.edu/2026/magnetic-sensors-track-muscle-movement-better-prosthetic-limb-control-1029"
+        }
+      ],
+      "keywords": [
+        "Muscle mechanics",
+        "Prosthetic interfaces",
+        "Implants",
+        "Wearable sensing"
+      ]
+    },
+    {
+      "id": "eeg-x-neurips-2026",
+      "route": "prediction",
+      "secondary_routes": [
+        "interface"
+      ],
+      "types": [
+        "method",
+        "performance"
+      ],
+      "publication_date": "2025-11-12",
+      "event_date": "2026-11-10",
+      "verified_on": "2026-11-13",
+      "temporal_role": "update",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "EEG-X",
+      "title": "EEG-X: Toward Device-Agnostic and Noise-Robust Foundation Models for EEG",
+      "venue": "NeurIPS 2026",
+      "publication_status": "Accepted conference paper; manuscript updated 10 Nov 2026",
+      "article_type": "Cross-device EEG model",
+      "resource_type": "model",
+      "registry_ids": [],
+      "before": "Changing electrode layouts makes it difficult to reuse an EEG encoder across headsets.",
+      "after": "Channel locations and reconstruction of cleaned activity help the encoder transfer across sensor layouts.",
+      "evidence": "Across eight datasets and five headset configurations, one TUAB-to-BCICIV_2A test reached 37.58% balanced accuracy, compared with REVE's 35.91%.",
+      "limit": "This comparison freezes the pretrained encoder and trains a linear classifier under the paper's transfer protocol.",
+      "implication": "Teams can evaluate a shared encoder across different headset layouts.",
+      "availability": "Public manuscript revised 10 November; NeurIPS 2026 conference presentation is in December.",
+      "comparison": {
+        "baseline": "REVE pretrained for the same TUAB transfer protocol.",
+        "result": "BCICIV_2A balanced accuracy: 37.58% versus 35.91%, a gain of 1.67 percentage points.",
+        "conditions": "Frozen encoders with linear evaluation; latest manuscript Table 3."
+      },
+      "sources": [
+        {
+          "title": "Dated manuscript and current version",
+          "url": "https://arxiv.org/abs/2511.08861"
+        },
+        {
+          "title": "Transfer results, Table 3",
+          "url": "https://arxiv.org/html/2511.08861v2"
+        },
+        {
+          "title": "Official NeurIPS paper list",
+          "url": "https://nips.cc/Downloads/2026"
+        }
+      ],
+      "keywords": [
+        "EEG",
+        "Cross-device transfer",
+        "Electrode layouts"
+      ]
+    },
+    {
+      "id": "emophone-neurips-2026",
+      "route": "prediction",
+      "secondary_routes": [],
+      "types": [
+        "data",
+        "direction"
+      ],
+      "publication_date": "2026-09-15",
+      "event_date": "2026-11-11",
+      "verified_on": "2026-11-13",
+      "temporal_role": "update",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "EmoPhone",
+      "title": "EmoPhone: A Multi-Wave Dataset for In-the-Wild Mobile and Wearable Affect Sensing",
+      "venue": "NeurIPS 2026",
+      "publication_status": "Accepted, Evaluations and Datasets Track; manuscript updated 11 Nov 2026",
+      "article_type": "Dataset and benchmark",
+      "resource_type": "dataset",
+      "registry_ids": [],
+      "before": "A single collection period gives little evidence about transfer across different annual study waves.",
+      "after": "Android and Fitbit recordings cover three annual waves, with tests across people, time and collection waves.",
+      "evidence": "The dataset includes 282 people, 297 participant-wave records and 53,139 momentary self-reports. Fourteen people returned in later waves.",
+      "limit": "In the latest full paper, adaptation improves its MLP backbone while supervised tree models remain competitive.",
+      "implication": "Benchmark across changing users and collection conditions before choosing a sensing model for daily use.",
+      "availability": "Public dataset repository and revised manuscript; NeurIPS conference is in December.",
+      "sources": [
+        {
+          "title": "Manuscript and acceptance status",
+          "url": "https://arxiv.org/abs/2609.16581"
+        },
+        {
+          "title": "Latest full-paper results",
+          "url": "https://arxiv.org/html/2609.16581v2"
+        },
+        {
+          "title": "Dataset and benchmark code",
+          "url": "https://github.com/Kaist-ICLab/EmoPhone"
+        }
+      ],
+      "keywords": [
+        "Affect sensing",
+        "Fitbit",
+        "Dataset",
+        "Temporal transfer"
+      ]
+    },
+    {
+      "id": "inertia-1-neurips-2026",
+      "route": "prediction",
+      "secondary_routes": [],
+      "types": [
+        "method",
+        "data"
+      ],
+      "publication_date": "2026-07-07",
+      "event_date": "2026-07-07",
+      "verified_on": "2026-11-13",
+      "temporal_role": "baseline",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "Inertia-1",
+      "title": "Inertia-1: An Open Exploration of Wearable Motion Foundation Models",
+      "venue": "NeurIPS 2026",
+      "publication_status": "Accepted main-conference paper",
+      "article_type": "Wearable motion model study",
+      "resource_type": "model",
+      "registry_ids": [],
+      "before": "Sampling rate, sensor position and model design differ across studies, making results difficult to compare.",
+      "after": "A shared experimental framework compares sensing and pretraining choices using over 18.2 million hours of accelerometer data.",
+      "evidence": "Evaluation spans 15 datasets, including activity recognition, freezing-of-gait detection and disease prediction.",
+      "limit": "The evaluation uses task-specific activity, gait and disease-prediction tests.",
+      "implication": "Select sensing settings and training objectives using comparisons across the tasks your application needs.",
+      "availability": "Public code and data-processing recipes; accepted at NeurIPS 2026.",
+      "sources": [
+        {
+          "title": "Dated paper",
+          "url": "https://arxiv.org/abs/2607.06617"
+        },
+        {
+          "title": "Project and conference status",
+          "url": "https://yang-ai-lab.github.io/Inertia-1/paper/"
+        },
+        {
+          "title": "Code",
+          "url": "https://github.com/yang-ai-lab/Inertia-1"
+        }
+      ],
+      "keywords": [
+        "Accelerometry",
+        "Motion",
+        "Foundation models",
+        "Activity recognition"
+      ]
+    },
+    {
+      "id": "xmae-icml-2026",
+      "route": "prediction",
+      "secondary_routes": [],
+      "types": [
+        "method",
+        "performance"
+      ],
+      "publication_date": "2026-05-01",
+      "event_date": "2026-05-01",
+      "verified_on": "2026-11-13",
+      "temporal_role": "baseline",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "xMAE",
+      "title": "Physiology-Aware Masked Cross-Modal Reconstruction for Biosignal Representation Learning",
+      "venue": "ICML 2026",
+      "publication_status": "Published main-conference paper, PMLR 306",
+      "article_type": "ECG-PPG representation model",
+      "resource_type": "model",
+      "registry_ids": [],
+      "before": "Pretraining often treats ECG and PPG as interchangeable views, losing their physiological timing relationship.",
+      "after": "Masked reconstruction across ECG and PPG teaches a model to preserve the delay between heart electrical activity and the peripheral pulse.",
+      "evidence": "The paper reports stronger performance than unimodal and multimodal baselines on 15 of 19 downstream tasks.",
+      "limit": "The 19 tasks include cardiovascular outcomes, laboratory results, sleep stages and demographic attributes.",
+      "implication": "Known relationships between sensors can guide pretraining and improve transfer across devices.",
+      "availability": "Published conference paper and public code; first manuscript posted 1 May.",
+      "comparison": {
+        "baseline": "Unimodal and multimodal representation-learning baselines in the paper.",
+        "result": "Higher performance on 15 of 19 downstream tasks.",
+        "conditions": "Task-specific evaluations with device, body-site and acquisition-setting transfer; formal proceedings abstract."
+      },
+      "sources": [
+        {
+          "title": "ICML proceedings",
+          "url": "https://proceedings.mlr.press/v306/zhou26u.html"
+        },
+        {
+          "title": "Dated manuscript",
+          "url": "https://arxiv.org/abs/2605.00973"
+        },
+        {
+          "title": "Code",
+          "url": "https://github.com/hzhou3/xMAE"
+        }
+      ],
+      "keywords": [
+        "ECG",
+        "PPG",
+        "Physiological timing",
+        "Cross-modal learning"
+      ]
+    },
+    {
+      "id": "hearts-icml-2026",
+      "route": "prediction",
+      "secondary_routes": [],
+      "types": [
+        "data",
+        "direction"
+      ],
+      "publication_date": "2026-02-25",
+      "event_date": "2026-02-25",
+      "verified_on": "2026-11-13",
+      "temporal_role": "baseline",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "HEARTS",
+      "title": "HEARTS: Benchmarking LLM Reasoning on Health Time Series",
+      "venue": "ICML 2026",
+      "publication_status": "Published main-conference paper, PMLR 306",
+      "article_type": "Health reasoning benchmark",
+      "resource_type": "dataset",
+      "registry_ids": [],
+      "before": "Medical question answering alone leaves sensor interpretation and multi-step temporal reasoning untested.",
+      "after": "HEARTS separates perception, inference, generation and deduction across 110 health time-series tasks.",
+      "evidence": "Sixteen datasets cover 12 health domains, 20 signal types and more than 20,000 test samples. General language models trail specialist models as reasoning becomes more complex.",
+      "limit": "Results compare health-signal tasks; the formal conference version evaluates 14 language models.",
+      "implication": "Evaluate signal understanding and calculations separately when building a health-data assistant.",
+      "availability": "Published proceedings, benchmark and public manuscript.",
+      "sources": [
+        {
+          "title": "ICML proceedings",
+          "url": "https://proceedings.mlr.press/v306/li26hr.html"
+        },
+        {
+          "title": "Submission dates and manuscript",
+          "url": "https://arxiv.org/abs/2603.06638"
+        },
+        {
+          "title": "Benchmark",
+          "url": "https://yang-ai-lab.github.io/HEARTS/"
+        }
+      ],
+      "keywords": [
+        "Health time series",
+        "LLM evaluation",
+        "Benchmark",
+        "Temporal reasoning"
+      ]
+    },
+    {
+      "id": "sleeplm-icml-2026",
+      "route": "prediction",
+      "secondary_routes": [],
+      "types": [
+        "method",
+        "data",
+        "direction"
+      ],
+      "publication_date": "2026-02-27",
+      "event_date": "2026-02-27",
+      "verified_on": "2026-11-13",
+      "temporal_role": "baseline",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "SleepLM",
+      "title": "SleepLM: Natural-Language Intelligence for Human Sleep",
+      "venue": "ICML 2026",
+      "publication_status": "Published main-conference paper; spotlight presentation",
+      "article_type": "Sleep-language model",
+      "resource_type": "model",
+      "registry_ids": [],
+      "before": "Sleep analysis commonly assigns predefined stages or event labels to recording segments.",
+      "after": "SleepLM aligns physiological recordings with text and learns caption generation alongside signal reconstruction.",
+      "evidence": "Training uses over 100,000 hours from more than 10,000 people. Evaluations include retrieval, descriptions and language-guided event localization.",
+      "limit": "The model uses polysomnography and sleep-text data; these inputs differ from a consumer watch's summary API.",
+      "implication": "Sleep interfaces can support questions and descriptions as well as fixed-stage classification.",
+      "availability": "Published conference paper; captioning pipeline, checkpoints and architecture are released.",
+      "sources": [
+        {
+          "title": "ICML proceedings",
+          "url": "https://proceedings.mlr.press/v306/xu26at.html"
+        },
+        {
+          "title": "Manuscript and presentation status",
+          "url": "https://arxiv.org/abs/2602.23605"
+        },
+        {
+          "title": "Code",
+          "url": "https://github.com/yang-ai-lab/SleepLM"
+        }
+      ],
+      "keywords": [
+        "Sleep",
+        "Language models",
+        "Polysomnography",
+        "Text retrieval"
+      ]
+    },
+    {
+      "id": "biox-bridge-iclr-2026",
+      "route": "prediction",
+      "secondary_routes": [],
+      "types": [
+        "method",
+        "performance"
+      ],
+      "publication_date": "2025-10-02",
+      "event_date": "2026-02-24",
+      "verified_on": "2026-11-13",
+      "temporal_role": "baseline",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "BioX-Bridge",
+      "title": "BioX-Bridge: Model Bridging for Unsupervised Cross-Modal Knowledge Transfer across Biosignals",
+      "venue": "ICLR 2026",
+      "publication_status": "Published main-conference paper; manuscript revised 24 Feb 2026",
+      "article_type": "Cross-signal model transfer",
+      "resource_type": "model",
+      "registry_ids": [],
+      "before": "Knowledge distillation trains a student while repeatedly running a larger teacher model.",
+      "after": "A small bridge connects intermediate representations across body-signal models, using paired recordings without target-task labels.",
+      "evidence": "Across the tested ECG, PPG, EEG and EMG transfer tasks, trainable parameter counts fall by 88% to 99% while transfer performance is maintained or improved.",
+      "limit": "Tests cover stress, freezing-of-gait and sleep-wake recognition with paired source and target recordings.",
+      "implication": "Adapting an existing model to another sensor can require fewer trainable parameters.",
+      "availability": "Published ICLR 2026 proceedings; first manuscript appeared in October 2025.",
+      "comparison": {
+        "baseline": "The paper's cross-modal transfer and knowledge-distillation methods.",
+        "result": "88% to 99% fewer trainable parameters, with maintained or improved task performance.",
+        "conditions": "Unsupervised target-modality adaptation using paired ECG, PPG, EEG and EMG recordings."
+      },
+      "sources": [
+        {
+          "title": "ICLR proceedings",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b4ec8a0ae0373d694dc8529ca523e9a9-Abstract-Conference.html"
+        },
+        {
+          "title": "Dated manuscript",
+          "url": "https://arxiv.org/abs/2510.02276"
+        },
+        {
+          "title": "Method and evaluation",
+          "url": "https://arxiv.org/html/2510.02276v2"
+        }
+      ],
+      "keywords": [
+        "Cross-modal transfer",
+        "Paired signals",
+        "Parameter efficiency"
+      ]
+    },
+    {
+      "id": "himae-iclr-2026",
+      "route": "prediction",
+      "secondary_routes": [],
+      "types": [
+        "method",
+        "hardware"
+      ],
+      "publication_date": "2025-10-28",
+      "event_date": "2025-10-28",
+      "verified_on": "2026-11-13",
+      "temporal_role": "baseline",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "HiMAE",
+      "title": "HiMAE: Hierarchical Masked Autoencoders Discover Resolution-Specific Structure in Wearable Time Series",
+      "venue": "ICLR 2026",
+      "publication_status": "Published main-conference paper",
+      "article_type": "Multi-resolution wearable model",
+      "resource_type": "model",
+      "registry_ids": [],
+      "before": "Using one time resolution can lose either brief physiological events or longer patterns.",
+      "after": "A hierarchical encoder and decoder reconstruct masked recordings and expose features at several time scales.",
+      "evidence": "The study evaluates classification and signal generation, and reports sub-millisecond inference on smartwatch-class CPUs.",
+      "limit": "On-device timing depends on the tested CPU and model setting.",
+      "implication": "Choose a feature time scale around the task while accounting for the wearable device's compute budget.",
+      "availability": "Published ICLR 2026 proceedings; first manuscript appeared in October 2025.",
+      "sources": [
+        {
+          "title": "ICLR proceedings",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/6a3a5b1ad657c46ab99958b138bcd525-Abstract-Conference.html"
+        },
+        {
+          "title": "Dated manuscript",
+          "url": "https://arxiv.org/abs/2510.25785"
+        }
+      ],
+      "keywords": [
+        "Multi-resolution models",
+        "Edge inference",
+        "Wearable time series"
+      ]
+    },
+    {
+      "id": "glucofm-neurips-review-2026",
+      "route": "prediction",
+      "secondary_routes": [],
+      "types": [
+        "method",
+        "performance"
+      ],
+      "publication_date": "2026-05-29",
+      "event_date": "2026-08-25",
+      "verified_on": "2026-11-13",
+      "temporal_role": "baseline",
+      "evidence_level": "peer_reviewed",
+      "added_on": "2026-11-13",
+      "short_name": "GlucoFM conference update",
+      "title": "GlucoFM: A Dual-Stream Foundation Model for Continuous Glucose Monitoring",
+      "venue": "NeurIPS 2026",
+      "publication_status": "Accepted main-conference paper; linked to existing GlucoFM record",
+      "article_type": "Conference-status and results update",
+      "resource_type": "model",
+      "registry_ids": [
+        "model-glucofm-2026"
+      ],
+      "before": "Earlier glucose encoders provide one combined representation of a daily recording.",
+      "after": "Separate streams model the underlying glucose level and short-term deviations, while masks retain missing-data information.",
+      "evidence": "Pretraining uses 109,066 hours from 477 participant/session records. Across four cohorts, mean PR-AUC is 58.8 versus 54.7 for CGM-JEPA retrained on the same corpus.",
+      "limit": "The classification comparison uses participant-separated cross-validation and the same linear classifier.",
+      "implication": "The existing GlucoFM entry now links to its accepted conference paper and matched-corpus comparison.",
+      "availability": "Public manuscript and code; the original repository record is retained.",
+      "comparison": {
+        "baseline": "CGM-JEPA retrained on the same pretraining corpus.",
+        "result": "Average PR-AUC: 58.8 versus 54.7 on the paper's reported percentage scale.",
+        "conditions": "Four evaluation cohorts, participant-separated cross-validation and matched linear-classifier evaluation; Table 3."
+      },
+      "sources": [
+        {
+          "title": "Dated manuscript",
+          "url": "https://arxiv.org/abs/2605.30865"
+        },
+        {
+          "title": "Matched comparison, Table 3",
+          "url": "https://arxiv.org/html/2605.30865v2"
+        },
+        {
+          "title": "Laboratory publication list",
+          "url": "https://yang-ai-lab.github.io/publications.html"
+        },
+        {
+          "title": "Author's acceptance announcement",
+          "url": "https://zechenli03.github.io/"
+        },
+        {
+          "title": "Google Research model description",
+          "url": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring/"
+        }
+      ],
+      "keywords": [
+        "CGM",
+        "Glucose",
+        "Foundation models",
+        "Conference status"
+      ]
+    }
+  ]
+}

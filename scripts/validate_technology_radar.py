@@ -94,6 +94,12 @@ def validate_radar(radar: dict, registry_ids: set[str], route_ids: set[str]) -> 
             raise ValueError(f"Signal {signal_id}: dates must not exceed reviewed_on")
         if verified < publication:
             raise ValueError(f"Signal {signal_id}: verified_on must not precede publication_date")
+        if 'added_on' in signal:
+            added = date.fromisoformat(signal['added_on'])
+            if not publication <= added <= reviewed or verified > added:
+                raise ValueError(f"Signal {signal_id}: invalid website addition date")
+            if not all(signal.get(key) for key in ('short_name', 'venue', 'publication_status', 'article_type', 'resource_type')):
+                raise ValueError(f"Signal {signal_id}: a new paper needs complete publication metadata")
         for source in signal["sources"]:
             _source_url(source["url"], signal_id)
 

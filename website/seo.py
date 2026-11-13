@@ -182,11 +182,15 @@ def _signal(signal: dict, routes: dict, update_types: dict) -> str:
     fields = [("Before", signal["before"]), ("What changed", signal["after"]), ("Evidence", signal["evidence"]), ("Availability", signal["availability"])]
     if signal.get("comparison"):
         fields += [("Comparison baseline", signal["comparison"]["baseline"]), ("Reported result", signal["comparison"]["result"]), ("Comparison conditions", signal["comparison"]["conditions"])]
-    fields += [("Limits", signal["limit"]), ("Why it matters — editorial interpretation", signal["implication"])]
+    fields += [("Research setting", signal["limit"]), ("Practical use", signal["implication"])]
+    if signal.get('venue'):
+        meta += ' · ' + signal['venue'] + ' · ' + signal['publication_status']
     sources = " · ".join(_link(source["url"], source["title"]) for source in signal["sources"])
-    dates = " · ".join(f'{label} <time datetime="{escape(signal[key], quote=True)}">{escape(signal[key])}</time>' for key, label in (("event_date", "Event"), ("publication_date", "Published"), ("verified_on", "Source checked")))
+    source_label = 'First manuscript' if any(name in signal.get('venue','') for name in ('ICML','ICLR','NeurIPS')) else 'Published'
+    event_label = 'Manuscript version' if signal.get('added_on') and signal['event_date'] != signal['publication_date'] else 'Source date'
+    dates = " · ".join(f'{label} <time datetime="{escape(signal[key], quote=True)}">{escape(signal[key])}</time>' for key, label in (("event_date", event_label), ("publication_date", source_label), ("verified_on", "Source checked")))
     linked = " · ".join(f'<a href="#record-{escape(quote(record_id, safe=""), quote=True)}">{escape(record_id)}</a>' for record_id in signal["registry_ids"])
-    scope = 'Existing registry links: ' + linked if linked else 'Separate intelligence item; not an accepted registry record and not counted in the library.'
+    scope = 'Existing registry links: ' + linked if linked else 'Website reading note, listed separately from the original registry.'
     return f'''<article class="signal" id="signal-{escape(signal['id'], quote=True)}" data-signal-id="{escape(signal['id'], quote=True)}">
 <p class="meta">{escape(meta)}</p><h3>{escape(signal['title'])}</h3><p class="meta">{dates}</p>
 <p class="keywords">{escape(' · '.join(update_types[key] for key in signal['types']))} · {escape(' · '.join(signal['keywords']))}</p>
@@ -239,7 +243,7 @@ def render_sources(payload: dict) -> str:
     return f'''<!doctype html>
 <html lang="en">{head}<body><a class="skip" href="#content">Skip to source directory</a>
 <header class="header"><a class="brand" href="index.html">{SITE_NAME}</a><nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="columns.html">Research columns</a><a href="library.html">Interactive library</a><a href="research-map.html">Research overview</a><a href="sources.html" aria-current="page">Sources</a><a href="https://github.com/ZipengWu365/awesome-wearable-ai" rel="noreferrer">GitHub</a></nav></header>
-<main id="content"><div class="intro"><p class="eyebrow">Readable research directory</p><h1>Wearable AI sources &amp; evidence</h1><p>{accepted} accepted records + {watchlist} watchlist candidates. All {len(records)} repository records, grouped by their primary research theme. Use your browser’s Find command to locate a title or keyword.</p><p class="scope">Catalog cutoff: {escape(payload['cutoff'])}. Complete repository coverage does not mean a complete frontier survey. Enablers, frameworks and adjacent work are not claims that a clinical or digital-twin stage has been achieved. Open a record to inspect its retained contribution, limitations and source metadata.</p></div>
+<main id="content"><div class="intro"><p class="eyebrow">Readable research directory</p><h1>Wearable AI sources &amp; evidence</h1><p>{accepted} accepted records + {watchlist} watchlist candidates. All {len(records)} repository records, grouped by their primary research theme. Use your browser’s Find command to locate a title or keyword.</p><p class="scope">Catalog cutoff: {escape(payload['cutoff'])}. Original records retain their metadata and review status. Additional reading notes list publication dates, venue, study results and source links below.</p></div>
 <div class="layout"><aside class="contents"><p>ON THIS PAGE</p><nav aria-label="Directory themes">{''.join(contents)}</nav><p>Primary counts are unique. Keywords and cross-theme links can overlap. Smart-glasses coverage includes adjacent enabling work.</p></aside><div>{''.join(groups)}{intelligence}</div></div></main>
 <footer class="footnote">Registry v{escape(str(payload['version']))} · Catalog cutoff {escape(payload['cutoff'])} · <a href="library.html">Interactive library</a> · <a href="columns.html">Research columns</a> · <a href="https://github.com/ZipengWu365/awesome-wearable-ai">Source repository</a></footer></body></html>
 '''

@@ -201,7 +201,10 @@ class ResearchMapTests(unittest.TestCase):
         payload = json.loads(embedded.group(1))
         self.assertEqual(self.payload["records"], payload["records"])
         self.assertEqual(self.payload["cutoff"], payload["cutoff"])
-        self.assertEqual(read_json(ASSETS / "technology-radar.json"), payload["radar"])
+        import runpy
+        combined = runpy.run_path(str(root / 'website/research_updates.py'))['merge_updates'](
+            read_json(ASSETS / 'technology-radar.json'), read_json(root / 'website/literature-updates.json'))
+        self.assertEqual(combined, payload['radar'])
         self.assertEqual(build_coverage(self.registry, self.payload), build_coverage(self.registry, payload))
 
     def test_real_radar_keeps_intelligence_and_registry_status_separate(self):

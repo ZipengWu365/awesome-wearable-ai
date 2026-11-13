@@ -22,7 +22,7 @@ class Links(HTMLParser):
 pages={p.name:Links(p.read_text()) for p in ROOT.glob('*.html')}
 research=(ROOT/'research-map.html').read_text()
 payload=json.loads(re.search(r'<script id="research-data" type="application/json">(.*?)</script>',research,re.S).group(1))
-dynamic_ids={r['id'] for r in payload['records']}|{'signal-'+s['id'] for s in payload['radar']['signals']}|{'column-title'}
+dynamic_ids={r['id'] for r in payload['records']}|{'signal-'+s['id'] for s in payload['radar']['signals']}|{'column-title','column-new-papers'}
 errors=[]
 for name,page in pages.items():
     for tag,target in page.links:
